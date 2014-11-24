@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_g7t0oHO2EeSmvJDx_ffvmQ" name="model">
-  <packagedElement xmi:type="uml:Activity" xmi:id="_Gy8fgHO3EeSmvJDx_ffvmQ" name="Make a Booking" node="_NHBssHO3EeSmvJDx_ffvmQ _QsWNkHO3EeSmvJDx_ffvmQ _JOrFoHO4EeSmvJDx_ffvmQ _mepm0HO4EeSmvJDx_ffvmQ _I8vWMHO6EeSmvJDx_ffvmQ _Mu-RsHO6EeSmvJDx_ffvmQ _XPqCMHO6EeSmvJDx_ffvmQ _aGcpIHO6EeSmvJDx_ffvmQ __k9SAHO6EeSmvJDx_ffvmQ _KR8HMHO9EeSmvJDx_ffvmQ _paJVUHO9EeSmvJDx_ffvmQ _TO5JMHO_EeSmvJDx_ffvmQ _oSnlMHPAEeSmvJDx_ffvmQ _5IrG4HPBEeSfQr-azHjPNA _AYVLgHPCEeSfQr-azHjPNA _FgW1QHPCEeSfQr-azHjPNA _fNeTsHPCEeSfQr-azHjPNA _-N8ssHPDEeSVDNw8PbeOuA _EWEhgHPEEeSVDNw8PbeOuA _toh9IHPEEeSVDNw8PbeOuA _1fvxAHPEEeSVDNw8PbeOuA _7w17oHPEEeSVDNw8PbeOuA _Z19VEHPFEeSVDNw8PbeOuA _fJPMkHPFEeSVDNw8PbeOuA _t_ZIgHPFEeSVDNw8PbeOuA">
+  <packagedElement xmi:type="uml:Activity" xmi:id="_Gy8fgHO3EeSmvJDx_ffvmQ" name="Make a Booking" node="_NHBssHO3EeSmvJDx_ffvmQ _QsWNkHO3EeSmvJDx_ffvmQ _JOrFoHO4EeSmvJDx_ffvmQ _mepm0HO4EeSmvJDx_ffvmQ _I8vWMHO6EeSmvJDx_ffvmQ _Mu-RsHO6EeSmvJDx_ffvmQ _XPqCMHO6EeSmvJDx_ffvmQ _aGcpIHO6EeSmvJDx_ffvmQ __k9SAHO6EeSmvJDx_ffvmQ _KR8HMHO9EeSmvJDx_ffvmQ _paJVUHO9EeSmvJDx_ffvmQ _TO5JMHO_EeSmvJDx_ffvmQ _oSnlMHPAEeSmvJDx_ffvmQ _5IrG4HPBEeSfQr-azHjPNA _AYVLgHPCEeSfQr-azHjPNA _FgW1QHPCEeSfQr-azHjPNA _fNeTsHPCEeSfQr-azHjPNA _-N8ssHPDEeSVDNw8PbeOuA _EWEhgHPEEeSVDNw8PbeOuA _toh9IHPEEeSVDNw8PbeOuA _1fvxAHPEEeSVDNw8PbeOuA _7w17oHPEEeSVDNw8PbeOuA _Z19VEHPFEeSVDNw8PbeOuA _fJPMkHPFEeSVDNw8PbeOuA _t_ZIgHPFEeSVDNw8PbeOuA _FgyWQHPGEeSVDNw8PbeOuA _Ozq24HPGEeSVDNw8PbeOuA _abLFgHPGEeSVDNw8PbeOuA">
     <edge xmi:type="uml:ControlFlow" xmi:id="_QtjHcHO3EeSmvJDx_ffvmQ" target="_QsWNkHO3EeSmvJDx_ffvmQ" source="_NHBssHO3EeSmvJDx_ffvmQ"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_JPflAHO4EeSmvJDx_ffvmQ" target="_JOrFoHO4EeSmvJDx_ffvmQ" source="_QsWNkHO3EeSmvJDx_ffvmQ"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_me0l8HO4EeSmvJDx_ffvmQ" name="[date is valid]" target="_mepm0HO4EeSmvJDx_ffvmQ" source="_JOrFoHO4EeSmvJDx_ffvmQ"/>
@@ -27,13 +27,17 @@
     <edge xmi:type="uml:ControlFlow" xmi:id="_fJlK0HPFEeSVDNw8PbeOuA" target="_fJPMkHPFEeSVDNw8PbeOuA" source="_Z19VEHPFEeSVDNw8PbeOuA"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_gcj1oHPFEeSVDNw8PbeOuA" name="[user agrees]" target="_mepm0HO4EeSmvJDx_ffvmQ" source="_fJPMkHPFEeSVDNw8PbeOuA"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_t_w78HPFEeSVDNw8PbeOuA" name="[else]" target="_t_ZIgHPFEeSVDNw8PbeOuA" source="_fJPMkHPFEeSVDNw8PbeOuA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_FhDcAHPGEeSVDNw8PbeOuA" name="[else]" target="_FgyWQHPGEeSVDNw8PbeOuA" source="_XPqCMHO6EeSmvJDx_ffvmQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_O0BcMHPGEeSVDNw8PbeOuA" target="_Ozq24HPGEeSVDNw8PbeOuA" source="_FgyWQHPGEeSVDNw8PbeOuA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_UqcdAHPGEeSVDNw8PbeOuA" name="[user agrees]" target="_Mu-RsHO6EeSmvJDx_ffvmQ" source="_Ozq24HPGEeSVDNw8PbeOuA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_abcyUHPGEeSVDNw8PbeOuA" name="[else]" target="_abLFgHPGEeSVDNw8PbeOuA" source="_Ozq24HPGEeSVDNw8PbeOuA"/>
     <node xmi:type="uml:InitialNode" xmi:id="_NHBssHO3EeSmvJDx_ffvmQ" name="InitialNode1" outgoing="_QtjHcHO3EeSmvJDx_ffvmQ"/>
     <node xmi:type="uml:OpaqueAction" xmi:id="_QsWNkHO3EeSmvJDx_ffvmQ" name="Choose a date" incoming="_QtjHcHO3EeSmvJDx_ffvmQ _9zVX0HPEEeSVDNw8PbeOuA" outgoing="_JPflAHO4EeSmvJDx_ffvmQ"/>
     <node xmi:type="uml:DecisionNode" xmi:id="_JOrFoHO4EeSmvJDx_ffvmQ" name="DecisionNode1" incoming="_JPflAHO4EeSmvJDx_ffvmQ" outgoing="_me0l8HO4EeSmvJDx_ffvmQ _to0RAHPEEeSVDNw8PbeOuA"/>
     <node xmi:type="uml:OpaqueAction" xmi:id="_mepm0HO4EeSmvJDx_ffvmQ" name="Choose number of nights" incoming="_me0l8HO4EeSmvJDx_ffvmQ _gcj1oHPFEeSVDNw8PbeOuA" outgoing="_I87jcHO6EeSmvJDx_ffvmQ"/>
     <node xmi:type="uml:DecisionNode" xmi:id="_I8vWMHO6EeSmvJDx_ffvmQ" name="DecisionNode2" incoming="_I87jcHO6EeSmvJDx_ffvmQ" outgoing="_MvIpwHO6EeSmvJDx_ffvmQ _Z2PB4HPFEeSVDNw8PbeOuA"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_Mu-RsHO6EeSmvJDx_ffvmQ" name="Choose number of rooms" incoming="_MvIpwHO6EeSmvJDx_ffvmQ" outgoing="_XP2PcHO6EeSmvJDx_ffvmQ"/>
-    <node xmi:type="uml:DecisionNode" xmi:id="_XPqCMHO6EeSmvJDx_ffvmQ" name="DecisionNode3" incoming="_XP2PcHO6EeSmvJDx_ffvmQ" outgoing="_aGmaIHO6EeSmvJDx_ffvmQ"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_Mu-RsHO6EeSmvJDx_ffvmQ" name="Choose number of rooms" incoming="_MvIpwHO6EeSmvJDx_ffvmQ _UqcdAHPGEeSVDNw8PbeOuA" outgoing="_XP2PcHO6EeSmvJDx_ffvmQ"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_XPqCMHO6EeSmvJDx_ffvmQ" name="DecisionNode3" incoming="_XP2PcHO6EeSmvJDx_ffvmQ" outgoing="_aGmaIHO6EeSmvJDx_ffvmQ _FhDcAHPGEeSVDNw8PbeOuA"/>
     <node xmi:type="uml:OpaqueAction" xmi:id="_aGcpIHO6EeSmvJDx_ffvmQ" name="Choose number of guests" incoming="_aGmaIHO6EeSmvJDx_ffvmQ" outgoing="__lJfQHO6EeSmvJDx_ffvmQ"/>
     <node xmi:type="uml:DecisionNode" xmi:id="__k9SAHO6EeSmvJDx_ffvmQ" name="DecisionNode4" incoming="__lJfQHO6EeSmvJDx_ffvmQ" outgoing="_KSGfQHO9EeSmvJDx_ffvmQ"/>
     <node xmi:type="uml:OpaqueAction" xmi:id="_KR8HMHO9EeSmvJDx_ffvmQ" name="Register date, number of night(s), room(s), guest(s)" incoming="_KSGfQHO9EeSmvJDx_ffvmQ" outgoing="_paUUcHO9EeSmvJDx_ffvmQ"/>
@@ -52,5 +56,8 @@
     <node xmi:type="uml:OpaqueAction" xmi:id="_Z19VEHPFEeSVDNw8PbeOuA" name="Ask for a new number" incoming="_Z2PB4HPFEeSVDNw8PbeOuA" outgoing="_fJlK0HPFEeSVDNw8PbeOuA"/>
     <node xmi:type="uml:DecisionNode" xmi:id="_fJPMkHPFEeSVDNw8PbeOuA" name="DecisionNode8" incoming="_fJlK0HPFEeSVDNw8PbeOuA" outgoing="_gcj1oHPFEeSVDNw8PbeOuA _t_w78HPFEeSVDNw8PbeOuA"/>
     <node xmi:type="uml:ActivityFinalNode" xmi:id="_t_ZIgHPFEeSVDNw8PbeOuA" name="ActivityFinalNode2" incoming="_t_w78HPFEeSVDNw8PbeOuA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_FgyWQHPGEeSVDNw8PbeOuA" name="Ask for new number" incoming="_FhDcAHPGEeSVDNw8PbeOuA" outgoing="_O0BcMHPGEeSVDNw8PbeOuA"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_Ozq24HPGEeSVDNw8PbeOuA" name="DecisionNode9" incoming="_O0BcMHPGEeSVDNw8PbeOuA" outgoing="_UqcdAHPGEeSVDNw8PbeOuA _abcyUHPGEeSVDNw8PbeOuA"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_abLFgHPGEeSVDNw8PbeOuA" name="ActivityFinalNode3" incoming="_abcyUHPGEeSVDNw8PbeOuA"/>
   </packagedElement>
 </uml:Model>
