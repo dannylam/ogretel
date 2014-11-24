@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_g7t0oHO2EeSmvJDx_ffvmQ" name="model">
+  <packagedElement xmi:type="uml:Activity" xmi:id="_Gy8fgHO3EeSmvJDx_ffvmQ" name="Make a Booking" node="_NHBssHO3EeSmvJDx_ffvmQ _QsWNkHO3EeSmvJDx_ffvmQ _JOrFoHO4EeSmvJDx_ffvmQ _mepm0HO4EeSmvJDx_ffvmQ _I8vWMHO6EeSmvJDx_ffvmQ _Mu-RsHO6EeSmvJDx_ffvmQ _XPqCMHO6EeSmvJDx_ffvmQ _aGcpIHO6EeSmvJDx_ffvmQ __k9SAHO6EeSmvJDx_ffvmQ _KR8HMHO9EeSmvJDx_ffvmQ _paJVUHO9EeSmvJDx_ffvmQ _TO5JMHO_EeSmvJDx_ffvmQ _oSnlMHPAEeSmvJDx_ffvmQ _5IrG4HPBEeSfQr-azHjPNA _AYVLgHPCEeSfQr-azHjPNA _FgW1QHPCEeSfQr-azHjPNA _fNeTsHPCEeSfQr-azHjPNA">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_QtjHcHO3EeSmvJDx_ffvmQ" target="_QsWNkHO3EeSmvJDx_ffvmQ" source="_NHBssHO3EeSmvJDx_ffvmQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_JPflAHO4EeSmvJDx_ffvmQ" target="_JOrFoHO4EeSmvJDx_ffvmQ" source="_QsWNkHO3EeSmvJDx_ffvmQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_me0l8HO4EeSmvJDx_ffvmQ" name="[date is valid]" target="_mepm0HO4EeSmvJDx_ffvmQ" source="_JOrFoHO4EeSmvJDx_ffvmQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_I87jcHO6EeSmvJDx_ffvmQ" target="_I8vWMHO6EeSmvJDx_ffvmQ" source="_mepm0HO4EeSmvJDx_ffvmQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_MvIpwHO6EeSmvJDx_ffvmQ" name="[number of nights is valid]" target="_Mu-RsHO6EeSmvJDx_ffvmQ" source="_I8vWMHO6EeSmvJDx_ffvmQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_XP2PcHO6EeSmvJDx_ffvmQ" target="_XPqCMHO6EeSmvJDx_ffvmQ" source="_Mu-RsHO6EeSmvJDx_ffvmQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_aGmaIHO6EeSmvJDx_ffvmQ" name="[number of rooms is valid]" target="_aGcpIHO6EeSmvJDx_ffvmQ" source="_XPqCMHO6EeSmvJDx_ffvmQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="__lJfQHO6EeSmvJDx_ffvmQ" target="__k9SAHO6EeSmvJDx_ffvmQ" source="_aGcpIHO6EeSmvJDx_ffvmQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_KSGfQHO9EeSmvJDx_ffvmQ" name="[number of guests is valid]" target="_KR8HMHO9EeSmvJDx_ffvmQ" source="__k9SAHO6EeSmvJDx_ffvmQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_paUUcHO9EeSmvJDx_ffvmQ" name="" target="_paJVUHO9EeSmvJDx_ffvmQ" source="_KR8HMHO9EeSmvJDx_ffvmQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_TPDhQHO_EeSmvJDx_ffvmQ" target="_TO5JMHO_EeSmvJDx_ffvmQ" source="_paJVUHO9EeSmvJDx_ffvmQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_vzRTMHPAEeSmvJDx_ffvmQ" target="_oSnlMHPAEeSmvJDx_ffvmQ" source="_TO5JMHO_EeSmvJDx_ffvmQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_5Mq2EHPBEeSfQr-azHjPNA" target="_5IrG4HPBEeSfQr-azHjPNA" source="_oSnlMHPAEeSmvJDx_ffvmQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_AYgKoHPCEeSfQr-azHjPNA" target="_AYVLgHPCEeSfQr-azHjPNA" source="_5IrG4HPBEeSfQr-azHjPNA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_FgfYIHPCEeSfQr-azHjPNA" target="_FgW1QHPCEeSfQr-azHjPNA" source="_AYVLgHPCEeSfQr-azHjPNA"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_fNpS0HPCEeSfQr-azHjPNA" target="_fNeTsHPCEeSfQr-azHjPNA" source="_FgW1QHPCEeSfQr-azHjPNA"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_NHBssHO3EeSmvJDx_ffvmQ" name="InitialNode1" outgoing="_QtjHcHO3EeSmvJDx_ffvmQ"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_QsWNkHO3EeSmvJDx_ffvmQ" name="Choose a date" incoming="_QtjHcHO3EeSmvJDx_ffvmQ" outgoing="_JPflAHO4EeSmvJDx_ffvmQ"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_JOrFoHO4EeSmvJDx_ffvmQ" name="DecisionNode1" incoming="_JPflAHO4EeSmvJDx_ffvmQ" outgoing="_me0l8HO4EeSmvJDx_ffvmQ"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_mepm0HO4EeSmvJDx_ffvmQ" name="Choose number of nights" incoming="_me0l8HO4EeSmvJDx_ffvmQ" outgoing="_I87jcHO6EeSmvJDx_ffvmQ"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_I8vWMHO6EeSmvJDx_ffvmQ" name="DecisionNode2" incoming="_I87jcHO6EeSmvJDx_ffvmQ" outgoing="_MvIpwHO6EeSmvJDx_ffvmQ"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_Mu-RsHO6EeSmvJDx_ffvmQ" name="Choose number of rooms" incoming="_MvIpwHO6EeSmvJDx_ffvmQ" outgoing="_XP2PcHO6EeSmvJDx_ffvmQ"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_XPqCMHO6EeSmvJDx_ffvmQ" name="DecisionNode3" incoming="_XP2PcHO6EeSmvJDx_ffvmQ" outgoing="_aGmaIHO6EeSmvJDx_ffvmQ"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_aGcpIHO6EeSmvJDx_ffvmQ" name="Choose number of guests" incoming="_aGmaIHO6EeSmvJDx_ffvmQ" outgoing="__lJfQHO6EeSmvJDx_ffvmQ"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="__k9SAHO6EeSmvJDx_ffvmQ" name="DecisionNode4" incoming="__lJfQHO6EeSmvJDx_ffvmQ" outgoing="_KSGfQHO9EeSmvJDx_ffvmQ"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_KR8HMHO9EeSmvJDx_ffvmQ" name="Register date, number of night(s), room(s), guest(s)" incoming="_KSGfQHO9EeSmvJDx_ffvmQ" outgoing="_paUUcHO9EeSmvJDx_ffvmQ"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_paJVUHO9EeSmvJDx_ffvmQ" name="Return a list of available room type(s)" incoming="_paUUcHO9EeSmvJDx_ffvmQ" outgoing="_TPDhQHO_EeSmvJDx_ffvmQ"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_TO5JMHO_EeSmvJDx_ffvmQ" name="Choose type(s) of room(s) from list" incoming="_TPDhQHO_EeSmvJDx_ffvmQ" outgoing="_vzRTMHPAEeSmvJDx_ffvmQ"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_oSnlMHPAEeSmvJDx_ffvmQ" name="Register room(s) of the chosen type(s)" incoming="_vzRTMHPAEeSmvJDx_ffvmQ" outgoing="_5Mq2EHPBEeSfQr-azHjPNA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_5IrG4HPBEeSfQr-azHjPNA" name="Enter personal details" incoming="_5Mq2EHPBEeSfQr-azHjPNA" outgoing="_AYgKoHPCEeSfQr-azHjPNA"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_AYVLgHPCEeSfQr-azHjPNA" name="DecisionNode5" incoming="_AYgKoHPCEeSfQr-azHjPNA" outgoing="_FgfYIHPCEeSfQr-azHjPNA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_FgW1QHPCEeSfQr-azHjPNA" name="Enter payment details" incoming="_FgfYIHPCEeSfQr-azHjPNA" outgoing="_fNpS0HPCEeSfQr-azHjPNA"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_fNeTsHPCEeSfQr-azHjPNA" name="DecisionNode6" incoming="_fNpS0HPCEeSfQr-azHjPNA"/>
+  </packagedElement>
+</uml:Model>
