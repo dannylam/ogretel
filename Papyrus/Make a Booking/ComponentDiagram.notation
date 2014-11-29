@@ -713,4 +713,12 @@
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_F1fRvHcUEeSRmJCeeTuJwg" id="(0.4993324432576769,0.8648648648648649)"/>
     </edges>
   </notation:Diagram>
+  <notation:Diagram xmi:id="_6JaKYHgPEeScKp6Wa2g0DA" type="PapyrusUMLComponentDiagram" name="Hotel Components" measurementUnit="Pixel">
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_6JaKYXgPEeScKp6Wa2g0DA" name="diagram_compatibility_version" stringValue="1.0.0"/>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_6JaKYngPEeScKp6Wa2g0DA"/>
+    <styles xmi:type="style:PapyrusViewStyle" xmi:id="_6JaKY3gPEeScKp6Wa2g0DA">
+      <owner xmi:type="uml:Model" href="ComponentDiagram.uml#_bbB98HcREeSaTI8W4X6HJg"/>
+    </styles>
+    <element xmi:type="uml:Model" href="ComponentDiagram.uml#_bbB98HcREeSaTI8W4X6HJg"/>
+  </notation:Diagram>
 </xmi:XMI>
