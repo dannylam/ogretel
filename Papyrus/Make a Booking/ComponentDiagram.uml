@@ -152,8 +152,6 @@
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_L_ybIHcVEeSF9o1ikgdnqA" client="_F1aZAHcUEeSRmJCeeTuJwg" supplier="_F1eDYHcUEeSRmJCeeTuJwg"/>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_D-wxsHcaEeSF9o1ikgdnqA" client="_F1aZAHcUEeSRmJCeeTuJwg" supplier="_F1cOMHcUEeSRmJCeeTuJwg"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_4w-TcHfxEeSgOPGBuRA6Ag" name="User">
     <packagedElement xmi:type="uml:Component" xmi:id="_9nFXkHcREeSaTI8W4X6HJg" name="Host"/>
@@ -173,24 +171,24 @@
     <packagedElement xmi:type="uml:Interface" xmi:id="_lwSkwHcVEeSF9o1ikgdnqA" name="BookingProvidesForGuest "/>
     <packagedElement xmi:type="uml:Interface" xmi:id="_sAA2YHcVEeSF9o1ikgdnqA" name="BookingProvidesForCustomer"/>
     <packagedElement xmi:type="uml:Interface" xmi:id="_wxiEoHcVEeSF9o1ikgdnqA" name="BookingProvidesForHost "/>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_SRf3gHcaEeSF9o1ikgdnqA" client="_lmEZIHcSEeSaTI8W4X6HJg" supplier="_wxiEoHcVEeSF9o1ikgdnqA"/>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_Sp4iUHcaEeSF9o1ikgdnqA" client="_lmEZIHcSEeSaTI8W4X6HJg" supplier="_sAA2YHcVEeSF9o1ikgdnqA"/>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_Tb_UsHcaEeSF9o1ikgdnqA" client="_lmEZIHcSEeSaTI8W4X6HJg" supplier="_lwSkwHcVEeSF9o1ikgdnqA"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_Zo2NwHgFEeSP8NWpkjOmgA" name="bookingUseServices" client="_lmEZIHcSEeSaTI8W4X6HJg" supplier="_obwsgHcVEeSF9o1ikgdnqA"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_koAqAHgFEeSP8NWpkjOmgA" name="bookingUseMaintenance" client="_lmEZIHcSEeSaTI8W4X6HJg" supplier="_DM3XgHcWEeSF9o1ikgdnqA"/>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_8eeAcHgTEeScKp6Wa2g0DA" name="Realization0" client="_lmEZIHcSEeSaTI8W4X6HJg" supplier="_wxiEoHcVEeSF9o1ikgdnqA" contract="_wxiEoHcVEeSF9o1ikgdnqA"/>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_9ja2UHgTEeScKp6Wa2g0DA" name="Realization1" client="_lmEZIHcSEeSaTI8W4X6HJg" supplier="_sAA2YHcVEeSF9o1ikgdnqA" contract="_sAA2YHcVEeSF9o1ikgdnqA"/>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_M6siUHgUEeScKp6Wa2g0DA" name="Realization2" client="_lmEZIHcSEeSaTI8W4X6HJg" supplier="_lwSkwHcVEeSF9o1ikgdnqA" contract="_lwSkwHcVEeSF9o1ikgdnqA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_C_DRAHfyEeSgOPGBuRA6Ag" name="Maintenance">
     <packagedElement xmi:type="uml:Component" xmi:id="_l1f8QHcSEeSaTI8W4X6HJg" name="Maintenance"/>
     <packagedElement xmi:type="uml:Interface" xmi:id="_DM3XgHcWEeSF9o1ikgdnqA" name="MaintenanceProvidesForBooking"/>
     <packagedElement xmi:type="uml:Interface" xmi:id="_7E1D8HcWEeSF9o1ikgdnqA" name="MaintenanceProvidesHost"/>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_kcuHQHcZEeSF9o1ikgdnqA" client="_l1f8QHcSEeSaTI8W4X6HJg" supplier="_DM3XgHcWEeSF9o1ikgdnqA"/>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_lFNqoHcZEeSF9o1ikgdnqA" client="_l1f8QHcSEeSaTI8W4X6HJg" supplier="_7E1D8HcWEeSF9o1ikgdnqA"/>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_VCAAoHgUEeScKp6Wa2g0DA" name="Realization0" client="_l1f8QHcSEeSaTI8W4X6HJg" supplier="_DM3XgHcWEeSF9o1ikgdnqA" contract="_DM3XgHcWEeSF9o1ikgdnqA"/>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_Dgy-QHgVEeScKp6Wa2g0DA" name="Realization1" client="_l1f8QHcSEeSaTI8W4X6HJg" supplier="_7E1D8HcWEeSF9o1ikgdnqA" contract="_7E1D8HcWEeSF9o1ikgdnqA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_O4oHEHfyEeSgOPGBuRA6Ag" name="Services">
     <packagedElement xmi:type="uml:Component" xmi:id="_ooTbEHcSEeSaTI8W4X6HJg" name="Services"/>
     <packagedElement xmi:type="uml:Interface" xmi:id="_obwsgHcVEeSF9o1ikgdnqA" name="ServiceProvidesForBooking "/>
     <packagedElement xmi:type="uml:Interface" xmi:id="_vFMXQHcYEeSF9o1ikgdnqA" name="ServiceProvidesForHost"/>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_cvfq8HcbEeSF9o1ikgdnqA" client="_ooTbEHcSEeSaTI8W4X6HJg" supplier="_obwsgHcVEeSF9o1ikgdnqA"/>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_dH3HoHcbEeSF9o1ikgdnqA" client="_ooTbEHcSEeSaTI8W4X6HJg" supplier="_vFMXQHcYEeSF9o1ikgdnqA"/>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_fr9eYHgTEeScKp6Wa2g0DA" name="Realization0" client="_ooTbEHcSEeSaTI8W4X6HJg" supplier="_obwsgHcVEeSF9o1ikgdnqA" contract="_obwsgHcVEeSF9o1ikgdnqA"/>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_YKp-MHgVEeScKp6Wa2g0DA" name="Realization1" client="_ooTbEHcSEeSaTI8W4X6HJg" supplier="_vFMXQHcYEeSF9o1ikgdnqA" contract="_vFMXQHcYEeSF9o1ikgdnqA"/>
   </packagedElement>
 </uml:Model>
