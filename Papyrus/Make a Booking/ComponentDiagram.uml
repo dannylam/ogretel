@@ -165,6 +165,8 @@
     <packagedElement xmi:type="uml:Usage" xmi:id="_G3I3kHcbEeSF9o1ikgdnqA" name="hostUseServices" client="_9nFXkHcREeSaTI8W4X6HJg" supplier="_vFMXQHcYEeSF9o1ikgdnqA"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_fNbF8HcbEeSF9o1ikgdnqA" name="hostUseMaintenance" client="_9nFXkHcREeSaTI8W4X6HJg" supplier="_7E1D8HcWEeSF9o1ikgdnqA"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_p_F4wHcbEeSF9o1ikgdnqA" name="hostUseBanking" client="_9nFXkHcREeSaTI8W4X6HJg" supplier="_F1cOMHcUEeSRmJCeeTuJwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_BFnIgHgFEeSP8NWpkjOmgA" name="customerUseBank" client="_A5I-MHcSEeSaTI8W4X6HJg" supplier="_F1eDYHcUEeSRmJCeeTuJwg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_EhBfcHgFEeSP8NWpkjOmgA" name="guestUseBank" client="_BYE88HcSEeSaTI8W4X6HJg" supplier="_F1eDYHcUEeSRmJCeeTuJwg"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_-2Jh8HfxEeSgOPGBuRA6Ag" name="Booking">
     <packagedElement xmi:type="uml:Component" xmi:id="_lmEZIHcSEeSaTI8W4X6HJg" name="Booking"/>
@@ -174,6 +176,8 @@
     <packagedElement xmi:type="uml:Realization" xmi:id="_SRf3gHcaEeSF9o1ikgdnqA" client="_lmEZIHcSEeSaTI8W4X6HJg" supplier="_wxiEoHcVEeSF9o1ikgdnqA"/>
     <packagedElement xmi:type="uml:Realization" xmi:id="_Sp4iUHcaEeSF9o1ikgdnqA" client="_lmEZIHcSEeSaTI8W4X6HJg" supplier="_sAA2YHcVEeSF9o1ikgdnqA"/>
     <packagedElement xmi:type="uml:Realization" xmi:id="_Tb_UsHcaEeSF9o1ikgdnqA" client="_lmEZIHcSEeSaTI8W4X6HJg" supplier="_lwSkwHcVEeSF9o1ikgdnqA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Zo2NwHgFEeSP8NWpkjOmgA" name="bookingUseServices" client="_lmEZIHcSEeSaTI8W4X6HJg" supplier="_obwsgHcVEeSF9o1ikgdnqA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_koAqAHgFEeSP8NWpkjOmgA" name="bookingUseMaintenance" client="_lmEZIHcSEeSaTI8W4X6HJg" supplier="_DM3XgHcWEeSF9o1ikgdnqA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_C_DRAHfyEeSgOPGBuRA6Ag" name="Maintenance">
     <packagedElement xmi:type="uml:Component" xmi:id="_l1f8QHcSEeSaTI8W4X6HJg" name="Maintenance"/>
