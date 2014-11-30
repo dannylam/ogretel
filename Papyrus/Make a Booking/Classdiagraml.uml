@@ -49,9 +49,6 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_rCtRwHijEeSmr6YRnpR7KQ" name="reference" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_rSYsgHijEeSmr6YRnpR7KQ" name="nbrOfGuests" visibility="private" isUnique="false">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_rggoEHijEeSmr6YRnpR7KQ" name="date" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
@@ -71,6 +68,9 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_s1rrQHijEeSmr6YRnpR7KQ" name="customer" visibility="private" type="_HZo9AHiiEeSmr6YRnpR7KQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_hfhSAHioEeSmr6YRnpR7KQ" name="nbrOfGuests" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_xY_McHilEeSmr6YRnpR7KQ" name="sets"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_zWSmoHilEeSmr6YRnpR7KQ" name="gets"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_0wkMQHilEeSmr6YRnpR7KQ" name="checkedInOne" visibility="public">
