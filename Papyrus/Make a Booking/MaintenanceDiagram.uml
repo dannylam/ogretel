@@ -248,6 +248,26 @@ roomType: RoomType</body>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_zIK1YHlFEeScv6HJEKdjpA" name="InterfaceMaintenanceProvidesForBooking"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_MSmVUHl5EeScv6HJEKdjpA" name="MaintenanceProvidesForBooking">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Tses8Hl5EeScv6HJEKdjpA" name="add">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tses8Xl5EeScv6HJEKdjpA" name="room" type="_itkoAHlBEeScv6HJEKdjpA"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_V_eqUHl5EeScv6HJEKdjpA" name="add">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_V_eqUXl5EeScv6HJEKdjpA" name="roomType" type="_CLdSkHk_EeScv6HJEKdjpA"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_WEP1kHl5EeScv6HJEKdjpA" name="edit">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_WEP1kXl5EeScv6HJEKdjpA" name="room" type="_itkoAHlBEeScv6HJEKdjpA"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ktmEkHl5EeScv6HJEKdjpA" name="edit">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ktmEkXl5EeScv6HJEKdjpA" name="roomType" type="_CLdSkHk_EeScv6HJEKdjpA"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_n4bB0Hl5EeScv6HJEKdjpA" name="remove">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_n4bB0Xl5EeScv6HJEKdjpA" name="room" type="_itkoAHlBEeScv6HJEKdjpA"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_rgGTIHl5EeScv6HJEKdjpA" name="remove">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_rgGTIXl5EeScv6HJEKdjpA" name="roomType" type="_CLdSkHk_EeScv6HJEKdjpA"/>
+      </ownedOperation>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Qp5nMHlBEeScv6HJEKdjpA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QrHIIHlBEeScv6HJEKdjpA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g"/>
