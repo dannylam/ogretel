@@ -86,6 +86,47 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_NDw_gHioEeSmr6YRnpR7KQ" name="add"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_OyPTgHioEeSmr6YRnpR7KQ" name="remove"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_i9V7oHk8EeScv6HJEKdjpA" name="Bookings">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_95FJUHk8EeScv6HJEKdjpA" name="bookingList" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_EM87IHk9EeScv6HJEKdjpA" name="exists">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LXGNoHk9EeScv6HJEKdjpA" name="bookingRef">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_hOW00Hk9EeScv6HJEKdjpA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_kJUxIHk9EeScv6HJEKdjpA" name="add">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_qC9eAHk9EeScv6HJEKdjpA" name="booking" type="_pGFNAHijEeSmr6YRnpR7KQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ugQvwHk9EeScv6HJEKdjpA" name="remove">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ugQvwXk9EeScv6HJEKdjpA" name="booking" type="_pGFNAHijEeSmr6YRnpR7KQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_x4J4oHk9EeScv6HJEKdjpA" name="getBooking">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_x4J4oXk9EeScv6HJEKdjpA" name="bookingRef">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_x4J4onk9EeScv6HJEKdjpA" type="_pGFNAHijEeSmr6YRnpR7KQ" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_43K5MHk9EeScv6HJEKdjpA" name="PaymentDetails">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7g1DEHk9EeScv6HJEKdjpA" name="ccNr">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Fl2LQHk-EeScv6HJEKdjpA" name="ccV">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_HBwvoHk-EeScv6HJEKdjpA" name="expMonth">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_HIqB0Hk-EeScv6HJEKdjpA" name="expYear">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_MbcxIHk-EeScv6HJEKdjpA" name="gets"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Xx_yoHk-EeScv6HJEKdjpA" name="sets"/>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_1HXNkHijEeSmr6YRnpR7KQ">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1HvoEHijEeSmr6YRnpR7KQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g"/>
@@ -94,4 +135,5 @@
     </profileApplication>
   </uml:Model>
   <ActionLanguage:TextualRepresentation xmi:id="_1HyEUHijEeSmr6YRnpR7KQ" language="org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty"/>
+  <ActionLanguage:TextualRepresentation xmi:id="_tqZ7QHk8EeScv6HJEKdjpA" language="org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty"/>
 </xmi:XMI>
