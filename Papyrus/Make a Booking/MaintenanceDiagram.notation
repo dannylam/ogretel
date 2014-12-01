@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:css="http://www.eclipse.org/papyrus/infra/gmfdiag/css" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/viewpoints/policy/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <notation:Diagram xmi:id="_6UIxAHk-EeScv6HJEKdjpA" type="PapyrusUMLClassDiagram" name="MaintenanceDiagram" measurementUnit="Pixel">
+    <styles xmi:type="notation:StringValueStyle" xmi:id="_6UIxAXk-EeScv6HJEKdjpA" name="diagram_compatibility_version" stringValue="1.0.0"/>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_6UIxAnk-EeScv6HJEKdjpA"/>
+    <styles xmi:type="style:PapyrusViewStyle" xmi:id="_6UIxA3k-EeScv6HJEKdjpA">
+      <owner xmi:type="uml:Model" href="MaintenanceDiagram.uml#_wqKmEHk-EeScv6HJEKdjpA"/>
+    </styles>
+    <element xmi:type="uml:Model" href="MaintenanceDiagram.uml#_wqKmEHk-EeScv6HJEKdjpA"/>
+  </notation:Diagram>
+  <css:ModelStyleSheets xmi:id="__xFh4Hk-EeScv6HJEKdjpA"/>
+</xmi:XMI>
