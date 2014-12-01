@@ -251,7 +251,30 @@ value: [int]</body>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_zIK1YHlFEeScv6HJEKdjpA" name="InterfaceMaintenanceProvidesForBooking"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_zIK1YHlFEeScv6HJEKdjpA" name="InterfaceMaintenanceProvidesForBooking">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ga3wsHmxEeScv6HJEKdjpA" name="canBook">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_q1q7oHmxEeScv6HJEKdjpA" name="roomType">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_zZgk8HmxEeScv6HJEKdjpA" name="start">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_0uNuEHmxEeScv6HJEKdjpA" name="end">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2xf0cHmxEeScv6HJEKdjpA" name="makeBooking">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2xf0cXmxEeScv6HJEKdjpA" name="roomType">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2xf0cnmxEeScv6HJEKdjpA" name="start">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2xf0c3mxEeScv6HJEKdjpA" name="end">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_MSmVUHl5EeScv6HJEKdjpA" name="MaintenanceProvidesForBooking">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_Tses8Hl5EeScv6HJEKdjpA" name="add">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tses8Xl5EeScv6HJEKdjpA" name="room" type="_itkoAHlBEeScv6HJEKdjpA"/>
