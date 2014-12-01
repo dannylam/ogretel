@@ -112,16 +112,16 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_43K5MHk9EeScv6HJEKdjpA" name="PaymentDetails">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_7g1DEHk9EeScv6HJEKdjpA" name="ccNr">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7g1DEHk9EeScv6HJEKdjpA" name="ccNr" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_Fl2LQHk-EeScv6HJEKdjpA" name="ccV">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Fl2LQHk-EeScv6HJEKdjpA" name="ccV" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_HBwvoHk-EeScv6HJEKdjpA" name="expMonth">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_HBwvoHk-EeScv6HJEKdjpA" name="expMonth" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_HIqB0Hk-EeScv6HJEKdjpA" name="expYear">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_HIqB0Hk-EeScv6HJEKdjpA" name="expYear" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_MbcxIHk-EeScv6HJEKdjpA" name="gets"/>
