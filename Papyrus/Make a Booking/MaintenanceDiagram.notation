@@ -413,7 +413,30 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_k4-BP3lEEeScv6HJEKdjpA"/>
       </children>
       <element xmi:type="uml:Class" href="MaintenanceDiagram.uml#_k4694HlEEeScv6HJEKdjpA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_k49aIXlEEeScv6HJEKdjpA" x="445" y="444" width="416"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_k49aIXlEEeScv6HJEKdjpA" x="278" y="378" width="416"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="_zIMDgHlFEeScv6HJEKdjpA" type="2004">
+      <children xmi:type="notation:DecorationNode" xmi:id="_zIMqkHlFEeScv6HJEKdjpA" type="5011"/>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_zIMqkXlFEeScv6HJEKdjpA" type="7006">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_zIMqknlFEeScv6HJEKdjpA"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_zIMqk3lFEeScv6HJEKdjpA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_zIMqlHlFEeScv6HJEKdjpA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zIMqlXlFEeScv6HJEKdjpA"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_zIMqlnlFEeScv6HJEKdjpA" type="7007">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_zIMql3lFEeScv6HJEKdjpA"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_zIMqmHlFEeScv6HJEKdjpA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_zIMqmXlFEeScv6HJEKdjpA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zIMqmnlFEeScv6HJEKdjpA"/>
+      </children>
+      <children xmi:type="notation:BasicCompartment" xmi:id="_zIMqm3lFEeScv6HJEKdjpA" type="7008">
+        <styles xmi:type="notation:TitleStyle" xmi:id="_zIMqnHlFEeScv6HJEKdjpA"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_zIMqnXlFEeScv6HJEKdjpA"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_zIMqnnlFEeScv6HJEKdjpA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zIMqn3lFEeScv6HJEKdjpA"/>
+      </children>
+      <element xmi:type="uml:Interface" href="MaintenanceDiagram.uml#_zIK1YHlFEeScv6HJEKdjpA"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zIMDgXlFEeScv6HJEKdjpA" x="549" y="616"/>
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_6UIxAXk-EeScv6HJEKdjpA" name="diagram_compatibility_version" stringValue="1.0.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_6UIxAnk-EeScv6HJEKdjpA"/>
