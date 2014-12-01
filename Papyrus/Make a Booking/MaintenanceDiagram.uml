@@ -217,6 +217,10 @@ roomType: RoomType</body>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_k4694HlEEeScv6HJEKdjpA" name="Calendar">
+      <ownedComment xmi:type="uml:Comment" xmi:id="__NwrkHmwEeScv6HJEKdjpA">
+        <body>key: String&#xD;
+value: [int]</body>
+      </ownedComment>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_mXWqwHlEEeScv6HJEKdjpA" name="roomTypeCapTable" type="_GrhyMHlEEeScv6HJEKdjpA"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_uiguUHlEEeScv6HJEKdjpA" name="getCap">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_xz9Q8HlEEeScv6HJEKdjpA" name="start">
@@ -267,9 +271,6 @@ roomType: RoomType</body>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_rgGTIHl5EeScv6HJEKdjpA" name="remove">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_rgGTIXl5EeScv6HJEKdjpA" name="roomType" type="_CLdSkHk_EeScv6HJEKdjpA"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_5qBbMHl5EeScv6HJEKdjpA" name="getRoom">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5qBbMXl5EeScv6HJEKdjpA" name="roomType" type="_CLdSkHk_EeScv6HJEKdjpA"/>
-      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_xoj2oHmvEeScv6HJEKdjpA" name="add">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_xoj2oXmvEeScv6HJEKdjpA" name="extra" type="_eltssHk_EeScv6HJEKdjpA"/>
       </ownedOperation>
@@ -279,6 +280,18 @@ roomType: RoomType</body>
       <ownedOperation xmi:type="uml:Operation" xmi:id="__GwhIHmvEeScv6HJEKdjpA" name="remove">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="__GwhIXmvEeScv6HJEKdjpA" name="extra" type="_eltssHk_EeScv6HJEKdjpA"/>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ePi-EHmwEeScv6HJEKdjpA" name="getRoom">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ePi-EXmwEeScv6HJEKdjpA" name="room" type="_itkoAHlBEeScv6HJEKdjpA"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_fUo94HmwEeScv6HJEKdjpA" name="getRoomType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_fUo94XmwEeScv6HJEKdjpA" name="roomType" type="_CLdSkHk_EeScv6HJEKdjpA"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_jLGSEHmwEeScv6HJEKdjpA" name="getExtra">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_jLGSEXmwEeScv6HJEKdjpA" name="ID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2_tFAHmwEeScv6HJEKdjpA" name="getExtras"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Qp5nMHlBEeScv6HJEKdjpA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QrHIIHlBEeScv6HJEKdjpA" source="http://www.eclipse.org/uml2/2.0.0/UML">
