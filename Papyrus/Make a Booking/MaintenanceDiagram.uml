@@ -216,6 +216,37 @@ roomType: RoomType</body>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_GriZSXlEEeScv6HJEKdjpA" name="roomType" type="_CLdSkHk_EeScv6HJEKdjpA" direction="return"/>
       </ownedOperation>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_k4694HlEEeScv6HJEKdjpA" name="Calendar">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_mXWqwHlEEeScv6HJEKdjpA" name="roomTypeCapTable"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_uiguUHlEEeScv6HJEKdjpA" name="getCap">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xz9Q8HlEEeScv6HJEKdjpA" name="start">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_1EOu4HlEEeScv6HJEKdjpA" name="end">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6O6EAHlEEeScv6HJEKdjpA" name="roomType">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-aUUgHlEEeScv6HJEKdjpA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Aw5xYHlFEeScv6HJEKdjpA" name="setCap">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Aw5xYXlFEeScv6HJEKdjpA" name="start">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Aw5xYnlFEeScv6HJEKdjpA" name="end">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Aw5xY3lFEeScv6HJEKdjpA" name="roomType">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_HjVugHlFEeScv6HJEKdjpA" name="nrOfRooms">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Qp5nMHlBEeScv6HJEKdjpA">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QrHIIHlBEeScv6HJEKdjpA" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g"/>
