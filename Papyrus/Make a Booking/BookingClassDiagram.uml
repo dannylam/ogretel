@@ -164,7 +164,36 @@ booking: Booking</body>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_MbcxIHk-EeScv6HJEKdjpA" name="gets"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_Xx_yoHk-EeScv6HJEKdjpA" name="sets"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_9pJrUHoKEeScv6HJEKdjpA" name="IBookingProvidesForHost"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_9pJrUHoKEeScv6HJEKdjpA" name="IBookingProvidesForHost">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_nMdUcHoNEeScv6HJEKdjpA" name="enableSelfManagement">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_q4dFEHoNEeScv6HJEKdjpA" name="guestEmail">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_rdcogHoNEeScv6HJEKdjpA" name="addServiceNote">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2Go0wHoNEeScv6HJEKdjpA" name="serviceNote">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_284gQHoNEeScv6HJEKdjpA" name="editServiceNote">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_NnG1cHoOEeScv6HJEKdjpA" name="oldServiceNote">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_P1cVQHoOEeScv6HJEKdjpA" name="newServiceNote">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Vsu4wHoOEeScv6HJEKdjpA" name="removeServiceNote">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Vsu4wXoOEeScv6HJEKdjpA" name="serviceNote">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_a8pTMHoOEeScv6HJEKdjpA" name="getServiceNotes">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_a8pTMXoOEeScv6HJEKdjpA" name="bookingRef">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_BTLGAHoLEeScv6HJEKdjpA" name="IBookingProvidesForCustomer">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_ZfdD0HoLEeScv6HJEKdjpA" name="getBooking">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_c0dQwHoLEeScv6HJEKdjpA" name="bookingRef">

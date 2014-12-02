@@ -347,6 +347,26 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9pK5d3oKEeScv6HJEKdjpA"/>
       </children>
       <children xmi:type="notation:BasicCompartment" xmi:id="_9pLggHoKEeScv6HJEKdjpA" type="7007">
+        <children xmi:type="notation:Shape" xmi:id="_nMeikHoNEeScv6HJEKdjpA" type="3007">
+          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_nMdUcHoNEeScv6HJEKdjpA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_nMeikXoNEeScv6HJEKdjpA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_rdd2oHoNEeScv6HJEKdjpA" type="3007">
+          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_rdcogHoNEeScv6HJEKdjpA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_rdd2oXoNEeScv6HJEKdjpA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_286VcHoNEeScv6HJEKdjpA" type="3007">
+          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_284gQHoNEeScv6HJEKdjpA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_286VcXoNEeScv6HJEKdjpA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_VswG4HoOEeScv6HJEKdjpA" type="3007">
+          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_Vsu4wHoOEeScv6HJEKdjpA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_VswG4XoOEeScv6HJEKdjpA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_a8p6QHoOEeScv6HJEKdjpA" type="3007">
+          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_a8pTMHoOEeScv6HJEKdjpA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_a8p6QXoOEeScv6HJEKdjpA"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_9pLggXoKEeScv6HJEKdjpA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_9pLggnoKEeScv6HJEKdjpA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_9pLgg3oKEeScv6HJEKdjpA"/>
@@ -406,7 +426,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BTM7P3oLEeScv6HJEKdjpA"/>
       </children>
       <element xmi:type="uml:Interface" href="BookingClassDiagram.uml#_BTLGAHoLEeScv6HJEKdjpA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BTMUIXoLEeScv6HJEKdjpA" x="684" y="407"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BTMUIXoLEeScv6HJEKdjpA" x="682" y="462"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_D29RYXoLEeScv6HJEKdjpA" type="2004">
       <children xmi:type="notation:DecorationNode" xmi:id="_D29RYnoLEeScv6HJEKdjpA" type="5011"/>
