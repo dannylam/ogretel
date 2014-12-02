@@ -73,20 +73,31 @@
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_xY_McHilEeSmr6YRnpR7KQ" name="sets"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_zWSmoHilEeSmr6YRnpR7KQ" name="gets"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_0wkMQHilEeSmr6YRnpR7KQ" name="checkedInOne" visibility="public">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_7fzZgHinEeSmr6YRnpR7KQ" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_DqPEUHioEeSmr6YRnpR7KQ" name="checkedInAll">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_DqPEUHioEeSmr6YRnpR7KQ" name="checkedInAllGuest">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_KaVfIHioEeSmr6YRnpR7KQ" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_NDw_gHioEeSmr6YRnpR7KQ" name="add"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_OyPTgHioEeSmr6YRnpR7KQ" name="remove"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_NDw_gHioEeSmr6YRnpR7KQ" name="add">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QMuKoHn_EeScv6HJEKdjpA" name="booking" type="_pGFNAHijEeSmr6YRnpR7KQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_LnvHEHoAEeScv6HJEKdjpA" name="edit">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LnvHEXoAEeScv6HJEKdjpA" name="booking" type="_pGFNAHijEeSmr6YRnpR7KQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_LtxdoHoAEeScv6HJEKdjpA" name="remove">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LtxdoXoAEeScv6HJEKdjpA" name="booking" type="_pGFNAHijEeSmr6YRnpR7KQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_SUqSEHoAEeScv6HJEKdjpA" name="checkedInAGuest">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SUqSEXoAEeScv6HJEKdjpA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_i9V7oHk8EeScv6HJEKdjpA" name="Bookings">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_4v3MsHoAEeScv6HJEKdjpA">
+        <body>bookingRef: String&#xD;
+booking: Booking</body>
+      </ownedComment>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_95FJUHk8EeScv6HJEKdjpA" name="bookingList" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
       </ownedAttribute>
