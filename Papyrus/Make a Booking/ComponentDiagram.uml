@@ -163,7 +163,6 @@
     <packagedElement xmi:type="uml:Usage" xmi:id="_G3I3kHcbEeSF9o1ikgdnqA" name="hostUseServices" client="_9nFXkHcREeSaTI8W4X6HJg" supplier="_vFMXQHcYEeSF9o1ikgdnqA"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_fNbF8HcbEeSF9o1ikgdnqA" name="hostUseMaintenance" client="_9nFXkHcREeSaTI8W4X6HJg" supplier="_7E1D8HcWEeSF9o1ikgdnqA"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_p_F4wHcbEeSF9o1ikgdnqA" name="hostUseBanking" client="_9nFXkHcREeSaTI8W4X6HJg" supplier="_F1cOMHcUEeSRmJCeeTuJwg"/>
-    <packagedElement xmi:type="uml:Usage" xmi:id="_BFnIgHgFEeSP8NWpkjOmgA" name="customerUseBank" client="_A5I-MHcSEeSaTI8W4X6HJg" supplier="_F1eDYHcUEeSRmJCeeTuJwg"/>
     <packagedElement xmi:type="uml:Usage" xmi:id="_EhBfcHgFEeSP8NWpkjOmgA" name="guestUseBank" client="_BYE88HcSEeSaTI8W4X6HJg" supplier="_F1eDYHcUEeSRmJCeeTuJwg"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_-2Jh8HfxEeSgOPGBuRA6Ag" name="Booking">
