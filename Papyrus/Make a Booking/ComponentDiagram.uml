@@ -238,6 +238,7 @@
     <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_8eeAcHgTEeScKp6Wa2g0DA" name="Realization0" client="_lmEZIHcSEeSaTI8W4X6HJg" supplier="_wxiEoHcVEeSF9o1ikgdnqA" contract="_wxiEoHcVEeSF9o1ikgdnqA"/>
     <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_9ja2UHgTEeScKp6Wa2g0DA" name="Realization1" client="_lmEZIHcSEeSaTI8W4X6HJg" supplier="_sAA2YHcVEeSF9o1ikgdnqA" contract="_sAA2YHcVEeSF9o1ikgdnqA"/>
     <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_M6siUHgUEeScKp6Wa2g0DA" name="Realization2" client="_lmEZIHcSEeSaTI8W4X6HJg" supplier="_lwSkwHcVEeSF9o1ikgdnqA" contract="_lwSkwHcVEeSF9o1ikgdnqA"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_3GzRQHoNEeSMnZtRM76j_Q" name="Usage0" client="_lmEZIHcSEeSaTI8W4X6HJg" supplier="_F1eDYHcUEeSRmJCeeTuJwg"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_C_DRAHfyEeSgOPGBuRA6Ag" name="Maintenance">
     <packagedElement xmi:type="uml:Component" xmi:id="_l1f8QHcSEeSaTI8W4X6HJg" name="Maintenance"/>
