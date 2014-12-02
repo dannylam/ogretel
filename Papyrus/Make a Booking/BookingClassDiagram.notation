@@ -111,9 +111,9 @@
           <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_JvINsHiiEeSmr6YRnpR7KQ"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_JvLRAXiiEeSmr6YRnpR7KQ"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_LAQeYHiiEeSmr6YRnpR7KQ" type="3013">
-          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_LAOpMHiiEeSmr6YRnpR7KQ"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_LAQeYXiiEeSmr6YRnpR7KQ"/>
+        <children xmi:type="notation:Shape" xmi:id="_Px7n4HoGEeScv6HJEKdjpA" type="3013">
+          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_Px0TIHoGEeScv6HJEKdjpA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_Px7n4XoGEeScv6HJEKdjpA"/>
         </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_plJZh3ihEeSmr6YRnpR7KQ"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_plJZiHihEeSmr6YRnpR7KQ"/>
@@ -162,7 +162,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HZqyPniiEeSmr6YRnpR7KQ"/>
       </children>
       <element xmi:type="uml:Class" href="BookingClassDiagram.uml#_HZo9AHiiEeSmr6YRnpR7KQ"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HZqLIXiiEeSmr6YRnpR7KQ" x="335" y="224"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HZqLIXiiEeSmr6YRnpR7KQ" x="344" y="237"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_pGHCMHijEeSmr6YRnpR7KQ" type="2008">
       <children xmi:type="notation:DecorationNode" xmi:id="_pGHCMnijEeSmr6YRnpR7KQ" type="5029"/>
@@ -249,7 +249,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pGHpTnijEeSmr6YRnpR7KQ"/>
       </children>
       <element xmi:type="uml:Class" href="BookingClassDiagram.uml#_pGFNAHijEeSmr6YRnpR7KQ"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pGHCMXijEeSmr6YRnpR7KQ" x="664" y="-13"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pGHCMXijEeSmr6YRnpR7KQ" x="685" y="-16"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_jBrpEHk8EeScv6HJEKdjpA" type="2008">
       <children xmi:type="notation:DecorationNode" xmi:id="_jBsQIHk8EeScv6HJEKdjpA" type="5029"/>
@@ -297,7 +297,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jBs3Pnk8EeScv6HJEKdjpA"/>
       </children>
       <element xmi:type="uml:Class" href="BookingClassDiagram.uml#_i9V7oHk8EeScv6HJEKdjpA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jBrpEXk8EeScv6HJEKdjpA" x="327" y="-16" width="316"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jBrpEXk8EeScv6HJEKdjpA" x="336" y="-3" width="316"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_43MuYHk9EeScv6HJEKdjpA" type="2008">
       <children xmi:type="notation:DecorationNode" xmi:id="_43NVcHk9EeScv6HJEKdjpA" type="5029"/>
@@ -344,7 +344,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_43N8hHk9EeScv6HJEKdjpA"/>
       </children>
       <element xmi:type="uml:Class" href="BookingClassDiagram.uml#_43K5MHk9EeScv6HJEKdjpA"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_43MuYXk9EeScv6HJEKdjpA" x="302" y="366" width="298"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_43MuYXk9EeScv6HJEKdjpA" x="338" y="385" width="298"/>
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_mzuFoXifEeSmr6YRnpR7KQ" name="diagram_compatibility_version" stringValue="1.0.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_mzuFonifEeSmr6YRnpR7KQ"/>

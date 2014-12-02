@@ -8,8 +8,8 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PveKEHijEeSmr6YRnpR7KQ" value="1"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_3mZtwHihEeSmr6YRnpR7KQ" name="room: Room" visibility="private"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_JvINsHiiEeSmr6YRnpR7KQ" name="sets"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_LAOpMHiiEeSmr6YRnpR7KQ" name="gets"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_JvINsHiiEeSmr6YRnpR7KQ" name="setType"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Px0TIHoGEeScv6HJEKdjpA" name="setRoom"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_HZo9AHiiEeSmr6YRnpR7KQ" name="Customer">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_QLqMQHiiEeSmr6YRnpR7KQ" name="paymentDetails: PaymentDetails" visibility="private"/>
@@ -126,13 +126,13 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_NDw_gHioEeSmr6YRnpR7KQ" name="add">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_NDw_gHioEeSmr6YRnpR7KQ" name="addBooking">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_QMuKoHn_EeScv6HJEKdjpA" name="booking" type="_pGFNAHijEeSmr6YRnpR7KQ"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_LnvHEHoAEeScv6HJEKdjpA" name="edit">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_LnvHEHoAEeScv6HJEKdjpA" name="editBooking">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_LnvHEXoAEeScv6HJEKdjpA" name="booking" type="_pGFNAHijEeSmr6YRnpR7KQ"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_LtxdoHoAEeScv6HJEKdjpA" name="remove">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_LtxdoHoAEeScv6HJEKdjpA" name="removeBooking">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_LtxdoXoAEeScv6HJEKdjpA" name="booking" type="_pGFNAHijEeSmr6YRnpR7KQ"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_SUqSEHoAEeScv6HJEKdjpA" name="checkedInAGuest">
