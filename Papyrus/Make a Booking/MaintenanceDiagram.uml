@@ -134,7 +134,7 @@
         <body>ID: int&#xD;
 extra: Extra</body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_Ay0u4HlDEeScv6HJEKdjpA" name="extraTable">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Ay0u4HlDEeScv6HJEKdjpA" name="extraTable" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_R1eXkHlDEeScv6HJEKdjpA" name="exists">
@@ -163,7 +163,7 @@ extra: Extra</body>
         <body>ID: int&#xD;
 room: Room</body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_1MwOMnlDEeScv6HJEKdjpA" name="roomTable">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_1MwOMnlDEeScv6HJEKdjpA" name="roomTable" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_1MwOM3lDEeScv6HJEKdjpA" name="exists">
@@ -192,7 +192,7 @@ room: Room</body>
         <body>name: String&#xD;
 roomType: RoomType</body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_GrhyMnlEEeScv6HJEKdjpA" name="roomTypeTable">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_GrhyMnlEEeScv6HJEKdjpA" name="roomTypeTable" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_GriZQHlEEeScv6HJEKdjpA" name="exists">
@@ -221,7 +221,7 @@ roomType: RoomType</body>
         <body>key: String&#xD;
 value: [int]</body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_mXWqwHlEEeScv6HJEKdjpA" name="roomTypeCapTable" type="_GrhyMHlEEeScv6HJEKdjpA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_mXWqwHlEEeScv6HJEKdjpA" name="roomTypeCapTable" visibility="private" type="_GrhyMHlEEeScv6HJEKdjpA"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_uiguUHlEEeScv6HJEKdjpA" name="getCap">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_xz9Q8HlEEeScv6HJEKdjpA" name="start">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>

@@ -556,7 +556,7 @@
       <element xmi:type="uml:InterfaceRealization" href="MaintenanceDiagram.uml#_S2KN8HlCEeScv6HJEKdjpA"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_S2MDInlCEeScv6HJEKdjpA" points="[0, 0, -91, 159]$[91, -159, 0, 0]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_U-WCcHlCEeScv6HJEKdjpA" id="(0.85,0.0)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_S2V0IHlCEeScv6HJEKdjpA" id="(0.28313253012048195,1.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_S2V0IHlCEeScv6HJEKdjpA" id="(0.21686746987951808,0.9828571428571429)"/>
     </edges>
   </notation:Diagram>
   <css:ModelStyleSheets xmi:id="__xFh4Hk-EeScv6HJEKdjpA"/>
