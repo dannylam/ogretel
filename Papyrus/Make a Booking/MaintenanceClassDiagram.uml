@@ -145,7 +145,7 @@ extra: Extra</body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_e2YpIHlDEeScv6HJEKdjpA" name="add">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_e2YpIHlDEeScv6HJEKdjpA" name="addExtra">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_kr310HlDEeScv6HJEKdjpA" name="extra" type="_eltssHk_EeScv6HJEKdjpA"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_iSfjoHlDEeScv6HJEKdjpA" name="remove">
@@ -174,10 +174,10 @@ room: Room</body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_1Mw1QHlDEeScv6HJEKdjpA" name="add">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1Mw1QHlDEeScv6HJEKdjpA" name="addRoom">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_1Mw1QXlDEeScv6HJEKdjpA" name="room" type="_itkoAHlBEeScv6HJEKdjpA"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_1Mw1QnlDEeScv6HJEKdjpA" name="remove">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1Mw1QnlDEeScv6HJEKdjpA" name="removeRoom">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_1Mw1Q3lDEeScv6HJEKdjpA" name="room" type="_itkoAHlBEeScv6HJEKdjpA"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_1Mw1RHlDEeScv6HJEKdjpA" name="getRoom">
@@ -203,10 +203,10 @@ roomType: RoomType</body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_GriZQ3lEEeScv6HJEKdjpA" name="add">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_GriZQ3lEEeScv6HJEKdjpA" name="addRoomType">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_GriZRHlEEeScv6HJEKdjpA" name="roomType" type="_CLdSkHk_EeScv6HJEKdjpA"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_GriZRXlEEeScv6HJEKdjpA" name="remove">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_GriZRXlEEeScv6HJEKdjpA" name="removeRoomType">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_GriZRnlEEeScv6HJEKdjpA" name="roomType" type="_CLdSkHk_EeScv6HJEKdjpA"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_GriZR3lEEeScv6HJEKdjpA" name="getRoomType">
@@ -276,31 +276,31 @@ value: [int]</body>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_MSmVUHl5EeScv6HJEKdjpA" name="MaintenanceProvidesForBooking">
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_Tses8Hl5EeScv6HJEKdjpA" name="add">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Tses8Hl5EeScv6HJEKdjpA" name="addRoom">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tses8Xl5EeScv6HJEKdjpA" name="room" type="_itkoAHlBEeScv6HJEKdjpA"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_V_eqUHl5EeScv6HJEKdjpA" name="add">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_V_eqUHl5EeScv6HJEKdjpA" name="addRoomType">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_V_eqUXl5EeScv6HJEKdjpA" name="roomType" type="_CLdSkHk_EeScv6HJEKdjpA"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_WEP1kHl5EeScv6HJEKdjpA" name="edit">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_WEP1kHl5EeScv6HJEKdjpA" name="editRoom">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_WEP1kXl5EeScv6HJEKdjpA" name="room" type="_itkoAHlBEeScv6HJEKdjpA"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_ktmEkHl5EeScv6HJEKdjpA" name="edit">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ktmEkHl5EeScv6HJEKdjpA" name="editRoomType">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_ktmEkXl5EeScv6HJEKdjpA" name="roomType" type="_CLdSkHk_EeScv6HJEKdjpA"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_n4bB0Hl5EeScv6HJEKdjpA" name="remove">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_n4bB0Hl5EeScv6HJEKdjpA" name="removeRoom">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_n4bB0Xl5EeScv6HJEKdjpA" name="room" type="_itkoAHlBEeScv6HJEKdjpA"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_rgGTIHl5EeScv6HJEKdjpA" name="remove">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_rgGTIHl5EeScv6HJEKdjpA" name="removeRoomType">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_rgGTIXl5EeScv6HJEKdjpA" name="roomType" type="_CLdSkHk_EeScv6HJEKdjpA"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_xoj2oHmvEeScv6HJEKdjpA" name="add">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_xoj2oHmvEeScv6HJEKdjpA" name="addExtra">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_xoj2oXmvEeScv6HJEKdjpA" name="extra" type="_eltssHk_EeScv6HJEKdjpA"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="__CJt8HmvEeScv6HJEKdjpA" name="edit">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="__CJt8HmvEeScv6HJEKdjpA" name="editExtra">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="__CJt8XmvEeScv6HJEKdjpA" name="extra" type="_eltssHk_EeScv6HJEKdjpA"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="__GwhIHmvEeScv6HJEKdjpA" name="remove">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="__GwhIHmvEeScv6HJEKdjpA" name="removeExtra">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="__GwhIXmvEeScv6HJEKdjpA" name="extra" type="_eltssHk_EeScv6HJEKdjpA"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_ePi-EHmwEeScv6HJEKdjpA" name="getRoom">
