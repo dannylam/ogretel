@@ -5,6 +5,8 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_r7pH0HlGEeSvBIG8udhAMw" name="CheckIn"/>
   <packagedElement xmi:type="uml:Package" xmi:id="_LzKrQHoREeSMnZtRM76j_Q" name="SeqCheckOut">
-    <packagedElement xmi:type="uml:Interaction" xmi:id="_vuaO0HlGEeSvBIG8udhAMw" name="CheckOut"/>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_vuaO0HlGEeSvBIG8udhAMw" name="CheckOut">
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_GADwMHrtEeSyi6NtWQOLDw" name="Lifeline"/>
+    </packagedElement>
   </packagedElement>
 </uml:Model>

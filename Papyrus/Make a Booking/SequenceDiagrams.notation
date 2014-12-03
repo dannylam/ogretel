@@ -42,6 +42,11 @@
     <children xmi:type="notation:Shape" xmi:id="_w5Mm8XlGEeSvBIG8udhAMw" type="2001">
       <children xmi:type="notation:DecorationNode" xmi:id="_w5Mm8nlGEeSvBIG8udhAMw" type="5001"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_w5Mm83lGEeSvBIG8udhAMw" type="7001">
+        <children xmi:type="notation:Shape" xmi:id="_GPf6YHrtEeSyi6NtWQOLDw" type="3001">
+          <children xmi:type="notation:DecorationNode" xmi:id="_GPhvkHrtEeSyi6NtWQOLDw" type="5002"/>
+          <element xmi:type="uml:Lifeline" href="SequenceDiagrams.uml#_GADwMHrtEeSyi6NtWQOLDw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GPf6YXrtEeSyi6NtWQOLDw" x="87" y="10" width="72"/>
+        </children>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_w5Mm9HlGEeSvBIG8udhAMw"/>
       </children>
       <element xmi:type="uml:Interaction" href="SequenceDiagrams.uml#_vuaO0HlGEeSvBIG8udhAMw"/>
