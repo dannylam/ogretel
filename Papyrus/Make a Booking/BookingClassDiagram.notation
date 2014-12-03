@@ -324,6 +324,30 @@
           <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_Xx_yoHk-EeScv6HJEKdjpA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_XyHHYXk-EeScv6HJEKdjpA"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_3XKWgHrTEeScv6HJEKdjpA" type="3013">
+          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_3W5QwHrTEeScv6HJEKdjpA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_3XKWgXrTEeScv6HJEKdjpA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_FxVhEHrUEeScv6HJEKdjpA" type="3013">
+          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_FxNlQHrUEeScv6HJEKdjpA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_FxVhEXrUEeScv6HJEKdjpA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_MQmqkHrUEeScv6HJEKdjpA" type="3013">
+          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_MQeHsHrUEeScv6HJEKdjpA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_MQmqkXrUEeScv6HJEKdjpA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_XJ3TIHrUEeScv6HJEKdjpA" type="3013">
+          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_XJm0cHrUEeScv6HJEKdjpA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_XJ3TIXrUEeScv6HJEKdjpA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_saQQIHrrEeScv6HJEKdjpA" type="3013">
+          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_saEC4HrrEeScv6HJEKdjpA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_saQQIXrrEeScv6HJEKdjpA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_siWcMHrrEeScv6HJEKdjpA" type="3013">
+          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_siMrMHrrEeScv6HJEKdjpA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_siXDQHrrEeScv6HJEKdjpA"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_43NVd3k9EeScv6HJEKdjpA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_43NVeHk9EeScv6HJEKdjpA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_43NVeXk9EeScv6HJEKdjpA"/>

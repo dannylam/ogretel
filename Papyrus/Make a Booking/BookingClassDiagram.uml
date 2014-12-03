@@ -7,7 +7,7 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PvdjAHijEeSmr6YRnpR7KQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PveKEHijEeSmr6YRnpR7KQ" value="1"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_3mZtwHihEeSmr6YRnpR7KQ" name="room: Room" visibility="private"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_3mZtwHihEeSmr6YRnpR7KQ" name="room" visibility="private"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_JvINsHiiEeSmr6YRnpR7KQ" name="setType">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_J_0NYHoIEeScv6HJEKdjpA" name="guestType">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
@@ -161,8 +161,30 @@ booking: Booking</body>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_HIqB0Hk-EeScv6HJEKdjpA" name="expYear" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_MbcxIHk-EeScv6HJEKdjpA" name="gets"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_Xx_yoHk-EeScv6HJEKdjpA" name="sets"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_MbcxIHk-EeScv6HJEKdjpA" name="getCcNr"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Xx_yoHk-EeScv6HJEKdjpA" name="setCcNr">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_1jy7cHrTEeScv6HJEKdjpA" name="ccNr">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_3W5QwHrTEeScv6HJEKdjpA" name="setCcV">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_3W530HrTEeScv6HJEKdjpA" name="ccV">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_FxNlQHrUEeScv6HJEKdjpA" name="getCcV"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_MQeHsHrUEeScv6HJEKdjpA" name="setExpMonth">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_WsCusHrUEeScv6HJEKdjpA" name="expMonth">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_XJm0cHrUEeScv6HJEKdjpA" name="setExpYear">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pAQs8HrUEeScv6HJEKdjpA" name="expYear">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_saEC4HrrEeScv6HJEKdjpA" name="getExpMonth"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_siMrMHrrEeScv6HJEKdjpA" name="getExpYear"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_9pJrUHoKEeScv6HJEKdjpA" name="IBookingProvidesForHost">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_nMdUcHoNEeScv6HJEKdjpA" name="enableSelfManagement">
