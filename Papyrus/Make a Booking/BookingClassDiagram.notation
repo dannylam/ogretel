@@ -289,6 +289,10 @@
           <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_UUkdwHuUEeScv6HJEKdjpA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_UVE0EXuUEeScv6HJEKdjpA"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_S3u9QHudEeScv6HJEKdjpA" type="3013">
+          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_S3KVgHudEeScv6HJEKdjpA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_S3u9QXudEeScv6HJEKdjpA"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_pGHpRnijEeSmr6YRnpR7KQ"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_pGHpR3ijEeSmr6YRnpR7KQ"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_pGHpSHijEeSmr6YRnpR7KQ"/>
@@ -559,6 +563,18 @@
         <children xmi:type="notation:Shape" xmi:id="_hoiG8HoPEeScv6HJEKdjpA" type="3013">
           <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_hocnYHoPEeScv6HJEKdjpA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_hoiG8XoPEeScv6HJEKdjpA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_ESVMYHuYEeScv6HJEKdjpA" type="3013">
+          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_ESEtsHuYEeScv6HJEKdjpA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_ESVMYXuYEeScv6HJEKdjpA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_yGeDcHuYEeScv6HJEKdjpA" type="3013">
+          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_yGYj4HuYEeScv6HJEKdjpA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_yGeDcXuYEeScv6HJEKdjpA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_9GPRwHuaEeScv6HJEKdjpA" type="3013">
+          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_9GABMHuaEeScv6HJEKdjpA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_9GPRwXuaEeScv6HJEKdjpA"/>
         </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_W-rzZ3oPEeScv6HJEKdjpA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_W-rzaHoPEeScv6HJEKdjpA"/>
