@@ -76,8 +76,8 @@
     <styles xmi:type="notation:LineStyle" xmi:id="_yLRMUH03EeS6sMHhxFyvZQ"/>
     <element xmi:type="uml:Message" href="SequenceEditBooking.uml#_yLJ3kH03EeS6sMHhxFyvZQ"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_yLPXI303EeS6sMHhxFyvZQ" points="[0, 1, 203, 0]$[-203, 59, 0, 58]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yLi5IH03EeS6sMHhxFyvZQ" id="(0.0,0.17325227963525835)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yLjgMH03EeS6sMHhxFyvZQ" id="(0.0,0.17647058823529413){R}"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yLi5IH03EeS6sMHhxFyvZQ" id="(0.0,0.1458966565349544)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_yLjgMH03EeS6sMHhxFyvZQ" id="(0.0,0.14860681114551083){R}"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_KjfUYH04EeS6sMHhxFyvZQ" type="4004" source="_PERNYH03EeS6sMHhxFyvZQ" target="_PzBw0H03EeS6sMHhxFyvZQ">
     <children xmi:type="notation:DecorationNode" xmi:id="_Kjf7cH04EeS6sMHhxFyvZQ" type="6002">
