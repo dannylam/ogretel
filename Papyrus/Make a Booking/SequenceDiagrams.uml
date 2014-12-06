@@ -6,7 +6,18 @@
   <packagedElement xmi:type="uml:Interaction" xmi:id="_r7pH0HlGEeSvBIG8udhAMw" name="CheckIn"/>
   <packagedElement xmi:type="uml:Package" xmi:id="_LzKrQHoREeSMnZtRM76j_Q" name="SeqCheckOut">
     <packagedElement xmi:type="uml:Interaction" xmi:id="_vuaO0HlGEeSvBIG8udhAMw" name="CheckOut">
-      <lifeline xmi:type="uml:Lifeline" xmi:id="_GADwMHrtEeSyi6NtWQOLDw" name="Lifeline"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_GADwMHrtEeSyi6NtWQOLDw" name=":Guest" coveredBy="_5HD98H0wEeSsvNcSfv_wTw"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_totrUH0wEeSsvNcSfv_wTw" name=":IBookingProvidesForGuest" coveredBy="_5HFMEH0wEeSsvNcSfv_wTw _omdc8H0xEeSsvNcSfv_wTw _vFxCsH0xEeSsvNcSfv_wTw"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_mL_loH0xEeSsvNcSfv_wTw" name=":Bookings" coveredBy="_omeEAH0xEeSsvNcSfv_wTw _vFwboH0xEeSsvNcSfv_wTw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_5HD98H0wEeSsvNcSfv_wTw" name="MessageSend" covered="_GADwMHrtEeSyi6NtWQOLDw" message="_5Gwb8H0wEeSsvNcSfv_wTw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_5HFMEH0wEeSsvNcSfv_wTw" name="MessageRecv" covered="_totrUH0wEeSsvNcSfv_wTw" message="_5Gwb8H0wEeSsvNcSfv_wTw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_omdc8H0xEeSsvNcSfv_wTw" name="MessageSend0" covered="_totrUH0wEeSsvNcSfv_wTw" message="_omc14H0xEeSsvNcSfv_wTw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_omeEAH0xEeSsvNcSfv_wTw" name="MessageRecv0" covered="_mL_loH0xEeSsvNcSfv_wTw" message="_omc14H0xEeSsvNcSfv_wTw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_vFwboH0xEeSsvNcSfv_wTw" name="MessageSend1" covered="_mL_loH0xEeSsvNcSfv_wTw" message="_vFvNgH0xEeSsvNcSfv_wTw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_vFxCsH0xEeSsvNcSfv_wTw" name="MessageRecv1" covered="_totrUH0wEeSsvNcSfv_wTw" message="_vFvNgH0xEeSsvNcSfv_wTw"/>
+      <message xmi:type="uml:Message" xmi:id="_5Gwb8H0wEeSsvNcSfv_wTw" name="checkOut(bookingRef, email)" messageSort="asynchCall" receiveEvent="_5HFMEH0wEeSsvNcSfv_wTw" sendEvent="_5HD98H0wEeSsvNcSfv_wTw"/>
+      <message xmi:type="uml:Message" xmi:id="_omc14H0xEeSsvNcSfv_wTw" name="exists(bookingRef)" messageSort="asynchCall" receiveEvent="_omeEAH0xEeSsvNcSfv_wTw" sendEvent="_omdc8H0xEeSsvNcSfv_wTw"/>
+      <message xmi:type="uml:Message" xmi:id="_vFvNgH0xEeSsvNcSfv_wTw" name="exists:boolean" messageSort="asynchCall" receiveEvent="_vFxCsH0xEeSsvNcSfv_wTw" sendEvent="_vFwboH0xEeSsvNcSfv_wTw"/>
     </packagedElement>
   </packagedElement>
 </uml:Model>
