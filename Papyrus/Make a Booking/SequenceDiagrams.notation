@@ -73,6 +73,11 @@
           <element xmi:type="uml:Comment" href="SequenceDiagrams.uml#_Rb0moHuiEeSxRO9vcwrttA"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rb3p8XuiEeSxRO9vcwrttA" x="3" y="219"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_cN0dkH03EeSxRO9vcwrttA" type="3009">
+          <children xmi:type="notation:DecorationNode" xmi:id="_cN1EoH03EeSxRO9vcwrttA" type="5006"/>
+          <element xmi:type="uml:Comment" href="SequenceDiagrams.uml#_cNxaQH03EeSxRO9vcwrttA"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cN0dkX03EeSxRO9vcwrttA" x="895" y="327"/>
+        </children>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JqBjo3lEEeSvBIG8udhAMw"/>
       </children>
       <element xmi:type="uml:Interaction" href="SequenceDiagrams.uml#_IcQI8HlEEeSvBIG8udhAMw"/>
@@ -250,6 +255,15 @@
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lN7Cs3ujEeSxRO9vcwrttA" points="[0, 1, 225, 0]$[-225, 1, 0, 0]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lOOksHujEeSxRO9vcwrttA" id="(0.0,0.9551569506726457)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_lOPLwHujEeSxRO9vcwrttA" id="(0.0,0.9573991031390134){R}"/>
+    </edges>
+    <edges xmi:type="notation:Edge" xmi:id="_mGTloH03EeSxRO9vcwrttA" type="4010" source="_cN0dkH03EeSxRO9vcwrttA" target="_evm7cHujEeSxRO9vcwrttA">
+      <styles xmi:type="notation:RoutingStyle" xmi:id="_mGTloX03EeSxRO9vcwrttA"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_mGTlon03EeSxRO9vcwrttA"/>
+      <styles xmi:type="notation:LineStyle" xmi:id="_mGUzwH03EeSxRO9vcwrttA"/>
+      <element xsi:nil="true"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_mGTlo303EeSxRO9vcwrttA" points="[-33, 4, 284, -47]$[-365, 50, -48, -1]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mGZsQH03EeSxRO9vcwrttA" id="(0.13253012048192772,0.2833333333333333)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mGZsQX03EeSxRO9vcwrttA" id="(0.5071574642126789,0.5409836065573771)"/>
     </edges>
   </notation:Diagram>
   <css:ModelStyleSheets xmi:id="_KyEJwHlEEeSvBIG8udhAMw"/>

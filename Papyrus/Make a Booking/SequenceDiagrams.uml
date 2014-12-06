@@ -13,8 +13,12 @@ Actor agrees to the price&#xD;
     <ownedComment xmi:type="uml:Comment" xmi:id="_Rb0moHuiEeSxRO9vcwrttA" annotatedElement="_yGHJAHuWEeSxRO9vcwrttA">
       <body>bankcard, cash, voucher</body>
     </ownedComment>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_CrensHlFEeSvBIG8udhAMw" name=":Costumer" coveredBy="_SVyAYHuVEeSxRO9vcwrttA _OofkYHuXEeSxRO9vcwrttA _yFDjoHuXEeSxRO9vcwrttA _yFHOAHuXEeSxRO9vcwrttA _iLtrYHuiEeSxRO9vcwrttA _iL5RkHuiEeSxRO9vcwrttA _T2pN0HujEeSxRO9vcwrttA _lNzG4HujEeSxRO9vcwrttA"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_-b46QHuTEeSxRO9vcwrttA" name=":IBPFC" coveredBy="_SV1DsHuVEeSxRO9vcwrttA _5YZq4HuWEeSxRO9vcwrttA _DIYXMHuXEeSxRO9vcwrttA _OodvMHuXEeSxRO9vcwrttA _yFDjoHuXEeSxRO9vcwrttA _yFHOAHuXEeSxRO9vcwrttA _iLtrYHuiEeSxRO9vcwrttA _iL5RkHuiEeSxRO9vcwrttA _T2qb8HujEeSxRO9vcwrttA _evdKcHujEeSxRO9vcwrttA _lNxRsHujEeSxRO9vcwrttA"/>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_cNxaQH03EeSxRO9vcwrttA" annotatedElement="_evY5AHujEeSxRO9vcwrttA">
+      <body>Assume Customer has enough money on card.&#xD;
+</body>
+    </ownedComment>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_CrensHlFEeSvBIG8udhAMw" name=":Costumer" coveredBy="_SVyAYHuVEeSxRO9vcwrttA _OofkYHuXEeSxRO9vcwrttA _yFDjoHuXEeSxRO9vcwrttA _yFHOAHuXEeSxRO9vcwrttA _iLtrYHuiEeSxRO9vcwrttA _iL5RkHuiEeSxRO9vcwrttA _T2pN0HujEeSxRO9vcwrttA _lNzG4HujEeSxRO9vcwrttA _G4u54H04EeSxRO9vcwrttA"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_-b46QHuTEeSxRO9vcwrttA" name=":IBPFC" coveredBy="_SV1DsHuVEeSxRO9vcwrttA _5YZq4HuWEeSxRO9vcwrttA _DIYXMHuXEeSxRO9vcwrttA _OodvMHuXEeSxRO9vcwrttA _yFDjoHuXEeSxRO9vcwrttA _yFHOAHuXEeSxRO9vcwrttA _iLtrYHuiEeSxRO9vcwrttA _iL5RkHuiEeSxRO9vcwrttA _T2qb8HujEeSxRO9vcwrttA _evdKcHujEeSxRO9vcwrttA _lNxRsHujEeSxRO9vcwrttA _G4wvEH04EeSxRO9vcwrttA"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_Ba3z4HuUEeSxRO9vcwrttA" name=":IMPFB" coveredBy="_5YbgEHuWEeSxRO9vcwrttA _DIV68HuXEeSxRO9vcwrttA _yFDjoHuXEeSxRO9vcwrttA _yFHOAHuXEeSxRO9vcwrttA _iLtrYHuiEeSxRO9vcwrttA _iL5RkHuiEeSxRO9vcwrttA"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_G_tVcHuUEeSxRO9vcwrttA" name=":CustomerProvides" coveredBy="_yFDjoHuXEeSxRO9vcwrttA _yFHOAHuXEeSxRO9vcwrttA _iLtrYHuiEeSxRO9vcwrttA _iL5RkHuiEeSxRO9vcwrttA _eve_oHujEeSxRO9vcwrttA"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_5YZq4HuWEeSxRO9vcwrttA" name="MessageSend2" covered="_-b46QHuTEeSxRO9vcwrttA" message="_5YX1sHuWEeSxRO9vcwrttA"/>
@@ -39,6 +43,8 @@ Actor agrees to the price&#xD;
             <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_T2qb8HujEeSxRO9vcwrttA" name="MessageRecv" covered="_-b46QHuTEeSxRO9vcwrttA" message="_T2mxkHujEeSxRO9vcwrttA"/>
             <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_evdKcHujEeSxRO9vcwrttA" name="MessageSend0" covered="_-b46QHuTEeSxRO9vcwrttA" message="_evY5AHujEeSxRO9vcwrttA"/>
             <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_eve_oHujEeSxRO9vcwrttA" name="MessageRecv0" covered="_G_tVcHuUEeSxRO9vcwrttA" message="_evY5AHujEeSxRO9vcwrttA"/>
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_G4u54H04EeSxRO9vcwrttA" name="MessageSend1" covered="_CrensHlFEeSvBIG8udhAMw"/>
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_G4wvEH04EeSxRO9vcwrttA" name="MessageRecv1" covered="_-b46QHuTEeSxRO9vcwrttA"/>
             <guard xmi:type="uml:InteractionConstraint" xmi:id="_iL7t0HuiEeSxRO9vcwrttA" name="method=bankcard">
               <specification xmi:type="uml:LiteralString" xmi:id="_KV9hwHujEeSxRO9vcwrttA" value="method=bankcard"/>
               <maxint xmi:type="uml:LiteralInteger" xmi:id="_iL_YMHuiEeSxRO9vcwrttA" value="1"/>
@@ -64,7 +70,7 @@ Actor agrees to the price&#xD;
     <message xmi:type="uml:Message" xmi:id="_OobS8HuXEeSxRO9vcwrttA" name="price" messageSort="asynchCall" receiveEvent="_OofkYHuXEeSxRO9vcwrttA" sendEvent="_OodvMHuXEeSxRO9vcwrttA"/>
     <message xmi:type="uml:Message" xmi:id="_T2mxkHujEeSxRO9vcwrttA" name="pay(bookingRef: String)" messageSort="asynchCall" receiveEvent="_T2qb8HujEeSxRO9vcwrttA" sendEvent="_T2pN0HujEeSxRO9vcwrttA"/>
     <message xmi:type="uml:Message" xmi:id="_evY5AHujEeSxRO9vcwrttA" name="makePayment()" messageSort="asynchCall" receiveEvent="_eve_oHujEeSxRO9vcwrttA" sendEvent="_evdKcHujEeSxRO9vcwrttA"/>
-    <message xmi:type="uml:Message" xmi:id="_lNu1cHujEeSxRO9vcwrttA" name="Message" messageSort="asynchCall" receiveEvent="_lNzG4HujEeSxRO9vcwrttA" sendEvent="_lNxRsHujEeSxRO9vcwrttA"/>
+    <message xmi:type="uml:Message" xmi:id="_lNu1cHujEeSxRO9vcwrttA" name="bookingRef" messageSort="asynchCall" receiveEvent="_lNzG4HujEeSxRO9vcwrttA" sendEvent="_lNxRsHujEeSxRO9vcwrttA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_r7pH0HlGEeSvBIG8udhAMw" name="CheckIn"/>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_vuaO0HlGEeSvBIG8udhAMw" name="CheckOut"/>
