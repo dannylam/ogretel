@@ -366,8 +366,22 @@ booking: Booking</body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_WOi2MH1MEeSytO65gmeCYw" name="pay">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_o6YqQH1MEeSytO65gmeCYw" name="ccNr">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ryF3MH1MEeSytO65gmeCYw" name="ccV">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_wpNXIH1MEeSytO65gmeCYw" name="expMonth">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_GA8JsH1NEeSytO65gmeCYw" name="expYear">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_W-p-MHoPEeScv6HJEKdjpA" name="BookingProvidesForCustomer">
+    <packagedElement xmi:type="uml:Class" xmi:id="_W-p-MHoPEeScv6HJEKdjpA" name="BookingProvides">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_hocnYHoPEeScv6HJEKdjpA" name="searchRoom" visibility="public">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_hocnYXoPEeScv6HJEKdjpA" name="nrOfNights">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
