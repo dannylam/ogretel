@@ -16,7 +16,7 @@ is okey, then the &#xD;
 the new price is &#xD;
 given</body>
     </ownedComment>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_PEGOQH03EeS6sMHhxFyvZQ" name="Actor" coveredBy="_WkzmoH03EeS6sMHhxFyvZQ _yLLswH03EeS6sMHhxFyvZQ _KjbqAH04EeS6sMHhxFyvZQ _d4RXwH04EeS6sMHhxFyvZQ _jwnrMH04EeS6sMHhxFyvZQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_PEGOQH03EeS6sMHhxFyvZQ" name="Actor" coveredBy="_WkzmoH03EeS6sMHhxFyvZQ _yLLswH03EeS6sMHhxFyvZQ _d4RXwH04EeS6sMHhxFyvZQ _jwnrMH04EeS6sMHhxFyvZQ"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_Py_7oH03EeS6sMHhxFyvZQ" name="BPFC" coveredBy="_Wk00wH03EeS6sMHhxFyvZQ _yLLFsH03EeS6sMHhxFyvZQ _KjcREH04EeS6sMHhxFyvZQ _XTHosH04EeS6sMHhxFyvZQ _cPlisH04EeS6sMHhxFyvZQ _d4QJoH04EeS6sMHhxFyvZQ _jwoSQH04EeS6sMHhxFyvZQ _nkMDcH04EeS6sMHhxFyvZQ"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_pwibsH03EeS6sMHhxFyvZQ" name="IMDER" coveredBy="_XTI20H04EeS6sMHhxFyvZQ _cPkUkH04EeS6sMHhxFyvZQ"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_rB588H03EeS6sMHhxFyvZQ" name="Payment" coveredBy="_nkMqgH04EeS6sMHhxFyvZQ"/>
@@ -24,7 +24,7 @@ given</body>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Wk00wH03EeS6sMHhxFyvZQ" name="MessageRecv" covered="_Py_7oH03EeS6sMHhxFyvZQ" message="_WkjH8H03EeS6sMHhxFyvZQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yLLFsH03EeS6sMHhxFyvZQ" name="MessageSend0" covered="_Py_7oH03EeS6sMHhxFyvZQ" message="_yLJ3kH03EeS6sMHhxFyvZQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yLLswH03EeS6sMHhxFyvZQ" name="MessageRecv0" covered="_PEGOQH03EeS6sMHhxFyvZQ" message="_yLJ3kH03EeS6sMHhxFyvZQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KjbqAH04EeS6sMHhxFyvZQ" name="MessageSend1" covered="_PEGOQH03EeS6sMHhxFyvZQ" message="_KjbC8H04EeS6sMHhxFyvZQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KjbqAH04EeS6sMHhxFyvZQ" name="MessageSend1" message="_KjbC8H04EeS6sMHhxFyvZQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_KjcREH04EeS6sMHhxFyvZQ" name="MessageRecv1" covered="_Py_7oH03EeS6sMHhxFyvZQ" message="_KjbC8H04EeS6sMHhxFyvZQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_XTHosH04EeS6sMHhxFyvZQ" name="MessageSend2" covered="_Py_7oH03EeS6sMHhxFyvZQ" message="_XTGakH04EeS6sMHhxFyvZQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_XTI20H04EeS6sMHhxFyvZQ" name="MessageRecv2" covered="_pwibsH03EeS6sMHhxFyvZQ" message="_XTGakH04EeS6sMHhxFyvZQ"/>
