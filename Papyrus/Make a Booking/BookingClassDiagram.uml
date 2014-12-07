@@ -8,8 +8,7 @@ value is &quot;out&quot; when a room which has previously
 been checked-in is checked-out in a specific booking </body>
     </ownedComment>
     <ownedComment xmi:type="uml:Comment" xmi:id="_WsZjUH2uEeSp56Ha0EyLeQ" annotatedElement="_BTLGAHoLEeScv6HJEKdjpA">
-      <body>Enum with bankcard, 
-cash, voucher</body>
+      <body>Enum with bankcard, cash, voucher</body>
     </ownedComment>
     <packagedElement xmi:type="uml:Class" xmi:id="_plG9QHihEeSmr6YRnpR7KQ" name="Guest">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_xsEdUHihEeSmr6YRnpR7KQ" name="guestType" visibility="private">
@@ -446,6 +445,12 @@ booking: Booking</body>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_GA8JsH1NEeSytO65gmeCYw" name="expYear">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_TR_4wH5NEeSmC8PUBKk0Qw" name="firstName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Z2A_YH5NEeSmC8PUBKk0Qw" name="lastName">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
