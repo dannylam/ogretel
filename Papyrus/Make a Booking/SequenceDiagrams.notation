@@ -86,7 +86,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_J25bsX1aEeSytO65gmeCYw" x="99" y="78" height="50"/>
           </children>
           <element xmi:type="uml:Lifeline" href="SequenceDiagrams.uml#_kn7DoH1ZEeSytO65gmeCYw"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kn8RwX1ZEeSytO65gmeCYw" x="1000" y="10" width="215" height="628"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kn8RwX1ZEeSytO65gmeCYw" x="1046" y="10" width="215" height="628"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_5GTMUH1ZEeSytO65gmeCYw" type="3001">
           <children xmi:type="notation:DecorationNode" xmi:id="_5GTzYH1ZEeSytO65gmeCYw" type="5002"/>
