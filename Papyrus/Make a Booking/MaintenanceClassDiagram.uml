@@ -411,6 +411,20 @@ value: [int]</body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_abYO4H5QEeSmC8PUBKk0Qw" name="removeBooking">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_fwtU0H5QEeSmC8PUBKk0Qw" name="roomType">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_JzEKEH5WEeSmC8PUBKk0Qw" name="nrOfRooms">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_OitJAH5WEeSmC8PUBKk0Qw" name="start">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QYwrsH5WEeSmC8PUBKk0Qw" name="end">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_DaFL0H2zEeSp56Ha0EyLeQ" memberEnd="_DaFL0X2zEeSp56Ha0EyLeQ _DaEkwH2zEeSp56Ha0EyLeQ">
       <name xsi:nil="true"/>
