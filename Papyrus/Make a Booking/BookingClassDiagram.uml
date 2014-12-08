@@ -31,7 +31,7 @@ been checked-in is checked-out in a specific booking </body>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_HZo9AHiiEeSmr6YRnpR7KQ" name="Customer">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_QLqMQHiiEeSmr6YRnpR7KQ" name="paymentDetails" visibility="private" type="_43K5MHk9EeScv6HJEKdjpA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_QLqMQHiiEeSmr6YRnpR7KQ" name="paymentDetail" visibility="private" type="_43K5MHk9EeScv6HJEKdjpA"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_sa2NYH1ZEeSOksMHVNfPUg" name="paymentDetails" type="_43K5MHk9EeScv6HJEKdjpA" association="_sa3bgH1ZEeSOksMHVNfPUg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sa2NYX1ZEeSOksMHVNfPUg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sa2NYn1ZEeSOksMHVNfPUg" value="*"/>
@@ -131,7 +131,7 @@ been checked-in is checked-out in a specific booking </body>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_sge3UHijEeSmr6YRnpR7KQ" name="serviceNotes" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_s1rrQHijEeSmr6YRnpR7KQ" name="customer" visibility="private" type="_HZo9AHiiEeSmr6YRnpR7KQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_s1rrQHijEeSmr6YRnpR7KQ" name="customerID" visibility="private" type="_HZo9AHiiEeSmr6YRnpR7KQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_hfhSAHioEeSmr6YRnpR7KQ" name="nrOfGuests" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
