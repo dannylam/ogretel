@@ -300,6 +300,14 @@ value: [int]</body>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_KOhJgH2yEeSp56Ha0EyLeQ" type="_GrhyMHlEEeScv6HJEKdjpA" direction="return"/>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZyVlYH6yEeS6sMHhxFyvZQ" name="editRoomStatus">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZyVlYX6yEeS6sMHhxFyvZQ" name="roomID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZyVlYn6yEeS6sMHhxFyvZQ" name="status">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_dj3DAH2xEeSp56Ha0EyLeQ" name="IExtrasMaintenance">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_xoj2oHmvEeScv6HJEKdjpA" name="addExtra">
@@ -382,6 +390,14 @@ value: [int]</body>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_mHpMgH2yEeSp56Ha0EyLeQ" name="addRoom">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_mHpMgX2yEeSp56Ha0EyLeQ" name="room" type="_itkoAHlBEeScv6HJEKdjpA"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_EJUOgH6yEeS6sMHhxFyvZQ" name="editRoomStatus">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_NQB7YH6yEeS6sMHhxFyvZQ" name="roomID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_R9kBgH6yEeS6sMHhxFyvZQ" name="status">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
+        </ownedParameter>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w1eBIH2yEeSp56Ha0EyLeQ" name="MaintenanceProvidesForBooking">
