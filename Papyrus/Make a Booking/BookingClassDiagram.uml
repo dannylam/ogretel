@@ -407,7 +407,7 @@ booking: Booking</body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_zv6k4H62EeSfbpy05VvhsQ" name="setPersonalDetails">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_zv6k4H62EeSfbpy05VvhsQ" name="setPersonalDetails" visibility="public">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_4TjIIH62EeSfbpy05VvhsQ" name="firstName">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
