@@ -18,6 +18,6 @@ room</body>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OxtusH1AEeS6sMHhxFyvZQ" name="MessageRecv1" covered="_5NjCoH0_EeS6sMHhxFyvZQ" message="_OxsgkH1AEeS6sMHhxFyvZQ"/>
     <message xmi:type="uml:Message" xmi:id="_GZzokH1AEeS6sMHhxFyvZQ" name="getRoom(roomID)" messageSort="asynchCall" receiveEvent="_GZ02sH1AEeS6sMHhxFyvZQ" sendEvent="_GZ0PoH1AEeS6sMHhxFyvZQ"/>
     <message xmi:type="uml:Message" xmi:id="_LKX0kH1AEeS6sMHhxFyvZQ" name="room" messageSort="asynchCall" receiveEvent="_LKZpwH1AEeS6sMHhxFyvZQ" sendEvent="_LKZCsH1AEeS6sMHhxFyvZQ"/>
-    <message xmi:type="uml:Message" xmi:id="_OxsgkH1AEeS6sMHhxFyvZQ" name="changestatus(roomID, status)" messageSort="asynchCall" receiveEvent="_OxtusH1AEeS6sMHhxFyvZQ" sendEvent="_OxtHoH1AEeS6sMHhxFyvZQ"/>
+    <message xmi:type="uml:Message" xmi:id="_OxsgkH1AEeS6sMHhxFyvZQ" name="editStatus(roomID, status)" messageSort="asynchCall" receiveEvent="_OxtusH1AEeS6sMHhxFyvZQ" sendEvent="_OxtHoH1AEeS6sMHhxFyvZQ"/>
   </packagedElement>
 </uml:Model>
