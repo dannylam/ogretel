@@ -135,7 +135,7 @@ public interface Booking extends EObject {
 	 * @model required="true" many="false" ordered="false"
 	 * @generated
 	 */
-	EList getExtraList();
+	EList<?> getExtraList();
 
 	/**
 	 * Sets the value of the '{@link model.Booking#getExtraList <em>Extra List</em>}' attribute.
@@ -145,7 +145,7 @@ public interface Booking extends EObject {
 	 * @see #getExtraList()
 	 * @generated
 	 */
-	void setExtraList(EList value);
+	void setExtraList(EList<?> value);
 
 	/**
 	 * Returns the value of the '<em><b>Room Map</b></em>' attribute.
@@ -161,7 +161,7 @@ public interface Booking extends EObject {
 	 * @model unique="false" required="true" ordered="false"
 	 * @generated
 	 */
-	Map getRoomMap();
+	Map<?, ?> getRoomMap();
 
 	/**
 	 * Sets the value of the '{@link model.Booking#getRoomMap <em>Room Map</em>}' attribute.
@@ -171,7 +171,7 @@ public interface Booking extends EObject {
 	 * @see #getRoomMap()
 	 * @generated
 	 */
-	void setRoomMap(Map value);
+	void setRoomMap(Map<?, ?> value);
 
 	/**
 	 * Returns the value of the '<em><b>Guest List</b></em>' attribute.
@@ -187,7 +187,7 @@ public interface Booking extends EObject {
 	 * @model required="true" many="false" ordered="false"
 	 * @generated
 	 */
-	EList getGuestList();
+	EList<?> getGuestList();
 
 	/**
 	 * Sets the value of the '{@link model.Booking#getGuestList <em>Guest List</em>}' attribute.
@@ -197,7 +197,7 @@ public interface Booking extends EObject {
 	 * @see #getGuestList()
 	 * @generated
 	 */
-	void setGuestList(EList value);
+	void setGuestList(EList<?> value);
 
 	/**
 	 * Returns the value of the '<em><b>Service Notes</b></em>' attribute.
@@ -213,7 +213,7 @@ public interface Booking extends EObject {
 	 * @model required="true" many="false" ordered="false"
 	 * @generated
 	 */
-	EList getServiceNotes();
+	EList<?> getServiceNotes();
 
 	/**
 	 * Sets the value of the '{@link model.Booking#getServiceNotes <em>Service Notes</em>}' attribute.
@@ -223,7 +223,7 @@ public interface Booking extends EObject {
 	 * @see #getServiceNotes()
 	 * @generated
 	 */
-	void setServiceNotes(EList value);
+	void setServiceNotes(EList<?> value);
 
 	/**
 	 * Returns the value of the '<em><b>Customer ID</b></em>' reference.
@@ -317,7 +317,7 @@ public interface Booking extends EObject {
 	 * @model type="model.Guest" required="true" ordered="false"
 	 * @generated
 	 */
-	EList getGuest();
+	EList<?> getGuest();
 
 	/**
 	 * Returns the value of the '<em><b>Ispayed</b></em>' attribute.

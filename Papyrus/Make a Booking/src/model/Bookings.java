@@ -40,7 +40,7 @@ public interface Bookings extends EObject {
 	 * @model required="true" ordered="false"
 	 * @generated
 	 */
-	Map getBookingList();
+	Map<?, ?> getBookingList();
 
 	/**
 	 * Sets the value of the '{@link model.Bookings#getBookingList <em>Booking List</em>}' attribute.
@@ -50,7 +50,7 @@ public interface Bookings extends EObject {
 	 * @see #getBookingList()
 	 * @generated
 	 */
-	void setBookingList(Map value);
+	void setBookingList(Map<?, ?> value);
 
 	/**
 	 * Returns the value of the '<em><b>Booking</b></em>' reference list.
@@ -66,7 +66,7 @@ public interface Bookings extends EObject {
 	 * @model type="model.Booking" ordered="false"
 	 * @generated
 	 */
-	EList getBooking();
+	EList<?> getBooking();
 
 	/**
 	 * <!-- begin-user-doc -->

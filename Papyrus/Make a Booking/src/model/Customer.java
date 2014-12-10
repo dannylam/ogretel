@@ -64,7 +64,7 @@ public interface Customer extends EObject {
 	 * @model type="model.PaymentDetails" required="true" ordered="false"
 	 * @generated
 	 */
-	EList getPaymentDetails();
+	EList<?> getPaymentDetails();
 
 	/**
 	 * <!-- begin-user-doc -->
