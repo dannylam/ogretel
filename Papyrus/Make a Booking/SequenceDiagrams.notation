@@ -103,7 +103,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hQPrYX5EEeSWe8RAQYjeHQ" x="59" y="406" width="16" height="50"/>
           </children>
           <element xmi:type="uml:Lifeline" href="SequenceDiagrams.uml#_5GR-MH1ZEeSytO65gmeCYw"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5GTMUX1ZEeSytO65gmeCYw" x="1356" y="10" width="134" height="628"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5GTMUX1ZEeSytO65gmeCYw" x="1358" y="10" width="134" height="628"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_krxpAH5CEeSWe8RAQYjeHQ" type="3009">
           <children xmi:type="notation:DecorationNode" xmi:id="_krxpAn5CEeSWe8RAQYjeHQ" type="5006"/>
