@@ -105,12 +105,12 @@ Actor wants to pay now</body>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_CKDgYIC-EeSBYYb-e9thAg" name="MessageRecv7" covered="_9aedwIC7EeSBYYb-e9thAg" message="_CJ9ZwIC-EeSBYYb-e9thAg"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_v2uvcoC8EeSBYYb-e9thAg" name="MessageRecv1" covered="_-8H2sIC7EeSBYYb-e9thAg"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_v2uvcYC8EeSBYYb-e9thAg" name="MessageSend1" covered="_amNYIIC8EeSBYYb-e9thAg"/>
-    <message xmi:type="uml:Message" xmi:id="_F6D5MIC8EeSBYYb-e9thAg" name="checkIn((bookingRef:String, guestEmail:String)" messageSort="asynchCall" receiveEvent="_F6J_0YC8EeSBYYb-e9thAg" sendEvent="_F6J_0IC8EeSBYYb-e9thAg"/>
-    <message xmi:type="uml:Message" xmi:id="_fAEUUIC8EeSBYYb-e9thAg" name="setBookingAsActive(bookingRef:String, roomID:String)" messageSort="asynchCall" receiveEvent="_fAH-sIC8EeSBYYb-e9thAg" sendEvent="_fAGJgIC8EeSBYYb-e9thAg"/>
-    <message xmi:type="uml:Message" xmi:id="_9aiSsIC8EeSBYYb-e9thAg" name="somethingChecksIfGuestBlacklisted(guestEmail:String)" messageSort="asynchCall" receiveEvent="_9aoZUYC8EeSBYYb-e9thAg" sendEvent="_9aoZUIC8EeSBYYb-e9thAg"/>
+    <message xmi:type="uml:Message" xmi:id="_F6D5MIC8EeSBYYb-e9thAg" name="checkIn((bookingRef:String, guestID:String)" messageSort="asynchCall" receiveEvent="_F6J_0YC8EeSBYYb-e9thAg" sendEvent="_F6J_0IC8EeSBYYb-e9thAg"/>
+    <message xmi:type="uml:Message" xmi:id="_fAEUUIC8EeSBYYb-e9thAg" name="setBookingAsActive(roomID:String)" messageSort="asynchCall" receiveEvent="_fAH-sIC8EeSBYYb-e9thAg" sendEvent="_fAGJgIC8EeSBYYb-e9thAg"/>
+    <message xmi:type="uml:Message" xmi:id="_9aiSsIC8EeSBYYb-e9thAg" name="somethingChecksIfGuestBlacklisted(guestID:String)" messageSort="asynchCall" receiveEvent="_9aoZUYC8EeSBYYb-e9thAg" sendEvent="_9aoZUIC8EeSBYYb-e9thAg"/>
     <message xmi:type="uml:Message" xmi:id="_Tn33kIC9EeSBYYb-e9thAg" name="- false: Boolean" messageSort="asynchCall" receiveEvent="_Tn9-MYC9EeSBYYb-e9thAg" sendEvent="_Tn9-MIC9EeSBYYb-e9thAg"/>
     <message xmi:type="uml:Message" xmi:id="_b4RngIC9EeSBYYb-e9thAg" name="- true: Boolean" messageSort="asynchCall" receiveEvent="_b4XuIYC9EeSBYYb-e9thAg" sendEvent="_b4XuIIC9EeSBYYb-e9thAg"/>
-    <message xmi:type="uml:Message" xmi:id="_sQFjcIC9EeSBYYb-e9thAg" name="somethingChecksifGuestVIP(guestEmail:String)" messageSort="asynchCall" receiveEvent="_sQLqEIC9EeSBYYb-e9thAg" sendEvent="_sQFjcYC9EeSBYYb-e9thAg"/>
+    <message xmi:type="uml:Message" xmi:id="_sQFjcIC9EeSBYYb-e9thAg" name="somethingChecksifGuestVIP(guestID:String)" messageSort="asynchCall" receiveEvent="_sQLqEIC9EeSBYYb-e9thAg" sendEvent="_sQFjcYC9EeSBYYb-e9thAg"/>
     <message xmi:type="uml:Message" xmi:id="_w0YOAIC9EeSBYYb-e9thAg" name="- false:Boolean" messageSort="asynchCall" receiveEvent="_w0eUoIC9EeSBYYb-e9thAg" sendEvent="_w0YOAYC9EeSBYYb-e9thAg"/>
     <message xmi:type="uml:Message" xmi:id="_CJ9ZwIC-EeSBYYb-e9thAg" name="-0:int" messageSort="asynchCall" receiveEvent="_CKDgYIC-EeSBYYb-e9thAg" sendEvent="_CJ9ZwYC-EeSBYYb-e9thAg"/>
   </packagedElement>
