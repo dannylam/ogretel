@@ -91,7 +91,7 @@
     <styles xmi:type="notation:StringValueStyle" xmi:id="_JqBjpXlEEeSvBIG8udhAMw" name="diagram_compatibility_version" stringValue="1.0.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_JqBjpnlEEeSvBIG8udhAMw"/>
     <styles xmi:type="style:PapyrusViewStyle" xmi:id="_JqBjp3lEEeSvBIG8udhAMw">
-      <owner xmi:type="uml:Model" href="SequenceDiagrams.uml#_ELihsHlEEeSvBIG8udhAMw"/>
+      <owner xmi:type="uml:Package" href="SequenceDiagrams.uml#_DeEw4IIaEeSZGMit48hbRw"/>
     </styles>
     <element xmi:type="uml:Interaction" href="SequenceDiagrams.uml#_IcQI8HlEEeSvBIG8udhAMw"/>
     <edges xmi:type="notation:Edge" xmi:id="_SXJSUHuVEeSxRO9vcwrttA" type="4004" source="_CriSEHlFEeSvBIG8udhAMw" target="_-b-Z0HuTEeSxRO9vcwrttA">
@@ -432,21 +432,5 @@
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CKiBgIC-EeSBYYb-e9thAg" id="(0.0,0.9936708860759493)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CKiBgYC-EeSBYYb-e9thAg" id="(0.0,0.8992395437262357){L}"/>
     </edges>
-  </notation:Diagram>
-  <notation:Diagram xmi:id="_w5Mm8HlGEeSvBIG8udhAMw" type="PapyrusUMLSequenceDiagram" name="SeqCheckOut" measurementUnit="Pixel">
-    <children xmi:type="notation:Shape" xmi:id="_w5Mm8XlGEeSvBIG8udhAMw" type="2001">
-      <children xmi:type="notation:DecorationNode" xmi:id="_w5Mm8nlGEeSvBIG8udhAMw" type="5001"/>
-      <children xmi:type="notation:DecorationNode" xmi:id="_w5Mm83lGEeSvBIG8udhAMw" type="7001">
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_w5Mm9HlGEeSvBIG8udhAMw"/>
-      </children>
-      <element xmi:type="uml:Interaction" href="SequenceDiagrams.uml#_vuaO0HlGEeSvBIG8udhAMw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_w5Mm9XlGEeSvBIG8udhAMw"/>
-    </children>
-    <styles xmi:type="notation:StringValueStyle" xmi:id="_w5Mm9nlGEeSvBIG8udhAMw" name="diagram_compatibility_version" stringValue="1.0.0"/>
-    <styles xmi:type="notation:DiagramStyle" xmi:id="_w5Mm93lGEeSvBIG8udhAMw"/>
-    <styles xmi:type="style:PapyrusViewStyle" xmi:id="_w5Mm-HlGEeSvBIG8udhAMw">
-      <owner xmi:type="uml:Package" href="SequenceDiagrams.uml#_upc6IIITEeSZGMit48hbRw"/>
-    </styles>
-    <element xmi:type="uml:Interaction" href="SequenceDiagrams.uml#_vuaO0HlGEeSvBIG8udhAMw"/>
   </notation:Diagram>
 </xmi:XMI>
