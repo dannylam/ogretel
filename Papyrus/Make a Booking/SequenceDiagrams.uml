@@ -76,6 +76,9 @@ Actor wants to pay now</body>
     <message xmi:type="uml:Message" xmi:id="_evY5AHujEeSxRO9vcwrttA" name="makePayment()" messageSort="asynchCall" receiveEvent="_eve_oHujEeSxRO9vcwrttA" sendEvent="_evdKcHujEeSxRO9vcwrttA"/>
     <message xmi:type="uml:Message" xmi:id="_lNu1cHujEeSxRO9vcwrttA" name="bookingRef" messageSort="asynchCall" receiveEvent="_lNzG4HujEeSxRO9vcwrttA" sendEvent="_lNxRsHujEeSxRO9vcwrttA"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_upc6IIITEeSZGMit48hbRw" name="SeqCheckOut">
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_vuaO0HlGEeSvBIG8udhAMw" name="CheckOut"/>
+  </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_ADW3MIFOEeSEjcYo6MN4aQ" name="seqCheckIn">
     <packagedElement xmi:type="uml:Interaction" xmi:id="_r7pH0HlGEeSvBIG8udhAMw" name="CheckIn">
       <ownedComment xmi:type="uml:Comment" xmi:id="_DX3z0IC9EeSBYYb-e9thAg">
@@ -115,8 +118,5 @@ Actor wants to pay now</body>
       <message xmi:type="uml:Message" xmi:id="_w0YOAIC9EeSBYYb-e9thAg" name="- false:Boolean" messageSort="asynchCall" receiveEvent="_w0eUoIC9EeSBYYb-e9thAg" sendEvent="_w0YOAYC9EeSBYYb-e9thAg"/>
       <message xmi:type="uml:Message" xmi:id="_CJ9ZwIC-EeSBYYb-e9thAg" name="-0:int" messageSort="asynchCall" receiveEvent="_CKDgYIC-EeSBYYb-e9thAg" sendEvent="_CJ9ZwYC-EeSBYYb-e9thAg"/>
     </packagedElement>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="_upc6IIITEeSZGMit48hbRw" name="SeqCheckOut">
-    <packagedElement xmi:type="uml:Interaction" xmi:id="_vuaO0HlGEeSvBIG8udhAMw" name="CheckOut"/>
   </packagedElement>
 </uml:Model>
