@@ -3,7 +3,6 @@
   <packagedElement xmi:type="uml:Interaction" xmi:id="_IcQI8HlEEeSvBIG8udhAMw" name="MakeABooking">
     <lifeline xmi:type="uml:Lifeline" xmi:id="_CrensHlFEeSvBIG8udhAMw" name=":Costumer"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Interaction" xmi:id="_r7pH0HlGEeSvBIG8udhAMw" name="CheckIn"/>
   <packagedElement xmi:type="uml:Package" xmi:id="_LzKrQHoREeSMnZtRM76j_Q" name="SeqCheckOut">
     <packagedElement xmi:type="uml:Interaction" xmi:id="_vuaO0HlGEeSvBIG8udhAMw" name="CheckOut">
       <ownedComment xmi:type="uml:Comment" xmi:id="_kplQoH5CEeSWe8RAQYjeHQ">
@@ -81,5 +80,8 @@
       <message xmi:type="uml:Message" xmi:id="_vPU1YH5EEeSWe8RAQYjeHQ" name="true:boolean" messageSort="reply" receiveEvent="_vPWqkH5EEeSWe8RAQYjeHQ" sendEvent="_vPVccH5EEeSWe8RAQYjeHQ"/>
       <message xmi:type="uml:Message" xmi:id="_0xvVEH5EEeSWe8RAQYjeHQ" name="0:int" messageSort="reply" receiveEvent="_0xxxUH5EEeSWe8RAQYjeHQ" sendEvent="_0xwjMH5EEeSWe8RAQYjeHQ"/>
     </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_9djVsIIVEeSZGMit48hbRw" name="seqCheckIn">
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_r7pH0HlGEeSvBIG8udhAMw" name="CheckIn"/>
   </packagedElement>
 </uml:Model>
