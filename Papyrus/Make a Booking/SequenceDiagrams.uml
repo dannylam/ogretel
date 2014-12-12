@@ -78,7 +78,4 @@
       <message xmi:type="uml:Message" xmi:id="_0xvVEH5EEeSWe8RAQYjeHQ" name="0:int" messageSort="reply" receiveEvent="_0xxxUH5EEeSWe8RAQYjeHQ" sendEvent="_0xwjMH5EEeSWe8RAQYjeHQ"/>
     </packagedElement>
   </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="_9djVsIIVEeSZGMit48hbRw" name="seqCheckIn">
-    <packagedElement xmi:type="uml:Interaction" xmi:id="_r7pH0HlGEeSvBIG8udhAMw" name="CheckIn"/>
-  </packagedElement>
 </uml:Model>

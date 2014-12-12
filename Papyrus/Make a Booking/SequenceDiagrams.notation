@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:css="http://www.eclipse.org/papyrus/infra/gmfdiag/css" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/viewpoints/policy/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
   <css:ModelStyleSheets xmi:id="_KyEJwHlEEeSvBIG8udhAMw"/>
-  <notation:Diagram xmi:id="_s50AQHlGEeSvBIG8udhAMw" type="PapyrusUMLSequenceDiagram" name="SeqCheckIn" measurementUnit="Pixel">
-    <children xmi:type="notation:Shape" xmi:id="_s50AQXlGEeSvBIG8udhAMw" type="2001">
-      <children xmi:type="notation:DecorationNode" xmi:id="_s50AQnlGEeSvBIG8udhAMw" type="5001"/>
-      <children xmi:type="notation:DecorationNode" xmi:id="_s50AQ3lGEeSvBIG8udhAMw" type="7001">
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_s50ARHlGEeSvBIG8udhAMw"/>
-      </children>
-      <element xmi:type="uml:Interaction" href="SequenceDiagrams.uml#_r7pH0HlGEeSvBIG8udhAMw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_s50ARXlGEeSvBIG8udhAMw"/>
-    </children>
-    <styles xmi:type="notation:StringValueStyle" xmi:id="_s50ARnlGEeSvBIG8udhAMw" name="diagram_compatibility_version" stringValue="1.0.0"/>
-    <styles xmi:type="notation:DiagramStyle" xmi:id="_s50AR3lGEeSvBIG8udhAMw"/>
-    <styles xmi:type="style:PapyrusViewStyle" xmi:id="_s50ASHlGEeSvBIG8udhAMw">
-      <owner xmi:type="uml:Package" href="SequenceDiagrams.uml#_9djVsIIVEeSZGMit48hbRw"/>
-    </styles>
-    <element xmi:type="uml:Interaction" href="SequenceDiagrams.uml#_r7pH0HlGEeSvBIG8udhAMw"/>
-  </notation:Diagram>
   <notation:Diagram xmi:id="_w5Mm8HlGEeSvBIG8udhAMw" type="PapyrusUMLSequenceDiagram" name="SeqCheckOut" measurementUnit="Pixel">
     <children xmi:type="notation:Shape" xmi:id="_w5Mm8XlGEeSvBIG8udhAMw" type="2001">
       <children xmi:type="notation:DecorationNode" xmi:id="_w5Mm8nlGEeSvBIG8udhAMw" type="5001"/>
