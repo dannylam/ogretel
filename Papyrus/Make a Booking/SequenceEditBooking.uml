@@ -12,13 +12,13 @@ the booking</body>
     </ownedComment>
     <ownedComment xmi:type="uml:Comment" xmi:id="_1ChQ0H04EeS6sMHhxFyvZQ" annotatedElement="_d4QJoH04EeS6sMHhxFyvZQ">
       <body>If the new booking&#xD;
-is okey, then the &#xD;
+is okay, then the &#xD;
 the new price is &#xD;
 given</body>
     </ownedComment>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_PEGOQH03EeS6sMHhxFyvZQ" name="Actor" coveredBy="_WkzmoH03EeS6sMHhxFyvZQ _yLLswH03EeS6sMHhxFyvZQ _d4RXwH04EeS6sMHhxFyvZQ _jwnrMH04EeS6sMHhxFyvZQ"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_Py_7oH03EeS6sMHhxFyvZQ" name="BPFC" coveredBy="_Wk00wH03EeS6sMHhxFyvZQ _yLLFsH03EeS6sMHhxFyvZQ _KjcREH04EeS6sMHhxFyvZQ _XTHosH04EeS6sMHhxFyvZQ _cPlisH04EeS6sMHhxFyvZQ _d4QJoH04EeS6sMHhxFyvZQ _jwoSQH04EeS6sMHhxFyvZQ _nkMDcH04EeS6sMHhxFyvZQ"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_pwibsH03EeS6sMHhxFyvZQ" name="IMDER" coveredBy="_XTI20H04EeS6sMHhxFyvZQ _cPkUkH04EeS6sMHhxFyvZQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_PEGOQH03EeS6sMHhxFyvZQ" name=":Actor" coveredBy="_WkzmoH03EeS6sMHhxFyvZQ _yLLswH03EeS6sMHhxFyvZQ _d4RXwH04EeS6sMHhxFyvZQ _jwnrMH04EeS6sMHhxFyvZQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_Py_7oH03EeS6sMHhxFyvZQ" name=":InterfaceBookingProvidesForCustomer" coveredBy="_Wk00wH03EeS6sMHhxFyvZQ _yLLFsH03EeS6sMHhxFyvZQ _KjcREH04EeS6sMHhxFyvZQ _XTHosH04EeS6sMHhxFyvZQ _cPlisH04EeS6sMHhxFyvZQ _d4QJoH04EeS6sMHhxFyvZQ _jwoSQH04EeS6sMHhxFyvZQ _nkMDcH04EeS6sMHhxFyvZQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_pwibsH03EeS6sMHhxFyvZQ" name=":InterfaceMaintenanceProvidesForBooking" coveredBy="_XTI20H04EeS6sMHhxFyvZQ _cPkUkH04EeS6sMHhxFyvZQ"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_rB588H03EeS6sMHhxFyvZQ" name="Payment" coveredBy="_nkMqgH04EeS6sMHhxFyvZQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_WkzmoH03EeS6sMHhxFyvZQ" name="MessageSend" covered="_PEGOQH03EeS6sMHhxFyvZQ" message="_WkjH8H03EeS6sMHhxFyvZQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Wk00wH03EeS6sMHhxFyvZQ" name="MessageRecv" covered="_Py_7oH03EeS6sMHhxFyvZQ" message="_WkjH8H03EeS6sMHhxFyvZQ"/>
@@ -38,9 +38,9 @@ given</body>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_jwoSQH04EeS6sMHhxFyvZQ" name="MessageRecv5" covered="_Py_7oH03EeS6sMHhxFyvZQ" message="_jwlO8H04EeS6sMHhxFyvZQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_nkMDcH04EeS6sMHhxFyvZQ" name="Message0Send" covered="_Py_7oH03EeS6sMHhxFyvZQ" message="_nkLcYH04EeS6sMHhxFyvZQ"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_nkMqgH04EeS6sMHhxFyvZQ" name="Message0Recv" covered="_rB588H03EeS6sMHhxFyvZQ" message="_nkLcYH04EeS6sMHhxFyvZQ"/>
-    <message xmi:type="uml:Message" xmi:id="_WkjH8H03EeS6sMHhxFyvZQ" name="Bookingref()" messageSort="asynchCall" receiveEvent="_Wk00wH03EeS6sMHhxFyvZQ" sendEvent="_WkzmoH03EeS6sMHhxFyvZQ"/>
-    <message xmi:type="uml:Message" xmi:id="_yLJ3kH03EeS6sMHhxFyvZQ" name="Booking" messageSort="asynchCall" receiveEvent="_yLLswH03EeS6sMHhxFyvZQ" sendEvent="_yLLFsH03EeS6sMHhxFyvZQ"/>
-    <message xmi:type="uml:Message" xmi:id="_KjbC8H04EeS6sMHhxFyvZQ" name="Changes (. . .)" messageSort="asynchCall" receiveEvent="_KjcREH04EeS6sMHhxFyvZQ" sendEvent="_KjbqAH04EeS6sMHhxFyvZQ"/>
+    <message xmi:type="uml:Message" xmi:id="_WkjH8H03EeS6sMHhxFyvZQ" name="getBooking(bookingRef:String)" messageSort="asynchCall" receiveEvent="_Wk00wH03EeS6sMHhxFyvZQ" sendEvent="_WkzmoH03EeS6sMHhxFyvZQ"/>
+    <message xmi:type="uml:Message" xmi:id="_yLJ3kH03EeS6sMHhxFyvZQ" name="booking:Booking" messageSort="asynchCall" receiveEvent="_yLLswH03EeS6sMHhxFyvZQ" sendEvent="_yLLFsH03EeS6sMHhxFyvZQ"/>
+    <message xmi:type="uml:Message" xmi:id="_KjbC8H04EeS6sMHhxFyvZQ" name="editBooking(nrOfNights:int, nrOfGuests:int, date:String, nrOfRooms:int, roomTypes:int, extras:List&lt;String>, bookingRef:String)" messageSort="asynchCall" receiveEvent="_KjcREH04EeS6sMHhxFyvZQ" sendEvent="_KjbqAH04EeS6sMHhxFyvZQ"/>
     <message xmi:type="uml:Message" xmi:id="_XTGakH04EeS6sMHhxFyvZQ" name="a = canBook" messageSort="asynchCall" receiveEvent="_XTI20H04EeS6sMHhxFyvZQ" sendEvent="_XTHosH04EeS6sMHhxFyvZQ"/>
     <message xmi:type="uml:Message" xmi:id="_cPjtgH04EeS6sMHhxFyvZQ" name="a" messageSort="asynchCall" receiveEvent="_cPlisH04EeS6sMHhxFyvZQ" sendEvent="_cPkUkH04EeS6sMHhxFyvZQ"/>
     <message xmi:type="uml:Message" xmi:id="_d4OUcH04EeS6sMHhxFyvZQ" name="price" messageSort="asynchCall" receiveEvent="_d4RXwH04EeS6sMHhxFyvZQ" sendEvent="_d4QJoH04EeS6sMHhxFyvZQ"/>
