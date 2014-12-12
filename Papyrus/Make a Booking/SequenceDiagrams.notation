@@ -445,7 +445,7 @@
     <styles xmi:type="notation:StringValueStyle" xmi:id="_w5Mm9nlGEeSvBIG8udhAMw" name="diagram_compatibility_version" stringValue="1.0.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_w5Mm93lGEeSvBIG8udhAMw"/>
     <styles xmi:type="style:PapyrusViewStyle" xmi:id="_w5Mm-HlGEeSvBIG8udhAMw">
-      <owner xmi:type="uml:Model" href="SequenceDiagrams.uml#_ELihsHlEEeSvBIG8udhAMw"/>
+      <owner xmi:type="uml:Package" href="SequenceDiagrams.uml#_upc6IIITEeSZGMit48hbRw"/>
     </styles>
     <element xmi:type="uml:Interaction" href="SequenceDiagrams.uml#_vuaO0HlGEeSvBIG8udhAMw"/>
   </notation:Diagram>
