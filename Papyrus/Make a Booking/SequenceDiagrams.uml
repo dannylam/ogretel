@@ -116,7 +116,7 @@ Actor wants to pay now</body>
       <message xmi:type="uml:Message" xmi:id="_CJ9ZwIC-EeSBYYb-e9thAg" name="-0:int" messageSort="asynchCall" receiveEvent="_CKDgYIC-EeSBYYb-e9thAg" sendEvent="_CJ9ZwYC-EeSBYYb-e9thAg"/>
     </packagedElement>
   </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="_upc6IIITEeSZGMit48hbRw" name="seqCheckOut">
+  <packagedElement xmi:type="uml:Package" xmi:id="_upc6IIITEeSZGMit48hbRw" name="SeqCheckOut">
     <packagedElement xmi:type="uml:Interaction" xmi:id="_vuaO0HlGEeSvBIG8udhAMw" name="CheckOut"/>
   </packagedElement>
 </uml:Model>
