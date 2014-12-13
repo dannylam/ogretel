@@ -308,6 +308,14 @@ value: [int]</body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_DEESMILaEeSNHZwV5RYKaw" name="getRoomStatus">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DEESMYLaEeSNHZwV5RYKaw" name="roomID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DEESMoLaEeSNHZwV5RYKaw" name="status" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_dj3DAH2xEeSp56Ha0EyLeQ" name="IExtrasMaintenance">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_xoj2oHmvEeScv6HJEKdjpA" name="addExtra">
@@ -399,6 +407,14 @@ value: [int]</body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_NBXBwILaEeSNHZwV5RYKaw" name="getRoomStatus">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_NBXBwYLaEeSNHZwV5RYKaw" name="roomID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_NBXBwoLaEeSNHZwV5RYKaw" name="status" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w1eBIH2yEeSp56Ha0EyLeQ" name="MaintenanceProvidesForBooking">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_u8H9EH22EeSp56Ha0EyLeQ" name="calendar" type="_k4694HlEEeScv6HJEKdjpA" association="_u8IkIH22EeSp56Ha0EyLeQ">
@@ -455,6 +471,7 @@ value: [int]</body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_s3uL0ILZEeSNHZwV5RYKaw" name="Operation1"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_DaFL0H2zEeSp56Ha0EyLeQ" memberEnd="_DaFL0X2zEeSp56Ha0EyLeQ _DaEkwH2zEeSp56Ha0EyLeQ">
       <name xsi:nil="true"/>
