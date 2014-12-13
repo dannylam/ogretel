@@ -993,7 +993,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_U0_msX23EeSp56Ha0EyLeQ" y="20"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_U0_msn23EeSp56Ha0EyLeQ" type="6033">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_U0_ms323EeSp56Ha0EyLeQ" y="20"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_U0_ms323EeSp56Ha0EyLeQ" x="18" y="23"/>
       </children>
       <children xmi:type="notation:DecorationNode" xmi:id="_U0_mtH23EeSp56Ha0EyLeQ" type="6034">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_U0_mtX23EeSp56Ha0EyLeQ" y="-20"/>

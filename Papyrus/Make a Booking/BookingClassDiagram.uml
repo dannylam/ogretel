@@ -7,9 +7,6 @@ value; GuestEmail: String
 value is &quot;out&quot; when a room which has previously 
 been checked-in is checked-out in a specific booking </body>
     </ownedComment>
-    <ownedComment xmi:type="uml:Comment" xmi:id="_WsZjUH2uEeSp56Ha0EyLeQ" annotatedElement="_BTLGAHoLEeScv6HJEKdjpA">
-      <body>Enum with bankcard, cash, voucher</body>
-    </ownedComment>
     <packagedElement xmi:type="uml:Class" xmi:id="_plG9QHihEeSmr6YRnpR7KQ" name="Guest">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_xsEdUHihEeSmr6YRnpR7KQ" name="guestType" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
@@ -384,7 +381,7 @@ booking: Booking</body>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_crE9sH2tEeSp56Ha0EyLeQ" name="choosePaymentMethod">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_mvtEUH2tEeSp56Ha0EyLeQ" name="method">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_ueAz0H2tEeSp56Ha0EyLeQ" name="setPaymentDetails">
