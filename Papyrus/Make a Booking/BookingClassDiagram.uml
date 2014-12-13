@@ -561,7 +561,7 @@ booking: Booking</body>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_yGYj4HuYEeScv6HJEKdjpA" name="choosePaymentMethod" visibility="private">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_2vfdAHuYEeScv6HJEKdjpA" name="paymentMethod">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_9GABMHuaEeScv6HJEKdjpA" name="setPaymentDetails" visibility="private">
