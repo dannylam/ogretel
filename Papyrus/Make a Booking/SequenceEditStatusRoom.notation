@@ -14,7 +14,7 @@
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dSf5MYQzEeSI5ZJ-AXdxIg" x="23" y="54" width="16" height="74"/>
         </children>
         <element xmi:type="uml:Lifeline" href="SequenceEditStatusRoom.uml#_4_pJgH0_EeS6sMHhxFyvZQ"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4_qXoX0_EeS6sMHhxFyvZQ" x="185" y="10" width="62" height="204"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4_qXoX0_EeS6sMHhxFyvZQ" x="60" y="10" width="62" height="204"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_5NkQwH0_EeS6sMHhxFyvZQ" type="3001">
         <children xmi:type="notation:DecorationNode" xmi:id="_5NkQwn0_EeS6sMHhxFyvZQ" type="5002"/>
@@ -27,17 +27,17 @@
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2x4BIYQ0EeSI5ZJ-AXdxIg" x="62" y="82" width="16" height="27"/>
         </children>
         <element xmi:type="uml:Lifeline" href="SequenceEditStatusRoom.uml#_5NjCoH0_EeS6sMHhxFyvZQ"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5NkQwX0_EeS6sMHhxFyvZQ" x="425" y="10" width="141" height="204"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5NkQwX0_EeS6sMHhxFyvZQ" x="300" y="10" width="141" height="204"/>
       </children>
       <children xmi:type="notation:Shape" xmi:id="_T4xvIH1AEeS6sMHhxFyvZQ" type="3009">
         <children xmi:type="notation:DecorationNode" xmi:id="_T4xvIn1AEeS6sMHhxFyvZQ" type="5006"/>
         <element xmi:type="uml:Comment" href="SequenceEditStatusRoom.uml#_T4whAH1AEeS6sMHhxFyvZQ"/>
-        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4xvIX1AEeS6sMHhxFyvZQ" x="262" y="173"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_T4xvIX1AEeS6sMHhxFyvZQ" x="137" y="173"/>
       </children>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4SPQ9H0_EeS6sMHhxFyvZQ"/>
     </children>
     <element xmi:type="uml:Interaction" href="SequenceEditStatusRoom.uml#_0mwdsH0_EeS6sMHhxFyvZQ"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4SPQ9X0_EeS6sMHhxFyvZQ" x="-5" y="6"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_4SPQ9X0_EeS6sMHhxFyvZQ" x="-5" y="6" width="492" height="310"/>
   </children>
   <styles xmi:type="notation:StringValueStyle" xmi:id="_4SPQ9n0_EeS6sMHhxFyvZQ" name="diagram_compatibility_version" stringValue="1.0.0"/>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_4SPQ930_EeS6sMHhxFyvZQ"/>
