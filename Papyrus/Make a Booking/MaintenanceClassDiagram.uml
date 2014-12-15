@@ -307,6 +307,9 @@ value: [int]</body>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZyVlYn6yEeS6sMHhxFyvZQ" name="status">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_z-yKQIQ7EeSbvJ56HGFnrw" name="status" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_DEESMILaEeSNHZwV5RYKaw" name="getRoomStatus">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_DEESMYLaEeSNHZwV5RYKaw" name="roomID">
