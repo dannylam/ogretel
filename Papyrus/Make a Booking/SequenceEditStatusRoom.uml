@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_P2roIH0_EeS6sMHhxFyvZQ" name="model">
-  <packagedElement xmi:type="uml:Interaction" xmi:id="_0mwdsH0_EeS6sMHhxFyvZQ" name="Interaction1">
-    <ownedComment xmi:type="uml:Comment" xmi:id="_T4whAH1AEeS6sMHhxFyvZQ" annotatedElement="_GZ0PoH1AEeS6sMHhxFyvZQ">
-      <body>to check the current &#xD;
-status of the desiered&#xD;
-room</body>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_P2roIH0_EeS6sMHhxFyvZQ" name="model">
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_0mwdsH0_EeS6sMHhxFyvZQ" name="Edit Status of Room">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_T4whAH1AEeS6sMHhxFyvZQ">
+      <body>int value 'a' indicates result of operation</body>
     </ownedComment>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_4_pJgH0_EeS6sMHhxFyvZQ" name="Actor" coveredBy="_GZ0PoH1AEeS6sMHhxFyvZQ _LKZpwH1AEeS6sMHhxFyvZQ _OxtHoH1AEeS6sMHhxFyvZQ"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_5NjCoH0_EeS6sMHhxFyvZQ" name="MPFB" coveredBy="_GZ02sH1AEeS6sMHhxFyvZQ _LKZCsH1AEeS6sMHhxFyvZQ _OxtusH1AEeS6sMHhxFyvZQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_GZ0PoH1AEeS6sMHhxFyvZQ" name="MessageSend" covered="_4_pJgH0_EeS6sMHhxFyvZQ" message="_GZzokH1AEeS6sMHhxFyvZQ">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YS4i8H1AEeS6sMHhxFyvZQ" source="Connections" references="_T4whAH1AEeS6sMHhxFyvZQ"/>
-    </fragment>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_GZ02sH1AEeS6sMHhxFyvZQ" name="MessageRecv" covered="_5NjCoH0_EeS6sMHhxFyvZQ" message="_GZzokH1AEeS6sMHhxFyvZQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LKZCsH1AEeS6sMHhxFyvZQ" name="MessageSend0" covered="_5NjCoH0_EeS6sMHhxFyvZQ" message="_LKX0kH1AEeS6sMHhxFyvZQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_LKZpwH1AEeS6sMHhxFyvZQ" name="MessageRecv0" covered="_4_pJgH0_EeS6sMHhxFyvZQ" message="_LKX0kH1AEeS6sMHhxFyvZQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OxtHoH1AEeS6sMHhxFyvZQ" name="MessageSend1" covered="_4_pJgH0_EeS6sMHhxFyvZQ" message="_OxsgkH1AEeS6sMHhxFyvZQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_OxtusH1AEeS6sMHhxFyvZQ" name="MessageRecv1" covered="_5NjCoH0_EeS6sMHhxFyvZQ" message="_OxsgkH1AEeS6sMHhxFyvZQ"/>
-    <message xmi:type="uml:Message" xmi:id="_GZzokH1AEeS6sMHhxFyvZQ" name="getRoom(roomID)" messageSort="asynchCall" receiveEvent="_GZ02sH1AEeS6sMHhxFyvZQ" sendEvent="_GZ0PoH1AEeS6sMHhxFyvZQ"/>
-    <message xmi:type="uml:Message" xmi:id="_LKX0kH1AEeS6sMHhxFyvZQ" name="room" messageSort="asynchCall" receiveEvent="_LKZpwH1AEeS6sMHhxFyvZQ" sendEvent="_LKZCsH1AEeS6sMHhxFyvZQ"/>
-    <message xmi:type="uml:Message" xmi:id="_OxsgkH1AEeS6sMHhxFyvZQ" name="editStatus(roomID, status)" messageSort="asynchCall" receiveEvent="_OxtusH1AEeS6sMHhxFyvZQ" sendEvent="_OxtHoH1AEeS6sMHhxFyvZQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_4_pJgH0_EeS6sMHhxFyvZQ" name=":Host" coveredBy="_dSYkcIQzEeSI5ZJ-AXdxIg _dSaZoIQzEeSI5ZJ-AXdxIg _dSZykIQzEeSI5ZJ-AXdxIg _49Q6oIQ0EeSI5ZJ-AXdxIg _rgpvEIQ1EeSI5ZJ-AXdxIg"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_5NjCoH0_EeS6sMHhxFyvZQ" name=":IRoomMaintenance" coveredBy="_2xzvsIQ0EeSI5ZJ-AXdxIg _2xzIoIQ0EeSI5ZJ-AXdxIg _49SIwIQ0EeSI5ZJ-AXdxIg _rgog8IQ1EeSI5ZJ-AXdxIg"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_dSYkcIQzEeSI5ZJ-AXdxIg" name="ActionExecSpec0Start" covered="_4_pJgH0_EeS6sMHhxFyvZQ" execution="_dSZykIQzEeSI5ZJ-AXdxIg"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_dSZykIQzEeSI5ZJ-AXdxIg" name="ActionExecSpec0" covered="_4_pJgH0_EeS6sMHhxFyvZQ" finish="_dSaZoIQzEeSI5ZJ-AXdxIg" start="_dSYkcIQzEeSI5ZJ-AXdxIg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_49Q6oIQ0EeSI5ZJ-AXdxIg" name="MessageSend1" covered="_4_pJgH0_EeS6sMHhxFyvZQ" message="_49PsgIQ0EeSI5ZJ-AXdxIg"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_2xzIoIQ0EeSI5ZJ-AXdxIg" name="ActionExecSpec1" covered="_5NjCoH0_EeS6sMHhxFyvZQ" finish="_2xzvsIQ0EeSI5ZJ-AXdxIg" start="_49SIwIQ0EeSI5ZJ-AXdxIg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_49SIwIQ0EeSI5ZJ-AXdxIg" name="MessageRecv1" covered="_5NjCoH0_EeS6sMHhxFyvZQ" message="_49PsgIQ0EeSI5ZJ-AXdxIg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_rgog8IQ1EeSI5ZJ-AXdxIg" name="MessageSend2" covered="_5NjCoH0_EeS6sMHhxFyvZQ" message="_rgnS0IQ1EeSI5ZJ-AXdxIg"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_2xzvsIQ0EeSI5ZJ-AXdxIg" name="ActionExecSpec1Finish" covered="_5NjCoH0_EeS6sMHhxFyvZQ" execution="_2xzIoIQ0EeSI5ZJ-AXdxIg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_rgpvEIQ1EeSI5ZJ-AXdxIg" name="MessageRecv2" covered="_4_pJgH0_EeS6sMHhxFyvZQ" message="_rgnS0IQ1EeSI5ZJ-AXdxIg"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_dSaZoIQzEeSI5ZJ-AXdxIg" name="ActionExecSpec0Finish" covered="_4_pJgH0_EeS6sMHhxFyvZQ" execution="_dSZykIQzEeSI5ZJ-AXdxIg"/>
+    <message xmi:type="uml:Message" xmi:id="_49PsgIQ0EeSI5ZJ-AXdxIg" name="a = editRoomStatus(roomID:int, status:String)" messageSort="asynchCall" receiveEvent="_49SIwIQ0EeSI5ZJ-AXdxIg" sendEvent="_49Q6oIQ0EeSI5ZJ-AXdxIg"/>
+    <message xmi:type="uml:Message" xmi:id="_rgnS0IQ1EeSI5ZJ-AXdxIg" name="a:int" messageSort="reply" receiveEvent="_rgpvEIQ1EeSI5ZJ-AXdxIg" sendEvent="_rgog8IQ1EeSI5ZJ-AXdxIg"/>
   </packagedElement>
 </uml:Model>
