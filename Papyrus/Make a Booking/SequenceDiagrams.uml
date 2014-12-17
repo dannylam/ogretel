@@ -76,6 +76,4 @@ Actor wants to pay now</body>
     <message xmi:type="uml:Message" xmi:id="_evY5AHujEeSxRO9vcwrttA" name="makePayment()" messageSort="asynchCall" receiveEvent="_eve_oHujEeSxRO9vcwrttA" sendEvent="_evdKcHujEeSxRO9vcwrttA"/>
     <message xmi:type="uml:Message" xmi:id="_lNu1cHujEeSxRO9vcwrttA" name="bookingRef" messageSort="asynchCall" receiveEvent="_lNzG4HujEeSxRO9vcwrttA" sendEvent="_lNxRsHujEeSxRO9vcwrttA"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Interaction" xmi:id="_r7pH0HlGEeSvBIG8udhAMw" name="CheckIn"/>
-  <packagedElement xmi:type="uml:Interaction" xmi:id="_vuaO0HlGEeSvBIG8udhAMw" name="CheckOut"/>
 </uml:Model>
