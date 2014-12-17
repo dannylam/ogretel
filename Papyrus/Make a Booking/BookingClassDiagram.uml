@@ -183,9 +183,9 @@ been checked-in is checked-out in a specific booking </body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EMap"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_9QuusHuTEeScv6HJEKdjpA" name="setServiceNotes">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_voxZUHuVEeScv6HJEKdjpA" name="serviceNotes">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_9QuusHuTEeScv6HJEKdjpA" name="addServiceNote">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QBdJsIXPEeSprd0Il3xmeg" name="note">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_9bLEIHuTEeScv6HJEKdjpA" name="setCustomer">
