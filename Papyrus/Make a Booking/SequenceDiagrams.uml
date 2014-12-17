@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ELihsHlEEeSvBIG8udhAMw" name="model">
-  <packagedElement xmi:type="uml:Interaction" xmi:id="_IcQI8HlEEeSvBIG8udhAMw" name="MakeABooking">
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_CrensHlFEeSvBIG8udhAMw" name=":Costumer"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Interaction" xmi:id="_r7pH0HlGEeSvBIG8udhAMw" name="CheckIn"/>
-  <packagedElement xmi:type="uml:Interaction" xmi:id="_vuaO0HlGEeSvBIG8udhAMw" name="CheckOut"/>
-</uml:Model>
