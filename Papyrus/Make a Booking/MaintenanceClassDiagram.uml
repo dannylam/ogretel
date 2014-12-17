@@ -42,11 +42,6 @@
         </qualifier>
       </ownedAttribute>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_S2KN8HlCEeScv6HJEKdjpA" client="_U6TXUHk_EeScv6HJEKdjpA" supplier="_eltssHk_EeScv6HJEKdjpA" contract="_eltssHk_EeScv6HJEKdjpA"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_9O18sHlAEeScv6HJEKdjpA" name="getStatus">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_BL_HsHlBEeScv6HJEKdjpA" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
-        </ownedParameter>
-      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_eltssHk_EeScv6HJEKdjpA" name="Extra">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_ylU1wHk_EeScv6HJEKdjpA" name="getPrice">
@@ -100,11 +95,6 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </qualifier>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_YLVYV3lBEeScv6HJEKdjpA" name="getStatus">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YLVYWHlBEeScv6HJEKdjpA" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
-        </ownedParameter>
-      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_itkoAHlBEeScv6HJEKdjpA" name="Room">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_kb-DgHlBEeScv6HJEKdjpA" name="numberID" visibility="private">
