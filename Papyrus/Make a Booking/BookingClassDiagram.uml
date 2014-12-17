@@ -11,6 +11,10 @@ been checked-in is checked-out in a specific booking </body>
       <body>key: RoomType: String
 value: nr: int</body>
     </ownedComment>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_BYHEQIXbEeSSLKPVEK-PiA" annotatedElement="_8x4PEIXREeS2TcAuvmmdyg">
+      <body>key: bookingRef
+value: booking</body>
+    </ownedComment>
     <packagedElement xmi:type="uml:Class" xmi:id="_plG9QHihEeSmr6YRnpR7KQ" name="Guest">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_3mZtwHihEeSmr6YRnpR7KQ" name="roomNr" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -99,6 +103,10 @@ value: nr: int</body>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_h7iewIXREeS2TcAuvmmdyg" name="roomTypeMap" type="_cgSzgIXQEeS2TcAuvmmdyg" aggregation="composite" association="_h7jF0IXREeS2TcAuvmmdyg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_h7iewYXREeS2TcAuvmmdyg"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_h7iewoXREeS2TcAuvmmdyg" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WKqGIIXbEeSSLKPVEK-PiA" name="paymentMethod" type="_ogEzsIXaEeSSLKPVEK-PiA" association="_WKrUQIXbEeSSLKPVEK-PiA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WKqGIYXbEeSSLKPVEK-PiA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WKqGIoXbEeSSLKPVEK-PiA" value="1"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_DqPEUHioEeSmr6YRnpR7KQ" name="checkedInAllGuest">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_KaVfIHioEeSmr6YRnpR7KQ" direction="return">
@@ -607,7 +615,7 @@ value: nr: int</body>
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_8x4PEIXREeS2TcAuvmmdyg" name="bookingRefToBookingEntry">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_NGlzsIXSEeS2TcAuvmmdyg" name="bookingRef">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_NGlzsIXSEeS2TcAuvmmdyg" name="key">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_dhp38IXSEeS2TcAuvmmdyg" name="value" type="_pGFNAHijEeSmr6YRnpR7KQ" association="_dhp384XSEeS2TcAuvmmdyg">
@@ -625,6 +633,18 @@ value: nr: int</body>
       <ownedEnd xmi:type="uml:Property" xmi:id="_dhp39IXSEeS2TcAuvmmdyg" name="bookingRefToBookingEntry" type="_8x4PEIXREeS2TcAuvmmdyg" association="_dhp384XSEeS2TcAuvmmdyg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dhp39YXSEeS2TcAuvmmdyg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dhp39oXSEeS2TcAuvmmdyg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_ogEzsIXaEeSSLKPVEK-PiA" name="PaymentMethod">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_MDNVAIXbEeSSLKPVEK-PiA" name="bankcard"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_M_R7sIXbEeSSLKPVEK-PiA" name="cash"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_OBXq0IXbEeSSLKPVEK-PiA" name="voucher"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_WKrUQIXbEeSSLKPVEK-PiA" memberEnd="_WKrUQYXbEeSSLKPVEK-PiA _WKqGIIXbEeSSLKPVEK-PiA">
+      <name xsi:nil="true"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_WKrUQYXbEeSSLKPVEK-PiA" name="booking" type="_pGFNAHijEeSmr6YRnpR7KQ" association="_WKrUQIXbEeSSLKPVEK-PiA">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WKrUQoXbEeSSLKPVEK-PiA" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WKrUQ4XbEeSSLKPVEK-PiA" value="1"/>
       </ownedEnd>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_1HXNkHijEeSmr6YRnpR7KQ">
