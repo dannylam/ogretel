@@ -134,9 +134,9 @@ extra: Extra</body>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DaEkwX2zEeSp56Ha0EyLeQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DaEkwn2zEeSp56Ha0EyLeQ" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_LT8ioIXYEeS36vV1PdpyWw" name="integerToRoomMap" type="_KvQWoIXXEeS36vV1PdpyWw" association="_LT-X0IXYEeS36vV1PdpyWw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LT8ioYXYEeS36vV1PdpyWw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LT9JsIXYEeS36vV1PdpyWw" value="1"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_LZ-KwIXbEeS36vV1PdpyWw" name="integerToRoomMap" type="_KvQWoIXXEeS36vV1PdpyWw" aggregation="composite" association="_LZ-x0IXbEeS36vV1PdpyWw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LZ-KwYXbEeS36vV1PdpyWw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LZ-KwoXbEeS36vV1PdpyWw" value="1"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_1MwOM3lDEeScv6HJEKdjpA" name="exists">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_1MwONHlDEeScv6HJEKdjpA" name="ID">
@@ -743,11 +743,10 @@ roomType: RoomType</body>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_55GcYIXXEeS36vV1PdpyWw" name="value" visibility="private" type="_itkoAHlBEeScv6HJEKdjpA"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_LT-X0IXYEeS36vV1PdpyWw" memberEnd="_LT-X0YXYEeS36vV1PdpyWw _LT8ioIXYEeS36vV1PdpyWw">
-      <name xsi:nil="true"/>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_LT-X0YXYEeS36vV1PdpyWw" name="roomHandler" type="_1MwOMHlDEeScv6HJEKdjpA" association="_LT-X0IXYEeS36vV1PdpyWw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LT-X0oXYEeS36vV1PdpyWw" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LT-X04XYEeS36vV1PdpyWw" value="1"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_LZ-x0IXbEeS36vV1PdpyWw" memberEnd="_LZ-x0YXbEeS36vV1PdpyWw _LZ-KwIXbEeS36vV1PdpyWw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_LZ-x0YXbEeS36vV1PdpyWw" name="roomHandler" type="_1MwOMHlDEeScv6HJEKdjpA" association="_LZ-x0IXbEeS36vV1PdpyWw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LZ-x0oXbEeS36vV1PdpyWw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LZ-x04XbEeS36vV1PdpyWw" value="1"/>
       </ownedEnd>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Qp5nMHlBEeScv6HJEKdjpA">
