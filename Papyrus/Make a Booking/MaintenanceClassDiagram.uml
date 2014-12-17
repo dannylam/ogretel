@@ -15,8 +15,6 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EMsUcYXKEeSUfsUdvz7rGg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EMsUcoXKEeSUfsUdvz7rGg" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_ReYqEHk_EeScv6HJEKdjpA" name="gets"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_TMr-8Hk_EeScv6HJEKdjpA" name="sets"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_U6TXUHk_EeScv6HJEKdjpA" name="Experience">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_WULe4HlAEeScv6HJEKdjpA" name="price" visibility="private">
@@ -87,7 +85,7 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_YLVYVXlBEeScv6HJEKdjpA" name="description" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_YLVYVnlBEeScv6HJEKdjpA" name="getStatus" visibility="private">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_YLVYVnlBEeScv6HJEKdjpA" name="status" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_cV4tMHlBEeScv6HJEKdjpA" name="price" visibility="private">
@@ -124,10 +122,8 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NZiXIYXNEeSUfsUdvz7rGg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NZiXIoXNEeSUfsUdvz7rGg" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_215oMHlBEeScv6HJEKdjpA" name="gets"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_3ylS4HlBEeScv6HJEKdjpA" name="sets"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="__LaFIHlCEeScv6HJEKdjpA" name="Extras">
+    <packagedElement xmi:type="uml:Class" xmi:id="__LaFIHlCEeScv6HJEKdjpA" name="ExtraHandler">
       <ownedComment xmi:type="uml:Comment" xmi:id="_woFJIHlDEeScv6HJEKdjpA">
         <body>ID: int&#xD;
 extra: Extra</body>
@@ -171,7 +167,7 @@ extra: Extra</body>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_us7rEHlDEeScv6HJEKdjpA" name="extra" type="_eltssHk_EeScv6HJEKdjpA" direction="return"/>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_1MwOMHlDEeScv6HJEKdjpA" name="Rooms">
+    <packagedElement xmi:type="uml:Class" xmi:id="_1MwOMHlDEeScv6HJEKdjpA" name="RoomHandler">
       <ownedComment xmi:type="uml:Comment" xmi:id="_1MwOMXlDEeScv6HJEKdjpA">
         <body>ID: int&#xD;
 room: Room</body>
