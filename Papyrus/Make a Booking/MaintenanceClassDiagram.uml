@@ -210,6 +210,9 @@ value: [int]</body>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_0uNuEHmxEeScv6HJEKdjpA" name="end">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_RDLGkIXpEeS6Is0w-2dQxA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_2xf0cHmxEeScv6HJEKdjpA" name="makeBooking">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_2xf0cXmxEeScv6HJEKdjpA" name="roomType">
@@ -234,6 +237,14 @@ value: [int]</body>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Rgi2VH5aEeSmC8PUBKk0Qw" name="end">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_0DTogIXpEeS6Is0w-2dQxA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_nDAa8IXpEeS6Is0w-2dQxA" name="setBookingAsActive">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_r_cfwIXpEeS6Is0w-2dQxA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
