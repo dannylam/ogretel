@@ -222,9 +222,6 @@ value: booking</body>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_14adcHoLEeScv6HJEKdjpA" name="bookingRef">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_7VDzUIXzEeSLxJQUUpxkqA" name="return" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_H-CwoHoNEeScv6HJEKdjpA" name="getPrice">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_H-CwoXoNEeScv6HJEKdjpA" name="bookingRef">
