@@ -297,6 +297,9 @@ value: booking</body>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_9p6I0H62EeSfbpy05VvhsQ" name="email">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LZl40IXyEeSLxJQUUpxkqA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_D29RYHoLEeScv6HJEKdjpA" name="IBookingProvidesForGuest">
