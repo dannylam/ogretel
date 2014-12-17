@@ -2,9 +2,6 @@
 <xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g">
   <uml:Model xmi:id="_wqKmEHk-EeScv6HJEKdjpA" name="model">
     <packagedElement xmi:type="uml:Class" xmi:id="_CLdSkHk_EeScv6HJEKdjpA" name="RoomType">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_D69hUHk_EeScv6HJEKdjpA" name="type" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
-      </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_HnigwHk_EeScv6HJEKdjpA" name="price" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
@@ -13,6 +10,10 @@
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_OuMaYHk_EeScv6HJEKdjpA" name="desciption" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_EMsUcIXKEeSUfsUdvz7rGg" name="roomTypeEnum" type="_u0H0YIXJEeSUfsUdvz7rGg" association="_EMtikIXKEeSUfsUdvz7rGg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EMsUcYXKEeSUfsUdvz7rGg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EMsUcoXKEeSUfsUdvz7rGg" value="1"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_ReYqEHk_EeScv6HJEKdjpA" name="gets"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_TMr-8Hk_EeScv6HJEKdjpA" name="sets"/>
@@ -119,11 +120,9 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </qualifier>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_qWZakHlBEeScv6HJEKdjpA" name="roomStatus" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
-        <qualifier xmi:type="uml:Property" xmi:id="_qWZakXlBEeScv6HJEKdjpA" name="price">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </qualifier>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_NZiXIIXNEeSUfsUdvz7rGg" name="roomStatusEnum" type="_C0BmcIXMEeSUfsUdvz7rGg" association="_NZkMUIXNEeSUfsUdvz7rGg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NZiXIYXNEeSUfsUdvz7rGg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NZiXIoXNEeSUfsUdvz7rGg" value="1"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_215oMHlBEeScv6HJEKdjpA" name="gets"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_3ylS4HlBEeScv6HJEKdjpA" name="sets"/>
@@ -709,6 +708,30 @@ roomType: RoomType</body>
       <ownedEnd xmi:type="uml:Property" xmi:id="_gJrnAX23EeSp56Ha0EyLeQ" name="maintenanceProvidesForBooking" type="_w1eBIH2yEeSp56Ha0EyLeQ" association="_gJrnAH23EeSp56Ha0EyLeQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gJrnAn23EeSp56Ha0EyLeQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gJrnA323EeSp56Ha0EyLeQ" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_u0H0YIXJEeSUfsUdvz7rGg" name="RoomTypeEnum">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ww0KkIXJEeSUfsUdvz7rGg" name="Singlebed"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_yACWwIXJEeSUfsUdvz7rGg" name="Doublebed"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_B6dMEIXKEeSUfsUdvz7rGg" name="Luxury suite"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_EMtikIXKEeSUfsUdvz7rGg" memberEnd="_EMtikYXKEeSUfsUdvz7rGg _EMsUcIXKEeSUfsUdvz7rGg">
+      <name xsi:nil="true"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_EMtikYXKEeSUfsUdvz7rGg" name="roomType" type="_CLdSkHk_EeScv6HJEKdjpA" association="_EMtikIXKEeSUfsUdvz7rGg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EMtikoXKEeSUfsUdvz7rGg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EMtik4XKEeSUfsUdvz7rGg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_C0BmcIXMEeSUfsUdvz7rGg" name="RoomStatusEnum">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_SNfq0IXMEeSUfsUdvz7rGg" name="Vacant"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_98hPgIXMEeSUfsUdvz7rGg" name="Busy"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_JMGGUIXNEeSUfsUdvz7rGg" name="Maintenance"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_NZkMUIXNEeSUfsUdvz7rGg" memberEnd="_NZkMUYXNEeSUfsUdvz7rGg _NZiXIIXNEeSUfsUdvz7rGg">
+      <name xsi:nil="true"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_NZkMUYXNEeSUfsUdvz7rGg" name="room" type="_itkoAHlBEeScv6HJEKdjpA" association="_NZkMUIXNEeSUfsUdvz7rGg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NZkMUoXNEeSUfsUdvz7rGg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NZkMU4XNEeSUfsUdvz7rGg" value="1"/>
       </ownedEnd>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Qp5nMHlBEeScv6HJEKdjpA">
