@@ -203,7 +203,7 @@
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_zIK1YHlFEeScv6HJEKdjpA" name="InterfaceMaintenanceProvidesForBooking">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_zIK1YHlFEeScv6HJEKdjpA" name="IMaintenanceProvidesForBooking">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_ga3wsHmxEeScv6HJEKdjpA" name="canBook">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_q1q7oHmxEeScv6HJEKdjpA" name="roomType">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -249,6 +249,9 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_nDAa8IXpEeS6Is0w-2dQxA" name="setBookingAsActive">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_r_cfwIXpEeS6Is0w-2dQxA" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_rRxRcIaZEeSjEKDVuAONqA" name="bookingRef">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
@@ -565,6 +568,14 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_QYwrsH5WEeSmC8PUBKk0Qw" name="end">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_wK-cEIaZEeSjEKDVuAONqA" name="setBookingAsActive">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_wK-cEYaZEeSjEKDVuAONqA" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_wK-cEoaZEeSjEKDVuAONqA" name="bookingRef">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
