@@ -28,7 +28,7 @@
         </children>
         <children xmi:type="notation:Shape" xmi:id="_hntKwILGEeSbsrk0nKDBMA" type="3006">
           <element xmi:type="uml:ActionExecutionSpecification" href="SequenceEditBooking.uml#_hno5UILGEeSbsrk0nKDBMA"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hntKwYLGEeSbsrk0nKDBMA" x="91" y="386" width="16" height="83"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hntKwYLGEeSbsrk0nKDBMA" x="91" y="386" width="16" height="71"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_TKWGIILCEeSbsrk0nKDBMA" type="3006">
           <element xmi:type="uml:ActionExecutionSpecification" href="SequenceEditBooking.uml#_TJvCIILCEeSbsrk0nKDBMA"/>
@@ -63,7 +63,7 @@
         </children>
         <children xmi:type="notation:Shape" xmi:id="_qfWSIILMEeSbsrk0nKDBMA" type="3006">
           <element xmi:type="uml:ActionExecutionSpecification" href="SequenceEditBooking.uml#_qfQykILMEeSbsrk0nKDBMA"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qfWSIYLMEeSbsrk0nKDBMA" x="59" y="438" width="16" height="36"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qfWSIYLMEeSbsrk0nKDBMA" x="59" y="410" width="16" height="50"/>
         </children>
         <element xmi:type="uml:Lifeline" href="SequenceEditBooking.uml#_rB588H03EeS6sMHhxFyvZQ"/>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rB7yIX03EeS6sMHhxFyvZQ" x="1535" y="10" width="134" height="527"/>
@@ -185,8 +185,8 @@
     <styles xmi:type="notation:LineStyle" xmi:id="_nkSKEX04EeS6sMHhxFyvZQ"/>
     <element xmi:type="uml:Message" href="SequenceEditBooking.uml#_nkLcYH04EeS6sMHhxFyvZQ"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nkQU4304EeS6sMHhxFyvZQ" points="[0, 1, -347, 0]$[347, 1, 0, 0]"/>
-    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nkiowH04EeS6sMHhxFyvZQ" id="(0.875,0.8433734939759037)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nkiowX04EeS6sMHhxFyvZQ" id="(0.125,0.25)"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nkiowH04EeS6sMHhxFyvZQ" id="(0.9375,0.4647887323943662)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_nkiowX04EeS6sMHhxFyvZQ" id="(0.0,0.16)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_vMJ6YH04EeS6sMHhxFyvZQ" type="4010" source="_cqSXIH03EeS6sMHhxFyvZQ" target="_PERNYH03EeS6sMHhxFyvZQ">
     <styles xmi:type="notation:RoutingStyle" xmi:id="_vMJ6YX04EeS6sMHhxFyvZQ"/>

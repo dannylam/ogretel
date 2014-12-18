@@ -28,6 +28,12 @@ in at the hotel</body>
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_XTI20H04EeS6sMHhxFyvZQ" name="MessageRecv2" message="_XTGakH04EeS6sMHhxFyvZQ"/>
         <fragment xmi:type="uml:CombinedFragment" xmi:id="_7F4CsILQEeSbsrk0nKDBMA" name="CombinedFragment" covered="_pwibsH03EeS6sMHhxFyvZQ _PEGOQH03EeS6sMHhxFyvZQ _Py_7oH03EeS6sMHhxFyvZQ _rB588H03EeS6sMHhxFyvZQ" interactionOperator="alt">
           <operand xmi:type="uml:InteractionOperand" xmi:id="_7F_XcILQEeSbsrk0nKDBMA" name="InteractionOperand" covered="_pwibsH03EeS6sMHhxFyvZQ _PEGOQH03EeS6sMHhxFyvZQ _Py_7oH03EeS6sMHhxFyvZQ _rB588H03EeS6sMHhxFyvZQ">
+            <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_qfQLgILMEeSbsrk0nKDBMA" name="ActionExecSpec4Start" execution="_qfQykILMEeSbsrk0nKDBMA"/>
+            <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_qfQykILMEeSbsrk0nKDBMA" name="ActionExecSpec4" start="_qfQLgILMEeSbsrk0nKDBMA"/>
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_nkMqgH04EeS6sMHhxFyvZQ" name="Message0Recv" message="_nkLcYH04EeS6sMHhxFyvZQ"/>
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_nkMDcH04EeS6sMHhxFyvZQ" name="Message0Send" message="_nkLcYH04EeS6sMHhxFyvZQ"/>
+            <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_hno5UILGEeSbsrk0nKDBMA" name="ActionExecSpec3" start="_jwoSQH04EeS6sMHhxFyvZQ"/>
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_jwoSQH04EeS6sMHhxFyvZQ" name="MessageRecv5" message="_jwlO8H04EeS6sMHhxFyvZQ"/>
             <guard xmi:type="uml:InteractionConstraint" xmi:id="_7F_-gILQEeSbsrk0nKDBMA">
               <specification xmi:type="uml:LiteralString" xmi:id="_EjxKYILaEeSfhdj_gu_Ztg" value="a = true &amp; method = card"/>
               <maxint xmi:type="uml:LiteralInteger" xmi:id="_7F_-g4LQEeSbsrk0nKDBMA" value="1"/>
@@ -39,12 +45,6 @@ in at the hotel</body>
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_1EIEAILCEeSbsrk0nKDBMA" name="MessageRecv7" message="__pSE0ILCEeSbsrk0nKDBMA"/>
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="__pTS8ILCEeSbsrk0nKDBMA" name="MessageRecv8" message="__pSE0ILCEeSbsrk0nKDBMA"/>
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_jwnrMH04EeS6sMHhxFyvZQ" name="MessageSend5" message="_jwlO8H04EeS6sMHhxFyvZQ"/>
-        <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_hno5UILGEeSbsrk0nKDBMA" name="ActionExecSpec3" start="_jwoSQH04EeS6sMHhxFyvZQ"/>
-        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_jwoSQH04EeS6sMHhxFyvZQ" name="MessageRecv5" message="_jwlO8H04EeS6sMHhxFyvZQ"/>
-        <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_qfQLgILMEeSbsrk0nKDBMA" name="ActionExecSpec4Start" execution="_qfQykILMEeSbsrk0nKDBMA"/>
-        <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_qfQykILMEeSbsrk0nKDBMA" name="ActionExecSpec4" start="_qfQLgILMEeSbsrk0nKDBMA"/>
-        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_nkMDcH04EeS6sMHhxFyvZQ" name="Message0Send" message="_nkLcYH04EeS6sMHhxFyvZQ"/>
-        <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_nkMqgH04EeS6sMHhxFyvZQ" name="Message0Recv" message="_nkLcYH04EeS6sMHhxFyvZQ"/>
         <guard xmi:type="uml:InteractionConstraint" xmi:id="_VdI8QILPEeSbsrk0nKDBMA">
           <specification xmi:type="uml:LiteralString" xmi:id="_sDH1MILQEeSbsrk0nKDBMA" value="booking indicated by bookingRef exists (booking != null)"/>
           <maxint xmi:type="uml:LiteralInteger" xmi:id="_VdKKYYLPEeSbsrk0nKDBMA" value="1"/>
@@ -54,11 +54,11 @@ in at the hotel</body>
     </fragment>
     <message xmi:type="uml:Message" xmi:id="_WkjH8H03EeS6sMHhxFyvZQ" name="getBooking(bookingRef:String)" messageSort="asynchCall" receiveEvent="_Wk00wH03EeS6sMHhxFyvZQ" sendEvent="_WkzmoH03EeS6sMHhxFyvZQ"/>
     <message xmi:type="uml:Message" xmi:id="_KjbC8H04EeS6sMHhxFyvZQ" name="editBooking(nrOfNights:int, nrOfGuests:int, date:String, nrOfRooms:int, roomTypes:int, extras:List&lt;String>, bookingRef:String)" messageSort="asynchCall" receiveEvent="_KjcREH04EeS6sMHhxFyvZQ" sendEvent="_KjbqAH04EeS6sMHhxFyvZQ"/>
-    <message xmi:type="uml:Message" xmi:id="_XTGakH04EeS6sMHhxFyvZQ" name="a = canBook(roomType:String, nrOfRooms:int, start:String, end:String)" messageSort="asynchCall" receiveEvent="_XTI20H04EeS6sMHhxFyvZQ" sendEvent="_XTHosH04EeS6sMHhxFyvZQ"/>
+    <message xmi:type="uml:Message" xmi:id="_XTGakH04EeS6sMHhxFyvZQ" name="canBook(roomType:String, nrOfRooms:int, start:String, end:String)" messageSort="asynchCall" receiveEvent="_XTI20H04EeS6sMHhxFyvZQ" sendEvent="_XTHosH04EeS6sMHhxFyvZQ"/>
     <message xmi:type="uml:Message" xmi:id="_jwlO8H04EeS6sMHhxFyvZQ" name="choosePaymentMethod(method:String)" messageSort="asynchCall" receiveEvent="_jwoSQH04EeS6sMHhxFyvZQ" sendEvent="_jwnrMH04EeS6sMHhxFyvZQ"/>
     <message xmi:type="uml:Message" xmi:id="_nkLcYH04EeS6sMHhxFyvZQ" name="makePayment(ccNumber:String, ccv:String, expiryMonth:int, expiryYear:int, firstName:String, lastName:String, sum:double)" messageSort="asynchCall" receiveEvent="_nkMqgH04EeS6sMHhxFyvZQ" sendEvent="_nkMDcH04EeS6sMHhxFyvZQ"/>
     <message xmi:type="uml:Message" xmi:id="_ga1EwILCEeSbsrk0nKDBMA" name="booking:Booking" messageSort="reply" receiveEvent="_ga3hAILCEeSbsrk0nKDBMA" sendEvent="_ga258ILCEeSbsrk0nKDBMA"/>
-    <message xmi:type="uml:Message" xmi:id="_1EGO0ILCEeSbsrk0nKDBMA" name="a:boolean" messageSort="reply" receiveEvent="_1EIEAILCEeSbsrk0nKDBMA" sendEvent="_1EJSIILCEeSbsrk0nKDBMA"/>
+    <message xmi:type="uml:Message" xmi:id="_1EGO0ILCEeSbsrk0nKDBMA" name="- true:boolean" messageSort="reply" receiveEvent="_1EIEAILCEeSbsrk0nKDBMA" sendEvent="_1EJSIILCEeSbsrk0nKDBMA"/>
     <message xmi:type="uml:Message" xmi:id="__pSE0ILCEeSbsrk0nKDBMA" name="price:double" messageSort="reply" receiveEvent="__pTS8ILCEeSbsrk0nKDBMA" sendEvent="_1EIEAILCEeSbsrk0nKDBMA"/>
   </packagedElement>
 </uml:Model>
