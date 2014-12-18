@@ -431,6 +431,11 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_6ySHEIabEeSjEKDVuAONqA" name="setBookingAsActive">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_AoyncIacEeSjEKDVuAONqA" name="bookingRef">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_7E1D8HcWEeSF9o1ikgdnqA" name="IExtraMaintenance">
       <nestedClassifier xmi:type="uml:Interface" xmi:id="_41nEYIQ9EeSI5ZJ-AXdxIg" name="MaintenanceProvidesHost">
