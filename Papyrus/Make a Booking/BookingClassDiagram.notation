@@ -63,10 +63,9 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_plJZhXihEeSmr6YRnpR7KQ"/>
       </children>
       <children xmi:type="notation:BasicCompartment" xmi:id="_plJZhnihEeSmr6YRnpR7KQ" type="7018">
-        <children xmi:type="notation:Shape" xmi:id="_Px7n4HoGEeScv6HJEKdjpA" type="3013">
-          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_Px0TIHoGEeScv6HJEKdjpA"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_Px7n4XoGEeScv6HJEKdjpA"/>
-        </children>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_h7_wsIagEeSjEKDVuAONqA" source="PapyrusCSSForceValue">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_h7_wsYagEeSjEKDVuAONqA" key="collapsed" value="true"/>
+        </eAnnotations>
         <styles xmi:type="notation:TitleStyle" xmi:id="_plJZh3ihEeSmr6YRnpR7KQ"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_plJZiHihEeSmr6YRnpR7KQ"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_plJZiXihEeSmr6YRnpR7KQ"/>

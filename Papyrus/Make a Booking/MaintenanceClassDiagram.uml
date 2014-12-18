@@ -86,15 +86,11 @@
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="__LaFIHlCEeScv6HJEKdjpA" name="ExtraHandler">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_Ay0u4HlDEeScv6HJEKdjpA" name="extraTable" visibility="private" type="_j5TCkIXqEeSU1psjCnSubg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cN_uUIXrEeSU1psjCnSubg"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cOA8cIXrEeSU1psjCnSubg" value="*"/>
-      </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_O7I0MH2zEeSp56Ha0EyLeQ" name="extra" type="_eltssHk_EeScv6HJEKdjpA" association="_O7JbQH2zEeSp56Ha0EyLeQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_O7I0MX2zEeSp56Ha0EyLeQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_O7I0Mn2zEeSp56Ha0EyLeQ" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_nwgksIXqEeSU1psjCnSubg" name="intToExtraMap" type="_j5TCkIXqEeSU1psjCnSubg" aggregation="composite" association="_nwhy0IXqEeSU1psjCnSubg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_nwgksIXqEeSU1psjCnSubg" name="extraTable" type="_j5TCkIXqEeSU1psjCnSubg" aggregation="composite" association="_nwhy0IXqEeSU1psjCnSubg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nwgksYXqEeSU1psjCnSubg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nwgksoXqEeSU1psjCnSubg" value="1"/>
       </ownedAttribute>
@@ -131,15 +127,11 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_1MwOMHlDEeScv6HJEKdjpA" name="RoomHandler">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_1MwOMnlDEeScv6HJEKdjpA" name="roomTable" visibility="private" type="_KvQWoIXXEeS36vV1PdpyWw">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TgDocIXYEeS36vV1PdpyWw"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TgE2kIXYEeS36vV1PdpyWw" value="*"/>
-      </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_DaEkwH2zEeSp56Ha0EyLeQ" name="room" type="_itkoAHlBEeScv6HJEKdjpA" association="_DaFL0H2zEeSp56Ha0EyLeQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DaEkwX2zEeSp56Ha0EyLeQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DaEkwn2zEeSp56Ha0EyLeQ" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_LZ-KwIXbEeS36vV1PdpyWw" name="integerToRoomMap" type="_KvQWoIXXEeS36vV1PdpyWw" aggregation="composite" association="_LZ-x0IXbEeS36vV1PdpyWw">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_LZ-KwIXbEeS36vV1PdpyWw" name="roomTable" type="_KvQWoIXXEeS36vV1PdpyWw" aggregation="composite" association="_LZ-x0IXbEeS36vV1PdpyWw">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LZ-KwYXbEeS36vV1PdpyWw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LZ-KwoXbEeS36vV1PdpyWw" value="1"/>
       </ownedAttribute>
@@ -170,10 +162,6 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_k4694HlEEeScv6HJEKdjpA" name="Calendar">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_mXWqwHlEEeScv6HJEKdjpA" name="roomTypeCapTable" visibility="private" type="_GrhyMHlEEeScv6HJEKdjpA">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_E76dAIXtEeSU1psjCnSubg"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_E77rIIXtEeSU1psjCnSubg" value="*"/>
-      </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_uiguUHlEEeScv6HJEKdjpA" name="getCap">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_xz9Q8HlEEeScv6HJEKdjpA" name="start">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -394,7 +382,6 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_e_uHkH2yEeSp56Ha0EyLeQ" name="getExtras"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_e_wj0H2yEeSp56Ha0EyLeQ" name="addExtra">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_e_wj0X2yEeSp56Ha0EyLeQ" name="price">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -447,7 +434,6 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_mHe0cH2yEeSp56Ha0EyLeQ" name="removeRoom">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_mHe0cX2yEeSp56Ha0EyLeQ" name="room" type="_itkoAHlBEeScv6HJEKdjpA"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_mHgCkH2yEeSp56Ha0EyLeQ" name="getRoomTypes"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_mHh3wH2yEeSp56Ha0EyLeQ" name="getRoom" visibility="public" concurrency="concurrent">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_mHh3wX2yEeSp56Ha0EyLeQ" name="ID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -468,7 +454,6 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_mHliIH2yEeSp56Ha0EyLeQ" name="getRooms" concurrency="concurrent"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_mHpMgH2yEeSp56Ha0EyLeQ" name="addRoom">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_mHpMgX2yEeSp56Ha0EyLeQ" name="numberID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -525,7 +510,7 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_65yB4X22EeSp56Ha0EyLeQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_65yB4n22EeSp56Ha0EyLeQ" value="1"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_gJq_8H23EeSp56Ha0EyLeQ" name="rooms" type="_1MwOMHlDEeScv6HJEKdjpA" aggregation="composite" association="_gJrnAH23EeSp56Ha0EyLeQ">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_gJq_8H23EeSp56Ha0EyLeQ" name="rooms" type="_1MwOMHlDEeScv6HJEKdjpA" association="_gJrnAH23EeSp56Ha0EyLeQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gJq_8X23EeSp56Ha0EyLeQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gJq_8n23EeSp56Ha0EyLeQ" value="1"/>
       </ownedAttribute>
@@ -600,13 +585,13 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_GrhyMHlEEeScv6HJEKdjpA" name="RoomTypes">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_GrhyMnlEEeScv6HJEKdjpA" name="roomTypeTable" visibility="private" type="_M0kbUIXtEeSU1psjCnSubg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9M0jAIXvEeSU1psjCnSubg"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9M1KEIXvEeSU1psjCnSubg" value="*"/>
-      </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_Jnbe4H2zEeSp56Ha0EyLeQ" name="roomType" type="_CLdSkHk_EeScv6HJEKdjpA" association="_JndUEH2zEeSp56Ha0EyLeQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Jnbe4X2zEeSp56Ha0EyLeQ"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Jnbe4n2zEeSp56Ha0EyLeQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_P2JV8YXtEeSU1psjCnSubg" name="roomTypeTable" type="_M0kbUIXtEeSU1psjCnSubg" aggregation="composite" association="_P2JV8IXtEeSU1psjCnSubg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_P2JV8oXtEeSU1psjCnSubg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_P2JV84XtEeSU1psjCnSubg" value="1"/>
       </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_GriZQHlEEeScv6HJEKdjpA" name="exists">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_GriZQXlEEeScv6HJEKdjpA" name="ID">
@@ -748,7 +733,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_KvQWoIXXEeS36vV1PdpyWw" name="IntegerToRoomMap">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_2g800IXXEeS36vV1PdpyWw" name="key" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_55GcYIXXEeS36vV1PdpyWw" name="value" visibility="private" type="_itkoAHlBEeScv6HJEKdjpA"/>
     </packagedElement>
@@ -759,10 +744,10 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_j5TCkIXqEeSU1psjCnSubg" name="IntegerToExtraMap">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_At3aIIXrEeSU1psjCnSubg" name="key">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_At3aIIXrEeSU1psjCnSubg" name="key" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_CkY24IXrEeSU1psjCnSubg" name="value" type="_eltssHk_EeScv6HJEKdjpA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_CkY24IXrEeSU1psjCnSubg" name="value" visibility="private" type="_eltssHk_EeScv6HJEKdjpA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_nwhy0IXqEeSU1psjCnSubg" memberEnd="_nwhy0YXqEeSU1psjCnSubg _nwgksIXqEeSU1psjCnSubg">
       <ownedEnd xmi:type="uml:Property" xmi:id="_nwhy0YXqEeSU1psjCnSubg" name="extraHandler" type="__LaFIHlCEeScv6HJEKdjpA" association="_nwhy0IXqEeSU1psjCnSubg">
@@ -771,40 +756,35 @@
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_qj6rAIXrEeSU1psjCnSubg" name="StringToListsMap">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_yuGeMIXrEeSU1psjCnSubg" name="key">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_yuGeMIXrEeSU1psjCnSubg" name="key" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_W_jeEIXsEeSU1psjCnSubg" name="calendar" type="_k4694HlEEeScv6HJEKdjpA" association="_W_kFIIXsEeSU1psjCnSubg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_W_jeEIXsEeSU1psjCnSubg" name="roomTypeCapTable" type="_qj6rAIXrEeSU1psjCnSubg" association="_W_kFIIXsEeSU1psjCnSubg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_W_jeEYXsEeSU1psjCnSubg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_W_jeEoXsEeSU1psjCnSubg" value="1"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_rEnu4IXsEeSU1psjCnSubg" name="value">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_rEnu4IXsEeSU1psjCnSubg" name="value" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_66QK0IXsEeSU1psjCnSubg"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_66RY8IXsEeSU1psjCnSubg" value="*"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_W_kFIIXsEeSU1psjCnSubg" memberEnd="_W_kFIYXsEeSU1psjCnSubg _W_jeEIXsEeSU1psjCnSubg">
-      <name xsi:nil="true"/>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_W_kFIYXsEeSU1psjCnSubg" name="stringToListsMap" type="_qj6rAIXrEeSU1psjCnSubg" association="_W_kFIIXsEeSU1psjCnSubg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_W_kFIYXsEeSU1psjCnSubg" name="calendar" type="_k4694HlEEeScv6HJEKdjpA" association="_W_kFIIXsEeSU1psjCnSubg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_W_kFIoXsEeSU1psjCnSubg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_W_kFI4XsEeSU1psjCnSubg" value="1"/>
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_M0kbUIXtEeSU1psjCnSubg" name="StringToRoomType">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_P2GSoIXtEeSU1psjCnSubg" name="roomTypes" type="_GrhyMHlEEeScv6HJEKdjpA" aggregation="composite" association="_P2JV8IXtEeSU1psjCnSubg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_P2GSoYXtEeSU1psjCnSubg"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_P2GSooXtEeSU1psjCnSubg" value="*"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_MFom0IXvEeSU1psjCnSubg" name="key">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_MFom0IXvEeSU1psjCnSubg" name="key" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_fWwSMIXvEeSU1psjCnSubg" name="value" type="_M0kbUIXtEeSU1psjCnSubg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_fWwSMIXvEeSU1psjCnSubg" name="value" visibility="private" type="_CLdSkHk_EeScv6HJEKdjpA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_P2JV8IXtEeSU1psjCnSubg" memberEnd="_P2JV8YXtEeSU1psjCnSubg _P2GSoIXtEeSU1psjCnSubg">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_P2JV8YXtEeSU1psjCnSubg" name="stringToRoomType" type="_M0kbUIXtEeSU1psjCnSubg" association="_P2JV8IXtEeSU1psjCnSubg">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_P2JV8oXtEeSU1psjCnSubg" value="1"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_P2JV84XtEeSU1psjCnSubg" value="1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_P2GSoIXtEeSU1psjCnSubg" name="roomTypes" type="_GrhyMHlEEeScv6HJEKdjpA" association="_P2JV8IXtEeSU1psjCnSubg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_P2GSoYXtEeSU1psjCnSubg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_P2GSooXtEeSU1psjCnSubg" value="*"/>
       </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_wSq5YIXyEeSU1psjCnSubg" memberEnd="_wSq5YYXyEeSU1psjCnSubg _wSkywIXyEeSU1psjCnSubg">

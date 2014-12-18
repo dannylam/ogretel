@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
+    modelDirectory="/Hotelsystem/src" modelPluginID="Hotelsystem" modelName="MaintenanceClassDiagram"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.uml2.uml.ecore.importer"
+    complianceLevel="6.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="REPORT"/>
+    <details key="UNTYPED_PROPERTIES" value="REPORT"/>
+    <details key="DUPLICATE_FEATURES" value="DISCARD"/>
+    <details key="SUBSETTING_PROPERTIES" value="REPORT"/>
+    <details key="VALIDATION_DELEGATES" value="IGNORE"/>
+    <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
+    <details key="DUPLICATE_OPERATIONS" value="DISCARD"/>
+    <details key="PROPERTY_DEFAULT_EXPRESSIONS" value="IGNORE"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+    <details key="REDEFINING_PROPERTIES" value="REPORT"/>
+    <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="NON_API_INVARIANTS" value="IGNORE"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="DISCARD"/>
+    <details key="REDEFINING_OPERATIONS" value="REPORT"/>
+    <details key="INVOCATION_DELEGATES" value="IGNORE"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="OPERATION_BODIES" value="IGNORE"/>
+    <details key="CAMEL_CASE_NAMES" value="IGNORE"/>
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+  </genAnnotations>
+  <foreignModel>MaintenanceClassDiagram.uml</foreignModel>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Model" disposableProviderFactory="true"
+      ecorePackage="model.ecore#/">
+    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//RoomTypeEnum">
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="model.ecore#//RoomTypeEnum/Singlebed"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="model.ecore#//RoomTypeEnum/Doublebed"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="model.ecore#//RoomTypeEnum/Luxurysuite"/>
+    </genEnums>
+    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//ExperienceStatusEnum">
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="model.ecore#//ExperienceStatusEnum/ready"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="model.ecore#//ExperienceStatusEnum/maintenance"/>
+    </genEnums>
+    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//ProductStatusEnum">
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="model.ecore#//ProductStatusEnum/inStock"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="model.ecore#//ProductStatusEnum/outOfStock"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="model.ecore#//ProductStatusEnum/restocking"/>
+    </genEnums>
+    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//RoomStatusEnum">
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="model.ecore#//RoomStatusEnum/Vacant"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="model.ecore#//RoomStatusEnum/Busy"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="model.ecore#//RoomStatusEnum/Maintenance"/>
+    </genEnums>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//RoomType">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RoomType/price"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RoomType/maxNrOfGuests"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RoomType/desciption"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RoomType/roomTypeEnum"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//Experience">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Experience/nrOfSpots"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Experience/experienceStatusEnum"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//AbstractExtra">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AbstractExtra/ID"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AbstractExtra/price"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AbstractExtra/name"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//AbstractExtra/description"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="model.ecore#//Extra">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//Extra/getPrice"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//Extra/getID"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//Extra/getName"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//Extra/getDescription"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//Extra/isAvailable"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//Product">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Product/stock"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Product/productStatusEnum"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//Room">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Room/numberID"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Room/roomStatusEnum"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Room/roomType"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//ExtraHandler">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//ExtraHandler/extra"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference model.ecore#//ExtraHandler/extraTable"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//ExtraHandler/exists">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//ExtraHandler/exists/ID"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//ExtraHandler/addExtra">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//ExtraHandler/addExtra/price"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//ExtraHandler/addExtra/ID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//ExtraHandler/addExtra/name"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//ExtraHandler/addExtra/description"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//ExtraHandler/removeExtra">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//ExtraHandler/removeExtra/extra"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//ExtraHandler/getExtra">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//ExtraHandler/getExtra/ID"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//IntegerToExtraMap">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//IntegerToExtraMap/key"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//IntegerToExtraMap/value"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//RoomHandler">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//RoomHandler/room"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference model.ecore#//RoomHandler/roomTable"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//RoomHandler/exists">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomHandler/exists/ID"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//RoomHandler/addRoom">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomHandler/addRoom/numberID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomHandler/addRoom/roomType"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//RoomHandler/removeRoom">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomHandler/removeRoom/room"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//RoomHandler/getRoom">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomHandler/getRoom/ID"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//IntegerToRoomMap">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//IntegerToRoomMap/key"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//IntegerToRoomMap/value"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//Calendar">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//Calendar/getCap">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//Calendar/getCap/start"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//Calendar/getCap/end"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//Calendar/getCap/roomType"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//Calendar/setCap">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//Calendar/setCap/start"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//Calendar/setCap/end"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//Calendar/setCap/roomType"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//Calendar/setCap/nrOfRooms"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="model.ecore#//IMaintenanceProvidesForBooking">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IMaintenanceProvidesForBooking/canBook">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IMaintenanceProvidesForBooking/canBook/roomType"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IMaintenanceProvidesForBooking/canBook/start"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IMaintenanceProvidesForBooking/canBook/end"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IMaintenanceProvidesForBooking/makeBooking">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IMaintenanceProvidesForBooking/makeBooking/roomType"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IMaintenanceProvidesForBooking/makeBooking/start"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IMaintenanceProvidesForBooking/makeBooking/end"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IMaintenanceProvidesForBooking/removeBooking">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IMaintenanceProvidesForBooking/removeBooking/roomType"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IMaintenanceProvidesForBooking/removeBooking/nrOfRooms"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IMaintenanceProvidesForBooking/removeBooking/start"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IMaintenanceProvidesForBooking/removeBooking/end"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IMaintenanceProvidesForBooking/setBookingAsActive">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IMaintenanceProvidesForBooking/setBookingAsActive/bookingRef"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="model.ecore#//IRoomMaintenance">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IRoomMaintenance/addRoom">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/addRoom/numberID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/addRoom/roomType"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IRoomMaintenance/removeRoom">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/removeRoom/room"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IRoomMaintenance/addRoomType">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/addRoomType/roomType"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/addRoomType/price"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/addRoomType/maxNrOfGuests"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/addRoomType/description"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IRoomMaintenance/removeRoomType">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/removeRoomType/roomType"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IRoomMaintenance/getRooms"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IRoomMaintenance/getRoomTypes"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IRoomMaintenance/getRoom">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/getRoom/ID"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IRoomMaintenance/getRoomType">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/getRoomType/ID"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IRoomMaintenance/editRoomStatus">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/editRoomStatus/roomID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/editRoomStatus/status"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IRoomMaintenance/getRoomStatus">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/getRoomStatus/roomID"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IRoomMaintenance/editRoomType">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/editRoomType/roomType"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/editRoomType/price"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/editRoomType/maxNrOfGuests"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/editRoomType/description"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IRoomMaintenance/editRoom">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/editRoom/numberID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IRoomMaintenance/editRoom/roomType"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="model.ecore#//IExtrasMaintenance">
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IExtrasMaintenance/addExtra">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IExtrasMaintenance/addExtra/price"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IExtrasMaintenance/addExtra/ID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IExtrasMaintenance/addExtra/name"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IExtrasMaintenance/addExtra/description"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IExtrasMaintenance/removeExtra">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IExtrasMaintenance/removeExtra/extra"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IExtrasMaintenance/getExtras"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IExtrasMaintenance/getExtra">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IExtrasMaintenance/getExtra/ID"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//IExtrasMaintenance/editExtra">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IExtrasMaintenance/editExtra/price"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IExtrasMaintenance/editExtra/ID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IExtrasMaintenance/editExtra/name"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//IExtrasMaintenance/editExtra/description"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//ExtrasMaintenance">
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference model.ecore#//ExtrasMaintenance/extras"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//ExtrasMaintenance/removeExtra">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//ExtrasMaintenance/removeExtra/extra"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//ExtrasMaintenance/getExtra">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//ExtrasMaintenance/getExtra/ID"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//ExtrasMaintenance/addExtra">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//ExtrasMaintenance/addExtra/price"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//ExtrasMaintenance/addExtra/ID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//ExtrasMaintenance/addExtra/name"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//ExtrasMaintenance/addExtra/description"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//ExtrasMaintenance/editExtra">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//ExtrasMaintenance/editExtra/price"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//ExtrasMaintenance/editExtra/ID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//ExtrasMaintenance/editExtra/name"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//ExtrasMaintenance/editExtra/description"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//RoomMaintenance">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//RoomMaintenance/roomTypes"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference model.ecore#//RoomMaintenance/rooms"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//RoomMaintenance/getRoomType">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/getRoomType/ID"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//RoomMaintenance/removeRoomType">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/removeRoomType/roomType"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//RoomMaintenance/removeRoom">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/removeRoom/room"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//RoomMaintenance/getRoom">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/getRoom/ID"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//RoomMaintenance/addRoomType">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/addRoomType/roomType"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/addRoomType/price"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/addRoomType/maxNrOfGuests"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/addRoomType/description"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//RoomMaintenance/addRoom">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/addRoom/numberID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/addRoom/roomType"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//RoomMaintenance/editRoomStatus">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/editRoomStatus/roomID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/editRoomStatus/status"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//RoomMaintenance/getRoomStatus">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/getRoomStatus/roomID"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//RoomMaintenance/editRoomType">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/editRoomType/roomType"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/editRoomType/price"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/editRoomType/maxNrOfGuests"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/editRoomType/description"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//RoomMaintenance/editRoom">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/editRoom/numberID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomMaintenance/editRoom/roomType"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//RoomTypes">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//RoomTypes/roomType"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference model.ecore#//RoomTypes/roomTypeTable"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//RoomTypes/exists">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomTypes/exists/ID"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//RoomTypes/addRoomType">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomTypes/addRoomType/roomType"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomTypes/addRoomType/price"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomTypes/addRoomType/maxNrOfGuests"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomTypes/addRoomType/description"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//RoomTypes/removeRoomType">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomTypes/removeRoomType/roomType"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//RoomTypes/getRoomType">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//RoomTypes/getRoomType/name"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//StringToRoomType">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//StringToRoomType/key"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//StringToRoomType/value"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//MaintenanceProvidesForBooking">
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//MaintenanceProvidesForBooking/calendar"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference model.ecore#//MaintenanceProvidesForBooking/roomTypes"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//MaintenanceProvidesForBooking/rooms"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//MaintenanceProvidesForBooking/canBook">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//MaintenanceProvidesForBooking/canBook/roomType"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//MaintenanceProvidesForBooking/canBook/nrOfRooms"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//MaintenanceProvidesForBooking/canBook/start"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//MaintenanceProvidesForBooking/canBook/end"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//MaintenanceProvidesForBooking/makeBooking">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//MaintenanceProvidesForBooking/makeBooking/roomType"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//MaintenanceProvidesForBooking/makeBooking/nrOfRooms"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//MaintenanceProvidesForBooking/makeBooking/start"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//MaintenanceProvidesForBooking/makeBooking/end"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//MaintenanceProvidesForBooking/removeBooking">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//MaintenanceProvidesForBooking/removeBooking/roomType"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//MaintenanceProvidesForBooking/removeBooking/nrOfRooms"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//MaintenanceProvidesForBooking/removeBooking/start"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//MaintenanceProvidesForBooking/removeBooking/end"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="model.ecore#//MaintenanceProvidesForBooking/setBookingAsActive">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="model.ecore#//MaintenanceProvidesForBooking/setBookingAsActive/bookingRef"/>
+      </genOperations>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="model.ecore#//StringToListsMap">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//StringToListsMap/key"/>
+      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
+          propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//StringToListsMap/roomTypeCapTable"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//StringToListsMap/value"/>
+    </genClasses>
+  </genPackages>
+  <genPackages xsi:type="genmodel:GenPackage" prefix="Types" basePackage="org.eclipse.uml2"
+      disposableProviderFactory="true" ecorePackage="types.ecore#/">
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Boolean"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Real"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//String"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//UnlimitedNatural"/>
+    <genDataTypes xsi:type="genmodel:GenDataType" ecoreDataType="types.ecore#//Integer"/>
+  </genPackages>
+</genmodel:GenModel>
