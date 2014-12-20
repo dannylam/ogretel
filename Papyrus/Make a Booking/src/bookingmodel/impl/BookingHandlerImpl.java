@@ -3,7 +3,6 @@
 package bookingmodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -76,45 +75,50 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean exists(String bookingRef) {
-		// TODO: implement this method
+		return this.bookingsMap.containsKey(bookingRef);
+		//TODO: Lägga till try-catch och fånga exceptions på ett lämpligt sätt.
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void addBooking(Booking booking) {
-		// TODO: implement this method
+		this.bookingsMap.put(booking.getBookingRef(), booking);
+		//TODO: Lägga till try-catch och fånga exceptions på ett lämpligt sätt.
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void removeBooking(Booking booking) {
-		// TODO: implement this method
+		this.bookingsMap.remove(booking);
+		//TODO: Lägga till try-catch och fånga exceptions på ett lämpligt sätt.
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
+		
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Booking getBooking(String bookingRef) {
-		// TODO: implement this method
+		return this.bookingsMap.get(bookingRef);
+		//TODO: Lägga till try-catch och fånga exceptions på ett lämpligt sätt.
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
 	}
 
 	/**
