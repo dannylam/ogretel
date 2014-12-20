@@ -641,8 +641,8 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER___EDIT_BOOKING__BOOKING = 4;
-
+	int BOOKING_HANDLER___EDIT_BOOKING__INT_INT_STRING_INT_STRING_STRING_STRING = 4;
+	
 	/**
 	 * The number of operations of the '<em>Booking Handler</em>' class.
 	 * <!-- begin-user-doc -->
@@ -881,13 +881,22 @@ public interface ModelPackage extends EPackage {
 	int IBOOKING_PROVIDES_FOR_GUEST___PAY__STRING_STRING_INT_INT_STRING_STRING = 2;
 
 	/**
+	 * The operation id for the '<em>Edit Booking</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_GUEST___EDIT_BOOKING__INT_INT_STRING_INT_STRING_STRING_STRING = 3;
+	
+	/**
 	 * The number of operations of the '<em>IBooking Provides For Guest</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_GUEST_OPERATION_COUNT = 3;
+	int IBOOKING_PROVIDES_FOR_GUEST_OPERATION_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.impl.BookingProvidesImpl <em>Booking Provides</em>}' class.
@@ -1625,15 +1634,15 @@ public interface ModelPackage extends EPackage {
 	EOperation getBookingHandler__GetBooking__String();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.BookingHandler#editBooking(bookingmodel.Booking) <em>Edit Booking</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.BookingHandler#editBooking(int, int, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String) <em>Edit Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Edit Booking</em>' operation.
-	 * @see bookingmodel.BookingHandler#editBooking(bookingmodel.Booking)
+	 * @see bookingmodel.BookingHandler(int, int, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getBookingHandler__EditBooking__Booking();
-
+	EOperation getBookingHandler__EditBooking__int_int_String_int_String_String_String();
+	
 	/**
 	 * Returns the meta object for class '{@link bookingmodel.IBookingProvidesForHost <em>IBooking Provides For Host</em>}'.
 	 * <!-- begin-user-doc -->
@@ -1833,6 +1842,16 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getIBookingProvidesForGuest__Pay__String_String_int_int_String_String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForGuest#editBooking(int, int, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String) <em>Edit Booking</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Edit Booking</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForGuest(int, int, java.lang.String, int, java.lang.String, java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getIBookingProvidesForGuest__EditBooking__int_int_String_int_String_String_String();
 
 	/**
 	 * Returns the meta object for class '{@link bookingmodel.BookingProvides <em>Booking Provides</em>}'.
@@ -2490,7 +2509,7 @@ public interface ModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_HANDLER___EDIT_BOOKING__BOOKING = eINSTANCE.getBookingHandler__EditBooking__Booking();
+		EOperation BOOKING_HANDLER___EDIT_BOOKING__INT_INT_STRING_INT_STRING_STRING_STRING = eINSTANCE.getBookingHandler__EditBooking__int_int_String_int_String_String_String();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.IBookingProvidesForHost <em>IBooking Provides For Host</em>}' class.
@@ -2657,6 +2676,14 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IBOOKING_PROVIDES_FOR_GUEST___PAY__STRING_STRING_INT_INT_STRING_STRING = eINSTANCE.getIBookingProvidesForGuest__Pay__String_String_int_int_String_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Edit Booking</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKING_PROVIDES_FOR_GUEST___EDIT_BOOKING__INT_INT_STRING_INT_STRING_STRING_STRING = eINSTANCE.getIBookingProvidesForGuest__EditBooking__int_int_String_int_String_String_String();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.impl.BookingProvidesImpl <em>Booking Provides</em>}' class.

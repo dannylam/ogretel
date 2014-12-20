@@ -3,6 +3,7 @@
 package bookingmodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -126,7 +127,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void editBooking(Booking booking) {
+	public void editBooking(int nrOfNights, int nrOfGuests, String date, int nrOfRooms, String roomTypes, String extras, String bookingRef) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -223,8 +224,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return null;
 			case ModelPackage.BOOKING_HANDLER___GET_BOOKING__STRING:
 				return getBooking((String)arguments.get(0));
-			case ModelPackage.BOOKING_HANDLER___EDIT_BOOKING__BOOKING:
-				editBooking((Booking)arguments.get(0));
+			case ModelPackage.BOOKING_PROVIDES___EDIT_BOOKING__INT_INT_STRING_INT_STRING_STRING_STRING:
+				editBooking((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6));
 				return null;
 		}
 		return super.eInvoke(operationID, arguments);

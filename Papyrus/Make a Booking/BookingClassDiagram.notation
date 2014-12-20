@@ -187,9 +187,9 @@
           <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_x4J4oHk9EeScv6HJEKdjpA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_x4QmUXk9EeScv6HJEKdjpA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_WW63gHoJEeScv6HJEKdjpA" type="3013">
-          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_WWxtkHoJEeScv6HJEKdjpA"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_WW63gXoJEeScv6HJEKdjpA"/>
+        <children xmi:type="notation:Shape" xmi:id="__Rn9cIiOEeSo35DEoNbHTw" type="3013">
+          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#__RbJIIiOEeSo35DEoNbHTw"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="__Rn9cYiOEeSo35DEoNbHTw"/>
         </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_jBs3Nnk8EeScv6HJEKdjpA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_jBs3N3k8EeScv6HJEKdjpA"/>
@@ -366,6 +366,10 @@
         <children xmi:type="notation:Shape" xmi:id="_WPhGkH1MEeSytO65gmeCYw" type="3007">
           <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_WOi2MH1MEeSytO65gmeCYw"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_WPhGkX1MEeSytO65gmeCYw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_E0ODUIiPEeSo35DEoNbHTw" type="3007">
+          <element xmi:type="uml:Operation" href="BookingClassDiagram.uml#_E0HVoIiPEeSo35DEoNbHTw"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_E0ODUYiPEeSo35DEoNbHTw"/>
         </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_D29RaXoLEeScv6HJEKdjpA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_D29RanoLEeScv6HJEKdjpA"/>
