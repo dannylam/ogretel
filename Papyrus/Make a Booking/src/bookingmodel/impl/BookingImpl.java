@@ -474,25 +474,50 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * Checks if all the rooms in the booking
+	 * has a responsible guest. If so, then true is returned,
+	 * otherwise false is returned.
+	 * @generated NOT
 	 */
 	public boolean checkedInAllGuest() {
-		// TODO: implement this method
+		boolean hasResponsible = true;
+		if(!this.roomGuestMap.isEmpty()){
+			for (String guestEmail: roomGuestMap.values()) {
+				while(hasResponsible){
+					if(guestEmail.isEmpty() || guestEmail.equals("out")){
+						hasResponsible = false;
+					}
+				}
+			}
+		}
+		return hasResponsible;
+		
+		//TODO: Lägga till try-catch och fånga exceptions på ett lämpligt sätt.
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Checks if at least one room in the booking
+	 * has a responsible guest. If so, then true is returned,
+	 * otherwise false is returned.
 	 * @generated
 	 */
 	public boolean checkedInAGuest() {
-		// TODO: implement this method
+		boolean hasResponsible = false;
+		if(!this.roomGuestMap.isEmpty()){
+			for (String guestEmail : roomGuestMap.values()) {
+				while(!hasResponsible){
+					if(!guestEmail.isEmpty() || !guestEmail.equals("out")){
+						hasResponsible = true;
+					}
+				}
+			}
+		}
+		return hasResponsible;
+		//TODO: Lägga till try-catch och fånga exceptions på ett lämpligt sätt.
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
 	}
 
 	/**
