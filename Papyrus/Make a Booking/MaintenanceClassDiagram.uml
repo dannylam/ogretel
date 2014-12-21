@@ -188,8 +188,10 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_6O6EAHlEEeScv6HJEKdjpA" name="roomType">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-aUUgHlEEeScv6HJEKdjpA" direction="return">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-aUUgHlEEeScv6HJEKdjpA" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NnkkUIkIEeSbSvqLDtDSJA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NnlycIkIEeSbSvqLDtDSJA" value="*"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_Aw5xYHlFEeScv6HJEKdjpA" name="setCap">
