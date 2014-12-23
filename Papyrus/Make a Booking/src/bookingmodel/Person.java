@@ -1,10 +1,10 @@
-/**
- */
+
 package bookingmodel;
 
 import org.eclipse.emf.ecore.EObject;
 
 /**
+ * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Person</b></em>'.
  * <!-- end-user-doc -->
@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Person extends EObject {
 	/**
 	 * Returns the value of the '<em><b>First Name</b></em>' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>First Name</em>' attribute isn't clear,
@@ -43,6 +44,7 @@ public interface Person extends EObject {
 
 	/**
 	 * Sets the value of the '{@link bookingmodel.Person#getFirstName <em>First Name</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>First Name</em>' attribute.
@@ -53,6 +55,7 @@ public interface Person extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Last Name</b></em>' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Last Name</em>' attribute isn't clear,
@@ -69,6 +72,7 @@ public interface Person extends EObject {
 
 	/**
 	 * Sets the value of the '{@link bookingmodel.Person#getLastName <em>Last Name</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Last Name</em>' attribute.
@@ -79,6 +83,7 @@ public interface Person extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Email</b></em>' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Email</em>' attribute isn't clear,
@@ -95,6 +100,7 @@ public interface Person extends EObject {
 
 	/**
 	 * Sets the value of the '{@link bookingmodel.Person#getEmail <em>Email</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Email</em>' attribute.
@@ -105,6 +111,7 @@ public interface Person extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Telephone Nr</b></em>' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Telephone Nr</em>' attribute isn't clear,
@@ -121,6 +128,7 @@ public interface Person extends EObject {
 
 	/**
 	 * Sets the value of the '{@link bookingmodel.Person#getTelephoneNr <em>Telephone Nr</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Telephone Nr</em>' attribute.
@@ -131,6 +139,7 @@ public interface Person extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Address</b></em>' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Address</em>' attribute isn't clear,
@@ -147,6 +156,7 @@ public interface Person extends EObject {
 
 	/**
 	 * Sets the value of the '{@link bookingmodel.Person#getAddress <em>Address</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Address</em>' attribute.

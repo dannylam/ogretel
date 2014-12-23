@@ -1,5 +1,4 @@
-/**
- */
+
 package bookingmodel;
 
 import java.util.Arrays;
@@ -9,6 +8,7 @@ import java.util.List;
 import org.eclipse.emf.common.util.Enumerator;
 
 /**
+ * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
  * A representation of the literals of the enumeration '<em><b>Guest Types</b></em>',
  * and utility methods for working with them.
@@ -20,6 +20,8 @@ import org.eclipse.emf.common.util.Enumerator;
 public enum GuestTypes implements Enumerator {
 	/**
 	 * The '<em><b>Regular</b></em>' literal object.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #REGULAR_VALUE
@@ -30,6 +32,7 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * The '<em><b>Black Listed</b></em>' literal object.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #BLACK_LISTED_VALUE
@@ -40,6 +43,7 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * The '<em><b>VIP</b></em>' literal object.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #VIP_VALUE
@@ -50,6 +54,7 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * The '<em><b>Regular</b></em>' literal value.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Regular</b></em>' literal object isn't clear,
@@ -65,6 +70,7 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * The '<em><b>Black Listed</b></em>' literal value.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Black Listed</b></em>' literal object isn't clear,
@@ -80,6 +86,7 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * The '<em><b>VIP</b></em>' literal value.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>VIP</b></em>' literal object isn't clear,
@@ -95,6 +102,7 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * An array of all the '<em><b>Guest Types</b></em>' enumerators.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -108,6 +116,7 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * A public read-only list of all the '<em><b>Guest Types</b></em>' enumerators.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -116,6 +125,7 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * Returns the '<em><b>Guest Types</b></em>' literal with the specified literal value.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -132,6 +142,7 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * Returns the '<em><b>Guest Types</b></em>' literal with the specified name.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -148,6 +159,7 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * Returns the '<em><b>Guest Types</b></em>' literal with the specified integer value.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -162,6 +174,7 @@ public enum GuestTypes implements Enumerator {
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -169,6 +182,7 @@ public enum GuestTypes implements Enumerator {
 	private final int value;
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -176,6 +190,7 @@ public enum GuestTypes implements Enumerator {
 	private final String name;
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -184,6 +199,7 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * Only this class can construct instances.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -195,6 +211,7 @@ public enum GuestTypes implements Enumerator {
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -204,6 +221,7 @@ public enum GuestTypes implements Enumerator {
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -213,6 +231,7 @@ public enum GuestTypes implements Enumerator {
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -223,6 +242,7 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * Returns the literal value of the enumerator, which is its string representation.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

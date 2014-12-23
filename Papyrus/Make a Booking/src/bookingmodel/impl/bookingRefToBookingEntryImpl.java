@@ -15,6 +15,7 @@ import bookingmodel.Booking;
 import bookingmodel.ModelPackage;
 
 /**
+ * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>booking Ref To Booking Entry</b></em>'.
  * <!-- end-user-doc -->
@@ -41,6 +42,7 @@ public class bookingRefToBookingEntryImpl extends MinimalEObjectImpl.Container i
 
 	/**
 	 * The cached value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTypedKey()
@@ -51,6 +53,7 @@ public class bookingRefToBookingEntryImpl extends MinimalEObjectImpl.Container i
 
 	/**
 	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' reference.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTypedValue()

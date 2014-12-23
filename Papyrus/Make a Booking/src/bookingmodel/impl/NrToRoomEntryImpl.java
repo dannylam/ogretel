@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import bookingmodel.ModelPackage;
 
 /**
+ * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Nr To Room Entry</b></em>'.
  * <!-- end-user-doc -->
@@ -39,6 +40,7 @@ public class NrToRoomEntryImpl extends MinimalEObjectImpl.Container implements B
 
 	/**
 	 * The cached value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTypedKey()
@@ -59,6 +61,7 @@ public class NrToRoomEntryImpl extends MinimalEObjectImpl.Container implements B
 
 	/**
 	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTypedValue()
@@ -68,6 +71,7 @@ public class NrToRoomEntryImpl extends MinimalEObjectImpl.Container implements B
 	protected Integer value = VALUE_EDEFAULT;
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

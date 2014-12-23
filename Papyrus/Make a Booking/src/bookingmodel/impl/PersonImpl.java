@@ -11,6 +11,7 @@ import bookingmodel.ModelPackage;
 import bookingmodel.Person;
 
 /**
+ * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Person</b></em>'.
  * <!-- end-user-doc -->
@@ -40,6 +41,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 
 	/**
 	 * The cached value of the '{@link #getFirstName() <em>First Name</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFirstName()
@@ -60,6 +62,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 
 	/**
 	 * The cached value of the '{@link #getLastName() <em>Last Name</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getLastName()
@@ -80,6 +83,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 
 	/**
 	 * The cached value of the '{@link #getEmail() <em>Email</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getEmail()
@@ -100,6 +104,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 
 	/**
 	 * The cached value of the '{@link #getTelephoneNr() <em>Telephone Nr</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTelephoneNr()
@@ -120,6 +125,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 
 	/**
 	 * The cached value of the '{@link #getAddress() <em>Address</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAddress()
@@ -129,6 +135,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	protected String address = ADDRESS_EDEFAULT;
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -148,6 +155,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -157,6 +165,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -169,6 +178,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -178,6 +188,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -190,6 +201,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -199,6 +211,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -211,6 +224,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -220,6 +234,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -232,6 +247,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -241,6 +257,7 @@ public class PersonImpl extends MinimalEObjectImpl.Container implements Person {
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

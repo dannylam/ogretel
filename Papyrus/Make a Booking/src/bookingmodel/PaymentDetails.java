@@ -5,6 +5,7 @@ package bookingmodel;
 import org.eclipse.emf.ecore.EObject;
 
 /**
+ * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Payment Details</b></em>'.
  * <!-- end-user-doc -->
@@ -26,6 +27,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface PaymentDetails extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Cc Nr</b></em>' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Cc Nr</em>' attribute isn't clear,
@@ -42,6 +44,7 @@ public interface PaymentDetails extends EObject {
 
 	/**
 	 * Sets the value of the '{@link bookingmodel.PaymentDetails#getCcNr <em>Cc Nr</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Cc Nr</em>' attribute.
@@ -52,6 +55,7 @@ public interface PaymentDetails extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Cc V</b></em>' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Cc V</em>' attribute isn't clear,
@@ -68,6 +72,7 @@ public interface PaymentDetails extends EObject {
 
 	/**
 	 * Sets the value of the '{@link bookingmodel.PaymentDetails#getCcV <em>Cc V</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Cc V</em>' attribute.
@@ -78,6 +83,7 @@ public interface PaymentDetails extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Exp Month</b></em>' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Exp Month</em>' attribute isn't clear,
@@ -94,6 +100,7 @@ public interface PaymentDetails extends EObject {
 
 	/**
 	 * Sets the value of the '{@link bookingmodel.PaymentDetails#getExpMonth <em>Exp Month</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Exp Month</em>' attribute.
@@ -104,6 +111,7 @@ public interface PaymentDetails extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Exp Year</b></em>' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Exp Year</em>' attribute isn't clear,
@@ -120,6 +128,7 @@ public interface PaymentDetails extends EObject {
 
 	/**
 	 * Sets the value of the '{@link bookingmodel.PaymentDetails#getExpYear <em>Exp Year</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Exp Year</em>' attribute.

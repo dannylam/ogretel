@@ -11,6 +11,7 @@ import bookingmodel.ModelPackage;
 import bookingmodel.PaymentDetails;
 
 /**
+ * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Payment Details</b></em>'.
  * <!-- end-user-doc -->
@@ -39,7 +40,8 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 
 	/**
 	 * The cached value of the '{@link #getCcNr() <em>Cc Nr</em>}' attribute.
-	 * <!-- begin-user-doc -->
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->f
 	 * <!-- end-user-doc -->
 	 * @see #getCcNr()
 	 * @generated
@@ -59,7 +61,8 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 
 	/**
 	 * The cached value of the '{@link #getCcV() <em>Cc V</em>}' attribute.
-	 * <!-- begin-user-doc -->
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->f
 	 * <!-- end-user-doc -->
 	 * @see #getCcV()
 	 * @generated
@@ -79,7 +82,8 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 
 	/**
 	 * The cached value of the '{@link #getExpMonth() <em>Exp Month</em>}' attribute.
-	 * <!-- begin-user-doc -->
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->f
 	 * <!-- end-user-doc -->
 	 * @see #getExpMonth()
 	 * @generated
@@ -99,7 +103,8 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 
 	/**
 	 * The cached value of the '{@link #getExpYear() <em>Exp Year</em>}' attribute.
-	 * <!-- begin-user-doc -->
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->f
 	 * <!-- end-user-doc -->
 	 * @see #getExpYear()
 	 * @generated
@@ -108,7 +113,8 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	protected int expYear = EXP_YEAR_EDEFAULT;
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->f
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -127,7 +133,8 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->f
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -136,7 +143,8 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->f
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -148,7 +156,8 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->f
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -157,7 +166,8 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->f
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -169,7 +179,8 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->f
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -178,7 +189,8 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->f
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -190,7 +202,8 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->f
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -199,7 +212,8 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->f
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -211,7 +225,8 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->f
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */

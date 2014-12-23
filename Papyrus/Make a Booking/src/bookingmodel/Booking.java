@@ -37,6 +37,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Booking extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Booking Ref</b></em>' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Booking Ref</em>' attribute isn't clear,
@@ -53,6 +54,7 @@ public interface Booking extends EObject {
 
 	/**
 	 * Sets the value of the '{@link bookingmodel.Booking#getBookingRef <em>Booking Ref</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Booking Ref</em>' attribute.
@@ -63,6 +65,7 @@ public interface Booking extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Date</b></em>' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Date</em>' attribute isn't clear,
@@ -79,6 +82,7 @@ public interface Booking extends EObject {
 
 	/**
 	 * Sets the value of the '{@link bookingmodel.Booking#getDate <em>Date</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Date</em>' attribute.
@@ -89,6 +93,7 @@ public interface Booking extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Nr Of Nights</b></em>' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Nr Of Nights</em>' attribute isn't clear,
@@ -105,6 +110,7 @@ public interface Booking extends EObject {
 
 	/**
 	 * Sets the value of the '{@link bookingmodel.Booking#getNrOfNights <em>Nr Of Nights</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Nr Of Nights</em>' attribute.
@@ -116,6 +122,7 @@ public interface Booking extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Extra List</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.String}.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Extra List</em>' attribute list isn't clear,
@@ -132,6 +139,7 @@ public interface Booking extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Service Notes</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.String}.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Service Notes</em>' attribute list isn't clear,
@@ -147,6 +155,7 @@ public interface Booking extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Nr Of Guests</b></em>' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Nr Of Guests</em>' attribute isn't clear,
@@ -163,6 +172,7 @@ public interface Booking extends EObject {
 
 	/**
 	 * Sets the value of the '{@link bookingmodel.Booking#getNrOfGuests <em>Nr Of Guests</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Nr Of Guests</em>' attribute.
@@ -173,6 +183,7 @@ public interface Booking extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Customer</b></em>' reference.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Customer</em>' reference isn't clear,
@@ -189,6 +200,7 @@ public interface Booking extends EObject {
 
 	/**
 	 * Sets the value of the '{@link bookingmodel.Booking#getCustomer <em>Customer</em>}' reference.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Customer</em>' reference.
@@ -200,6 +212,7 @@ public interface Booking extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Guest List</b></em>' reference list.
 	 * The list contents are of type {@link bookingmodel.Guest}.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Guest List</em>' reference list isn't clear,
@@ -215,6 +228,7 @@ public interface Booking extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Is Payed</b></em>' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Is Payed</em>' attribute isn't clear,
@@ -231,6 +245,7 @@ public interface Booking extends EObject {
 
 	/**
 	 * Sets the value of the '{@link bookingmodel.Booking#isPayed <em>Is Payed</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Is Payed</em>' attribute.
@@ -243,6 +258,7 @@ public interface Booking extends EObject {
 	 * Returns the value of the '<em><b>Room Guest Map</b></em>' map.
 	 * The key is of type {@link java.lang.String},
 	 * and the value is of type {@link java.lang.String},
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Room Guest Map</em>' map isn't clear,
@@ -260,6 +276,7 @@ public interface Booking extends EObject {
 	 * Returns the value of the '<em><b>Room Type Map</b></em>' map.
 	 * The key is of type {@link java.lang.String},
 	 * and the value is of type {@link java.lang.Integer},
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Room Type Map</em>' map isn't clear,
@@ -276,6 +293,7 @@ public interface Booking extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Payment Method</b></em>' attribute.
 	 * The literals are from the enumeration {@link bookingmodel.PaymentMethod}.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Payment Method</em>' attribute isn't clear,
@@ -293,6 +311,7 @@ public interface Booking extends EObject {
 
 	/**
 	 * Sets the value of the '{@link bookingmodel.Booking#getPaymentMethod <em>Payment Method</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Payment Method</em>' attribute.
@@ -303,6 +322,7 @@ public interface Booking extends EObject {
 	void setPaymentMethod(PaymentMethod value);
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
@@ -311,6 +331,7 @@ public interface Booking extends EObject {
 	boolean checkedInAllGuest();
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"

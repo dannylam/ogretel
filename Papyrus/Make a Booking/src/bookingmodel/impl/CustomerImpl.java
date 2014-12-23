@@ -14,6 +14,7 @@ import bookingmodel.ModelPackage;
 import bookingmodel.PaymentDetails;
 
 /**
+ * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Customer</b></em>'.
  * <!-- end-user-doc -->
@@ -29,6 +30,7 @@ import bookingmodel.PaymentDetails;
 public class CustomerImpl extends MinimalEObjectImpl.Container implements Customer {
 	/**
 	 * The cached value of the '{@link #getPaymentDetails() <em>Payment Details</em>}' reference list.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPaymentDetails()
@@ -38,6 +40,7 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	protected EList<PaymentDetails> paymentDetails;
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -47,6 +50,7 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -57,6 +61,7 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

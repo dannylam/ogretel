@@ -5,6 +5,7 @@ package bookingmodel;
 import org.eclipse.emf.ecore.EObject;
 
 /**
+ * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Guest</b></em>'.
  * <!-- end-user-doc -->
@@ -24,6 +25,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Guest extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Room Nr</b></em>' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Room Nr</em>' attribute isn't clear,
@@ -40,6 +42,7 @@ public interface Guest extends EObject {
 
 	/**
 	 * Sets the value of the '{@link bookingmodel.Guest#getRoomNr <em>Room Nr</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Room Nr</em>' attribute.
@@ -51,6 +54,7 @@ public interface Guest extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Guest Types</b></em>' attribute.
 	 * The literals are from the enumeration {@link bookingmodel.GuestTypes}.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Guest Types</em>' attribute isn't clear,
@@ -68,6 +72,7 @@ public interface Guest extends EObject {
 
 	/**
 	 * Sets the value of the '{@link bookingmodel.Guest#getGuestTypes <em>Guest Types</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Guest Types</em>' attribute.

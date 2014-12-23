@@ -7,6 +7,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
+ * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Customer</b></em>'.
  * <!-- end-user-doc -->
@@ -26,6 +27,7 @@ public interface Customer extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Payment Details</b></em>' reference list.
 	 * The list contents are of type {@link bookingmodel.PaymentDetails}.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Payment Details</em>' reference list isn't clear,

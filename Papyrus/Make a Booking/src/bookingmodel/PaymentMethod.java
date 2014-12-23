@@ -9,6 +9,7 @@ import java.util.List;
 import org.eclipse.emf.common.util.Enumerator;
 
 /**
+ * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
  * A representation of the literals of the enumeration '<em><b>Payment Method</b></em>',
  * and utility methods for working with them.
@@ -20,6 +21,7 @@ import org.eclipse.emf.common.util.Enumerator;
 public enum PaymentMethod implements Enumerator {
 	/**
 	 * The '<em><b>Bankcard</b></em>' literal object.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #BANKCARD_VALUE
@@ -30,6 +32,7 @@ public enum PaymentMethod implements Enumerator {
 
 	/**
 	 * The '<em><b>Cash</b></em>' literal object.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #CASH_VALUE
@@ -40,6 +43,7 @@ public enum PaymentMethod implements Enumerator {
 
 	/**
 	 * The '<em><b>Voucher</b></em>' literal object.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #VOUCHER_VALUE

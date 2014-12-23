@@ -12,6 +12,7 @@ import bookingmodel.GuestTypes;
 import bookingmodel.ModelPackage;
 
 /**
+ * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Guest</b></em>'.
  * <!-- end-user-doc -->
@@ -38,6 +39,7 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 
 	/**
 	 * The cached value of the '{@link #getRoomNr() <em>Room Nr</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRoomNr()
@@ -48,6 +50,7 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 
 	/**
 	 * The default value of the '{@link #getGuestTypes() <em>Guest Types</em>}' attribute.
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getGuestTypes()
@@ -67,6 +70,7 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	protected GuestTypes guestTypes = GUEST_TYPES_EDEFAULT;
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -86,6 +90,7 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -95,6 +100,7 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -107,6 +113,7 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -116,6 +123,7 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	}
 
 	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
