@@ -472,7 +472,7 @@ value: booking</body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_ESEtsHuYEeScv6HJEKdjpA" name="setPersonalDetails" visibility="private">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ESEtsHuYEeScv6HJEKdjpA" name="setPersonalDetails" visibility="public">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_k6ETkHuYEeScv6HJEKdjpA" name="firstName">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
@@ -489,12 +489,12 @@ value: booking</body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_yGYj4HuYEeScv6HJEKdjpA" name="choosePaymentMethod" visibility="private">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_yGYj4HuYEeScv6HJEKdjpA" name="choosePaymentMethod" visibility="public">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_2vfdAHuYEeScv6HJEKdjpA" name="paymentMethod">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_9GABMHuaEeScv6HJEKdjpA" name="setPaymentDetails" visibility="private">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_9GABMHuaEeScv6HJEKdjpA" name="setPaymentDetails" visibility="public">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_9GAoQHuaEeScv6HJEKdjpA" name="ccNumber">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
@@ -576,34 +576,6 @@ value: booking</body>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_UfOCEH1WEeSOksMHVNfPUg" name="getServiceNotes">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_UfOCEX1WEeSOksMHVNfPUg" name="bookingRef">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_LSedsH2uEeSp56Ha0EyLeQ" name="setPaymentDetails">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LSedsX2uEeSp56Ha0EyLeQ" name="ccNr">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LSedsn2uEeSp56Ha0EyLeQ" name="ccV">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LSeds32uEeSp56Ha0EyLeQ" name="expiryMonth">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LSedtH2uEeSp56Ha0EyLeQ" name="expiryYear">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LSedtX2uEeSp56Ha0EyLeQ" name="firstName">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LSedtn2uEeSp56Ha0EyLeQ" name="lastName">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_CYlPgIXrEeSSLKPVEK-PiA" name="result">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_LSiIEH2uEeSp56Ha0EyLeQ" name="choosePaymentMethod">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LSiIEX2uEeSp56Ha0EyLeQ" name="method">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEnumerator"/>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
