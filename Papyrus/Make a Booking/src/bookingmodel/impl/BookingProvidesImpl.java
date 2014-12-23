@@ -144,12 +144,52 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void book(int nrOfNights, int nrOfGuests, String date, int nrOfRooms, String roomTypes, String extras) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
+		
+		if(nrOfNights > 0 && nrOfGuests > 0 && nrOfRooms > 0){
+			setNrOfNights(nrOfNights);
+			setNrOfGuests(nrOfGuests);
+			setNrOfRooms(nrOfRooms);
+		}
+		
 		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	private void setNrOfRooms(int nrOfRooms) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	private void setNrOfGuests(int nrOfGuests) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	private void setNrOfNights(int nrOfNights) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	/**
