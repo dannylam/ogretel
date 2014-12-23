@@ -2,8 +2,6 @@
  */
 package bookingmodel;
 
-import org.eclipse.emf.common.util.Enumerator;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -213,23 +211,5 @@ public interface BookingProvides extends EObject {
 	 * @generated
 	 */
 	void getServiceNotes(String bookingRef);
-
-	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model ccNrDataType="org.eclipse.uml2.types.String" ccNrRequired="true" ccNrOrdered="false" ccVDataType="org.eclipse.uml2.types.String" ccVRequired="true" ccVOrdered="false" expiryMonthDataType="org.eclipse.uml2.types.Integer" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearDataType="org.eclipse.uml2.types.Integer" expiryYearRequired="true" expiryYearOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false" resultDataType="org.eclipse.uml2.types.Integer" resultRequired="true" resultOrdered="false"
-	 * @generated
-	 */
-	void setPaymentDetails(String ccNr, String ccV, int expiryMonth, int expiryYear, String firstName, String lastName, int result);
-
-	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model methodRequired="true" methodOrdered="false"
-	 * @generated
-	 */
-	void choosePaymentMethod(Enumerator method);
 
 } // BookingProvides

@@ -1089,31 +1089,13 @@ public interface ModelPackage extends EPackage {
 	int BOOKING_PROVIDES___GET_SERVICE_NOTES__STRING = 17;
 
 	/**
-	 * The operation id for the '<em>Set Payment Details</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_PROVIDES___SET_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_INT = 18;
-
-	/**
-	 * The operation id for the '<em>Choose Payment Method</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_PROVIDES___CHOOSE_PAYMENT_METHOD__ENUMERATOR = 19;
-
-	/**
 	 * The number of operations of the '<em>Booking Provides</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES_OPERATION_COUNT = 20;
+	int BOOKING_PROVIDES_OPERATION_COUNT = 18;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.GuestTypes <em>Guest Types</em>}' enum.
@@ -2055,26 +2037,6 @@ public interface ModelPackage extends EPackage {
 	EOperation getBookingProvides__GetServiceNotes__String();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.BookingProvides#setPaymentDetails(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, int) <em>Set Payment Details</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Payment Details</em>' operation.
-	 * @see bookingmodel.BookingProvides#setPaymentDetails(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, int)
-	 * @generated
-	 */
-	EOperation getBookingProvides__SetPaymentDetails__String_String_int_int_String_String_int();
-
-	/**
-	 * Returns the meta object for the '{@link bookingmodel.BookingProvides#choosePaymentMethod(org.eclipse.emf.common.util.Enumerator) <em>Choose Payment Method</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Choose Payment Method</em>' operation.
-	 * @see bookingmodel.BookingProvides#choosePaymentMethod(org.eclipse.emf.common.util.Enumerator)
-	 * @generated
-	 */
-	EOperation getBookingProvides__ChoosePaymentMethod__Enumerator();
-
-	/**
 	 * Returns the meta object for enum '{@link bookingmodel.GuestTypes <em>Guest Types</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2846,22 +2808,6 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING_PROVIDES___GET_SERVICE_NOTES__STRING = eINSTANCE.getBookingProvides__GetServiceNotes__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Set Payment Details</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING_PROVIDES___SET_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_INT = eINSTANCE.getBookingProvides__SetPaymentDetails__String_String_int_int_String_String_int();
-
-		/**
-		 * The meta object literal for the '<em><b>Choose Payment Method</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING_PROVIDES___CHOOSE_PAYMENT_METHOD__ENUMERATOR = eINSTANCE.getBookingProvides__ChoosePaymentMethod__Enumerator();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.GuestTypes <em>Guest Types</em>}' enum.

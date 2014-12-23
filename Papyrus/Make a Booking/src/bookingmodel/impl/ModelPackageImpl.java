@@ -1006,24 +1006,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingProvides__SetPaymentDetails__String_String_int_int_String_String_int() {
-		return bookingProvidesEClass.getEOperations().get(18);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getBookingProvides__ChoosePaymentMethod__Enumerator() {
-		return bookingProvidesEClass.getEOperations().get(19);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getGuestTypes() {
 		return guestTypesEEnum;
 	}
@@ -1165,8 +1147,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEOperation(bookingProvidesEClass, BOOKING_PROVIDES___EDIT_SERVICE_NOTE__STRING_STRING);
 		createEOperation(bookingProvidesEClass, BOOKING_PROVIDES___REMOVE_SERVICE_NOTE__STRING);
 		createEOperation(bookingProvidesEClass, BOOKING_PROVIDES___GET_SERVICE_NOTES__STRING);
-		createEOperation(bookingProvidesEClass, BOOKING_PROVIDES___SET_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_INT);
-		createEOperation(bookingProvidesEClass, BOOKING_PROVIDES___CHOOSE_PAYMENT_METHOD__ENUMERATOR);
 
 		// Create enums
 		guestTypesEEnum = createEEnum(GUEST_TYPES);
@@ -1459,18 +1439,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 
 		op = initEOperation(getBookingProvides__GetServiceNotes__String(), null, "getServiceNotes", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getBookingProvides__SetPaymentDetails__String_String_int_int_String_String_int(), null, "setPaymentDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "ccNr", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "ccV", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "result", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getBookingProvides__ChoosePaymentMethod__Enumerator(), null, "choosePaymentMethod", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEEnumerator(), "method", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(guestTypesEEnum, GuestTypes.class, "GuestTypes");
