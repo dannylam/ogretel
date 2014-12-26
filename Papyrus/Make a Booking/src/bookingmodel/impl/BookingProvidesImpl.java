@@ -277,15 +277,36 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * Checks-in the guests of the booking by setting the booking as active
+	 * and the guest provided the email as responsible if the booking is not already
+	 * checked in and is valid.
+	 * Returns an integer indicating the result of the invoke, where 0 stands for success.
+	 * 
+	 * @generated NOT
 	 */
 	public int checkIn(String bookingRef, String guestEmail) {
+		int result = 0;
+		if(this.bookingHandler.exists(bookingRef) && !this.bookingHandler.getBooking(bookingRef).checkedInAllGuest()){
+			//Setting respsonsible guest
+			if(!this.bookingHandler.getBooking(bookingRef).getRoomGuestMap().isEmpty()){
+				int i = 0;
+				for (String key: this.bookingHandler.getBooking(bookingRef).getRoomGuestMap().values()) {
+					if(key.isEmpty()){
+						this.bookingHandler.getBooking(bookingRef).getRoomGuestMap().get(i).setValue(guestEmail);
+					}
+				i++;
+				}
+			}
+			
+			//Set booking as active
+			//Invoke method in IMaintenanceProvidesForBooking
+		}
+		return result;
+		
 		// TODO: implement this method
+		//TODO: Lägga till try-catch och fånga exceptions på ett lämpligt sätt. Därefter ändra result beroende.
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
 	}
 
 	/**
