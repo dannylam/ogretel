@@ -7,12 +7,12 @@ import org.eclipse.emf.ecore.EObject;
 /**
  * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>IBooking Provides For Host</b></em>'.
+ * A representation of the maintenancemodel object '<em><b>IBooking Provides For Host</b></em>'.
  * <!-- end-user-doc -->
  *
  *
  * @see bookingmodel.ModelPackage#getIBookingProvidesForHost()
- * @model interface="true" abstract="true"
+ * @maintenancemodel interface="true" abstract="true"
  * @generated
  */
 public interface IBookingProvidesForHost extends EObject {
@@ -20,7 +20,7 @@ public interface IBookingProvidesForHost extends EObject {
 	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model guestEmailDataType="org.eclipse.uml2.types.String" guestEmailRequired="true" guestEmailOrdered="false"
+	 * @maintenancemodel guestEmailDataType="org.eclipse.uml2.types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated
 	 */
 	void enableSelfManagement(String guestEmail);
@@ -29,7 +29,7 @@ public interface IBookingProvidesForHost extends EObject {
 	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model serviceNoteDataType="org.eclipse.uml2.types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
+	 * @maintenancemodel serviceNoteDataType="org.eclipse.uml2.types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
 	 * @generated
 	 */
 	void addServiceNote(String serviceNote);
@@ -38,7 +38,7 @@ public interface IBookingProvidesForHost extends EObject {
 	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model oldServiceNoteDataType="org.eclipse.uml2.types.String" oldServiceNoteRequired="true" oldServiceNoteOrdered="false" newServiceNoteDataType="org.eclipse.uml2.types.String" newServiceNoteRequired="true" newServiceNoteOrdered="false"
+	 * @maintenancemodel oldServiceNoteDataType="org.eclipse.uml2.types.String" oldServiceNoteRequired="true" oldServiceNoteOrdered="false" newServiceNoteDataType="org.eclipse.uml2.types.String" newServiceNoteRequired="true" newServiceNoteOrdered="false"
 	 * @generated
 	 */
 	void editServiceNote(String oldServiceNote, String newServiceNote);
@@ -47,7 +47,7 @@ public interface IBookingProvidesForHost extends EObject {
 	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model serviceNoteDataType="org.eclipse.uml2.types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
+	 * @maintenancemodel serviceNoteDataType="org.eclipse.uml2.types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
 	 * @generated
 	 */
 	void removeServiceNote(String serviceNote);
@@ -56,7 +56,7 @@ public interface IBookingProvidesForHost extends EObject {
 	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @maintenancemodel bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated
 	 */
 	void getServiceNotes(String bookingRef);

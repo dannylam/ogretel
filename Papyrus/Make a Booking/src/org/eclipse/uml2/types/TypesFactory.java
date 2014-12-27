@@ -6,8 +6,8 @@ import org.eclipse.emf.ecore.EFactory;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Factory</b> for the model.
- * It provides a create method for each non-abstract class of the model.
+ * The <b>Factory</b> for the maintenancemodel.
+ * It provides a create method for each non-abstract class of the maintenancemodel.
  * <!-- end-user-doc -->
  * @see org.eclipse.uml2.types.TypesPackage
  * @generated

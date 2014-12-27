@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EObject;
 /**
  * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Customer</b></em>'.
+ * A representation of the maintenancemodel object '<em><b>Customer</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see bookingmodel.ModelPackage#getCustomer()
- * @model
+ * @maintenancemodel
  * @generated
  */
 public interface Customer extends EObject {
@@ -36,7 +36,7 @@ public interface Customer extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Payment Details</em>' reference list.
 	 * @see bookingmodel.ModelPackage#getCustomer_PaymentDetails()
-	 * @model required="true" ordered="false"
+	 * @maintenancemodel required="true" ordered="false"
 	 * @generated
 	 */
 	EList<PaymentDetails> getPaymentDetails();

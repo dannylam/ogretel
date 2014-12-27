@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Booking</b></em>'.
+ * A representation of the maintenancemodel object '<em><b>Booking</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
@@ -31,7 +31,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see bookingmodel.ModelPackage#getBooking()
- * @model
+ * @maintenancemodel
  * @generated
  */
 public interface Booking extends EObject {
@@ -47,7 +47,7 @@ public interface Booking extends EObject {
 	 * @return the value of the '<em>Booking Ref</em>' attribute.
 	 * @see #setBookingRef(String)
 	 * @see bookingmodel.ModelPackage#getBooking_BookingRef()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @maintenancemodel dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getBookingRef();
@@ -75,7 +75,7 @@ public interface Booking extends EObject {
 	 * @return the value of the '<em>Date</em>' attribute.
 	 * @see #setDate(String)
 	 * @see bookingmodel.ModelPackage#getBooking_Date()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @maintenancemodel dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getDate();
@@ -103,7 +103,7 @@ public interface Booking extends EObject {
 	 * @return the value of the '<em>Nr Of Nights</em>' attribute.
 	 * @see #setNrOfNights(int)
 	 * @see bookingmodel.ModelPackage#getBooking_NrOfNights()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
 	int getNrOfNights();
@@ -131,7 +131,7 @@ public interface Booking extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Extra List</em>' attribute list.
 	 * @see bookingmodel.ModelPackage#getBooking_ExtraList()
-	 * @model ordered="false"
+	 * @maintenancemodel ordered="false"
 	 * @generated
 	 */
 	EList<String> getExtraList();
@@ -148,7 +148,7 @@ public interface Booking extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Service Notes</em>' attribute list.
 	 * @see bookingmodel.ModelPackage#getBooking_ServiceNotes()
-	 * @model ordered="false"
+	 * @maintenancemodel ordered="false"
 	 * @generated
 	 */
 	EList<String> getServiceNotes();
@@ -165,7 +165,7 @@ public interface Booking extends EObject {
 	 * @return the value of the '<em>Nr Of Guests</em>' attribute.
 	 * @see #setNrOfGuests(int)
 	 * @see bookingmodel.ModelPackage#getBooking_NrOfGuests()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
 	int getNrOfGuests();
@@ -193,7 +193,7 @@ public interface Booking extends EObject {
 	 * @return the value of the '<em>Customer</em>' reference.
 	 * @see #setCustomer(Customer)
 	 * @see bookingmodel.ModelPackage#getBooking_Customer()
-	 * @model required="true" ordered="false"
+	 * @maintenancemodel required="true" ordered="false"
 	 * @generated
 	 */
 	Customer getCustomer();
@@ -221,7 +221,7 @@ public interface Booking extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Guest List</em>' reference list.
 	 * @see bookingmodel.ModelPackage#getBooking_GuestList()
-	 * @model required="true" ordered="false"
+	 * @maintenancemodel required="true" ordered="false"
 	 * @generated
 	 */
 	EList<Guest> getGuestList();
@@ -238,7 +238,7 @@ public interface Booking extends EObject {
 	 * @return the value of the '<em>Is Payed</em>' attribute.
 	 * @see #setIsPayed(boolean)
 	 * @see bookingmodel.ModelPackage#getBooking_IsPayed()
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @maintenancemodel dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
 	 * @generated
 	 */
 	boolean isPayed();
@@ -267,7 +267,7 @@ public interface Booking extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Room Guest Map</em>' map.
 	 * @see bookingmodel.ModelPackage#getBooking_RoomGuestMap()
-	 * @model mapType="model.RoomtypeToGuestIDEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString>" ordered="false"
+	 * @maintenancemodel mapType="maintenancemodel.RoomtypeToGuestIDEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString>" ordered="false"
 	 * @generated
 	 */
 	EMap<String, String> getRoomGuestMap();
@@ -285,7 +285,7 @@ public interface Booking extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Room Type Map</em>' map.
 	 * @see bookingmodel.ModelPackage#getBooking_RoomTypeMap()
-	 * @model mapType="model.NrToRoomEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EIntegerObject>" ordered="false"
+	 * @maintenancemodel mapType="maintenancemodel.NrToRoomEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EIntegerObject>" ordered="false"
 	 * @generated
 	 */
 	EMap<String, Integer> getRoomTypeMap();
@@ -304,7 +304,7 @@ public interface Booking extends EObject {
 	 * @see bookingmodel.PaymentMethod
 	 * @see #setPaymentMethod(PaymentMethod)
 	 * @see bookingmodel.ModelPackage#getBooking_PaymentMethod()
-	 * @model required="true" ordered="false"
+	 * @maintenancemodel required="true" ordered="false"
 	 * @generated
 	 */
 	PaymentMethod getPaymentMethod();
@@ -325,7 +325,7 @@ public interface Booking extends EObject {
 	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @maintenancemodel dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
 	 * @generated
 	 */
 	boolean checkedInAllGuest();
@@ -334,7 +334,7 @@ public interface Booking extends EObject {
 	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @maintenancemodel dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
 	 * @generated
 	 */
 	boolean checkedInAGuest();

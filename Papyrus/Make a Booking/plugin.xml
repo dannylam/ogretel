@@ -10,7 +10,7 @@
       <!-- @generated BookingClassDiagram -->
       <package
             uri="http:///model.ecore"
-            class="model.ModelPackage"
+            class="maintenancemodel.ModelPackage"
             genModel="BookingClassDiagram.genmodel"/>
    </extension>
 

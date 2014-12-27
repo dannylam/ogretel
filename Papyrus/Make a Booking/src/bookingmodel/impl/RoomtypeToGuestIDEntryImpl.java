@@ -15,7 +15,7 @@ import bookingmodel.ModelPackage;
 /**
  * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Roomtype To Guest ID Entry</b></em>'.
+ * An implementation of the maintenancemodel object '<em><b>Roomtype To Guest ID Entry</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
