@@ -7,14 +7,6 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated MaintenanceClassDiagram -->
-      <package
-            uri="http:///model.ecore"
-            class="maintenancemodel.ModelPackage"
-            genModel="MaintenanceClassDiagram.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated BookingClassDiagram -->
       <package
             uri="http:///model.ecore"
