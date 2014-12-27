@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * pay - make a payment of a specific booking
  * editBooking - edit a specific booking
  * TODO: remove searchRoom - method that searchs after a specific room 
- * setPersonalDetails - set details to a guest
+ * setPersonalDetails - set details to a guest/customer
  * choosePaymentMethod - choose paymentmethod such as bankcard, cash or voucher
  * setPaymentDetails - set details to a payment
  * checkOut - check out a guest

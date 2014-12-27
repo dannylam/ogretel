@@ -9,10 +9,10 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the interface '<em><b>Booking Handler</b></em>'.
  * The interface extends an EObject and has 5 methods; 
  * exists - checks if the booking reference exists
- * add - adding a booking
- * remove - remove a booking 
- * get - get a specific booking reference
- * edit - edit nrOfNights, nrOfGuests, date, nrOfRooms, 
+ * addBooking - adding a booking
+ * removeBooking - remove a booking 
+ * getBooking - get a specific booking reference
+ * editBooking - edit nrOfNights, nrOfGuests, date, nrOfRooms, 
  * roomTypes and extras in booking specific booking reference
  * <p>
  * The following features are supported:
