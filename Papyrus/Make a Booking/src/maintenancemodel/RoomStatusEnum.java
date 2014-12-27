@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * @see maintenancemodel.ModelPackage#getRoomStatusEnum()
- * @model
+ * @maintenancemodel
  * @generated
  */
 public enum RoomStatusEnum implements Enumerator {
@@ -57,7 +57,7 @@ public enum RoomStatusEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #VACANT
-	 * @model name="Vacant"
+	 * @maintenancemodel name="Vacant"
 	 * @generated
 	 * @ordered
 	 */
@@ -72,7 +72,7 @@ public enum RoomStatusEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #BUSY
-	 * @model name="Busy"
+	 * @maintenancemodel name="Busy"
 	 * @generated
 	 * @ordered
 	 */
@@ -87,7 +87,7 @@ public enum RoomStatusEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MAINTENANCE
-	 * @model name="Maintenance"
+	 * @maintenancemodel name="Maintenance"
 	 * @generated
 	 * @ordered
 	 */

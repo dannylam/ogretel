@@ -2,16 +2,12 @@
  */
 package maintenancemodel.impl;
 
-import java.lang.reflect.InvocationTargetException;
-
-import maintenancemodel.Extra;
 import maintenancemodel.ExtraHandler;
 import maintenancemodel.ExtrasMaintenance;
 import maintenancemodel.ModelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -19,7 +15,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Extras Maintenance</b></em>'.
+ * An implementation of the maintenancemodel object '<em><b>Extras Maintenance</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -108,50 +104,6 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeExtra(Extra extra) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void getExtra(int ID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void addExtra(int price, String ID, String name, String description) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void editExtra(int price, String ID, String name, String description) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -217,30 +169,6 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 				return extras != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ModelPackage.EXTRAS_MAINTENANCE___REMOVE_EXTRA__EXTRA:
-				removeExtra((Extra)arguments.get(0));
-				return null;
-			case ModelPackage.EXTRAS_MAINTENANCE___GET_EXTRA__INT:
-				getExtra((Integer)arguments.get(0));
-				return null;
-			case ModelPackage.EXTRAS_MAINTENANCE___ADD_EXTRA__INT_STRING_STRING_STRING:
-				addExtra((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
-				return null;
-			case ModelPackage.EXTRAS_MAINTENANCE___EDIT_EXTRA__INT_STRING_STRING_STRING:
-				editExtra((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 } //ExtrasMaintenanceImpl

@@ -2,18 +2,13 @@
  */
 package maintenancemodel.impl;
 
-import java.lang.reflect.InvocationTargetException;
-
 import maintenancemodel.ModelPackage;
-import maintenancemodel.Room;
 import maintenancemodel.RoomHandler;
 import maintenancemodel.RoomMaintenance;
-import maintenancemodel.RoomTypes;
+import maintenancemodel.RoomTypesHandler;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -21,7 +16,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Room Maintenance</b></em>'.
+ * An implementation of the maintenancemodel object '<em><b>Room Maintenance</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -42,7 +37,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected RoomTypes roomTypes;
+	protected RoomTypesHandler roomTypes;
 
 	/**
 	 * The cached value of the '{@link #getRooms() <em>Rooms</em>}' containment reference.
@@ -78,10 +73,10 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomTypes getRoomTypes() {
+	public RoomTypesHandler getRoomTypes() {
 		if (roomTypes != null && roomTypes.eIsProxy()) {
 			InternalEObject oldRoomTypes = (InternalEObject)roomTypes;
-			roomTypes = (RoomTypes)eResolveProxy(oldRoomTypes);
+			roomTypes = (RoomTypesHandler)eResolveProxy(oldRoomTypes);
 			if (roomTypes != oldRoomTypes) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.ROOM_MAINTENANCE__ROOM_TYPES, oldRoomTypes, roomTypes));
@@ -95,7 +90,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomTypes basicGetRoomTypes() {
+	public RoomTypesHandler basicGetRoomTypes() {
 		return roomTypes;
 	}
 
@@ -104,8 +99,8 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRoomTypes(RoomTypes newRoomTypes) {
-		RoomTypes oldRoomTypes = roomTypes;
+	public void setRoomTypes(RoomTypesHandler newRoomTypes) {
+		RoomTypesHandler oldRoomTypes = roomTypes;
 		roomTypes = newRoomTypes;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ROOM_MAINTENANCE__ROOM_TYPES, oldRoomTypes, roomTypes));
@@ -159,116 +154,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomTypes getRoomType(int ID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void removeRoomType(String roomType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void removeRoom(Room room) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Room getRoom(int ID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void addRoomType(String roomType, int price, int maxNrOfGuests, String description) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void addRoom(int numberID, String roomType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void editRoomStatus(int roomID, Enumerator status) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Enumerator getRoomStatus(int roomID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void editRoomType(String roomType, int price, int maxNrOfGuests, String description) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void editRoom(int numberID, String roomType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -304,7 +189,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ModelPackage.ROOM_MAINTENANCE__ROOM_TYPES:
-				setRoomTypes((RoomTypes)newValue);
+				setRoomTypes((RoomTypesHandler)newValue);
 				return;
 			case ModelPackage.ROOM_MAINTENANCE__ROOMS:
 				setRooms((RoomHandler)newValue);
@@ -322,7 +207,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ModelPackage.ROOM_MAINTENANCE__ROOM_TYPES:
-				setRoomTypes((RoomTypes)null);
+				setRoomTypes((RoomTypesHandler)null);
 				return;
 			case ModelPackage.ROOM_MAINTENANCE__ROOMS:
 				setRooms((RoomHandler)null);
@@ -345,45 +230,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 				return rooms != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ModelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE__INT:
-				return getRoomType((Integer)arguments.get(0));
-			case ModelPackage.ROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING:
-				removeRoomType((String)arguments.get(0));
-				return null;
-			case ModelPackage.ROOM_MAINTENANCE___REMOVE_ROOM__ROOM:
-				removeRoom((Room)arguments.get(0));
-				return null;
-			case ModelPackage.ROOM_MAINTENANCE___GET_ROOM__INT:
-				return getRoom((Integer)arguments.get(0));
-			case ModelPackage.ROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_INT_INT_STRING:
-				addRoomType((String)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
-				return null;
-			case ModelPackage.ROOM_MAINTENANCE___ADD_ROOM__INT_STRING:
-				addRoom((Integer)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case ModelPackage.ROOM_MAINTENANCE___EDIT_ROOM_STATUS__INT_ENUMERATOR:
-				editRoomStatus((Integer)arguments.get(0), (Enumerator)arguments.get(1));
-				return null;
-			case ModelPackage.ROOM_MAINTENANCE___GET_ROOM_STATUS__INT:
-				return getRoomStatus((Integer)arguments.get(0));
-			case ModelPackage.ROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_INT_INT_STRING:
-				editRoomType((String)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
-				return null;
-			case ModelPackage.ROOM_MAINTENANCE___EDIT_ROOM__INT_STRING:
-				editRoom((Integer)arguments.get(0), (String)arguments.get(1));
-				return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 } //RoomMaintenanceImpl

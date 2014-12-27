@@ -2,24 +2,27 @@
  */
 package maintenancemodel.util;
 
+import java.util.Map;
+
 import maintenancemodel.*;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Adapter Factory</b> for the model.
- * It provides an adapter <code>createXXX</code> method for each class of the model.
+ * The <b>Adapter Factory</b> for the maintenancemodel.
+ * It provides an adapter <code>createXXX</code> method for each class of the maintenancemodel.
  * <!-- end-user-doc -->
  * @see maintenancemodel.ModelPackage
  * @generated
  */
 public class ModelAdapterFactory extends AdapterFactoryImpl {
 	/**
-	 * The cached model package.
+	 * The cached maintenancemodel package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -41,7 +44,7 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * Returns whether this factory is applicable for the type of the object.
 	 * <!-- begin-user-doc -->
-	 * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
+	 * This implementation returns <code>true</code> if the object is either the maintenancemodel's package or is an instance object of the maintenancemodel.
 	 * <!-- end-user-doc -->
 	 * @return whether this factory is applicable for the type of the object.
 	 * @generated
@@ -94,7 +97,7 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 				return createExtraHandlerAdapter();
 			}
 			@Override
-			public Adapter caseIntegerToExtraMap(IntegerToExtraMap object) {
+			public Adapter caseIntegerToExtraMap(Map.Entry<Integer, Extra> object) {
 				return createIntegerToExtraMapAdapter();
 			}
 			@Override
@@ -102,12 +105,24 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 				return createRoomHandlerAdapter();
 			}
 			@Override
-			public Adapter caseIntegerToRoomMap(IntegerToRoomMap object) {
+			public Adapter caseIntegerToRoomMap(Map.Entry<Integer, Room> object) {
 				return createIntegerToRoomMapAdapter();
 			}
 			@Override
 			public Adapter caseCalendar(Calendar object) {
 				return createCalendarAdapter();
+			}
+			@Override
+			public Adapter caseRoomTypesHandler(RoomTypesHandler object) {
+				return createRoomTypesHandlerAdapter();
+			}
+			@Override
+			public Adapter caseStringToRoomType(Map.Entry<String, RoomTypeEnum> object) {
+				return createStringToRoomTypeAdapter();
+			}
+			@Override
+			public Adapter caseStringToListsMap(Map.Entry<String, EList<Integer>> object) {
+				return createStringToListsMapAdapter();
 			}
 			@Override
 			public Adapter caseIMaintenanceProvidesForBooking(IMaintenanceProvidesForBooking object) {
@@ -130,20 +145,8 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 				return createRoomMaintenanceAdapter();
 			}
 			@Override
-			public Adapter caseRoomTypes(RoomTypes object) {
-				return createRoomTypesAdapter();
-			}
-			@Override
-			public Adapter caseStringToRoomType(StringToRoomType object) {
-				return createStringToRoomTypeAdapter();
-			}
-			@Override
 			public Adapter caseMaintenanceProvidesForBooking(MaintenanceProvidesForBooking object) {
 				return createMaintenanceProvidesForBookingAdapter();
-			}
-			@Override
-			public Adapter caseStringToListsMap(StringToListsMap object) {
-				return createStringToListsMapAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -264,13 +267,13 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link maintenancemodel.IntegerToExtraMap <em>Integer To Extra Map</em>}'.
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Integer To Extra Map</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see maintenancemodel.IntegerToExtraMap
+	 * @see java.util.Map.Entry
 	 * @generated
 	 */
 	public Adapter createIntegerToExtraMapAdapter() {
@@ -292,13 +295,13 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link maintenancemodel.IntegerToRoomMap <em>Integer To Room Map</em>}'.
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Integer To Room Map</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see maintenancemodel.IntegerToRoomMap
+	 * @see java.util.Map.Entry
 	 * @generated
 	 */
 	public Adapter createIntegerToRoomMapAdapter() {
@@ -316,6 +319,48 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createCalendarAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link maintenancemodel.RoomTypesHandler <em>Room Types Handler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see maintenancemodel.RoomTypesHandler
+	 * @generated
+	 */
+	public Adapter createRoomTypesHandlerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>String To Room Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see java.util.Map.Entry
+	 * @generated
+	 */
+	public Adapter createStringToRoomTypeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>String To Lists Map</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see java.util.Map.Entry
+	 * @generated
+	 */
+	public Adapter createStringToListsMapAdapter() {
 		return null;
 	}
 
@@ -390,34 +435,6 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link maintenancemodel.RoomTypes <em>Room Types</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see maintenancemodel.RoomTypes
-	 * @generated
-	 */
-	public Adapter createRoomTypesAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link maintenancemodel.StringToRoomType <em>String To Room Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see maintenancemodel.StringToRoomType
-	 * @generated
-	 */
-	public Adapter createStringToRoomTypeAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link maintenancemodel.MaintenanceProvidesForBooking <em>Maintenance Provides For Booking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -428,20 +445,6 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMaintenanceProvidesForBookingAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link maintenancemodel.StringToListsMap <em>String To Lists Map</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see maintenancemodel.StringToListsMap
-	 * @generated
-	 */
-	public Adapter createStringToListsMapAdapter() {
 		return null;
 	}
 

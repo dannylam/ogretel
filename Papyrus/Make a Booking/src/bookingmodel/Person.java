@@ -6,7 +6,7 @@ import org.eclipse.emf.ecore.EObject;
 /**
  * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Person</b></em>'.
+ * A representation of the maintenancemodel object '<em><b>Person</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see bookingmodel.ModelPackage#getPerson()
- * @model
+ * @maintenancemodel
  * @generated
  */
 public interface Person extends EObject {
@@ -37,7 +37,7 @@ public interface Person extends EObject {
 	 * @return the value of the '<em>First Name</em>' attribute.
 	 * @see #setFirstName(String)
 	 * @see bookingmodel.ModelPackage#getPerson_FirstName()
-	 * @model unique="false" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @maintenancemodel unique="false" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getFirstName();
@@ -65,7 +65,7 @@ public interface Person extends EObject {
 	 * @return the value of the '<em>Last Name</em>' attribute.
 	 * @see #setLastName(String)
 	 * @see bookingmodel.ModelPackage#getPerson_LastName()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @maintenancemodel dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getLastName();
@@ -93,7 +93,7 @@ public interface Person extends EObject {
 	 * @return the value of the '<em>Email</em>' attribute.
 	 * @see #setEmail(String)
 	 * @see bookingmodel.ModelPackage#getPerson_Email()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @maintenancemodel dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getEmail();
@@ -121,7 +121,7 @@ public interface Person extends EObject {
 	 * @return the value of the '<em>Telephone Nr</em>' attribute.
 	 * @see #setTelephoneNr(String)
 	 * @see bookingmodel.ModelPackage#getPerson_TelephoneNr()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @maintenancemodel dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getTelephoneNr();
@@ -149,7 +149,7 @@ public interface Person extends EObject {
 	 * @return the value of the '<em>Address</em>' attribute.
 	 * @see #setAddress(String)
 	 * @see bookingmodel.ModelPackage#getPerson_Address()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @maintenancemodel dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getAddress();

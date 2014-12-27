@@ -2,8 +2,11 @@
  */
 package maintenancemodel.impl;
 
+import java.util.Map;
+
 import maintenancemodel.*;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
@@ -13,7 +16,7 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model <b>Factory</b>.
+ * An implementation of the maintenancemodel <b>Factory</b>.
  * <!-- end-user-doc -->
  * @generated
  */
@@ -61,16 +64,16 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			case ModelPackage.PRODUCT: return createProduct();
 			case ModelPackage.ROOM: return createRoom();
 			case ModelPackage.EXTRA_HANDLER: return createExtraHandler();
-			case ModelPackage.INTEGER_TO_EXTRA_MAP: return createIntegerToExtraMap();
+			case ModelPackage.INTEGER_TO_EXTRA_MAP: return (EObject)createIntegerToExtraMap();
 			case ModelPackage.ROOM_HANDLER: return createRoomHandler();
-			case ModelPackage.INTEGER_TO_ROOM_MAP: return createIntegerToRoomMap();
+			case ModelPackage.INTEGER_TO_ROOM_MAP: return (EObject)createIntegerToRoomMap();
 			case ModelPackage.CALENDAR: return createCalendar();
+			case ModelPackage.ROOM_TYPES_HANDLER: return createRoomTypesHandler();
+			case ModelPackage.STRING_TO_ROOM_TYPE: return (EObject)createStringToRoomType();
+			case ModelPackage.STRING_TO_LISTS_MAP: return (EObject)createStringToListsMap();
 			case ModelPackage.EXTRAS_MAINTENANCE: return createExtrasMaintenance();
 			case ModelPackage.ROOM_MAINTENANCE: return createRoomMaintenance();
-			case ModelPackage.ROOM_TYPES: return createRoomTypes();
-			case ModelPackage.STRING_TO_ROOM_TYPE: return createStringToRoomType();
 			case ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING: return createMaintenanceProvidesForBooking();
-			case ModelPackage.STRING_TO_LISTS_MAP: return createStringToListsMap();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -183,7 +186,7 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntegerToExtraMap createIntegerToExtraMap() {
+	public Map.Entry<Integer, Extra> createIntegerToExtraMap() {
 		IntegerToExtraMapImpl integerToExtraMap = new IntegerToExtraMapImpl();
 		return integerToExtraMap;
 	}
@@ -203,7 +206,7 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntegerToRoomMap createIntegerToRoomMap() {
+	public Map.Entry<Integer, Room> createIntegerToRoomMap() {
 		IntegerToRoomMapImpl integerToRoomMap = new IntegerToRoomMapImpl();
 		return integerToRoomMap;
 	}
@@ -216,6 +219,36 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public Calendar createCalendar() {
 		CalendarImpl calendar = new CalendarImpl();
 		return calendar;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomTypesHandler createRoomTypesHandler() {
+		RoomTypesHandlerImpl roomTypesHandler = new RoomTypesHandlerImpl();
+		return roomTypesHandler;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Map.Entry<String, RoomTypeEnum> createStringToRoomType() {
+		StringToRoomTypeImpl stringToRoomType = new StringToRoomTypeImpl();
+		return stringToRoomType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Map.Entry<String, EList<Integer>> createStringToListsMap() {
+		StringToListsMapImpl stringToListsMap = new StringToListsMapImpl();
+		return stringToListsMap;
 	}
 
 	/**
@@ -243,39 +276,9 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomTypes createRoomTypes() {
-		RoomTypesImpl roomTypes = new RoomTypesImpl();
-		return roomTypes;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StringToRoomType createStringToRoomType() {
-		StringToRoomTypeImpl stringToRoomType = new StringToRoomTypeImpl();
-		return stringToRoomType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public MaintenanceProvidesForBooking createMaintenanceProvidesForBooking() {
 		MaintenanceProvidesForBookingImpl maintenanceProvidesForBooking = new MaintenanceProvidesForBookingImpl();
 		return maintenanceProvidesForBooking;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StringToListsMap createStringToListsMap() {
-		StringToListsMapImpl stringToListsMap = new StringToListsMapImpl();
-		return stringToListsMap;
 	}
 
 	/**

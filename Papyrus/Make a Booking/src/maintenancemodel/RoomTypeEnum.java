@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * @see maintenancemodel.ModelPackage#getRoomTypeEnum()
- * @model
+ * @maintenancemodel
  * @generated
  */
 public enum RoomTypeEnum implements Enumerator {
@@ -57,7 +57,7 @@ public enum RoomTypeEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #SINGLEBED
-	 * @model name="Singlebed"
+	 * @maintenancemodel name="Singlebed"
 	 * @generated
 	 * @ordered
 	 */
@@ -72,7 +72,7 @@ public enum RoomTypeEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #DOUBLEBED
-	 * @model name="Doublebed"
+	 * @maintenancemodel name="Doublebed"
 	 * @generated
 	 * @ordered
 	 */
@@ -87,7 +87,7 @@ public enum RoomTypeEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #LUXURYSUITE
-	 * @model name="Luxurysuite"
+	 * @maintenancemodel name="Luxurysuite"
 	 *        annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='Luxury suite'"
 	 * @generated
 	 * @ordered

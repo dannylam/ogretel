@@ -6,8 +6,8 @@ import org.eclipse.emf.ecore.EFactory;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Factory</b> for the model.
- * It provides a create method for each non-abstract class of the model.
+ * The <b>Factory</b> for the maintenancemodel.
+ * It provides a create method for each non-abstract class of the maintenancemodel.
  * <!-- end-user-doc -->
  * @see maintenancemodel.ModelPackage
  * @generated
@@ -76,15 +76,6 @@ public interface ModelFactory extends EFactory {
 	ExtraHandler createExtraHandler();
 
 	/**
-	 * Returns a new object of class '<em>Integer To Extra Map</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Integer To Extra Map</em>'.
-	 * @generated
-	 */
-	IntegerToExtraMap createIntegerToExtraMap();
-
-	/**
 	 * Returns a new object of class '<em>Room Handler</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -94,15 +85,6 @@ public interface ModelFactory extends EFactory {
 	RoomHandler createRoomHandler();
 
 	/**
-	 * Returns a new object of class '<em>Integer To Room Map</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Integer To Room Map</em>'.
-	 * @generated
-	 */
-	IntegerToRoomMap createIntegerToRoomMap();
-
-	/**
 	 * Returns a new object of class '<em>Calendar</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -110,6 +92,15 @@ public interface ModelFactory extends EFactory {
 	 * @generated
 	 */
 	Calendar createCalendar();
+
+	/**
+	 * Returns a new object of class '<em>Room Types Handler</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Room Types Handler</em>'.
+	 * @generated
+	 */
+	RoomTypesHandler createRoomTypesHandler();
 
 	/**
 	 * Returns a new object of class '<em>Extras Maintenance</em>'.
@@ -130,24 +121,6 @@ public interface ModelFactory extends EFactory {
 	RoomMaintenance createRoomMaintenance();
 
 	/**
-	 * Returns a new object of class '<em>Room Types</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Room Types</em>'.
-	 * @generated
-	 */
-	RoomTypes createRoomTypes();
-
-	/**
-	 * Returns a new object of class '<em>String To Room Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>String To Room Type</em>'.
-	 * @generated
-	 */
-	StringToRoomType createStringToRoomType();
-
-	/**
 	 * Returns a new object of class '<em>Maintenance Provides For Booking</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -155,15 +128,6 @@ public interface ModelFactory extends EFactory {
 	 * @generated
 	 */
 	MaintenanceProvidesForBooking createMaintenanceProvidesForBooking();
-
-	/**
-	 * Returns a new object of class '<em>String To Lists Map</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>String To Lists Map</em>'.
-	 * @generated
-	 */
-	StringToListsMap createStringToListsMap();
 
 	/**
 	 * Returns the package supported by this factory.

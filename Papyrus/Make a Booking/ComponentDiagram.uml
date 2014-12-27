@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_bbB98HcREeSaTI8W4X6HJg" name="model">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_bbB98HcREeSaTI8W4X6HJg" name="maintenancemodel">
   <packagedElement xmi:type="uml:Package" xmi:id="_C7BrgHcUEeSRmJCeeTuJwg" name="Bank">
     <packagedElement xmi:type="uml:Component" xmi:id="_F1aZAHcUEeSRmJCeeTuJwg" name="BankComponent"/>
     <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="_F1bAEHcUEeSRmJCeeTuJwg" name="Realization1" client="_F1aZAHcUEeSRmJCeeTuJwg" supplier="_F1cOMHcUEeSRmJCeeTuJwg" contract="_F1cOMHcUEeSRmJCeeTuJwg"/>

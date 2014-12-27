@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * @see maintenancemodel.ModelPackage#getProductStatusEnum()
- * @model
+ * @maintenancemodel
  * @generated
  */
 public enum ProductStatusEnum implements Enumerator {
@@ -57,7 +57,7 @@ public enum ProductStatusEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #IN_STOCK
-	 * @model name="inStock"
+	 * @maintenancemodel name="inStock"
 	 * @generated
 	 * @ordered
 	 */
@@ -72,7 +72,7 @@ public enum ProductStatusEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #OUT_OF_STOCK
-	 * @model name="outOfStock"
+	 * @maintenancemodel name="outOfStock"
 	 * @generated
 	 * @ordered
 	 */
@@ -87,7 +87,7 @@ public enum ProductStatusEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #RESTOCKING
-	 * @model name="restocking"
+	 * @maintenancemodel name="restocking"
 	 * @generated
 	 * @ordered
 	 */

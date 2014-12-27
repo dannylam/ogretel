@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * @see maintenancemodel.ModelPackage#getExperienceStatusEnum()
- * @model
+ * @maintenancemodel
  * @generated
  */
 public enum ExperienceStatusEnum implements Enumerator {
@@ -47,7 +47,7 @@ public enum ExperienceStatusEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #READY
-	 * @model name="ready"
+	 * @maintenancemodel name="ready"
 	 * @generated
 	 * @ordered
 	 */
@@ -62,7 +62,7 @@ public enum ExperienceStatusEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MAINTENANCE
-	 * @model name="maintenance"
+	 * @maintenancemodel name="maintenance"
 	 * @generated
 	 * @ordered
 	 */

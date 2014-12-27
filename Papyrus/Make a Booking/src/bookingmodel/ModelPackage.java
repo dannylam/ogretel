@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.EReference;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Package</b> for the model.
+ * The <b>Package</b> for the maintenancemodel.
  * It contains accessors for the meta objects to represent
  * <ul>
  *   <li>each class,</li>
@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EReference;
  * </ul>
  * <!-- end-user-doc -->
  * @see bookingmodel.ModelFactory
- * @model kind="package"
+ * @maintenancemodel kind="package"
  * @generated
  */
 public interface ModelPackage extends EPackage {
@@ -32,7 +32,7 @@ public interface ModelPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "model";
+	String eNAME = "maintenancemodel";
 
 	/**
 	 * The package namespace URI.
@@ -40,7 +40,7 @@ public interface ModelPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http:///model.ecore";
+	String eNS_URI = "http:///maintenancemodel.ecore";
 
 	/**
 	 * The package namespace name.
@@ -48,7 +48,7 @@ public interface ModelPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "model";
+	String eNS_PREFIX = "maintenancemodel";
 
 	/**
 	 * The singleton instance of the package.
@@ -1124,7 +1124,7 @@ public interface ModelPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Roomtype To Guest ID Entry</em>'.
 	 * @see java.util.Map.Entry
-	 * @model keyDataType="org.eclipse.emf.ecore.EString" keyRequired="true" keyOrdered="false"
+	 * @maintenancemodel keyDataType="org.eclipse.emf.ecore.EString" keyRequired="true" keyOrdered="false"
 	 *        valueDataType="org.eclipse.emf.ecore.EString" valueRequired="true" valueOrdered="false"
 	 * @generated
 	 */
@@ -1158,7 +1158,7 @@ public interface ModelPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Nr To Room Entry</em>'.
 	 * @see java.util.Map.Entry
-	 * @model keyDataType="org.eclipse.emf.ecore.EString" keyRequired="true" keyOrdered="false"
+	 * @maintenancemodel keyDataType="org.eclipse.emf.ecore.EString" keyRequired="true" keyOrdered="false"
 	 *        valueDataType="org.eclipse.emf.ecore.EIntegerObject" valueRequired="true" valueOrdered="false"
 	 * @generated
 	 */
@@ -1192,8 +1192,8 @@ public interface ModelPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>booking Ref To Booking Entry</em>'.
 	 * @see java.util.Map.Entry
-	 * @model keyDataType="org.eclipse.emf.ecore.EString" keyRequired="true" keyOrdered="false"
-	 *        valueType="model.Booking" valueRequired="true" valueOrdered="false"
+	 * @maintenancemodel keyDataType="org.eclipse.emf.ecore.EString" keyRequired="true" keyOrdered="false"
+	 *        valueType="maintenancemodel.Booking" valueRequired="true" valueOrdered="false"
 	 * @generated
 	 */
 	EClass getbookingRefToBookingEntry();
@@ -2057,10 +2057,10 @@ public interface ModelPackage extends EPackage {
 	EEnum getPaymentMethod();
 
 	/**
-	 * Returns the factory that creates the instances of the model.
+	 * Returns the factory that creates the instances of the maintenancemodel.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the factory that creates the instances of the model.
+	 * @return the factory that creates the instances of the maintenancemodel.
 	 * @generated
 	 */
 	ModelFactory getModelFactory();

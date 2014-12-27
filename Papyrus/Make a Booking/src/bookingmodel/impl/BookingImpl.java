@@ -29,7 +29,7 @@ import bookingmodel.PaymentMethod;
 /**
  * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Booking</b></em>'.
+ * An implementation of the maintenancemodel object '<em><b>Booking</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:

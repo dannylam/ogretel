@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Product</b></em>'.
+ * An implementation of the maintenancemodel object '<em><b>Product</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:

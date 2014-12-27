@@ -5,29 +5,30 @@ package maintenancemodel.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
-import maintenancemodel.IntegerToRoomMap;
 import maintenancemodel.ModelPackage;
 import maintenancemodel.Room;
 import maintenancemodel.RoomHandler;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Room Handler</b></em>'.
+ * An implementation of the maintenancemodel object '<em><b>Room Handler</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
  *   <li>{@link maintenancemodel.impl.RoomHandlerImpl#getRoom <em>Room</em>}</li>
- *   <li>{@link maintenancemodel.impl.RoomHandlerImpl#getRoomTable <em>Room Table</em>}</li>
+ *   <li>{@link maintenancemodel.impl.RoomHandlerImpl#getIntegerToRoomMap <em>Integer To Room Map</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,14 +46,14 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	protected EList<Room> room;
 
 	/**
-	 * The cached value of the '{@link #getRoomTable() <em>Room Table</em>}' containment reference.
+	 * The cached value of the '{@link #getIntegerToRoomMap() <em>Integer To Room Map</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRoomTable()
+	 * @see #getIntegerToRoomMap()
 	 * @generated
 	 * @ordered
 	 */
-	protected IntegerToRoomMap roomTable;
+	protected EMap<Integer, Room> integerToRoomMap;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,42 +91,11 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntegerToRoomMap getRoomTable() {
-		return roomTable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetRoomTable(IntegerToRoomMap newRoomTable, NotificationChain msgs) {
-		IntegerToRoomMap oldRoomTable = roomTable;
-		roomTable = newRoomTable;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelPackage.ROOM_HANDLER__ROOM_TABLE, oldRoomTable, newRoomTable);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public EMap<Integer, Room> getIntegerToRoomMap() {
+		if (integerToRoomMap == null) {
+			integerToRoomMap = new EcoreEMap<Integer,Room>(ModelPackage.Literals.INTEGER_TO_ROOM_MAP, IntegerToRoomMapImpl.class, this, ModelPackage.ROOM_HANDLER__INTEGER_TO_ROOM_MAP);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRoomTable(IntegerToRoomMap newRoomTable) {
-		if (newRoomTable != roomTable) {
-			NotificationChain msgs = null;
-			if (roomTable != null)
-				msgs = ((InternalEObject)roomTable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelPackage.ROOM_HANDLER__ROOM_TABLE, null, msgs);
-			if (newRoomTable != null)
-				msgs = ((InternalEObject)newRoomTable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModelPackage.ROOM_HANDLER__ROOM_TABLE, null, msgs);
-			msgs = basicSetRoomTable(newRoomTable, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ROOM_HANDLER__ROOM_TABLE, newRoomTable, newRoomTable));
+		return integerToRoomMap;
 	}
 
 	/**
@@ -180,8 +150,8 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelPackage.ROOM_HANDLER__ROOM_TABLE:
-				return basicSetRoomTable(null, msgs);
+			case ModelPackage.ROOM_HANDLER__INTEGER_TO_ROOM_MAP:
+				return ((InternalEList<?>)getIntegerToRoomMap()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -196,8 +166,9 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 		switch (featureID) {
 			case ModelPackage.ROOM_HANDLER__ROOM:
 				return getRoom();
-			case ModelPackage.ROOM_HANDLER__ROOM_TABLE:
-				return getRoomTable();
+			case ModelPackage.ROOM_HANDLER__INTEGER_TO_ROOM_MAP:
+				if (coreType) return getIntegerToRoomMap();
+				else return getIntegerToRoomMap().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -215,8 +186,8 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 				getRoom().clear();
 				getRoom().addAll((Collection<? extends Room>)newValue);
 				return;
-			case ModelPackage.ROOM_HANDLER__ROOM_TABLE:
-				setRoomTable((IntegerToRoomMap)newValue);
+			case ModelPackage.ROOM_HANDLER__INTEGER_TO_ROOM_MAP:
+				((EStructuralFeature.Setting)getIntegerToRoomMap()).set(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -233,8 +204,8 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 			case ModelPackage.ROOM_HANDLER__ROOM:
 				getRoom().clear();
 				return;
-			case ModelPackage.ROOM_HANDLER__ROOM_TABLE:
-				setRoomTable((IntegerToRoomMap)null);
+			case ModelPackage.ROOM_HANDLER__INTEGER_TO_ROOM_MAP:
+				getIntegerToRoomMap().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -250,8 +221,8 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 		switch (featureID) {
 			case ModelPackage.ROOM_HANDLER__ROOM:
 				return room != null && !room.isEmpty();
-			case ModelPackage.ROOM_HANDLER__ROOM_TABLE:
-				return roomTable != null;
+			case ModelPackage.ROOM_HANDLER__INTEGER_TO_ROOM_MAP:
+				return integerToRoomMap != null && !integerToRoomMap.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

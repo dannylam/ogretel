@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EObject;
 /**
  * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Payment Details</b></em>'.
+ * A representation of the maintenancemodel object '<em><b>Payment Details</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see bookingmodel.ModelPackage#getPaymentDetails()
- * @model
+ * @maintenancemodel
  * @generated
  */
 public interface PaymentDetails extends EObject {
@@ -37,7 +37,7 @@ public interface PaymentDetails extends EObject {
 	 * @return the value of the '<em>Cc Nr</em>' attribute.
 	 * @see #setCcNr(String)
 	 * @see bookingmodel.ModelPackage#getPaymentDetails_CcNr()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @maintenancemodel dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getCcNr();
@@ -65,7 +65,7 @@ public interface PaymentDetails extends EObject {
 	 * @return the value of the '<em>Cc V</em>' attribute.
 	 * @see #setCcV(String)
 	 * @see bookingmodel.ModelPackage#getPaymentDetails_CcV()
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @maintenancemodel dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getCcV();
@@ -93,7 +93,7 @@ public interface PaymentDetails extends EObject {
 	 * @return the value of the '<em>Exp Month</em>' attribute.
 	 * @see #setExpMonth(int)
 	 * @see bookingmodel.ModelPackage#getPaymentDetails_ExpMonth()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
 	int getExpMonth();
@@ -121,7 +121,7 @@ public interface PaymentDetails extends EObject {
 	 * @return the value of the '<em>Exp Year</em>' attribute.
 	 * @see #setExpYear(int)
 	 * @see bookingmodel.ModelPackage#getPaymentDetails_ExpYear()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
 	int getExpYear();

@@ -7,27 +7,28 @@ import java.util.Collection;
 
 import maintenancemodel.Extra;
 import maintenancemodel.ExtraHandler;
-import maintenancemodel.IntegerToExtraMap;
 import maintenancemodel.ModelPackage;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreEMap;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Extra Handler</b></em>'.
+ * An implementation of the maintenancemodel object '<em><b>Extra Handler</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
  *   <li>{@link maintenancemodel.impl.ExtraHandlerImpl#getExtra <em>Extra</em>}</li>
- *   <li>{@link maintenancemodel.impl.ExtraHandlerImpl#getExtraTable <em>Extra Table</em>}</li>
+ *   <li>{@link maintenancemodel.impl.ExtraHandlerImpl#getIntToExtraMap <em>Int To Extra Map</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,14 +46,14 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	protected EList<Extra> extra;
 
 	/**
-	 * The cached value of the '{@link #getExtraTable() <em>Extra Table</em>}' containment reference.
+	 * The cached value of the '{@link #getIntToExtraMap() <em>Int To Extra Map</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getExtraTable()
+	 * @see #getIntToExtraMap()
 	 * @generated
 	 * @ordered
 	 */
-	protected IntegerToExtraMap extraTable;
+	protected EMap<Integer, Extra> intToExtraMap;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -90,42 +91,11 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntegerToExtraMap getExtraTable() {
-		return extraTable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetExtraTable(IntegerToExtraMap newExtraTable, NotificationChain msgs) {
-		IntegerToExtraMap oldExtraTable = extraTable;
-		extraTable = newExtraTable;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelPackage.EXTRA_HANDLER__EXTRA_TABLE, oldExtraTable, newExtraTable);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public EMap<Integer, Extra> getIntToExtraMap() {
+		if (intToExtraMap == null) {
+			intToExtraMap = new EcoreEMap<Integer,Extra>(ModelPackage.Literals.INTEGER_TO_EXTRA_MAP, IntegerToExtraMapImpl.class, this, ModelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExtraTable(IntegerToExtraMap newExtraTable) {
-		if (newExtraTable != extraTable) {
-			NotificationChain msgs = null;
-			if (extraTable != null)
-				msgs = ((InternalEObject)extraTable).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelPackage.EXTRA_HANDLER__EXTRA_TABLE, null, msgs);
-			if (newExtraTable != null)
-				msgs = ((InternalEObject)newExtraTable).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModelPackage.EXTRA_HANDLER__EXTRA_TABLE, null, msgs);
-			msgs = basicSetExtraTable(newExtraTable, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.EXTRA_HANDLER__EXTRA_TABLE, newExtraTable, newExtraTable));
+		return intToExtraMap;
 	}
 
 	/**
@@ -180,8 +150,8 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelPackage.EXTRA_HANDLER__EXTRA_TABLE:
-				return basicSetExtraTable(null, msgs);
+			case ModelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
+				return ((InternalEList<?>)getIntToExtraMap()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -196,8 +166,9 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 		switch (featureID) {
 			case ModelPackage.EXTRA_HANDLER__EXTRA:
 				return getExtra();
-			case ModelPackage.EXTRA_HANDLER__EXTRA_TABLE:
-				return getExtraTable();
+			case ModelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
+				if (coreType) return getIntToExtraMap();
+				else return getIntToExtraMap().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -215,8 +186,8 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 				getExtra().clear();
 				getExtra().addAll((Collection<? extends Extra>)newValue);
 				return;
-			case ModelPackage.EXTRA_HANDLER__EXTRA_TABLE:
-				setExtraTable((IntegerToExtraMap)newValue);
+			case ModelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
+				((EStructuralFeature.Setting)getIntToExtraMap()).set(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -233,8 +204,8 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 			case ModelPackage.EXTRA_HANDLER__EXTRA:
 				getExtra().clear();
 				return;
-			case ModelPackage.EXTRA_HANDLER__EXTRA_TABLE:
-				setExtraTable((IntegerToExtraMap)null);
+			case ModelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
+				getIntToExtraMap().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -250,8 +221,8 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 		switch (featureID) {
 			case ModelPackage.EXTRA_HANDLER__EXTRA:
 				return extra != null && !extra.isEmpty();
-			case ModelPackage.EXTRA_HANDLER__EXTRA_TABLE:
-				return extraTable != null;
+			case ModelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
+				return intToExtraMap != null && !intToExtraMap.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

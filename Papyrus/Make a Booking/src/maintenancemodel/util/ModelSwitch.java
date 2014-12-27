@@ -2,17 +2,20 @@
  */
 package maintenancemodel.util;
 
+import java.util.Map;
+
 import maintenancemodel.*;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Switch</b> for the model's inheritance hierarchy.
+ * The <b>Switch</b> for the maintenancemodel's inheritance hierarchy.
  * It supports the call {@link #doSwitch(EObject) doSwitch(object)}
- * to invoke the <code>caseXXX</code> method for each class of the model,
+ * to invoke the <code>caseXXX</code> method for each class of the maintenancemodel,
  * starting with the actual class of the object
  * and proceeding up the inheritance hierarchy
  * until a non-null result is returned,
@@ -23,7 +26,7 @@ import org.eclipse.emf.ecore.util.Switch;
  */
 public class ModelSwitch<T> extends Switch<T> {
 	/**
-	 * The cached model package
+	 * The cached maintenancemodel package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -56,7 +59,7 @@ public class ModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
+	 * Calls <code>caseXXX</code> for each class of the maintenancemodel until one returns a non null result; it yields that result.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the first non-null result returned by a <code>caseXXX</code> call.
@@ -113,7 +116,7 @@ public class ModelSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case ModelPackage.INTEGER_TO_EXTRA_MAP: {
-				IntegerToExtraMap integerToExtraMap = (IntegerToExtraMap)theEObject;
+				@SuppressWarnings("unchecked") Map.Entry<Integer, Extra> integerToExtraMap = (Map.Entry<Integer, Extra>)theEObject;
 				T result = caseIntegerToExtraMap(integerToExtraMap);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -125,7 +128,7 @@ public class ModelSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case ModelPackage.INTEGER_TO_ROOM_MAP: {
-				IntegerToRoomMap integerToRoomMap = (IntegerToRoomMap)theEObject;
+				@SuppressWarnings("unchecked") Map.Entry<Integer, Room> integerToRoomMap = (Map.Entry<Integer, Room>)theEObject;
 				T result = caseIntegerToRoomMap(integerToRoomMap);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -133,6 +136,24 @@ public class ModelSwitch<T> extends Switch<T> {
 			case ModelPackage.CALENDAR: {
 				Calendar calendar = (Calendar)theEObject;
 				T result = caseCalendar(calendar);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModelPackage.ROOM_TYPES_HANDLER: {
+				RoomTypesHandler roomTypesHandler = (RoomTypesHandler)theEObject;
+				T result = caseRoomTypesHandler(roomTypesHandler);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModelPackage.STRING_TO_ROOM_TYPE: {
+				@SuppressWarnings("unchecked") Map.Entry<String, RoomTypeEnum> stringToRoomType = (Map.Entry<String, RoomTypeEnum>)theEObject;
+				T result = caseStringToRoomType(stringToRoomType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModelPackage.STRING_TO_LISTS_MAP: {
+				@SuppressWarnings("unchecked") Map.Entry<String, EList<Integer>> stringToListsMap = (Map.Entry<String, EList<Integer>>)theEObject;
+				T result = caseStringToListsMap(stringToListsMap);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -166,27 +187,9 @@ public class ModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.ROOM_TYPES: {
-				RoomTypes roomTypes = (RoomTypes)theEObject;
-				T result = caseRoomTypes(roomTypes);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ModelPackage.STRING_TO_ROOM_TYPE: {
-				StringToRoomType stringToRoomType = (StringToRoomType)theEObject;
-				T result = caseStringToRoomType(stringToRoomType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING: {
 				MaintenanceProvidesForBooking maintenanceProvidesForBooking = (MaintenanceProvidesForBooking)theEObject;
 				T result = caseMaintenanceProvidesForBooking(maintenanceProvidesForBooking);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ModelPackage.STRING_TO_LISTS_MAP: {
-				StringToListsMap stringToListsMap = (StringToListsMap)theEObject;
-				T result = caseStringToListsMap(stringToListsMap);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -310,7 +313,7 @@ public class ModelSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIntegerToExtraMap(IntegerToExtraMap object) {
+	public T caseIntegerToExtraMap(Map.Entry<Integer, Extra> object) {
 		return null;
 	}
 
@@ -340,7 +343,7 @@ public class ModelSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIntegerToRoomMap(IntegerToRoomMap object) {
+	public T caseIntegerToRoomMap(Map.Entry<Integer, Room> object) {
 		return null;
 	}
 
@@ -356,6 +359,51 @@ public class ModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseCalendar(Calendar object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Room Types Handler</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Room Types Handler</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRoomTypesHandler(RoomTypesHandler object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>String To Room Type</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>String To Room Type</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStringToRoomType(Map.Entry<String, RoomTypeEnum> object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>String To Lists Map</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>String To Lists Map</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStringToListsMap(Map.Entry<String, EList<Integer>> object) {
 		return null;
 	}
 
@@ -435,36 +483,6 @@ public class ModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Room Types</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Room Types</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRoomTypes(RoomTypes object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>String To Room Type</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>String To Room Type</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseStringToRoomType(StringToRoomType object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Maintenance Provides For Booking</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -476,21 +494,6 @@ public class ModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMaintenanceProvidesForBooking(MaintenanceProvidesForBooking object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>String To Lists Map</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>String To Lists Map</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseStringToListsMap(StringToListsMap object) {
 		return null;
 	}
 

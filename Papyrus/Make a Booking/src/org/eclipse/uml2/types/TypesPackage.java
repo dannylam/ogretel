@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EPackage;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Package</b> for the model.
+ * The <b>Package</b> for the maintenancemodel.
  * It contains accessors for the meta objects to represent
  * <ul>
  *   <li>each class,</li>
@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EPackage;
  * </ul>
  * <!-- end-user-doc -->
  * @see org.eclipse.uml2.types.TypesFactory
- * @model kind="package"
+ * @maintenancemodel kind="package"
  *        annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='PrimitiveTypes'"
  * @generated
  */
@@ -107,7 +107,7 @@ public interface TypesPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Boolean</em>'.
-	 * @model instanceClass="boolean"
+	 * @maintenancemodel instanceClass="boolean"
 	 * @generated
 	 */
 	EDataType getBoolean();
@@ -117,7 +117,7 @@ public interface TypesPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Integer</em>'.
-	 * @model instanceClass="int"
+	 * @maintenancemodel instanceClass="int"
 	 * @generated
 	 */
 	EDataType getInteger();
@@ -127,7 +127,7 @@ public interface TypesPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Real</em>'.
-	 * @model instanceClass="double"
+	 * @maintenancemodel instanceClass="double"
 	 * @generated
 	 */
 	EDataType getReal();
@@ -137,7 +137,7 @@ public interface TypesPackage extends EPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>Unlimited Natural</em>'.
-	 * @model instanceClass="int"
+	 * @maintenancemodel instanceClass="int"
 	 * @generated
 	 */
 	EDataType getUnlimitedNatural();
@@ -148,16 +148,16 @@ public interface TypesPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for data type '<em>String</em>'.
 	 * @see java.lang.String
-	 * @model instanceClass="java.lang.String"
+	 * @maintenancemodel instanceClass="java.lang.String"
 	 * @generated
 	 */
 	EDataType getString();
 
 	/**
-	 * Returns the factory that creates the instances of the model.
+	 * Returns the factory that creates the instances of the maintenancemodel.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the factory that creates the instances of the model.
+	 * @return the factory that creates the instances of the maintenancemodel.
 	 * @generated
 	 */
 	TypesFactory getTypesFactory();

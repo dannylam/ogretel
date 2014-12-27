@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.EObject;
 /**
  * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Guest</b></em>'.
+ * A representation of the maintenancemodel object '<em><b>Guest</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see bookingmodel.ModelPackage#getGuest()
- * @model
+ * @maintenancemodel
  * @generated
  */
 public interface Guest extends EObject {
@@ -35,7 +35,7 @@ public interface Guest extends EObject {
 	 * @return the value of the '<em>Room Nr</em>' attribute.
 	 * @see #setRoomNr(int)
 	 * @see bookingmodel.ModelPackage#getGuest_RoomNr()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
 	int getRoomNr();
@@ -65,7 +65,7 @@ public interface Guest extends EObject {
 	 * @see bookingmodel.GuestTypes
 	 * @see #setGuestTypes(GuestTypes)
 	 * @see bookingmodel.ModelPackage#getGuest_GuestTypes()
-	 * @model required="true" ordered="false"
+	 * @maintenancemodel required="true" ordered="false"
 	 * @generated
 	 */
 	GuestTypes getGuestTypes();

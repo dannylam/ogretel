@@ -2,25 +2,28 @@
  */
 package maintenancemodel.impl;
 
+import java.lang.reflect.InvocationTargetException;
+
 import maintenancemodel.ModelPackage;
 import maintenancemodel.RoomType;
 import maintenancemodel.RoomTypeEnum;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Room Type</b></em>'.
+ * An implementation of the maintenancemodel object '<em><b>Room Type</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
  *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getPrice <em>Price</em>}</li>
  *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getMaxNrOfGuests <em>Max Nr Of Guests</em>}</li>
- *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getDesciption <em>Desciption</em>}</li>
+ *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getRoomTypeEnum <em>Room Type Enum</em>}</li>
  * </ul>
  * </p>
@@ -69,24 +72,24 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	protected int maxNrOfGuests = MAX_NR_OF_GUESTS_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getDesciption() <em>Desciption</em>}' attribute.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDesciption()
+	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DESCIPTION_EDEFAULT = null;
+	protected static final String DESCRIPTION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getDesciption() <em>Desciption</em>}' attribute.
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDesciption()
+	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected String desciption = DESCIPTION_EDEFAULT;
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRoomTypeEnum() <em>Room Type Enum</em>}' attribute.
@@ -174,8 +177,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDesciption() {
-		return desciption;
+	public String getDescription() {
+		return description;
 	}
 
 	/**
@@ -183,11 +186,11 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDesciption(String newDesciption) {
-		String oldDesciption = desciption;
-		desciption = newDesciption;
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ROOM_TYPE__DESCIPTION, oldDesciption, desciption));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ROOM_TYPE__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -216,6 +219,17 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public RoomTypeEnum getRoomType(String name) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -223,8 +237,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return getPrice();
 			case ModelPackage.ROOM_TYPE__MAX_NR_OF_GUESTS:
 				return getMaxNrOfGuests();
-			case ModelPackage.ROOM_TYPE__DESCIPTION:
-				return getDesciption();
+			case ModelPackage.ROOM_TYPE__DESCRIPTION:
+				return getDescription();
 			case ModelPackage.ROOM_TYPE__ROOM_TYPE_ENUM:
 				return getRoomTypeEnum();
 		}
@@ -245,8 +259,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 			case ModelPackage.ROOM_TYPE__MAX_NR_OF_GUESTS:
 				setMaxNrOfGuests((Integer)newValue);
 				return;
-			case ModelPackage.ROOM_TYPE__DESCIPTION:
-				setDesciption((String)newValue);
+			case ModelPackage.ROOM_TYPE__DESCRIPTION:
+				setDescription((String)newValue);
 				return;
 			case ModelPackage.ROOM_TYPE__ROOM_TYPE_ENUM:
 				setRoomTypeEnum((RoomTypeEnum)newValue);
@@ -269,8 +283,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 			case ModelPackage.ROOM_TYPE__MAX_NR_OF_GUESTS:
 				setMaxNrOfGuests(MAX_NR_OF_GUESTS_EDEFAULT);
 				return;
-			case ModelPackage.ROOM_TYPE__DESCIPTION:
-				setDesciption(DESCIPTION_EDEFAULT);
+			case ModelPackage.ROOM_TYPE__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 			case ModelPackage.ROOM_TYPE__ROOM_TYPE_ENUM:
 				setRoomTypeEnum(ROOM_TYPE_ENUM_EDEFAULT);
@@ -291,12 +305,26 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return price != PRICE_EDEFAULT;
 			case ModelPackage.ROOM_TYPE__MAX_NR_OF_GUESTS:
 				return maxNrOfGuests != MAX_NR_OF_GUESTS_EDEFAULT;
-			case ModelPackage.ROOM_TYPE__DESCIPTION:
-				return DESCIPTION_EDEFAULT == null ? desciption != null : !DESCIPTION_EDEFAULT.equals(desciption);
+			case ModelPackage.ROOM_TYPE__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case ModelPackage.ROOM_TYPE__ROOM_TYPE_ENUM:
 				return roomTypeEnum != ROOM_TYPE_ENUM_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ModelPackage.ROOM_TYPE___GET_ROOM_TYPE__STRING:
+				return getRoomType((String)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
@@ -313,8 +341,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 		result.append(price);
 		result.append(", maxNrOfGuests: ");
 		result.append(maxNrOfGuests);
-		result.append(", desciption: ");
-		result.append(desciption);
+		result.append(", description: ");
+		result.append(description);
 		result.append(", roomTypeEnum: ");
 		result.append(roomTypeEnum);
 		result.append(')');

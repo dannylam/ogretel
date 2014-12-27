@@ -15,7 +15,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * @see bookingmodel.ModelPackage#getPaymentMethod()
- * @model
+ * @maintenancemodel
  * @generated
  */
 public enum PaymentMethod implements Enumerator {
@@ -61,7 +61,7 @@ public enum PaymentMethod implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #BANKCARD
-	 * @model name="bankcard"
+	 * @maintenancemodel name="bankcard"
 	 * @generated
 	 * @ordered
 	 */
@@ -76,7 +76,7 @@ public enum PaymentMethod implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #CASH
-	 * @model name="cash"
+	 * @maintenancemodel name="cash"
 	 * @generated
 	 * @ordered
 	 */
@@ -91,7 +91,7 @@ public enum PaymentMethod implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #VOUCHER
-	 * @model name="voucher"
+	 * @maintenancemodel name="voucher"
 	 * @generated
 	 * @ordered
 	 */

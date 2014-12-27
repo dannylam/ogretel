@@ -6,7 +6,7 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Room</b></em>'.
+ * A representation of the maintenancemodel object '<em><b>Room</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  *
  * @see maintenancemodel.ModelPackage#getRoom()
- * @model
+ * @maintenancemodel
  * @generated
  */
 public interface Room extends EObject {
@@ -34,7 +34,7 @@ public interface Room extends EObject {
 	 * @return the value of the '<em>Number ID</em>' attribute.
 	 * @see #setNumberID(int)
 	 * @see maintenancemodel.ModelPackage#getRoom_NumberID()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
 	int getNumberID();
@@ -62,7 +62,7 @@ public interface Room extends EObject {
 	 * @see maintenancemodel.RoomStatusEnum
 	 * @see #setRoomStatusEnum(RoomStatusEnum)
 	 * @see maintenancemodel.ModelPackage#getRoom_RoomStatusEnum()
-	 * @model required="true" ordered="false"
+	 * @maintenancemodel required="true" ordered="false"
 	 * @generated
 	 */
 	RoomStatusEnum getRoomStatusEnum();
@@ -89,7 +89,7 @@ public interface Room extends EObject {
 	 * @return the value of the '<em>Room Type</em>' reference.
 	 * @see #setRoomType(RoomType)
 	 * @see maintenancemodel.ModelPackage#getRoom_RoomType()
-	 * @model required="true" ordered="false"
+	 * @maintenancemodel required="true" ordered="false"
 	 * @generated
 	 */
 	RoomType getRoomType();

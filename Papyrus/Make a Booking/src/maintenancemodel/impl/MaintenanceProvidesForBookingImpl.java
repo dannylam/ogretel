@@ -2,17 +2,14 @@
  */
 package maintenancemodel.impl;
 
-import java.lang.reflect.InvocationTargetException;
-
 import maintenancemodel.Calendar;
 import maintenancemodel.MaintenanceProvidesForBooking;
 import maintenancemodel.ModelPackage;
 import maintenancemodel.RoomHandler;
-import maintenancemodel.RoomTypes;
+import maintenancemodel.RoomTypesHandler;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -20,7 +17,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Maintenance Provides For Booking</b></em>'.
+ * An implementation of the maintenancemodel object '<em><b>Maintenance Provides For Booking</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -52,10 +49,10 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * @generated
 	 * @ordered
 	 */
-	protected RoomTypes roomTypes;
+	protected RoomTypesHandler roomTypes;
 
 	/**
-	 * The cached value of the '{@link #getRooms() <em>Rooms</em>}' reference.
+	 * The cached value of the '{@link #getRooms() <em>Rooms</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRooms()
@@ -126,7 +123,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomTypes getRoomTypes() {
+	public RoomTypesHandler getRoomTypes() {
 		return roomTypes;
 	}
 
@@ -135,8 +132,8 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRoomTypes(RoomTypes newRoomTypes, NotificationChain msgs) {
-		RoomTypes oldRoomTypes = roomTypes;
+	public NotificationChain basicSetRoomTypes(RoomTypesHandler newRoomTypes, NotificationChain msgs) {
+		RoomTypesHandler oldRoomTypes = roomTypes;
 		roomTypes = newRoomTypes;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES, oldRoomTypes, newRoomTypes);
@@ -150,7 +147,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRoomTypes(RoomTypes newRoomTypes) {
+	public void setRoomTypes(RoomTypesHandler newRoomTypes) {
 		if (newRoomTypes != roomTypes) {
 			NotificationChain msgs = null;
 			if (roomTypes != null)
@@ -170,14 +167,6 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * @generated
 	 */
 	public RoomHandler getRooms() {
-		if (rooms != null && rooms.eIsProxy()) {
-			InternalEObject oldRooms = (InternalEObject)rooms;
-			rooms = (RoomHandler)eResolveProxy(oldRooms);
-			if (rooms != oldRooms) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS, oldRooms, rooms));
-			}
-		}
 		return rooms;
 	}
 
@@ -186,8 +175,14 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomHandler basicGetRooms() {
-		return rooms;
+	public NotificationChain basicSetRooms(RoomHandler newRooms, NotificationChain msgs) {
+		RoomHandler oldRooms = rooms;
+		rooms = newRooms;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS, oldRooms, newRooms);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -196,54 +191,17 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * @generated
 	 */
 	public void setRooms(RoomHandler newRooms) {
-		RoomHandler oldRooms = rooms;
-		rooms = newRooms;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS, oldRooms, rooms));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void canBook(String roomType, int nrOfRooms, String start, String end) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void makeBooking(String roomType, int nrOfRooms, String start, String end) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void removeBooking(String roomType, int nrOfRooms, String start, String end) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setBookingAsActive(String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (newRooms != rooms) {
+			NotificationChain msgs = null;
+			if (rooms != null)
+				msgs = ((InternalEObject)rooms).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS, null, msgs);
+			if (newRooms != null)
+				msgs = ((InternalEObject)newRooms).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS, null, msgs);
+			msgs = basicSetRooms(newRooms, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS, newRooms, newRooms));
 	}
 
 	/**
@@ -256,6 +214,8 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 		switch (featureID) {
 			case ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES:
 				return basicSetRoomTypes(null, msgs);
+			case ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS:
+				return basicSetRooms(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -274,8 +234,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 			case ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES:
 				return getRoomTypes();
 			case ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS:
-				if (resolve) return getRooms();
-				return basicGetRooms();
+				return getRooms();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -292,7 +251,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 				setCalendar((Calendar)newValue);
 				return;
 			case ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES:
-				setRoomTypes((RoomTypes)newValue);
+				setRoomTypes((RoomTypesHandler)newValue);
 				return;
 			case ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS:
 				setRooms((RoomHandler)newValue);
@@ -313,7 +272,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 				setCalendar((Calendar)null);
 				return;
 			case ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES:
-				setRoomTypes((RoomTypes)null);
+				setRoomTypes((RoomTypesHandler)null);
 				return;
 			case ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS:
 				setRooms((RoomHandler)null);
@@ -338,29 +297,6 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 				return rooms != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___CAN_BOOK__STRING_INT_STRING_STRING:
-				canBook((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
-				return null;
-			case ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__STRING_INT_STRING_STRING:
-				makeBooking((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
-				return null;
-			case ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__STRING_INT_STRING_STRING:
-				removeBooking((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
-				return null;
-			case ModelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___SET_BOOKING_AS_ACTIVE__STRING:
-				return setBookingAsActive((String)arguments.get(0));
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 } //MaintenanceProvidesForBookingImpl

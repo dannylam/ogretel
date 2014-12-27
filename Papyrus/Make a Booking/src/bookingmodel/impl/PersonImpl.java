@@ -13,7 +13,7 @@ import bookingmodel.Person;
 /**
  * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Person</b></em>'.
+ * An implementation of the maintenancemodel object '<em><b>Person</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:

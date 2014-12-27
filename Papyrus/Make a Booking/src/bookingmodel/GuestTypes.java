@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.Enumerator;
  * and utility methods for working with them.
  * <!-- end-user-doc -->
  * @see bookingmodel.ModelPackage#getGuestTypes()
- * @model
+ * @maintenancemodel
  * @generated
  */
 public enum GuestTypes implements Enumerator {
@@ -62,7 +62,7 @@ public enum GuestTypes implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #REGULAR
-	 * @model name="Regular"
+	 * @maintenancemodel name="Regular"
 	 * @generated
 	 * @ordered
 	 */
@@ -78,7 +78,7 @@ public enum GuestTypes implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #BLACK_LISTED
-	 * @model name="BlackListed"
+	 * @maintenancemodel name="BlackListed"
 	 * @generated
 	 * @ordered
 	 */
@@ -94,7 +94,7 @@ public enum GuestTypes implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #VIP
-	 * @model
+	 * @maintenancemodel
 	 * @generated
 	 * @ordered
 	 */

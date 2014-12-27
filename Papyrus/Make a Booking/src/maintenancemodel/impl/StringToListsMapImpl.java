@@ -5,67 +5,57 @@ package maintenancemodel.impl;
 import java.util.Collection;
 
 import maintenancemodel.ModelPackage;
-import maintenancemodel.StringToListsMap;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.BasicEMap;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>String To Lists Map</b></em>'.
+ * An implementation of the maintenancemodel object '<em><b>String To Lists Map</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link maintenancemodel.impl.StringToListsMapImpl#getKey <em>Key</em>}</li>
- *   <li>{@link maintenancemodel.impl.StringToListsMapImpl#getRoomTypeCapTable <em>Room Type Cap Table</em>}</li>
- *   <li>{@link maintenancemodel.impl.StringToListsMapImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link maintenancemodel.impl.StringToListsMapImpl#getTypedKey <em>Key</em>}</li>
+ *   <li>{@link maintenancemodel.impl.StringToListsMapImpl#getTypedValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class StringToListsMapImpl extends MinimalEObjectImpl.Container implements StringToListsMap {
+public class StringToListsMapImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String,EList<Integer>> {
 	/**
-	 * The default value of the '{@link #getKey() <em>Key</em>}' attribute.
+	 * The default value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getKey()
+	 * @see #getTypedKey()
 	 * @generated
 	 * @ordered
 	 */
 	protected static final String KEY_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getKey() <em>Key</em>}' attribute.
+	 * The cached value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getKey()
+	 * @see #getTypedKey()
 	 * @generated
 	 * @ordered
 	 */
 	protected String key = KEY_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRoomTypeCapTable() <em>Room Type Cap Table</em>}' reference.
+	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRoomTypeCapTable()
-	 * @generated
-	 * @ordered
-	 */
-	protected StringToListsMap roomTypeCapTable;
-
-	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValue()
+	 * @see #getTypedValue()
 	 * @generated
 	 * @ordered
 	 */
@@ -95,7 +85,7 @@ public class StringToListsMapImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getKey() {
+	public String getTypedKey() {
 		return key;
 	}
 
@@ -104,7 +94,7 @@ public class StringToListsMapImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setKey(String newKey) {
+	public void setTypedKey(String newKey) {
 		String oldKey = key;
 		key = newKey;
 		if (eNotificationRequired())
@@ -116,45 +106,7 @@ public class StringToListsMapImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StringToListsMap getRoomTypeCapTable() {
-		if (roomTypeCapTable != null && roomTypeCapTable.eIsProxy()) {
-			InternalEObject oldRoomTypeCapTable = (InternalEObject)roomTypeCapTable;
-			roomTypeCapTable = (StringToListsMap)eResolveProxy(oldRoomTypeCapTable);
-			if (roomTypeCapTable != oldRoomTypeCapTable) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.STRING_TO_LISTS_MAP__ROOM_TYPE_CAP_TABLE, oldRoomTypeCapTable, roomTypeCapTable));
-			}
-		}
-		return roomTypeCapTable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StringToListsMap basicGetRoomTypeCapTable() {
-		return roomTypeCapTable;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRoomTypeCapTable(StringToListsMap newRoomTypeCapTable) {
-		StringToListsMap oldRoomTypeCapTable = roomTypeCapTable;
-		roomTypeCapTable = newRoomTypeCapTable;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.STRING_TO_LISTS_MAP__ROOM_TYPE_CAP_TABLE, oldRoomTypeCapTable, roomTypeCapTable));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Integer> getValue() {
+	public EList<Integer> getTypedValue() {
 		if (value == null) {
 			value = new EDataTypeUniqueEList<Integer>(Integer.class, this, ModelPackage.STRING_TO_LISTS_MAP__VALUE);
 		}
@@ -170,12 +122,9 @@ public class StringToListsMapImpl extends MinimalEObjectImpl.Container implement
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ModelPackage.STRING_TO_LISTS_MAP__KEY:
-				return getKey();
-			case ModelPackage.STRING_TO_LISTS_MAP__ROOM_TYPE_CAP_TABLE:
-				if (resolve) return getRoomTypeCapTable();
-				return basicGetRoomTypeCapTable();
+				return getTypedKey();
 			case ModelPackage.STRING_TO_LISTS_MAP__VALUE:
-				return getValue();
+				return getTypedValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -190,14 +139,11 @@ public class StringToListsMapImpl extends MinimalEObjectImpl.Container implement
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ModelPackage.STRING_TO_LISTS_MAP__KEY:
-				setKey((String)newValue);
-				return;
-			case ModelPackage.STRING_TO_LISTS_MAP__ROOM_TYPE_CAP_TABLE:
-				setRoomTypeCapTable((StringToListsMap)newValue);
+				setTypedKey((String)newValue);
 				return;
 			case ModelPackage.STRING_TO_LISTS_MAP__VALUE:
-				getValue().clear();
-				getValue().addAll((Collection<? extends Integer>)newValue);
+				getTypedValue().clear();
+				getTypedValue().addAll((Collection<? extends Integer>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -212,13 +158,10 @@ public class StringToListsMapImpl extends MinimalEObjectImpl.Container implement
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ModelPackage.STRING_TO_LISTS_MAP__KEY:
-				setKey(KEY_EDEFAULT);
-				return;
-			case ModelPackage.STRING_TO_LISTS_MAP__ROOM_TYPE_CAP_TABLE:
-				setRoomTypeCapTable((StringToListsMap)null);
+				setTypedKey(KEY_EDEFAULT);
 				return;
 			case ModelPackage.STRING_TO_LISTS_MAP__VALUE:
-				getValue().clear();
+				getTypedValue().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -234,8 +177,6 @@ public class StringToListsMapImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case ModelPackage.STRING_TO_LISTS_MAP__KEY:
 				return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
-			case ModelPackage.STRING_TO_LISTS_MAP__ROOM_TYPE_CAP_TABLE:
-				return roomTypeCapTable != null;
 			case ModelPackage.STRING_TO_LISTS_MAP__VALUE:
 				return value != null && !value.isEmpty();
 		}
@@ -258,6 +199,85 @@ public class StringToListsMapImpl extends MinimalEObjectImpl.Container implement
 		result.append(value);
 		result.append(')');
 		return result.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected int hash = -1;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getHash() {
+		if (hash == -1) {
+			Object theKey = getKey();
+			hash = (theKey == null ? 0 : theKey.hashCode());
+		}
+		return hash;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setHash(int hash) {
+		this.hash = hash;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getKey() {
+		return getTypedKey();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setKey(String key) {
+		setTypedKey(key);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Integer> getValue() {
+		return getTypedValue();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Integer> setValue(EList<Integer> value) {
+		EList<Integer> oldValue = getValue();
+		getTypedValue().clear();
+		getTypedValue().addAll(value);
+		return oldValue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EMap<String, EList<Integer>> getEMap() {
+		EObject container = eContainer();
+		return container == null ? null : (EMap<String, EList<Integer>>)container.eGet(eContainmentFeature());
 	}
 
 } //StringToListsMapImpl

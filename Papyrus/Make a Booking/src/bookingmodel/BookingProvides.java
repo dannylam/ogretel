@@ -37,6 +37,7 @@ import org.eclipse.emf.ecore.EObject;
  * @see bookingmodel.ModelPackage#getBookingProvides()
  * @model
  * @generated NOT
+ * @maintenancemodel
  */
 public interface BookingProvides extends EObject {
 	/**
@@ -46,6 +47,7 @@ public interface BookingProvides extends EObject {
 	 * @see bookingmodel.ModelPackage#getBookingProvides_BookingHandler()
 	 * @model required="true" ordered="false"
 	 * @generated NOT
+	 * @maintenancemodel required="true" ordered="false"
 	 */
 	BookingHandler getBookingHandler();
 

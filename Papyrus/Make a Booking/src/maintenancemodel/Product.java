@@ -5,7 +5,7 @@ package maintenancemodel;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Product</b></em>'.
+ * A representation of the maintenancemodel object '<em><b>Product</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
@@ -17,7 +17,7 @@ package maintenancemodel;
  * </p>
  *
  * @see maintenancemodel.ModelPackage#getProduct()
- * @model
+ * @maintenancemodel
  * @generated
  */
 public interface Product extends AbstractExtra {
@@ -32,7 +32,7 @@ public interface Product extends AbstractExtra {
 	 * @return the value of the '<em>Stock</em>' attribute.
 	 * @see #setStock(int)
 	 * @see maintenancemodel.ModelPackage#getProduct_Stock()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
 	int getStock();
@@ -60,7 +60,7 @@ public interface Product extends AbstractExtra {
 	 * @see maintenancemodel.ProductStatusEnum
 	 * @see #setProductStatusEnum(ProductStatusEnum)
 	 * @see maintenancemodel.ModelPackage#getProduct_ProductStatusEnum()
-	 * @model required="true" ordered="false"
+	 * @maintenancemodel required="true" ordered="false"
 	 * @generated
 	 */
 	ProductStatusEnum getProductStatusEnum();

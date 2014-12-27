@@ -13,15 +13,15 @@ import bookingmodel.*;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Adapter Factory</b> for the model.
- * It provides an adapter <code>createXXX</code> method for each class of the model.
+ * The <b>Adapter Factory</b> for the maintenancemodel.
+ * It provides an adapter <code>createXXX</code> method for each class of the maintenancemodel.
  * <!-- end-user-doc -->
  * @see bookingmodel.ModelPackage
  * @generated
  */
 public class ModelAdapterFactory extends AdapterFactoryImpl {
 	/**
-	 * The cached model package.
+	 * The cached maintenancemodel package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -43,7 +43,7 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * Returns whether this factory is applicable for the type of the object.
 	 * <!-- begin-user-doc -->
-	 * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
+	 * This implementation returns <code>true</code> if the object is either the maintenancemodel's package or is an instance object of the maintenancemodel.
 	 * <!-- end-user-doc -->
 	 * @return whether this factory is applicable for the type of the object.
 	 * @generated
