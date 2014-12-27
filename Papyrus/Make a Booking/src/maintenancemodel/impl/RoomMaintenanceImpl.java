@@ -162,6 +162,8 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public int addRoom(int numberID, String roomType) {
+		
+		this.rooms.addRoom(numberID, roomType);
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

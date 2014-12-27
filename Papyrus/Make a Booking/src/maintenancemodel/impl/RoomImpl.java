@@ -105,7 +105,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	protected RoomImpl(int numberID, String roomType) {
 		this();
 		this.numberID = numberID;
-		this.roomType = null;
+		this.roomType = new RoomTypeImpl();
+		// TODO: Switch beroende på vilken roomType-enum-string som skickas in.
 	}
 
 	/**

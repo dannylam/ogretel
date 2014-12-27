@@ -113,6 +113,8 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * @generated
 	 */
 	public void addRoom(int numberID, String roomType) {
+		Room r = new RoomImpl(numberID, roomType);
+		this.room.add(r);
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
