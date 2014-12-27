@@ -5,10 +5,12 @@ package bookingmodel;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * TODO: Javadoc, glöm inte markera generated NOT när man är klar
- * <!-- begin-user-doc -->
- * A representation of the maintenancemodel object '<em><b>Guest</b></em>'.
- * <!-- end-user-doc -->
+ * A class representing an interface Guest which extends an EObject.
+ * This class has 4 methods;
+ * getRoomNr - return the value of a specific room
+ * setRoomNr - set a number to a specific room
+ * getGuestTypes - return the type of the guest
+ * setGuestTypes - set a type to the guest
  *
  * <p>
  * The following features are supported:
@@ -20,65 +22,46 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see bookingmodel.ModelPackage#getGuest()
  * @maintenancemodel
- * @generated
+ * @generated NOT
  */
 public interface Guest extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Room Nr</b></em>' attribute.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Room Nr</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
+	 * Returns the number of a specific room.
 	 * @return the value of the '<em>Room Nr</em>' attribute.
 	 * @see #setRoomNr(int)
 	 * @see bookingmodel.ModelPackage#getGuest_RoomNr()
 	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int getRoomNr();
 
 	/**
-	 * Sets the value of the '{@link bookingmodel.Guest#getRoomNr <em>Room Nr</em>}' attribute.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Set a number to a specific room.
 	 * @param value the new value of the '<em>Room Nr</em>' attribute.
 	 * @see #getRoomNr()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setRoomNr(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Guest Types</b></em>' attribute.
-	 * The literals are from the enumeration {@link bookingmodel.GuestTypes}.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Guest Types</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
+	 * Get the type of a specific guest.
+	 * There are two types of guests: guest and VIP.
 	 * @return the value of the '<em>Guest Types</em>' attribute.
 	 * @see bookingmodel.GuestTypes
 	 * @see #setGuestTypes(GuestTypes)
 	 * @see bookingmodel.ModelPackage#getGuest_GuestTypes()
 	 * @maintenancemodel required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	GuestTypes getGuestTypes();
 
 	/**
-	 * Sets the value of the '{@link bookingmodel.Guest#getGuestTypes <em>Guest Types</em>}' attribute.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets the type to a guest.
+	 *  * There are two types of guests: guest and VIP.
 	 * @param value the new value of the '<em>Guest Types</em>' attribute.
 	 * @see bookingmodel.GuestTypes
 	 * @see #getGuestTypes()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setGuestTypes(GuestTypes value);
 

@@ -8,11 +8,8 @@ import java.util.List;
 import org.eclipse.emf.common.util.Enumerator;
 
 /**
- * TODO: Javadoc, glöm inte markera generated NOT när man är klar
- * <!-- begin-user-doc -->
  * A representation of the literals of the enumeration '<em><b>Guest Types</b></em>',
  * and utility methods for working with them.
- * <!-- end-user-doc -->
  * @see bookingmodel.ModelPackage#getGuestTypes()
  * @maintenancemodel
  * @generated
@@ -20,92 +17,70 @@ import org.eclipse.emf.common.util.Enumerator;
 public enum GuestTypes implements Enumerator {
 	/**
 	 * The '<em><b>Regular</b></em>' literal object.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @see #REGULAR_VALUE
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
 	REGULAR(0, "Regular", "Regular"),
 
 	/**
 	 * The '<em><b>Black Listed</b></em>' literal object.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @see #BLACK_LISTED_VALUE
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
 	BLACK_LISTED(1, "BlackListed", "BlackListed"),
 
 	/**
 	 * The '<em><b>VIP</b></em>' literal object.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @see #VIP_VALUE
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
 	VIP(2, "VIP", "VIP");
 
 	/**
 	 * The '<em><b>Regular</b></em>' literal value.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Regular</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
-	 * <!-- end-user-doc -->
 	 * @see #REGULAR
 	 * @maintenancemodel name="Regular"
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
 	public static final int REGULAR_VALUE = 0;
 
 	/**
 	 * The '<em><b>Black Listed</b></em>' literal value.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>Black Listed</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
-	 * <!-- end-user-doc -->
 	 * @see #BLACK_LISTED
 	 * @maintenancemodel name="BlackListed"
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
 	public static final int BLACK_LISTED_VALUE = 1;
 
 	/**
 	 * The '<em><b>VIP</b></em>' literal value.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of '<em><b>VIP</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
-	 * <!-- end-user-doc -->
 	 * @see #VIP
 	 * @maintenancemodel
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
 	public static final int VIP_VALUE = 2;
 
 	/**
 	 * An array of all the '<em><b>Guest Types</b></em>' enumerators.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	private static final GuestTypes[] VALUES_ARRAY =
 		new GuestTypes[] {
@@ -116,19 +91,13 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * A public read-only list of all the '<em><b>Guest Types</b></em>' enumerators.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public static final List<GuestTypes> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
 	 * Returns the '<em><b>Guest Types</b></em>' literal with the specified literal value.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public static GuestTypes get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
@@ -142,10 +111,7 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * Returns the '<em><b>Guest Types</b></em>' literal with the specified name.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public static GuestTypes getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
@@ -159,10 +125,7 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * Returns the '<em><b>Guest Types</b></em>' literal with the specified integer value.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public static GuestTypes get(int value) {
 		switch (value) {
@@ -173,79 +136,33 @@ public enum GuestTypes implements Enumerator {
 		return null;
 	}
 
-	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private final int value;
 
-	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private final String name;
 
-	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private final String literal;
 
-	/**
-	 * Only this class can construct instances.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private GuestTypes(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
 	}
 
-	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public int getValue() {
 	  return value;
 	}
 
-	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 	  return name;
 	}
 
-	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getLiteral() {
 	  return literal;
 	}
 
 	/**
 	 * Returns the literal value of the enumerator, which is its string representation.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String toString() {
