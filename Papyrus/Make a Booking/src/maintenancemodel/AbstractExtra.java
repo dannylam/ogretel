@@ -18,8 +18,8 @@ package maintenancemodel;
  * </ul>
  * </p>
  *
- * @see maintenancemodel.ModelPackage#getAbstractExtra()
- * @maintenancemodel
+ * @see maintenancemodel.MaintenancemodelPackage#getAbstractExtra()
+ * @model
  * @generated
  */
 public interface AbstractExtra extends Extra {
@@ -33,8 +33,8 @@ public interface AbstractExtra extends Extra {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ID</em>' attribute.
 	 * @see #setID(String)
-	 * @see maintenancemodel.ModelPackage#getAbstractExtra_ID()
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getAbstractExtra_ID()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getID();
@@ -59,8 +59,8 @@ public interface AbstractExtra extends Extra {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Price</em>' attribute.
 	 * @see #setPrice(int)
-	 * @see maintenancemodel.ModelPackage#getAbstractExtra_Price()
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getAbstractExtra_Price()
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
 	int getPrice();
@@ -85,8 +85,8 @@ public interface AbstractExtra extends Extra {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see maintenancemodel.ModelPackage#getAbstractExtra_Name()
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getAbstractExtra_Name()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getName();
@@ -111,8 +111,8 @@ public interface AbstractExtra extends Extra {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see maintenancemodel.ModelPackage#getAbstractExtra_Description()
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getAbstractExtra_Description()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getDescription();

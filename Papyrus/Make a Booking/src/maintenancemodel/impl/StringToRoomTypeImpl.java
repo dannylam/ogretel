@@ -2,9 +2,8 @@
  */
 package maintenancemodel.impl;
 
-import maintenancemodel.ModelPackage;
+import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.RoomTypeEnum;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEMap;
 import org.eclipse.emf.common.util.EMap;
@@ -84,7 +83,7 @@ public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.STRING_TO_ROOM_TYPE;
+		return MaintenancemodelPackage.Literals.STRING_TO_ROOM_TYPE;
 	}
 
 	/**
@@ -105,7 +104,7 @@ public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implement
 		String oldKey = key;
 		key = newKey;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.STRING_TO_ROOM_TYPE__KEY, oldKey, key));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.STRING_TO_ROOM_TYPE__KEY, oldKey, key));
 	}
 
 	/**
@@ -126,7 +125,7 @@ public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implement
 		RoomTypeEnum oldValue = value;
 		value = newValue == null ? VALUE_EDEFAULT : newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.STRING_TO_ROOM_TYPE__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.STRING_TO_ROOM_TYPE__VALUE, oldValue, value));
 	}
 
 	/**
@@ -137,9 +136,9 @@ public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelPackage.STRING_TO_ROOM_TYPE__KEY:
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE__KEY:
 				return getTypedKey();
-			case ModelPackage.STRING_TO_ROOM_TYPE__VALUE:
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE__VALUE:
 				return getTypedValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -153,10 +152,10 @@ public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelPackage.STRING_TO_ROOM_TYPE__KEY:
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE__KEY:
 				setTypedKey((String)newValue);
 				return;
-			case ModelPackage.STRING_TO_ROOM_TYPE__VALUE:
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE__VALUE:
 				setTypedValue((RoomTypeEnum)newValue);
 				return;
 		}
@@ -171,10 +170,10 @@ public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelPackage.STRING_TO_ROOM_TYPE__KEY:
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE__KEY:
 				setTypedKey(KEY_EDEFAULT);
 				return;
-			case ModelPackage.STRING_TO_ROOM_TYPE__VALUE:
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE__VALUE:
 				setTypedValue(VALUE_EDEFAULT);
 				return;
 		}
@@ -189,9 +188,9 @@ public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelPackage.STRING_TO_ROOM_TYPE__KEY:
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE__KEY:
 				return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
-			case ModelPackage.STRING_TO_ROOM_TYPE__VALUE:
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE__VALUE:
 				return value != VALUE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

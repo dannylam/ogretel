@@ -4,11 +4,9 @@ package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
-
 import maintenancemodel.Extra;
 import maintenancemodel.ExtraHandler;
-import maintenancemodel.ModelPackage;
-
+import maintenancemodel.MaintenancemodelPackage;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -71,7 +69,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.EXTRA_HANDLER;
+		return MaintenancemodelPackage.Literals.EXTRA_HANDLER;
 	}
 
 	/**
@@ -81,7 +79,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	 */
 	public EList<Extra> getExtra() {
 		if (extra == null) {
-			extra = new EObjectResolvingEList<Extra>(Extra.class, this, ModelPackage.EXTRA_HANDLER__EXTRA);
+			extra = new EObjectResolvingEList<Extra>(Extra.class, this, MaintenancemodelPackage.EXTRA_HANDLER__EXTRA);
 		}
 		return extra;
 	}
@@ -93,7 +91,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	 */
 	public EMap<Integer, Extra> getIntToExtraMap() {
 		if (intToExtraMap == null) {
-			intToExtraMap = new EcoreEMap<Integer,Extra>(ModelPackage.Literals.INTEGER_TO_EXTRA_MAP, IntegerToExtraMapImpl.class, this, ModelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP);
+			intToExtraMap = new EcoreEMap<Integer,Extra>(MaintenancemodelPackage.Literals.INTEGER_TO_EXTRA_MAP, IntegerToExtraMapImpl.class, this, MaintenancemodelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP);
 		}
 		return intToExtraMap;
 	}
@@ -150,7 +148,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
+			case MaintenancemodelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
 				return ((InternalEList<?>)getIntToExtraMap()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -164,9 +162,9 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelPackage.EXTRA_HANDLER__EXTRA:
+			case MaintenancemodelPackage.EXTRA_HANDLER__EXTRA:
 				return getExtra();
-			case ModelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
+			case MaintenancemodelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
 				if (coreType) return getIntToExtraMap();
 				else return getIntToExtraMap().map();
 		}
@@ -182,11 +180,11 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelPackage.EXTRA_HANDLER__EXTRA:
+			case MaintenancemodelPackage.EXTRA_HANDLER__EXTRA:
 				getExtra().clear();
 				getExtra().addAll((Collection<? extends Extra>)newValue);
 				return;
-			case ModelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
+			case MaintenancemodelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
 				((EStructuralFeature.Setting)getIntToExtraMap()).set(newValue);
 				return;
 		}
@@ -201,10 +199,10 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelPackage.EXTRA_HANDLER__EXTRA:
+			case MaintenancemodelPackage.EXTRA_HANDLER__EXTRA:
 				getExtra().clear();
 				return;
-			case ModelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
+			case MaintenancemodelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
 				getIntToExtraMap().clear();
 				return;
 		}
@@ -219,9 +217,9 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelPackage.EXTRA_HANDLER__EXTRA:
+			case MaintenancemodelPackage.EXTRA_HANDLER__EXTRA:
 				return extra != null && !extra.isEmpty();
-			case ModelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
+			case MaintenancemodelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
 				return intToExtraMap != null && !intToExtraMap.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -235,15 +233,15 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ModelPackage.EXTRA_HANDLER___EXISTS__INT:
+			case MaintenancemodelPackage.EXTRA_HANDLER___EXISTS__INT:
 				return exists((Integer)arguments.get(0));
-			case ModelPackage.EXTRA_HANDLER___ADD_EXTRA__INT_STRING_STRING_STRING:
+			case MaintenancemodelPackage.EXTRA_HANDLER___ADD_EXTRA__INT_STRING_STRING_STRING:
 				addExtra((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 				return null;
-			case ModelPackage.EXTRA_HANDLER___REMOVE_EXTRA__EXTRA:
+			case MaintenancemodelPackage.EXTRA_HANDLER___REMOVE_EXTRA__EXTRA:
 				removeExtra((Extra)arguments.get(0));
 				return null;
-			case ModelPackage.EXTRA_HANDLER___GET_EXTRA__INT:
+			case MaintenancemodelPackage.EXTRA_HANDLER___GET_EXTRA__INT:
 				return getExtra((Integer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

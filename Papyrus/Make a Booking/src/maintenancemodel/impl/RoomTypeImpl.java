@@ -3,11 +3,9 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
-import maintenancemodel.ModelPackage;
+import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.RoomType;
 import maintenancemodel.RoomTypeEnum;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -127,7 +125,7 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.ROOM_TYPE;
+		return MaintenancemodelPackage.Literals.ROOM_TYPE;
 	}
 
 	/**
@@ -148,7 +146,7 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 		int oldPrice = price;
 		price = newPrice;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ROOM_TYPE__PRICE, oldPrice, price));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ROOM_TYPE__PRICE, oldPrice, price));
 	}
 
 	/**
@@ -169,7 +167,7 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 		int oldMaxNrOfGuests = maxNrOfGuests;
 		maxNrOfGuests = newMaxNrOfGuests;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ROOM_TYPE__MAX_NR_OF_GUESTS, oldMaxNrOfGuests, maxNrOfGuests));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ROOM_TYPE__MAX_NR_OF_GUESTS, oldMaxNrOfGuests, maxNrOfGuests));
 	}
 
 	/**
@@ -190,7 +188,7 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ROOM_TYPE__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ROOM_TYPE__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -211,7 +209,7 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 		RoomTypeEnum oldRoomTypeEnum = roomTypeEnum;
 		roomTypeEnum = newRoomTypeEnum == null ? ROOM_TYPE_ENUM_EDEFAULT : newRoomTypeEnum;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ROOM_TYPE__ROOM_TYPE_ENUM, oldRoomTypeEnum, roomTypeEnum));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ENUM, oldRoomTypeEnum, roomTypeEnum));
 	}
 
 	/**
@@ -233,13 +231,13 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelPackage.ROOM_TYPE__PRICE:
+			case MaintenancemodelPackage.ROOM_TYPE__PRICE:
 				return getPrice();
-			case ModelPackage.ROOM_TYPE__MAX_NR_OF_GUESTS:
+			case MaintenancemodelPackage.ROOM_TYPE__MAX_NR_OF_GUESTS:
 				return getMaxNrOfGuests();
-			case ModelPackage.ROOM_TYPE__DESCRIPTION:
+			case MaintenancemodelPackage.ROOM_TYPE__DESCRIPTION:
 				return getDescription();
-			case ModelPackage.ROOM_TYPE__ROOM_TYPE_ENUM:
+			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ENUM:
 				return getRoomTypeEnum();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -253,16 +251,16 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelPackage.ROOM_TYPE__PRICE:
+			case MaintenancemodelPackage.ROOM_TYPE__PRICE:
 				setPrice((Integer)newValue);
 				return;
-			case ModelPackage.ROOM_TYPE__MAX_NR_OF_GUESTS:
+			case MaintenancemodelPackage.ROOM_TYPE__MAX_NR_OF_GUESTS:
 				setMaxNrOfGuests((Integer)newValue);
 				return;
-			case ModelPackage.ROOM_TYPE__DESCRIPTION:
+			case MaintenancemodelPackage.ROOM_TYPE__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
-			case ModelPackage.ROOM_TYPE__ROOM_TYPE_ENUM:
+			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ENUM:
 				setRoomTypeEnum((RoomTypeEnum)newValue);
 				return;
 		}
@@ -277,16 +275,16 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelPackage.ROOM_TYPE__PRICE:
+			case MaintenancemodelPackage.ROOM_TYPE__PRICE:
 				setPrice(PRICE_EDEFAULT);
 				return;
-			case ModelPackage.ROOM_TYPE__MAX_NR_OF_GUESTS:
+			case MaintenancemodelPackage.ROOM_TYPE__MAX_NR_OF_GUESTS:
 				setMaxNrOfGuests(MAX_NR_OF_GUESTS_EDEFAULT);
 				return;
-			case ModelPackage.ROOM_TYPE__DESCRIPTION:
+			case MaintenancemodelPackage.ROOM_TYPE__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case ModelPackage.ROOM_TYPE__ROOM_TYPE_ENUM:
+			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ENUM:
 				setRoomTypeEnum(ROOM_TYPE_ENUM_EDEFAULT);
 				return;
 		}
@@ -301,13 +299,13 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelPackage.ROOM_TYPE__PRICE:
+			case MaintenancemodelPackage.ROOM_TYPE__PRICE:
 				return price != PRICE_EDEFAULT;
-			case ModelPackage.ROOM_TYPE__MAX_NR_OF_GUESTS:
+			case MaintenancemodelPackage.ROOM_TYPE__MAX_NR_OF_GUESTS:
 				return maxNrOfGuests != MAX_NR_OF_GUESTS_EDEFAULT;
-			case ModelPackage.ROOM_TYPE__DESCRIPTION:
+			case MaintenancemodelPackage.ROOM_TYPE__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case ModelPackage.ROOM_TYPE__ROOM_TYPE_ENUM:
+			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ENUM:
 				return roomTypeEnum != ROOM_TYPE_ENUM_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -321,7 +319,7 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ModelPackage.ROOM_TYPE___GET_ROOM_TYPE__STRING:
+			case MaintenancemodelPackage.ROOM_TYPE___GET_ROOM_TYPE__STRING:
 				return getRoomType((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);

@@ -2,10 +2,9 @@
  */
 package maintenancemodel.impl;
 
-import maintenancemodel.ModelPackage;
+import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.Product;
 import maintenancemodel.ProductStatusEnum;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -81,7 +80,7 @@ public class ProductImpl extends AbstractExtraImpl implements Product {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.PRODUCT;
+		return MaintenancemodelPackage.Literals.PRODUCT;
 	}
 
 	/**
@@ -102,7 +101,7 @@ public class ProductImpl extends AbstractExtraImpl implements Product {
 		int oldStock = stock;
 		stock = newStock;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PRODUCT__STOCK, oldStock, stock));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.PRODUCT__STOCK, oldStock, stock));
 	}
 
 	/**
@@ -123,7 +122,7 @@ public class ProductImpl extends AbstractExtraImpl implements Product {
 		ProductStatusEnum oldProductStatusEnum = productStatusEnum;
 		productStatusEnum = newProductStatusEnum == null ? PRODUCT_STATUS_ENUM_EDEFAULT : newProductStatusEnum;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PRODUCT__PRODUCT_STATUS_ENUM, oldProductStatusEnum, productStatusEnum));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.PRODUCT__PRODUCT_STATUS_ENUM, oldProductStatusEnum, productStatusEnum));
 	}
 
 	/**
@@ -134,9 +133,9 @@ public class ProductImpl extends AbstractExtraImpl implements Product {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelPackage.PRODUCT__STOCK:
+			case MaintenancemodelPackage.PRODUCT__STOCK:
 				return getStock();
-			case ModelPackage.PRODUCT__PRODUCT_STATUS_ENUM:
+			case MaintenancemodelPackage.PRODUCT__PRODUCT_STATUS_ENUM:
 				return getProductStatusEnum();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -150,10 +149,10 @@ public class ProductImpl extends AbstractExtraImpl implements Product {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelPackage.PRODUCT__STOCK:
+			case MaintenancemodelPackage.PRODUCT__STOCK:
 				setStock((Integer)newValue);
 				return;
-			case ModelPackage.PRODUCT__PRODUCT_STATUS_ENUM:
+			case MaintenancemodelPackage.PRODUCT__PRODUCT_STATUS_ENUM:
 				setProductStatusEnum((ProductStatusEnum)newValue);
 				return;
 		}
@@ -168,10 +167,10 @@ public class ProductImpl extends AbstractExtraImpl implements Product {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelPackage.PRODUCT__STOCK:
+			case MaintenancemodelPackage.PRODUCT__STOCK:
 				setStock(STOCK_EDEFAULT);
 				return;
-			case ModelPackage.PRODUCT__PRODUCT_STATUS_ENUM:
+			case MaintenancemodelPackage.PRODUCT__PRODUCT_STATUS_ENUM:
 				setProductStatusEnum(PRODUCT_STATUS_ENUM_EDEFAULT);
 				return;
 		}
@@ -186,9 +185,9 @@ public class ProductImpl extends AbstractExtraImpl implements Product {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelPackage.PRODUCT__STOCK:
+			case MaintenancemodelPackage.PRODUCT__STOCK:
 				return stock != STOCK_EDEFAULT;
-			case ModelPackage.PRODUCT__PRODUCT_STATUS_ENUM:
+			case MaintenancemodelPackage.PRODUCT__PRODUCT_STATUS_ENUM:
 				return productStatusEnum != PRODUCT_STATUS_ENUM_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

@@ -21,8 +21,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see maintenancemodel.ModelPackage#getCalendar()
- * @maintenancemodel
+ * @see maintenancemodel.MaintenancemodelPackage#getCalendar()
+ * @model
  * @generated
  */
 public interface Calendar extends EObject {
@@ -36,8 +36,8 @@ public interface Calendar extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Room Type Cap Table</em>' reference list.
-	 * @see maintenancemodel.ModelPackage#getCalendar_RoomTypeCapTable()
-	 * @maintenancemodel ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getCalendar_RoomTypeCapTable()
+	 * @model ordered="false"
 	 * @generated
 	 */
 	EList<RoomTypesHandler> getRoomTypeCapTable();
@@ -52,8 +52,8 @@ public interface Calendar extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>String To Lists Map</em>' map.
 	 * @see #setStringToListsMap(Map.Entry)
-	 * @see maintenancemodel.ModelPackage#getCalendar_StringToListsMap()
-	 * @maintenancemodel mapType="maintenancemodel.StringToListsMap<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EIntegerObject>" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getCalendar_StringToListsMap()
+	 * @model mapType="maintenancemodel.StringToListsMap<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EIntegerObject>" ordered="false"
 	 * @generated
 	 */
 	Map.Entry<String, EList<Integer>> getStringToListsMap();
@@ -71,7 +71,7 @@ public interface Calendar extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false"
 	 * @generated
 	 */
 	EList<Integer> getCap(int start, int end, String roomType);
@@ -79,7 +79,7 @@ public interface Calendar extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @maintenancemodel startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false" nrOfRoomsDataType="org.eclipse.uml2.types.Integer" nrOfRoomsRequired="true" nrOfRoomsOrdered="false"
+	 * @model startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false" nrOfRoomsDataType="org.eclipse.uml2.types.Integer" nrOfRoomsRequired="true" nrOfRoomsOrdered="false"
 	 * @generated
 	 */
 	void setCap(int start, int end, String roomType, int nrOfRooms);

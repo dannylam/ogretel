@@ -295,8 +295,12 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_ePi-EHmwEeScv6HJEKdjpA" name="getRooms" concurrency="concurrent"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_fUo94HmwEeScv6HJEKdjpA" name="getRoomTypes"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ePi-EHmwEeScv6HJEKdjpA" name="getRoomHandler" concurrency="concurrent">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_UsDkcI3OEeSb_cQ9NLV5hw" name="rooms" type="_1MwOMHlDEeScv6HJEKdjpA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_fUo94HmwEeScv6HJEKdjpA" name="getRoomTypeHandler">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_eYgboI3OEeSb_cQ9NLV5hw" name="roomTypes" type="_GrhyMHlEEeScv6HJEKdjpA" direction="return"/>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_5RQ-MH2xEeSp56Ha0EyLeQ" name="getRoom" visibility="public" concurrency="concurrent">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_5RQ-MX2xEeSp56Ha0EyLeQ" name="ID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -375,11 +379,14 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="__GwhIHmvEeScv6HJEKdjpA" name="removeExtra">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="__GwhIXmvEeScv6HJEKdjpA" name="extra" type="_eltssHk_EeScv6HJEKdjpA"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_2_tFAHmwEeScv6HJEKdjpA" name="getExtras"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2_tFAHmwEeScv6HJEKdjpA" name="getExtras">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_L_hVUI3SEeSb_cQ9NLV5hw" name="extras" type="__LaFIHlCEeScv6HJEKdjpA" direction="return"/>
+      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_jLGSEHmwEeScv6HJEKdjpA" name="getExtra">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_jLGSEXmwEeScv6HJEKdjpA" name="ID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_bSLnEI3SEeSb_cQ9NLV5hw" name="extra" type="_eltssHk_EeScv6HJEKdjpA" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_8ggkoIREEeSbvJ56HGFnrw" name="editExtra">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_8ggkoYREEeSbvJ56HGFnrw" name="price">
@@ -411,6 +418,7 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_U07VQX23EeSp56Ha0EyLeQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U07VQn23EeSp56Ha0EyLeQ" value="1"/>
       </ownedAttribute>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_uugHwI3QEeSb_cQ9NLV5hw" client="_iwviIH2yEeSp56Ha0EyLeQ" supplier="_VHpEoH2xEeSp56Ha0EyLeQ" contract="_VHpEoH2xEeSp56Ha0EyLeQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_w1eBIH2yEeSp56Ha0EyLeQ" name="MaintenanceProvidesForBooking">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_u8H9EH22EeSp56Ha0EyLeQ" name="calendar" type="_k4694HlEEeScv6HJEKdjpA" association="_u8IkIH22EeSp56Ha0EyLeQ">
@@ -481,7 +489,6 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Realization" xmi:id="_ftx1gH20EeSp56Ha0EyLeQ" client="_YvWVsH2yEeSp56Ha0EyLeQ" supplier="_dj3DAH2xEeSp56Ha0EyLeQ"/>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_mTTYAH20EeSp56Ha0EyLeQ" client="_iwviIH2yEeSp56Ha0EyLeQ" supplier="_VHpEoH2xEeSp56Ha0EyLeQ"/>
     <packagedElement xmi:type="uml:Realization" xmi:id="_nx5c8H20EeSp56Ha0EyLeQ" client="_w1eBIH2yEeSp56Ha0EyLeQ" supplier="_zIK1YHlFEeScv6HJEKdjpA"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_JJ2gI321EeSp56Ha0EyLeQ" memberEnd="_JJ2gJH21EeSp56Ha0EyLeQ _JJ2gIH21EeSp56Ha0EyLeQ">
       <ownedEnd xmi:type="uml:Property" xmi:id="_JJ2gJH21EeSp56Ha0EyLeQ" name="extrasMaintenance" type="_YvWVsH2yEeSp56Ha0EyLeQ" association="_JJ2gI321EeSp56Ha0EyLeQ">

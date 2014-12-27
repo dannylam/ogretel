@@ -2,7 +2,6 @@
  */
 package maintenancemodel;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,11 +15,11 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see maintenancemodel.ModelPackage#getExtrasMaintenance()
- * @maintenancemodel
+ * @see maintenancemodel.MaintenancemodelPackage#getExtrasMaintenance()
+ * @model
  * @generated
  */
-public interface ExtrasMaintenance extends EObject {
+public interface ExtrasMaintenance extends IExtrasMaintenance {
 	/**
 	 * Returns the value of the '<em><b>Extras</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -31,8 +30,8 @@ public interface ExtrasMaintenance extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Extras</em>' containment reference.
 	 * @see #setExtras(ExtraHandler)
-	 * @see maintenancemodel.ModelPackage#getExtrasMaintenance_Extras()
-	 * @maintenancemodel containment="true" required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getExtrasMaintenance_Extras()
+	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	ExtraHandler getExtras();

@@ -16,8 +16,8 @@ package maintenancemodel;
  * </ul>
  * </p>
  *
- * @see maintenancemodel.ModelPackage#getExperience()
- * @maintenancemodel
+ * @see maintenancemodel.MaintenancemodelPackage#getExperience()
+ * @model
  * @generated
  */
 public interface Experience extends AbstractExtra {
@@ -31,8 +31,8 @@ public interface Experience extends AbstractExtra {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nr Of Spots</em>' attribute.
 	 * @see #setNrOfSpots(int)
-	 * @see maintenancemodel.ModelPackage#getExperience_NrOfSpots()
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getExperience_NrOfSpots()
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
 	int getNrOfSpots();
@@ -59,8 +59,8 @@ public interface Experience extends AbstractExtra {
 	 * @return the value of the '<em>Experience Status Enum</em>' attribute.
 	 * @see maintenancemodel.ExperienceStatusEnum
 	 * @see #setExperienceStatusEnum(ExperienceStatusEnum)
-	 * @see maintenancemodel.ModelPackage#getExperience_ExperienceStatusEnum()
-	 * @maintenancemodel required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getExperience_ExperienceStatusEnum()
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	ExperienceStatusEnum getExperienceStatusEnum();

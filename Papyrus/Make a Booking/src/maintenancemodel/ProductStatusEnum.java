@@ -13,8 +13,8 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Product Status Enum</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see maintenancemodel.ModelPackage#getProductStatusEnum()
- * @maintenancemodel
+ * @see maintenancemodel.MaintenancemodelPackage#getProductStatusEnum()
+ * @model
  * @generated
  */
 public enum ProductStatusEnum implements Enumerator {
@@ -57,7 +57,7 @@ public enum ProductStatusEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #IN_STOCK
-	 * @maintenancemodel name="inStock"
+	 * @model name="inStock"
 	 * @generated
 	 * @ordered
 	 */
@@ -72,7 +72,7 @@ public enum ProductStatusEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #OUT_OF_STOCK
-	 * @maintenancemodel name="outOfStock"
+	 * @model name="outOfStock"
 	 * @generated
 	 * @ordered
 	 */
@@ -87,7 +87,7 @@ public enum ProductStatusEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #RESTOCKING
-	 * @maintenancemodel name="restocking"
+	 * @model name="restocking"
 	 * @generated
 	 * @ordered
 	 */

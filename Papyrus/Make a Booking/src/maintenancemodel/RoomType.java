@@ -19,8 +19,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see maintenancemodel.ModelPackage#getRoomType()
- * @maintenancemodel
+ * @see maintenancemodel.MaintenancemodelPackage#getRoomType()
+ * @model
  * @generated
  */
 public interface RoomType extends EObject {
@@ -34,8 +34,8 @@ public interface RoomType extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Price</em>' attribute.
 	 * @see #setPrice(int)
-	 * @see maintenancemodel.ModelPackage#getRoomType_Price()
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getRoomType_Price()
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
 	int getPrice();
@@ -60,8 +60,8 @@ public interface RoomType extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Max Nr Of Guests</em>' attribute.
 	 * @see #setMaxNrOfGuests(int)
-	 * @see maintenancemodel.ModelPackage#getRoomType_MaxNrOfGuests()
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getRoomType_MaxNrOfGuests()
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
 	int getMaxNrOfGuests();
@@ -86,8 +86,8 @@ public interface RoomType extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' attribute.
 	 * @see #setDescription(String)
-	 * @see maintenancemodel.ModelPackage#getRoomType_Description()
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getRoomType_Description()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getDescription();
@@ -114,8 +114,8 @@ public interface RoomType extends EObject {
 	 * @return the value of the '<em>Room Type Enum</em>' attribute.
 	 * @see maintenancemodel.RoomTypeEnum
 	 * @see #setRoomTypeEnum(RoomTypeEnum)
-	 * @see maintenancemodel.ModelPackage#getRoomType_RoomTypeEnum()
-	 * @maintenancemodel required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getRoomType_RoomTypeEnum()
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	RoomTypeEnum getRoomTypeEnum();
@@ -134,7 +134,7 @@ public interface RoomType extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @maintenancemodel required="true" ordered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false"
+	 * @model required="true" ordered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false"
 	 * @generated
 	 */
 	RoomTypeEnum getRoomType(String name);

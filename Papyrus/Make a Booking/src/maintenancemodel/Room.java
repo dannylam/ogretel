@@ -18,8 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see maintenancemodel.ModelPackage#getRoom()
- * @maintenancemodel
+ * @see maintenancemodel.MaintenancemodelPackage#getRoom()
+ * @model
  * @generated
  */
 public interface Room extends EObject {
@@ -33,8 +33,8 @@ public interface Room extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Number ID</em>' attribute.
 	 * @see #setNumberID(int)
-	 * @see maintenancemodel.ModelPackage#getRoom_NumberID()
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getRoom_NumberID()
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
 	int getNumberID();
@@ -61,8 +61,8 @@ public interface Room extends EObject {
 	 * @return the value of the '<em>Room Status Enum</em>' attribute.
 	 * @see maintenancemodel.RoomStatusEnum
 	 * @see #setRoomStatusEnum(RoomStatusEnum)
-	 * @see maintenancemodel.ModelPackage#getRoom_RoomStatusEnum()
-	 * @maintenancemodel required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getRoom_RoomStatusEnum()
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	RoomStatusEnum getRoomStatusEnum();
@@ -88,8 +88,8 @@ public interface Room extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Room Type</em>' reference.
 	 * @see #setRoomType(RoomType)
-	 * @see maintenancemodel.ModelPackage#getRoom_RoomType()
-	 * @maintenancemodel required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getRoom_RoomType()
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	RoomType getRoomType();

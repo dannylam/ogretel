@@ -2,7 +2,6 @@
  */
 package maintenancemodel;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,11 +17,11 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see maintenancemodel.ModelPackage#getMaintenanceProvidesForBooking()
- * @maintenancemodel
+ * @see maintenancemodel.MaintenancemodelPackage#getMaintenanceProvidesForBooking()
+ * @model
  * @generated
  */
-public interface MaintenanceProvidesForBooking extends EObject {
+public interface MaintenanceProvidesForBooking extends IMaintenanceProvidesForBooking {
 	/**
 	 * Returns the value of the '<em><b>Calendar</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -33,8 +32,8 @@ public interface MaintenanceProvidesForBooking extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Calendar</em>' reference.
 	 * @see #setCalendar(Calendar)
-	 * @see maintenancemodel.ModelPackage#getMaintenanceProvidesForBooking_Calendar()
-	 * @maintenancemodel required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getMaintenanceProvidesForBooking_Calendar()
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	Calendar getCalendar();
@@ -59,8 +58,8 @@ public interface MaintenanceProvidesForBooking extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Room Types</em>' containment reference.
 	 * @see #setRoomTypes(RoomTypesHandler)
-	 * @see maintenancemodel.ModelPackage#getMaintenanceProvidesForBooking_RoomTypes()
-	 * @maintenancemodel containment="true" required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getMaintenanceProvidesForBooking_RoomTypes()
+	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	RoomTypesHandler getRoomTypes();
@@ -85,8 +84,8 @@ public interface MaintenanceProvidesForBooking extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rooms</em>' containment reference.
 	 * @see #setRooms(RoomHandler)
-	 * @see maintenancemodel.ModelPackage#getMaintenanceProvidesForBooking_Rooms()
-	 * @maintenancemodel containment="true" required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getMaintenanceProvidesForBooking_Rooms()
+	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	RoomHandler getRooms();

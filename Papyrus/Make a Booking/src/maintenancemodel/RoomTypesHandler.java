@@ -20,8 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see maintenancemodel.ModelPackage#getRoomTypesHandler()
- * @maintenancemodel
+ * @see maintenancemodel.MaintenancemodelPackage#getRoomTypesHandler()
+ * @model
  * @generated
  */
 public interface RoomTypesHandler extends EObject {
@@ -35,8 +35,8 @@ public interface RoomTypesHandler extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Room Type</em>' reference list.
-	 * @see maintenancemodel.ModelPackage#getRoomTypesHandler_RoomType()
-	 * @maintenancemodel ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getRoomTypesHandler_RoomType()
+	 * @model ordered="false"
 	 * @generated
 	 */
 	EList<RoomType> getRoomType();
@@ -52,8 +52,8 @@ public interface RoomTypesHandler extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>String To Room Type</em>' map.
-	 * @see maintenancemodel.ModelPackage#getRoomTypesHandler_StringToRoomType()
-	 * @maintenancemodel mapType="maintenancemodel.StringToRoomType<org.eclipse.emf.ecore.EString, maintenancemodel.RoomTypeEnum>" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getRoomTypesHandler_StringToRoomType()
+	 * @model mapType="maintenancemodel.StringToRoomType<org.eclipse.emf.ecore.EString, maintenancemodel.RoomTypeEnum>" ordered="false"
 	 * @generated
 	 */
 	EMap<String, RoomTypeEnum> getStringToRoomType();
@@ -61,7 +61,7 @@ public interface RoomTypesHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" IDDataType="org.eclipse.uml2.types.Integer" IDRequired="true" IDOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" IDDataType="org.eclipse.uml2.types.Integer" IDRequired="true" IDOrdered="false"
 	 * @generated
 	 */
 	boolean exists(int ID);
@@ -69,7 +69,7 @@ public interface RoomTypesHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @maintenancemodel roomTypeRequired="true" roomTypeOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" maxNrOfGuestsDataType="org.eclipse.uml2.types.Integer" maxNrOfGuestsRequired="true" maxNrOfGuestsOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
+	 * @model roomTypeRequired="true" roomTypeOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" maxNrOfGuestsDataType="org.eclipse.uml2.types.Integer" maxNrOfGuestsRequired="true" maxNrOfGuestsOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
 	 * @generated
 	 */
 	void addRoomType(String roomType, int price, int maxNrOfGuests, String description);
@@ -77,7 +77,7 @@ public interface RoomTypesHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @maintenancemodel roomTypeRequired="true" roomTypeOrdered="false"
+	 * @model roomTypeRequired="true" roomTypeOrdered="false"
 	 * @generated
 	 */
 	void removeRoomType(RoomType roomType);

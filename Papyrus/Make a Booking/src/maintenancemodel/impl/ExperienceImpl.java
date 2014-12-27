@@ -4,8 +4,7 @@ package maintenancemodel.impl;
 
 import maintenancemodel.Experience;
 import maintenancemodel.ExperienceStatusEnum;
-import maintenancemodel.ModelPackage;
-
+import maintenancemodel.MaintenancemodelPackage;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -81,7 +80,7 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.EXPERIENCE;
+		return MaintenancemodelPackage.Literals.EXPERIENCE;
 	}
 
 	/**
@@ -102,7 +101,7 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 		int oldNrOfSpots = nrOfSpots;
 		nrOfSpots = newNrOfSpots;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.EXPERIENCE__NR_OF_SPOTS, oldNrOfSpots, nrOfSpots));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.EXPERIENCE__NR_OF_SPOTS, oldNrOfSpots, nrOfSpots));
 	}
 
 	/**
@@ -123,7 +122,7 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 		ExperienceStatusEnum oldExperienceStatusEnum = experienceStatusEnum;
 		experienceStatusEnum = newExperienceStatusEnum == null ? EXPERIENCE_STATUS_ENUM_EDEFAULT : newExperienceStatusEnum;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.EXPERIENCE__EXPERIENCE_STATUS_ENUM, oldExperienceStatusEnum, experienceStatusEnum));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.EXPERIENCE__EXPERIENCE_STATUS_ENUM, oldExperienceStatusEnum, experienceStatusEnum));
 	}
 
 	/**
@@ -134,9 +133,9 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelPackage.EXPERIENCE__NR_OF_SPOTS:
+			case MaintenancemodelPackage.EXPERIENCE__NR_OF_SPOTS:
 				return getNrOfSpots();
-			case ModelPackage.EXPERIENCE__EXPERIENCE_STATUS_ENUM:
+			case MaintenancemodelPackage.EXPERIENCE__EXPERIENCE_STATUS_ENUM:
 				return getExperienceStatusEnum();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -150,10 +149,10 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelPackage.EXPERIENCE__NR_OF_SPOTS:
+			case MaintenancemodelPackage.EXPERIENCE__NR_OF_SPOTS:
 				setNrOfSpots((Integer)newValue);
 				return;
-			case ModelPackage.EXPERIENCE__EXPERIENCE_STATUS_ENUM:
+			case MaintenancemodelPackage.EXPERIENCE__EXPERIENCE_STATUS_ENUM:
 				setExperienceStatusEnum((ExperienceStatusEnum)newValue);
 				return;
 		}
@@ -168,10 +167,10 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelPackage.EXPERIENCE__NR_OF_SPOTS:
+			case MaintenancemodelPackage.EXPERIENCE__NR_OF_SPOTS:
 				setNrOfSpots(NR_OF_SPOTS_EDEFAULT);
 				return;
-			case ModelPackage.EXPERIENCE__EXPERIENCE_STATUS_ENUM:
+			case MaintenancemodelPackage.EXPERIENCE__EXPERIENCE_STATUS_ENUM:
 				setExperienceStatusEnum(EXPERIENCE_STATUS_ENUM_EDEFAULT);
 				return;
 		}
@@ -186,9 +185,9 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelPackage.EXPERIENCE__NR_OF_SPOTS:
+			case MaintenancemodelPackage.EXPERIENCE__NR_OF_SPOTS:
 				return nrOfSpots != NR_OF_SPOTS_EDEFAULT;
-			case ModelPackage.EXPERIENCE__EXPERIENCE_STATUS_ENUM:
+			case MaintenancemodelPackage.EXPERIENCE__EXPERIENCE_STATUS_ENUM:
 				return experienceStatusEnum != EXPERIENCE_STATUS_ENUM_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

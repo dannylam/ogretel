@@ -20,8 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see maintenancemodel.ModelPackage#getExtraHandler()
- * @maintenancemodel
+ * @see maintenancemodel.MaintenancemodelPackage#getExtraHandler()
+ * @model
  * @generated
  */
 public interface ExtraHandler extends EObject {
@@ -35,8 +35,8 @@ public interface ExtraHandler extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Extra</em>' reference list.
-	 * @see maintenancemodel.ModelPackage#getExtraHandler_Extra()
-	 * @maintenancemodel ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getExtraHandler_Extra()
+	 * @model ordered="false"
 	 * @generated
 	 */
 	EList<Extra> getExtra();
@@ -52,8 +52,8 @@ public interface ExtraHandler extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Int To Extra Map</em>' map.
-	 * @see maintenancemodel.ModelPackage#getExtraHandler_IntToExtraMap()
-	 * @maintenancemodel mapType="maintenancemodel.IntegerToExtraMap<org.eclipse.emf.ecore.EIntegerObject, maintenancemodel.Extra>" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getExtraHandler_IntToExtraMap()
+	 * @model mapType="maintenancemodel.IntegerToExtraMap<org.eclipse.emf.ecore.EIntegerObject, maintenancemodel.Extra>" ordered="false"
 	 * @generated
 	 */
 	EMap<Integer, Extra> getIntToExtraMap();
@@ -61,7 +61,7 @@ public interface ExtraHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" IDDataType="org.eclipse.uml2.types.Integer" IDRequired="true" IDOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" IDDataType="org.eclipse.uml2.types.Integer" IDRequired="true" IDOrdered="false"
 	 * @generated
 	 */
 	boolean exists(int ID);
@@ -69,7 +69,7 @@ public interface ExtraHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @maintenancemodel priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" IDDataType="org.eclipse.uml2.types.String" IDRequired="true" IDOrdered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
+	 * @model priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" IDDataType="org.eclipse.uml2.types.String" IDRequired="true" IDOrdered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
 	 * @generated
 	 */
 	void addExtra(int price, String ID, String name, String description);
@@ -77,7 +77,7 @@ public interface ExtraHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @maintenancemodel extraRequired="true" extraOrdered="false"
+	 * @model extraRequired="true" extraOrdered="false"
 	 * @generated
 	 */
 	void removeExtra(Extra extra);
@@ -85,7 +85,7 @@ public interface ExtraHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @maintenancemodel required="true" ordered="false" IDDataType="org.eclipse.uml2.types.Integer" IDRequired="true" IDOrdered="false"
+	 * @model required="true" ordered="false" IDDataType="org.eclipse.uml2.types.Integer" IDRequired="true" IDOrdered="false"
 	 * @generated
 	 */
 	Extra getExtra(int ID);

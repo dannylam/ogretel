@@ -4,12 +4,10 @@ package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
-
-import maintenancemodel.ModelPackage;
+import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.RoomType;
 import maintenancemodel.RoomTypeEnum;
 import maintenancemodel.RoomTypesHandler;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -72,7 +70,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.ROOM_TYPES_HANDLER;
+		return MaintenancemodelPackage.Literals.ROOM_TYPES_HANDLER;
 	}
 
 	/**
@@ -82,7 +80,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public EList<RoomType> getRoomType() {
 		if (roomType == null) {
-			roomType = new EObjectResolvingEList<RoomType>(RoomType.class, this, ModelPackage.ROOM_TYPES_HANDLER__ROOM_TYPE);
+			roomType = new EObjectResolvingEList<RoomType>(RoomType.class, this, MaintenancemodelPackage.ROOM_TYPES_HANDLER__ROOM_TYPE);
 		}
 		return roomType;
 	}
@@ -94,7 +92,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public EMap<String, RoomTypeEnum> getStringToRoomType() {
 		if (stringToRoomType == null) {
-			stringToRoomType = new EcoreEMap<String,RoomTypeEnum>(ModelPackage.Literals.STRING_TO_ROOM_TYPE, StringToRoomTypeImpl.class, this, ModelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE);
+			stringToRoomType = new EcoreEMap<String,RoomTypeEnum>(MaintenancemodelPackage.Literals.STRING_TO_ROOM_TYPE, StringToRoomTypeImpl.class, this, MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE);
 		}
 		return stringToRoomType;
 	}
@@ -140,7 +138,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
 				return ((InternalEList<?>)getStringToRoomType()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -154,9 +152,9 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelPackage.ROOM_TYPES_HANDLER__ROOM_TYPE:
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__ROOM_TYPE:
 				return getRoomType();
-			case ModelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
 				if (coreType) return getStringToRoomType();
 				else return getStringToRoomType().map();
 		}
@@ -172,11 +170,11 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelPackage.ROOM_TYPES_HANDLER__ROOM_TYPE:
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__ROOM_TYPE:
 				getRoomType().clear();
 				getRoomType().addAll((Collection<? extends RoomType>)newValue);
 				return;
-			case ModelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
 				((EStructuralFeature.Setting)getStringToRoomType()).set(newValue);
 				return;
 		}
@@ -191,10 +189,10 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelPackage.ROOM_TYPES_HANDLER__ROOM_TYPE:
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__ROOM_TYPE:
 				getRoomType().clear();
 				return;
-			case ModelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
 				getStringToRoomType().clear();
 				return;
 		}
@@ -209,9 +207,9 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelPackage.ROOM_TYPES_HANDLER__ROOM_TYPE:
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__ROOM_TYPE:
 				return roomType != null && !roomType.isEmpty();
-			case ModelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
 				return stringToRoomType != null && !stringToRoomType.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -225,12 +223,12 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ModelPackage.ROOM_TYPES_HANDLER___EXISTS__INT:
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER___EXISTS__INT:
 				return exists((Integer)arguments.get(0));
-			case ModelPackage.ROOM_TYPES_HANDLER___ADD_ROOM_TYPE__STRING_INT_INT_STRING:
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER___ADD_ROOM_TYPE__STRING_INT_INT_STRING:
 				addRoomType((String)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
 				return null;
-			case ModelPackage.ROOM_TYPES_HANDLER___REMOVE_ROOM_TYPE__ROOMTYPE:
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER___REMOVE_ROOM_TYPE__ROOMTYPE:
 				removeRoomType((RoomType)arguments.get(0));
 				return null;
 		}

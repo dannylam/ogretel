@@ -13,8 +13,8 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Room Status Enum</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see maintenancemodel.ModelPackage#getRoomStatusEnum()
- * @maintenancemodel
+ * @see maintenancemodel.MaintenancemodelPackage#getRoomStatusEnum()
+ * @model
  * @generated
  */
 public enum RoomStatusEnum implements Enumerator {
@@ -57,7 +57,7 @@ public enum RoomStatusEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #VACANT
-	 * @maintenancemodel name="Vacant"
+	 * @model name="Vacant"
 	 * @generated
 	 * @ordered
 	 */
@@ -72,7 +72,7 @@ public enum RoomStatusEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #BUSY
-	 * @maintenancemodel name="Busy"
+	 * @model name="Busy"
 	 * @generated
 	 * @ordered
 	 */
@@ -87,7 +87,7 @@ public enum RoomStatusEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MAINTENANCE
-	 * @maintenancemodel name="Maintenance"
+	 * @model name="Maintenance"
 	 * @generated
 	 * @ordered
 	 */

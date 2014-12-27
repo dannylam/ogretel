@@ -3,10 +3,8 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
 import maintenancemodel.AbstractExtra;
-import maintenancemodel.ModelPackage;
-
+import maintenancemodel.MaintenancemodelPackage;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -126,7 +124,7 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.ABSTRACT_EXTRA;
+		return MaintenancemodelPackage.Literals.ABSTRACT_EXTRA;
 	}
 
 	/**
@@ -147,7 +145,7 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 		String oldID = id;
 		id = newID;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ABSTRACT_EXTRA__ID, oldID, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ABSTRACT_EXTRA__ID, oldID, id));
 	}
 
 	/**
@@ -168,7 +166,7 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 		int oldPrice = price;
 		price = newPrice;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ABSTRACT_EXTRA__PRICE, oldPrice, price));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ABSTRACT_EXTRA__PRICE, oldPrice, price));
 	}
 
 	/**
@@ -189,7 +187,7 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ABSTRACT_EXTRA__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ABSTRACT_EXTRA__NAME, oldName, name));
 	}
 
 	/**
@@ -210,7 +208,7 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ABSTRACT_EXTRA__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ABSTRACT_EXTRA__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -232,13 +230,13 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelPackage.ABSTRACT_EXTRA__ID:
+			case MaintenancemodelPackage.ABSTRACT_EXTRA__ID:
 				return getID();
-			case ModelPackage.ABSTRACT_EXTRA__PRICE:
+			case MaintenancemodelPackage.ABSTRACT_EXTRA__PRICE:
 				return getPrice();
-			case ModelPackage.ABSTRACT_EXTRA__NAME:
+			case MaintenancemodelPackage.ABSTRACT_EXTRA__NAME:
 				return getName();
-			case ModelPackage.ABSTRACT_EXTRA__DESCRIPTION:
+			case MaintenancemodelPackage.ABSTRACT_EXTRA__DESCRIPTION:
 				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -252,16 +250,16 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelPackage.ABSTRACT_EXTRA__ID:
+			case MaintenancemodelPackage.ABSTRACT_EXTRA__ID:
 				setID((String)newValue);
 				return;
-			case ModelPackage.ABSTRACT_EXTRA__PRICE:
+			case MaintenancemodelPackage.ABSTRACT_EXTRA__PRICE:
 				setPrice((Integer)newValue);
 				return;
-			case ModelPackage.ABSTRACT_EXTRA__NAME:
+			case MaintenancemodelPackage.ABSTRACT_EXTRA__NAME:
 				setName((String)newValue);
 				return;
-			case ModelPackage.ABSTRACT_EXTRA__DESCRIPTION:
+			case MaintenancemodelPackage.ABSTRACT_EXTRA__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
 		}
@@ -276,16 +274,16 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelPackage.ABSTRACT_EXTRA__ID:
+			case MaintenancemodelPackage.ABSTRACT_EXTRA__ID:
 				setID(ID_EDEFAULT);
 				return;
-			case ModelPackage.ABSTRACT_EXTRA__PRICE:
+			case MaintenancemodelPackage.ABSTRACT_EXTRA__PRICE:
 				setPrice(PRICE_EDEFAULT);
 				return;
-			case ModelPackage.ABSTRACT_EXTRA__NAME:
+			case MaintenancemodelPackage.ABSTRACT_EXTRA__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case ModelPackage.ABSTRACT_EXTRA__DESCRIPTION:
+			case MaintenancemodelPackage.ABSTRACT_EXTRA__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
@@ -300,13 +298,13 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelPackage.ABSTRACT_EXTRA__ID:
+			case MaintenancemodelPackage.ABSTRACT_EXTRA__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case ModelPackage.ABSTRACT_EXTRA__PRICE:
+			case MaintenancemodelPackage.ABSTRACT_EXTRA__PRICE:
 				return price != PRICE_EDEFAULT;
-			case ModelPackage.ABSTRACT_EXTRA__NAME:
+			case MaintenancemodelPackage.ABSTRACT_EXTRA__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case ModelPackage.ABSTRACT_EXTRA__DESCRIPTION:
+			case MaintenancemodelPackage.ABSTRACT_EXTRA__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
@@ -320,7 +318,7 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ModelPackage.ABSTRACT_EXTRA___IS_AVAILABLE:
+			case MaintenancemodelPackage.ABSTRACT_EXTRA___IS_AVAILABLE:
 				return isAvailable();
 		}
 		return super.eInvoke(operationID, arguments);

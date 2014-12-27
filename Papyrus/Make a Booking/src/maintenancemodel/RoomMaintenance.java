@@ -2,7 +2,6 @@
  */
 package maintenancemodel;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,11 +16,11 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see maintenancemodel.ModelPackage#getRoomMaintenance()
- * @maintenancemodel
+ * @see maintenancemodel.MaintenancemodelPackage#getRoomMaintenance()
+ * @model
  * @generated
  */
-public interface RoomMaintenance extends EObject {
+public interface RoomMaintenance extends IRoomMaintenance {
 	/**
 	 * Returns the value of the '<em><b>Room Types</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -32,8 +31,8 @@ public interface RoomMaintenance extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Room Types</em>' reference.
 	 * @see #setRoomTypes(RoomTypesHandler)
-	 * @see maintenancemodel.ModelPackage#getRoomMaintenance_RoomTypes()
-	 * @maintenancemodel required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getRoomMaintenance_RoomTypes()
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	RoomTypesHandler getRoomTypes();
@@ -58,8 +57,8 @@ public interface RoomMaintenance extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Rooms</em>' containment reference.
 	 * @see #setRooms(RoomHandler)
-	 * @see maintenancemodel.ModelPackage#getRoomMaintenance_Rooms()
-	 * @maintenancemodel containment="true" required="true" ordered="false"
+	 * @see maintenancemodel.MaintenancemodelPackage#getRoomMaintenance_Rooms()
+	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	RoomHandler getRooms();

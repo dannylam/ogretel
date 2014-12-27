@@ -13,8 +13,8 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Room Type Enum</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see maintenancemodel.ModelPackage#getRoomTypeEnum()
- * @maintenancemodel
+ * @see maintenancemodel.MaintenancemodelPackage#getRoomTypeEnum()
+ * @model
  * @generated
  */
 public enum RoomTypeEnum implements Enumerator {
@@ -57,7 +57,7 @@ public enum RoomTypeEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #SINGLEBED
-	 * @maintenancemodel name="Singlebed"
+	 * @model name="Singlebed"
 	 * @generated
 	 * @ordered
 	 */
@@ -72,7 +72,7 @@ public enum RoomTypeEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #DOUBLEBED
-	 * @maintenancemodel name="Doublebed"
+	 * @model name="Doublebed"
 	 * @generated
 	 * @ordered
 	 */
@@ -87,7 +87,7 @@ public enum RoomTypeEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #LUXURYSUITE
-	 * @maintenancemodel name="Luxurysuite"
+	 * @model name="Luxurysuite"
 	 *        annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='Luxury suite'"
 	 * @generated
 	 * @ordered

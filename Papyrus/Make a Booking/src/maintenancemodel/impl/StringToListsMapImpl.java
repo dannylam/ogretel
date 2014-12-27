@@ -3,9 +3,7 @@
 package maintenancemodel.impl;
 
 import java.util.Collection;
-
-import maintenancemodel.ModelPackage;
-
+import maintenancemodel.MaintenancemodelPackage;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEMap;
 import org.eclipse.emf.common.util.EList;
@@ -77,7 +75,7 @@ public class StringToListsMapImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.STRING_TO_LISTS_MAP;
+		return MaintenancemodelPackage.Literals.STRING_TO_LISTS_MAP;
 	}
 
 	/**
@@ -98,7 +96,7 @@ public class StringToListsMapImpl extends MinimalEObjectImpl.Container implement
 		String oldKey = key;
 		key = newKey;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.STRING_TO_LISTS_MAP__KEY, oldKey, key));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.STRING_TO_LISTS_MAP__KEY, oldKey, key));
 	}
 
 	/**
@@ -108,7 +106,7 @@ public class StringToListsMapImpl extends MinimalEObjectImpl.Container implement
 	 */
 	public EList<Integer> getTypedValue() {
 		if (value == null) {
-			value = new EDataTypeUniqueEList<Integer>(Integer.class, this, ModelPackage.STRING_TO_LISTS_MAP__VALUE);
+			value = new EDataTypeUniqueEList<Integer>(Integer.class, this, MaintenancemodelPackage.STRING_TO_LISTS_MAP__VALUE);
 		}
 		return value;
 	}
@@ -121,9 +119,9 @@ public class StringToListsMapImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelPackage.STRING_TO_LISTS_MAP__KEY:
+			case MaintenancemodelPackage.STRING_TO_LISTS_MAP__KEY:
 				return getTypedKey();
-			case ModelPackage.STRING_TO_LISTS_MAP__VALUE:
+			case MaintenancemodelPackage.STRING_TO_LISTS_MAP__VALUE:
 				return getTypedValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -138,10 +136,10 @@ public class StringToListsMapImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelPackage.STRING_TO_LISTS_MAP__KEY:
+			case MaintenancemodelPackage.STRING_TO_LISTS_MAP__KEY:
 				setTypedKey((String)newValue);
 				return;
-			case ModelPackage.STRING_TO_LISTS_MAP__VALUE:
+			case MaintenancemodelPackage.STRING_TO_LISTS_MAP__VALUE:
 				getTypedValue().clear();
 				getTypedValue().addAll((Collection<? extends Integer>)newValue);
 				return;
@@ -157,10 +155,10 @@ public class StringToListsMapImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelPackage.STRING_TO_LISTS_MAP__KEY:
+			case MaintenancemodelPackage.STRING_TO_LISTS_MAP__KEY:
 				setTypedKey(KEY_EDEFAULT);
 				return;
-			case ModelPackage.STRING_TO_LISTS_MAP__VALUE:
+			case MaintenancemodelPackage.STRING_TO_LISTS_MAP__VALUE:
 				getTypedValue().clear();
 				return;
 		}
@@ -175,9 +173,9 @@ public class StringToListsMapImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelPackage.STRING_TO_LISTS_MAP__KEY:
+			case MaintenancemodelPackage.STRING_TO_LISTS_MAP__KEY:
 				return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
-			case ModelPackage.STRING_TO_LISTS_MAP__VALUE:
+			case MaintenancemodelPackage.STRING_TO_LISTS_MAP__VALUE:
 				return value != null && !value.isEmpty();
 		}
 		return super.eIsSet(featureID);

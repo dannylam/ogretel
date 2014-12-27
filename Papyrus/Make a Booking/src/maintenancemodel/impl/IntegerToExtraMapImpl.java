@@ -3,8 +3,7 @@
 package maintenancemodel.impl;
 
 import maintenancemodel.Extra;
-import maintenancemodel.ModelPackage;
-
+import maintenancemodel.MaintenancemodelPackage;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEMap;
 import org.eclipse.emf.common.util.EMap;
@@ -75,7 +74,7 @@ public class IntegerToExtraMapImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.INTEGER_TO_EXTRA_MAP;
+		return MaintenancemodelPackage.Literals.INTEGER_TO_EXTRA_MAP;
 	}
 
 	/**
@@ -96,7 +95,7 @@ public class IntegerToExtraMapImpl extends MinimalEObjectImpl.Container implemen
 		Integer oldKey = key;
 		key = newKey;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.INTEGER_TO_EXTRA_MAP__KEY, oldKey, key));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.INTEGER_TO_EXTRA_MAP__KEY, oldKey, key));
 	}
 
 	/**
@@ -110,7 +109,7 @@ public class IntegerToExtraMapImpl extends MinimalEObjectImpl.Container implemen
 			value = (Extra)eResolveProxy(oldValue);
 			if (value != oldValue) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.INTEGER_TO_EXTRA_MAP__VALUE, oldValue, value));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MaintenancemodelPackage.INTEGER_TO_EXTRA_MAP__VALUE, oldValue, value));
 			}
 		}
 		return value;
@@ -134,7 +133,7 @@ public class IntegerToExtraMapImpl extends MinimalEObjectImpl.Container implemen
 		Extra oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.INTEGER_TO_EXTRA_MAP__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.INTEGER_TO_EXTRA_MAP__VALUE, oldValue, value));
 	}
 
 	/**
@@ -145,9 +144,9 @@ public class IntegerToExtraMapImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelPackage.INTEGER_TO_EXTRA_MAP__KEY:
+			case MaintenancemodelPackage.INTEGER_TO_EXTRA_MAP__KEY:
 				return getTypedKey();
-			case ModelPackage.INTEGER_TO_EXTRA_MAP__VALUE:
+			case MaintenancemodelPackage.INTEGER_TO_EXTRA_MAP__VALUE:
 				if (resolve) return getTypedValue();
 				return basicGetTypedValue();
 		}
@@ -162,10 +161,10 @@ public class IntegerToExtraMapImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelPackage.INTEGER_TO_EXTRA_MAP__KEY:
+			case MaintenancemodelPackage.INTEGER_TO_EXTRA_MAP__KEY:
 				setTypedKey((Integer)newValue);
 				return;
-			case ModelPackage.INTEGER_TO_EXTRA_MAP__VALUE:
+			case MaintenancemodelPackage.INTEGER_TO_EXTRA_MAP__VALUE:
 				setTypedValue((Extra)newValue);
 				return;
 		}
@@ -180,10 +179,10 @@ public class IntegerToExtraMapImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelPackage.INTEGER_TO_EXTRA_MAP__KEY:
+			case MaintenancemodelPackage.INTEGER_TO_EXTRA_MAP__KEY:
 				setTypedKey(KEY_EDEFAULT);
 				return;
-			case ModelPackage.INTEGER_TO_EXTRA_MAP__VALUE:
+			case MaintenancemodelPackage.INTEGER_TO_EXTRA_MAP__VALUE:
 				setTypedValue((Extra)null);
 				return;
 		}
@@ -198,9 +197,9 @@ public class IntegerToExtraMapImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelPackage.INTEGER_TO_EXTRA_MAP__KEY:
+			case MaintenancemodelPackage.INTEGER_TO_EXTRA_MAP__KEY:
 				return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
-			case ModelPackage.INTEGER_TO_EXTRA_MAP__VALUE:
+			case MaintenancemodelPackage.INTEGER_TO_EXTRA_MAP__VALUE:
 				return value != null;
 		}
 		return super.eIsSet(featureID);

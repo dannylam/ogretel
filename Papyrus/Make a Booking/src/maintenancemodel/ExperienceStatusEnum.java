@@ -13,8 +13,8 @@ import org.eclipse.emf.common.util.Enumerator;
  * A representation of the literals of the enumeration '<em><b>Experience Status Enum</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see maintenancemodel.ModelPackage#getExperienceStatusEnum()
- * @maintenancemodel
+ * @see maintenancemodel.MaintenancemodelPackage#getExperienceStatusEnum()
+ * @model
  * @generated
  */
 public enum ExperienceStatusEnum implements Enumerator {
@@ -47,7 +47,7 @@ public enum ExperienceStatusEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #READY
-	 * @maintenancemodel name="ready"
+	 * @model name="ready"
 	 * @generated
 	 * @ordered
 	 */
@@ -62,7 +62,7 @@ public enum ExperienceStatusEnum implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MAINTENANCE
-	 * @maintenancemodel name="maintenance"
+	 * @model name="maintenance"
 	 * @generated
 	 * @ordered
 	 */
