@@ -167,7 +167,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void removeRoom(int roomID) {
 		// TODO: implement this method
