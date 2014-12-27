@@ -131,13 +131,15 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Room getRoom(int ID) {
+		return this.integerToRoomMap.get(ID).getValue();
+		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**

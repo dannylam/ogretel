@@ -87,7 +87,7 @@ public interface IRoomMaintenance extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" statusRequired="true" statusOrdered="false"
 	 * @generated
 	 */
-	int editRoomStatus(int roomID, Enumerator status);
+	int editRoomStatus(int roomID, String status);
 
 	/**
 	 * <!-- begin-user-doc -->
