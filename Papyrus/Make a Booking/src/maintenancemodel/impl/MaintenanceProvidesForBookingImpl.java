@@ -221,7 +221,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void makeBooking(String roomType, String start, String end) {
+	public int makeBooking(String roomType, String start, String end) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -355,8 +355,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___CAN_BOOK__STRING_STRING_STRING:
 				return canBook((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__STRING_STRING_STRING:
-				makeBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
-				return null;
+				return makeBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__STRING_INT_STRING_STRING:
 				return removeBooking((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___SET_BOOKING_AS_ACTIVE__STRING:

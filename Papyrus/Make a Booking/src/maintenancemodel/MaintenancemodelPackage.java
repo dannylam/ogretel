@@ -1269,7 +1269,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_MAINTENANCE___EDIT_ROOM_STATUS__INT_ENUMERATOR = 8;
+	int IROOM_MAINTENANCE___EDIT_ROOM_STATUS__INT_STRING = 8;
 
 	/**
 	 * The operation id for the '<em>Get Room Status</em>' operation.
@@ -1578,7 +1578,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MAINTENANCE___EDIT_ROOM_STATUS__INT_ENUMERATOR = IROOM_MAINTENANCE___EDIT_ROOM_STATUS__INT_ENUMERATOR;
+	int ROOM_MAINTENANCE___EDIT_ROOM_STATUS__INT_STRING = IROOM_MAINTENANCE___EDIT_ROOM_STATUS__INT_STRING;
 
 	/**
 	 * The operation id for the '<em>Get Room Status</em>' operation.
@@ -2568,14 +2568,14 @@ public interface MaintenancemodelPackage extends EPackage {
 	EOperation getIRoomMaintenance__GetRoomType__int();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.IRoomMaintenance#editRoomStatus(int, org.eclipse.emf.common.util.Enumerator) <em>Edit Room Status</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.IRoomMaintenance#editRoomStatus(int, java.lang.String) <em>Edit Room Status</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Edit Room Status</em>' operation.
-	 * @see maintenancemodel.IRoomMaintenance#editRoomStatus(int, org.eclipse.emf.common.util.Enumerator)
+	 * @see maintenancemodel.IRoomMaintenance#editRoomStatus(int, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIRoomMaintenance__EditRoomStatus__int_Enumerator();
+	EOperation getIRoomMaintenance__EditRoomStatus__int_String();
 
 	/**
 	 * Returns the meta object for the '{@link maintenancemodel.IRoomMaintenance#getRoomStatus(int) <em>Get Room Status</em>}' operation.
@@ -3488,7 +3488,7 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IROOM_MAINTENANCE___EDIT_ROOM_STATUS__INT_ENUMERATOR = eINSTANCE.getIRoomMaintenance__EditRoomStatus__int_Enumerator();
+		EOperation IROOM_MAINTENANCE___EDIT_ROOM_STATUS__INT_STRING = eINSTANCE.getIRoomMaintenance__EditRoomStatus__int_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Room Status</b></em>' operation.

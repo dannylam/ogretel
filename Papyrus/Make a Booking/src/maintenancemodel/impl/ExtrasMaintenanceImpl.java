@@ -106,7 +106,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addExtra(int price, String ID, String name, String description) {
+	public int addExtra(int price, String ID, String name, String description) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -117,7 +117,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeExtra(Extra extra) {
+	public int removeExtra(Extra extra) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -139,7 +139,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void editExtra(int price, String ID, String name, String description) {
+	public int editExtra(int price, String ID, String name, String description) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -226,16 +226,13 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
 			case MaintenancemodelPackage.EXTRAS_MAINTENANCE___ADD_EXTRA__INT_STRING_STRING_STRING:
-				addExtra((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
-				return null;
+				return addExtra((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 			case MaintenancemodelPackage.EXTRAS_MAINTENANCE___REMOVE_EXTRA__EXTRA:
-				removeExtra((Extra)arguments.get(0));
-				return null;
+				return removeExtra((Extra)arguments.get(0));
 			case MaintenancemodelPackage.EXTRAS_MAINTENANCE___GET_EXTRA__INT:
 				return getExtra((Integer)arguments.get(0));
 			case MaintenancemodelPackage.EXTRAS_MAINTENANCE___EDIT_EXTRA__INT_STRING_STRING_STRING:
-				editExtra((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
-				return null;
+				return editExtra((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

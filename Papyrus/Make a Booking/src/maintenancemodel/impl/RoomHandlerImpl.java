@@ -112,7 +112,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addRoom(int numberID, String roomType) {
+	public int addRoom(int numberID, String roomType) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -123,7 +123,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeRoom(Room room) {
+	public int removeRoom(Room room) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -236,11 +236,9 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements Roo
 			case MaintenancemodelPackage.ROOM_HANDLER___EXISTS__INT:
 				return exists((Integer)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_HANDLER___ADD_ROOM__INT_STRING:
-				addRoom((Integer)arguments.get(0), (String)arguments.get(1));
-				return null;
+				return addRoom((Integer)arguments.get(0), (String)arguments.get(1));
 			case MaintenancemodelPackage.ROOM_HANDLER___REMOVE_ROOM__ROOM:
-				removeRoom((Room)arguments.get(0));
-				return null;
+				return removeRoom((Room)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_HANDLER___GET_ROOM__INT:
 				return getRoom((Integer)arguments.get(0));
 		}

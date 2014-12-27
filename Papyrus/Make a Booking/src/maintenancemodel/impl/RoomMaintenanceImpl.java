@@ -12,7 +12,6 @@ import maintenancemodel.RoomTypesHandler;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -169,7 +168,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void removeRoom(int roomID) {
+	public int removeRoom(int roomID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -180,7 +179,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addRoomType(String roomType, int price, int maxNrOfGuests, String description) {
+	public int addRoomType(String roomType, int price, int maxNrOfGuests, String description) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -191,7 +190,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeRoomType(String roomType) {
+	public int removeRoomType(String roomType) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -246,7 +245,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int editRoomStatus(int roomID, Enumerator status) {
+	public int editRoomStatus(int roomID, String status) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -257,7 +256,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Enumerator getRoomStatus(int roomID) {
+	public String getRoomStatus(int roomID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -379,14 +378,11 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___ADD_ROOM__INT_STRING:
 				return addRoom((Integer)arguments.get(0), (String)arguments.get(1));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___REMOVE_ROOM__INT:
-				removeRoom((Integer)arguments.get(0));
-				return null;
+				return removeRoom((Integer)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_INT_INT_STRING:
-				addRoomType((String)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
-				return null;
+				return addRoomType((String)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING:
-				removeRoomType((String)arguments.get(0));
-				return null;
+				return removeRoomType((String)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_HANDLER:
 				return getRoomHandler();
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_HANDLER:
@@ -395,8 +391,8 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 				return getRoom((Integer)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE__INT:
 				return getRoomType((Integer)arguments.get(0));
-			case MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM_STATUS__INT_ENUMERATOR:
-				return editRoomStatus((Integer)arguments.get(0), (Enumerator)arguments.get(1));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM_STATUS__INT_STRING:
+				return editRoomStatus((Integer)arguments.get(0), (String)arguments.get(1));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_STATUS__INT:
 				return getRoomStatus((Integer)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_INT_INT_STRING:
