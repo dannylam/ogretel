@@ -4,6 +4,7 @@ package bookingmodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -282,15 +283,23 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public BookingImpl(int nrOfNights, int nrOfGuests, String date, int nrOfRooms, EList<String> roomTypes, EList<String> extras) {
-		// TODO Auto-generated constructor stub
+	public BookingImpl(int nrOfNights, int nrOfGuests, String date, List<String> roomTypes, List<String> extras) {
 		this.setNrOfNights(nrOfNights);
 		this.setNrOfGuests(nrOfGuests);
 		this.setDate(date);
-		//this.setNrOfRooms(nrOfRooms);							// finns ej setNrOfRooms
-		this.roomTypeMap.add(index, element);	// should be a list instead: change constructor to list, and add checks in BookingHandlerImpl
-		this.extraList.add(index, element); 		// should be a list instead: change constructor to list, and add checks in BookingHandlerImpl
+		for(int i=0; i<roomTypes.size(); i++) {
+			this.roomTypeMap.put(roomTypes.get(i),null);
+		}
+		
+		for(int i=0; i<extras.size(); i++) {
+			this.extraList.add(extras.get(i));
+		}
 	}
+	
+	/*TODO: 
+	public int getNrOfRooms (){
+		return this.roomTypeMap.size();
+	}*/
 
 	/**
 	 * 

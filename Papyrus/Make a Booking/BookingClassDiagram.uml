@@ -57,7 +57,7 @@ value: booking</body>
         <defaultValue xmi:type="uml:LiteralNull" xmi:id="_8bQHYHiiEeSmr6YRnpR7KQ"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_pGFNAHijEeSmr6YRnpR7KQ" name="Booking">
+    <packagedElement xmi:type="uml:Class" xmi:id="_pGFNAHijEeSmr6YRnpR7KQ" name="Booking" visibility="package">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_rCtRwHijEeSmr6YRnpR7KQ" name="bookingRef" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
@@ -111,6 +111,17 @@ value: booking</body>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_SUqSEHoAEeScv6HJEKdjpA" name="checkedInAGuest">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_SUqSEXoAEeScv6HJEKdjpA" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_7Lrr4I2pEeSlSJLMDiBtkA" name="setResponsibleGuest">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_MGPIgI2qEeSlSJLMDiBtkA" name="room">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ORsTcI2qEeSlSJLMDiBtkA" name="guestEmail">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_qc92YI2qEeSlSJLMDiBtkA" name="result" direction="out">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
@@ -614,8 +625,7 @@ value: booking</body>
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_wd0LgIXIEeS2TcAuvmmdyg" name="VIP"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_ESXUEIXJEeS2TcAuvmmdyg" memberEnd="_ESXUEYXJEeS2TcAuvmmdyg _ESWF8IXJEeS2TcAuvmmdyg">
-      <name xsi:nil="true"/>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_ESXUEYXJEeS2TcAuvmmdyg" name="guest" type="_plG9QHihEeSmr6YRnpR7KQ" association="_ESXUEIXJEeS2TcAuvmmdyg">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ESXUEYXJEeS2TcAuvmmdyg" type="_plG9QHihEeSmr6YRnpR7KQ" association="_ESXUEIXJEeS2TcAuvmmdyg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ESXUEoXJEeS2TcAuvmmdyg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ESXUE4XJEeS2TcAuvmmdyg" value="1"/>
       </ownedEnd>

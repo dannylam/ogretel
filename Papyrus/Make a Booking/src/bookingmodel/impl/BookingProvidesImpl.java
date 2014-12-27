@@ -3,6 +3,8 @@
 package bookingmodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
@@ -151,9 +153,21 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		
-		Booking booking = new BookingImpl(nrOfNights, nrOfGuests, date, nrOfRooms, roomTypes, extras);
+		Booking booking = new BookingImpl(nrOfNights, nrOfGuests, date, stringToList(roomTypes), stringToList(extras));
 		
 		//throw new UnsupportedOperationException();
+	}
+	
+	/**
+	 *  TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 * @param text
+	 * @return
+	 */
+	private List<String> stringToList(String text){
+		return Arrays.asList(text.split("\\s*,\\s*"));
 	}
 
 	/**
