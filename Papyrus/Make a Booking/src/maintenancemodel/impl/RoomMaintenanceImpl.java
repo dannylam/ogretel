@@ -172,9 +172,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public void removeRoom(int roomID) {
+	public int removeRoom(int roomID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -185,7 +185,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addRoomType(String roomType, int price, int maxNrOfGuests, String description) {
+	public int addRoomType(String roomType, int price, int maxNrOfGuests, String description) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -196,7 +196,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeRoomType(String roomType) {
+	public int removeRoomType(String roomType) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -291,9 +291,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public Enumerator getRoomStatus(int roomID) {
+	public String getRoomStatus(int roomID) {
 		//kolla om rumsID existerar?
-		return this.rooms.getRoom(roomID).getRoomStatusEnum();
+		return this.rooms.getRoom(roomID).getRoomStatusEnum().toString();
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 	}
@@ -430,8 +430,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 			return getRoom((Integer)arguments.get(0));
 		case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE__INT:
 			return getRoomType((Integer)arguments.get(0));
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM_STATUS__INT_ENUMERATOR:
-			return editRoomStatus((Integer)arguments.get(0), (String)arguments.get(1));
 		case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_STATUS__INT:
 			return getRoomStatus((Integer)arguments.get(0));
 		case MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_INT_INT_STRING:
