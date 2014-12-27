@@ -57,7 +57,7 @@ public interface Guest extends EObject {
 
 	/**
 	 * Sets the type to a guest.
-	 *  * There are two types of guests: guest and VIP.
+	 *  * There are three types of guests: guest, VIP and blacklisted.
 	 * @param value the new value of the '<em>Guest Types</em>' attribute.
 	 * @see bookingmodel.GuestTypes
 	 * @see #getGuestTypes()
