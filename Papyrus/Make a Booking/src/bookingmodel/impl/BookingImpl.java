@@ -276,6 +276,16 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		super();
 	}
 
+	public BookingImpl(int nrOfNights, int nrOfGuests, String date, int nrOfRooms, String roomTypes, String extras) {
+		// TODO Auto-generated constructor stub
+		this.setNrOfNights(nrOfNights);
+		this.setNrOfGuests(nrOfGuests);
+		this.setDate(date);
+		//this.								// finns ej setNrOfRooms
+		this.roomTypeMap.put(roomTypes,0);	// should be a list instead: change constructor to list, and add checks in BookingHandlerImpl
+		this.extraList.add(extras); 		// should be a list instead: change constructor to list, and add checks in BookingHandlerImpl
+	}
+
 	/**
 	 * 
 	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
