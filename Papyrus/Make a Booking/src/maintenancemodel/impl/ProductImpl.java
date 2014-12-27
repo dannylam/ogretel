@@ -85,6 +85,7 @@ public class ProductImpl extends AbstractExtraImpl implements Product {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Get the current stock
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -94,23 +95,39 @@ public class ProductImpl extends AbstractExtraImpl implements Product {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Set the new stock when products has been sold or new stock has come.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setStock(int newStock) {
 		int oldStock = stock;
 		stock = newStock;
+		if(stock == 0) {
+			productStatusEnum = ProductStatusEnum.OUT_OF_STOCK;
+		} else {
+			productStatusEnum = ProductStatusEnum.IN_STOCK;
+		}
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.PRODUCT__STOCK, oldStock, stock));
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Returs current status of the product
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public ProductStatusEnum getProductStatusEnum() {
 		return productStatusEnum;
+	}
+	
+	@Override
+	public boolean isAvailable() {
+		if(getProductStatusEnum() == ProductStatusEnum.IN_STOCK) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/**
