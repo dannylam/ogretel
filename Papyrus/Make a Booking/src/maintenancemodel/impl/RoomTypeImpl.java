@@ -117,6 +117,22 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	protected RoomTypeImpl() {
 		super();
 	}
+	
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * Creates RoomType with given parameters.
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected RoomTypeImpl(int price, int maxNrOfGuests, String description, RoomTypeEnum rtenum) {
+		super();
+		this.price = price;
+		this.maxNrOfGuests = maxNrOfGuests;
+		this.description = description;
+		this.roomTypeEnum = rtenum;
+	}
+	
 
 	/**
 	 * <!-- begin-user-doc -->

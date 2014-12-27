@@ -6,6 +6,8 @@ import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.Room;
 import maintenancemodel.RoomStatusEnum;
 import maintenancemodel.RoomType;
+import maintenancemodel.RoomTypeEnum;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -77,6 +79,11 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * @ordered
 	 */
 	protected RoomType roomType;
+	
+	/**
+	 * Used to convert String to RoomType
+	 */
+	protected StringToRoomTypeImpl stringToRoomType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -85,6 +92,20 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 */
 	protected RoomImpl() {
 		super();
+		stringToRoomType = new StringToRoomTypeImpl();
+		roomType = new RoomTypeImpl();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * Constructor with parameters.
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected RoomImpl(int numberID, String roomType) {
+		this();
+		this.numberID = numberID;
+		this.roomType = null;
 	}
 
 	/**
