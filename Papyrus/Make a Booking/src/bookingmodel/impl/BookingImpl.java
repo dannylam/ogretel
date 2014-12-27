@@ -270,12 +270,18 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	protected BookingImpl() {
 		super();
 	}
 
+	/**
+	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
 	public BookingImpl(int nrOfNights, int nrOfGuests, String date, int nrOfRooms, EList<String> roomTypes, EList<String> extras) {
 		// TODO Auto-generated constructor stub
 		this.setNrOfNights(nrOfNights);
