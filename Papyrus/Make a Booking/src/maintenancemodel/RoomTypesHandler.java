@@ -69,17 +69,17 @@ public interface RoomTypesHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model roomTypeRequired="true" roomTypeOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" maxNrOfGuestsDataType="org.eclipse.uml2.types.Integer" maxNrOfGuestsRequired="true" maxNrOfGuestsOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeRequired="true" roomTypeOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" maxNrOfGuestsDataType="org.eclipse.uml2.types.Integer" maxNrOfGuestsRequired="true" maxNrOfGuestsOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
 	 * @generated
 	 */
-	void addRoomType(String roomType, int price, int maxNrOfGuests, String description);
+	int addRoomType(String roomType, int price, int maxNrOfGuests, String description);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model roomTypeRequired="true" roomTypeOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeRequired="true" roomTypeOrdered="false"
 	 * @generated
 	 */
-	void removeRoomType(RoomType roomType);
+	int removeRoomType(RoomType roomType);
 
 } // RoomTypesHandler

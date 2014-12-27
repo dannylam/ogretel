@@ -113,7 +113,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addRoomType(String roomType, int price, int maxNrOfGuests, String description) {
+	public int addRoomType(String roomType, int price, int maxNrOfGuests, String description) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -124,7 +124,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeRoomType(RoomType roomType) {
+	public int removeRoomType(RoomType roomType) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -226,11 +226,9 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container implement
 			case MaintenancemodelPackage.ROOM_TYPES_HANDLER___EXISTS__INT:
 				return exists((Integer)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_TYPES_HANDLER___ADD_ROOM_TYPE__STRING_INT_INT_STRING:
-				addRoomType((String)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
-				return null;
+				return addRoomType((String)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
 			case MaintenancemodelPackage.ROOM_TYPES_HANDLER___REMOVE_ROOM_TYPE__ROOMTYPE:
-				removeRoomType((RoomType)arguments.get(0));
-				return null;
+				return removeRoomType((RoomType)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

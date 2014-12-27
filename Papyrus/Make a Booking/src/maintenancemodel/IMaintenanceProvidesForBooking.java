@@ -28,10 +28,17 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 	boolean canBook(String roomType, String start, String end);
 
 	/**
+<<<<<<< HEAD
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false" startDataType="org.eclipse.uml2.types.String" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.String" endRequired="true" endOrdered="false"
+	 * @generated
+=======
 	 * A method that creates a booking with given parameters in our calendar
 	 * @return int: 0 if successful, else int to be connected with an error-message
 	 * @model roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false" startDataType="org.eclipse.uml2.types.String" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.String" endRequired="true" endOrdered="false"
 	 * @generated NOT
+>>>>>>> branch 'classcodegens' of https://github.com/dannylam/ogretel.git
 	 */
 	int makeBooking(String roomType, String start, String end);
 

@@ -69,18 +69,18 @@ public interface RoomHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model numberIDDataType="org.eclipse.uml2.types.Integer" numberIDRequired="true" numberIDOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" numberIDDataType="org.eclipse.uml2.types.Integer" numberIDRequired="true" numberIDOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false"
 	 * @generated
 	 */
-	void addRoom(int numberID, String roomType);
+	int addRoom(int numberID, String roomType);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model roomRequired="true" roomOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomRequired="true" roomOrdered="false"
 	 * @generated
 	 */
-	void removeRoom(Room room);
+	int removeRoom(Room room);
 
 	/**
 	 * <!-- begin-user-doc -->
