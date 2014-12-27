@@ -85,6 +85,7 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 	Returns the current number of spots left for an Experience
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -94,25 +95,40 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 *  Set a new number of avalible spots.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setNrOfSpots(int newNrOfSpots) {
 		int oldNrOfSpots = nrOfSpots;
 		nrOfSpots = newNrOfSpots;
+		if(nrOfSpots == 0) {
+			experienceStatusEnum = ExperienceStatusEnum.MAINTENANCE;
+		} else {
+			experienceStatusEnum = ExperienceStatusEnum.READY;
+		}
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.EXPERIENCE__NR_OF_SPOTS, oldNrOfSpots, nrOfSpots));
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Get the current status for an experience.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public ExperienceStatusEnum getExperienceStatusEnum() {
 		return experienceStatusEnum;
 	}
 
+	@Override
+	public boolean isAvailable() {
+		if (experienceStatusEnum == ExperienceStatusEnum.READY) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

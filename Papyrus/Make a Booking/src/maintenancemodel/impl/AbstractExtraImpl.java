@@ -129,8 +129,9 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 
 	/**
 	 * <!-- begin-user-doc -->
+	 *  Return the ID for the Extra
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getID() {
 		return id;
@@ -138,8 +139,9 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 
 	/**
 	 * <!-- begin-user-doc -->
+	 *  Set the ID for the Extra
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setID(String newID) {
 		String oldID = id;
@@ -150,8 +152,9 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 	Returns the price for the Extra
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getPrice() {
 		return price;
@@ -159,8 +162,9 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 
 	/**
 	 * <!-- begin-user-doc -->
+	 *  Set the price for the Extra
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setPrice(int newPrice) {
 		int oldPrice = price;
@@ -171,8 +175,9 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 
 	/**
 	 * <!-- begin-user-doc -->
+	 *  Return a name for the Extra
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getName() {
 		return name;
@@ -180,8 +185,9 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 
 	/**
 	 * <!-- begin-user-doc -->
+	 *  Set a name for the Extra
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setName(String newName) {
 		String oldName = name;
@@ -192,8 +198,9 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 
 	/**
 	 * <!-- begin-user-doc -->
+	 *  Returns the description for the Extra
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getDescription() {
 		return description;
@@ -201,8 +208,9 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 
 	/**
 	 * <!-- begin-user-doc -->
+	 *  Set a description for an Extra
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
@@ -213,13 +221,12 @@ public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements A
 
 	/**
 	 * <!-- begin-user-doc -->
+	 *  Abstract method, should be, anyhow, returns if the extra is avlible or not.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean isAvailable() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return false;
 	}
 
 	/**

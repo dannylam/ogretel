@@ -39,7 +39,7 @@ public interface ExtraHandler extends EObject {
 	 * @model ordered="false"
 	 * @generated
 	 */
-	EList<Extra> getExtra();
+	Extra getExtra();
 
 	/**
 	 * Returns the value of the '<em><b>Int To Extra Map</b></em>' map.

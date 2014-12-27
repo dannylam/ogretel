@@ -33,15 +33,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements ExtraHandler {
-	/**
-	 * The cached value of the '{@link #getExtra() <em>Extra</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExtra()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Extra> extra;
 
 	/**
 	 * The cached value of the '{@link #getIntToExtraMap() <em>Int To Extra Map</em>}' map.
@@ -75,13 +66,10 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<Extra> getExtra() {
-		if (extra == null) {
-			extra = new EObjectResolvingEList<Extra>(Extra.class, this, MaintenancemodelPackage.EXTRA_HANDLER__EXTRA);
-		}
-		return extra;
+	public Extra getExtra() {
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -180,10 +168,6 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MaintenancemodelPackage.EXTRA_HANDLER__EXTRA:
-				getExtra().clear();
-				getExtra().addAll((Collection<? extends Extra>)newValue);
-				return;
 			case MaintenancemodelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
 				((EStructuralFeature.Setting)getIntToExtraMap()).set(newValue);
 				return;
@@ -199,9 +183,6 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MaintenancemodelPackage.EXTRA_HANDLER__EXTRA:
-				getExtra().clear();
-				return;
 			case MaintenancemodelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
 				getIntToExtraMap().clear();
 				return;
@@ -217,8 +198,6 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MaintenancemodelPackage.EXTRA_HANDLER__EXTRA:
-				return extra != null && !extra.isEmpty();
 			case MaintenancemodelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
 				return intToExtraMap != null && !intToExtraMap.isEmpty();
 		}
