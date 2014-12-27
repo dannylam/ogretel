@@ -87,6 +87,17 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	protected RoomImpl() {
 		super();
 	}
+	
+	/**
+	 * Creates a RoomImpl with the given ID and RoomType.
+	 * @generated NOT
+	 */
+	protected RoomImpl(int numberID, String roomType){
+		this.numberID = numberID;
+//		this.roomType = stringToRoomType.getValue(roomType);
+//		The line above does not work because the StringToRoomType class does not
+//		behave like a Map yet.
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
