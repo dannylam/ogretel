@@ -61,7 +61,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public ExtraHandler getExtras() {
 		return extras;
@@ -129,9 +129,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public Extra getExtra(int ID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return extras.getExtra(ID);
 	}
 
 	/**

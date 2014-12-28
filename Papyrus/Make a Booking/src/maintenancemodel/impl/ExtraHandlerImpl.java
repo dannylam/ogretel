@@ -65,17 +65,9 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Returns the map with Extras
 	 * <!-- end-user-doc -->
 	 * @generated NOT
-	 */
-	public Extra getExtra() {
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
 	 */
 	public EMap<Integer, Extra> getIntToExtraMap() {
 		if (intToExtraMap == null) {
@@ -86,17 +78,18 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Returns if the element exists or not.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean exists(int ID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Integer integer = new Integer (ID);
+		return intToExtraMap.get(integer) != null;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -119,13 +112,13 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Returns null if there is no Extra with that key
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Extra getExtra(int ID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Integer integer = new Integer (ID);
+		return intToExtraMap.get(integer);
 	}
 
 	/**
@@ -150,8 +143,6 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MaintenancemodelPackage.EXTRA_HANDLER__EXTRA:
-				return getExtra();
 			case MaintenancemodelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP:
 				if (coreType) return getIntToExtraMap();
 				else return getIntToExtraMap().map();
