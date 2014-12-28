@@ -5,53 +5,54 @@ package bookingmodel;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>IBooking Provides For Host</b></em>'.
- * <!-- end-user-doc -->
- *
- *
+ * An interface class which represents booking provides for the host, extending EObject.
+ * It has 5 methods;
+ * enableSelfManagement - enable self management.
+ * addServiceNote - add a specific service note.
+ * editServiceNote - edit a specific service note
+ * removeServiceNote - remove a specific service note.
+ * getServiceNote - get a specific service note.
  * @see bookingmodel.BookingmodelPackage#getIBookingProvidesForHost()
  * @model interface="true" abstract="true"
  * @generated
  */
 public interface IBookingProvidesForHost extends EObject {
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Enable self management to a specific host.
 	 * @model dataType="types.Integer" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int enableSelfManagement();
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Add a specific service note.
+	 * @param serviceNote
 	 * @model dataType="types.Integer" required="true" ordered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int addServiceNote(String serviceNote);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Edit a service note by changing a specific service note into a new service note.
+	 * @param oldServiceNote, newServiceNote
 	 * @model dataType="types.Integer" required="true" ordered="false" oldServiceNoteDataType="types.String" oldServiceNoteRequired="true" oldServiceNoteOrdered="false" newServiceNoteDataType="types.String" newServiceNoteRequired="true" newServiceNoteOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int editServiceNote(String oldServiceNote, String newServiceNote);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Remove a specific service note
+	 * @param serviceNote
 	 * @model dataType="types.Integer" required="true" ordered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int removeServiceNote(String serviceNote);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Get service notes from a specific booking.
+	 * @param bookingRef
 	 * @model dataType="types.String" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	String getServiceNotes(String bookingRef);
 

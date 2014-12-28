@@ -9,95 +9,67 @@ import java.util.List;
 import org.eclipse.emf.common.util.Enumerator;
 
 /**
- * <!-- begin-user-doc -->
  * A representation of the literals of the enumeration '<em><b>Guest Types</b></em>',
  * and utility methods for working with them.
- * <!-- end-user-doc -->
  * @see bookingmodel.BookingmodelPackage#getGuestTypes()
  * @model
- * @generated
+ * @generated NOT
  */
 public enum GuestTypes implements Enumerator {
 	/**
 	 * The '<em><b>Regular</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @see #REGULAR_VALUE
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
 	REGULAR(0, "Regular", "Regular"),
 
 	/**
 	 * The '<em><b>Black Listed</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @see #BLACK_LISTED_VALUE
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
 	BLACK_LISTED(1, "BlackListed", "BlackListed"),
 
 	/**
 	 * The '<em><b>VIP</b></em>' literal object.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @see #VIP_VALUE
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
 	VIP(2, "VIP", "VIP");
 
 	/**
 	 * The '<em><b>Regular</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Regular</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
 	 * @see #REGULAR
 	 * @model name="Regular"
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
 	public static final int REGULAR_VALUE = 0;
 
 	/**
 	 * The '<em><b>Black Listed</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Black Listed</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
 	 * @see #BLACK_LISTED
 	 * @model name="BlackListed"
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
 	public static final int BLACK_LISTED_VALUE = 1;
 
 	/**
 	 * The '<em><b>VIP</b></em>' literal value.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>VIP</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
 	 * @see #VIP
 	 * @model
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
 	public static final int VIP_VALUE = 2;
 
 	/**
 	 * An array of all the '<em><b>Guest Types</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	private static final GuestTypes[] VALUES_ARRAY =
 		new GuestTypes[] {
@@ -108,17 +80,13 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * A public read-only list of all the '<em><b>Guest Types</b></em>' enumerators.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public static final List<GuestTypes> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
 	 * Returns the '<em><b>Guest Types</b></em>' literal with the specified literal value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public static GuestTypes get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
@@ -132,9 +100,7 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * Returns the '<em><b>Guest Types</b></em>' literal with the specified name.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public static GuestTypes getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
@@ -148,9 +114,7 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * Returns the '<em><b>Guest Types</b></em>' literal with the specified integer value.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public static GuestTypes get(int value) {
 		switch (value) {
@@ -162,31 +126,23 @@ public enum GuestTypes implements Enumerator {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	private final int value;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	private final String name;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	private final String literal;
 
 	/**
 	 * Only this class can construct instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	private GuestTypes(int value, String name, String literal) {
 		this.value = value;
@@ -195,27 +151,21 @@ public enum GuestTypes implements Enumerator {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getValue() {
 	  return value;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getName() {
 	  return name;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getLiteral() {
 	  return literal;
@@ -223,9 +173,7 @@ public enum GuestTypes implements Enumerator {
 
 	/**
 	 * Returns the literal value of the enumerator, which is its string representation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String toString() {
