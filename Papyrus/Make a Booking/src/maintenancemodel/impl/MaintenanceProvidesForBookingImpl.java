@@ -79,7 +79,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * @generated NOT
 	 */
 	public MaintenanceProvidesForBookingImpl() {
-		super(); //ROBOT
+		super();
 	}
 
 	/**

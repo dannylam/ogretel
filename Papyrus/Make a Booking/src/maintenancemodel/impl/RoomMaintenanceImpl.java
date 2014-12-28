@@ -55,10 +55,11 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Get a new instance of RoomMaintenanceImpl.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	protected RoomMaintenanceImpl() {
+	public RoomMaintenanceImpl() {
 		super();
 	}
 
@@ -193,19 +194,19 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 			return 0;	
 		}
 		return 1;
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
+		// TODO
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Remove the RoomType wit the given ID.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public int removeRoomType(String roomTypeID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public int removeRoomType(String roomType) {
+		return this.getRoomTypeHandler().removeRoomType(roomType);
+			
+		// TODO: TEST
 	}
 
 	/**
