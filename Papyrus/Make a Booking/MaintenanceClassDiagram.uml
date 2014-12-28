@@ -145,9 +145,7 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_1Mw1QXlDEeScv6HJEKdjpA" name="roomID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SIImoIRAEeSbvJ56HGFnrw" name="roomTypeID">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SIImoIRAEeSbvJ56HGFnrw" name="roomType" type="_CLdSkHk_EeScv6HJEKdjpA"/>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_-jipoI3XEeSb_cQ9NLV5hw" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
@@ -537,6 +535,12 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6UvlgI6pEeSqUPpyrwDcyg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6UvlgY6pEeSqUPpyrwDcyg" value="*"/>
         </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_hF2h4I6uEeSqUPpyrwDcyg" name="getRoomType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_mu7DMI6uEeSqUPpyrwDcyg" name="roomTypeID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ooOuMI6uEeSqUPpyrwDcyg" type="_CLdSkHk_EeScv6HJEKdjpA" direction="return"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_JJ2gI321EeSp56Ha0EyLeQ" memberEnd="_JJ2gJH21EeSp56Ha0EyLeQ _JJ2gIH21EeSp56Ha0EyLeQ">
