@@ -35,6 +35,9 @@
       <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       <eParameters name="guestEmail" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
+    <eOperations name="setResponsibleGuestToAllRooms" eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="guestEmail" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
     <eOperations name="getNrOfRooms" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
     <eOperations name="setExtras" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
       <eParameters name="extras" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>

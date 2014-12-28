@@ -47,7 +47,13 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	protected BookingHandler bookingHandler;
 
-	public MaintenanceProvidesForBooking maintenanceComponent;
+	/**
+	 * TODO: javadoc
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected MaintenanceProvidesForBooking maintenanceComponent;
 
 	
 	/**
@@ -184,8 +190,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	public int checkIn(String bookingRef, String guestEmail) {
 		int result = 0;
 		if(this.bookingHandler.exists(bookingRef) && !this.bookingHandler.getBooking(bookingRef).checkedInAllGuest()){
-			//Setting respsonsible guest
-			//this.bookingHandler.getBooking(bookingRef).setResponsibleGuestToAllRooms(guestEmail);
+			this.bookingHandler.getBooking(bookingRef).setResponsibleGuestToAllRooms(guestEmail);
 			
 			//Set booking as active
 			//Invoke method in IMaintenanceProvidesForBooking
