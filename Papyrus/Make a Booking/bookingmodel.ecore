@@ -45,6 +45,9 @@
     <eOperations name="setRoomTypes" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
       <eParameters name="roomTypes" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
+    <eOperations name="setRoomIDs" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="roomIDs" upperBound="-1" eType="ecore:EDataType types.ecore#//Integer"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bookingRef" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" ordered="false"
@@ -158,15 +161,15 @@
     <eOperations name="removeServiceNote" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
       <eParameters name="serviceNote" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
-    <eOperations name="getServiceNotes" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+    <eOperations name="getServiceNotes" ordered="false" lowerBound="1">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList">
+        <eTypeArguments/>
+      </eGenericType>
       <eParameters name="bookingRef" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IBookingProvidesForCustomer" abstract="true"
       interface="true">
-    <eOperations name="getBooking" ordered="false" lowerBound="1" eType="#//Booking">
-      <eParameters name="bookingRef" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-    </eOperations>
     <eOperations name="pay" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
       <eParameters name="bookingRef" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
@@ -184,7 +187,7 @@
       <eParameters name="roomTypes" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="extras" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
-    <eOperations name="choosePaymentMethod" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+    <eOperations name="setPaymentMethod" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
       <eParameters name="method" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="setPaymentDetails" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
@@ -194,15 +197,13 @@
       <eParameters name="expiryYear" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="customerEmail" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="setPersonalDetails" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
       <eParameters name="firstName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="lastName" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="age" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       <eParameters name="email" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-    </eOperations>
-    <eOperations name="setCustomerToBooking" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
-      <eParameters name="customerEmail" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="bookingRef" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="book" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">

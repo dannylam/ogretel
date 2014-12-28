@@ -3,10 +3,12 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import maintenancemodel.Extra;
 import maintenancemodel.ExtraHandler;
 import maintenancemodel.ExtrasMaintenance;
 import maintenancemodel.MaintenancemodelPackage;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -16,9 +18,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the maintenancemodel object '<em><b>Extras Maintenance</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the maintenancemodel object '
+ * <em><b>Extras Maintenance</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
@@ -28,11 +29,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implements ExtrasMaintenance {
+public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
+		implements ExtrasMaintenance {
 	/**
 	 * The cached value of the '{@link #getExtras() <em>Extras</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getExtras()
 	 * @generated
 	 * @ordered
@@ -40,8 +41,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	protected ExtraHandler extras;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	protected ExtrasMaintenanceImpl() {
@@ -49,8 +49,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -59,21 +58,21 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 *  Return the ExtraHandler
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> Return the ExtraHandler <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
-	public ExtraHandler getExtras() {
-		return extras;
+	public EList<String> getExtras() {
+		// TODO
+		return null;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetExtras(ExtraHandler newExtras, NotificationChain msgs) {
+	public NotificationChain basicSetExtras(ExtraHandler newExtras,
+			NotificationChain msgs) {
 		ExtraHandler oldExtras = extras;
 		extras = newExtras;
 		if (eNotificationRequired()) {
@@ -84,8 +83,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setExtras(ExtraHandler newExtras) {
@@ -103,20 +101,19 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int addExtra(int price, String ID, String name, String description, boolean isProduct) {
+	public int addExtra(int extraID, int price, String name,
+			String description, boolean isProduct) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * 	Removes the given extra.
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> Removes the given extra. <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
 	public int removeExtra(int extra) {
@@ -126,9 +123,18 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 *  Returns the given extra
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int editExtra(int extraID, int price, String name, String description) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc --> Returns the given extra <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
 	public Extra getExtra(int ID) {
@@ -138,26 +144,12 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * Returns 1 if there is something wrong with the Extra you want to change
-	 * Returns 2 if anything went wrong with the changes
-	 * Returns 0 if all is good.
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int editExtra(int price, String name, String description, int ID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS:
 				return basicSetExtras(null, msgs);
@@ -166,8 +158,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -180,8 +171,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -195,8 +185,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -210,8 +199,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -224,23 +212,21 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+	public Object eInvoke(int operationID, EList<?> arguments)
+			throws InvocationTargetException {
 		switch (operationID) {
-			case MaintenancemodelPackage.EXTRAS_MAINTENANCE___ADD_EXTRA__INT_STRING_STRING_STRING_BOOLEAN:
-				return addExtra((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (Boolean)arguments.get(4));
+			case MaintenancemodelPackage.EXTRAS_MAINTENANCE___ADD_EXTRA__INT_INT_STRING_STRING_BOOLEAN:
+				return addExtra((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (Boolean)arguments.get(4));
 			case MaintenancemodelPackage.EXTRAS_MAINTENANCE___REMOVE_EXTRA__INT:
 				return removeExtra((Integer)arguments.get(0));
-			case MaintenancemodelPackage.EXTRAS_MAINTENANCE___GET_EXTRA__INT:
-				return getExtra((Integer)arguments.get(0));
-			case MaintenancemodelPackage.EXTRAS_MAINTENANCE___EDIT_EXTRA__INT_STRING_STRING_INT:
-				return editExtra((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
+			case MaintenancemodelPackage.EXTRAS_MAINTENANCE___EDIT_EXTRA__INT_INT_STRING_STRING:
+				return editExtra((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //ExtrasMaintenanceImpl
+} // ExtrasMaintenanceImpl

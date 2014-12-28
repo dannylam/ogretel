@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see bookingmodel.BookingmodelPackage#getPaymentDetails()
  * @model
- * @generated
+ * @generated NOT
  */
 public interface PaymentDetails extends EObject {
 	/**
@@ -38,7 +38,7 @@ public interface PaymentDetails extends EObject {
 	 * @see #setCcNr(String)
 	 * @see bookingmodel.BookingmodelPackage#getPaymentDetails_CcNr()
 	 * @model dataType="types.String" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	String getCcNr();
 
@@ -47,7 +47,7 @@ public interface PaymentDetails extends EObject {
 	 * that is the credit card number.
 	 * @param value the new value of the '<em>Cc Nr</em>' attribute.
 	 * @see #getCcNr()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setCcNr(String value);
 
@@ -58,7 +58,7 @@ public interface PaymentDetails extends EObject {
 	 * @see #setCcV(String)
 	 * @see bookingmodel.BookingmodelPackage#getPaymentDetails_CcV()
 	 * @model dataType="types.String" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	String getCcV();
 
@@ -67,7 +67,7 @@ public interface PaymentDetails extends EObject {
 	 * that is the card code verification.
 	 * @param value the new value of the '<em>Cc V</em>' attribute.
 	 * @see #getCcV()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setCcV(String value);
 
@@ -78,7 +78,7 @@ public interface PaymentDetails extends EObject {
 	 * @see #setExpMonth(int)
 	 * @see bookingmodel.BookingmodelPackage#getPaymentDetails_ExpMonth()
 	 * @model dataType="types.Integer" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int getExpMonth();
 
@@ -87,7 +87,7 @@ public interface PaymentDetails extends EObject {
 	 * that is the expiration month.
 	 * @param value the new value of the '<em>Exp Month</em>' attribute.
 	 * @see #getExpMonth()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setExpMonth(int value);
 
@@ -98,7 +98,7 @@ public interface PaymentDetails extends EObject {
 	 * @see #setExpYear(int)
 	 * @see bookingmodel.BookingmodelPackage#getPaymentDetails_ExpYear()
 	 * @model dataType="types.Integer" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int getExpYear();
 
@@ -107,7 +107,7 @@ public interface PaymentDetails extends EObject {
 	 * that is the expiration year.
 	 * @param value the new value of the '<em>Exp Year</em>' attribute.
 	 * @see #getExpYear()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setExpYear(int value);
 

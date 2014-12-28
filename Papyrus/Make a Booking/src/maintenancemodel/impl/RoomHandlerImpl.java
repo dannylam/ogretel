@@ -3,9 +3,13 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.Room;
 import maintenancemodel.RoomHandler;
+import maintenancemodel.RoomType;
+import maintenancemodel.RoomTypesHandler;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -39,6 +43,12 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected EMap<Integer, Room> integerToRoomMap;
+	
+	/**
+	 * Handles RoomTypes
+	 * @generated NOT
+	 */
+	protected RoomTypesHandler rtHandler = new RoomTypesHandlerImpl();
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -72,31 +82,36 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean exists(int ID) {
+	public boolean exists(int roomID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
+
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * Adds a Room with the given ID and Roomtype.
+	 * <!-- end-user-doc -->
 	 * 
 	 * @return
 	 * @generated NOT
 	 */
-	public int addRoom(int numberID, String roomType) {
-		Room r = new RoomImpl(numberID, roomType);
-		// this.room.add(r);
-		return 0;
-		// TODO: Checking
-		// Ensure that you remove @generated or mark it @generated NOT
+	public int addRoom(int numberID, RoomType roomType) {
+		
+			Room r = new RoomImpl(numberID, roomType);	
+			this.getIntegerToRoomMap().put(numberID, r);
+			return 0;
+		// No null check?
+		// TODO TEST
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int removeRoom(Room room) {
+	public int removeRoom(int roomID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -186,7 +201,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments)
@@ -194,10 +209,10 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 		switch (operationID) {
 			case MaintenancemodelPackage.ROOM_HANDLER___EXISTS__INT:
 				return exists((Integer)arguments.get(0));
-			case MaintenancemodelPackage.ROOM_HANDLER___ADD_ROOM__INT_STRING:
-				return addRoom((Integer)arguments.get(0), (String)arguments.get(1));
-			case MaintenancemodelPackage.ROOM_HANDLER___REMOVE_ROOM__ROOM:
-				return removeRoom((Room)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_HANDLER___ADD_ROOM__INT_ROOMTYPE:
+				return addRoom((Integer)arguments.get(0), (RoomType)arguments.get(1));
+			case MaintenancemodelPackage.ROOM_HANDLER___REMOVE_ROOM__INT:
+				return removeRoom((Integer)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_HANDLER___GET_ROOM__INT:
 				return getRoom((Integer)arguments.get(0));
 		}

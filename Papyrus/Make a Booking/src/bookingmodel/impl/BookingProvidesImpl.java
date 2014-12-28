@@ -8,10 +8,13 @@ import bookingmodel.BookingProvides;
 import bookingmodel.BookingmodelPackage;
 import bookingmodel.IBookingProvidesForGuest;
 import bookingmodel.IBookingProvidesForHost;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.List;
+
 import maintenancemodel.MaintenanceProvidesForBooking;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;

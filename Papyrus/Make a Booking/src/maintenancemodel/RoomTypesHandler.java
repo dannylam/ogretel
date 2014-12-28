@@ -2,6 +2,7 @@
  */
 package maintenancemodel;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 
@@ -71,5 +72,21 @@ public interface RoomTypesHandler extends EObject {
 	 * @generated
 	 */
 	int getPrice(String roomTypeID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
+	 * @generated
+	 */
+	EList<String> getRoomTypes();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
+	 * @generated
+	 */
+	RoomType getRoomType(String roomTypeID);
 
 } // RoomTypesHandler
