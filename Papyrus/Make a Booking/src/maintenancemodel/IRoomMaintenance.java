@@ -37,11 +37,7 @@ public interface IRoomMaintenance extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false" roomTypeEnumDataType="org.eclipse.uml2.types.String" roomTypeEnumRequired="true" roomTypeEnumOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" maxNrOfGuestsDataType="org.eclipse.uml2.types.Integer" maxNrOfGuestsRequired="true" maxNrOfGuestsOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
 	 * @generated
 	 */
-<<<<<<< HEAD
 	int addRoomType(String roomTypeID, String roomTypeEnum, int price, int maxNrOfGuests, String description);
-=======
-	int addRoomType(String roomTypeID, String roomType, int price, int maxNrOfGuests, String description);
->>>>>>> branch 'classcodegens' of https://github.com/dannylam/ogretel.git
 
 	/**
 	 * <!-- begin-user-doc -->
