@@ -41,7 +41,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected RoomTypesHandler roomTypes;
+	protected RoomTypesHandler roomTypes = new RoomTypesHandlerImpl();
 
 	/**
 	 * The cached value of the '{@link #getRooms() <em>Rooms</em>}' containment reference.
@@ -58,7 +58,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RoomMaintenanceImpl() {
+	public RoomMaintenanceImpl() {
 		super();
 	}
 
@@ -182,13 +182,19 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Adds a RoomType with the given parameters.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public int addRoomType(String roomType, int price, int maxNrOfGuests, String description) {
+	public int addRoomType(String roomTypeID, String roomTypeEnum, int price, int maxNrOfGuests, String description) {
+		
+		if(roomTypeID != null && roomTypeEnum != null && price >= 0 && maxNrOfGuests >= 0){
+			this.roomTypes.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+			return 0;	
+		}
+		return 1;
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -204,24 +210,25 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Returns the RoomHandler.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public RoomHandler getRoomHandler() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return this.rooms;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public RoomTypesHandler getRoomTypeHandler() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return this.roomTypes;
 	}
 
 	/**
@@ -417,7 +424,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___REMOVE_ROOM__INT:
 				return removeRoom((Integer)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_INT_INT_STRING:
-				return addRoomType((String)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
+				return addRoomType((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING:
 				return removeRoomType((String)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_HANDLER:

@@ -91,7 +91,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	 */
 	public boolean exists(String ID) {
 		
-		return this.stringToRoomType.containsKey(ID);
+		return this.getStringToRoomType().containsKey(ID);
 		// TODO: TEST
 		// Ensure that you remove @generated or mark it @generated NOT
 	}
@@ -107,8 +107,9 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 			int maxNrOfGuests, String description) {
 		
 		if(roomTypeID != null && roomTypeEnum != null && price >= 0 && maxNrOfGuests >= 0){
+			
 			RoomType newRT = new RoomTypeImpl(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
-			this.stringToRoomType.put(newRT.getID(), newRT);
+			this.getStringToRoomType().put(newRT.getID(), newRT);
 			return 0;
 			
 		}else{

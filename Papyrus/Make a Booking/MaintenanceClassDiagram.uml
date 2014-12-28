@@ -15,6 +15,9 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EMsUcYXKEeSUfsUdvz7rGg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EMsUcoXKEeSUfsUdvz7rGg" value="1"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_jXtRwI6YEeS0D-EMhs8Yvw" name="roomTypeID">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_U6TXUHk_EeScv6HJEKdjpA" name="Experience">
       <generalization xmi:type="uml:Generalization" xmi:id="_kwXBsIXPEeSUfsUdvz7rGg" general="_g7-xIIXPEeSUfsUdvz7rGg"/>
