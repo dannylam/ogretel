@@ -38,10 +38,10 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRoomTypes()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected RoomTypesHandler roomTypes;
+	protected RoomTypesHandler roomTypes = new RoomTypesHandlerImpl();
 
 	/**
 	 * The cached value of the '{@link #getRooms() <em>Rooms</em>}' containment reference.
@@ -190,7 +190,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	public int addRoomType(String roomTypeID, String roomTypeEnum, int price, int maxNrOfGuests, String description) {
 		
 		if(roomTypeID != null && roomTypeEnum != null && price >= 0 && maxNrOfGuests >= 0){
-			this.roomTypes.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+			this.getRoomTypeHandler().addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
 			return 0;	
 		}
 		return 1;
@@ -205,8 +205,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int removeRoomType(String roomType) {
 		return this.getRoomTypeHandler().removeRoomType(roomType);
-			
-		// TODO: TEST
+		// TODO
 	}
 
 	/**
@@ -245,8 +244,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Might be removed.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated 
 	 */
 	public RoomType getRoomType(String roomTypeID) {
 		// TODO: implement this method
@@ -308,13 +308,16 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Edit the RoomType with @param roomTypeID
+	 * so that it has the values given in the other parameters.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int editRoomType(String roomTypeID, String roomTypeEnum, int price, int maxNrOfGuests, String description) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		this.removeRoomType(roomTypeID);
+		return this.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		
+		// TODO: TEST
 	}
 
 	/**
