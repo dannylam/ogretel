@@ -63,6 +63,7 @@ public interface RoomTypesHandler extends EObject {
 	 */
 	int removeRoomType(String roomTypeID);
 
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

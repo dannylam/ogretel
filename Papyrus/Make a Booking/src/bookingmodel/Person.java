@@ -5,10 +5,19 @@ package bookingmodel;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Person</b></em>'.
- * <!-- end-user-doc -->
- *
+ * An interface class which represents Person, extending EObject.
+ * This class has 10 methods;
+ * getFirstName - returns the first name of a person.
+ * setFirstName - sets the first name of a person.
+ * getLastName - returns the last name of a person.
+ * setLastName - sets the last name of a person.
+ * getEmail - returns the email address of a person.
+ * setEmail - sets the email address of a person.
+ * getTelephoneNr - returns the telephone number of a person.
+ * setTelephoneNr - sets the telephone number of a person.
+ * getAddress - returns the address of a person.
+ * setAddress - sets the address of a person.
+ * 
  * <p>
  * The following features are supported:
  * <ul>
@@ -22,136 +31,100 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see bookingmodel.BookingmodelPackage#getPerson()
  * @model abstract="true"
- * @generated
+ * @generated NOT
  */
 public interface Person extends EObject {
 	/**
-	 * Returns the value of the '<em><b>First Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>First Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
+	 * Returns the first name of a person.
+	 * A person is a host, customer or guest.
 	 * @return the value of the '<em>First Name</em>' attribute.
 	 * @see #setFirstName(String)
 	 * @see bookingmodel.BookingmodelPackage#getPerson_FirstName()
 	 * @model unique="false" dataType="types.String" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	String getFirstName();
 
 	/**
-	 * Sets the value of the '{@link bookingmodel.Person#getFirstName <em>First Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets the first name of a person.
+	 * A person is a host, customer or guest.
 	 * @param value the new value of the '<em>First Name</em>' attribute.
 	 * @see #getFirstName()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setFirstName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Last Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Last Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
+	 * Returns the last name of a person.
+	 * A person is a host, customer or guest.
 	 * @return the value of the '<em>Last Name</em>' attribute.
 	 * @see #setLastName(String)
 	 * @see bookingmodel.BookingmodelPackage#getPerson_LastName()
 	 * @model dataType="types.String" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	String getLastName();
 
 	/**
-	 * Sets the value of the '{@link bookingmodel.Person#getLastName <em>Last Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets the last name of a person.
+	 * A person is a host, customer or guest.
 	 * @param value the new value of the '<em>Last Name</em>' attribute.
 	 * @see #getLastName()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setLastName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Email</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Email</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
+	 * Returns a person's email.
 	 * @return the value of the '<em>Email</em>' attribute.
 	 * @see #setEmail(String)
 	 * @see bookingmodel.BookingmodelPackage#getPerson_Email()
 	 * @model dataType="types.String" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	String getEmail();
 
 	/**
-	 * Sets the value of the '{@link bookingmodel.Person#getEmail <em>Email</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets a person's email
 	 * @param value the new value of the '<em>Email</em>' attribute.
 	 * @see #getEmail()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setEmail(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Telephone Nr</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Telephone Nr</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
+	 * Returns a person's telephone number.
 	 * @return the value of the '<em>Telephone Nr</em>' attribute.
 	 * @see #setTelephoneNr(String)
 	 * @see bookingmodel.BookingmodelPackage#getPerson_TelephoneNr()
 	 * @model dataType="types.String" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	String getTelephoneNr();
 
 	/**
-	 * Sets the value of the '{@link bookingmodel.Person#getTelephoneNr <em>Telephone Nr</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets a person's telephone number.
 	 * @param value the new value of the '<em>Telephone Nr</em>' attribute.
 	 * @see #getTelephoneNr()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setTelephoneNr(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Address</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Address</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
+	 * Returns a person's address.
 	 * @return the value of the '<em>Address</em>' attribute.
 	 * @see #setAddress(String)
 	 * @see bookingmodel.BookingmodelPackage#getPerson_Address()
 	 * @model dataType="types.String" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	String getAddress();
 
 	/**
-	 * Sets the value of the '{@link bookingmodel.Person#getAddress <em>Address</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets a person's address.
 	 * @param value the new value of the '<em>Address</em>' attribute.
 	 * @see #getAddress()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setAddress(String value);
 

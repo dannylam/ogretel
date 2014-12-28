@@ -531,7 +531,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXTRA_HANDLER___ADD_EXTRA__INT_STRING_STRING_STRING = 1;
+	int EXTRA_HANDLER___ADD_EXTRA__INT_STRING_STRING_STRING_BOOLEAN = 1;
 
 	/**
 	 * The operation id for the '<em>Remove Extra</em>' operation.
@@ -1207,7 +1207,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEXTRAS_MAINTENANCE___ADD_EXTRA__INT_STRING_STRING_STRING = 0;
+	int IEXTRAS_MAINTENANCE___ADD_EXTRA__INT_STRING_STRING_STRING_BOOLEAN = 0;
 
 	/**
 	 * The operation id for the '<em>Remove Extra</em>' operation.
@@ -1289,7 +1289,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXTRAS_MAINTENANCE___ADD_EXTRA__INT_STRING_STRING_STRING = IEXTRAS_MAINTENANCE___ADD_EXTRA__INT_STRING_STRING_STRING;
+	int EXTRAS_MAINTENANCE___ADD_EXTRA__INT_STRING_STRING_STRING_BOOLEAN = IEXTRAS_MAINTENANCE___ADD_EXTRA__INT_STRING_STRING_STRING_BOOLEAN;
 
 	/**
 	 * The operation id for the '<em>Remove Extra</em>' operation.
@@ -1938,14 +1938,14 @@ public interface MaintenancemodelPackage extends EPackage {
 	EOperation getExtraHandler__Exists__int();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.ExtraHandler#addExtra(int, java.lang.String, java.lang.String, java.lang.String) <em>Add Extra</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.ExtraHandler#addExtra(int, java.lang.String, java.lang.String, java.lang.String, boolean) <em>Add Extra</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Extra</em>' operation.
-	 * @see maintenancemodel.ExtraHandler#addExtra(int, java.lang.String, java.lang.String, java.lang.String)
+	 * @see maintenancemodel.ExtraHandler#addExtra(int, java.lang.String, java.lang.String, java.lang.String, boolean)
 	 * @generated
 	 */
-	EOperation getExtraHandler__AddExtra__int_String_String_String();
+	EOperation getExtraHandler__AddExtra__int_String_String_String_boolean();
 
 	/**
 	 * Returns the meta object for the '{@link maintenancemodel.ExtraHandler#removeExtra(int) <em>Remove Extra</em>}' operation.
@@ -2498,14 +2498,14 @@ public interface MaintenancemodelPackage extends EPackage {
 	EClass getIExtrasMaintenance();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.IExtrasMaintenance#addExtra(int, java.lang.String, java.lang.String, java.lang.String) <em>Add Extra</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.IExtrasMaintenance#addExtra(int, java.lang.String, java.lang.String, java.lang.String, boolean) <em>Add Extra</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Extra</em>' operation.
-	 * @see maintenancemodel.IExtrasMaintenance#addExtra(int, java.lang.String, java.lang.String, java.lang.String)
+	 * @see maintenancemodel.IExtrasMaintenance#addExtra(int, java.lang.String, java.lang.String, java.lang.String, boolean)
 	 * @generated
 	 */
-	EOperation getIExtrasMaintenance__AddExtra__int_String_String_String();
+	EOperation getIExtrasMaintenance__AddExtra__int_String_String_String_boolean();
 
 	/**
 	 * Returns the meta object for the '{@link maintenancemodel.IExtrasMaintenance#removeExtra(int) <em>Remove Extra</em>}' operation.
@@ -2953,7 +2953,7 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EXTRA_HANDLER___ADD_EXTRA__INT_STRING_STRING_STRING = eINSTANCE.getExtraHandler__AddExtra__int_String_String_String();
+		EOperation EXTRA_HANDLER___ADD_EXTRA__INT_STRING_STRING_STRING_BOOLEAN = eINSTANCE.getExtraHandler__AddExtra__int_String_String_String_boolean();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Extra</b></em>' operation.
@@ -3405,7 +3405,7 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IEXTRAS_MAINTENANCE___ADD_EXTRA__INT_STRING_STRING_STRING = eINSTANCE.getIExtrasMaintenance__AddExtra__int_String_String_String();
+		EOperation IEXTRAS_MAINTENANCE___ADD_EXTRA__INT_STRING_STRING_STRING_BOOLEAN = eINSTANCE.getIExtrasMaintenance__AddExtra__int_String_String_String_boolean();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Extra</b></em>' operation.
