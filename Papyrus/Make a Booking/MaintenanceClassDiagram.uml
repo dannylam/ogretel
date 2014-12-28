@@ -15,7 +15,7 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EMsUcYXKEeSUfsUdvz7rGg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EMsUcoXKEeSUfsUdvz7rGg" value="1"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_jXtRwI6YEeS0D-EMhs8Yvw" name="roomTypeID">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_jXtRwI6YEeS0D-EMhs8Yvw" name="roomTypeID" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
     </packagedElement>
@@ -31,7 +31,7 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_klHJEYXREeSUfsUdvz7rGg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_klHJEoXREeSUfsUdvz7rGg" value="1"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_K-eRUI59EeSoNLHQGQT73w" name="nrOfSpotsFree">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_K-eRUI59EeSoNLHQGQT73w" name="nrOfSpotsFree" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
     </packagedElement>
