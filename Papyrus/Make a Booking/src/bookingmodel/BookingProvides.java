@@ -4,8 +4,6 @@ package bookingmodel;
 
 import java.util.List;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * An interface class which represents BookingProvides, extending EObject.
  * The interface extends an EObject and has 20 methods;

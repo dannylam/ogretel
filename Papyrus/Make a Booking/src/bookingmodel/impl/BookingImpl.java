@@ -530,8 +530,16 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			this.roomIDToGuestMap.get(roomID).setValue(guestEmail);
 		}
 		return result;
-		/*
-		 * 	public int setResponsibleGuestToAllRooms(String guestEmail) {
+	}
+	
+	/**
+	 *TODO javadoc
+	 *TODO: check if correct
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public int setResponsibleGuestToAllRooms(String guestEmail) {
 		int result = 0;
 		if(!this.roomIDToGuestMap.isEmpty()){
 			int i = 0;
@@ -543,9 +551,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			}
 		}
 		return result;
-	}*/
 	}
-	
+
 	/**
 	 * TODO: Javadoc
 	 * TODO: check if its correct
@@ -795,6 +802,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return checkedInAGuest();
 			case BookingmodelPackage.BOOKING___SET_RESPONSIBLE_GUEST__INT_STRING:
 				return setResponsibleGuest((Integer)arguments.get(0), (String)arguments.get(1));
+			case BookingmodelPackage.BOOKING___SET_RESPONSIBLE_GUEST_TO_ALL_ROOMS__STRING:
+				return setResponsibleGuestToAllRooms((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING___GET_NR_OF_ROOMS:
 				return getNrOfRooms();
 			case BookingmodelPackage.BOOKING___SET_EXTRAS__ELIST:

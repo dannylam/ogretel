@@ -124,7 +124,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 
 
 	/**
-	 * TODO: javadoc
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -132,17 +131,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, String roomTypes, String extras) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		/*Booking newBooking = new BookingImpl(nrOfNights, nrOfGuests, date, stringToList(roomTypes), stringToList(extras));	
-
-		
-		Booking booking = this.bookingsMap.get(bookingRef);
-		Booking newBooking = new BookingImpl();
-		
-		booking.setStartDate(startDate);
-		booking.setEndDate(endDate);
-		booking.setNrOfGuests(nrOfGuests);
-		booking.setRoomTypes(roomTypes);
-		booking.setExtras(extras);*/
 		throw new UnsupportedOperationException();
 	}
 

@@ -253,6 +253,13 @@ public interface Booking extends EObject {
 	int setResponsibleGuest(int roomID, String guestEmail);
 
 	/**
+	 * Sets a guest as responsible to all the rooms in the booking by using their email
+	 * @model dataType="types.Integer" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
+	 * @generated NOT
+	 */
+	int setResponsibleGuestToAllRooms(String guestEmail);	
+	
+	/**
 	 * Returns the number of rooms.
 	 * @model kind="operation" dataType="types.Integer" required="true" ordered="false"
 	 * @generated NOT

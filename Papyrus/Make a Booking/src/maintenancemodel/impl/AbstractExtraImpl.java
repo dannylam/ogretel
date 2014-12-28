@@ -36,7 +36,7 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ID_EDEFAULT = null;
+	protected static final int ID_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getID() <em>ID</em>}' attribute.
@@ -46,7 +46,7 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 	 * @generated
 	 * @ordered
 	 */
-	protected String id = ID_EDEFAULT;
+	protected int id = ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPrice() <em>Price</em>}' attribute.
@@ -133,7 +133,7 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public String getID() {
+	public int getID() {
 		return id;
 	}
 
@@ -143,8 +143,8 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void setID(String newID) {
-		String oldID = id;
+	public void setID(int newID) {
+		int oldID = id;
 		id = newID;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ABSTRACT_EXTRA__ID, oldID, id));
@@ -258,7 +258,7 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case MaintenancemodelPackage.ABSTRACT_EXTRA__ID:
-				setID((String)newValue);
+				setID((Integer)newValue);
 				return;
 			case MaintenancemodelPackage.ABSTRACT_EXTRA__PRICE:
 				setPrice((Integer)newValue);
@@ -306,7 +306,7 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case MaintenancemodelPackage.ABSTRACT_EXTRA__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+				return id != ID_EDEFAULT;
 			case MaintenancemodelPackage.ABSTRACT_EXTRA__PRICE:
 				return price != PRICE_EDEFAULT;
 			case MaintenancemodelPackage.ABSTRACT_EXTRA__NAME:

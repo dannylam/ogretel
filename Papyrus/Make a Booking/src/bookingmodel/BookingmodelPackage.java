@@ -351,13 +351,22 @@ public interface BookingmodelPackage extends EPackage {
 	int BOOKING___SET_RESPONSIBLE_GUEST__INT_STRING = 2;
 
 	/**
+	 * The operation id for the '<em>Set Responsible Guest To All Rooms</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING___SET_RESPONSIBLE_GUEST_TO_ALL_ROOMS__STRING = 3;
+
+	/**
 	 * The operation id for the '<em>Get Nr Of Rooms</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___GET_NR_OF_ROOMS = 3;
+	int BOOKING___GET_NR_OF_ROOMS = 4;
 
 	/**
 	 * The operation id for the '<em>Set Extras</em>' operation.
@@ -366,7 +375,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___SET_EXTRAS__ELIST = 4;
+	int BOOKING___SET_EXTRAS__ELIST = 5;
 
 	/**
 	 * The operation id for the '<em>Set Room Types</em>' operation.
@@ -375,7 +384,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___SET_ROOM_TYPES__ELIST = 5;
+	int BOOKING___SET_ROOM_TYPES__ELIST = 6;
 
 	/**
 	 * The number of operations of the '<em>Booking</em>' class.
@@ -384,7 +393,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_OPERATION_COUNT = 6;
+	int BOOKING_OPERATION_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.impl.PersonImpl <em>Person</em>}' class.
@@ -1574,6 +1583,16 @@ public interface BookingmodelPackage extends EPackage {
 	EOperation getBooking__SetResponsibleGuest__int_String();
 
 	/**
+	 * Returns the meta object for the '{@link bookingmodel.Booking#setResponsibleGuestToAllRooms(java.lang.String) <em>Set Responsible Guest To All Rooms</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Set Responsible Guest To All Rooms</em>' operation.
+	 * @see bookingmodel.Booking#setResponsibleGuestToAllRooms(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBooking__SetResponsibleGuestToAllRooms__String();
+
+	/**
 	 * Returns the meta object for the '{@link bookingmodel.Booking#getNrOfRooms() <em>Get Nr Of Rooms</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2371,6 +2390,14 @@ public interface BookingmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING___SET_RESPONSIBLE_GUEST__INT_STRING = eINSTANCE.getBooking__SetResponsibleGuest__int_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Set Responsible Guest To All Rooms</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING___SET_RESPONSIBLE_GUEST_TO_ALL_ROOMS__STRING = eINSTANCE.getBooking__SetResponsibleGuestToAllRooms__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Nr Of Rooms</b></em>' operation.

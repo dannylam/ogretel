@@ -604,7 +604,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_g7-xIIXPEeSUfsUdvz7rGg" name="AbstractExtra" isAbstract="true">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_dlphYHlAEeScv6HJEKdjpA" name="ID" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_WULe4HlAEeScv6HJEKdjpA" name="price" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
