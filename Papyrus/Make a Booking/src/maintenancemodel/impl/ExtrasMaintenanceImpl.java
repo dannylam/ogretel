@@ -63,6 +63,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 *  Return the ExtraHandler
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -117,8 +118,9 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * 	Removes the given extra.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int removeExtra(int extra) {
 		return extras.removeExtra(extra);
@@ -126,8 +128,9 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 
 	/**
 	 * <!-- begin-user-doc -->
+	 *  Returns the given extra
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Extra getExtra(int ID) {
 		return extras.getExtra(ID);
