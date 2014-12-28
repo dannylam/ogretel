@@ -29,7 +29,7 @@ public interface IExtrasMaintenance extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extraRequired="true" extraOrdered="false"
 	 * @generated
 	 */
-	int removeExtra(Extra extra);
+	int removeExtra(int extra);
 
 	/**
 	 * <!-- begin-user-doc -->
