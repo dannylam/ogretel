@@ -1129,7 +1129,7 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_LaCcMYXbEeS36vV1PdpyWw"/>
       <element xmi:type="uml:Association" href="MaintenanceClassDiagram.uml#_LZ-x0IXbEeS36vV1PdpyWw"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LaDDQIXbEeS36vV1PdpyWw" points="[5, -7, -2, 118]$[5, -167, -2, -42]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Lag9UIXbEeS36vV1PdpyWw" id="(0.5910290237467019,0.9861111111111112)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Lag9UIXbEeS36vV1PdpyWw" id="(0.6229508196721312,0.9722222222222222)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_t0L-YIXqEeSU1psjCnSubg" id="(0.9308176100628931,0.0)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_nwldMIXqEeSU1psjCnSubg" type="4001" source="__Lb6UHlCEeScv6HJEKdjpA" target="_j6yQUIXqEeSU1psjCnSubg">
