@@ -78,7 +78,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	/**
 	 * @generated
 	 */
-	protected MaintenanceProvidesForBookingImpl() {
+	public MaintenanceProvidesForBookingImpl() {
 		super();
 	}
 
