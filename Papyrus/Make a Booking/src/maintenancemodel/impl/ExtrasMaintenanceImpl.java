@@ -3,13 +3,10 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
-
-import maintenancemodel.AbstractExtra;
 import maintenancemodel.Extra;
 import maintenancemodel.ExtraHandler;
 import maintenancemodel.ExtrasMaintenance;
 import maintenancemodel.MaintenancemodelPackage;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -121,7 +118,9 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public int removeExtra(int extra) {
-		return extras.removeExtra(extra);
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -130,7 +129,9 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public Extra getExtra(int ID) {
-		return extras.getExtra(ID);
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -142,20 +143,9 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	public int editExtra(int price, String name, String description, int ID) {
-		AbstractExtra extra;
-		if(extras.getExtra(ID).getClass() == AbstractExtra.class) { //Check if the value exists
-			extra = (AbstractExtra) extras.getExtra(ID);
-		} else {
-			return 1;
-		}
-		try {
-			extra.setName(name);
-			extra.setPrice(price);
-			extra.setDescription(description);
-		} catch (Exception e){ //Hmm, kan man fånga om något gått fel på annat sätt?
-			return 2;
-		}
-		return 0;
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -240,7 +230,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container implemen
 		switch (operationID) {
 			case MaintenancemodelPackage.EXTRAS_MAINTENANCE___ADD_EXTRA__INT_STRING_STRING_STRING:
 				return addExtra((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
-			case MaintenancemodelPackage.EXTRAS_MAINTENANCE___REMOVE_EXTRA__EXTRA:
+			case MaintenancemodelPackage.EXTRAS_MAINTENANCE___REMOVE_EXTRA__INT:
 				return removeExtra((Integer)arguments.get(0));
 			case MaintenancemodelPackage.EXTRAS_MAINTENANCE___GET_EXTRA__INT:
 				return getExtra((Integer)arguments.get(0));

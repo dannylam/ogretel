@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link maintenancemodel.RoomType#getMaxNrOfGuests <em>Max Nr Of Guests</em>}</li>
  *   <li>{@link maintenancemodel.RoomType#getDescription <em>Description</em>}</li>
  *   <li>{@link maintenancemodel.RoomType#getRoomTypeEnum <em>Room Type Enum</em>}</li>
+ *   <li>{@link maintenancemodel.RoomType#getRoomTypeID <em>Room Type ID</em>}</li>
  * </ul>
  * </p>
  *
@@ -143,5 +144,31 @@ public interface RoomType extends EObject {
 	 * @generated
 	 */
 	void setRoomTypeEnum(RoomTypeEnum value);
+
+	/**
+	 * Returns the value of the '<em><b>Room Type ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Room Type ID</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Room Type ID</em>' attribute.
+	 * @see #setRoomTypeID(String)
+	 * @see maintenancemodel.MaintenancemodelPackage#getRoomType_RoomTypeID()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getRoomTypeID();
+
+	/**
+	 * Sets the value of the '{@link maintenancemodel.RoomType#getRoomTypeID <em>Room Type ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Room Type ID</em>' attribute.
+	 * @see #getRoomTypeID()
+	 * @generated
+	 */
+	void setRoomTypeID(String value);
 
 } // RoomType

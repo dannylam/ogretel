@@ -59,7 +59,7 @@ public interface ExtraHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extraRequired="true" extraOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extraDataType="org.eclipse.uml2.types.Integer" extraRequired="true" extraOrdered="false"
 	 * @generated
 	 */
 	int removeExtra(int extra);
@@ -71,5 +71,13 @@ public interface ExtraHandler extends EObject {
 	 * @generated
 	 */
 	Extra getExtra(int ID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extraIDDataType="org.eclipse.uml2.types.Integer" extraIDRequired="true" extraIDOrdered="false"
+	 * @generated
+	 */
+	int getPrice(int extraID);
 
 } // ExtraHandler
