@@ -10,14 +10,13 @@ import bookingmodel.IBookingProvidesForGuest;
 import bookingmodel.IBookingProvidesForHost;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -105,18 +104,17 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> stringToList(String text) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	//TODO: ändra i bookingprovides till List istället för Elist
+	public List<String> stringToList(String text) {
+		return Arrays.asList(text.split("\\s*,\\s*"));
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int enableSelfManagement() {
 		// TODO: implement this method
@@ -127,7 +125,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int addServiceNote(String serviceNote) {
 		// TODO: implement this method
@@ -138,7 +136,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int editServiceNote(String oldServiceNote, String newServiceNote) {
 		// TODO: implement this method
@@ -149,7 +147,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int removeServiceNote(String serviceNote) {
 		// TODO: implement this method
@@ -160,7 +158,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getServiceNotes(String bookingRef) {
 		// TODO: implement this method
@@ -169,20 +167,30 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * Checks-in the guests of the booking by setting the booking as active
+	 * and the guest provided the email as responsible if the booking is not already
+	 * checked in and is valid.
+	 * Returns an integer indicating the result of the invoke, where 0 stands for success.
+	 * 
+	 * @generated NOT
 	 */
 	public int checkIn(String bookingRef, String guestEmail) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		int result = 0;
+		if(this.bookingHandler.exists(bookingRef) && !this.bookingHandler.getBooking(bookingRef).checkedInAllGuest()){
+			//Setting respsonsible guest
+			//this.bookingHandler.getBooking(bookingRef).setResponsibleGuestToAllRooms(guestEmail);
+			
+			//Set booking as active
+			//Invoke method in IMaintenanceProvidesForBooking
+		}
+		// TODO: check if correct
+		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int checkOut(String bookingRef, String guestEmail) {
 		// TODO: implement this method
@@ -193,7 +201,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName) {
 		// TODO: implement this method
@@ -202,20 +210,24 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 * TODO: javadoc
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Booking getBooking(String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(bookingRef!= null){
+			return this.bookingHandler.getBooking(bookingRef);
+		} else {
+			//TODO:change this later on
+			return null;
+		}
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int pay(String bookingRef) {
 		// TODO: implement this method
@@ -226,40 +238,52 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getPrice(String bookingRef) {
 		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
+		/*
+		 * Ska från en bookingRef få reda på vilka extras och hur många av varjerumstyp vi har
+		 * och därefter kan vi fråga maintenance om vad priset för varje är och sedan summera och returnera
+		 */
 		throw new UnsupportedOperationException();
 	}
 
 	/**
+	 * TODO: javadoc
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int removeBooking(String bookingRef) {
+		int result = 0;
+		//checka att bookingref är av bra format etc sen
+		//this.getBookingHandler().removeBooking(bookingRef);
 		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return result;
 	}
 
 	/**
+	 * TODO: javadoc
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, String roomTypes, String extras) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		int result = 0;
+		/*
+		 * Check with the changes if they are possible, ask maintenacne, if so, then the changes are registered 
+		 * in the booking
+		 * */
+		
+		//TODO: implement this method
+		return result;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int choosePaymentMethod(String method) {
 		// TODO: implement this method
@@ -270,7 +294,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int setPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
 		// TODO: implement this method
@@ -281,7 +305,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int setPersonalDetails(String firstName, String lastName, int age, String email) {
 		// TODO: implement this method
@@ -292,7 +316,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int setCustomerToBooking(String customerEmail, String bookingRef) {
 		// TODO: implement this method
@@ -301,14 +325,24 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 *TODO: javadoc
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int book(String startDate, String endDate, int nrOfGuests, String roomTypes, String extras) {
+		int result = 0;
 		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		/*TODO: Lägga till MaintenanceProvidesForBooking som ett objekt i klassen, kallar den maintenance
+		 * check with MaintenanceProvidesForBooking if can book, and if so then create obj
+		 * */
+		/*
+
+		if(MaintenanceProvidesForBooking.this.canBook(roomType, nrOfRooms, startdate, enddate)){
+			Booking booking = new BookingImpl(nrOfNights, nrOfGuests, date, stringToList(roomTypes), stringToList(extras));	
+			this.bookingHandler.addBooking(booking);
+		}*/
+		return result;
 	}
 
 	/**
