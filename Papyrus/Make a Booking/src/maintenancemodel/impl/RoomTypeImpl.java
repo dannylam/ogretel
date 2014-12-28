@@ -5,6 +5,7 @@ package maintenancemodel.impl;
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.RoomType;
 import maintenancemodel.RoomTypeEnum;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -109,13 +110,32 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * The ID of the RoomType used in the Map
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public String ID = "Default RoomType ID";
+	
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public String getID() {
+		return ID;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RoomTypeImpl() {
+	public RoomTypeImpl() {
 		super();
 	}
-	
 	
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,18 +143,23 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	protected RoomTypeImpl(int price, int maxNrOfGuests, String description, String rtenum) {
-		super();
+	public RoomTypeImpl(String roomTypeID, String roomTypeEnum, int price,
+			int maxNrOfGuests, String description) {
+		
+		this.ID = roomTypeID;
+		this.roomTypeEnum = this.stringToRoomTypeEnum(roomTypeEnum);
 		this.price = price;
 		this.maxNrOfGuests = maxNrOfGuests;
 		this.description = description;
-		this.roomTypeEnum = stringToRoomTypeEnum(rtenum);
+
+		// TODO Auto-generated constructor stub
 	}
-	
+
+
 	/**
 	 * Returns the RoomTypeEnum associated with the String that is sent in.
 	 * The possible strings are "singlebed", "doublebed" and "luxurysuite",
-	 * otherwise null is returned.
+	 * otherwise singlebed is returned as default.
 	 * @generated NOT
 	 */
 	private RoomTypeEnum stringToRoomTypeEnum(String roomTypeEnum){
@@ -147,7 +172,7 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 		case "luxurysuite":
 			return RoomTypeEnum.LUXURYSUITE;
 		default:
-			return null;
+			return RoomTypeEnum.SINGLEBED;
 		}
 		
 	}
