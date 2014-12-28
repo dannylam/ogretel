@@ -7,7 +7,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * A representation of the interface of a '<em><b>Customer</b></em>',
+ * An interface class which represents a Customer, extending EObject.
  * with one method;
  * getPaymentDetails - return a list of payment details.
  * 

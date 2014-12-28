@@ -5,7 +5,7 @@ package bookingmodel;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * A representation of the interface PaymentDetails, extending Eobject.
+ * An interface class which represents PaymentDetails, extending EObject.
  * This class has 8 methods;
  * getCcNr - returns the credit card number.
  * setCcNr - sets the credit card number.

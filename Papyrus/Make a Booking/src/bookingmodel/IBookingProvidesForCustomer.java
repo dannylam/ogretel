@@ -5,7 +5,7 @@ package bookingmodel;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * A representation of an interface of IBookingProvidesForCustomer, extending EObject.
+ * An interface class which represents booking provides for the customer, extending EObject.
  * This class has 8 methods;
  * getBooking - get a specific booking
  * book - make a booking

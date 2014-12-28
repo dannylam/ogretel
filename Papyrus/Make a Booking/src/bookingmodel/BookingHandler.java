@@ -6,7 +6,7 @@ import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * A representation of the interface '<em><b>Booking Handler</b></em>'.
+ * An interface class which represents BookingHandler, extending EObject.
  * The interface extends an EObject and has 5 methods; 
  * exists - checks if the booking reference exists
  * addBooking - adding a booking
