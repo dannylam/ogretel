@@ -140,4 +140,42 @@ public class testRoomMaintenance {
 
 	}
 
+	/**
+	 * Tests whether it is possible to edit a RoomType.
+	 * 
+	 * @generated NOT
+	 */
+	@Test
+	public void testEditRoomType() {
+
+		String roomTypeID = "So good room";
+		String roomTypeEnum = "doublebed";
+		int price = 100;
+		int maxNrOfGuests = 3;
+		String description = "This room is very cool and I like it a lot.";
+
+		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+				maxNrOfGuests, description);
+		assertTrue(addRT == 0);
+		// TODO
+		// assertTrue(this.rm.getRoomTypeHandler().exists(roomTypeID));
+
+		int edRT = this.rm.editRoomType(roomTypeID, "singlebed", 200, 1,
+				"Här bor en apa.");
+		assertTrue(edRT == 0);
+
+		// TODO
+		// RoomType gettedRT =
+		// this.rm.getRoomTypeHandler().getStringToRoomType().get(roomTypeID);
+
+		RoomType gettedRT = null;
+
+		assertTrue(gettedRT.getID() == roomTypeID);
+		assertTrue(gettedRT.getRoomTypeEnum() == RoomTypeEnum.SINGLEBED);
+		assertTrue(gettedRT.getDescription() == "Här bor en apa.");
+		assertTrue(gettedRT.getMaxNrOfGuests() == 1);
+		assertTrue(gettedRT.getPrice() == 200);
+
+	}
+
 }
