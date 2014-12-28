@@ -82,11 +82,12 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean exists(int ID) {
+	public boolean exists(int roomID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
+
 
 	/**
 	 * <!-- begin-user-doc --> 
@@ -106,10 +107,11 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int removeRoom(Room room) {
+	public int removeRoom(int roomID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -207,10 +209,10 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 		switch (operationID) {
 			case MaintenancemodelPackage.ROOM_HANDLER___EXISTS__INT:
 				return exists((Integer)arguments.get(0));
-			case MaintenancemodelPackage.ROOM_HANDLER___ADD_ROOM__INT_STRING:
+			case MaintenancemodelPackage.ROOM_HANDLER___ADD_ROOM__INT_ROOMTYPE:
 				return addRoom((Integer)arguments.get(0), (RoomType)arguments.get(1));
-			case MaintenancemodelPackage.ROOM_HANDLER___REMOVE_ROOM__ROOM:
-				return removeRoom((Room)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_HANDLER___REMOVE_ROOM__INT:
+				return removeRoom((Integer)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_HANDLER___GET_ROOM__INT:
 				return getRoom((Integer)arguments.get(0));
 		}

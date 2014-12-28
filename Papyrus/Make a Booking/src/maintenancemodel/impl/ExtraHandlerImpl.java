@@ -89,7 +89,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int addExtra(int price, String ID, String name, String description, boolean isProduct) {
+	public int addExtra(int extraID, int price, String name, String description, boolean isProduct) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -109,6 +109,17 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 		}
 		intToExtraMap.removeKey(extra);
 		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getExtras() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -217,12 +228,12 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 		switch (operationID) {
 			case MaintenancemodelPackage.EXTRA_HANDLER___EXISTS__INT:
 				return exists((Integer)arguments.get(0));
-			case MaintenancemodelPackage.EXTRA_HANDLER___ADD_EXTRA__INT_STRING_STRING_STRING_BOOLEAN:
-				return addExtra((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (Boolean)arguments.get(4));
+			case MaintenancemodelPackage.EXTRA_HANDLER___ADD_EXTRA__INT_INT_STRING_STRING_BOOLEAN:
+				return addExtra((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (Boolean)arguments.get(4));
 			case MaintenancemodelPackage.EXTRA_HANDLER___REMOVE_EXTRA__INT:
 				return removeExtra((Integer)arguments.get(0));
-			case MaintenancemodelPackage.EXTRA_HANDLER___GET_EXTRA__INT:
-				return getExtra((Integer)arguments.get(0));
+			case MaintenancemodelPackage.EXTRA_HANDLER___GET_EXTRAS:
+				return getExtras();
 			case MaintenancemodelPackage.EXTRA_HANDLER___GET_PRICE__INT:
 				return getPrice((Integer)arguments.get(0));
 		}

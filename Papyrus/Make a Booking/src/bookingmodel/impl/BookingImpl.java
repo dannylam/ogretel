@@ -518,10 +518,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 *TODO javadoc
+	 * Sets a guest its responsibility to a specific room,
+	 * by connecting their email address to a roomID. 
 	 *TODO: check if correct
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @param roomID, guestEmail
 	 * @generated NOT
 	 */
 	public int setResponsibleGuest(int roomID, String guestEmail) {
@@ -533,10 +533,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 	
 	/**
-	 *TODO javadoc
+	 * Sets a guest its responsibility to all its booked rooms,
+	 * by connecting their email address to a set of room IDs. 
 	 *TODO: check if correct
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @param guestEmail
 	 * @generated NOT
 	 */
 	public int setResponsibleGuestToAllRooms(String guestEmail) {
@@ -554,10 +554,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * TODO: Javadoc
+	 * Returns the number of specific booked rooms. 
 	 * TODO: check if its correct
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public int getNrOfRooms() {
@@ -565,9 +563,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 *TODO: Javadoc
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets all payed extras into a list, where the results 
+	 * indicate how it went. 
 	 * @generated NOT
 	 */
 	public int setExtras(List<String> extras) {
@@ -580,9 +577,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * TODO: Javadoc
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets all the roomtypes into a list, where the results
+	 * indicate how it went. 
 	 * @generated NOT
 	 */
 	public int setRoomTypes(List<String> roomTypes) {

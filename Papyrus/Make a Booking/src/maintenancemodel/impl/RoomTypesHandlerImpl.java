@@ -20,27 +20,27 @@
 	import org.eclipse.emf.ecore.util.InternalEList;
 	
 	/**
-	 * <!-- begin-user-doc --> An implementation of the maintenancemodel object '
+ * <!-- begin-user-doc --> An implementation of the maintenancemodel object '
 	 * <em><b>Room Types Handler</b></em>'. <!-- end-user-doc -->
-	 * <p>
-	 * The following features are implemented:
-	 * <ul>
-	 *   <li>{@link maintenancemodel.impl.RoomTypesHandlerImpl#getStringToRoomType <em>String To Room Type</em>}</li>
-	 * </ul>
-	 * </p>
-	 *
-	 * @generated
-	 */
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link maintenancemodel.impl.RoomTypesHandlerImpl#getStringToRoomType <em>String To Room Type</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
 	public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	implements RoomTypesHandler {
 		/**
-		 * The cached value of the '{@link #getStringToRoomType() <em>String To Room Type</em>}' map.
-		 * <!-- begin-user-doc --> <!--
+	 * The cached value of the '{@link #getStringToRoomType() <em>String To Room Type</em>}' map.
+	 * <!-- begin-user-doc --> <!--
 		 * end-user-doc -->
-		 * @see #getStringToRoomType()
-		 * @generated
-		 * @ordered
-		 */
+	 * @see #getStringToRoomType()
+	 * @generated
+	 * @ordered
+	 */
 		protected EMap<String, RoomType> stringToRoomType;
 	
 		/**
@@ -53,24 +53,24 @@
 		}
 	
 		/**
-		 * <!-- begin-user-doc --> <!-- end-user-doc -->
-		 * @generated
-		 */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
 		@Override
 		protected EClass eStaticClass() {
-			return MaintenancemodelPackage.Literals.ROOM_TYPES_HANDLER;
-		}
+		return MaintenancemodelPackage.Literals.ROOM_TYPES_HANDLER;
+	}
 	
 		/**
-		 * <!-- begin-user-doc --> <!-- end-user-doc -->
-		 * @generated
-		 */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
 		public EMap<String, RoomType> getStringToRoomType() {
-			if (stringToRoomType == null) {
-				stringToRoomType = new EcoreEMap<String,RoomType>(MaintenancemodelPackage.Literals.STRING_TO_ROOM_TYPE, StringToRoomTypeImpl.class, this, MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE);
-			}
-			return stringToRoomType;
+		if (stringToRoomType == null) {
+			stringToRoomType = new EcoreEMap<String,RoomType>(MaintenancemodelPackage.Literals.STRING_TO_ROOM_TYPE, StringToRoomTypeImpl.class, this, MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE);
 		}
+		return stringToRoomType;
+	}
 	
 		/**
 		 * <!-- begin-user-doc -->
@@ -122,6 +122,28 @@
 		throw new UnsupportedOperationException();
 	}
 	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getRoomTypes() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomType getRoomType(String roomTypeID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
 	/**
 	 * Returns the RoomTypeEnum associated with the String that is sent in.
 	 * The possible strings are "singlebed", "doublebed" and "luxurysuite",
@@ -182,8 +204,8 @@
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
-			return ((InternalEList<?>)getStringToRoomType()).basicRemove(otherEnd, msgs);
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+				return ((InternalEList<?>)getStringToRoomType()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -195,9 +217,9 @@
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
-			if (coreType) return getStringToRoomType();
-			else return getStringToRoomType().map();
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+				if (coreType) return getStringToRoomType();
+				else return getStringToRoomType().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -210,9 +232,9 @@
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
-			((EStructuralFeature.Setting)getStringToRoomType()).set(newValue);
-			return;
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+				((EStructuralFeature.Setting)getStringToRoomType()).set(newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -224,9 +246,9 @@
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
-			getStringToRoomType().clear();
-			return;
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+				getStringToRoomType().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -238,8 +260,8 @@
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
-			return stringToRoomType != null && !stringToRoomType.isEmpty();
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+				return stringToRoomType != null && !stringToRoomType.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

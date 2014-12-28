@@ -2,6 +2,7 @@
  */
 package maintenancemodel;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -50,50 +51,10 @@ public interface IRoomMaintenance extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" required="true" ordered="false"
-	 * @generated
-	 */
-	RoomHandler getRoomHandler();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation" required="true" ordered="false"
-	 * @generated
-	 */
-	RoomTypesHandler getRoomTypeHandler();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false"
-	 * @generated
-	 */
-	Room getRoom(int roomID);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
-	 * @generated
-	 */
-	RoomType getRoomType(String roomTypeID);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" statusDataType="org.eclipse.uml2.types.String" statusRequired="true" statusOrdered="false"
 	 * @generated
 	 */
 	int editRoomStatus(int roomID, String status);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false"
-	 * @generated
-	 */
-	String getRoomStatus(int roomID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -110,5 +71,29 @@ public interface IRoomMaintenance extends EObject {
 	 * @generated
 	 */
 	int editRoom(int roomID, String roomTypeID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
+	 * @generated
+	 */
+	EList<String> getRoomIDs();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
+	 * @generated
+	 */
+	EList<String> getRoomTypeIDs();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false"
+	 * @generated
+	 */
+	String getRoomStatus(String roomID);
 
 } // IRoomMaintenance
