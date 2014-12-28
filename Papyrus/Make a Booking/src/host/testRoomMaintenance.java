@@ -156,5 +156,28 @@ public class testRoomMaintenance {
 		assertTrue(gettedRT.getPrice() == 200);
 		
 	}
+	
+	/**
+	 * Tests whether it is possible to add a Room.
+	 * @generated NOT
+	 */
+	@Test
+	public void testAddRoom() {
+		
+		String roomTypeID = "Cosy room";
+		String roomTypeEnum = "doublebed";
+		int price = 150;
+		int maxNrOfGuests = 2;
+		String description = "Nice and eciN";
+		
+		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		assertTrue(addRT == 0);
+		assertTrue(this.rm.getRoomTypeHandler().exists(roomTypeID));
+		
+		int addedR = this.rm.addRoom(10, roomTypeID);
+		
+		assertTrue(addedR == 0);
+		
+	}
 
 }

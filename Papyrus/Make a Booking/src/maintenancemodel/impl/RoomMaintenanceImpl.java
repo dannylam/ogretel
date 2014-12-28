@@ -51,7 +51,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected RoomHandler rooms;
+	protected RoomHandler rooms = new RoomHandlerImpl();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -161,13 +161,20 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Add Room with given ID and RoomType
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public int addRoom(int numberID, String roomType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		if(this.getRoomTypeHandler().exists(roomType)){
+			RoomType rt = this.getRoomTypeHandler().getStringToRoomType().get(roomType);
+			this.getRoomHandler().addRoom(numberID, rt);
+			return 0;
+		}
+		return 1;
+		
+		// TODO TEST
 	}
 
 	/**
