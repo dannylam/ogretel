@@ -5,56 +5,54 @@ package bookingmodel;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * An interface class which represents booking provides for the host, extending EObject.
- * It has 5 methods;
- * enableSelfManagement - enable self management.
- * addServiceNote - add a specific service note.
- * editServiceNote - edit a specific service note
- * removeServiceNote - remove a specific service note.
- * getServiceNote - get a specific service note.
- * @see bookingmodel.ModelPackage#getIBookingProvidesForHost()
- * @maintenancemodel interface="true" abstract="true"
- * @generated NOT
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>IBooking Provides For Host</b></em>'.
+ * <!-- end-user-doc -->
+ *
+ *
+ * @see bookingmodel.BookingmodelPackage#getIBookingProvidesForHost()
+ * @model interface="true" abstract="true"
+ * @generated
  */
 public interface IBookingProvidesForHost extends EObject {
 	/**
-	 * Enable self management to a specific host.
-	 * @param guestEmail
-	 * @maintenancemodel guestEmailDataType="org.eclipse.uml2.types.String" guestEmailRequired="true" guestEmailOrdered="false"
-	 * @generated NOT
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="types.Integer" required="true" ordered="false"
+	 * @generated
 	 */
-	void enableSelfManagement(String guestEmail);
+	int enableSelfManagement();
 
 	/**
-	 * Add a specific service note.
-	 * @param serviceNote
-	 * @maintenancemodel serviceNoteDataType="org.eclipse.uml2.types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
-	 * @generated NOT
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="types.Integer" required="true" ordered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
+	 * @generated
 	 */
-	void addServiceNote(String serviceNote);
+	int addServiceNote(String serviceNote);
 
 	/**
-	 * Edit a service note by changing a specific service note into a new service note.
-	 * @param oldServiceNote, newServiceNote
-	 * @maintenancemodel oldServiceNoteDataType="org.eclipse.uml2.types.String" oldServiceNoteRequired="true" oldServiceNoteOrdered="false" newServiceNoteDataType="org.eclipse.uml2.types.String" newServiceNoteRequired="true" newServiceNoteOrdered="false"
-	 * @generated NOT
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="types.Integer" required="true" ordered="false" oldServiceNoteDataType="types.String" oldServiceNoteRequired="true" oldServiceNoteOrdered="false" newServiceNoteDataType="types.String" newServiceNoteRequired="true" newServiceNoteOrdered="false"
+	 * @generated
 	 */
-	void editServiceNote(String oldServiceNote, String newServiceNote);
+	int editServiceNote(String oldServiceNote, String newServiceNote);
 
 	/**
-	 * Remove a specific service note
-	 * @param serviceNote
-	 * @maintenancemodel serviceNoteDataType="org.eclipse.uml2.types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
-	 * @generated NOT 
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="types.Integer" required="true" ordered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
+	 * @generated
 	 */
-	void removeServiceNote(String serviceNote);
+	int removeServiceNote(String serviceNote);
 
 	/**
-	 * Get service notes from a specific booking.
-	 * @param bookingRef
-	 * @maintenancemodel bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated NOT
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="types.String" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @generated
 	 */
-	void getServiceNotes(String bookingRef);
+	String getServiceNotes(String bookingRef);
 
 } // IBookingProvidesForHost

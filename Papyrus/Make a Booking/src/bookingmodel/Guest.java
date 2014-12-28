@@ -2,15 +2,11 @@
  */
 package bookingmodel;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
- * An interface class which represents Guest, extending EObject.
- * This class has 4 methods;
- * getRoomNr - return the value of a specific room
- * setRoomNr - set a number to a specific room
- * getGuestTypes - return the type of the guest
- * setGuestTypes - set a type to the guest
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Guest</b></em>'.
+ * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
@@ -20,48 +16,63 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see bookingmodel.ModelPackage#getGuest()
- * @maintenancemodel
- * @generated NOT
+ * @see bookingmodel.BookingmodelPackage#getGuest()
+ * @model
+ * @generated
  */
-public interface Guest extends EObject {
+public interface Guest extends Person {
 	/**
-	 * Returns the number of a specific room.
+	 * Returns the value of the '<em><b>Room Nr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Room Nr</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Room Nr</em>' attribute.
 	 * @see #setRoomNr(int)
-	 * @see bookingmodel.ModelPackage#getGuest_RoomNr()
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
-	 * @generated NOT
+	 * @see bookingmodel.BookingmodelPackage#getGuest_RoomNr()
+	 * @model dataType="types.Integer" required="true" ordered="false"
+	 * @generated
 	 */
 	int getRoomNr();
 
 	/**
-	 * Set a number to a specific room.
+	 * Sets the value of the '{@link bookingmodel.Guest#getRoomNr <em>Room Nr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Room Nr</em>' attribute.
 	 * @see #getRoomNr()
-	 * @generated NOT
+	 * @generated
 	 */
 	void setRoomNr(int value);
 
 	/**
-	 * Get the type of a specific guest.
-	 * There are two types of guests: guest and VIP.
+	 * Returns the value of the '<em><b>Guest Types</b></em>' attribute.
+	 * The literals are from the enumeration {@link bookingmodel.GuestTypes}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Guest Types</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Guest Types</em>' attribute.
 	 * @see bookingmodel.GuestTypes
 	 * @see #setGuestTypes(GuestTypes)
-	 * @see bookingmodel.ModelPackage#getGuest_GuestTypes()
-	 * @maintenancemodel required="true" ordered="false"
-	 * @generated NOT
+	 * @see bookingmodel.BookingmodelPackage#getGuest_GuestTypes()
+	 * @model required="true" ordered="false"
+	 * @generated
 	 */
 	GuestTypes getGuestTypes();
 
 	/**
-	 * Sets the type to a guest.
-	 *  * There are three types of guests: guest, VIP and blacklisted.
+	 * Sets the value of the '{@link bookingmodel.Guest#getGuestTypes <em>Guest Types</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Guest Types</em>' attribute.
 	 * @see bookingmodel.GuestTypes
 	 * @see #getGuestTypes()
-	 * @generated NOT
+	 * @generated
 	 */
 	void setGuestTypes(GuestTypes value);
 

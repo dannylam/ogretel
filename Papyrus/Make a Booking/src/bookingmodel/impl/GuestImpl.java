@@ -2,19 +2,19 @@
  */
 package bookingmodel.impl;
 
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import bookingmodel.BookingmodelPackage;
 import bookingmodel.Guest;
 import bookingmodel.GuestTypes;
-import bookingmodel.ModelPackage;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
- * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
- * An implementation of the maintenancemodel object '<em><b>Guest</b></em>'.
+ * An implementation of the model object '<em><b>Guest</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -26,7 +26,7 @@ import bookingmodel.ModelPackage;
  *
  * @generated
  */
-public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
+public class GuestImpl extends PersonImpl implements Guest {
 	/**
 	 * The default value of the '{@link #getRoomNr() <em>Room Nr</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -39,7 +39,6 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 
 	/**
 	 * The cached value of the '{@link #getRoomNr() <em>Room Nr</em>}' attribute.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRoomNr()
@@ -50,7 +49,6 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 
 	/**
 	 * The default value of the '{@link #getGuestTypes() <em>Guest Types</em>}' attribute.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getGuestTypes()
@@ -70,7 +68,6 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	protected GuestTypes guestTypes = GUEST_TYPES_EDEFAULT;
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -86,11 +83,10 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.GUEST;
+		return BookingmodelPackage.Literals.GUEST;
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -100,7 +96,6 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -109,11 +104,10 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 		int oldRoomNr = roomNr;
 		roomNr = newRoomNr;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.GUEST__ROOM_NR, oldRoomNr, roomNr));
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.GUEST__ROOM_NR, oldRoomNr, roomNr));
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -123,7 +117,6 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -132,7 +125,7 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 		GuestTypes oldGuestTypes = guestTypes;
 		guestTypes = newGuestTypes == null ? GUEST_TYPES_EDEFAULT : newGuestTypes;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.GUEST__GUEST_TYPES, oldGuestTypes, guestTypes));
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.GUEST__GUEST_TYPES, oldGuestTypes, guestTypes));
 	}
 
 	/**
@@ -143,9 +136,9 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelPackage.GUEST__ROOM_NR:
+			case BookingmodelPackage.GUEST__ROOM_NR:
 				return getRoomNr();
-			case ModelPackage.GUEST__GUEST_TYPES:
+			case BookingmodelPackage.GUEST__GUEST_TYPES:
 				return getGuestTypes();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -159,10 +152,10 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelPackage.GUEST__ROOM_NR:
+			case BookingmodelPackage.GUEST__ROOM_NR:
 				setRoomNr((Integer)newValue);
 				return;
-			case ModelPackage.GUEST__GUEST_TYPES:
+			case BookingmodelPackage.GUEST__GUEST_TYPES:
 				setGuestTypes((GuestTypes)newValue);
 				return;
 		}
@@ -177,10 +170,10 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelPackage.GUEST__ROOM_NR:
+			case BookingmodelPackage.GUEST__ROOM_NR:
 				setRoomNr(ROOM_NR_EDEFAULT);
 				return;
-			case ModelPackage.GUEST__GUEST_TYPES:
+			case BookingmodelPackage.GUEST__GUEST_TYPES:
 				setGuestTypes(GUEST_TYPES_EDEFAULT);
 				return;
 		}
@@ -195,9 +188,9 @@ public class GuestImpl extends MinimalEObjectImpl.Container implements Guest {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelPackage.GUEST__ROOM_NR:
+			case BookingmodelPackage.GUEST__ROOM_NR:
 				return roomNr != ROOM_NR_EDEFAULT;
-			case ModelPackage.GUEST__GUEST_TYPES:
+			case BookingmodelPackage.GUEST__GUEST_TYPES:
 				return guestTypes != GUEST_TYPES_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

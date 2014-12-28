@@ -8,257 +8,329 @@ import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * An interface class which represents Booking, extending EObject.
- * which extends an EObject and has 21 methods:
- * getBookingRef - get a specific booking
- * setBookingRef - set a value to a specific booking reference
- * getDate - get a date of a specific booking
- * setDate - set a date to a specific booking
- * getNrOfNights - get number of nights of a specific booking
- * setNrOfNights - set number of nights to a specific booking
- * getExtraList - get a list of extras
- * getServiceNotes - get a list of service notes
- * getNrOfGuests - get the number of guests of a specific booking
- * setNrOfGuests - set number of guests to a specific booking
- * getCustomer - get customer from a specific booking
- * setCustomer - set customer to a specific booking
- * getGuestList - get a list of guests
- * isPayed - checks if the booking has been payed or not
- * setIsPayed - set the booking to Payed
- * getRoomGuestMap - get a set of rooms and their responsible guests
- * getRoomTypeMap - get a set of roomtypes
- * getPaymentMethod - get the payment method of a specific booking
- * setPaymentMethod - set the payment method to a specific booking
- * checkedInAllGuest - check if all guests are checked in.
- * checkedInAGuest - check if a specific guest is checked in.
+ * <!-- begin-user-doc -->
+ * A representation of the model object '<em><b>Booking</b></em>'.
+ * <!-- end-user-doc -->
+ *
  * <p>
  * The following features are supported:
  * <ul>
  *   <li>{@link bookingmodel.Booking#getBookingRef <em>Booking Ref</em>}</li>
  *   <li>{@link bookingmodel.Booking#getDate <em>Date</em>}</li>
  *   <li>{@link bookingmodel.Booking#getNrOfNights <em>Nr Of Nights</em>}</li>
- *   <li>{@link bookingmodel.Booking#getExtraList <em>Extra List</em>}</li>
  *   <li>{@link bookingmodel.Booking#getServiceNotes <em>Service Notes</em>}</li>
  *   <li>{@link bookingmodel.Booking#getNrOfGuests <em>Nr Of Guests</em>}</li>
  *   <li>{@link bookingmodel.Booking#getCustomer <em>Customer</em>}</li>
  *   <li>{@link bookingmodel.Booking#getGuestList <em>Guest List</em>}</li>
- *   <li>{@link bookingmodel.Booking#isPayed <em>Is Payed</em>}</li>
+ *   <li>{@link bookingmodel.Booking#isIsPayed <em>Is Payed</em>}</li>
  *   <li>{@link bookingmodel.Booking#getRoomGuestMap <em>Room Guest Map</em>}</li>
  *   <li>{@link bookingmodel.Booking#getRoomTypeMap <em>Room Type Map</em>}</li>
  *   <li>{@link bookingmodel.Booking#getPaymentMethod <em>Payment Method</em>}</li>
  * </ul>
  * </p>
  *
- * @see bookingmodel.ModelPackage#getBooking()
- * @maintenancemodel
- * @generated NOT
+ * @see bookingmodel.BookingmodelPackage#getBooking()
+ * @model
+ * @generated
  */
 public interface Booking extends EObject {
 	/**
-	 * A method that returns the value of the '<em><b>Booking Ref</b></em>' attribute.
+	 * Returns the value of the '<em><b>Booking Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Booking Ref</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Booking Ref</em>' attribute.
 	 * @see #setBookingRef(String)
-	 * @see bookingmodel.ModelPackage#getBooking_BookingRef()
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated NOT
+	 * @see bookingmodel.BookingmodelPackage#getBooking_BookingRef()
+	 * @model dataType="types.String" required="true" ordered="false"
+	 * @generated
 	 */
 	String getBookingRef();
 
 	/**
-	 * A method that sets the value 
-	 * of the '{@link bookingmodel.Booking#getBookingRef <em>Booking Ref</em>}' attribute.
+	 * Sets the value of the '{@link bookingmodel.Booking#getBookingRef <em>Booking Ref</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Booking Ref</em>' attribute.
 	 * @see #getBookingRef()
-	 * @generated NOT
+	 * @generated
 	 */
 	void setBookingRef(String value);
 
 	/**
-	 * A method that returns the value of the '<em><b>Date</b></em>' attribute.
+	 * Returns the value of the '<em><b>Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Date</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Date</em>' attribute.
 	 * @see #setDate(String)
-	 * @see bookingmodel.ModelPackage#getBooking_Date()
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
-	 * @generated NOT
+	 * @see bookingmodel.BookingmodelPackage#getBooking_Date()
+	 * @model dataType="types.String" required="true" ordered="false"
+	 * @generated
 	 */
 	String getDate();
 
 	/**
-	 * A method that sets the value of the '{@link bookingmodel.Booking#getDate <em>Date</em>}' attribute.
+	 * Sets the value of the '{@link bookingmodel.Booking#getDate <em>Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Date</em>' attribute.
 	 * @see #getDate()
-	 * @generated NOT
+	 * @generated
 	 */
 	void setDate(String value);
 
 	/**
-	 * A method that returns the value of the '<em><b>Nr Of Nights</b></em>' attribute.
+	 * Returns the value of the '<em><b>Nr Of Nights</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nr Of Nights</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nr Of Nights</em>' attribute.
 	 * @see #setNrOfNights(int)
-	 * @see bookingmodel.ModelPackage#getBooking_NrOfNights()
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
-	 * @generated NOT
+	 * @see bookingmodel.BookingmodelPackage#getBooking_NrOfNights()
+	 * @model dataType="types.Integer" required="true" ordered="false"
+	 * @generated
 	 */
 	int getNrOfNights();
 
 	/**
-	 * A method that sets the value 
-	 * of the '{@link bookingmodel.Booking#getNrOfNights <em>Nr Of Nights</em>}' attribute.
+	 * Sets the value of the '{@link bookingmodel.Booking#getNrOfNights <em>Nr Of Nights</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Nr Of Nights</em>' attribute.
 	 * @see #getNrOfNights()
-	 * @generated NOT
+	 * @generated
 	 */
 	void setNrOfNights(int value);
 
 	/**
-	 * A method that returns the value of the '<em><b>Extra List</b></em>' attribute list.
+	 * Returns the value of the '<em><b>Service Notes</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.String}.
-	 * @return the value of the '<em>Extra List</em>' attribute list.
-	 * @see bookingmodel.ModelPackage#getBooking_ExtraList()
-	 * @maintenancemodel ordered="false"
-	 * @generated NOT
-	 */
-	EList<String> getExtraList();
-
-	/**
-	 * A method that returns the value of the '<em><b>Service Notes</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Service Notes</em>' attribute list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Service Notes</em>' attribute list.
-	 * @see bookingmodel.ModelPackage#getBooking_ServiceNotes()
-	 * @maintenancemodel ordered="false"
-	 * @generated NOT
+	 * @see bookingmodel.BookingmodelPackage#getBooking_ServiceNotes()
+	 * @model ordered="false"
+	 * @generated
 	 */
 	EList<String> getServiceNotes();
 
 	/**
-	 * A method that returns the value of the '<em><b>Nr Of Guests</b></em>' attribute.
+	 * Returns the value of the '<em><b>Nr Of Guests</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nr Of Guests</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nr Of Guests</em>' attribute.
 	 * @see #setNrOfGuests(int)
-	 * @see bookingmodel.ModelPackage#getBooking_NrOfGuests()
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
-	 * @generated NOT
+	 * @see bookingmodel.BookingmodelPackage#getBooking_NrOfGuests()
+	 * @model dataType="types.Integer" required="true" ordered="false"
+	 * @generated
 	 */
 	int getNrOfGuests();
 
 	/**
-	 * A method that sets the value 
-	 * of the '{@link bookingmodel.Booking#getNrOfGuests <em>Nr Of Guests</em>}' attribute.
+	 * Sets the value of the '{@link bookingmodel.Booking#getNrOfGuests <em>Nr Of Guests</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Nr Of Guests</em>' attribute.
 	 * @see #getNrOfGuests()
-	 * @generated NOT
+	 * @generated
 	 */
 	void setNrOfGuests(int value);
 
 	/**
-	 * A method that returns the value of the '<em><b>Customer</b></em>' reference.
+	 * Returns the value of the '<em><b>Customer</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Customer</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Customer</em>' reference.
 	 * @see #setCustomer(Customer)
-	 * @see bookingmodel.ModelPackage#getBooking_Customer()
-	 * @maintenancemodel required="true" ordered="false"
+	 * @see bookingmodel.BookingmodelPackage#getBooking_Customer()
+	 * @model required="true" ordered="false"
 	 * @generated
 	 */
 	Customer getCustomer();
 
 	/**
-	 * A method that sets the value 
-	 * of the '{@link bookingmodel.Booking#getCustomer <em>Customer</em>}' reference.
+	 * Sets the value of the '{@link bookingmodel.Booking#getCustomer <em>Customer</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Customer</em>' reference.
 	 * @see #getCustomer()
-	 * @generated NOT
+	 * @generated
 	 */
 	void setCustomer(Customer value);
 
 	/**
-	 * A method that returns the value of the '<em><b>Guest List</b></em>' reference list.
+	 * Returns the value of the '<em><b>Guest List</b></em>' reference list.
 	 * The list contents are of type {@link bookingmodel.Guest}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Guest List</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Guest List</em>' reference list.
-	 * @see bookingmodel.ModelPackage#getBooking_GuestList()
-	 * @maintenancemodel required="true" ordered="false"
-	 * @generated NOT
+	 * @see bookingmodel.BookingmodelPackage#getBooking_GuestList()
+	 * @model required="true" ordered="false"
+	 * @generated
 	 */
 	EList<Guest> getGuestList();
 
 	/**
-	 * A method that returns the value (true/false) of the '<em><b>Is Payed</b></em>' attribute,
-	 * if it is payed or not.
+	 * Returns the value of the '<em><b>Is Payed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Payed</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Payed</em>' attribute.
 	 * @see #setIsPayed(boolean)
-	 * @see bookingmodel.ModelPackage#getBooking_IsPayed()
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
-	 * @generated NOT
+	 * @see bookingmodel.BookingmodelPackage#getBooking_IsPayed()
+	 * @model dataType="types.Boolean" required="true" ordered="false"
+	 * @generated
 	 */
-	boolean isPayed();
+	boolean isIsPayed();
 
 	/**
-	 * A method that sets the value 
-	 * of the '{@link bookingmodel.Booking#isPayed <em>Is Payed</em>}' attribute,
-	 * with parameter of the new value of the isPayed attribute.
-	 * @param value
-	 * @see #isPayed()
-	 * @generated NOT
+	 * Sets the value of the '{@link bookingmodel.Booking#isIsPayed <em>Is Payed</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Payed</em>' attribute.
+	 * @see #isIsPayed()
+	 * @generated
 	 */
 	void setIsPayed(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Room Guest Map</b></em>' map.
-	 * It will get a set of rooms and their responsible guests.
 	 * The key is of type {@link java.lang.String},
 	 * and the value is of type {@link java.lang.String},
-	 * RoomGuestMap is a set of guests.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Room Guest Map</em>' map isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Room Guest Map</em>' map.
-	 * @see bookingmodel.ModelPackage#getBooking_RoomGuestMap()
-	 * @maintenancemodel mapType="maintenancemodel.RoomtypeToGuestIDEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString>" ordered="false"
-	 * @generated NOT
+	 * @see bookingmodel.BookingmodelPackage#getBooking_RoomGuestMap()
+	 * @model mapType="bookingmodel.RoomtypeToGuestIDEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString>" ordered="false"
+	 * @generated
 	 */
 	EMap<String, String> getRoomGuestMap();
 
 	/**
 	 * Returns the value of the '<em><b>Room Type Map</b></em>' map.
-	 * RoomTypeMap is a set of roomtypes.
 	 * The key is of type {@link java.lang.String},
 	 * and the value is of type {@link java.lang.Integer},
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Room Type Map</em>' map isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Room Type Map</em>' map.
-	 * @see bookingmodel.ModelPackage#getBooking_RoomTypeMap()
-	 * @maintenancemodel mapType="maintenancemodel.NrToRoomEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EIntegerObject>" ordered="false"
-	 * @generated NOT
+	 * @see bookingmodel.BookingmodelPackage#getBooking_RoomTypeMap()
+	 * @model mapType="bookingmodel.NrToRoomEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EIntegerObject>" ordered="false"
+	 * @generated
 	 */
 	EMap<String, Integer> getRoomTypeMap();
 
 	/**
 	 * Returns the value of the '<em><b>Payment Method</b></em>' attribute.
 	 * The literals are from the enumeration {@link bookingmodel.PaymentMethod}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Payment Method</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Payment Method</em>' attribute.
 	 * @see bookingmodel.PaymentMethod
 	 * @see #setPaymentMethod(PaymentMethod)
-	 * @see bookingmodel.ModelPackage#getBooking_PaymentMethod()
-	 * @maintenancemodel required="true" ordered="false"
-	 * @generated NOT
+	 * @see bookingmodel.BookingmodelPackage#getBooking_PaymentMethod()
+	 * @model required="true" ordered="false"
+	 * @generated
 	 */
 	PaymentMethod getPaymentMethod();
 
 	/**
-	 * A method that sets the payment value of 
-	 * the '{@link bookingmodel.Booking#getPaymentMethod <em>Payment Method</em>}' attribute.
+	 * Sets the value of the '{@link bookingmodel.Booking#getPaymentMethod <em>Payment Method</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Payment Method</em>' attribute.
 	 * @see bookingmodel.PaymentMethod
 	 * @see #getPaymentMethod()
-	 * @generated NOT
+	 * @generated
 	 */
 	void setPaymentMethod(PaymentMethod value);
 
 	/**
-	 * A method that checks if all guests are checked in.
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
-	 * @generated NOT
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="types.Boolean" required="true" ordered="false"
+	 * @generated
 	 */
 	boolean checkedInAllGuest();
 
 	/**
-	 * A method that checks if a guest is checked in.
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
-	 * @generated NOT
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="types.Boolean" required="true" ordered="false"
+	 * @generated
 	 */
 	boolean checkedInAGuest();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="types.Integer" required="true" ordered="false" roomDataType="types.String" roomRequired="true" roomOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
+	 * @generated
+	 */
+	int setResponsibleGuest(String room, String guestEmail);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" dataType="types.Integer" required="true" ordered="false"
+	 * @generated
+	 */
+	int getNrOfRooms();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="types.Integer" required="true" ordered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false"
+	 * @generated
+	 */
+	int setExtras(EList<String> extras);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="types.Integer" required="true" ordered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false"
+	 * @generated
+	 */
+	int setRoomTypes(EList<String> extras);
 
 } // Booking

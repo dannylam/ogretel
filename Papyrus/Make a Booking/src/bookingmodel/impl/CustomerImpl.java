@@ -2,21 +2,21 @@
  */
 package bookingmodel.impl;
 
+import bookingmodel.BookingmodelPackage;
+import bookingmodel.Customer;
+import bookingmodel.PaymentDetails;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
-import bookingmodel.Customer;
-import bookingmodel.ModelPackage;
-import bookingmodel.PaymentDetails;
-
 /**
- * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
- * An implementation of the maintenancemodel object '<em><b>Customer</b></em>'.
+ * An implementation of the model object '<em><b>Customer</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -27,10 +27,9 @@ import bookingmodel.PaymentDetails;
  *
  * @generated
  */
-public class CustomerImpl extends MinimalEObjectImpl.Container implements Customer {
+public class CustomerImpl extends PersonImpl implements Customer {
 	/**
 	 * The cached value of the '{@link #getPaymentDetails() <em>Payment Details</em>}' reference list.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPaymentDetails()
@@ -40,7 +39,6 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	protected EList<PaymentDetails> paymentDetails;
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -50,25 +48,23 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.CUSTOMER;
+		return BookingmodelPackage.Literals.CUSTOMER;
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EList<PaymentDetails> getPaymentDetails() {
 		if (paymentDetails == null) {
-			paymentDetails = new EObjectResolvingEList<PaymentDetails>(PaymentDetails.class, this, ModelPackage.CUSTOMER__PAYMENT_DETAILS);
+			paymentDetails = new EObjectResolvingEList<PaymentDetails>(PaymentDetails.class, this, BookingmodelPackage.CUSTOMER__PAYMENT_DETAILS);
 		}
 		return paymentDetails;
 	}
@@ -81,7 +77,7 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelPackage.CUSTOMER__PAYMENT_DETAILS:
+			case BookingmodelPackage.CUSTOMER__PAYMENT_DETAILS:
 				return getPaymentDetails();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -96,7 +92,7 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelPackage.CUSTOMER__PAYMENT_DETAILS:
+			case BookingmodelPackage.CUSTOMER__PAYMENT_DETAILS:
 				getPaymentDetails().clear();
 				getPaymentDetails().addAll((Collection<? extends PaymentDetails>)newValue);
 				return;
@@ -112,7 +108,7 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelPackage.CUSTOMER__PAYMENT_DETAILS:
+			case BookingmodelPackage.CUSTOMER__PAYMENT_DETAILS:
 				getPaymentDetails().clear();
 				return;
 		}
@@ -127,7 +123,7 @@ public class CustomerImpl extends MinimalEObjectImpl.Container implements Custom
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelPackage.CUSTOMER__PAYMENT_DETAILS:
+			case BookingmodelPackage.CUSTOMER__PAYMENT_DETAILS:
 				return paymentDetails != null && !paymentDetails.isEmpty();
 		}
 		return super.eIsSet(featureID);

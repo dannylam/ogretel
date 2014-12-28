@@ -2,18 +2,19 @@
  */
 package bookingmodel.impl;
 
+import bookingmodel.BookingmodelPackage;
+import bookingmodel.PaymentDetails;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import bookingmodel.ModelPackage;
-import bookingmodel.PaymentDetails;
-
 /**
- * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
- * An implementation of the maintenancemodel object '<em><b>Payment Details</b></em>'.
+ * An implementation of the model object '<em><b>Payment Details</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -40,8 +41,7 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 
 	/**
 	 * The cached value of the '{@link #getCcNr() <em>Cc Nr</em>}' attribute.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->f
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCcNr()
 	 * @generated
@@ -61,8 +61,7 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 
 	/**
 	 * The cached value of the '{@link #getCcV() <em>Cc V</em>}' attribute.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->f
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCcV()
 	 * @generated
@@ -82,8 +81,7 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 
 	/**
 	 * The cached value of the '{@link #getExpMonth() <em>Exp Month</em>}' attribute.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->f
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getExpMonth()
 	 * @generated
@@ -103,8 +101,7 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 
 	/**
 	 * The cached value of the '{@link #getExpYear() <em>Exp Year</em>}' attribute.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->f
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getExpYear()
 	 * @generated
@@ -113,8 +110,7 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	protected int expYear = EXP_YEAR_EDEFAULT;
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->f
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -129,12 +125,11 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.PAYMENT_DETAILS;
+		return BookingmodelPackage.Literals.PAYMENT_DETAILS;
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->f
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -143,8 +138,7 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->f
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -152,12 +146,11 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 		String oldCcNr = ccNr;
 		ccNr = newCcNr;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PAYMENT_DETAILS__CC_NR, oldCcNr, ccNr));
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.PAYMENT_DETAILS__CC_NR, oldCcNr, ccNr));
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->f
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -166,8 +159,7 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->f
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -175,12 +167,11 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 		String oldCcV = ccV;
 		ccV = newCcV;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PAYMENT_DETAILS__CC_V, oldCcV, ccV));
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.PAYMENT_DETAILS__CC_V, oldCcV, ccV));
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->f
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -189,8 +180,7 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->f
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -198,12 +188,11 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 		int oldExpMonth = expMonth;
 		expMonth = newExpMonth;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PAYMENT_DETAILS__EXP_MONTH, oldExpMonth, expMonth));
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.PAYMENT_DETAILS__EXP_MONTH, oldExpMonth, expMonth));
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->f
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -212,8 +201,7 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->f
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -221,25 +209,24 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 		int oldExpYear = expYear;
 		expYear = newExpYear;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.PAYMENT_DETAILS__EXP_YEAR, oldExpYear, expYear));
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.PAYMENT_DETAILS__EXP_YEAR, oldExpYear, expYear));
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->f
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelPackage.PAYMENT_DETAILS__CC_NR:
+			case BookingmodelPackage.PAYMENT_DETAILS__CC_NR:
 				return getCcNr();
-			case ModelPackage.PAYMENT_DETAILS__CC_V:
+			case BookingmodelPackage.PAYMENT_DETAILS__CC_V:
 				return getCcV();
-			case ModelPackage.PAYMENT_DETAILS__EXP_MONTH:
+			case BookingmodelPackage.PAYMENT_DETAILS__EXP_MONTH:
 				return getExpMonth();
-			case ModelPackage.PAYMENT_DETAILS__EXP_YEAR:
+			case BookingmodelPackage.PAYMENT_DETAILS__EXP_YEAR:
 				return getExpYear();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -253,16 +240,16 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelPackage.PAYMENT_DETAILS__CC_NR:
+			case BookingmodelPackage.PAYMENT_DETAILS__CC_NR:
 				setCcNr((String)newValue);
 				return;
-			case ModelPackage.PAYMENT_DETAILS__CC_V:
+			case BookingmodelPackage.PAYMENT_DETAILS__CC_V:
 				setCcV((String)newValue);
 				return;
-			case ModelPackage.PAYMENT_DETAILS__EXP_MONTH:
+			case BookingmodelPackage.PAYMENT_DETAILS__EXP_MONTH:
 				setExpMonth((Integer)newValue);
 				return;
-			case ModelPackage.PAYMENT_DETAILS__EXP_YEAR:
+			case BookingmodelPackage.PAYMENT_DETAILS__EXP_YEAR:
 				setExpYear((Integer)newValue);
 				return;
 		}
@@ -277,16 +264,16 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelPackage.PAYMENT_DETAILS__CC_NR:
+			case BookingmodelPackage.PAYMENT_DETAILS__CC_NR:
 				setCcNr(CC_NR_EDEFAULT);
 				return;
-			case ModelPackage.PAYMENT_DETAILS__CC_V:
+			case BookingmodelPackage.PAYMENT_DETAILS__CC_V:
 				setCcV(CC_V_EDEFAULT);
 				return;
-			case ModelPackage.PAYMENT_DETAILS__EXP_MONTH:
+			case BookingmodelPackage.PAYMENT_DETAILS__EXP_MONTH:
 				setExpMonth(EXP_MONTH_EDEFAULT);
 				return;
-			case ModelPackage.PAYMENT_DETAILS__EXP_YEAR:
+			case BookingmodelPackage.PAYMENT_DETAILS__EXP_YEAR:
 				setExpYear(EXP_YEAR_EDEFAULT);
 				return;
 		}
@@ -301,13 +288,13 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelPackage.PAYMENT_DETAILS__CC_NR:
+			case BookingmodelPackage.PAYMENT_DETAILS__CC_NR:
 				return CC_NR_EDEFAULT == null ? ccNr != null : !CC_NR_EDEFAULT.equals(ccNr);
-			case ModelPackage.PAYMENT_DETAILS__CC_V:
+			case BookingmodelPackage.PAYMENT_DETAILS__CC_V:
 				return CC_V_EDEFAULT == null ? ccV != null : !CC_V_EDEFAULT.equals(ccV);
-			case ModelPackage.PAYMENT_DETAILS__EXP_MONTH:
+			case BookingmodelPackage.PAYMENT_DETAILS__EXP_MONTH:
 				return expMonth != EXP_MONTH_EDEFAULT;
-			case ModelPackage.PAYMENT_DETAILS__EXP_YEAR:
+			case BookingmodelPackage.PAYMENT_DETAILS__EXP_YEAR:
 				return expYear != EXP_YEAR_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

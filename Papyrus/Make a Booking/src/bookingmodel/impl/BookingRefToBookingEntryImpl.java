@@ -2,34 +2,36 @@
  */
 package bookingmodel.impl;
 
+import bookingmodel.Booking;
+import bookingmodel.BookingmodelPackage;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.BasicEMap;
 import org.eclipse.emf.common.util.EMap;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import bookingmodel.Booking;
-import bookingmodel.ModelPackage;
-
 /**
- * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
- * An implementation of the maintenancemodel object '<em><b>booking Ref To Booking Entry</b></em>'.
+ * An implementation of the model object '<em><b>Booking Ref To Booking Entry</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link bookingmodel.impl.bookingRefToBookingEntryImpl#getTypedKey <em>Key</em>}</li>
- *   <li>{@link bookingmodel.impl.bookingRefToBookingEntryImpl#getTypedValue <em>Value</em>}</li>
+ *   <li>{@link bookingmodel.impl.BookingRefToBookingEntryImpl#getTypedKey <em>Key</em>}</li>
+ *   <li>{@link bookingmodel.impl.BookingRefToBookingEntryImpl#getTypedValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class bookingRefToBookingEntryImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String,Booking> {
+public class BookingRefToBookingEntryImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String,Booking> {
 	/**
 	 * The default value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -42,7 +44,6 @@ public class bookingRefToBookingEntryImpl extends MinimalEObjectImpl.Container i
 
 	/**
 	 * The cached value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTypedKey()
@@ -53,7 +54,6 @@ public class bookingRefToBookingEntryImpl extends MinimalEObjectImpl.Container i
 
 	/**
 	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' reference.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTypedValue()
@@ -67,7 +67,7 @@ public class bookingRefToBookingEntryImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected bookingRefToBookingEntryImpl() {
+	protected BookingRefToBookingEntryImpl() {
 		super();
 	}
 
@@ -78,7 +78,7 @@ public class bookingRefToBookingEntryImpl extends MinimalEObjectImpl.Container i
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.BOOKING_REF_TO_BOOKING_ENTRY;
+		return BookingmodelPackage.Literals.BOOKING_REF_TO_BOOKING_ENTRY;
 	}
 
 	/**
@@ -99,7 +99,7 @@ public class bookingRefToBookingEntryImpl extends MinimalEObjectImpl.Container i
 		String oldKey = key;
 		key = newKey;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.BOOKING_REF_TO_BOOKING_ENTRY__KEY, oldKey, key));
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.BOOKING_REF_TO_BOOKING_ENTRY__KEY, oldKey, key));
 	}
 
 	/**
@@ -113,7 +113,7 @@ public class bookingRefToBookingEntryImpl extends MinimalEObjectImpl.Container i
 			value = (Booking)eResolveProxy(oldValue);
 			if (value != oldValue) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.BOOKING_REF_TO_BOOKING_ENTRY__VALUE, oldValue, value));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BookingmodelPackage.BOOKING_REF_TO_BOOKING_ENTRY__VALUE, oldValue, value));
 			}
 		}
 		return value;
@@ -137,7 +137,7 @@ public class bookingRefToBookingEntryImpl extends MinimalEObjectImpl.Container i
 		Booking oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.BOOKING_REF_TO_BOOKING_ENTRY__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.BOOKING_REF_TO_BOOKING_ENTRY__VALUE, oldValue, value));
 	}
 
 	/**
@@ -148,9 +148,9 @@ public class bookingRefToBookingEntryImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelPackage.BOOKING_REF_TO_BOOKING_ENTRY__KEY:
+			case BookingmodelPackage.BOOKING_REF_TO_BOOKING_ENTRY__KEY:
 				return getTypedKey();
-			case ModelPackage.BOOKING_REF_TO_BOOKING_ENTRY__VALUE:
+			case BookingmodelPackage.BOOKING_REF_TO_BOOKING_ENTRY__VALUE:
 				if (resolve) return getTypedValue();
 				return basicGetTypedValue();
 		}
@@ -165,10 +165,10 @@ public class bookingRefToBookingEntryImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelPackage.BOOKING_REF_TO_BOOKING_ENTRY__KEY:
+			case BookingmodelPackage.BOOKING_REF_TO_BOOKING_ENTRY__KEY:
 				setTypedKey((String)newValue);
 				return;
-			case ModelPackage.BOOKING_REF_TO_BOOKING_ENTRY__VALUE:
+			case BookingmodelPackage.BOOKING_REF_TO_BOOKING_ENTRY__VALUE:
 				setTypedValue((Booking)newValue);
 				return;
 		}
@@ -183,10 +183,10 @@ public class bookingRefToBookingEntryImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelPackage.BOOKING_REF_TO_BOOKING_ENTRY__KEY:
+			case BookingmodelPackage.BOOKING_REF_TO_BOOKING_ENTRY__KEY:
 				setTypedKey(KEY_EDEFAULT);
 				return;
-			case ModelPackage.BOOKING_REF_TO_BOOKING_ENTRY__VALUE:
+			case BookingmodelPackage.BOOKING_REF_TO_BOOKING_ENTRY__VALUE:
 				setTypedValue((Booking)null);
 				return;
 		}
@@ -201,9 +201,9 @@ public class bookingRefToBookingEntryImpl extends MinimalEObjectImpl.Container i
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelPackage.BOOKING_REF_TO_BOOKING_ENTRY__KEY:
+			case BookingmodelPackage.BOOKING_REF_TO_BOOKING_ENTRY__KEY:
 				return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
-			case ModelPackage.BOOKING_REF_TO_BOOKING_ENTRY__VALUE:
+			case BookingmodelPackage.BOOKING_REF_TO_BOOKING_ENTRY__VALUE:
 				return value != null;
 		}
 		return super.eIsSet(featureID);
@@ -303,4 +303,4 @@ public class bookingRefToBookingEntryImpl extends MinimalEObjectImpl.Container i
 		return container == null ? null : (EMap<String, Booking>)container.eGet(eContainmentFeature());
 	}
 
-} //bookingRefToBookingEntryImpl
+} //BookingRefToBookingEntryImpl

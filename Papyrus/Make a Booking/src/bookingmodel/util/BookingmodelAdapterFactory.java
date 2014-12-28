@@ -2,31 +2,33 @@
  */
 package bookingmodel.util;
 
+import bookingmodel.*;
+
 import java.util.Map;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-import org.eclipse.emf.ecore.EObject;
 
-import bookingmodel.*;
+import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Adapter Factory</b> for the maintenancemodel.
- * It provides an adapter <code>createXXX</code> method for each class of the maintenancemodel.
+ * The <b>Adapter Factory</b> for the model.
+ * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see bookingmodel.ModelPackage
+ * @see bookingmodel.BookingmodelPackage
  * @generated
  */
-public class ModelAdapterFactory extends AdapterFactoryImpl {
+public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 	/**
-	 * The cached maintenancemodel package.
+	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static ModelPackage modelPackage;
+	protected static BookingmodelPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -34,16 +36,16 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ModelAdapterFactory() {
+	public BookingmodelAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = ModelPackage.eINSTANCE;
+			modelPackage = BookingmodelPackage.eINSTANCE;
 		}
 	}
 
 	/**
 	 * Returns whether this factory is applicable for the type of the object.
 	 * <!-- begin-user-doc -->
-	 * This implementation returns <code>true</code> if the object is either the maintenancemodel's package or is an instance object of the maintenancemodel.
+	 * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
 	 * <!-- end-user-doc -->
 	 * @return whether this factory is applicable for the type of the object.
 	 * @generated
@@ -65,8 +67,8 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ModelSwitch<Adapter> modelSwitch =
-		new ModelSwitch<Adapter>() {
+	protected BookingmodelSwitch<Adapter> modelSwitch =
+		new BookingmodelSwitch<Adapter>() {
 			@Override
 			public Adapter caseRoomtypeToGuestIDEntry(Map.Entry<String, String> object) {
 				return createRoomtypeToGuestIDEntryAdapter();
@@ -76,8 +78,8 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 				return createNrToRoomEntryAdapter();
 			}
 			@Override
-			public Adapter casebookingRefToBookingEntry(Map.Entry<String, Booking> object) {
-				return createbookingRefToBookingEntryAdapter();
+			public Adapter caseBookingRefToBookingEntry(Map.Entry<String, Booking> object) {
+				return createBookingRefToBookingEntryAdapter();
 			}
 			@Override
 			public Adapter caseBooking(Booking object) {
@@ -94,6 +96,10 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseGuest(Guest object) {
 				return createGuestAdapter();
+			}
+			@Override
+			public Adapter caseExtraToIsPayedEntry(Map.Entry<String, Boolean> object) {
+				return createExtraToIsPayedEntryAdapter();
 			}
 			@Override
 			public Adapter casePerson(Person object) {
@@ -168,7 +174,7 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>booking Ref To Booking Entry</em>}'.
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Booking Ref To Booking Entry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
@@ -177,7 +183,7 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	 * @see java.util.Map.Entry
 	 * @generated
 	 */
-	public Adapter createbookingRefToBookingEntryAdapter() {
+	public Adapter createBookingRefToBookingEntryAdapter() {
 		return null;
 	}
 
@@ -234,6 +240,20 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGuestAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Extra To Is Payed Entry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see java.util.Map.Entry
+	 * @generated
+	 */
+	public Adapter createExtraToIsPayedEntryAdapter() {
 		return null;
 	}
 
@@ -333,4 +353,4 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //ModelAdapterFactory
+} //BookingmodelAdapterFactory

@@ -6,20 +6,20 @@ import org.eclipse.emf.ecore.EFactory;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Factory</b> for the maintenancemodel.
- * It provides a create method for each non-abstract class of the maintenancemodel.
+ * The <b>Factory</b> for the model.
+ * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see bookingmodel.ModelPackage
+ * @see bookingmodel.BookingmodelPackage
  * @generated
  */
-public interface ModelFactory extends EFactory {
+public interface BookingmodelFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	ModelFactory eINSTANCE = bookingmodel.impl.ModelFactoryImpl.init();
+	BookingmodelFactory eINSTANCE = bookingmodel.impl.BookingmodelFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Booking</em>'.
@@ -58,15 +58,6 @@ public interface ModelFactory extends EFactory {
 	Guest createGuest();
 
 	/**
-	 * Returns a new object of class '<em>Person</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Person</em>'.
-	 * @generated
-	 */
-	Person createPerson();
-
-	/**
 	 * Returns a new object of class '<em>Booking Handler</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -91,6 +82,6 @@ public interface ModelFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	ModelPackage getModelPackage();
+	BookingmodelPackage getBookingmodelPackage();
 
-} //ModelFactory
+} //BookingmodelFactory

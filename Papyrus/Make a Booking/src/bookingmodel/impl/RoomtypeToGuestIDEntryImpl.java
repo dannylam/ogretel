@@ -2,20 +2,22 @@
  */
 package bookingmodel.impl;
 
+import bookingmodel.BookingmodelPackage;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.BasicEMap;
 import org.eclipse.emf.common.util.EMap;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import bookingmodel.ModelPackage;
-
 /**
- * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
- * An implementation of the maintenancemodel object '<em><b>Roomtype To Guest ID Entry</b></em>'.
+ * An implementation of the model object '<em><b>Roomtype To Guest ID Entry</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -40,8 +42,7 @@ public class RoomtypeToGuestIDEntryImpl extends MinimalEObjectImpl.Container imp
 
 	/**
 	 * The cached value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->f
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTypedKey()
 	 * @generated
@@ -61,8 +62,7 @@ public class RoomtypeToGuestIDEntryImpl extends MinimalEObjectImpl.Container imp
 
 	/**
 	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->f
+	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTypedValue()
 	 * @generated
@@ -86,7 +86,7 @@ public class RoomtypeToGuestIDEntryImpl extends MinimalEObjectImpl.Container imp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.ROOMTYPE_TO_GUEST_ID_ENTRY;
+		return BookingmodelPackage.Literals.ROOMTYPE_TO_GUEST_ID_ENTRY;
 	}
 
 	/**
@@ -107,7 +107,7 @@ public class RoomtypeToGuestIDEntryImpl extends MinimalEObjectImpl.Container imp
 		String oldKey = key;
 		key = newKey;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__KEY, oldKey, key));
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__KEY, oldKey, key));
 	}
 
 	/**
@@ -128,7 +128,7 @@ public class RoomtypeToGuestIDEntryImpl extends MinimalEObjectImpl.Container imp
 		String oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__VALUE, oldValue, value));
 	}
 
 	/**
@@ -139,9 +139,9 @@ public class RoomtypeToGuestIDEntryImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__KEY:
+			case BookingmodelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__KEY:
 				return getTypedKey();
-			case ModelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__VALUE:
+			case BookingmodelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__VALUE:
 				return getTypedValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -155,10 +155,10 @@ public class RoomtypeToGuestIDEntryImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__KEY:
+			case BookingmodelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__KEY:
 				setTypedKey((String)newValue);
 				return;
-			case ModelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__VALUE:
+			case BookingmodelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__VALUE:
 				setTypedValue((String)newValue);
 				return;
 		}
@@ -173,10 +173,10 @@ public class RoomtypeToGuestIDEntryImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__KEY:
+			case BookingmodelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__KEY:
 				setTypedKey(KEY_EDEFAULT);
 				return;
-			case ModelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__VALUE:
+			case BookingmodelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__VALUE:
 				setTypedValue(VALUE_EDEFAULT);
 				return;
 		}
@@ -191,9 +191,9 @@ public class RoomtypeToGuestIDEntryImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__KEY:
+			case BookingmodelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__KEY:
 				return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
-			case ModelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__VALUE:
+			case BookingmodelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);

@@ -17,19 +17,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Nr To Room Entry</b></em>'.
+ * An implementation of the model object '<em><b>Extra To Is Payed Entry</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link bookingmodel.impl.NrToRoomEntryImpl#getTypedKey <em>Key</em>}</li>
- *   <li>{@link bookingmodel.impl.NrToRoomEntryImpl#getTypedValue <em>Value</em>}</li>
+ *   <li>{@link bookingmodel.impl.ExtraToIsPayedEntryImpl#getTypedKey <em>Key</em>}</li>
+ *   <li>{@link bookingmodel.impl.ExtraToIsPayedEntryImpl#getTypedValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class NrToRoomEntryImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String,Integer> {
+public class ExtraToIsPayedEntryImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String,Boolean> {
 	/**
 	 * The default value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -58,7 +58,7 @@ public class NrToRoomEntryImpl extends MinimalEObjectImpl.Container implements B
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Integer VALUE_EDEFAULT = null;
+	protected static final Boolean VALUE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
@@ -68,14 +68,14 @@ public class NrToRoomEntryImpl extends MinimalEObjectImpl.Container implements B
 	 * @generated
 	 * @ordered
 	 */
-	protected Integer value = VALUE_EDEFAULT;
+	protected Boolean value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NrToRoomEntryImpl() {
+	protected ExtraToIsPayedEntryImpl() {
 		super();
 	}
 
@@ -86,7 +86,7 @@ public class NrToRoomEntryImpl extends MinimalEObjectImpl.Container implements B
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BookingmodelPackage.Literals.NR_TO_ROOM_ENTRY;
+		return BookingmodelPackage.Literals.EXTRA_TO_IS_PAYED_ENTRY;
 	}
 
 	/**
@@ -107,7 +107,7 @@ public class NrToRoomEntryImpl extends MinimalEObjectImpl.Container implements B
 		String oldKey = key;
 		key = newKey;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.NR_TO_ROOM_ENTRY__KEY, oldKey, key));
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.EXTRA_TO_IS_PAYED_ENTRY__KEY, oldKey, key));
 	}
 
 	/**
@@ -115,7 +115,7 @@ public class NrToRoomEntryImpl extends MinimalEObjectImpl.Container implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Integer getTypedValue() {
+	public Boolean getTypedValue() {
 		return value;
 	}
 
@@ -124,11 +124,11 @@ public class NrToRoomEntryImpl extends MinimalEObjectImpl.Container implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTypedValue(Integer newValue) {
-		Integer oldValue = value;
+	public void setTypedValue(Boolean newValue) {
+		Boolean oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.NR_TO_ROOM_ENTRY__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.EXTRA_TO_IS_PAYED_ENTRY__VALUE, oldValue, value));
 	}
 
 	/**
@@ -139,9 +139,9 @@ public class NrToRoomEntryImpl extends MinimalEObjectImpl.Container implements B
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case BookingmodelPackage.NR_TO_ROOM_ENTRY__KEY:
+			case BookingmodelPackage.EXTRA_TO_IS_PAYED_ENTRY__KEY:
 				return getTypedKey();
-			case BookingmodelPackage.NR_TO_ROOM_ENTRY__VALUE:
+			case BookingmodelPackage.EXTRA_TO_IS_PAYED_ENTRY__VALUE:
 				return getTypedValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -155,11 +155,11 @@ public class NrToRoomEntryImpl extends MinimalEObjectImpl.Container implements B
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case BookingmodelPackage.NR_TO_ROOM_ENTRY__KEY:
+			case BookingmodelPackage.EXTRA_TO_IS_PAYED_ENTRY__KEY:
 				setTypedKey((String)newValue);
 				return;
-			case BookingmodelPackage.NR_TO_ROOM_ENTRY__VALUE:
-				setTypedValue((Integer)newValue);
+			case BookingmodelPackage.EXTRA_TO_IS_PAYED_ENTRY__VALUE:
+				setTypedValue((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -173,10 +173,10 @@ public class NrToRoomEntryImpl extends MinimalEObjectImpl.Container implements B
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case BookingmodelPackage.NR_TO_ROOM_ENTRY__KEY:
+			case BookingmodelPackage.EXTRA_TO_IS_PAYED_ENTRY__KEY:
 				setTypedKey(KEY_EDEFAULT);
 				return;
-			case BookingmodelPackage.NR_TO_ROOM_ENTRY__VALUE:
+			case BookingmodelPackage.EXTRA_TO_IS_PAYED_ENTRY__VALUE:
 				setTypedValue(VALUE_EDEFAULT);
 				return;
 		}
@@ -191,9 +191,9 @@ public class NrToRoomEntryImpl extends MinimalEObjectImpl.Container implements B
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case BookingmodelPackage.NR_TO_ROOM_ENTRY__KEY:
+			case BookingmodelPackage.EXTRA_TO_IS_PAYED_ENTRY__KEY:
 				return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
-			case BookingmodelPackage.NR_TO_ROOM_ENTRY__VALUE:
+			case BookingmodelPackage.EXTRA_TO_IS_PAYED_ENTRY__VALUE:
 				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);
@@ -269,7 +269,7 @@ public class NrToRoomEntryImpl extends MinimalEObjectImpl.Container implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Integer getValue() {
+	public Boolean getValue() {
 		return getTypedValue();
 	}
 
@@ -278,8 +278,8 @@ public class NrToRoomEntryImpl extends MinimalEObjectImpl.Container implements B
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Integer setValue(Integer value) {
-		Integer oldValue = getValue();
+	public Boolean setValue(Boolean value) {
+		Boolean oldValue = getValue();
 		setTypedValue(value);
 		return oldValue;
 	}
@@ -290,9 +290,9 @@ public class NrToRoomEntryImpl extends MinimalEObjectImpl.Container implements B
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EMap<String, Integer> getEMap() {
+	public EMap<String, Boolean> getEMap() {
 		EObject container = eContainer();
-		return container == null ? null : (EMap<String, Integer>)container.eGet(eContainmentFeature());
+		return container == null ? null : (EMap<String, Boolean>)container.eGet(eContainmentFeature());
 	}
 
-} //NrToRoomEntryImpl
+} //ExtraToIsPayedEntryImpl

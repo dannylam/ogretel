@@ -2,26 +2,28 @@
  */
 package bookingmodel.impl;
 
-import java.lang.reflect.InvocationTargetException;
-import java.util.Arrays;
-import java.util.List;
-
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import bookingmodel.Booking;
 import bookingmodel.BookingHandler;
 import bookingmodel.BookingProvides;
-import bookingmodel.ModelPackage;
+import bookingmodel.BookingmodelPackage;
+import bookingmodel.IBookingProvidesForGuest;
+import bookingmodel.IBookingProvidesForHost;
+
+import java.lang.reflect.InvocationTargetException;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
- * TODO: Javadoc, glöm inte markera generated NOT när man är klar
  * <!-- begin-user-doc -->
- * An implementation of the maintenancemodel object '<em><b>Booking Provides</b></em>'.
+ * An implementation of the model object '<em><b>Booking Provides</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
@@ -35,8 +37,6 @@ import bookingmodel.ModelPackage;
 public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements BookingProvides {
 	/**
 	 * The cached value of the '{@link #getBookingHandler() <em>Booking Handler</em>}' reference.
-	 * 
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBookingHandler()
@@ -46,8 +46,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	protected BookingHandler bookingHandler;
 
 	/**
-	 * 
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -63,11 +61,10 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ModelPackage.Literals.BOOKING_PROVIDES;
+		return BookingmodelPackage.Literals.BOOKING_PROVIDES;
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -78,14 +75,13 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 			bookingHandler = (BookingHandler)eResolveProxy(oldBookingHandler);
 			if (bookingHandler != oldBookingHandler) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.BOOKING_PROVIDES__BOOKING_HANDLER, oldBookingHandler, bookingHandler));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BookingmodelPackage.BOOKING_PROVIDES__BOOKING_HANDLER, oldBookingHandler, bookingHandler));
 			}
 		}
 		return bookingHandler;
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -95,7 +91,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -104,146 +99,87 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		BookingHandler oldBookingHandler = bookingHandler;
 		bookingHandler = newBookingHandler;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.BOOKING_PROVIDES__BOOKING_HANDLER, oldBookingHandler, bookingHandler));
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.BOOKING_PROVIDES__BOOKING_HANDLER, oldBookingHandler, bookingHandler));
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeBooking(String bookingRef) {
+	public EList<String> stringToList(String text) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBooking(String bookingRef) {
+	public int enableSelfManagement() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getPrice(String bookingRef) {
+	public int addServiceNote(String serviceNote) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public void book(int nrOfNights, int nrOfGuests, String date, int nrOfRooms, String roomTypes, String extras) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		
-		Booking booking = new BookingImpl(nrOfNights, nrOfGuests, date, stringToList(roomTypes), stringToList(extras));
-		
-		//throw new UnsupportedOperationException();
-	}
-	
-	/**
-	 *  TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 * @param text
-	 * @return
-	 */
-	private List<String> stringToList(String text){
-		return Arrays.asList(text.split("\\s*,\\s*"));
-	}
-
-	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void pay(String bookingRef) {
+	public int editServiceNote(String oldServiceNote, String newServiceNote) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void editBooking(int nrOfNights, int nrOfGuests, String date, int nrOfRooms, String roomTypes, String extras, String bookingRef) {
+	public int removeServiceNote(String serviceNote) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void searchRoom(int nrOfNights, int nrOfGuests, String date, int nrOfRooms, String roomTypes, String extras) {
+	public String getServiceNotes(String bookingRef) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int setPersonalDetails(String firstName, String lastName, int age, String email) {
+	public int checkIn(String bookingRef, String guestEmail) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void choosePaymentMethod(String paymentMethod) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -255,105 +191,121 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * Checks-in the guests of the booking by setting the booking as active
-	 * and the guest provided the email as responsible if the booking is not already
-	 * checked in and is valid.
-	 * Returns an integer indicating the result of the invoke, where 0 stands for success.
-	 * 
-	 * @generated NOT
-	 */
-	public int checkIn(String bookingRef, String guestEmail) {
-		int result = 0;
-		if(this.bookingHandler.exists(bookingRef) && !this.bookingHandler.getBooking(bookingRef).checkedInAllGuest()){
-			//Setting respsonsible guest
-			if(!this.bookingHandler.getBooking(bookingRef).getRoomGuestMap().isEmpty()){
-				int i = 0;
-				for (String key: this.bookingHandler.getBooking(bookingRef).getRoomGuestMap().values()) {
-					if(key.isEmpty()){
-						this.bookingHandler.getBooking(bookingRef).getRoomGuestMap().get(i).setValue(guestEmail);
-					}
-				i++;
-				}
-			}
-			
-			//Set booking as active
-			//Invoke method in IMaintenanceProvidesForBooking
-		}
-		return result;
-		
-		// TODO: implement this method
-		//TODO: Lägga till try-catch och fånga exceptions på ett lämpligt sätt. Därefter ändra result beroende.
-		// Ensure that you remove @generated or mark it @generated NOT
-		//throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void pay(String ccNr, String ccV, int expMonth, int expYear) {
+	public int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void enableSelfManagement(String guestEmail) {
+	public Booking getBooking(String bookingRef) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void addServiceNote(String serviceNote) {
+	public int pay(String bookingRef) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void editServiceNote(String oldServiceNote, String newServiceNote) {
+	public int getPrice(String bookingRef) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void removeServiceNote(String serviceNote) {
+	public int removeBooking(String bookingRef) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * TODO: Javadoc, glöm inte markera generated NOT när man är klar
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getServiceNotes(String bookingRef) {
+	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, String roomTypes, String extras) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int choosePaymentMethod(String method) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setPersonalDetails(String firstName, String lastName, int age, String email) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setCustomerToBooking(String customerEmail, String bookingRef) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int book(String startDate, String endDate, int nrOfGuests, String roomTypes, String extras) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -367,7 +319,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelPackage.BOOKING_PROVIDES__BOOKING_HANDLER:
+			case BookingmodelPackage.BOOKING_PROVIDES__BOOKING_HANDLER:
 				if (resolve) return getBookingHandler();
 				return basicGetBookingHandler();
 		}
@@ -382,7 +334,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelPackage.BOOKING_PROVIDES__BOOKING_HANDLER:
+			case BookingmodelPackage.BOOKING_PROVIDES__BOOKING_HANDLER:
 				setBookingHandler((BookingHandler)newValue);
 				return;
 		}
@@ -397,7 +349,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelPackage.BOOKING_PROVIDES__BOOKING_HANDLER:
+			case BookingmodelPackage.BOOKING_PROVIDES__BOOKING_HANDLER:
 				setBookingHandler((BookingHandler)null);
 				return;
 		}
@@ -412,7 +364,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelPackage.BOOKING_PROVIDES__BOOKING_HANDLER:
+			case BookingmodelPackage.BOOKING_PROVIDES__BOOKING_HANDLER:
 				return bookingHandler != null;
 		}
 		return super.eIsSet(featureID);
@@ -424,59 +376,74 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == IBookingProvidesForGuest.class) {
+			switch (baseOperationID) {
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___CHECK_IN__STRING_STRING: return BookingmodelPackage.BOOKING_PROVIDES___CHECK_IN__STRING_STRING;
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___CHECK_OUT__STRING_STRING: return BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__STRING_STRING;
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___PAY__STRING_STRING_INT_INT_STRING_STRING: return BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING;
+				default: return -1;
+			}
+		}
+		if (baseClass == IBookingProvidesForHost.class) {
+			switch (baseOperationID) {
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___ENABLE_SELF_MANAGEMENT: return BookingmodelPackage.BOOKING_PROVIDES___ENABLE_SELF_MANAGEMENT;
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___ADD_SERVICE_NOTE__STRING: return BookingmodelPackage.BOOKING_PROVIDES___ADD_SERVICE_NOTE__STRING;
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___EDIT_SERVICE_NOTE__STRING_STRING: return BookingmodelPackage.BOOKING_PROVIDES___EDIT_SERVICE_NOTE__STRING_STRING;
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___REMOVE_SERVICE_NOTE__STRING: return BookingmodelPackage.BOOKING_PROVIDES___REMOVE_SERVICE_NOTE__STRING;
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___GET_SERVICE_NOTES__STRING: return BookingmodelPackage.BOOKING_PROVIDES___GET_SERVICE_NOTES__STRING;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case ModelPackage.BOOKING_PROVIDES___REMOVE_BOOKING__STRING:
-				removeBooking((String)arguments.get(0));
-				return null;
-			case ModelPackage.BOOKING_PROVIDES___GET_BOOKING__STRING:
-				getBooking((String)arguments.get(0));
-				return null;
-			case ModelPackage.BOOKING_PROVIDES___GET_PRICE__STRING:
-				getPrice((String)arguments.get(0));
-				return null;
-			case ModelPackage.BOOKING_PROVIDES___BOOK__INT_INT_STRING_INT_STRING_STRING:
-				book((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
-				return null;
-			case ModelPackage.BOOKING_PROVIDES___PAY__STRING:
-				pay((String)arguments.get(0));
-				return null;
-			case ModelPackage.BOOKING_PROVIDES___EDIT_BOOKING__INT_INT_STRING_INT_STRING_STRING_STRING:
-				editBooking((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6));
-				return null;
-			case ModelPackage.BOOKING_PROVIDES___SEARCH_ROOM__INT_INT_STRING_INT_STRING_STRING:
-				searchRoom((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
-				return null;
-			case ModelPackage.BOOKING_PROVIDES___SET_PERSONAL_DETAILS__STRING_STRING_INT_STRING:
-				return setPersonalDetails((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
-			case ModelPackage.BOOKING_PROVIDES___CHOOSE_PAYMENT_METHOD__STRING:
-				choosePaymentMethod((String)arguments.get(0));
-				return null;
-			case ModelPackage.BOOKING_PROVIDES___SET_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING:
-				setPaymentDetails((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
-				return null;
-			case ModelPackage.BOOKING_PROVIDES___CHECK_OUT__STRING_STRING:
-				return checkOut((String)arguments.get(0), (String)arguments.get(1));
-			case ModelPackage.BOOKING_PROVIDES___CHECK_IN__STRING_STRING:
+			case BookingmodelPackage.BOOKING_PROVIDES___STRING_TO_LIST__STRING:
+				return stringToList((String)arguments.get(0));
+			case BookingmodelPackage.BOOKING_PROVIDES___ENABLE_SELF_MANAGEMENT:
+				return enableSelfManagement();
+			case BookingmodelPackage.BOOKING_PROVIDES___ADD_SERVICE_NOTE__STRING:
+				return addServiceNote((String)arguments.get(0));
+			case BookingmodelPackage.BOOKING_PROVIDES___EDIT_SERVICE_NOTE__STRING_STRING:
+				return editServiceNote((String)arguments.get(0), (String)arguments.get(1));
+			case BookingmodelPackage.BOOKING_PROVIDES___REMOVE_SERVICE_NOTE__STRING:
+				return removeServiceNote((String)arguments.get(0));
+			case BookingmodelPackage.BOOKING_PROVIDES___GET_SERVICE_NOTES__STRING:
+				return getServiceNotes((String)arguments.get(0));
+			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_IN__STRING_STRING:
 				return checkIn((String)arguments.get(0), (String)arguments.get(1));
-			case ModelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT:
-				pay((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3));
-				return null;
-			case ModelPackage.BOOKING_PROVIDES___ENABLE_SELF_MANAGEMENT__STRING:
-				enableSelfManagement((String)arguments.get(0));
-				return null;
-			case ModelPackage.BOOKING_PROVIDES___ADD_SERVICE_NOTE__STRING:
-				addServiceNote((String)arguments.get(0));
-				return null;
-			case ModelPackage.BOOKING_PROVIDES___EDIT_SERVICE_NOTE__STRING_STRING:
-				editServiceNote((String)arguments.get(0), (String)arguments.get(1));
-				return null;
-			case ModelPackage.BOOKING_PROVIDES___REMOVE_SERVICE_NOTE__STRING:
-				removeServiceNote((String)arguments.get(0));
-				return null;
-			case ModelPackage.BOOKING_PROVIDES___GET_SERVICE_NOTES__STRING:
-				getServiceNotes((String)arguments.get(0));
-				return null;
+			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__STRING_STRING:
+				return checkOut((String)arguments.get(0), (String)arguments.get(1));
+			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING:
+				return pay((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
+			case BookingmodelPackage.BOOKING_PROVIDES___GET_BOOKING__STRING:
+				return getBooking((String)arguments.get(0));
+			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING:
+				return pay((String)arguments.get(0));
+			case BookingmodelPackage.BOOKING_PROVIDES___GET_PRICE__STRING:
+				return getPrice((String)arguments.get(0));
+			case BookingmodelPackage.BOOKING_PROVIDES___REMOVE_BOOKING__STRING:
+				return removeBooking((String)arguments.get(0));
+			case BookingmodelPackage.BOOKING_PROVIDES___EDIT_BOOKING__STRING_STRING_STRING_INT_STRING_STRING:
+				return editBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
+			case BookingmodelPackage.BOOKING_PROVIDES___CHOOSE_PAYMENT_METHOD__STRING:
+				return choosePaymentMethod((String)arguments.get(0));
+			case BookingmodelPackage.BOOKING_PROVIDES___SET_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING:
+				return setPaymentDetails((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
+			case BookingmodelPackage.BOOKING_PROVIDES___SET_PERSONAL_DETAILS__STRING_STRING_INT_STRING:
+				return setPersonalDetails((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
+			case BookingmodelPackage.BOOKING_PROVIDES___SET_CUSTOMER_TO_BOOKING__STRING_STRING:
+				return setCustomerToBooking((String)arguments.get(0), (String)arguments.get(1));
+			case BookingmodelPackage.BOOKING_PROVIDES___BOOK__STRING_STRING_INT_STRING_STRING:
+				return book((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

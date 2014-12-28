@@ -2,41 +2,43 @@
  */
 package bookingmodel.impl;
 
+import bookingmodel.*;
+
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.impl.EFactoryImpl;
-import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import bookingmodel.*;
+import org.eclipse.emf.ecore.impl.EFactoryImpl;
+
+import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the maintenancemodel <b>Factory</b>.
+ * An implementation of the model <b>Factory</b>.
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
+public class BookingmodelFactoryImpl extends EFactoryImpl implements BookingmodelFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static ModelFactory init() {
+	public static BookingmodelFactory init() {
 		try {
-			ModelFactory theModelFactory = (ModelFactory)EPackage.Registry.INSTANCE.getEFactory(ModelPackage.eNS_URI);
-			if (theModelFactory != null) {
-				return theModelFactory;
+			BookingmodelFactory theBookingmodelFactory = (BookingmodelFactory)EPackage.Registry.INSTANCE.getEFactory(BookingmodelPackage.eNS_URI);
+			if (theBookingmodelFactory != null) {
+				return theBookingmodelFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new ModelFactoryImpl();
+		return new BookingmodelFactoryImpl();
 	}
 
 	/**
@@ -45,7 +47,7 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ModelFactoryImpl() {
+	public BookingmodelFactoryImpl() {
 		super();
 	}
 
@@ -57,16 +59,16 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ModelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY: return (EObject)createRoomtypeToGuestIDEntry();
-			case ModelPackage.NR_TO_ROOM_ENTRY: return (EObject)createNrToRoomEntry();
-			case ModelPackage.BOOKING_REF_TO_BOOKING_ENTRY: return (EObject)createbookingRefToBookingEntry();
-			case ModelPackage.BOOKING: return createBooking();
-			case ModelPackage.CUSTOMER: return createCustomer();
-			case ModelPackage.PAYMENT_DETAILS: return createPaymentDetails();
-			case ModelPackage.GUEST: return createGuest();
-			case ModelPackage.PERSON: return createPerson();
-			case ModelPackage.BOOKING_HANDLER: return createBookingHandler();
-			case ModelPackage.BOOKING_PROVIDES: return createBookingProvides();
+			case BookingmodelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY: return (EObject)createRoomtypeToGuestIDEntry();
+			case BookingmodelPackage.NR_TO_ROOM_ENTRY: return (EObject)createNrToRoomEntry();
+			case BookingmodelPackage.BOOKING_REF_TO_BOOKING_ENTRY: return (EObject)createBookingRefToBookingEntry();
+			case BookingmodelPackage.BOOKING: return createBooking();
+			case BookingmodelPackage.CUSTOMER: return createCustomer();
+			case BookingmodelPackage.PAYMENT_DETAILS: return createPaymentDetails();
+			case BookingmodelPackage.GUEST: return createGuest();
+			case BookingmodelPackage.EXTRA_TO_IS_PAYED_ENTRY: return (EObject)createExtraToIsPayedEntry();
+			case BookingmodelPackage.BOOKING_HANDLER: return createBookingHandler();
+			case BookingmodelPackage.BOOKING_PROVIDES: return createBookingProvides();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -80,9 +82,9 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case ModelPackage.GUEST_TYPES:
+			case BookingmodelPackage.GUEST_TYPES:
 				return createGuestTypesFromString(eDataType, initialValue);
-			case ModelPackage.PAYMENT_METHOD:
+			case BookingmodelPackage.PAYMENT_METHOD:
 				return createPaymentMethodFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -97,9 +99,9 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case ModelPackage.GUEST_TYPES:
+			case BookingmodelPackage.GUEST_TYPES:
 				return convertGuestTypesToString(eDataType, instanceValue);
-			case ModelPackage.PAYMENT_METHOD:
+			case BookingmodelPackage.PAYMENT_METHOD:
 				return convertPaymentMethodToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
@@ -131,8 +133,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map.Entry<String, Booking> createbookingRefToBookingEntry() {
-		bookingRefToBookingEntryImpl bookingRefToBookingEntry = new bookingRefToBookingEntryImpl();
+	public Map.Entry<String, Booking> createBookingRefToBookingEntry() {
+		BookingRefToBookingEntryImpl bookingRefToBookingEntry = new BookingRefToBookingEntryImpl();
 		return bookingRefToBookingEntry;
 	}
 
@@ -181,9 +183,9 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Person createPerson() {
-		PersonImpl person = new PersonImpl();
-		return person;
+	public Map.Entry<String, Boolean> createExtraToIsPayedEntry() {
+		ExtraToIsPayedEntryImpl extraToIsPayedEntry = new ExtraToIsPayedEntryImpl();
+		return extraToIsPayedEntry;
 	}
 
 	/**
@@ -251,8 +253,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ModelPackage getModelPackage() {
-		return (ModelPackage)getEPackage();
+	public BookingmodelPackage getBookingmodelPackage() {
+		return (BookingmodelPackage)getEPackage();
 	}
 
 	/**
@@ -262,8 +264,8 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * @generated
 	 */
 	@Deprecated
-	public static ModelPackage getPackage() {
-		return ModelPackage.eINSTANCE;
+	public static BookingmodelPackage getPackage() {
+		return BookingmodelPackage.eINSTANCE;
 	}
 
-} //ModelFactoryImpl
+} //BookingmodelFactoryImpl

@@ -2,35 +2,36 @@
  */
 package bookingmodel.util;
 
+import bookingmodel.*;
+
 import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.util.Switch;
 
-import bookingmodel.*;
+import org.eclipse.emf.ecore.util.Switch;
 
 /**
  * <!-- begin-user-doc -->
- * The <b>Switch</b> for the maintenancemodel's inheritance hierarchy.
+ * The <b>Switch</b> for the model's inheritance hierarchy.
  * It supports the call {@link #doSwitch(EObject) doSwitch(object)}
- * to invoke the <code>caseXXX</code> method for each class of the maintenancemodel,
+ * to invoke the <code>caseXXX</code> method for each class of the model,
  * starting with the actual class of the object
  * and proceeding up the inheritance hierarchy
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see bookingmodel.ModelPackage
+ * @see bookingmodel.BookingmodelPackage
  * @generated
  */
-public class ModelSwitch<T> extends Switch<T> {
+public class BookingmodelSwitch<T> extends Switch<T> {
 	/**
-	 * The cached maintenancemodel package
+	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static ModelPackage modelPackage;
+	protected static BookingmodelPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -38,9 +39,9 @@ public class ModelSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ModelSwitch() {
+	public BookingmodelSwitch() {
 		if (modelPackage == null) {
-			modelPackage = ModelPackage.eINSTANCE;
+			modelPackage = BookingmodelPackage.eINSTANCE;
 		}
 	}
 
@@ -58,7 +59,7 @@ public class ModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Calls <code>caseXXX</code> for each class of the maintenancemodel until one returns a non null result; it yields that result.
+	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the first non-null result returned by a <code>caseXXX</code> call.
@@ -67,81 +68,92 @@ public class ModelSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case ModelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY: {
+			case BookingmodelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY: {
 				@SuppressWarnings("unchecked") Map.Entry<String, String> roomtypeToGuestIDEntry = (Map.Entry<String, String>)theEObject;
 				T result = caseRoomtypeToGuestIDEntry(roomtypeToGuestIDEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.NR_TO_ROOM_ENTRY: {
+			case BookingmodelPackage.NR_TO_ROOM_ENTRY: {
 				@SuppressWarnings("unchecked") Map.Entry<String, Integer> nrToRoomEntry = (Map.Entry<String, Integer>)theEObject;
 				T result = caseNrToRoomEntry(nrToRoomEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.BOOKING_REF_TO_BOOKING_ENTRY: {
+			case BookingmodelPackage.BOOKING_REF_TO_BOOKING_ENTRY: {
 				@SuppressWarnings("unchecked") Map.Entry<String, Booking> bookingRefToBookingEntry = (Map.Entry<String, Booking>)theEObject;
-				T result = casebookingRefToBookingEntry(bookingRefToBookingEntry);
+				T result = caseBookingRefToBookingEntry(bookingRefToBookingEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.BOOKING: {
+			case BookingmodelPackage.BOOKING: {
 				Booking booking = (Booking)theEObject;
 				T result = caseBooking(booking);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.CUSTOMER: {
+			case BookingmodelPackage.CUSTOMER: {
 				Customer customer = (Customer)theEObject;
 				T result = caseCustomer(customer);
+				if (result == null) result = casePerson(customer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.PAYMENT_DETAILS: {
+			case BookingmodelPackage.PAYMENT_DETAILS: {
 				PaymentDetails paymentDetails = (PaymentDetails)theEObject;
 				T result = casePaymentDetails(paymentDetails);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.GUEST: {
+			case BookingmodelPackage.GUEST: {
 				Guest guest = (Guest)theEObject;
 				T result = caseGuest(guest);
+				if (result == null) result = casePerson(guest);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.PERSON: {
+			case BookingmodelPackage.EXTRA_TO_IS_PAYED_ENTRY: {
+				@SuppressWarnings("unchecked") Map.Entry<String, Boolean> extraToIsPayedEntry = (Map.Entry<String, Boolean>)theEObject;
+				T result = caseExtraToIsPayedEntry(extraToIsPayedEntry);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BookingmodelPackage.PERSON: {
 				Person person = (Person)theEObject;
 				T result = casePerson(person);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.BOOKING_HANDLER: {
+			case BookingmodelPackage.BOOKING_HANDLER: {
 				BookingHandler bookingHandler = (BookingHandler)theEObject;
 				T result = caseBookingHandler(bookingHandler);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.IBOOKING_PROVIDES_FOR_HOST: {
+			case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST: {
 				IBookingProvidesForHost iBookingProvidesForHost = (IBookingProvidesForHost)theEObject;
 				T result = caseIBookingProvidesForHost(iBookingProvidesForHost);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.IBOOKING_PROVIDES_FOR_CUSTOMER: {
+			case BookingmodelPackage.IBOOKING_PROVIDES_FOR_CUSTOMER: {
 				IBookingProvidesForCustomer iBookingProvidesForCustomer = (IBookingProvidesForCustomer)theEObject;
 				T result = caseIBookingProvidesForCustomer(iBookingProvidesForCustomer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.IBOOKING_PROVIDES_FOR_GUEST: {
+			case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST: {
 				IBookingProvidesForGuest iBookingProvidesForGuest = (IBookingProvidesForGuest)theEObject;
 				T result = caseIBookingProvidesForGuest(iBookingProvidesForGuest);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.BOOKING_PROVIDES: {
+			case BookingmodelPackage.BOOKING_PROVIDES: {
 				BookingProvides bookingProvides = (BookingProvides)theEObject;
 				T result = caseBookingProvides(bookingProvides);
+				if (result == null) result = caseIBookingProvidesForCustomer(bookingProvides);
+				if (result == null) result = caseIBookingProvidesForGuest(bookingProvides);
+				if (result == null) result = caseIBookingProvidesForHost(bookingProvides);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -180,17 +192,17 @@ public class ModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>booking Ref To Booking Entry</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Booking Ref To Booking Entry</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>booking Ref To Booking Entry</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Booking Ref To Booking Entry</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casebookingRefToBookingEntry(Map.Entry<String, Booking> object) {
+	public T caseBookingRefToBookingEntry(Map.Entry<String, Booking> object) {
 		return null;
 	}
 
@@ -251,6 +263,21 @@ public class ModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseGuest(Guest object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Extra To Is Payed Entry</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Extra To Is Payed Entry</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExtraToIsPayedEntry(Map.Entry<String, Boolean> object) {
 		return null;
 	}
 
@@ -360,4 +387,4 @@ public class ModelSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //ModelSwitch
+} //BookingmodelSwitch

@@ -9,36 +9,41 @@ import java.util.List;
 import org.eclipse.emf.common.util.Enumerator;
 
 /**
+ * <!-- begin-user-doc -->
  * A representation of the literals of the enumeration '<em><b>Payment Method</b></em>',
- * and utility methods for working with them. There are three types of enum:
- * BANKCARD
- * CASH 
- * VOUCHER
- * @see bookingmodel.ModelPackage#getPaymentMethod()
- * @maintenancemodel
- * @generated NOT
+ * and utility methods for working with them.
+ * <!-- end-user-doc -->
+ * @see bookingmodel.BookingmodelPackage#getPaymentMethod()
+ * @model
+ * @generated
  */
 public enum PaymentMethod implements Enumerator {
 	/**
 	 * The '<em><b>Bankcard</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #BANKCARD_VALUE
-	 * @generated NOT
+	 * @generated
 	 * @ordered
 	 */
 	BANKCARD(0, "bankcard", "bankcard"),
 
 	/**
 	 * The '<em><b>Cash</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #CASH_VALUE
-	 * @generated NOT
+	 * @generated
 	 * @ordered
 	 */
 	CASH(1, "cash", "cash"),
 
 	/**
 	 * The '<em><b>Voucher</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #VOUCHER_VALUE
-	 * @generated NOT
+	 * @generated
 	 * @ordered
 	 */
 	VOUCHER(2, "voucher", "voucher");
@@ -52,7 +57,7 @@ public enum PaymentMethod implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #BANKCARD
-	 * @maintenancemodel name="bankcard"
+	 * @model name="bankcard"
 	 * @generated
 	 * @ordered
 	 */
@@ -67,7 +72,7 @@ public enum PaymentMethod implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #CASH
-	 * @maintenancemodel name="cash"
+	 * @model name="cash"
 	 * @generated
 	 * @ordered
 	 */
@@ -82,7 +87,7 @@ public enum PaymentMethod implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #VOUCHER
-	 * @maintenancemodel name="voucher"
+	 * @model name="voucher"
 	 * @generated
 	 * @ordered
 	 */
