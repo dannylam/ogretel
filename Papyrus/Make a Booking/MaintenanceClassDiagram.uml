@@ -99,7 +99,9 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_iSfjoHlDEeScv6HJEKdjpA" name="removeExtra">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_oTZ9MHlDEeScv6HJEKdjpA" name="extra" type="_eltssHk_EeScv6HJEKdjpA"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_oTZ9MHlDEeScv6HJEKdjpA" name="extra">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_SLj8oI3ZEeSb_cQ9NLV5hw" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
@@ -373,7 +375,9 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="__GwhIHmvEeScv6HJEKdjpA" name="removeExtra">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="__GwhIXmvEeScv6HJEKdjpA" name="extra" type="_eltssHk_EeScv6HJEKdjpA"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__GwhIXmvEeScv6HJEKdjpA" name="extra">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_8HMGgI3YEeSb_cQ9NLV5hw" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
@@ -470,7 +474,9 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_GriZRXlEEeScv6HJEKdjpA" name="removeRoomType">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_GriZRnlEEeScv6HJEKdjpA" name="roomTypeID" type="_CLdSkHk_EeScv6HJEKdjpA"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_GriZRnlEEeScv6HJEKdjpA" name="roomTypeID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_ilVAYI3ZEeSb_cQ9NLV5hw" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
