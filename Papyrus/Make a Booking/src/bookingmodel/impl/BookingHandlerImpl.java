@@ -78,50 +78,53 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
+	 * TODO: javadoc
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean exists(String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return this.bookingsMap.containsKey(bookingRef);
+		//TODO:check if correct
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * TODO: javadoc
+	 * @return 
+	 * @generated NOT
 	 */
 	public int addBooking(Booking booking) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		int result = 0;
+		this.bookingsMap.put(booking.getBookingRef(), booking);
+		//TODO: check if correct
+		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * TODO: javadoc
+	 * @generated NOT
 	 */
 	public int removeBooking(String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		int result = 0;
+		if(this.exists(bookingRef)){
+			this.bookingsMap.remove(getBooking(bookingRef));
+		}	
+		//TODO: check if correct
+		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * TODO: javadoc
+	 * @generated NOT
 	 */
 	public Booking getBooking(String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return this.bookingsMap.get(bookingRef);
+		//TODO: check if correct
 	}
 
+
 	/**
+	 * TODO: javadoc
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -129,6 +132,17 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, String roomTypes, String extras) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
+		/*Booking newBooking = new BookingImpl(nrOfNights, nrOfGuests, date, stringToList(roomTypes), stringToList(extras));	
+
+		
+		Booking booking = this.bookingsMap.get(bookingRef);
+		Booking newBooking = new BookingImpl();
+		
+		booking.setStartDate(startDate);
+		booking.setEndDate(endDate);
+		booking.setNrOfGuests(nrOfGuests);
+		booking.setRoomTypes(roomTypes);
+		booking.setExtras(extras);*/
 		throw new UnsupportedOperationException();
 	}
 
