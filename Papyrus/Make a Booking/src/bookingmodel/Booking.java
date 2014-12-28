@@ -80,7 +80,7 @@ public interface Booking extends EObject {
 	 * @see #setStartDate(String)
 	 * @see bookingmodel.BookingmodelPackage#getBooking_StartDate()
 	 * @model dataType="types.String" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	String getStartDate();
 
@@ -88,7 +88,7 @@ public interface Booking extends EObject {
 	 * Sets the start of a date.
 	 * @param value the new value of the '<em>Start Date</em>' attribute.
 	 * @see #getStartDate()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setStartDate(String value);
 
@@ -98,7 +98,7 @@ public interface Booking extends EObject {
 	 * @see #setEndDate(String)
 	 * @see bookingmodel.BookingmodelPackage#getBooking_EndDate()
 	 * @model dataType="types.String" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	String getEndDate();
 
@@ -106,7 +106,7 @@ public interface Booking extends EObject {
 	 * Sets the end of a date.
 	 * @param value the new value of the '<em>End Date</em>' attribute.
 	 * @see #getEndDate()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setEndDate(String value);
 
@@ -127,7 +127,7 @@ public interface Booking extends EObject {
 	 * @see #setNrOfGuests(int)
 	 * @see bookingmodel.BookingmodelPackage#getBooking_NrOfGuests()
 	 * @model dataType="types.Integer" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int getNrOfGuests();
 
@@ -135,7 +135,7 @@ public interface Booking extends EObject {
 	 * Sets the number of guests.
 	 * @param value the new value of the '<em>Nr Of Guests</em>' attribute.
 	 * @see #getNrOfGuests()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setNrOfGuests(int value);
 
@@ -145,7 +145,7 @@ public interface Booking extends EObject {
 	 * @see #setCustomer(Customer)
 	 * @see bookingmodel.BookingmodelPackage#getBooking_Customer()
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	Customer getCustomer();
 
@@ -153,7 +153,7 @@ public interface Booking extends EObject {
 	 * Sets the value of the '{@link bookingmodel.Booking#getCustomer <em>Customer</em>}' reference.
 	 * @param value the new value of the '<em>Customer</em>' reference.
 	 * @see #getCustomer()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setCustomer(Customer value);
 
@@ -162,7 +162,7 @@ public interface Booking extends EObject {
 	 * @return the value of the '<em>Guest List</em>' reference list.
 	 * @see bookingmodel.BookingmodelPackage#getBooking_GuestList()
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	EList<Guest> getGuestList();
 
@@ -172,7 +172,7 @@ public interface Booking extends EObject {
 	 * @see #setIsPayed(boolean)
 	 * @see bookingmodel.BookingmodelPackage#getBooking_IsPayed()
 	 * @model dataType="types.Boolean" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	boolean isIsPayed();
 
@@ -180,7 +180,7 @@ public interface Booking extends EObject {
 	 * Sets false or true to a made payment.
 	 * @param value the new value of the '<em>Is Payed</em>' attribute.
 	 * @see #isIsPayed()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setIsPayed(boolean value);
 
@@ -189,7 +189,7 @@ public interface Booking extends EObject {
 	 * @return the value of the '<em>Room ID To Guest Map</em>' map.
 	 * @see bookingmodel.BookingmodelPackage#getBooking_RoomIDToGuestMap()
 	 * @model mapType="bookingmodel.RoomToGuestIDEntry<org.eclipse.emf.ecore.EIntegerObject, org.eclipse.emf.ecore.EString>" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	EMap<Integer, String> getRoomIDToGuestMap();
 
@@ -198,7 +198,7 @@ public interface Booking extends EObject {
 	 * @return the value of the '<em>Room Type To Room ID Map</em>' map.
 	 * @see bookingmodel.BookingmodelPackage#getBooking_RoomTypeToRoomIDMap()
 	 * @model mapType="bookingmodel.RoomTypeToRoomIDEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EIntegerObject>" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	EMap<String, Integer> getRoomTypeToRoomIDMap();
 
@@ -209,7 +209,7 @@ public interface Booking extends EObject {
 	 * @see #setPaymentMethod(PaymentMethod)
 	 * @see bookingmodel.BookingmodelPackage#getBooking_PaymentMethod()
 	 * @model required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	PaymentMethod getPaymentMethod();
 
@@ -218,7 +218,7 @@ public interface Booking extends EObject {
 	 * @param value the new value of the '<em>Payment Method</em>' attribute.
 	 * @see bookingmodel.PaymentMethod
 	 * @see #getPaymentMethod()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setPaymentMethod(PaymentMethod value);
 
@@ -227,49 +227,49 @@ public interface Booking extends EObject {
 	 * @return the value of the '<em>Extra To Is Payed Map</em>' map.
 	 * @see bookingmodel.BookingmodelPackage#getBooking_ExtraToIsPayedMap()
 	 * @model mapType="bookingmodel.ExtraToIsPayedEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EBooleanObject>" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	EMap<String, Boolean> getExtraToIsPayedMap();
 
 	/**
 	 * A method that checks if all guests are checked in.
 	 * @model dataType="types.Boolean" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	boolean checkedInAllGuest();
 
 	/**
 	 * A method that checks if a guest is checked in.
 	 * @model dataType="types.Boolean" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	boolean checkedInAGuest();
 
 	/**
 	 * Sets a responsible guest to a specific roomID by using their email.
 	 * @model dataType="types.Integer" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int setResponsibleGuest(int roomID, String guestEmail);
 
 	/**
 	 * Returns the number of rooms.
 	 * @model kind="operation" dataType="types.Integer" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int getNrOfRooms();
 
 	/**
 	 * Sets extras into a list.
 	 * @model dataType="types.Integer" required="true" ordered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int setExtras(List<String> extras);
 
 	/**
 	 * Sets roomtypes into a list.
 	 * @model dataType="types.Integer" required="true" ordered="false" roomTypesDataType="types.String" roomTypesMany="true" roomTypesOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int setRoomTypes(List<String> roomTypes);
 

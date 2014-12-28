@@ -7,32 +7,31 @@ import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Booking Handler</b></em>'.
- * <!-- end-user-doc -->
- *
+ * An interface class which represents BookingHandler, extending EObject.
+ * The interface extends an EObject and has 5 methods; 
+ * exists - checks if the booking reference exists
+ * addBooking - adding a booking
+ * removeBooking - remove a booking 
+ * getBooking - get a specific booking reference
+ * editBooking - edit nrOfNights, nrOfGuests, date, nrOfRooms, 
+ * roomTypes and extras in booking specific booking reference
  * <p>
  * The following features are supported:
  * <ul>
  *   <li>{@link bookingmodel.BookingHandler#getBookingsMap <em>Bookings Map</em>}</li>
  * </ul>
  * </p>
- *
+ * 
  * @see bookingmodel.BookingmodelPackage#getBookingHandler()
  * @model
- * @generated
+ * @generated NOT
  */
 public interface BookingHandler extends EObject {
-	/**
+	 /**
 	 * Returns the value of the '<em><b>Bookings Map</b></em>' map.
 	 * The key is of type {@link java.lang.String},
 	 * and the value is of type {@link bookingmodel.Booking},
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Bookings Map</em>' map isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
+	 * BookingsMap is a set of bookings.
 	 * @return the value of the '<em>Bookings Map</em>' map.
 	 * @see bookingmodel.BookingmodelPackage#getBookingHandler_BookingsMap()
 	 * @model mapType="bookingmodel.BookingRefToBookingEntry<org.eclipse.emf.ecore.EString, bookingmodel.Booking>" ordered="false"
@@ -41,42 +40,43 @@ public interface BookingHandler extends EObject {
 	EMap<String, Booking> getBookingsMap();
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * A method that checks if the booking reference exists
+	 * @param bookingRef
 	 * @model dataType="types.Boolean" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	boolean exists(String bookingRef);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * A method that adds a booking 
+	 * @param booking
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRequired="true" bookingOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int addBooking(Booking booking);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * A method that removes a booking 
+	 * @param booking
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int removeBooking(String bookingRef);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * A method that gets a booking with booking reference
+	 * @param bookingRef
 	 * @model required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	Booking getBooking(String bookingRef);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * A method that edits the booking reference, nr of nights, nr of guests, start of the date, 
+	 * end of the date, the type of the rooms and extras
+	 * @param bookingRef, nrOfNights, nrOfGuests, startDate, endDate, roomTypes, extras
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesDataType="types.String" roomTypesRequired="true" roomTypesOrdered="false" extrasDataType="types.String" extrasRequired="true" extrasOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, String roomTypes, String extras);
 
