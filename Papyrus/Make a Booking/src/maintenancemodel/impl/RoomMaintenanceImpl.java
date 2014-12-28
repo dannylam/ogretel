@@ -10,6 +10,7 @@ import maintenancemodel.RoomHandler;
 import maintenancemodel.RoomMaintenance;
 import maintenancemodel.RoomStatusEnum;
 import maintenancemodel.RoomType;
+import maintenancemodel.RoomTypeEnum;
 import maintenancemodel.RoomTypesHandler;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -304,6 +305,8 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public int editRoomType(String roomType, int price, int maxNrOfGuests, String description) {
+//		RoomTypeEnum rt = this.roomTypes.getStringToRoomType().get(roomType);
+//		this.roomTypes.removeRoomType(roomType);
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

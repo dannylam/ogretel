@@ -121,13 +121,31 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container implement
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Remove the RoomType sent in from the list of known objects of the RoomType class.
+	 * If it was removed 0 is returned else 1.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int removeRoomType(RoomType roomType) {
+		if(exists(roomType)){
+			this.roomType.remove(roomType);
+			return 0;
+		}
+		
+		return 1;
+		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	}
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * Return true if the RoomType sent in exists in the list of RoomType objects.
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	private boolean exists(RoomType roomType){
+		return this.roomType.contains(roomType);
 	}
 
 	/**
