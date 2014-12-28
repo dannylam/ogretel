@@ -450,6 +450,7 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JJ2gIX21EeSp56Ha0EyLeQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JJ2gIn21EeSp56Ha0EyLeQ" value="1"/>
       </ownedAttribute>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_zpOTQI6qEeSqUPpyrwDcyg" client="_YvWVsH2yEeSp56Ha0EyLeQ" supplier="_dj3DAH2xEeSp56Ha0EyLeQ" contract="_dj3DAH2xEeSp56Ha0EyLeQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_iwviIH2yEeSp56Ha0EyLeQ" name="RoomMaintenance">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_UGuLcH23EeSp56Ha0EyLeQ" name="roomTypes" type="_GrhyMHlEEeScv6HJEKdjpA" aggregation="composite" association="_UGuygH23EeSp56Ha0EyLeQ">
@@ -479,6 +480,7 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZCN6EY6XEeS0D-EMhs8Yvw" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZCN6Eo6XEeS0D-EMhs8Yvw" value="1"/>
       </ownedAttribute>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_x1rSAI6qEeSqUPpyrwDcyg" client="_w1eBIH2yEeSp56Ha0EyLeQ" supplier="_zIK1YHlFEeScv6HJEKdjpA" contract="_zIK1YHlFEeScv6HJEKdjpA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_GrhyMHlEEeScv6HJEKdjpA" name="RoomTypesHandler">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_P2JV8YXtEeSU1psjCnSubg" name="stringToRoomType" type="_M0kbUIXtEeSU1psjCnSubg" aggregation="composite" association="_P2JV8IXtEeSU1psjCnSubg">
@@ -537,8 +539,6 @@
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_ftx1gH20EeSp56Ha0EyLeQ" client="_YvWVsH2yEeSp56Ha0EyLeQ" supplier="_dj3DAH2xEeSp56Ha0EyLeQ"/>
-    <packagedElement xmi:type="uml:Realization" xmi:id="_nx5c8H20EeSp56Ha0EyLeQ" client="_w1eBIH2yEeSp56Ha0EyLeQ" supplier="_zIK1YHlFEeScv6HJEKdjpA"/>
     <packagedElement xmi:type="uml:Association" xmi:id="_JJ2gI321EeSp56Ha0EyLeQ" memberEnd="_JJ2gJH21EeSp56Ha0EyLeQ _JJ2gIH21EeSp56Ha0EyLeQ">
       <ownedEnd xmi:type="uml:Property" xmi:id="_JJ2gJH21EeSp56Ha0EyLeQ" name="extrasMaintenance" type="_YvWVsH2yEeSp56Ha0EyLeQ" association="_JJ2gI321EeSp56Ha0EyLeQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JJ2gJX21EeSp56Ha0EyLeQ" value="1"/>
@@ -622,7 +622,7 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_zIjCIHlAEeScv6HJEKdjpA" name="description" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_l31nIIXPEeSUfsUdvz7rGg" client="_g7-xIIXPEeSUfsUdvz7rGg" supplier="_eltssHk_EeScv6HJEKdjpA" contract="_eltssHk_EeScv6HJEKdjpA"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_25z6QI6qEeSqUPpyrwDcyg" client="_g7-xIIXPEeSUfsUdvz7rGg" supplier="_eltssHk_EeScv6HJEKdjpA" contract="_eltssHk_EeScv6HJEKdjpA"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Enumeration" xmi:id="_qTYv8IXQEeSUfsUdvz7rGg" name="ProductStatusEnum">
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_0wRlkIXQEeSUfsUdvz7rGg" name="inStock"/>
