@@ -3,9 +3,12 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.RoomType;
+import maintenancemodel.RoomTypeEnum;
 import maintenancemodel.RoomTypesHandler;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -45,9 +48,9 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
-	protected RoomTypesHandlerImpl() {
+	public RoomTypesHandlerImpl() {
 		super();
 	}
 
@@ -78,28 +81,65 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * Returns true if there is a RoomType with the given String ID
+	 * @param ID
+	 * 		the RoomType ID to be checked if it exists
+	 * <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean exists(String ID) {
-		// TODO: implement this method
+		
+		return this.stringToRoomType.containsKey(ID);
+		// TODO: TEST
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
 	 * 
-	 * @generated
+	 *  <!-- end-user-doc -->
+	 * 
+	 * @generated NOT
 	 */
 	public int addRoomType(String roomTypeID, String roomTypeEnum, int price,
 			int maxNrOfGuests, String description) {
-		// TODO: implement this method
+		
+		if(roomTypeID != null && roomTypeEnum != null && price >= 0 && maxNrOfGuests >= 0){
+			RoomType newRT = new RoomTypeImpl(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+			this.stringToRoomType.put(newRT.getID(), newRT);
+			return 0;
+			
+		}else{
+			//could send more exakt codes like which of the parameters was wrong.
+			return 1;
+		}
+		// TODO: TEST
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
+	/**
+	 * Returns the RoomTypeEnum associated with the String that is sent in.
+	 * The possible strings are "singlebed", "doublebed" and "luxurysuite",
+	 * otherwise singlebed is returned as default.
+	 * @generated NOT
+	 */
+	public RoomTypeEnum stringToRoomTypeEnum(String roomTypeEnum){
+		
+		switch(roomTypeEnum){
+		case "doublebed":
+			return RoomTypeEnum.DOUBLEBED;
+		case "singlebed":
+			return RoomTypeEnum.SINGLEBED;
+		case "luxurysuite":
+			return RoomTypeEnum.LUXURYSUITE;
+		default:
+			return RoomTypeEnum.SINGLEBED;
+		}
+		
+	}
+	
 	/**
 	 * <!-- begin-user-doc --> Remove the RoomType sent in from the list of
 	 * known objects of the RoomType class. If it was removed 0 is returned else
