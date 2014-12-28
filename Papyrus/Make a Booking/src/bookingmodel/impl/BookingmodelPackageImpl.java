@@ -44,14 +44,14 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass roomtypeToGuestIDEntryEClass = null;
+	private EClass roomToGuestIDEntryEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass nrToRoomEntryEClass = null;
+	private EClass roomTypeToRoomIDEntryEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -222,8 +222,8 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRoomtypeToGuestIDEntry() {
-		return roomtypeToGuestIDEntryEClass;
+	public EClass getRoomToGuestIDEntry() {
+		return roomToGuestIDEntryEClass;
 	}
 
 	/**
@@ -231,8 +231,8 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRoomtypeToGuestIDEntry_Key() {
-		return (EAttribute)roomtypeToGuestIDEntryEClass.getEStructuralFeatures().get(0);
+	public EAttribute getRoomToGuestIDEntry_Key() {
+		return (EAttribute)roomToGuestIDEntryEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -240,8 +240,8 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRoomtypeToGuestIDEntry_Value() {
-		return (EAttribute)roomtypeToGuestIDEntryEClass.getEStructuralFeatures().get(1);
+	public EAttribute getRoomToGuestIDEntry_Value() {
+		return (EAttribute)roomToGuestIDEntryEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -249,8 +249,8 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getNrToRoomEntry() {
-		return nrToRoomEntryEClass;
+	public EClass getRoomTypeToRoomIDEntry() {
+		return roomTypeToRoomIDEntryEClass;
 	}
 
 	/**
@@ -258,8 +258,8 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNrToRoomEntry_Key() {
-		return (EAttribute)nrToRoomEntryEClass.getEStructuralFeatures().get(0);
+	public EAttribute getRoomTypeToRoomIDEntry_Key() {
+		return (EAttribute)roomTypeToRoomIDEntryEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -267,8 +267,8 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getNrToRoomEntry_Value() {
-		return (EAttribute)nrToRoomEntryEClass.getEStructuralFeatures().get(1);
+	public EAttribute getRoomTypeToRoomIDEntry_Value() {
+		return (EAttribute)roomTypeToRoomIDEntryEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -321,7 +321,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getBooking_Date() {
+	public EAttribute getBooking_StartDate() {
 		return (EAttribute)bookingEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -330,7 +330,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getBooking_NrOfNights() {
+	public EAttribute getBooking_EndDate() {
 		return (EAttribute)bookingEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -384,7 +384,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBooking_RoomGuestMap() {
+	public EReference getBooking_RoomIDToGuestMap() {
 		return (EReference)bookingEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -393,7 +393,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getBooking_RoomTypeMap() {
+	public EReference getBooking_RoomTypeToRoomIDMap() {
 		return (EReference)bookingEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -404,6 +404,15 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 */
 	public EAttribute getBooking_PaymentMethod() {
 		return (EAttribute)bookingEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBooking_ExtraToIsPayedMap() {
+		return (EReference)bookingEClass.getEStructuralFeatures().get(11);
 	}
 
 	/**
@@ -429,7 +438,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__SetResponsibleGuest__String_String() {
+	public EOperation getBooking__SetResponsibleGuest__int_String() {
 		return bookingEClass.getEOperations().get(2);
 	}
 
@@ -956,13 +965,13 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		isCreated = true;
 
 		// Create classes and their features
-		roomtypeToGuestIDEntryEClass = createEClass(ROOMTYPE_TO_GUEST_ID_ENTRY);
-		createEAttribute(roomtypeToGuestIDEntryEClass, ROOMTYPE_TO_GUEST_ID_ENTRY__KEY);
-		createEAttribute(roomtypeToGuestIDEntryEClass, ROOMTYPE_TO_GUEST_ID_ENTRY__VALUE);
+		roomToGuestIDEntryEClass = createEClass(ROOM_TO_GUEST_ID_ENTRY);
+		createEAttribute(roomToGuestIDEntryEClass, ROOM_TO_GUEST_ID_ENTRY__KEY);
+		createEAttribute(roomToGuestIDEntryEClass, ROOM_TO_GUEST_ID_ENTRY__VALUE);
 
-		nrToRoomEntryEClass = createEClass(NR_TO_ROOM_ENTRY);
-		createEAttribute(nrToRoomEntryEClass, NR_TO_ROOM_ENTRY__KEY);
-		createEAttribute(nrToRoomEntryEClass, NR_TO_ROOM_ENTRY__VALUE);
+		roomTypeToRoomIDEntryEClass = createEClass(ROOM_TYPE_TO_ROOM_ID_ENTRY);
+		createEAttribute(roomTypeToRoomIDEntryEClass, ROOM_TYPE_TO_ROOM_ID_ENTRY__KEY);
+		createEAttribute(roomTypeToRoomIDEntryEClass, ROOM_TYPE_TO_ROOM_ID_ENTRY__VALUE);
 
 		bookingRefToBookingEntryEClass = createEClass(BOOKING_REF_TO_BOOKING_ENTRY);
 		createEAttribute(bookingRefToBookingEntryEClass, BOOKING_REF_TO_BOOKING_ENTRY__KEY);
@@ -970,19 +979,20 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 
 		bookingEClass = createEClass(BOOKING);
 		createEAttribute(bookingEClass, BOOKING__BOOKING_REF);
-		createEAttribute(bookingEClass, BOOKING__DATE);
-		createEAttribute(bookingEClass, BOOKING__NR_OF_NIGHTS);
+		createEAttribute(bookingEClass, BOOKING__START_DATE);
+		createEAttribute(bookingEClass, BOOKING__END_DATE);
 		createEAttribute(bookingEClass, BOOKING__SERVICE_NOTES);
 		createEAttribute(bookingEClass, BOOKING__NR_OF_GUESTS);
 		createEReference(bookingEClass, BOOKING__CUSTOMER);
 		createEReference(bookingEClass, BOOKING__GUEST_LIST);
 		createEAttribute(bookingEClass, BOOKING__IS_PAYED);
-		createEReference(bookingEClass, BOOKING__ROOM_GUEST_MAP);
-		createEReference(bookingEClass, BOOKING__ROOM_TYPE_MAP);
+		createEReference(bookingEClass, BOOKING__ROOM_ID_TO_GUEST_MAP);
+		createEReference(bookingEClass, BOOKING__ROOM_TYPE_TO_ROOM_ID_MAP);
 		createEAttribute(bookingEClass, BOOKING__PAYMENT_METHOD);
+		createEReference(bookingEClass, BOOKING__EXTRA_TO_IS_PAYED_MAP);
 		createEOperation(bookingEClass, BOOKING___CHECKED_IN_ALL_GUEST);
 		createEOperation(bookingEClass, BOOKING___CHECKED_IN_AGUEST);
-		createEOperation(bookingEClass, BOOKING___SET_RESPONSIBLE_GUEST__STRING_STRING);
+		createEOperation(bookingEClass, BOOKING___SET_RESPONSIBLE_GUEST__INT_STRING);
 		createEOperation(bookingEClass, BOOKING___GET_NR_OF_ROOMS);
 		createEOperation(bookingEClass, BOOKING___SET_EXTRAS__ELIST);
 		createEOperation(bookingEClass, BOOKING___SET_ROOM_TYPES__ELIST);
@@ -1090,13 +1100,13 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		bookingProvidesEClass.getESuperTypes().add(this.getIBookingProvidesForHost());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(roomtypeToGuestIDEntryEClass, Map.Entry.class, "RoomtypeToGuestIDEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRoomtypeToGuestIDEntry_Key(), ecorePackage.getEString(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getRoomtypeToGuestIDEntry_Value(), ecorePackage.getEString(), "value", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(roomToGuestIDEntryEClass, Map.Entry.class, "RoomToGuestIDEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRoomToGuestIDEntry_Key(), ecorePackage.getEIntegerObject(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRoomToGuestIDEntry_Value(), ecorePackage.getEString(), "value", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEClass(nrToRoomEntryEClass, Map.Entry.class, "NrToRoomEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNrToRoomEntry_Key(), ecorePackage.getEString(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getNrToRoomEntry_Value(), ecorePackage.getEIntegerObject(), "value", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(roomTypeToRoomIDEntryEClass, Map.Entry.class, "RoomTypeToRoomIDEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRoomTypeToRoomIDEntry_Key(), ecorePackage.getEString(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRoomTypeToRoomIDEntry_Value(), ecorePackage.getEIntegerObject(), "value", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(bookingRefToBookingEntryEClass, Map.Entry.class, "BookingRefToBookingEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBookingRefToBookingEntry_Key(), ecorePackage.getEString(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1104,23 +1114,24 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 
 		initEClass(bookingEClass, Booking.class, "Booking", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getBooking_BookingRef(), theTypesPackage.getString(), "bookingRef", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBooking_Date(), theTypesPackage.getString(), "date", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getBooking_NrOfNights(), theTypesPackage.getInteger(), "nrOfNights", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBooking_StartDate(), theTypesPackage.getString(), "startDate", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getBooking_EndDate(), theTypesPackage.getString(), "endDate", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBooking_ServiceNotes(), ecorePackage.getEString(), "serviceNotes", null, 0, -1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBooking_NrOfGuests(), theTypesPackage.getInteger(), "nrOfGuests", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBooking_Customer(), this.getCustomer(), null, "customer", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBooking_GuestList(), this.getGuest(), null, "guestList", null, 1, -1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBooking_IsPayed(), theTypesPackage.getBoolean(), "isPayed", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getBooking_RoomGuestMap(), this.getRoomtypeToGuestIDEntry(), null, "roomGuestMap", null, 0, -1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getBooking_RoomTypeMap(), this.getNrToRoomEntry(), null, "roomTypeMap", null, 0, -1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBooking_RoomIDToGuestMap(), this.getRoomToGuestIDEntry(), null, "roomIDToGuestMap", null, 0, -1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBooking_RoomTypeToRoomIDMap(), this.getRoomTypeToRoomIDEntry(), null, "roomTypeToRoomIDMap", null, 0, -1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getBooking_PaymentMethod(), this.getPaymentMethod(), "paymentMethod", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBooking_ExtraToIsPayedMap(), this.getExtraToIsPayedEntry(), null, "extraToIsPayedMap", null, 0, -1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEOperation(getBooking__CheckedInAllGuest(), theTypesPackage.getBoolean(), "checkedInAllGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getBooking__CheckedInAGuest(), theTypesPackage.getBoolean(), "checkedInAGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		EOperation op = initEOperation(getBooking__SetResponsibleGuest__String_String(), theTypesPackage.getInteger(), "setResponsibleGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "room", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getBooking__SetResponsibleGuest__int_String(), theTypesPackage.getInteger(), "setResponsibleGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "guestEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getBooking__GetNrOfRooms(), theTypesPackage.getInteger(), "getNrOfRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1129,7 +1140,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		addEParameter(op, theTypesPackage.getString(), "extras", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getBooking__SetRoomTypes__EList(), theTypesPackage.getInteger(), "setRoomTypes", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "extras", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomTypes", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(customerEClass, Customer.class, "Customer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCustomer_PaymentDetails(), this.getPaymentDetails(), null, "paymentDetails", null, 1, -1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
