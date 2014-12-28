@@ -57,13 +57,11 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//RoomType/maxNrOfGuests"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//RoomType/description"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//RoomType/roomTypeEnum"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomType/getRoomType">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomType/getRoomType/name"/>
-      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//Experience">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//Experience/nrOfSpots"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//Experience/experienceStatusEnum"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//Experience/nrOfSpotsFree"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//AbstractExtra">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//AbstractExtra/ID"/>
@@ -72,10 +70,6 @@
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//AbstractExtra/description"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="maintenancemodel.ecore#//Extra">
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//Extra/getPrice"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//Extra/getID"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//Extra/getName"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//Extra/getDescription"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//Extra/isAvailable"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//Product">
@@ -89,8 +83,6 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference maintenancemodel.ecore#//Room/roomType"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//ExtraHandler">
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference maintenancemodel.ecore#//ExtraHandler/extra"/>
       <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
           createChild="true" ecoreFeature="ecore:EReference maintenancemodel.ecore#//ExtraHandler/intToExtraMap"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//ExtraHandler/exists">
@@ -115,8 +107,6 @@
           propertySortChoices="true" ecoreFeature="ecore:EReference maintenancemodel.ecore#//IntegerToExtraMap/value"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//RoomHandler">
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference maintenancemodel.ecore#//RoomHandler/room"/>
       <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
           createChild="true" ecoreFeature="ecore:EReference maintenancemodel.ecore#//RoomHandler/integerToRoomMap"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomHandler/exists">
@@ -156,26 +146,25 @@
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//RoomTypesHandler">
-      <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference maintenancemodel.ecore#//RoomTypesHandler/roomType"/>
       <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
           createChild="true" ecoreFeature="ecore:EReference maintenancemodel.ecore#//RoomTypesHandler/stringToRoomType"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomTypesHandler/exists">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/exists/ID"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomTypesHandler/addRoomType">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/addRoomType/roomType"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/addRoomType/roomTypeID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/addRoomType/roomTypeEnum"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/addRoomType/price"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/addRoomType/maxNrOfGuests"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/addRoomType/description"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomTypesHandler/removeRoomType">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/removeRoomType/roomType"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/removeRoomType/roomTypeID"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//StringToRoomType">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//StringToRoomType/key"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//StringToRoomType/value"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EReference maintenancemodel.ecore#//StringToRoomType/value"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//StringToListsMap">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//StringToListsMap/key"/>
@@ -264,6 +253,7 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IExtrasMaintenance/editExtra/ID"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IExtrasMaintenance/editExtra/name"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IExtrasMaintenance/editExtra/description"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IExtrasMaintenance/editExtra/ID.1"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//ExtrasMaintenance">
