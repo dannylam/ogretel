@@ -86,11 +86,10 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int addExtra(int price, String ID, String name, String description) {
+	public int addExtra(int price, String ID, String name, String description, boolean isProduct) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -218,8 +217,8 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 		switch (operationID) {
 			case MaintenancemodelPackage.EXTRA_HANDLER___EXISTS__INT:
 				return exists((Integer)arguments.get(0));
-			case MaintenancemodelPackage.EXTRA_HANDLER___ADD_EXTRA__INT_STRING_STRING_STRING:
-				return addExtra((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
+			case MaintenancemodelPackage.EXTRA_HANDLER___ADD_EXTRA__INT_STRING_STRING_STRING_BOOLEAN:
+				return addExtra((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (Boolean)arguments.get(4));
 			case MaintenancemodelPackage.EXTRA_HANDLER___REMOVE_EXTRA__INT:
 				return removeExtra((Integer)arguments.get(0));
 			case MaintenancemodelPackage.EXTRA_HANDLER___GET_EXTRA__INT:
