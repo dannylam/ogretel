@@ -106,7 +106,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	//TODO: ändra i bookingprovides till List istället för Elist
 	public List<String> stringToList(String text) {
 		return Arrays.asList(text.split("\\s*,\\s*"));
 	}
