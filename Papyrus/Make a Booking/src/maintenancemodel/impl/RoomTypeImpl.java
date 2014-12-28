@@ -125,12 +125,32 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	protected RoomTypeImpl(int price, int maxNrOfGuests, String description, RoomTypeEnum rtenum) {
+	protected RoomTypeImpl(int price, int maxNrOfGuests, String description, String rtenum) {
 		super();
 		this.price = price;
 		this.maxNrOfGuests = maxNrOfGuests;
 		this.description = description;
-		this.roomTypeEnum = rtenum;
+		this.roomTypeEnum = stringToRoomTypeEnum(rtenum);
+	}
+	
+	/**
+	 * Returns the RoomTypeEnum associated with the String that is sent in.
+	 * The possible strings are "singlebed", "doublebed" and "luxurysuite",
+	 * otherwise null is returned.
+	 */
+	private RoomTypeEnum stringToRoomTypeEnum(String roomTypeEnum){
+		
+		switch(roomTypeEnum){
+		case "doublebed":
+			return RoomTypeEnum.DOUBLEBED;
+		case "singlebed":
+			return RoomTypeEnum.SINGLEBED;
+		case "luxurysuite":
+			return RoomTypeEnum.LUXURYSUITE;
+		default:
+			return null;
+		}
+		
 	}
 	
 
