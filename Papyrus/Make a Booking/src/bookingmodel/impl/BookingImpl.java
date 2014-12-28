@@ -530,8 +530,16 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			this.roomIDToGuestMap.get(roomID).setValue(guestEmail);
 		}
 		return result;
-		/*
-		 * 	public int setResponsibleGuestToAllRooms(String guestEmail) {
+	}
+	
+	/**
+	 *TODO javadoc
+	 *TODO: check if correct
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public int setResponsibleGuestToAllRooms(String guestEmail) {
 		int result = 0;
 		if(!this.roomIDToGuestMap.isEmpty()){
 			int i = 0;
@@ -543,18 +551,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			}
 		}
 		return result;
-	}*/
-	}
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setResponsibleGuestToAllRooms(String guestEmail) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -566,28 +562,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public int getNrOfRooms() {
 		return this.roomTypeToRoomIDMap.size(); 
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setExtras(EList<String> extras) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setRoomTypes(EList<String> roomTypes) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**

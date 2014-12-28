@@ -8,10 +8,14 @@ import bookingmodel.BookingProvides;
 import bookingmodel.BookingmodelPackage;
 import bookingmodel.IBookingProvidesForGuest;
 import bookingmodel.IBookingProvidesForHost;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.List;
+
 import maintenancemodel.MaintenanceProvidesForBooking;
+import maintenancemodel.impl.MaintenanceProvidesForBookingImpl;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -43,7 +47,13 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	protected BookingHandler bookingHandler;
 
-	public MaintenanceProvidesForBooking maintenanceComponent;
+	/**
+	 * TODO: javadoc
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	protected MaintenanceProvidesForBooking maintenanceComponent;
 
 	
 	/**
@@ -53,6 +63,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	protected BookingProvidesImpl() {
 		super();
+		maintenanceComponent = new MaintenanceProvidesForBookingImpl();
 	}
 	
 
@@ -179,8 +190,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	public int checkIn(String bookingRef, String guestEmail) {
 		int result = 0;
 		if(this.bookingHandler.exists(bookingRef) && !this.bookingHandler.getBooking(bookingRef).checkedInAllGuest()){
-			//Setting respsonsible guest
-			//this.bookingHandler.getBooking(bookingRef).setResponsibleGuestToAllRooms(guestEmail);
+			this.bookingHandler.getBooking(bookingRef).setResponsibleGuestToAllRooms(guestEmail);
 			
 			//Set booking as active
 			//Invoke method in IMaintenanceProvidesForBooking
