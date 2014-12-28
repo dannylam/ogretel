@@ -147,6 +147,14 @@ public class testRoomMaintenance {
 		int edRT = this.rm.editRoomType(roomTypeID, "singlebed", 200, 1, "Här bor en apa.");
 		assertTrue(edRT == 0);
 		
+		RoomType gettedRT = this.rm.getRoomTypeHandler().getStringToRoomType().get(roomTypeID);
+		
+		assertTrue(gettedRT.getID() == roomTypeID);
+		assertTrue(gettedRT.getRoomTypeEnum() == RoomTypeEnum.SINGLEBED);
+		assertTrue(gettedRT.getDescription() == "Här bor en apa.");
+		assertTrue(gettedRT.getMaxNrOfGuests() == 1);
+		assertTrue(gettedRT.getPrice() == 200);
+		
 	}
 
 }
