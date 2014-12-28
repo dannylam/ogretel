@@ -50,8 +50,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  * </p>
  *
- * @see bookingmodel.ModelPackage#getBooking()
- * @maintenancemodel
+ * @see bookingmodel.BookingmodelPackage#getBooking()
+ * @model
  * @generated NOT
  */
 public interface Booking extends EObject {
@@ -59,8 +59,8 @@ public interface Booking extends EObject {
 	 * A method that returns the value of the '<em><b>Booking Ref</b></em>' attribute.
 	 * @return the value of the '<em>Booking Ref</em>' attribute.
 	 * @see #setBookingRef(String)
-	 * @see bookingmodel.ModelPackage#getBooking_BookingRef()
-	 * @maintenancemodel dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @see bookingmodel.BookingmodelPackage#getBooking_BookingRef()
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated NOT
 	 */
 	String getBookingRef();
@@ -115,8 +115,8 @@ public interface Booking extends EObject {
 	 * The list contents are of type {@link java.lang.String}.
 	 * Returns a service.
 	 * @return the value of the '<em>Service Notes</em>' attribute list.
-	 * @see bookingmodel.ModelPackage#getBooking_ServiceNotes()
-	 * @maintenancemodel ordered="false"
+	 * @see bookingmodel.BookingmodelPackage#getBooking_ServiceNotes()
+	 * @model ordered="false"
 	 * @generated NOT
 	 */
 	EList<String> getServiceNotes();
