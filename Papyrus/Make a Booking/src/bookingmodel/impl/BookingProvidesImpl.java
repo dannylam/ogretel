@@ -8,14 +8,10 @@ import bookingmodel.BookingProvides;
 import bookingmodel.BookingmodelPackage;
 import bookingmodel.IBookingProvidesForGuest;
 import bookingmodel.IBookingProvidesForHost;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.List;
-
 import maintenancemodel.MaintenanceProvidesForBooking;
-import maintenancemodel.impl.MaintenanceProvidesForBookingImpl;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -63,7 +59,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	protected BookingProvidesImpl() {
 		super();
-		maintenanceComponent = new MaintenanceProvidesForBookingImpl();
 	}
 	
 
@@ -172,9 +167,9 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public String getServiceNotes(String bookingRef) {
+	public List<String> getServiceNotes(String bookingRef) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -191,10 +186,12 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	public int checkIn(String bookingRef, String guestEmail) {
 		int result = 0;
 		if(this.bookingHandler.exists(bookingRef) && !this.bookingHandler.getBooking(bookingRef).checkedInAllGuest()){
+			
+			//get vacant rooms from maintenance which are to be added in the map roomtypeToRoomID in booking
+			maintenanceComponent.setBookingAsActive(bookingRef);
 			this.bookingHandler.getBooking(bookingRef).setResponsibleGuestToAllRooms(guestEmail);
 			
-			//Set booking as active
-			//Invoke method in IMaintenanceProvidesForBooking
+			
 		}
 		// TODO: check if correct
 		return result;
@@ -243,9 +240,16 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int pay(String bookingRef) {
+		int result = 0;
+		/*
+		 *check if this booking exists and is not null
+		 *get the price
+		 *take the paymentdetails from the customer of this booking
+		 *invoke pay() in banking 
+		 */
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return result;
 	}
 
 	/**
@@ -294,47 +298,55 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 * TODO: javadoc
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int choosePaymentMethod(String method) {
+	public int setPaymentMethod(String method) {
+		int result = 0;
+		/*
+		 * Check if the method matches with one of the enums in paymentmethod
+		 * set the paymentmethod in booking as this method
+		 * 
+		 */
 		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return result;
+	}
+
+
+	/**
+	 * TODO: javadoc
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public int setPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, String customerEmail) {
+		int result = 0;
+		/*
+		 * check if there exists a customer with that email
+		 * create a paymentdetails with all those imparams
+		 * set this paymentdetails to that customer
+		 */
+		// TODO: implement this method
+		return result;
 	}
 
 	/**
+	 *TODO: javadoc
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int setPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName) {
+	public int setPersonalDetails(String firstName, String lastName, int age, String email, String bookingRef) {
+		int result = 0;
+		/*
+		 * create a customer with these inparams
+		 * assign this customer to the booking of that bookingreference 
+		 */
+		
 		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public int setPersonalDetails(String firstName, String lastName, int age, String email) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public int setCustomerToBooking(String customerEmail, String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return result;
 	}
 
 	/**
@@ -346,13 +358,13 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	public int book(String startDate, String endDate, int nrOfGuests, String roomTypes, String extras) {
 		int result = 0;
 		// TODO: implement this method
-		/*TODO: LŠgga till MaintenanceProvidesForBooking som ett objekt i klassen, kallar den maintenance
-		 * check with MaintenanceProvidesForBooking if can book, and if so then create obj
-		 * */
-		/*
 
-		if(MaintenanceProvidesForBooking.this.canBook(roomType, nrOfRooms, startdate, enddate)){
-			Booking booking = new BookingImpl(nrOfNights, nrOfGuests, date, stringToList(roomTypes), stringToList(extras));	
+		/*
+		 * 
+		 */
+		
+		/*if(maintenanceComponent.canBook(roomTypes, startDate, endDate){
+			Booking booking = new BookingImpl(nrOfGuests, startDate, endDate, stringToList(roomTypes), stringToList(extras));	
 			this.bookingHandler.addBooking(booking);
 		}*/
 		return result;
@@ -471,8 +483,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 				return checkOut((String)arguments.get(0), (String)arguments.get(1));
 			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING:
 				return pay((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
-			case BookingmodelPackage.BOOKING_PROVIDES___GET_BOOKING__STRING:
-				return getBooking((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING:
 				return pay((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_PROVIDES___GET_PRICE__STRING:
@@ -481,14 +491,12 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 				return removeBooking((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_PROVIDES___EDIT_BOOKING__STRING_STRING_STRING_INT_STRING_STRING:
 				return editBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
-			case BookingmodelPackage.BOOKING_PROVIDES___CHOOSE_PAYMENT_METHOD__STRING:
-				return choosePaymentMethod((String)arguments.get(0));
-			case BookingmodelPackage.BOOKING_PROVIDES___SET_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING:
-				return setPaymentDetails((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
-			case BookingmodelPackage.BOOKING_PROVIDES___SET_PERSONAL_DETAILS__STRING_STRING_INT_STRING:
-				return setPersonalDetails((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
-			case BookingmodelPackage.BOOKING_PROVIDES___SET_CUSTOMER_TO_BOOKING__STRING_STRING:
-				return setCustomerToBooking((String)arguments.get(0), (String)arguments.get(1));
+			case BookingmodelPackage.BOOKING_PROVIDES___SET_PAYMENT_METHOD__STRING:
+				return setPaymentMethod((String)arguments.get(0));
+			case BookingmodelPackage.BOOKING_PROVIDES___SET_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_STRING:
+				return setPaymentDetails((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6));
+			case BookingmodelPackage.BOOKING_PROVIDES___SET_PERSONAL_DETAILS__STRING_STRING_INT_STRING_STRING:
+				return setPersonalDetails((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4));
 			case BookingmodelPackage.BOOKING_PROVIDES___BOOK__STRING_STRING_INT_STRING_STRING:
 				return book((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4));
 		}

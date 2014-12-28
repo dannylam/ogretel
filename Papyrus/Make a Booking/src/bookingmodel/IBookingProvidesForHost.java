@@ -2,6 +2,9 @@
  */
 package bookingmodel;
 
+import java.util.List;
+
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -54,6 +57,6 @@ public interface IBookingProvidesForHost extends EObject {
 	 * @model dataType="types.String" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
-	String getServiceNotes(String bookingRef);
+	List<String> getServiceNotes(String bookingRef);
 
 } // IBookingProvidesForHost

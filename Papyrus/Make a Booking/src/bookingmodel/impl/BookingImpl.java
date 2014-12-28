@@ -239,6 +239,20 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	protected BookingImpl() {
 		super();
 	}
+	
+	/**
+	 * TODO: Javadoc
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public BookingImpl(int nrOfGuests, String startDate, String endDate, List<String> roomTypes, List<String> extras) {
+		this.setNrOfGuests(nrOfGuests);
+		this.setStartDate(startDate);
+		this.setEndDate(endDate);
+		this.setRoomTypes(roomTypes);
+		this.setExtras(extras);
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -565,6 +579,40 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setExtras(EList<String> extras) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setRoomTypes(EList<String> roomTypes) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * TODO: javadoc
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setRoomIDs(List<Integer> roomIDs) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
 	 *TODO: Javadoc
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -810,6 +858,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return setExtras((EList<String>)arguments.get(0));
 			case BookingmodelPackage.BOOKING___SET_ROOM_TYPES__ELIST:
 				return setRoomTypes((EList<String>)arguments.get(0));
+			case BookingmodelPackage.BOOKING___SET_ROOM_IDS__ELIST:
+				return setRoomIDs((EList<Integer>)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

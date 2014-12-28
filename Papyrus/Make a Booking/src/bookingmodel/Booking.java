@@ -1,5 +1,3 @@
-/**
- */
 package bookingmodel;
 
 import java.util.List;
@@ -267,17 +265,24 @@ public interface Booking extends EObject {
 	int getNrOfRooms();
 
 	/**
-	 * Sets extras into a list.
+	 * Adds extras from a booking into the map with extras.
 	 * @model dataType="types.Integer" required="true" ordered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false"
 	 * @generated NOT
 	 */
 	int setExtras(List<String> extras);
 
 	/**
-	 * Sets roomtypes into a list.
+	 * Adds roomtypes from a booking into the map with roomtypes.
 	 * @model dataType="types.Integer" required="true" ordered="false" roomTypesDataType="types.String" roomTypesMany="true" roomTypesOrdered="false"
 	 * @generated NOT
 	 */
 	int setRoomTypes(List<String> roomTypes);
+
+	/**
+	 * Adds roomIDs from a booking into the map with roomIDs.
+	 * @model dataType="types.Integer" required="true" roomIDsDataType="types.Integer" roomIDsMany="true"
+	 * @generated
+	 */
+	int setRoomIDs(List<Integer> roomIDs);
 
 } // Booking
