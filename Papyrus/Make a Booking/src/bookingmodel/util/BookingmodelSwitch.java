@@ -68,15 +68,15 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case BookingmodelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY: {
-				@SuppressWarnings("unchecked") Map.Entry<String, String> roomtypeToGuestIDEntry = (Map.Entry<String, String>)theEObject;
-				T result = caseRoomtypeToGuestIDEntry(roomtypeToGuestIDEntry);
+			case BookingmodelPackage.ROOM_TO_GUEST_ID_ENTRY: {
+				@SuppressWarnings("unchecked") Map.Entry<Integer, String> roomToGuestIDEntry = (Map.Entry<Integer, String>)theEObject;
+				T result = caseRoomToGuestIDEntry(roomToGuestIDEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case BookingmodelPackage.NR_TO_ROOM_ENTRY: {
-				@SuppressWarnings("unchecked") Map.Entry<String, Integer> nrToRoomEntry = (Map.Entry<String, Integer>)theEObject;
-				T result = caseNrToRoomEntry(nrToRoomEntry);
+			case BookingmodelPackage.ROOM_TYPE_TO_ROOM_ID_ENTRY: {
+				@SuppressWarnings("unchecked") Map.Entry<String, Integer> roomTypeToRoomIDEntry = (Map.Entry<String, Integer>)theEObject;
+				T result = caseRoomTypeToRoomIDEntry(roomTypeToRoomIDEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -162,32 +162,32 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Roomtype To Guest ID Entry</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Room To Guest ID Entry</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Roomtype To Guest ID Entry</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Room To Guest ID Entry</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRoomtypeToGuestIDEntry(Map.Entry<String, String> object) {
+	public T caseRoomToGuestIDEntry(Map.Entry<Integer, String> object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Nr To Room Entry</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Room Type To Room ID Entry</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Nr To Room Entry</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Room Type To Room ID Entry</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNrToRoomEntry(Map.Entry<String, Integer> object) {
+	public T caseRoomTypeToRoomIDEntry(Map.Entry<String, Integer> object) {
 		return null;
 	}
 

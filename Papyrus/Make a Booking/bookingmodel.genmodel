@@ -39,6 +39,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bookingmodel.ecore#//Booking/roomGuestMap"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bookingmodel.ecore#//Booking/roomTypeMap"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//Booking/paymentMethod"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bookingmodel.ecore#//Booking/extraIsPayedMap"/>
       <genOperations ecoreOperation="bookingmodel.ecore#//Booking/checkedInAllGuest"/>
       <genOperations ecoreOperation="bookingmodel.ecore#//Booking/checkedInAGuest"/>
       <genOperations ecoreOperation="bookingmodel.ecore#//Booking/setResponsibleGuest">

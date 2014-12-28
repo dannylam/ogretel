@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Ecore="http://www.eclipse.org/uml2/schemas/Ecore/5" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Ecore/5 pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA">
+  <uml:Model xmi:id="_jfi5wI6FEeSMV-ZppFnXKQ" name="types" URI="http://www.eclipse.org/uml2/5.0.0/Types">
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_jfi5wY6FEeSMV-ZppFnXKQ" name="Boolean">
+      <ownedComment xmi:id="_jfi5wo6FEeSMV-ZppFnXKQ" annotatedElement="_jfi5wY6FEeSMV-ZppFnXKQ">
+        <body>Boolean is used for logical expressions, consisting of the predefined values true and false.</body>
+      </ownedComment>
+      <ownedComment xmi:id="_jgRSgI6FEeSMV-ZppFnXKQ" annotatedElement="_jfi5wY6FEeSMV-ZppFnXKQ">
+        <body>Boolean is used for logical expressions, consisting of the predefined values true and false.</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_jfi5w46FEeSMV-ZppFnXKQ" name="Integer">
+      <ownedComment xmi:id="_jfi5xI6FEeSMV-ZppFnXKQ" annotatedElement="_jfi5w46FEeSMV-ZppFnXKQ">
+        <body>Integer is a primitive type representing integer values.</body>
+      </ownedComment>
+      <ownedComment xmi:id="_jgRSgY6FEeSMV-ZppFnXKQ" annotatedElement="_jfi5w46FEeSMV-ZppFnXKQ">
+        <body>Integer is a primitive type representing integer values.</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_jfi5xY6FEeSMV-ZppFnXKQ" name="Real">
+      <ownedComment xmi:id="_jfi5xo6FEeSMV-ZppFnXKQ" annotatedElement="_jfi5xY6FEeSMV-ZppFnXKQ">
+        <body>Real is a primitive type representing the mathematical concept of real.</body>
+      </ownedComment>
+      <ownedComment xmi:id="_jgRSgo6FEeSMV-ZppFnXKQ" annotatedElement="_jfi5xY6FEeSMV-ZppFnXKQ">
+        <body>Real is a primitive type representing the mathematical concept of real.</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_jfi5x46FEeSMV-ZppFnXKQ" name="UnlimitedNatural">
+      <ownedComment xmi:id="_jfi5yI6FEeSMV-ZppFnXKQ" annotatedElement="_jfi5x46FEeSMV-ZppFnXKQ">
+        <body>UnlimitedNatural is a primitive type representing unlimited natural values.</body>
+      </ownedComment>
+      <ownedComment xmi:id="_jgRSg46FEeSMV-ZppFnXKQ" annotatedElement="_jfi5x46FEeSMV-ZppFnXKQ">
+        <body>UnlimitedNatural is a primitive type representing unlimited natural values.</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_jfi5yY6FEeSMV-ZppFnXKQ" name="String">
+      <ownedComment xmi:id="_jfi5yo6FEeSMV-ZppFnXKQ" annotatedElement="_jfi5yY6FEeSMV-ZppFnXKQ">
+        <body>String is a sequence of characters in some suitable character set used to display information about the maintenancemodel. Character sets may include non-Roman alphabets and characters.</body>
+      </ownedComment>
+      <ownedComment xmi:id="_jgR5kI6FEeSMV-ZppFnXKQ" annotatedElement="_jfi5yY6FEeSMV-ZppFnXKQ">
+        <body>String is a sequence of characters in some suitable character set used to display information about the maintenancemodel. Character sets may include non-Roman alphabets and characters.</body>
+      </ownedComment>
+    </packagedElement>
+    <profileApplication xmi:id="_jfi5y46FEeSMV-ZppFnXKQ">
+      <eAnnotations xmi:id="_jfi5zI6FEeSMV-ZppFnXKQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Ecore.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <Ecore:EPackage xmi:id="_jfi5zY6FEeSMV-ZppFnXKQ" base_Package="_jfi5wI6FEeSMV-ZppFnXKQ" nsPrefix="types"/>
+  <Ecore:EDataType xmi:id="_jfi5zo6FEeSMV-ZppFnXKQ" instanceClassName="boolean" base_PrimitiveType="_jfi5wY6FEeSMV-ZppFnXKQ"/>
+  <Ecore:EDataType xmi:id="_jfi5z46FEeSMV-ZppFnXKQ" instanceClassName="int" base_PrimitiveType="_jfi5w46FEeSMV-ZppFnXKQ"/>
+  <Ecore:EDataType xmi:id="_jfi50I6FEeSMV-ZppFnXKQ" instanceClassName="double" base_PrimitiveType="_jfi5xY6FEeSMV-ZppFnXKQ"/>
+  <Ecore:EDataType xmi:id="_jfjg0I6FEeSMV-ZppFnXKQ" instanceClassName="int" base_PrimitiveType="_jfi5x46FEeSMV-ZppFnXKQ"/>
+  <Ecore:EDataType xmi:id="_jfjg0Y6FEeSMV-ZppFnXKQ" instanceClassName="java.lang.String" base_PrimitiveType="_jfi5yY6FEeSMV-ZppFnXKQ"/>
+</xmi:XMI>

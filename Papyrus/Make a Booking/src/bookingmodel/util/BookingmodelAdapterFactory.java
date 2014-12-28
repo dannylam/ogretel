@@ -70,12 +70,12 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 	protected BookingmodelSwitch<Adapter> modelSwitch =
 		new BookingmodelSwitch<Adapter>() {
 			@Override
-			public Adapter caseRoomtypeToGuestIDEntry(Map.Entry<String, String> object) {
-				return createRoomtypeToGuestIDEntryAdapter();
+			public Adapter caseRoomToGuestIDEntry(Map.Entry<Integer, String> object) {
+				return createRoomToGuestIDEntryAdapter();
 			}
 			@Override
-			public Adapter caseNrToRoomEntry(Map.Entry<String, Integer> object) {
-				return createNrToRoomEntryAdapter();
+			public Adapter caseRoomTypeToRoomIDEntry(Map.Entry<String, Integer> object) {
+				return createRoomTypeToRoomIDEntryAdapter();
 			}
 			@Override
 			public Adapter caseBookingRefToBookingEntry(Map.Entry<String, Booking> object) {
@@ -146,7 +146,7 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Roomtype To Guest ID Entry</em>}'.
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Room To Guest ID Entry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
@@ -155,12 +155,12 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 	 * @see java.util.Map.Entry
 	 * @generated
 	 */
-	public Adapter createRoomtypeToGuestIDEntryAdapter() {
+	public Adapter createRoomToGuestIDEntryAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Nr To Room Entry</em>}'.
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Room Type To Room ID Entry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
@@ -169,7 +169,7 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 	 * @see java.util.Map.Entry
 	 * @generated
 	 */
-	public Adapter createNrToRoomEntryAdapter() {
+	public Adapter createRoomTypeToRoomIDEntryAdapter() {
 		return null;
 	}
 
