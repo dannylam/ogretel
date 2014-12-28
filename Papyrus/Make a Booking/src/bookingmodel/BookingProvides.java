@@ -2,7 +2,7 @@
  */
 package bookingmodel;
 
-import org.eclipse.emf.common.util.EList;
+import java.util.List;
 
 /**
  * An interface class which represents BookingProvides, extending EObject.
@@ -60,6 +60,6 @@ public interface BookingProvides extends IBookingProvidesForCustomer, IBookingPr
 	 * @model dataType="types.String" ordered="false" textDataType="types.String" textRequired="true" textOrdered="false"
 	 * @generated NOT
 	 */
-	EList<String> stringToList(String text);
+	List<String> stringToList(String text);
 
 } // BookingProvides

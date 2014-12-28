@@ -447,7 +447,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__GetNrOfRooms() {
+	public EOperation getBooking__SetResponsibleGuestToAllRooms__String() {
 		return bookingEClass.getEOperations().get(3);
 	}
 
@@ -456,7 +456,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__SetExtras__EList() {
+	public EOperation getBooking__GetNrOfRooms() {
 		return bookingEClass.getEOperations().get(4);
 	}
 
@@ -465,8 +465,17 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__SetRoomTypes__EList() {
+	public EOperation getBooking__SetExtras__EList() {
 		return bookingEClass.getEOperations().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBooking__SetRoomTypes__EList() {
+		return bookingEClass.getEOperations().get(6);
 	}
 
 	/**
@@ -993,6 +1002,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		createEOperation(bookingEClass, BOOKING___CHECKED_IN_ALL_GUEST);
 		createEOperation(bookingEClass, BOOKING___CHECKED_IN_AGUEST);
 		createEOperation(bookingEClass, BOOKING___SET_RESPONSIBLE_GUEST__INT_STRING);
+		createEOperation(bookingEClass, BOOKING___SET_RESPONSIBLE_GUEST_TO_ALL_ROOMS__STRING);
 		createEOperation(bookingEClass, BOOKING___GET_NR_OF_ROOMS);
 		createEOperation(bookingEClass, BOOKING___SET_EXTRAS__ELIST);
 		createEOperation(bookingEClass, BOOKING___SET_ROOM_TYPES__ELIST);
@@ -1132,6 +1142,9 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 
 		EOperation op = initEOperation(getBooking__SetResponsibleGuest__int_String(), theTypesPackage.getInteger(), "setResponsibleGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "guestEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getBooking__SetResponsibleGuestToAllRooms__String(), theTypesPackage.getInteger(), "setResponsibleGuestToAllRooms", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "guestEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getBooking__GetNrOfRooms(), theTypesPackage.getInteger(), "getNrOfRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);

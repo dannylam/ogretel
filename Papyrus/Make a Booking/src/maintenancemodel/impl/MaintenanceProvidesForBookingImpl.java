@@ -4,6 +4,7 @@ package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import maintenancemodel.Calendar;
+import maintenancemodel.ExtraHandler;
 import maintenancemodel.MaintenanceProvidesForBooking;
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.RoomHandler;
@@ -26,6 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link maintenancemodel.impl.MaintenanceProvidesForBookingImpl#getCalendar <em>Calendar</em>}</li>
  *   <li>{@link maintenancemodel.impl.MaintenanceProvidesForBookingImpl#getRoomTypes <em>Room Types</em>}</li>
  *   <li>{@link maintenancemodel.impl.MaintenanceProvidesForBookingImpl#getRooms <em>Rooms</em>}</li>
+ *   <li>{@link maintenancemodel.impl.MaintenanceProvidesForBookingImpl#getExtraHandler <em>Extra Handler</em>}</li>
  * </ul>
  * </p>
  *
@@ -64,9 +66,19 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	protected RoomHandler rooms;
 
 	/**
+	 * The cached value of the '{@link #getExtraHandler() <em>Extra Handler</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExtraHandler()
+	 * @generated
+	 * @ordered
+	 */
+	protected ExtraHandler extraHandler;
+
+	/**
 	 * @generated
 	 */
-	protected MaintenanceProvidesForBookingImpl() {
+	public MaintenanceProvidesForBookingImpl() {
 		super();
 	}
 
@@ -198,6 +210,49 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExtraHandler getExtraHandler() {
+		return extraHandler;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetExtraHandler(ExtraHandler newExtraHandler, NotificationChain msgs) {
+		ExtraHandler oldExtraHandler = extraHandler;
+		extraHandler = newExtraHandler;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__EXTRA_HANDLER, oldExtraHandler, newExtraHandler);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setExtraHandler(ExtraHandler newExtraHandler) {
+		if (newExtraHandler != extraHandler) {
+			NotificationChain msgs = null;
+			if (extraHandler != null)
+				msgs = ((InternalEObject)extraHandler).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__EXTRA_HANDLER, null, msgs);
+			if (newExtraHandler != null)
+				msgs = ((InternalEObject)newExtraHandler).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__EXTRA_HANDLER, null, msgs);
+			msgs = basicSetExtraHandler(newExtraHandler, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__EXTRA_HANDLER, newExtraHandler, newExtraHandler));
+	}
+
+	/**
 	 * @inheritDoc
 	 * @generated NOT
 	 */
@@ -241,6 +296,28 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getPriceRoom(String roomTypeID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getPriceExtra(int extraID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
 	 * @generated
 	 */
 	@Override
@@ -252,6 +329,8 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 				return basicSetRoomTypes(null, msgs);
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS:
 				return basicSetRooms(null, msgs);
+			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__EXTRA_HANDLER:
+				return basicSetExtraHandler(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -268,6 +347,8 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 				return getRoomTypes();
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS:
 				return getRooms();
+			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__EXTRA_HANDLER:
+				return getExtraHandler();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -286,6 +367,9 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 				return;
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS:
 				setRooms((RoomHandler)newValue);
+				return;
+			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__EXTRA_HANDLER:
+				setExtraHandler((ExtraHandler)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -306,6 +390,9 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS:
 				setRooms((RoomHandler)null);
 				return;
+			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__EXTRA_HANDLER:
+				setExtraHandler((ExtraHandler)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -322,6 +409,8 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 				return roomTypes != null;
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS:
 				return rooms != null;
+			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__EXTRA_HANDLER:
+				return extraHandler != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -340,6 +429,10 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 				return removeBooking((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___SET_BOOKING_AS_ACTIVE__STRING:
 				return setBookingAsActive((String)arguments.get(0));
+			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___GET_PRICE_ROOM__STRING:
+				return getPriceRoom((String)arguments.get(0));
+			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___GET_PRICE_EXTRA__INT:
+				return getPriceExtra((Integer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

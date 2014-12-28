@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getMaxNrOfGuests <em>Max Nr Of Guests</em>}</li>
  *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getRoomTypeEnum <em>Room Type Enum</em>}</li>
+ *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getRoomTypeID <em>Room Type ID</em>}</li>
  * </ul>
  * </p>
  *
@@ -109,6 +110,26 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	protected RoomTypeEnum roomTypeEnum = ROOM_TYPE_ENUM_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getRoomTypeID() <em>Room Type ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoomTypeID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ROOM_TYPE_ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRoomTypeID() <em>Room Type ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoomTypeID()
+	 * @generated
+	 * @ordered
+	 */
+	protected String roomTypeID = ROOM_TYPE_ID_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * The ID of the RoomType used in the Map
 	 * <!-- end-user-doc -->
@@ -133,7 +154,7 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomTypeImpl() {
+	protected RoomTypeImpl() {
 		super();
 	}
 	
@@ -277,6 +298,27 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getRoomTypeID() {
+		return roomTypeID;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRoomTypeID(String newRoomTypeID) {
+		String oldRoomTypeID = roomTypeID;
+		roomTypeID = newRoomTypeID;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ID, oldRoomTypeID, roomTypeID));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -288,6 +330,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return getDescription();
 			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ENUM:
 				return getRoomTypeEnum();
+			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ID:
+				return getRoomTypeID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -311,6 +355,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return;
 			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ENUM:
 				setRoomTypeEnum((RoomTypeEnum)newValue);
+				return;
+			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ID:
+				setRoomTypeID((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -336,6 +383,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ENUM:
 				setRoomTypeEnum(ROOM_TYPE_ENUM_EDEFAULT);
 				return;
+			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ID:
+				setRoomTypeID(ROOM_TYPE_ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -356,6 +406,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ENUM:
 				return roomTypeEnum != ROOM_TYPE_ENUM_EDEFAULT;
+			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ID:
+				return ROOM_TYPE_ID_EDEFAULT == null ? roomTypeID != null : !ROOM_TYPE_ID_EDEFAULT.equals(roomTypeID);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -378,6 +430,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 		result.append(description);
 		result.append(", roomTypeEnum: ");
 		result.append(roomTypeEnum);
+		result.append(", roomTypeID: ");
+		result.append(roomTypeID);
 		result.append(')');
 		return result.toString();
 	}
