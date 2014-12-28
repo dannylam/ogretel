@@ -2,6 +2,7 @@ package host;
 
 import static org.junit.Assert.assertTrue;
 import maintenancemodel.IRoomMaintenance;
+import maintenancemodel.Room;
 import maintenancemodel.RoomType;
 import maintenancemodel.RoomTypeEnum;
 import maintenancemodel.RoomTypesHandler;
@@ -177,7 +178,7 @@ public class testRoomMaintenance {
 		int addedR = this.rm.addRoom(10, roomTypeID);
 		
 		assertTrue(addedR == 0);
-		
+		assertTrue(this.rm.getRoomHandler().getIntegerToRoomMap().containsKey(10));		
 	}
 
 }
