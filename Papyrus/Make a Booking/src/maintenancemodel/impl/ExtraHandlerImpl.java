@@ -98,13 +98,18 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Returns 1 if the Extra was failed to be removed.
+	 * Returns 0 if everything was successful.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public int removeExtra(Extra extra) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public int removeExtra(int extra) {
+		intToExtraMap.remove(extra);
+		if(intToExtraMap.get(extra) != null) {
+			return 1;
+		}
+		intToExtraMap.removeKey(extra);
+		return 0;
 	}
 
 	/**
@@ -205,7 +210,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 			case MaintenancemodelPackage.EXTRA_HANDLER___ADD_EXTRA__INT_STRING_STRING_STRING:
 				return addExtra((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 			case MaintenancemodelPackage.EXTRA_HANDLER___REMOVE_EXTRA__EXTRA:
-				return removeExtra((Extra)arguments.get(0));
+				return removeExtra((Integer)arguments.get(0));
 			case MaintenancemodelPackage.EXTRA_HANDLER___GET_EXTRA__INT:
 				return getExtra((Integer)arguments.get(0));
 		}
