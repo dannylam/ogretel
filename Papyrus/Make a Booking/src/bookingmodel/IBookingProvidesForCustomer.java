@@ -5,7 +5,7 @@ package bookingmodel;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * A representation of an interface of IBookingProvidesForCustomer, extending EObject.
+ * An interface class which represents booking provides for the customer, extending EObject.
  * This class has 8 methods;
  * getBooking - get a specific booking
  * book - make a booking
@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface IBookingProvidesForCustomer extends EObject {
 	/**
 	 * Get a specific booking.
+	 * @param bookingRef
 	 * @maintenancemodel bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
@@ -31,6 +32,7 @@ public interface IBookingProvidesForCustomer extends EObject {
 	/**
 	 * Make a booking such as number of nights, number of guests,
 	 * start and end date, number of rooms, roomtypes and extras.
+	 * @param nrOfNights, nrOfGuests, date, nrOfRooms, roomTypes, extras
 	 * @maintenancemodel nrOfNightsDataType="org.eclipse.uml2.types.Integer" nrOfNightsRequired="true" nrOfNightsOrdered="false" nrOfGuestsDataType="org.eclipse.uml2.types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" dateDataType="org.eclipse.uml2.types.String" dateRequired="true" dateOrdered="false" nrOfRoomsDataType="org.eclipse.uml2.types.Integer" nrOfRoomsRequired="true" nrOfRoomsOrdered="false" roomTypesDataType="org.eclipse.uml2.types.String" roomTypesRequired="true" roomTypesOrdered="false" extrasDataType="org.eclipse.uml2.types.String" extrasRequired="true" extrasOrdered="false"
 	 * @generated NOT
 	 */
@@ -38,6 +40,7 @@ public interface IBookingProvidesForCustomer extends EObject {
 
 	/**
 	 * Pay the price of a specific booking.
+	 * @param bookingRef
 	 * @maintenancemodel bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
@@ -45,6 +48,7 @@ public interface IBookingProvidesForCustomer extends EObject {
 
 	/**
 	 * Get the price of a specific booking.
+	 * @param bookingRef
 	 * @maintenancemodel bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
@@ -52,6 +56,7 @@ public interface IBookingProvidesForCustomer extends EObject {
 
 	/**
 	 * A method for removing a specific booking
+	 * @param bookingRef
 	 * @maintenancemodel bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT 
 	 */
@@ -61,6 +66,7 @@ public interface IBookingProvidesForCustomer extends EObject {
 	 * A method for editing a specific booking such as number of nights, number of guests,
 	 * start and end date, number of rooms, room types, extras and 
 	 * booking reference. 
+	 * @param  nrOfNights, nrOfGuests, date, nrOfRooms, roomTypes, extras, bookingRef
 	 * @maintenancemodel nrOfNightsDataType="org.eclipse.uml2.types.Integer" nrOfNightsRequired="true" nrOfNightsOrdered="false" nrOfGuestsDataType="org.eclipse.uml2.types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" dateDataType="org.eclipse.uml2.types.String" dateRequired="true" dateOrdered="false" nrOfRoomsDataType="org.eclipse.uml2.types.Integer" nrOfRoomsRequired="true" nrOfRoomsOrdered="false" roomTypesDataType="org.eclipse.uml2.types.String" roomTypesRequired="true" roomTypesOrdered="false" extrasDataType="org.eclipse.uml2.types.String" extrasRequired="true" extrasOrdered="false" bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
@@ -68,6 +74,7 @@ public interface IBookingProvidesForCustomer extends EObject {
 
 	/**
 	 * A method for choosing a payment method such as credit card, cash and voucher
+	 * @param method
 	 * @maintenancemodel methodDataType="org.eclipse.uml2.types.String" methodRequired="true" methodOrdered="false"
 	 * @generated NOT 
 	 */
@@ -76,6 +83,7 @@ public interface IBookingProvidesForCustomer extends EObject {
 	/**
 	 * Set payment details such as credit card number, card code verification, 
 	 * expiration month, expiration year, first name and last name.
+	 * @param ccNr, ccV, expiryMonth, expiryYear, firstName, lastName
 	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" ccNrDataType="org.eclipse.uml2.types.String" ccNrRequired="true" ccNrOrdered="false" ccVDataType="org.eclipse.uml2.types.String" ccVRequired="true" ccVOrdered="false" expiryMonthDataType="org.eclipse.uml2.types.Integer" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearDataType="org.eclipse.uml2.types.Integer" expiryYearRequired="true" expiryYearOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false"
 	 * @generated NOT
 	 */
@@ -83,6 +91,7 @@ public interface IBookingProvidesForCustomer extends EObject {
 
 	/**
 	 * Set personal details such as first name, last name, age and email of a guest.
+	 * @param firstName, lastName, age, email
 	 * @maintenancemodel dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false" ageDataType="org.eclipse.uml2.types.Integer" ageRequired="true" ageOrdered="false" emailDataType="org.eclipse.uml2.types.String" emailRequired="true" emailOrdered="false"
 	 * @generated NOT
 	 */

@@ -5,7 +5,7 @@ package bookingmodel;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * A class representing an interface Guest which extends an EObject.
+ * An interface class which represents Guest, extending EObject.
  * This class has 4 methods;
  * getRoomNr - return the value of a specific room
  * setRoomNr - set a number to a specific room
@@ -57,7 +57,7 @@ public interface Guest extends EObject {
 
 	/**
 	 * Sets the type to a guest.
-	 *  * There are two types of guests: guest and VIP.
+	 *  * There are three types of guests: guest, VIP and blacklisted.
 	 * @param value the new value of the '<em>Guest Types</em>' attribute.
 	 * @see bookingmodel.GuestTypes
 	 * @see #getGuestTypes()

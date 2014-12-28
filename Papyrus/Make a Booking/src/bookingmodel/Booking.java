@@ -8,7 +8,7 @@ import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * A representation of the interface '<em><b>Booking</b></em>'
+ * An interface class which represents Booking, extending EObject.
  * which extends an EObject and has 21 methods:
  * getBookingRef - get a specific booking
  * setBookingRef - set a value to a specific booking reference
