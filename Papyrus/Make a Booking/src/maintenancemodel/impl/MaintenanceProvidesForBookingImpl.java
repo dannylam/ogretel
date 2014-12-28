@@ -76,7 +76,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	protected ExtraHandler extraHandler;
 
 	/**
-	 * @generated
+	 * @generated NOT
 	 */
 	public MaintenanceProvidesForBookingImpl() {
 		super();
