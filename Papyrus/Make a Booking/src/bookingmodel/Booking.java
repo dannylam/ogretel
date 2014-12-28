@@ -2,9 +2,10 @@
  */
 package bookingmodel;
 
+import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,16 +17,17 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link bookingmodel.Booking#getBookingRef <em>Booking Ref</em>}</li>
- *   <li>{@link bookingmodel.Booking#getDate <em>Date</em>}</li>
- *   <li>{@link bookingmodel.Booking#getNrOfNights <em>Nr Of Nights</em>}</li>
+ *   <li>{@link bookingmodel.Booking#getStartDate <em>Start Date</em>}</li>
+ *   <li>{@link bookingmodel.Booking#getEndDate <em>End Date</em>}</li>
  *   <li>{@link bookingmodel.Booking#getServiceNotes <em>Service Notes</em>}</li>
  *   <li>{@link bookingmodel.Booking#getNrOfGuests <em>Nr Of Guests</em>}</li>
  *   <li>{@link bookingmodel.Booking#getCustomer <em>Customer</em>}</li>
  *   <li>{@link bookingmodel.Booking#getGuestList <em>Guest List</em>}</li>
  *   <li>{@link bookingmodel.Booking#isIsPayed <em>Is Payed</em>}</li>
- *   <li>{@link bookingmodel.Booking#getRoomGuestMap <em>Room Guest Map</em>}</li>
- *   <li>{@link bookingmodel.Booking#getRoomTypeMap <em>Room Type Map</em>}</li>
+ *   <li>{@link bookingmodel.Booking#getRoomIDToGuestMap <em>Room ID To Guest Map</em>}</li>
+ *   <li>{@link bookingmodel.Booking#getRoomTypeToRoomIDMap <em>Room Type To Room ID Map</em>}</li>
  *   <li>{@link bookingmodel.Booking#getPaymentMethod <em>Payment Method</em>}</li>
+ *   <li>{@link bookingmodel.Booking#getExtraToIsPayedMap <em>Extra To Is Payed Map</em>}</li>
  * </ul>
  * </p>
  *
@@ -61,56 +63,56 @@ public interface Booking extends EObject {
 	void setBookingRef(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Date</b></em>' attribute.
+	 * Returns the value of the '<em><b>Start Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Date</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Start Date</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Date</em>' attribute.
-	 * @see #setDate(String)
-	 * @see bookingmodel.BookingmodelPackage#getBooking_Date()
+	 * @return the value of the '<em>Start Date</em>' attribute.
+	 * @see #setStartDate(String)
+	 * @see bookingmodel.BookingmodelPackage#getBooking_StartDate()
 	 * @model dataType="types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	String getDate();
+	String getStartDate();
 
 	/**
-	 * Sets the value of the '{@link bookingmodel.Booking#getDate <em>Date</em>}' attribute.
+	 * Sets the value of the '{@link bookingmodel.Booking#getStartDate <em>Start Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Date</em>' attribute.
-	 * @see #getDate()
+	 * @param value the new value of the '<em>Start Date</em>' attribute.
+	 * @see #getStartDate()
 	 * @generated
 	 */
-	void setDate(String value);
+	void setStartDate(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Nr Of Nights</b></em>' attribute.
+	 * Returns the value of the '<em><b>End Date</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Nr Of Nights</em>' attribute isn't clear,
+	 * If the meaning of the '<em>End Date</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Nr Of Nights</em>' attribute.
-	 * @see #setNrOfNights(int)
-	 * @see bookingmodel.BookingmodelPackage#getBooking_NrOfNights()
-	 * @model dataType="types.Integer" required="true" ordered="false"
+	 * @return the value of the '<em>End Date</em>' attribute.
+	 * @see #setEndDate(String)
+	 * @see bookingmodel.BookingmodelPackage#getBooking_EndDate()
+	 * @model dataType="types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	int getNrOfNights();
+	String getEndDate();
 
 	/**
-	 * Sets the value of the '{@link bookingmodel.Booking#getNrOfNights <em>Nr Of Nights</em>}' attribute.
+	 * Sets the value of the '{@link bookingmodel.Booking#getEndDate <em>End Date</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Nr Of Nights</em>' attribute.
-	 * @see #getNrOfNights()
+	 * @param value the new value of the '<em>End Date</em>' attribute.
+	 * @see #getEndDate()
 	 * @generated
 	 */
-	void setNrOfNights(int value);
+	void setEndDate(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Service Notes</b></em>' attribute list.
@@ -223,38 +225,38 @@ public interface Booking extends EObject {
 	void setIsPayed(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Room Guest Map</b></em>' map.
-	 * The key is of type {@link java.lang.String},
+	 * Returns the value of the '<em><b>Room ID To Guest Map</b></em>' map.
+	 * The key is of type {@link java.lang.Integer},
 	 * and the value is of type {@link java.lang.String},
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Room Guest Map</em>' map isn't clear,
+	 * If the meaning of the '<em>Room ID To Guest Map</em>' map isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Room Guest Map</em>' map.
-	 * @see bookingmodel.BookingmodelPackage#getBooking_RoomGuestMap()
-	 * @model mapType="bookingmodel.RoomtypeToGuestIDEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString>" ordered="false"
+	 * @return the value of the '<em>Room ID To Guest Map</em>' map.
+	 * @see bookingmodel.BookingmodelPackage#getBooking_RoomIDToGuestMap()
+	 * @model mapType="bookingmodel.RoomToGuestIDEntry<org.eclipse.emf.ecore.EIntegerObject, org.eclipse.emf.ecore.EString>" ordered="false"
 	 * @generated
 	 */
-	EMap<String, String> getRoomGuestMap();
+	EMap<Integer, String> getRoomIDToGuestMap();
 
 	/**
-	 * Returns the value of the '<em><b>Room Type Map</b></em>' map.
+	 * Returns the value of the '<em><b>Room Type To Room ID Map</b></em>' map.
 	 * The key is of type {@link java.lang.String},
 	 * and the value is of type {@link java.lang.Integer},
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Room Type Map</em>' map isn't clear,
+	 * If the meaning of the '<em>Room Type To Room ID Map</em>' map isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Room Type Map</em>' map.
-	 * @see bookingmodel.BookingmodelPackage#getBooking_RoomTypeMap()
-	 * @model mapType="bookingmodel.NrToRoomEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EIntegerObject>" ordered="false"
+	 * @return the value of the '<em>Room Type To Room ID Map</em>' map.
+	 * @see bookingmodel.BookingmodelPackage#getBooking_RoomTypeToRoomIDMap()
+	 * @model mapType="bookingmodel.RoomTypeToRoomIDEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EIntegerObject>" ordered="false"
 	 * @generated
 	 */
-	EMap<String, Integer> getRoomTypeMap();
+	EMap<String, Integer> getRoomTypeToRoomIDMap();
 
 	/**
 	 * Returns the value of the '<em><b>Payment Method</b></em>' attribute.
@@ -286,6 +288,23 @@ public interface Booking extends EObject {
 	void setPaymentMethod(PaymentMethod value);
 
 	/**
+	 * Returns the value of the '<em><b>Extra To Is Payed Map</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type {@link java.lang.Boolean},
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Extra To Is Payed Map</em>' map isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Extra To Is Payed Map</em>' map.
+	 * @see bookingmodel.BookingmodelPackage#getBooking_ExtraToIsPayedMap()
+	 * @model mapType="bookingmodel.ExtraToIsPayedEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EBooleanObject>" ordered="false"
+	 * @generated
+	 */
+	EMap<String, Boolean> getExtraToIsPayedMap();
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="types.Boolean" required="true" ordered="false"
@@ -304,10 +323,10 @@ public interface Booking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="types.Integer" required="true" ordered="false" roomDataType="types.String" roomRequired="true" roomOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
+	 * @model dataType="types.Integer" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated
 	 */
-	int setResponsibleGuest(String room, String guestEmail);
+	int setResponsibleGuest(int roomID, String guestEmail);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -323,14 +342,14 @@ public interface Booking extends EObject {
 	 * @model dataType="types.Integer" required="true" ordered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false"
 	 * @generated
 	 */
-	int setExtras(EList<String> extras);
+	int setExtras(List<String> extras);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="types.Integer" required="true" ordered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false"
+	 * @model dataType="types.Integer" required="true" ordered="false" roomTypesDataType="types.String" roomTypesMany="true" roomTypesOrdered="false"
 	 * @generated
 	 */
-	int setRoomTypes(EList<String> extras);
+	int setRoomTypes(List<String> roomTypes);
 
 } // Booking

@@ -59,8 +59,8 @@ public class BookingmodelFactoryImpl extends EFactoryImpl implements Bookingmode
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case BookingmodelPackage.ROOMTYPE_TO_GUEST_ID_ENTRY: return (EObject)createRoomtypeToGuestIDEntry();
-			case BookingmodelPackage.NR_TO_ROOM_ENTRY: return (EObject)createNrToRoomEntry();
+			case BookingmodelPackage.ROOM_TO_GUEST_ID_ENTRY: return (EObject)createRoomToGuestIDEntry();
+			case BookingmodelPackage.ROOM_TYPE_TO_ROOM_ID_ENTRY: return (EObject)createRoomTypeToRoomIDEntry();
 			case BookingmodelPackage.BOOKING_REF_TO_BOOKING_ENTRY: return (EObject)createBookingRefToBookingEntry();
 			case BookingmodelPackage.BOOKING: return createBooking();
 			case BookingmodelPackage.CUSTOMER: return createCustomer();
@@ -113,9 +113,9 @@ public class BookingmodelFactoryImpl extends EFactoryImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map.Entry<String, String> createRoomtypeToGuestIDEntry() {
-		RoomtypeToGuestIDEntryImpl roomtypeToGuestIDEntry = new RoomtypeToGuestIDEntryImpl();
-		return roomtypeToGuestIDEntry;
+	public Map.Entry<Integer, String> createRoomToGuestIDEntry() {
+		RoomToGuestIDEntryImpl roomToGuestIDEntry = new RoomToGuestIDEntryImpl();
+		return roomToGuestIDEntry;
 	}
 
 	/**
@@ -123,9 +123,9 @@ public class BookingmodelFactoryImpl extends EFactoryImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map.Entry<String, Integer> createNrToRoomEntry() {
-		NrToRoomEntryImpl nrToRoomEntry = new NrToRoomEntryImpl();
-		return nrToRoomEntry;
+	public Map.Entry<String, Integer> createRoomTypeToRoomIDEntry() {
+		RoomTypeToRoomIDEntryImpl roomTypeToRoomIDEntry = new RoomTypeToRoomIDEntryImpl();
+		return roomTypeToRoomIDEntry;
 	}
 
 	/**
