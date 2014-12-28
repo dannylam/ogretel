@@ -5,7 +5,7 @@ package bookingmodel;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * A representation of the interface '<em><b>Booking Provides</b></em>'.
+ * An interface class which represents BookingProvides, extending EObject.
  * The interface extends an EObject and has 20 methods;
  * setBookingHandler - setting a value of the booking handler reference
  * removeBooking - removes a booking

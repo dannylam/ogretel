@@ -5,7 +5,7 @@ package bookingmodel;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * This class is a representation of an interface of IBookingProvidesForHost, extedning EObject.
+ * An interface class which represents booking provides for the host, extending EObject.
  * It has 5 methods;
  * enableSelfManagement - enable self management.
  * addServiceNote - add a specific service note.
