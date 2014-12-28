@@ -2,9 +2,7 @@
  */
 package maintenancemodel;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,7 +13,6 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link maintenancemodel.RoomHandler#getRoom <em>Room</em>}</li>
  *   <li>{@link maintenancemodel.RoomHandler#getIntegerToRoomMap <em>Integer To Room Map</em>}</li>
  * </ul>
  * </p>
@@ -25,22 +22,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface RoomHandler extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Room</b></em>' reference list.
-	 * The list contents are of type {@link maintenancemodel.Room}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Room</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Room</em>' reference list.
-	 * @see maintenancemodel.MaintenancemodelPackage#getRoomHandler_Room()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	EList<Room> getRoom();
-
 	/**
 	 * Returns the value of the '<em><b>Integer To Room Map</b></em>' map.
 	 * The key is of type {@link java.lang.Integer},

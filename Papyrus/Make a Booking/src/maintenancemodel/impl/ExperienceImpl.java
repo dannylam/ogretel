@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link maintenancemodel.impl.ExperienceImpl#getNrOfSpots <em>Nr Of Spots</em>}</li>
  *   <li>{@link maintenancemodel.impl.ExperienceImpl#getExperienceStatusEnum <em>Experience Status Enum</em>}</li>
+ *   <li>{@link maintenancemodel.impl.ExperienceImpl#getNrOfSpotsFree <em>Nr Of Spots Free</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,6 +66,26 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 	protected ExperienceStatusEnum experienceStatusEnum = EXPERIENCE_STATUS_ENUM_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getNrOfSpotsFree() <em>Nr Of Spots Free</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNrOfSpotsFree()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int NR_OF_SPOTS_FREE_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getNrOfSpotsFree() <em>Nr Of Spots Free</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNrOfSpotsFree()
+	 * @generated
+	 * @ordered
+	 */
+	protected int nrOfSpotsFree = NR_OF_SPOTS_FREE_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -102,11 +123,6 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 	public void setNrOfSpots(int newNrOfSpots) {
 		int oldNrOfSpots = nrOfSpots;
 		nrOfSpots = newNrOfSpots;
-		if(nrOfSpots == 0) {
-			experienceStatusEnum = ExperienceStatusEnum.MAINTENANCE;
-		} else {
-			experienceStatusEnum = ExperienceStatusEnum.READY;
-		}
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.EXPERIENCE__NR_OF_SPOTS, oldNrOfSpots, nrOfSpots));
 	}
@@ -146,6 +162,27 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getNrOfSpotsFree() {
+		return nrOfSpotsFree;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNrOfSpotsFree(int newNrOfSpotsFree) {
+		int oldNrOfSpotsFree = nrOfSpotsFree;
+		nrOfSpotsFree = newNrOfSpotsFree;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.EXPERIENCE__NR_OF_SPOTS_FREE, oldNrOfSpotsFree, nrOfSpotsFree));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -153,6 +190,8 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 				return getNrOfSpots();
 			case MaintenancemodelPackage.EXPERIENCE__EXPERIENCE_STATUS_ENUM:
 				return getExperienceStatusEnum();
+			case MaintenancemodelPackage.EXPERIENCE__NR_OF_SPOTS_FREE:
+				return getNrOfSpotsFree();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -170,6 +209,9 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 				return;
 			case MaintenancemodelPackage.EXPERIENCE__EXPERIENCE_STATUS_ENUM:
 				setExperienceStatusEnum((ExperienceStatusEnum)newValue);
+				return;
+			case MaintenancemodelPackage.EXPERIENCE__NR_OF_SPOTS_FREE:
+				setNrOfSpotsFree((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -189,6 +231,9 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 			case MaintenancemodelPackage.EXPERIENCE__EXPERIENCE_STATUS_ENUM:
 				setExperienceStatusEnum(EXPERIENCE_STATUS_ENUM_EDEFAULT);
 				return;
+			case MaintenancemodelPackage.EXPERIENCE__NR_OF_SPOTS_FREE:
+				setNrOfSpotsFree(NR_OF_SPOTS_FREE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -205,6 +250,8 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 				return nrOfSpots != NR_OF_SPOTS_EDEFAULT;
 			case MaintenancemodelPackage.EXPERIENCE__EXPERIENCE_STATUS_ENUM:
 				return experienceStatusEnum != EXPERIENCE_STATUS_ENUM_EDEFAULT;
+			case MaintenancemodelPackage.EXPERIENCE__NR_OF_SPOTS_FREE:
+				return nrOfSpotsFree != NR_OF_SPOTS_FREE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -223,6 +270,8 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 		result.append(nrOfSpots);
 		result.append(", experienceStatusEnum: ");
 		result.append(experienceStatusEnum);
+		result.append(", nrOfSpotsFree: ");
+		result.append(nrOfSpotsFree);
 		result.append(')');
 		return result.toString();
 	}

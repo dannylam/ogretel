@@ -148,7 +148,7 @@ public class MaintenancemodelSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE: {
-				@SuppressWarnings("unchecked") Map.Entry<String, RoomTypeEnum> stringToRoomType = (Map.Entry<String, RoomTypeEnum>)theEObject;
+				@SuppressWarnings("unchecked") Map.Entry<String, RoomType> stringToRoomType = (Map.Entry<String, RoomType>)theEObject;
 				T result = caseStringToRoomType(stringToRoomType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -393,7 +393,7 @@ public class MaintenancemodelSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStringToRoomType(Map.Entry<String, RoomTypeEnum> object) {
+	public T caseStringToRoomType(Map.Entry<String, RoomType> object) {
 		return null;
 	}
 

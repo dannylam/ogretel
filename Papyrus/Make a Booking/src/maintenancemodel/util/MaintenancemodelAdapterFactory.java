@@ -120,7 +120,7 @@ public class MaintenancemodelAdapterFactory extends AdapterFactoryImpl {
 				return createRoomTypesHandlerAdapter();
 			}
 			@Override
-			public Adapter caseStringToRoomType(Map.Entry<String, RoomTypeEnum> object) {
+			public Adapter caseStringToRoomType(Map.Entry<String, RoomType> object) {
 				return createStringToRoomTypeAdapter();
 			}
 			@Override

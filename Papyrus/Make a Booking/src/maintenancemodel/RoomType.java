@@ -131,12 +131,4 @@ public interface RoomType extends EObject {
 	 */
 	void setRoomTypeEnum(RoomTypeEnum value);
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model required="true" ordered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false"
-	 * @generated
-	 */
-	RoomTypeEnum getRoomType(String name);
-
 } // RoomType

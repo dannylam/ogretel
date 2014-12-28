@@ -40,15 +40,6 @@ public interface MaintenancemodelFactory extends EFactory {
 	Experience createExperience();
 
 	/**
-	 * Returns a new object of class '<em>Abstract Extra</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Abstract Extra</em>'.
-	 * @generated
-	 */
-	AbstractExtra createAbstractExtra();
-
-	/**
 	 * Returns a new object of class '<em>Product</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -3,12 +3,13 @@
 package maintenancemodel.impl;
 
 import maintenancemodel.MaintenancemodelPackage;
-import maintenancemodel.RoomTypeEnum;
+import maintenancemodel.RoomType;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.BasicEMap;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -26,7 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String,RoomTypeEnum> {
+public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String,RoomType> {
 	/**
 	 * The default value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -48,24 +49,14 @@ public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implement
 	protected String key = KEY_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
+	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTypedValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final RoomTypeEnum VALUE_EDEFAULT = RoomTypeEnum.SINGLEBED;
-
-	/**
-	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTypedValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected RoomTypeEnum value = VALUE_EDEFAULT;
+	protected RoomType value;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,7 +103,15 @@ public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomTypeEnum getTypedValue() {
+	public RoomType getTypedValue() {
+		if (value != null && value.eIsProxy()) {
+			InternalEObject oldValue = (InternalEObject)value;
+			value = (RoomType)eResolveProxy(oldValue);
+			if (value != oldValue) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MaintenancemodelPackage.STRING_TO_ROOM_TYPE__VALUE, oldValue, value));
+			}
+		}
 		return value;
 	}
 
@@ -121,9 +120,18 @@ public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTypedValue(RoomTypeEnum newValue) {
-		RoomTypeEnum oldValue = value;
-		value = newValue == null ? VALUE_EDEFAULT : newValue;
+	public RoomType basicGetTypedValue() {
+		return value;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTypedValue(RoomType newValue) {
+		RoomType oldValue = value;
+		value = newValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.STRING_TO_ROOM_TYPE__VALUE, oldValue, value));
 	}
@@ -139,7 +147,8 @@ public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implement
 			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE__KEY:
 				return getTypedKey();
 			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE__VALUE:
-				return getTypedValue();
+				if (resolve) return getTypedValue();
+				return basicGetTypedValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -156,7 +165,7 @@ public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implement
 				setTypedKey((String)newValue);
 				return;
 			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE__VALUE:
-				setTypedValue((RoomTypeEnum)newValue);
+				setTypedValue((RoomType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -174,7 +183,7 @@ public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implement
 				setTypedKey(KEY_EDEFAULT);
 				return;
 			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE__VALUE:
-				setTypedValue(VALUE_EDEFAULT);
+				setTypedValue((RoomType)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -191,7 +200,7 @@ public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implement
 			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE__KEY:
 				return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
 			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE__VALUE:
-				return value != VALUE_EDEFAULT;
+				return value != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -208,8 +217,6 @@ public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implement
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (key: ");
 		result.append(key);
-		result.append(", value: ");
-		result.append(value);
 		result.append(')');
 		return result.toString();
 	}
@@ -266,7 +273,7 @@ public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomTypeEnum getValue() {
+	public RoomType getValue() {
 		return getTypedValue();
 	}
 
@@ -275,8 +282,8 @@ public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomTypeEnum setValue(RoomTypeEnum value) {
-		RoomTypeEnum oldValue = getValue();
+	public RoomType setValue(RoomType value) {
+		RoomType oldValue = getValue();
 		setTypedValue(value);
 		return oldValue;
 	}
@@ -287,9 +294,9 @@ public class StringToRoomTypeImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EMap<String, RoomTypeEnum> getEMap() {
+	public EMap<String, RoomType> getEMap() {
 		EObject container = eContainer();
-		return container == null ? null : (EMap<String, RoomTypeEnum>)container.eGet(eContainmentFeature());
+		return container == null ? null : (EMap<String, RoomType>)container.eGet(eContainmentFeature());
 	}
 
 } //StringToRoomTypeImpl

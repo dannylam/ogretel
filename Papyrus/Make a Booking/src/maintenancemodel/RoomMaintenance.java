@@ -22,26 +22,26 @@ package maintenancemodel;
  */
 public interface RoomMaintenance extends IRoomMaintenance {
 	/**
-	 * Returns the value of the '<em><b>Room Types</b></em>' reference.
+	 * Returns the value of the '<em><b>Room Types</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Room Types</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Room Types</em>' reference.
+	 * @return the value of the '<em>Room Types</em>' containment reference.
 	 * @see #setRoomTypes(RoomTypesHandler)
 	 * @see maintenancemodel.MaintenancemodelPackage#getRoomMaintenance_RoomTypes()
-	 * @model required="true" ordered="false"
+	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	RoomTypesHandler getRoomTypes();
 
 	/**
-	 * Sets the value of the '{@link maintenancemodel.RoomMaintenance#getRoomTypes <em>Room Types</em>}' reference.
+	 * Sets the value of the '{@link maintenancemodel.RoomMaintenance#getRoomTypes <em>Room Types</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Room Types</em>' reference.
+	 * @param value the new value of the '<em>Room Types</em>' containment reference.
 	 * @see #getRoomTypes()
 	 * @generated
 	 */

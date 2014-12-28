@@ -6,9 +6,8 @@ import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.Room;
 import maintenancemodel.RoomStatusEnum;
 import maintenancemodel.RoomType;
-import maintenancemodel.RoomTypeEnum;
-
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -71,7 +70,7 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	protected RoomStatusEnum roomStatusEnum = ROOM_STATUS_ENUM_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRoomType() <em>Room Type</em>}' reference.
+	 * The cached value of the '{@link #getRoomType() <em>Room Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRoomType()
@@ -92,8 +91,6 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 */
 	protected RoomImpl() {
 		super();
-		stringToRoomType = new StringToRoomTypeImpl();
-		roomType = new RoomTypeImpl();
 	}
 	
 	/**
@@ -106,7 +103,7 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		this();
 		this.numberID = numberID;
 		this.roomType = new RoomTypeImpl();
-		// TODO: Switch beroende på vilken roomType-enum-string som skickas in.
+		// TODO: Switch beroende p? vilken roomType-enum-string som skickas in.
 	}
 
 	/**
@@ -167,14 +164,6 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * @generated
 	 */
 	public RoomType getRoomType() {
-		if (roomType != null && roomType.eIsProxy()) {
-			InternalEObject oldRoomType = (InternalEObject)roomType;
-			roomType = (RoomType)eResolveProxy(oldRoomType);
-			if (roomType != oldRoomType) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MaintenancemodelPackage.ROOM__ROOM_TYPE, oldRoomType, roomType));
-			}
-		}
 		return roomType;
 	}
 
@@ -183,8 +172,14 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomType basicGetRoomType() {
-		return roomType;
+	public NotificationChain basicSetRoomType(RoomType newRoomType, NotificationChain msgs) {
+		RoomType oldRoomType = roomType;
+		roomType = newRoomType;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ROOM__ROOM_TYPE, oldRoomType, newRoomType);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -193,10 +188,31 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * @generated
 	 */
 	public void setRoomType(RoomType newRoomType) {
-		RoomType oldRoomType = roomType;
-		roomType = newRoomType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ROOM__ROOM_TYPE, oldRoomType, roomType));
+		if (newRoomType != roomType) {
+			NotificationChain msgs = null;
+			if (roomType != null)
+				msgs = ((InternalEObject)roomType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MaintenancemodelPackage.ROOM__ROOM_TYPE, null, msgs);
+			if (newRoomType != null)
+				msgs = ((InternalEObject)newRoomType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MaintenancemodelPackage.ROOM__ROOM_TYPE, null, msgs);
+			msgs = basicSetRoomType(newRoomType, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ROOM__ROOM_TYPE, newRoomType, newRoomType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case MaintenancemodelPackage.ROOM__ROOM_TYPE:
+				return basicSetRoomType(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -212,8 +228,7 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 			case MaintenancemodelPackage.ROOM__ROOM_STATUS_ENUM:
 				return getRoomStatusEnum();
 			case MaintenancemodelPackage.ROOM__ROOM_TYPE:
-				if (resolve) return getRoomType();
-				return basicGetRoomType();
+				return getRoomType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

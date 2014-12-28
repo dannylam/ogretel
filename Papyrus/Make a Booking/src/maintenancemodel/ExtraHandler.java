@@ -2,9 +2,7 @@
  */
 package maintenancemodel;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,7 +13,6 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link maintenancemodel.ExtraHandler#getExtra <em>Extra</em>}</li>
  *   <li>{@link maintenancemodel.ExtraHandler#getIntToExtraMap <em>Int To Extra Map</em>}</li>
  * </ul>
  * </p>

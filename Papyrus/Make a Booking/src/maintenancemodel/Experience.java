@@ -13,6 +13,7 @@ package maintenancemodel;
  * <ul>
  *   <li>{@link maintenancemodel.Experience#getNrOfSpots <em>Nr Of Spots</em>}</li>
  *   <li>{@link maintenancemodel.Experience#getExperienceStatusEnum <em>Experience Status Enum</em>}</li>
+ *   <li>{@link maintenancemodel.Experience#getNrOfSpotsFree <em>Nr Of Spots Free</em>}</li>
  * </ul>
  * </p>
  *
@@ -75,5 +76,31 @@ public interface Experience extends AbstractExtra {
 	 * @generated
 	 */
 	void setExperienceStatusEnum(ExperienceStatusEnum value);
+
+	/**
+	 * Returns the value of the '<em><b>Nr Of Spots Free</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nr Of Spots Free</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nr Of Spots Free</em>' attribute.
+	 * @see #setNrOfSpotsFree(int)
+	 * @see maintenancemodel.MaintenancemodelPackage#getExperience_NrOfSpotsFree()
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @generated
+	 */
+	int getNrOfSpotsFree();
+
+	/**
+	 * Sets the value of the '{@link maintenancemodel.Experience#getNrOfSpotsFree <em>Nr Of Spots Free</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nr Of Spots Free</em>' attribute.
+	 * @see #getNrOfSpotsFree()
+	 * @generated
+	 */
+	void setNrOfSpotsFree(int value);
 
 } // Experience

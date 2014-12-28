@@ -3,7 +3,6 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.Collection;
 import maintenancemodel.Extra;
 import maintenancemodel.ExtraHandler;
 import maintenancemodel.MaintenancemodelPackage;
@@ -14,7 +13,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -25,7 +23,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link maintenancemodel.impl.ExtraHandlerImpl#getExtra <em>Extra</em>}</li>
  *   <li>{@link maintenancemodel.impl.ExtraHandlerImpl#getIntToExtraMap <em>Int To Extra Map</em>}</li>
  * </ul>
  * </p>
@@ -206,11 +203,9 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 			case MaintenancemodelPackage.EXTRA_HANDLER___EXISTS__INT:
 				return exists((Integer)arguments.get(0));
 			case MaintenancemodelPackage.EXTRA_HANDLER___ADD_EXTRA__INT_STRING_STRING_STRING:
-				addExtra((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
-				return null;
+				return addExtra((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 			case MaintenancemodelPackage.EXTRA_HANDLER___REMOVE_EXTRA__EXTRA:
-				removeExtra((Extra)arguments.get(0));
-				return null;
+				return removeExtra((Extra)arguments.get(0));
 			case MaintenancemodelPackage.EXTRA_HANDLER___GET_EXTRA__INT:
 				return getExtra((Integer)arguments.get(0));
 		}

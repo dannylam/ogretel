@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class AbstractExtraImpl extends MinimalEObjectImpl.Container implements AbstractExtra {
+public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container implements AbstractExtra {
 	/**
 	 * The default value of the '{@link #getID() <em>ID</em>}' attribute.
 	 * <!-- begin-user-doc -->

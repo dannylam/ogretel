@@ -3,10 +3,8 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.Collection;
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.RoomType;
-import maintenancemodel.RoomTypeEnum;
 import maintenancemodel.RoomTypesHandler;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -15,48 +13,38 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the maintenancemodel object '<em><b>Room Types Handler</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the maintenancemodel object '
+ * <em><b>Room Types Handler</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link maintenancemodel.impl.RoomTypesHandlerImpl#getRoomType <em>Room Type</em>}</li>
- *   <li>{@link maintenancemodel.impl.RoomTypesHandlerImpl#getStringToRoomType <em>String To Room Type</em>}</li>
+ * <li>{@link maintenancemodel.impl.RoomTypesHandlerImpl#getStringToRoomType
+ * <em>String To Room Type</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container implements RoomTypesHandler {
+public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
+		implements RoomTypesHandler {
 	/**
-	 * The cached value of the '{@link #getRoomType() <em>Room Type</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRoomType()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<RoomType> roomType;
-
-	/**
-	 * The cached value of the '{@link #getStringToRoomType() <em>String To Room Type</em>}' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getStringToRoomType()
+	 * <em>String To Room Type</em>}' map. <!-- begin-user-doc --> <!--
+	 * end-user-doc -->
+	 * 
 	 * @see #getStringToRoomType()
 	 * @generated
 	 * @ordered
 	 */
-	protected EMap<String, RoomTypeEnum> stringToRoomType;
+	protected EMap<String, RoomType> stringToRoomType;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	protected RoomTypesHandlerImpl() {
@@ -64,8 +52,8 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container implement
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -74,181 +62,172 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container implement
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-	public EList<RoomType> getRoomType() {
-		if (roomType == null) {
-			roomType = new EObjectResolvingEList<RoomType>(RoomType.class, this, MaintenancemodelPackage.ROOM_TYPES_HANDLER__ROOM_TYPE);
-		}
-		return roomType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EMap<String, RoomTypeEnum> getStringToRoomType() {
+	public EMap<String, RoomType> getStringToRoomType() {
 		if (stringToRoomType == null) {
-			stringToRoomType = new EcoreEMap<String,RoomTypeEnum>(MaintenancemodelPackage.Literals.STRING_TO_ROOM_TYPE, StringToRoomTypeImpl.class, this, MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE);
+			stringToRoomType = new EcoreEMap<String, RoomType>(
+					MaintenancemodelPackage.Literals.STRING_TO_ROOM_TYPE,
+					StringToRoomTypeImpl.class,
+					this,
+					MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE);
 		}
 		return stringToRoomType;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-	public boolean exists(int ID) {
+	public boolean exists(String ID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
-	public int addRoomType(String roomType, int price, int maxNrOfGuests, String description) {
+	public int addRoomType(String roomTypeID, String roomTypeEnum, int price,
+			int maxNrOfGuests, String description) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * Remove the RoomType sent in from the list of known objects of the RoomType class.
-	 * If it was removed 0 is returned else 1.
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> Remove the RoomType sent in from the list of
+	 * known objects of the RoomType class. If it was removed 0 is returned else
+	 * 1. <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
 	public int removeRoomType(RoomType roomType) {
-		if(exists(roomType)){
-			this.roomType.remove(roomType);
-			return 0;
-		}
-		
-		return 1;
-		
+		// if(exists(roomType)){
+		// this.roomType.remove(roomType);
+		// return 0;
+		// }
+		// return 1;
+
+		return 0;
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 	}
-	
+
 	/**
-	 * <!-- begin-user-doc -->
-	 * Return true if the RoomType sent in exists in the list of RoomType objects.
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> Return true if the RoomType sent in exists in the
+	 * list of RoomType objects. <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
-	private boolean exists(RoomType roomType){
-		return this.roomType.contains(roomType);
+	private boolean exists(RoomType roomType) {
+		// return this.roomType.contains(roomType);
+		return true;
+		//TODO something
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
-				return ((InternalEList<?>)getStringToRoomType()).basicRemove(otherEnd, msgs);
+		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+			return ((InternalEList<?>) getStringToRoomType()).basicRemove(
+					otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__ROOM_TYPE:
-				return getRoomType();
-			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
-				if (coreType) return getStringToRoomType();
-				else return getStringToRoomType().map();
+		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+			if (coreType)
+				return getStringToRoomType();
+			else
+				return getStringToRoomType().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__ROOM_TYPE:
-				getRoomType().clear();
-				getRoomType().addAll((Collection<? extends RoomType>)newValue);
-				return;
-			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
-				((EStructuralFeature.Setting)getStringToRoomType()).set(newValue);
-				return;
+		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+			((EStructuralFeature.Setting) getStringToRoomType()).set(newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__ROOM_TYPE:
-				getRoomType().clear();
-				return;
-			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
-				getStringToRoomType().clear();
-				return;
+		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+			getStringToRoomType().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__ROOM_TYPE:
-				return roomType != null && !roomType.isEmpty();
-			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
-				return stringToRoomType != null && !stringToRoomType.isEmpty();
+		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+			return stringToRoomType != null && !stringToRoomType.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+	public Object eInvoke(int operationID, EList<?> arguments)
+			throws InvocationTargetException {
 		switch (operationID) {
-			case MaintenancemodelPackage.ROOM_TYPES_HANDLER___EXISTS__INT:
-				return exists((Integer)arguments.get(0));
-			case MaintenancemodelPackage.ROOM_TYPES_HANDLER___ADD_ROOM_TYPE__STRING_INT_INT_STRING:
-				return addRoomType((String)arguments.get(0), (Integer)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3));
-			case MaintenancemodelPackage.ROOM_TYPES_HANDLER___REMOVE_ROOM_TYPE__ROOMTYPE:
-				return removeRoomType((RoomType)arguments.get(0));
+		case MaintenancemodelPackage.ROOM_TYPES_HANDLER___EXISTS__STRING:
+			return exists((String) arguments.get(0));
+		case MaintenancemodelPackage.ROOM_TYPES_HANDLER___ADD_ROOM_TYPE__STRING_STRING_INT_INT_STRING:
+			return addRoomType((String) arguments.get(0),
+					(String) arguments.get(1), (Integer) arguments.get(2),
+					(Integer) arguments.get(3), (String) arguments.get(4));
+		case MaintenancemodelPackage.ROOM_TYPES_HANDLER___REMOVE_ROOM_TYPE__ROOMTYPE:
+			return removeRoomType((RoomType) arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //RoomTypesHandlerImpl
+} // RoomTypesHandlerImpl

@@ -19,7 +19,7 @@ package maintenancemodel;
  * </p>
  *
  * @see maintenancemodel.MaintenancemodelPackage#getAbstractExtra()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface AbstractExtra extends Extra {

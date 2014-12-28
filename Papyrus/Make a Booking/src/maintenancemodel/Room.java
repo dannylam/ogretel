@@ -79,26 +79,26 @@ public interface Room extends EObject {
 	void setRoomStatusEnum(RoomStatusEnum value);
 
 	/**
-	 * Returns the value of the '<em><b>Room Type</b></em>' reference.
+	 * Returns the value of the '<em><b>Room Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Room Type</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Room Type</em>' reference.
+	 * @return the value of the '<em>Room Type</em>' containment reference.
 	 * @see #setRoomType(RoomType)
 	 * @see maintenancemodel.MaintenancemodelPackage#getRoom_RoomType()
-	 * @model required="true" ordered="false"
+	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	RoomType getRoomType();
 
 	/**
-	 * Sets the value of the '{@link maintenancemodel.Room#getRoomType <em>Room Type</em>}' reference.
+	 * Sets the value of the '{@link maintenancemodel.Room#getRoomType <em>Room Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Room Type</em>' reference.
+	 * @param value the new value of the '<em>Room Type</em>' containment reference.
 	 * @see #getRoomType()
 	 * @generated
 	 */

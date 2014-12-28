@@ -2,12 +2,10 @@
  */
 package maintenancemodel.impl;
 
-import java.lang.reflect.InvocationTargetException;
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.RoomType;
 import maintenancemodel.RoomTypeEnum;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -254,17 +252,6 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomTypeEnum getRoomType(String name) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -346,20 +333,6 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return roomTypeEnum != ROOM_TYPE_ENUM_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-			case MaintenancemodelPackage.ROOM_TYPE___GET_ROOM_TYPE__STRING:
-				return getRoomType((String)arguments.get(0));
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**

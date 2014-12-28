@@ -23,26 +23,26 @@ package maintenancemodel;
  */
 public interface MaintenanceProvidesForBooking extends IMaintenanceProvidesForBooking {
 	/**
-	 * Returns the value of the '<em><b>Calendar</b></em>' reference.
+	 * Returns the value of the '<em><b>Calendar</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Calendar</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Calendar</em>' reference.
+	 * @return the value of the '<em>Calendar</em>' containment reference.
 	 * @see #setCalendar(Calendar)
 	 * @see maintenancemodel.MaintenancemodelPackage#getMaintenanceProvidesForBooking_Calendar()
-	 * @model required="true" ordered="false"
+	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Calendar getCalendar();
 
 	/**
-	 * Sets the value of the '{@link maintenancemodel.MaintenanceProvidesForBooking#getCalendar <em>Calendar</em>}' reference.
+	 * Sets the value of the '{@link maintenancemodel.MaintenanceProvidesForBooking#getCalendar <em>Calendar</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Calendar</em>' reference.
+	 * @param value the new value of the '<em>Calendar</em>' containment reference.
 	 * @see #getCalendar()
 	 * @generated
 	 */

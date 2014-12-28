@@ -63,7 +63,6 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 		switch (eClass.getClassifierID()) {
 			case MaintenancemodelPackage.ROOM_TYPE: return createRoomType();
 			case MaintenancemodelPackage.EXPERIENCE: return createExperience();
-			case MaintenancemodelPackage.ABSTRACT_EXTRA: return createAbstractExtra();
 			case MaintenancemodelPackage.PRODUCT: return createProduct();
 			case MaintenancemodelPackage.ROOM: return createRoom();
 			case MaintenancemodelPackage.EXTRA_HANDLER: return createExtraHandler();
@@ -142,16 +141,6 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 	public Experience createExperience() {
 		ExperienceImpl experience = new ExperienceImpl();
 		return experience;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public AbstractExtra createAbstractExtra() {
-		AbstractExtraImpl abstractExtra = new AbstractExtraImpl();
-		return abstractExtra;
 	}
 
 	/**
@@ -239,7 +228,7 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map.Entry<String, RoomTypeEnum> createStringToRoomType() {
+	public Map.Entry<String, RoomType> createStringToRoomType() {
 		StringToRoomTypeImpl stringToRoomType = new StringToRoomTypeImpl();
 		return stringToRoomType;
 	}

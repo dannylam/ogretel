@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Container implements MaintenanceProvidesForBooking {
 	
 	/**
-	 * The cached value of the '{@link #getCalendar() <em>Calendar</em>}' reference.
+	 * The cached value of the '{@link #getCalendar() <em>Calendar</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCalendar()
@@ -83,22 +83,22 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * @generated
 	 */
 	public Calendar getCalendar() {
-		if (calendar != null && calendar.eIsProxy()) {
-			InternalEObject oldCalendar = (InternalEObject)calendar;
-			calendar = (Calendar)eResolveProxy(oldCalendar);
-			if (calendar != oldCalendar) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR, oldCalendar, calendar));
-			}
-		}
 		return calendar;
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Calendar basicGetCalendar() {
-		return calendar;
+	public NotificationChain basicSetCalendar(Calendar newCalendar, NotificationChain msgs) {
+		Calendar oldCalendar = calendar;
+		calendar = newCalendar;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR, oldCalendar, newCalendar);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -106,10 +106,17 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * @generated
 	 */
 	public void setCalendar(Calendar newCalendar) {
-		Calendar oldCalendar = calendar;
-		calendar = newCalendar;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR, oldCalendar, calendar));
+		if (newCalendar != calendar) {
+			NotificationChain msgs = null;
+			if (calendar != null)
+				msgs = ((InternalEObject)calendar).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR, null, msgs);
+			if (newCalendar != null)
+				msgs = ((InternalEObject)newCalendar).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR, null, msgs);
+			msgs = basicSetCalendar(newCalendar, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR, newCalendar, newCalendar));
 	}
 
 	/**
@@ -239,6 +246,8 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR:
+				return basicSetCalendar(null, msgs);
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES:
 				return basicSetRoomTypes(null, msgs);
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS:
@@ -254,8 +263,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR:
-				if (resolve) return getCalendar();
-				return basicGetCalendar();
+				return getCalendar();
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES:
 				return getRoomTypes();
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS:
@@ -327,8 +335,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___CAN_BOOK__STRING_STRING_STRING:
 				return canBook((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__STRING_STRING_STRING:
-				makeBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
-				return null;
+				return makeBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__STRING_INT_STRING_STRING:
 				return removeBooking((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___SET_BOOKING_AS_ACTIVE__STRING:
