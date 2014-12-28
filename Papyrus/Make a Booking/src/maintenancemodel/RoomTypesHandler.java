@@ -81,4 +81,12 @@ public interface RoomTypesHandler extends EObject {
 	 */
 	EList<String> getRoomTypes();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
+	 * @generated
+	 */
+	RoomType getRoomType(String roomTypeID);
+
 } // RoomTypesHandler

@@ -23,8 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link maintenancemodel.impl.ExtrasMaintenanceImpl#getExtras <em>Extras
- * </em>}</li>
+ *   <li>{@link maintenancemodel.impl.ExtrasMaintenanceImpl#getExtras <em>Extras</em>}</li>
  * </ul>
  * </p>
  *
@@ -33,9 +32,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 		implements ExtrasMaintenance {
 	/**
-	 * The cached value of the '{@link #getExtras() <em>Extras</em>}'
-	 * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getExtras() <em>Extras</em>}' containment reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getExtras()
 	 * @generated
 	 * @ordered
@@ -44,7 +42,6 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected ExtrasMaintenanceImpl() {
@@ -53,7 +50,6 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -73,7 +69,6 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public NotificationChain basicSetExtras(ExtraHandler newExtras,
@@ -81,52 +76,32 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 		ExtraHandler oldExtras = extras;
 		extras = newExtras;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET,
-					MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS,
-					oldExtras, newExtras);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS, oldExtras, newExtras);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void setExtras(ExtraHandler newExtras) {
 		if (newExtras != extras) {
 			NotificationChain msgs = null;
 			if (extras != null)
-				msgs = ((InternalEObject) extras)
-						.eInverseRemove(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS,
-								null, msgs);
+				msgs = ((InternalEObject)extras).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS, null, msgs);
 			if (newExtras != null)
-				msgs = ((InternalEObject) newExtras)
-						.eInverseAdd(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS,
-								null, msgs);
+				msgs = ((InternalEObject)newExtras).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS, null, msgs);
 			msgs = basicSetExtras(newExtras, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS,
-					newExtras, newExtras));
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS, newExtras, newExtras));
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public int addExtra(int extraID, int price, String name,
@@ -149,7 +124,6 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public int editExtra(int extraID, int price, String name, String description) {
@@ -171,96 +145,86 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS:
-			return basicSetExtras(null, msgs);
+			case MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS:
+				return basicSetExtras(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS:
-			return getExtras();
+			case MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS:
+				return getExtras();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS:
-			setExtras((ExtraHandler) newValue);
-			return;
+			case MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS:
+				setExtras((ExtraHandler)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS:
-			setExtras((ExtraHandler) null);
-			return;
+			case MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS:
+				setExtras((ExtraHandler)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS:
-			return extras != null;
+			case MaintenancemodelPackage.EXTRAS_MAINTENANCE__EXTRAS:
+				return extras != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-		case MaintenancemodelPackage.EXTRAS_MAINTENANCE___ADD_EXTRA__INT_INT_STRING_STRING_BOOLEAN:
-			return addExtra((Integer) arguments.get(0),
-					(Integer) arguments.get(1), (String) arguments.get(2),
-					(String) arguments.get(3), (Boolean) arguments.get(4));
-		case MaintenancemodelPackage.EXTRAS_MAINTENANCE___REMOVE_EXTRA__INT:
-			return removeExtra((Integer) arguments.get(0));
-		case MaintenancemodelPackage.EXTRAS_MAINTENANCE___EDIT_EXTRA__INT_INT_STRING_STRING:
-			return editExtra((Integer) arguments.get(0),
-					(Integer) arguments.get(1), (String) arguments.get(2),
-					(String) arguments.get(3));
+			case MaintenancemodelPackage.EXTRAS_MAINTENANCE___ADD_EXTRA__INT_INT_STRING_STRING_BOOLEAN:
+				return addExtra((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (Boolean)arguments.get(4));
+			case MaintenancemodelPackage.EXTRAS_MAINTENANCE___REMOVE_EXTRA__INT:
+				return removeExtra((Integer)arguments.get(0));
+			case MaintenancemodelPackage.EXTRAS_MAINTENANCE___EDIT_EXTRA__INT_INT_STRING_STRING:
+				return editExtra((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -5,6 +5,7 @@ package maintenancemodel;
 import org.eclipse.emf.common.util.EList;
 
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the maintenancemodel object '<em><b>Extras Maintenance</b></em>'.

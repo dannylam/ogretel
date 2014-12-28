@@ -134,6 +134,17 @@
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomType getRoomType(String roomTypeID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
 	 * Returns the RoomTypeEnum associated with the String that is sent in.
 	 * The possible strings are "singlebed", "doublebed" and "luxurysuite",
 	 * otherwise singlebed is returned as default.

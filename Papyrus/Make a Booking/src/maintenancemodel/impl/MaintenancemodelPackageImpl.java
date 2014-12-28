@@ -615,7 +615,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRoomHandler__AddRoom__int_String() {
+	public EOperation getRoomHandler__AddRoom__int_RoomType() {
 		return roomHandlerEClass.getEOperations().get(1);
 	}
 
@@ -770,6 +770,15 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 */
 	public EOperation getRoomTypesHandler__GetRoomTypes() {
 		return roomTypesHandlerEClass.getEOperations().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getRoomTypesHandler__GetRoomType__String() {
+		return roomTypesHandlerEClass.getEOperations().get(5);
 	}
 
 	/**
@@ -1232,7 +1241,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		roomHandlerEClass = createEClass(ROOM_HANDLER);
 		createEReference(roomHandlerEClass, ROOM_HANDLER__INTEGER_TO_ROOM_MAP);
 		createEOperation(roomHandlerEClass, ROOM_HANDLER___EXISTS__INT);
-		createEOperation(roomHandlerEClass, ROOM_HANDLER___ADD_ROOM__INT_STRING);
+		createEOperation(roomHandlerEClass, ROOM_HANDLER___ADD_ROOM__INT_ROOMTYPE);
 		createEOperation(roomHandlerEClass, ROOM_HANDLER___REMOVE_ROOM__INT);
 		createEOperation(roomHandlerEClass, ROOM_HANDLER___GET_ROOM__INT);
 
@@ -1253,6 +1262,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___REMOVE_ROOM_TYPE__STRING);
 		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___GET_PRICE__STRING);
 		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___GET_ROOM_TYPES);
+		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___GET_ROOM_TYPE__STRING);
 
 		stringToRoomTypeEClass = createEClass(STRING_TO_ROOM_TYPE);
 		createEAttribute(stringToRoomTypeEClass, STRING_TO_ROOM_TYPE__KEY);
@@ -1409,9 +1419,9 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		op = initEOperation(getRoomHandler__Exists__int(), theTypesPackage.getBoolean(), "exists", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getRoomHandler__AddRoom__int_String(), theTypesPackage.getInteger(), "addRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getRoomHandler__AddRoom__int_RoomType(), theTypesPackage.getInteger(), "addRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, this.getRoomType(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getRoomHandler__RemoveRoom__int(), theTypesPackage.getInteger(), "removeRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1458,6 +1468,9 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		addEParameter(op, theTypesPackage.getString(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getRoomTypesHandler__GetRoomTypes(), theTypesPackage.getString(), "getRoomTypes", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getRoomTypesHandler__GetRoomType__String(), this.getRoomType(), "getRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(stringToRoomTypeEClass, Map.Entry.class, "StringToRoomType", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStringToRoomType_Key(), ecorePackage.getEString(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

@@ -6,6 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.Room;
 import maintenancemodel.RoomHandler;
+import maintenancemodel.RoomType;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -73,6 +74,17 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public boolean exists(int roomID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int addRoom(int roomID, RoomType roomType) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -195,8 +207,8 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 		switch (operationID) {
 			case MaintenancemodelPackage.ROOM_HANDLER___EXISTS__INT:
 				return exists((Integer)arguments.get(0));
-			case MaintenancemodelPackage.ROOM_HANDLER___ADD_ROOM__INT_STRING:
-				return addRoom((Integer)arguments.get(0), (String)arguments.get(1));
+			case MaintenancemodelPackage.ROOM_HANDLER___ADD_ROOM__INT_ROOMTYPE:
+				return addRoom((Integer)arguments.get(0), (RoomType)arguments.get(1));
 			case MaintenancemodelPackage.ROOM_HANDLER___REMOVE_ROOM__INT:
 				return removeRoom((Integer)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_HANDLER___GET_ROOM__INT:
