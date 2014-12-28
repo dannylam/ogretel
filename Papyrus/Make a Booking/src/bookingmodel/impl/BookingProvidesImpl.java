@@ -13,6 +13,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.List;
 
+import maintenancemodel.MaintenanceProvidesForBooking;
+import maintenancemodel.impl.MaintenanceProvidesForBookingImpl;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -44,6 +47,9 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	protected BookingHandler bookingHandler;
 
+	public MaintenanceProvidesForBooking maintenanceComponent;
+
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -51,7 +57,9 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	protected BookingProvidesImpl() {
 		super();
+		maintenanceComponent = new MaintenanceProvidesForBookingImpl();
 	}
+	
 
 	/**
 	 * <!-- begin-user-doc -->
