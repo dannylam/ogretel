@@ -137,6 +137,7 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * Returns the RoomTypeEnum associated with the String that is sent in.
 	 * The possible strings are "singlebed", "doublebed" and "luxurysuite",
 	 * otherwise null is returned.
+	 * @generated NOT
 	 */
 	private RoomTypeEnum stringToRoomTypeEnum(String roomTypeEnum){
 		
