@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
-		implements RoomTypesHandler {
+implements RoomTypesHandler {
 	/**
 	 * The cached value of the '{@link #getStringToRoomType()
 	 * <em>String To Room Type</em>}' map. <!-- begin-user-doc --> <!--
@@ -90,7 +90,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	 * @generated NOT
 	 */
 	public boolean exists(String ID) {
-		
+
 		return this.getStringToRoomType().containsKey(ID);
 		// TODO: TEST
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -98,26 +98,25 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 
+	 * Add a RoomType with the given parameters
 	 *  <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
 	public int addRoomType(String roomTypeID, String roomTypeEnum, int price,
 			int maxNrOfGuests, String description) {
-		
+
 		if(roomTypeID != null && roomTypeEnum != null && price >= 0 && maxNrOfGuests >= 0){
-			
+
 			RoomType newRT = new RoomTypeImpl(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
 			this.getStringToRoomType().put(newRT.getID(), newRT);
 			return 0;
-			
+
 		}else{
 			//could send more exakt codes like which of the parameters was wrong.
 			return 1;
 		}
-		// TODO: TEST
-		// Ensure that you remove @generated or mark it @generated NOT
+		// TODO
 	}
 
 	/**
@@ -127,7 +126,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	 * @generated NOT
 	 */
 	public RoomTypeEnum stringToRoomTypeEnum(String roomTypeEnum){
-		
+
 		switch(roomTypeEnum){
 		case "doublebed":
 			return RoomTypeEnum.DOUBLEBED;
@@ -138,9 +137,9 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 		default:
 			return RoomTypeEnum.SINGLEBED;
 		}
-		
+
 	}
-	
+
 	/**
 	 * <!-- begin-user-doc --> Remove the RoomType sent in from the list of
 	 * known objects of the RoomType class. If it was removed 0 is returned else
@@ -148,15 +147,15 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated NOT
 	 */
-	public int removeRoomType(RoomType roomType) {
-		// if(exists(roomType)){
-		// this.roomType.remove(roomType);
-		// return 0;
-		// }
-		// return 1;
+	public int removeRoomType(String roomType) {
+		
+		if(exists(roomType)){
+			this.getStringToRoomType().remove(roomType);
+			return 0;
+		}
+		return 1;
 
-		return 0;
-		// TODO: implement this method
+		// TODO: TEST
 		// Ensure that you remove @generated or mark it @generated NOT
 	}
 
@@ -253,7 +252,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments)
@@ -266,7 +265,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 					(String) arguments.get(1), (Integer) arguments.get(2),
 					(Integer) arguments.get(3), (String) arguments.get(4));
 		case MaintenancemodelPackage.ROOM_TYPES_HANDLER___REMOVE_ROOM_TYPE__ROOMTYPE:
-			return removeRoomType((RoomType) arguments.get(0));
+			return removeRoomType((String) arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

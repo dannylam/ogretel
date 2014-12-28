@@ -103,5 +103,28 @@ public class testRoomMaintenance {
 		assertTrue(addRT == 0);
 		
 	}
+	
+	/**
+	 * Tests whether it is possible to remove a RoomType.
+	 * @generated NOT
+	 */
+	@Test
+	public void testRemoveRoomType() {
+		
+		String roomTypeID = "So good room";
+		String roomTypeEnum = "doublebed";
+		int price = 100;
+		int maxNrOfGuests = 3;
+		String description = "This room is very cool and I like it a lot.";
+		
+		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		assertTrue(addRT == 0);
+		assertTrue(this.rm.getRoomTypeHandler().exists(roomTypeID));
+		
+		int remRT = this.rm.removeRoomType(roomTypeID);
+		assertTrue(remRT == 0);
+		assertTrue(!this.rm.getRoomTypeHandler().exists(roomTypeID));
+		
+	}
 
 }
