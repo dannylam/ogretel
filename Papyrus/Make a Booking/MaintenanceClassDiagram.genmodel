@@ -183,7 +183,7 @@
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="maintenancemodel.ecore#//IMaintenanceProvidesForBooking">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//IMaintenanceProvidesForBooking/canBook">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IMaintenanceProvidesForBooking/canBook/roomType"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IMaintenanceProvidesForBooking/canBook/roomTypeIDs"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IMaintenanceProvidesForBooking/canBook/start"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IMaintenanceProvidesForBooking/canBook/end"/>
       </genOperations>
@@ -202,10 +202,10 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IMaintenanceProvidesForBooking/setBookingAsActive/bookingRef"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//IMaintenanceProvidesForBooking/getPriceRoom">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IMaintenanceProvidesForBooking/getPriceRoom/roomTypeID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IMaintenanceProvidesForBooking/getPriceRoom/roomTypeIDs"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//IMaintenanceProvidesForBooking/getPriceExtra">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IMaintenanceProvidesForBooking/getPriceExtra/extraID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IMaintenanceProvidesForBooking/getPriceExtra/extraIDs"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="maintenancemodel.ecore#//IRoomMaintenance">
