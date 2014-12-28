@@ -160,7 +160,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int addRoom(int numberID, String roomType) {
 		
