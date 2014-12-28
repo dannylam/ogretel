@@ -207,8 +207,10 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_zIK1YHlFEeScv6HJEKdjpA" name="IMaintenanceProvidesForBooking">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_ga3wsHmxEeScv6HJEKdjpA" name="canBook">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_q1q7oHmxEeScv6HJEKdjpA" name="roomType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_q1q7oHmxEeScv6HJEKdjpA" name="roomTypeIDs">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0okosI6wEeSqUPpyrwDcyg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0omd4I6wEeSqUPpyrwDcyg" value="*"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_zZgk8HmxEeScv6HJEKdjpA" name="start">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -218,6 +220,8 @@
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_RDLGkIXpEeS6Is0w-2dQxA" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_11rVAI6wEeSqUPpyrwDcyg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_11sjII6wEeSqUPpyrwDcyg" value="*"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_2xf0cHmxEeScv6HJEKdjpA" name="makeBooking">
@@ -260,16 +264,20 @@
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_IlsIII6VEeS0D-EMhs8Yvw" name="getPriceRoom">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_HH9wcI6WEeS0D-EMhs8Yvw" name="roomTypeID">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_HH9wcI6WEeS0D-EMhs8Yvw" name="roomTypeIDs">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__G_IUI6wEeSqUPpyrwDcyg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__G_IUY6wEeSqUPpyrwDcyg" value="*"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_fxJssI6WEeS0D-EMhs8Yvw" name="price" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_MadaQI6VEeS0D-EMhs8Yvw" name="getPriceExtra">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Th9L8I6WEeS0D-EMhs8Yvw" name="extraID">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Th9L8I6WEeS0D-EMhs8Yvw" name="extraIDs">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CPvB8I6xEeSqUPpyrwDcyg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CP1IkI6xEeSqUPpyrwDcyg" value="*"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_db8I0I6WEeS0D-EMhs8Yvw" name="price" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
