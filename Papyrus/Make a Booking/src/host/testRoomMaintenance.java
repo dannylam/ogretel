@@ -315,4 +315,34 @@ public class testRoomMaintenance {
 		assertTrue(edStat == 0);
 		assertTrue(this.rm.getRoomStatus(14) == "Busy");
 	}
+	
+	//---------------------------------------------------------------------------------------------
+
+	/**
+	 * Tests whether it is possible to get a Rooms RoomType ID.
+	 * @generated NOT
+	 */
+	@Test
+	public void testGetRoomTypeID() {
+
+		//Create RoomType
+		String roomTypeID = "Bajs hihi";
+		String roomTypeEnum = "luxurysuite";
+		int price = 1000;
+		int maxNrOfGuests = 8;
+		String description = "Hello.";
+
+		//Add the RT
+		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		assertTrue(addRT == 0);
+		
+		//Create R with RT
+		int addedR = this.rm.addRoom(15, roomTypeID);
+		assertTrue(addedR == 0);
+		assertTrue(this.rm.getRoomIDs().contains(15));
+		
+		//Get the RoomTypeEnum
+		assertTrue(this.rm.getRoomTypeID(15) == roomTypeID);
+		
+	}
 }
