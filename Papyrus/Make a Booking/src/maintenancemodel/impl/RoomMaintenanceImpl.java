@@ -296,14 +296,19 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public EList<String> getRoomStatuses() {
 		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+
+		RoomStatusEnum[] enums = RoomStatusEnum.values();
+		BasicEList<String> strings = new BasicEList<String>(enums.length);
+		
+		for(RoomStatusEnum e : enums){
+			strings.add(e.toString());
+		}
+		return strings;
 	}
 
 	/**
