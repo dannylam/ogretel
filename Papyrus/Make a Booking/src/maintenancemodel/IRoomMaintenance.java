@@ -123,7 +123,7 @@ public interface IRoomMaintenance extends EObject {
 	 *        ordered="false"
 	 * @generated
 	 */
-	EList<String> getRoomIDs();
+	EList<Integer> getRoomIDs();
 
 	/**
 	 * TODO finish documentation

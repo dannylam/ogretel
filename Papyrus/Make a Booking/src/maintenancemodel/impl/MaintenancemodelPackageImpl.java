@@ -1542,7 +1542,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 
 		op = initEOperation(getIRoomMaintenance__AddRoom__int_String(), theTypesPackage.getInteger(), "addRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIRoomMaintenance__RemoveRoom__int(), theTypesPackage.getInteger(), "removeRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1572,7 +1572,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getIRoomMaintenance__GetRoomIDs(), theTypesPackage.getString(), "getRoomIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getIRoomMaintenance__GetRoomIDs(), theTypesPackage.getInteger(), "getRoomIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIRoomMaintenance__GetRoomTypeIDs(), theTypesPackage.getString(), "getRoomTypeIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
@@ -1633,7 +1633,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 
 		op = initEOperation(getRoomTypesHandler__AddRoomType__String_String_int_int_String(), theTypesPackage.getInteger(), "addRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, ecorePackage.getEString(), "roomTypeEnum", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomTypeEnum", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "maxNrOfGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);

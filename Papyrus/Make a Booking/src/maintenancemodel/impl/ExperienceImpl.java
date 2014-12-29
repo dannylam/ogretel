@@ -33,7 +33,7 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NR_OF_SPOTS_EDEFAULT = 0;
+	protected static final int NR_OF_SPOTS_EDEFAULT = 10;
 
 	/**
 	 * The cached value of the '{@link #getNrOfSpots() <em>Nr Of Spots</em>}' attribute.
@@ -116,13 +116,24 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 *  Set a new number of avalible spots.
+	 *  Set a new number of avalible spots. If the new value is greater than number of evalible spots,
+	 *  nothing happens 
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setNrOfSpots(int newNrOfSpots) {
-		int oldNrOfSpots = nrOfSpots;
-		nrOfSpots = newNrOfSpots;
+		if(newNrOfSpots > nrOfSpots) {
+			return;
+		}
+		int oldNrOfSpots = nrOfSpotsFree;
+		nrOfSpotsFree = newNrOfSpots;
+		
+		if(nrOfSpots < 1) {
+			experienceStatusEnum = ExperienceStatusEnum.MAINTENANCE;
+		} else {
+			experienceStatusEnum = EXPERIENCE_STATUS_ENUM_EDEFAULT;
+		}
+		
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.EXPERIENCE__NR_OF_SPOTS, oldNrOfSpots, nrOfSpots));
 	}

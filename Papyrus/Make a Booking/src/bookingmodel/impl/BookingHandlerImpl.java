@@ -7,18 +7,15 @@ import bookingmodel.BookingHandler;
 import bookingmodel.BookingmodelPackage;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.List;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -128,25 +125,36 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
 	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, String roomTypes, String extras) {
 		int result = 0;
 		// TODO: implement this method
 		/*check which inparams which are null, these are not to be changed, and have their oldvalue
-		 * then create a new booking with the old booking reference
+		 * then create a new booking with the old booking reference */
 		 
-			Booking newBooking = new BookingImpl(nrOfNights, nrOfGuests, date, stringToList(roomTypes), stringToList(extras));	
-
-			
-			Booking booking = this.bookingsMap.get(bookingRef);
-			Booking newBooking = new BookingImpl();
-			
-			booking.setStartDate(startDate);
-			booking.setEndDate(endDate);
-			booking.setNrOfGuests(nrOfGuests);
-			booking.setRoomTypes(roomTypes);
-			booking.setExtras(extras);*/
-			
-			return result;
+			if(this.exists(bookingRef)) {			//kolla om booking ref finns
+					
+					this.getBooking(bookingRef).setStartDate(startDate);
+					
+					this.getBooking(bookingRef).setEndDate(endDate);
+					
+					this.getBooking(bookingRef).setNrOfGuests(nrOfGuests);
+	
+			//		this.getBooking(bookingRef).setRoomTypes(roomTypes);
+					
+			//		this.getBooking(bookingRef).setExtras(extras);
+			}
+		return result;
 	}
 
 	/**
@@ -238,8 +246,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return removeBooking((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_HANDLER___GET_BOOKING__STRING:
 				return getBooking((String)arguments.get(0));
-			case BookingmodelPackage.BOOKING_HANDLER___EDIT_BOOKING__STRING_STRING_STRING_INT_STRING_STRING:
-				return editBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
+			case BookingmodelPackage.BOOKING_HANDLER___EDIT_BOOKING__STRING_STRING_STRING_INT_ELIST_ELIST:
+				return editBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (List<String>)arguments.get(4), (List<String>)arguments.get(5));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -180,7 +180,7 @@
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="maintenancemodel.ecore#//IRoomMaintenance">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//IRoomMaintenance/addRoom">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IRoomMaintenance/addRoom/roomID"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IRoomMaintenance/addRoom/roomType"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IRoomMaintenance/addRoom/roomTypeID"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//IRoomMaintenance/removeRoom">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IRoomMaintenance/removeRoom/roomID"/>

@@ -375,7 +375,7 @@
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_GhrR4I6pEeSqUPpyrwDcyg" name="getRoomIDs">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_KF9Q8I6pEeSqUPpyrwDcyg" name="roomIDs" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ky-H8I6pEeSqUPpyrwDcyg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KzEOkI6pEeSqUPpyrwDcyg" value="*"/>
         </ownedParameter>

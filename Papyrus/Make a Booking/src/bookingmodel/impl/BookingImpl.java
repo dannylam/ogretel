@@ -297,13 +297,15 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setStartDate(String newStartDate) {
+		if(!(newStartDate.equals(null))){
 		String oldStartDate = startDate;
 		startDate = newStartDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.BOOKING__START_DATE, oldStartDate, startDate));
+		}
 	}
 
 	/**
@@ -318,13 +320,15 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setEndDate(String newEndDate) {
+		if(!(newEndDate.equals(null))){
 		String oldEndDate = endDate;
 		endDate = newEndDate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.BOOKING__END_DATE, oldEndDate, endDate));
+		}
 	}
 
 	/**
@@ -354,10 +358,12 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated
 	 */
 	public void setNrOfGuests(int newNrOfGuests) {
+		if(!(newNrOfGuests != 0)){
 		int oldNrOfGuests = nrOfGuests;
 		nrOfGuests = newNrOfGuests;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.BOOKING__NR_OF_GUESTS, oldNrOfGuests, nrOfGuests));
+		}
 	}
 
 	/**
@@ -660,10 +666,12 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public int setRoomTypes(List<String> roomTypes) {
 		int result = 0;
+		if(!(roomTypes.isEmpty())){
 		//TODO check if map is not empty first
-		for (int i = 0; i < roomTypes.size(); i++) {
-			this.roomTypeToRoomIDMap.put(roomTypes.get(i), null);
-			this.roomIDToGuestMap.put(null,roomTypes.get(i));
+			for (int i = 0; i < roomTypes.size(); i++) {
+				this.roomTypeToRoomIDMap.put(roomTypes.get(i), null);
+				this.roomIDToGuestMap.put(null,roomTypes.get(i));
+			}
 		}
 		return result;
 		//TODO check if its correct

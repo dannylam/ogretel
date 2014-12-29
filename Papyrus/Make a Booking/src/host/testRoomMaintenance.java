@@ -10,6 +10,8 @@ import maintenancemodel.impl.RoomMaintenanceImpl;
 import maintenancemodel.impl.RoomTypeImpl;
 import maintenancemodel.impl.RoomTypesHandlerImpl;
 
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.junit.Test;
 
@@ -259,7 +261,17 @@ public class testRoomMaintenance {
 	 * @generated NOT
 	 */
 	public void testGetRoomStatuses(){
-		//TODO
+		//TODO implement it
+		EList<String> statuses = rm.getRoomStatuses();
+		EList<String> typeEnums = rm.getRoomTypeEnums();
+		rm.addRoomType("type", typeEnums.get(0), 0, 0, "desc");
+		EList<String> types = rm.getRoomTypeIDs();
+		EList<Integer> rooms = rm.getRoomIDs();
+		int id = 0;
+		while(rooms.contains(id)){
+			
+		}
+		rm.addRoom(9999, types.get(0));
 	}
 
 	//---------------------------------------------------------------------------------------------

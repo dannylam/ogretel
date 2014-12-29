@@ -63,8 +63,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 	 * @generated NOT
 	 */
 	public EList<String> getExtras() {
-		// TODO
-		return null;
+		return extras.getExtras();
 	}
 
 	/**

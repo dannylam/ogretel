@@ -143,8 +143,16 @@
       <eParameters name="startDate" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="endDate" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="nrOfGuests" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-      <eParameters name="roomTypes" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-      <eParameters name="extras" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="roomTypes" ordered="false" lowerBound="1">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList">
+          <eTypeArguments/>
+        </eGenericType>
+      </eParameters>
+      <eParameters name="extras" ordered="false">
+        <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList">
+          <eTypeArguments/>
+        </eGenericType>
+      </eParameters>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="bookingsMap" ordered="false"
         upperBound="-1" eType="#//BookingRefToBookingEntry" containment="true"/>

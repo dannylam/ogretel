@@ -727,7 +727,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBookingHandler__EditBooking__String_String_String_int_String_String() {
+	public EOperation getBookingHandler__EditBooking__String_String_String_int_EList_EList() {
 		return bookingHandlerEClass.getEOperations().get(4);
 	}
 
@@ -1040,7 +1040,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___ADD_BOOKING__BOOKING);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___REMOVE_BOOKING__STRING);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___GET_BOOKING__STRING);
-		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___EDIT_BOOKING__STRING_STRING_STRING_INT_STRING_STRING);
+		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___EDIT_BOOKING__STRING_STRING_STRING_INT_ELIST_ELIST);
 
 		iBookingProvidesForHostEClass = createEClass(IBOOKING_PROVIDES_FOR_HOST);
 		createEOperation(iBookingProvidesForHostEClass, IBOOKING_PROVIDES_FOR_HOST___ENABLE_SELF_MANAGEMENT);
@@ -1200,13 +1200,19 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		op = initEOperation(getBookingHandler__GetBooking__String(), this.getBooking(), "getBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getBookingHandler__EditBooking__String_String_String_int_String_String(), theTypesPackage.getInteger(), "editBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingHandler__EditBooking__String_String_String_int_EList_EList(), theTypesPackage.getInteger(), "editBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "startDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "endDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "nrOfGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "roomTypes", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "extras", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EGenericType g1 = createEGenericType(ecorePackage.getEEList());
+		EGenericType g2 = createEGenericType();
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "roomTypes", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		g1 = createEGenericType(ecorePackage.getEEList());
+		g2 = createEGenericType();
+		g1.getETypeArguments().add(g2);
+		addEParameter(op, g1, "extras", 0, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(iBookingProvidesForHostEClass, IBookingProvidesForHost.class, "IBookingProvidesForHost", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1224,8 +1230,8 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 
 		op = initEOperation(getIBookingProvidesForHost__GetServiceNotes__String(), null, "getServiceNotes", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		EGenericType g1 = createEGenericType(ecorePackage.getEEList());
-		EGenericType g2 = createEGenericType();
+		g1 = createEGenericType(ecorePackage.getEEList());
+		g2 = createEGenericType();
 		g1.getETypeArguments().add(g2);
 		initEOperation(op, g1);
 
