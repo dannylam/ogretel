@@ -230,14 +230,18 @@ public interface Booking extends EObject {
 	EMap<String, Boolean> getExtraToIsPayedMap();
 
 	/**
-	 * A method that checks if all guests are checked in.
+	 * Checks if all the rooms in the booking
+	 * has a responsible guest. If so, then true is returned,
+	 * otherwise false is returned.
 	 * @model dataType="types.Boolean" required="true" ordered="false"
 	 * @generated NOT
 	 */
 	boolean checkedInAllGuest();
 
 	/**
-	 * A method that checks if a guest is checked in.
+	 * Checks if at least one room in the booking
+	 * has a responsible guest. If so, then true is returned,
+	 * otherwise false is returned.
 	 * @model dataType="types.Boolean" required="true" ordered="false"
 	 * @generated NOT
 	 */
