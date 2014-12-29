@@ -599,8 +599,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 	
 	/**
-	 * Sets all payed extras into a list, where the results 
-	 * indicate how it went. 
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public int setExtras(List<String> extras) {
@@ -614,8 +613,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * Sets all the roomtypes into a list, where the results
-	 * indicate how it went. 
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public int setRoomTypes(List<String> roomTypes) {
