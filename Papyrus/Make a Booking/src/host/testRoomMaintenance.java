@@ -257,7 +257,7 @@ public class testRoomMaintenance {
 	//---------------------------------------------------------------------------------------------
 
 	/**
-	 * Tests whether it is possible to edit a Room.
+	 * Tests whether it is possible to get a Rooms status.
 	 * @generated NOT
 	 */
 	@Test
@@ -282,5 +282,37 @@ public class testRoomMaintenance {
 		//Check Status
 		assertTrue(this.rm.getRoomStatus(13) == "Vacant");
 		
+	}
+	
+	/**
+	 * Tests whether it is possible to edit a Rooms status.
+	 * @generated NOT
+	 */
+	@Test
+	public void testEditRoomStatus() {
+
+		//Create RoomType
+		String roomTypeID = "Large Family";
+		String roomTypeEnum = "doublebed";
+		int price = 1100;
+		int maxNrOfGuests = 10;
+		String description = "Very many people can live in hea'. Many more.";
+
+		//Add the RT
+		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		assertTrue(addRT == 0);
+		
+		//Create R with RT
+		int addedR = this.rm.addRoom(14, roomTypeID);
+		assertTrue(addedR == 0);
+		assertTrue(this.rm.getRoomIDs().contains(14));
+		
+		//Check Status
+		assertTrue(this.rm.getRoomStatus(14) == "Vacant");
+		
+		//Edit Status
+		int edStat = this.rm.editRoomStatus(14, "busy");
+		assertTrue(edStat == 0);
+		assertTrue(this.rm.getRoomStatus(14) == "Busy");
 	}
 }
