@@ -352,9 +352,12 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public String getRoomTypeDescription(String roomTypeID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		if(this.roomTypes.getStringToRoomType().containsKey(roomTypeID)){
+			return this.roomTypes.getStringToRoomType().get(roomTypeID).getDescription();
+		}
+		return "failed to get description";
+		// TODO: test
 	}
 
 	/**

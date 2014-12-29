@@ -156,7 +156,7 @@ public class testRoomMaintenance {
 		// assertTrue(this.rm.getRoomTypeHandler().exists(roomTypeID));
 
 		int edRT = this.rm.editRoomType(roomTypeID, "singlebed", 200, 1,
-				"H舐 bor en apa.");
+				"Hèˆ� bor en apa.");
 		assertTrue(edRT == 0);
 
 		// TODO
@@ -165,7 +165,7 @@ public class testRoomMaintenance {
 		// RoomType gettedRT = null;
 		// assertTrue(gettedRT.getID() == roomTypeID);
 		// assertTrue(gettedRT.getRoomTypeEnum() == RoomTypeEnum.SINGLEBED);
-		// assertTrue(gettedRT.getDescription() == "H舐 bor en apa.");
+		// assertTrue(gettedRT.getDescription() == "Hèˆ� bor en apa.");
 		// assertTrue(gettedRT.getMaxNrOfGuests() == 1);
 		// assertTrue(gettedRT.getPrice() == 200);
 
@@ -386,7 +386,7 @@ public class testRoomMaintenance {
 		assertTrue(this.rm.getRoomTypeEnums() != null);
 
 		//Create RoomType
-		String roomTypeID = "L疽zl�";
+		String roomTypeID = "Laszlo";
 		String roomTypeEnum = "luxurysuite";
 		int price = 500;
 		int maxNrOfGuests = 3;
@@ -421,6 +421,29 @@ public class testRoomMaintenance {
 		
 		// Get its price
 		assertTrue(this.rm.getRoomTypePrice(roomTypeID) == 500);
+		
+	}
+	
+	/**
+	 * Tests whether it is possible to get a RoomTypes description.
+	 * @generated NOT
+	 */
+	@Test
+	public void testGetRoomTypeDesc() {
+
+		//Create RoomType
+		String roomTypeID = "Danny";
+		String roomTypeEnum = "luxurysuite";
+		int price = 500;
+		int maxNrOfGuests = 3;
+		String description = "Hello to you.";
+
+		//Add the RT
+		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		assertTrue(addRT == 0);
+		
+		// Get its price
+		assertTrue(this.rm.getRoomTypeDescription(roomTypeID) == description);
 		
 	}
 
