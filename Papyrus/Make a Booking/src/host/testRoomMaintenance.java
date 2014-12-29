@@ -266,7 +266,7 @@ public class testRoomMaintenance {
 		EList<String> typeEnums = rm.getRoomTypeEnums();
 		rm.addRoomType("type", typeEnums.get(0), 0, 0, "desc");
 		EList<String> types = rm.getRoomTypeIDs();
-		EList<String> rooms = rm.getRoomIDs();
+		EList<Integer> rooms = rm.getRoomIDs();
 		int id = 0;
 		while(rooms.contains(id)){
 			
