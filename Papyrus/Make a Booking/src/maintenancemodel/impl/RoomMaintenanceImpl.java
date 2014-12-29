@@ -380,9 +380,10 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int editRoomType(String roomTypeID, String roomTypeEnum, int price, int maxNrOfGuests, String description) {
-		this.removeRoomType(roomTypeID);
-		return this.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
-		
+		if( this.removeRoomType(roomTypeID) == 0){
+			return this.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		}
+		return 1;
 		// TODO: TEST
 	}
 
@@ -394,8 +395,11 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int editRoom(int roomID, String roomTypeID) {
-		this.removeRoom(roomID);
-		return this.addRoom(roomID, roomTypeID);
+		
+		if(this.removeRoom(roomID) == 0){
+			return this.addRoom(roomID, roomTypeID);
+		}
+		return 1;
 		// TODO:test
 	}
 

@@ -232,7 +232,7 @@ public class testRoomMaintenance {
 		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 		
-		//Add a R with the RT
+		//Add a R12 with the RT
 		int addedR = this.rm.addRoom(12, roomTypeID);
 		assertTrue(addedR == 0);
 		assertTrue(this.rm.getRoomIDs().contains(12));
@@ -244,7 +244,7 @@ public class testRoomMaintenance {
 		int maxNrOfGuests2 = 2;
 		String description2 = "Now this Room can have two guests.";
 		
-		//edit the R (give new RT)
+		//edit the R12 (give new RT)
 		int edR = this.rm.editRoom(12, roomTypeID2);
 		assertTrue(edR == 0);
 		
