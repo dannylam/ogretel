@@ -293,10 +293,13 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public String getRoomStatus(int roomID) {
-		//kolla om rumsID existerar?
-		return this.rooms.getRoom(roomID).getRoomStatusEnum().toString();
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
+		
+		if( this.rooms.exists(roomID) ){
+			System.out.println(this.rooms.getRoom(roomID).getRoomStatusEnum().toString());
+			return this.rooms.getRoom(roomID).getRoomStatusEnum().toString();
+		}
+		return "failure";
+		// TODO: test
 	}
 
 	/**
