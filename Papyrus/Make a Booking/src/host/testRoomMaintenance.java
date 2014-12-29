@@ -284,12 +284,12 @@ public class testRoomMaintenance {
 				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 
-		//Create R with RT
+		// Create R with RT
 		int addedR = this.rm.addRoom(13, roomTypeID);
 		assertTrue(addedR == 0);
 		assertTrue(this.rm.getRoomIDs().contains(13));
 
-		//Check Status
+		// Check Status
 		assertTrue(this.rm.getRoomStatus(13) == "Vacant");
 
 	}
@@ -314,22 +314,23 @@ public class testRoomMaintenance {
 				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 
-		//Create R with RT
+		// Create R with RT
 		int addedR = this.rm.addRoom(14, roomTypeID);
 		assertTrue(addedR == 0);
 		assertTrue(this.rm.getRoomIDs().contains(14));
 
-		//Check Status
+		// Check Status
 		assertTrue(this.rm.getRoomStatus(14) == "Vacant");
 
-		//Edit Status
+		// Edit Status
 		int edStat = this.rm.editRoomStatus(14, "busy");
 		assertTrue(edStat == 0);
 		assertTrue(this.rm.getRoomStatus(14) == "Busy");
 	}
-	
+
 	/**
-	 * Tests the function getRoomStatuses
+	 * Tests the function getRoomStatuses. If a software developer adds more
+	 * statuses, they can just add a new assert statement for that status.
 	 * 
 	 * @generated NOT
 	 */
@@ -364,26 +365,27 @@ public class testRoomMaintenance {
 				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 
-		//Create R with RT
+		// Create R with RT
 		int addedR = this.rm.addRoom(15, roomTypeID);
 		assertTrue(addedR == 0);
 		assertTrue(this.rm.getRoomIDs().contains(15));
 
-		//Get the RoomTypeEnum
+		// Get the RoomTypeEnum
 		assertTrue(this.rm.getRoomTypeID(15) == roomTypeID);
 
 	}
 
-	//----------------------------------------------------------------------------------------------
+	// ----------------------------------------------------------------------------------------------
 
 	/**
 	 * Tests whether it is possible to get the list of all RoomTypeEnums.
+	 * 
 	 * @generated NOT
 	 */
 	@Test
-	public void testGetRoomTypeEnums() {
+	public void testGetRoomTypeIDs() {
 
-		assertTrue(this.rm.getRoomTypeEnums() != null);
+		assertTrue(this.rm.getRoomTypeIDs() != null);
 
 		//Create RoomType
 		String roomTypeID = "Laszlo";
@@ -392,36 +394,53 @@ public class testRoomMaintenance {
 		int maxNrOfGuests = 3;
 		String description = "Hello to you.";
 
-		//Add the RT
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		// Add the RT
+		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
-		
+
 		// Get it
-		assertTrue(this.rm.getRoomTypeEnums().contains(roomTypeID));
-		
+		assertTrue(this.rm.getRoomTypeIDs().contains(roomTypeID));
+
 	}
-	
+
 	/**
 	 * Tests whether it is possible to get a RoomTypes price.
+	 * 
 	 * @generated NOT
 	 */
 	@Test
 	public void testGetRoomTypePrice() {
 
-		//Create RoomType
+		// Create RoomType
 		String roomTypeID = "Paula";
 		String roomTypeEnum = "luxurysuite";
 		int price = 500;
 		int maxNrOfGuests = 3;
 		String description = "Hello to you.";
 
-		//Add the RT
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		// Add the RT
+		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
-		
+
 		// Get its price
 		assertTrue(this.rm.getRoomTypePrice(roomTypeID) == 500);
-		
+
+	}
+
+	/**
+	 * Tests the function getRoomTypeEnums. If a software developer adds more
+	 * enums, they can just add a new assert statement for that enum.
+	 * 
+	 * @generated NOT
+	 */
+	@Test
+	public void testGetRoomTypeEnums() {
+		EList<String> statusStrings = rm.getRoomTypeEnums();
+		assertTrue(statusStrings.contains("Singlebed"));
+		assertTrue(statusStrings.contains("Doublebed"));
+		assertTrue(statusStrings.contains("Luxury suite"));
 	}
 	
 	/**
