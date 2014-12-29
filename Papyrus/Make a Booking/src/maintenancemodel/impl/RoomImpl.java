@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link maintenancemodel.impl.RoomImpl#getNumberID <em>Number ID</em>}</li>
+ *   <li>{@link maintenancemodel.impl.RoomImpl#getRoomID <em>Room ID</em>}</li>
  *   <li>{@link maintenancemodel.impl.RoomImpl#getRoomStatusEnum <em>Room Status Enum</em>}</li>
  *   <li>{@link maintenancemodel.impl.RoomImpl#getRoomType <em>Room Type</em>}</li>
  * </ul>
@@ -32,24 +32,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	/**
-	 * The default value of the '{@link #getNumberID() <em>Number ID</em>}' attribute.
+	 * The default value of the '{@link #getRoomID() <em>Room ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNumberID()
+	 * @see #getRoomID()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NUMBER_ID_EDEFAULT = 0;
+	protected static final int ROOM_ID_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getNumberID() <em>Number ID</em>}' attribute.
+	 * The cached value of the '{@link #getRoomID() <em>Room ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNumberID()
+	 * @see #getRoomID()
 	 * @generated
 	 * @ordered
 	 */
-	protected int numberID = NUMBER_ID_EDEFAULT;
+	protected int roomID = ROOM_ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRoomStatusEnum() <em>Room Status Enum</em>}' attribute.
@@ -104,7 +104,7 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 */
 	protected RoomImpl(int numberID, RoomType roomType) {
 		this();
-		this.numberID = numberID;
+		this.roomID = numberID;
 		this.roomType = roomType;
 	}
 
@@ -123,8 +123,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getNumberID() {
-		return numberID;
+	public int getRoomID() {
+		return roomID;
 	}
 
 	/**
@@ -132,11 +132,11 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNumberID(int newNumberID) {
-		int oldNumberID = numberID;
-		numberID = newNumberID;
+	public void setRoomID(int newRoomID) {
+		int oldRoomID = roomID;
+		roomID = newRoomID;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ROOM__NUMBER_ID, oldNumberID, numberID));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ROOM__ROOM_ID, oldRoomID, roomID));
 	}
 
 	/**
@@ -225,8 +225,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MaintenancemodelPackage.ROOM__NUMBER_ID:
-				return getNumberID();
+			case MaintenancemodelPackage.ROOM__ROOM_ID:
+				return getRoomID();
 			case MaintenancemodelPackage.ROOM__ROOM_STATUS_ENUM:
 				return getRoomStatusEnum();
 			case MaintenancemodelPackage.ROOM__ROOM_TYPE:
@@ -243,8 +243,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MaintenancemodelPackage.ROOM__NUMBER_ID:
-				setNumberID((Integer)newValue);
+			case MaintenancemodelPackage.ROOM__ROOM_ID:
+				setRoomID((Integer)newValue);
 				return;
 			case MaintenancemodelPackage.ROOM__ROOM_STATUS_ENUM:
 				setRoomStatusEnum((RoomStatusEnum)newValue);
@@ -264,8 +264,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MaintenancemodelPackage.ROOM__NUMBER_ID:
-				setNumberID(NUMBER_ID_EDEFAULT);
+			case MaintenancemodelPackage.ROOM__ROOM_ID:
+				setRoomID(ROOM_ID_EDEFAULT);
 				return;
 			case MaintenancemodelPackage.ROOM__ROOM_STATUS_ENUM:
 				setRoomStatusEnum(ROOM_STATUS_ENUM_EDEFAULT);
@@ -285,8 +285,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MaintenancemodelPackage.ROOM__NUMBER_ID:
-				return numberID != NUMBER_ID_EDEFAULT;
+			case MaintenancemodelPackage.ROOM__ROOM_ID:
+				return roomID != ROOM_ID_EDEFAULT;
 			case MaintenancemodelPackage.ROOM__ROOM_STATUS_ENUM:
 				return roomStatusEnum != ROOM_STATUS_ENUM_EDEFAULT;
 			case MaintenancemodelPackage.ROOM__ROOM_TYPE:
@@ -305,8 +305,8 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (numberID: ");
-		result.append(numberID);
+		result.append(" (roomID: ");
+		result.append(roomID);
 		result.append(", roomStatusEnum: ");
 		result.append(roomStatusEnum);
 		result.append(')');

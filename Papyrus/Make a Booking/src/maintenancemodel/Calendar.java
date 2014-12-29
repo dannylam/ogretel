@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link maintenancemodel.Calendar#getRoomTypeCapTable <em>Room Type Cap Table</em>}</li>
  *   <li>{@link maintenancemodel.Calendar#getStringToListsMap <em>String To Lists Map</em>}</li>
  * </ul>
  * </p>
@@ -26,22 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Calendar extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Room Type Cap Table</b></em>' reference list.
-	 * The list contents are of type {@link maintenancemodel.RoomTypesHandler}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Room Type Cap Table</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Room Type Cap Table</em>' reference list.
-	 * @see maintenancemodel.MaintenancemodelPackage#getCalendar_RoomTypeCapTable()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	EList<RoomTypesHandler> getRoomTypeCapTable();
-
 	/**
 	 * Returns the value of the '<em><b>String To Lists Map</b></em>' map.
 	 * <!-- begin-user-doc -->
@@ -79,9 +62,9 @@ public interface Calendar extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false" nrOfRoomsDataType="org.eclipse.uml2.types.Integer" nrOfRoomsRequired="true" nrOfRoomsOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false" nrOfRoomsDataType="org.eclipse.uml2.types.Integer" nrOfRoomsRequired="true" nrOfRoomsOrdered="false"
 	 * @generated
 	 */
-	void setCap(int start, int end, String roomType, int nrOfRooms);
+	int setCap(int start, int end, String roomType, int nrOfRooms);
 
 } // Calendar

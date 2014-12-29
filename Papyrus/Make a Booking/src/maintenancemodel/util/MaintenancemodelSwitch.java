@@ -141,18 +141,6 @@ public class MaintenancemodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MaintenancemodelPackage.ROOM_TYPES_HANDLER: {
-				RoomTypesHandler roomTypesHandler = (RoomTypesHandler)theEObject;
-				T result = caseRoomTypesHandler(roomTypesHandler);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE: {
-				@SuppressWarnings("unchecked") Map.Entry<String, RoomType> stringToRoomType = (Map.Entry<String, RoomType>)theEObject;
-				T result = caseStringToRoomType(stringToRoomType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case MaintenancemodelPackage.STRING_TO_LISTS_MAP: {
 				@SuppressWarnings("unchecked") Map.Entry<String, EList<Integer>> stringToListsMap = (Map.Entry<String, EList<Integer>>)theEObject;
 				T result = caseStringToListsMap(stringToListsMap);
@@ -188,6 +176,18 @@ public class MaintenancemodelSwitch<T> extends Switch<T> {
 				RoomMaintenance roomMaintenance = (RoomMaintenance)theEObject;
 				T result = caseRoomMaintenance(roomMaintenance);
 				if (result == null) result = caseIRoomMaintenance(roomMaintenance);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER: {
+				RoomTypesHandler roomTypesHandler = (RoomTypesHandler)theEObject;
+				T result = caseRoomTypesHandler(roomTypesHandler);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE: {
+				@SuppressWarnings("unchecked") Map.Entry<String, RoomType> stringToRoomType = (Map.Entry<String, RoomType>)theEObject;
+				T result = caseStringToRoomType(stringToRoomType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
