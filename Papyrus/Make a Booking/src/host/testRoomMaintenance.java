@@ -84,7 +84,7 @@ public class testRoomMaintenance {
 
 	}
 
-	//---------------------------------------------------------------------------------------------
+	// ---------------------------------------------------------------------------------------------
 
 	/**
 	 * Tests whether it is possible to add a RoomType.
@@ -156,25 +156,26 @@ public class testRoomMaintenance {
 		// assertTrue(this.rm.getRoomTypeHandler().exists(roomTypeID));
 
 		int edRT = this.rm.editRoomType(roomTypeID, "singlebed", 200, 1,
-				"H‰r bor en apa.");
+				"HËàê bor en apa.");
 		assertTrue(edRT == 0);
 
 		// TODO
 		// RoomType gettedRT =
 		// this.rm.getRoomTypeHandler().getStringToRoomType().get(roomTypeID);
-		//		RoomType gettedRT = null;
-		//		assertTrue(gettedRT.getID() == roomTypeID);
-		//		assertTrue(gettedRT.getRoomTypeEnum() == RoomTypeEnum.SINGLEBED);
-		//		assertTrue(gettedRT.getDescription() == "H‰r bor en apa.");
-		//		assertTrue(gettedRT.getMaxNrOfGuests() == 1);
-		//		assertTrue(gettedRT.getPrice() == 200);
+		// RoomType gettedRT = null;
+		// assertTrue(gettedRT.getID() == roomTypeID);
+		// assertTrue(gettedRT.getRoomTypeEnum() == RoomTypeEnum.SINGLEBED);
+		// assertTrue(gettedRT.getDescription() == "HËàê bor en apa.");
+		// assertTrue(gettedRT.getMaxNrOfGuests() == 1);
+		// assertTrue(gettedRT.getPrice() == 200);
 
 	}
 
-	//---------------------------------------------------------------------------------------------
+	// ---------------------------------------------------------------------------------------------
 
 	/**
 	 * Tests whether it is possible to add a Room.
+	 * 
 	 * @generated NOT
 	 */
 	@Test
@@ -186,17 +187,19 @@ public class testRoomMaintenance {
 		int maxNrOfGuests = 2;
 		String description = "Nice and eciN";
 
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 
 		int addedR = this.rm.addRoom(10, roomTypeID);
 
 		assertTrue(addedR == 0);
-		assertTrue(this.rm.getRoomIDs().contains(10));	
+		assertTrue(this.rm.getRoomIDs().contains(10));
 	}
 
 	/**
 	 * Tests whether it is possible to remove a Room.
+	 * 
 	 * @generated NOT
 	 */
 	@Test
@@ -208,7 +211,8 @@ public class testRoomMaintenance {
 		int maxNrOfGuests = 1;
 		String description = "Here you can be alone for a while. Just relax. Mmmm.";
 
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 
 		int addedR = this.rm.addRoom(11, roomTypeID);
@@ -223,146 +227,178 @@ public class testRoomMaintenance {
 
 	/**
 	 * Tests whether it is possible to edit a Room.
+	 * 
 	 * @generated NOT
 	 */
 	@Test
 	public void testEditRoom() {
-		//First RoomType
+		// First RoomType
 		String roomTypeID = "Alone";
 		String roomTypeEnum = "singlebed";
 		int price = 250;
 		int maxNrOfGuests = 1;
 		String description = "Here you can be alone for a while. Just relax. Mmmm.";
 
-		//Add the RT
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		// Add the RT
+		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 
-		//Add a R12 with the RT
+		// Add a R12 with the RT
 		int addedR = this.rm.addRoom(12, roomTypeID);
 		assertTrue(addedR == 0);
 		assertTrue(this.rm.getRoomIDs().contains(12));
 
-		//New RT
+		// New RT
 		String roomTypeID2 = " Not Alone";
 		String roomTypeEnum2 = "singlebed";
 		int price2 = 300;
 		int maxNrOfGuests2 = 2;
 		String description2 = "Now this Room can have two guests.";
 
-		//edit the R12 (give new RT)
+		// edit the R12 (give new RT)
 		int edR = this.rm.editRoom(12, roomTypeID2);
 		assertTrue(edR == 0);
 
 	}
-	
-	/**
-	 * Tests the function getRoomStatuses
-	 * @generated NOT
-	 */
-	public void testGetRoomStatuses(){
-		//TODO implement it
-		EList<String> statuses = rm.getRoomStatuses();
-		EList<String> typeEnums = rm.getRoomTypeEnums();
-		rm.addRoomType("type", typeEnums.get(0), 0, 0, "desc");
-		EList<String> types = rm.getRoomTypeIDs();
-		EList<Integer> rooms = rm.getRoomIDs();
-		int id = 0;
-		while(rooms.contains(id)){
-			
-		}
-		rm.addRoom(9999, types.get(0));
-	}
 
-	//---------------------------------------------------------------------------------------------
+	// ---------------------------------------------------------------------------------------------
 
 	/**
 	 * Tests whether it is possible to get a Rooms status.
+	 * 
 	 * @generated NOT
 	 */
 	@Test
 	public void testGetRoomStatus() {
 
-		//Create RoomType
+		// Create RoomType
 		String roomTypeID = "Family";
 		String roomTypeEnum = "doublebed";
 		int price = 1000;
 		int maxNrOfGuests = 8;
 		String description = "Very many people can live in hea'.";
 
-		//Add the RT
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		// Add the RT
+		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
-		
+
 		//Create R with RT
 		int addedR = this.rm.addRoom(13, roomTypeID);
 		assertTrue(addedR == 0);
 		assertTrue(this.rm.getRoomIDs().contains(13));
-		
+
 		//Check Status
 		assertTrue(this.rm.getRoomStatus(13) == "Vacant");
-		
+
 	}
-	
+
 	/**
 	 * Tests whether it is possible to edit a Rooms status.
+	 * 
 	 * @generated NOT
 	 */
 	@Test
 	public void testEditRoomStatus() {
 
-		//Create RoomType
+		// Create RoomType
 		String roomTypeID = "Large Family";
 		String roomTypeEnum = "doublebed";
 		int price = 1100;
 		int maxNrOfGuests = 10;
 		String description = "Very many people can live in hea'. Many more.";
 
-		//Add the RT
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		// Add the RT
+		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
-		
+
 		//Create R with RT
 		int addedR = this.rm.addRoom(14, roomTypeID);
 		assertTrue(addedR == 0);
 		assertTrue(this.rm.getRoomIDs().contains(14));
-		
+
 		//Check Status
 		assertTrue(this.rm.getRoomStatus(14) == "Vacant");
-		
+
 		//Edit Status
 		int edStat = this.rm.editRoomStatus(14, "busy");
 		assertTrue(edStat == 0);
 		assertTrue(this.rm.getRoomStatus(14) == "Busy");
 	}
 	
-	//---------------------------------------------------------------------------------------------
+	/**
+	 * Tests the function getRoomStatuses
+	 * 
+	 * @generated NOT
+	 */
+	@Test
+	public void testGetRoomStatuses() {
+		// TODO implement it
+		EList<String> statusStrings = rm.getRoomStatuses();
+		assertTrue(statusStrings.contains("Vacant"));
+		assertTrue(statusStrings.contains("Busy"));
+		assertTrue(statusStrings.contains("Maintenance"));
+	}
+
+	// ---------------------------------------------------------------------------------------------
 
 	/**
 	 * Tests whether it is possible to get a Rooms RoomType ID.
+	 * 
 	 * @generated NOT
 	 */
 	@Test
 	public void testGetRoomTypeID() {
 
-		//Create RoomType
+		// Create RoomType
 		String roomTypeID = "Bajs hihi";
 		String roomTypeEnum = "luxurysuite";
 		int price = 1000;
 		int maxNrOfGuests = 8;
 		String description = "Hello.";
 
-		//Add the RT
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		// Add the RT
+		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
-		
+
 		//Create R with RT
 		int addedR = this.rm.addRoom(15, roomTypeID);
 		assertTrue(addedR == 0);
 		assertTrue(this.rm.getRoomIDs().contains(15));
-		
+
 		//Get the RoomTypeEnum
 		assertTrue(this.rm.getRoomTypeID(15) == roomTypeID);
+
+	}
+
+	//----------------------------------------------------------------------------------------------
+
+	/**
+	 * Tests whether it is possible to get the list of all RoomTypeEnums.
+	 * @generated NOT
+	 */
+	@Test
+	public void testGetRoomTypeEnums() {
+
+		assertTrue(this.rm.getRoomTypeEnums() != null);
+
+		//Create RoomType
+		String roomTypeID = "LÁñΩzlÔøΩ";
+		String roomTypeEnum = "luxurysuite";
+		int price = 500;
+		int maxNrOfGuests = 3;
+		String description = "Hello to you.";
+
+		//Add the RT
+		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		assertTrue(addRT == 0);
+		
+		// Get it
+		assertTrue(this.rm.getRoomTypeEnums().contains(roomTypeID));
 		
 	}
+
 }
