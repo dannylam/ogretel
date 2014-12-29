@@ -130,7 +130,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public Room getRoom(int ID) {
-		return this.integerToRoomMap.get(ID).getValue();
+		return this.integerToRoomMap.get(new Integer(ID));
 
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
