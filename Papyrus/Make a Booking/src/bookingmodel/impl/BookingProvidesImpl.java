@@ -8,6 +8,7 @@ import bookingmodel.BookingProvides;
 import bookingmodel.BookingmodelPackage;
 import bookingmodel.IBookingProvidesForGuest;
 import bookingmodel.IBookingProvidesForHost;
+import bookingmodel.PaymentDetails;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
@@ -238,35 +239,38 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public int pay(String bookingRef) {
 		int result = 0;
-		/*
-		 *check if this booking exists and is not null
-		 *get the price
-		 *take the paymentdetails from the customer of this booking
-		 *invoke pay() in banking 
-		 */
+		if(this.getBookingHandler().exists(bookingRef)){
+			//maintenanceComponent.getPrice();
+			PaymentDetails paymentdetails = this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().get(0);
+			//invoke pay() in bankingcomponent
+		}
 		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
+
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @inhertDoc
 	 * @generated NOT
 	 */
 	public int getPrice(String bookingRef) {
+		int result = 0;
 		// TODO: implement this method
+		String extras = this.bookingHandler.getBooking(bookingRef).getExtraToIsPayedMap().keySet().toString();
+		String roomtypes = this.bookingHandler.getBooking(bookingRef).getRoomTypeToRoomIDMap().values().toString();
+		
+		//maintenanceComponent.getPrice(extras);
+		//maintenanceComponent.getPrice(roomtypes);
 		/*
 		 * Ska från en bookingRef få reda på vilka extras och hur många av varjerumstyp vi har
 		 * och därefter kan vi fråga maintenance om vad priset för varje är och sedan summera och returnera
 		 */
-		throw new UnsupportedOperationException();
+		return result;
 	}
 
 	/**
