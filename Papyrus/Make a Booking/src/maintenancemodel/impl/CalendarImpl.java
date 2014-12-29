@@ -3,11 +3,9 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.Collection;
 import java.util.Map;
 import maintenancemodel.Calendar;
 import maintenancemodel.MaintenancemodelPackage;
-import maintenancemodel.RoomTypesHandler;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -15,7 +13,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +21,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link maintenancemodel.impl.CalendarImpl#getRoomTypeCapTable <em>Room Type Cap Table</em>}</li>
  *   <li>{@link maintenancemodel.impl.CalendarImpl#getStringToListsMap <em>String To Lists Map</em>}</li>
  * </ul>
  * </p>
@@ -32,16 +28,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * @generated
  */
 public class CalendarImpl extends MinimalEObjectImpl.Container implements Calendar {
-	/**
-	 * The cached value of the '{@link #getRoomTypeCapTable() <em>Room Type Cap Table</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRoomTypeCapTable()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<RoomTypesHandler> roomTypeCapTable;
-
 	/**
 	 * The cached value of the '{@link #getStringToListsMap() <em>String To Lists Map</em>}' map.
 	 * <!-- begin-user-doc -->
@@ -69,18 +55,6 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	@Override
 	protected EClass eStaticClass() {
 		return MaintenancemodelPackage.Literals.CALENDAR;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<RoomTypesHandler> getRoomTypeCapTable() {
-		if (roomTypeCapTable == null) {
-			roomTypeCapTable = new EObjectResolvingEList<RoomTypesHandler>(RoomTypesHandler.class, this, MaintenancemodelPackage.CALENDAR__ROOM_TYPE_CAP_TABLE);
-		}
-		return roomTypeCapTable;
 	}
 
 	/**
@@ -142,7 +116,7 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCap(int start, int end, String roomType, int nrOfRooms) {
+	public int setCap(int start, int end, String roomType, int nrOfRooms) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -170,8 +144,6 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MaintenancemodelPackage.CALENDAR__ROOM_TYPE_CAP_TABLE:
-				return getRoomTypeCapTable();
 			case MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP:
 				return getStringToListsMap();
 		}
@@ -187,10 +159,6 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MaintenancemodelPackage.CALENDAR__ROOM_TYPE_CAP_TABLE:
-				getRoomTypeCapTable().clear();
-				getRoomTypeCapTable().addAll((Collection<? extends RoomTypesHandler>)newValue);
-				return;
 			case MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP:
 				setStringToListsMap((Map.Entry<String, EList<Integer>>)newValue);
 				return;
@@ -206,9 +174,6 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MaintenancemodelPackage.CALENDAR__ROOM_TYPE_CAP_TABLE:
-				getRoomTypeCapTable().clear();
-				return;
 			case MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP:
 				setStringToListsMap((Map.Entry<String, EList<Integer>>)null);
 				return;
@@ -224,8 +189,6 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MaintenancemodelPackage.CALENDAR__ROOM_TYPE_CAP_TABLE:
-				return roomTypeCapTable != null && !roomTypeCapTable.isEmpty();
 			case MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP:
 				return stringToListsMap != null;
 		}
@@ -243,8 +206,7 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 			case MaintenancemodelPackage.CALENDAR___GET_CAP__INT_INT_STRING:
 				return getCap((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2));
 			case MaintenancemodelPackage.CALENDAR___SET_CAP__INT_INT_STRING_INT:
-				setCap((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
-				return null;
+				return setCap((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link maintenancemodel.Room#getNumberID <em>Number ID</em>}</li>
+ *   <li>{@link maintenancemodel.Room#getRoomID <em>Room ID</em>}</li>
  *   <li>{@link maintenancemodel.Room#getRoomStatusEnum <em>Room Status Enum</em>}</li>
  *   <li>{@link maintenancemodel.Room#getRoomType <em>Room Type</em>}</li>
  * </ul>
@@ -24,30 +24,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Room extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Number ID</b></em>' attribute.
+	 * Returns the value of the '<em><b>Room ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Number ID</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Room ID</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Number ID</em>' attribute.
-	 * @see #setNumberID(int)
-	 * @see maintenancemodel.MaintenancemodelPackage#getRoom_NumberID()
+	 * @return the value of the '<em>Room ID</em>' attribute.
+	 * @see #setRoomID(int)
+	 * @see maintenancemodel.MaintenancemodelPackage#getRoom_RoomID()
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
 	 * @generated
 	 */
-	int getNumberID();
+	int getRoomID();
 
 	/**
-	 * Sets the value of the '{@link maintenancemodel.Room#getNumberID <em>Number ID</em>}' attribute.
+	 * Sets the value of the '{@link maintenancemodel.Room#getRoomID <em>Room ID</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Number ID</em>' attribute.
-	 * @see #getNumberID()
+	 * @param value the new value of the '<em>Room ID</em>' attribute.
+	 * @see #getRoomID()
 	 * @generated
 	 */
-	void setNumberID(int value);
+	void setRoomID(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Room Status Enum</b></em>' attribute.

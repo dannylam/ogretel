@@ -55,7 +55,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected RoomHandler rooms = new RoomHandlerImpl();
+	protected RoomHandler rooms;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -296,6 +296,83 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getRoomStatuses() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getRoomTypeEnum(String roomTypeID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getRoomTypePrice(String roomTypeID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getRoomTypeMaxNrOfGuests(String roomTypeID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getRoomTypeDescription(String roomTypeID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getRoomTypeID(int roomID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getRoomTypeEnums() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
 	 * Edit the RoomType with @param roomTypeID
 	 * so that it has the values given in the other parameters.
 	 * <!-- end-user-doc -->
@@ -325,10 +402,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public EList<String> getRoomIDs() {
-		
-		Integer[] ids = this.rooms.getIntegerToRoomMap().keySet().toArray(new Integer[0]);
-		return new BasicEList( Arrays.asList(ids) );
-		// TODO: TEST
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -342,17 +418,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 		String[] ids = this.roomTypes.getStringToRoomType().keySet().toArray(new String[0]);
 		return new BasicEList( Arrays.asList(ids) );
 		// TODO: test
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getRoomStatus(String roomID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -465,8 +530,22 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 				return getRoomIDs();
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_IDS:
 				return getRoomTypeIDs();
-			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_STATUS__STRING:
-				return getRoomStatus((String)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_STATUS__INT:
+				return getRoomStatus((Integer)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_STATUSES:
+				return getRoomStatuses();
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ENUM__STRING:
+				return getRoomTypeEnum((String)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_PRICE__STRING:
+				return getRoomTypePrice((String)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_MAX_NR_OF_GUESTS__STRING:
+				return getRoomTypeMaxNrOfGuests((String)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_DESCRIPTION__STRING:
+				return getRoomTypeDescription((String)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ID__INT:
+				return getRoomTypeID((Integer)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ENUMS:
+				return getRoomTypeEnums();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

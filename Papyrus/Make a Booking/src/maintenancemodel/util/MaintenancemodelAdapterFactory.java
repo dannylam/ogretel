@@ -116,14 +116,6 @@ public class MaintenancemodelAdapterFactory extends AdapterFactoryImpl {
 				return createCalendarAdapter();
 			}
 			@Override
-			public Adapter caseRoomTypesHandler(RoomTypesHandler object) {
-				return createRoomTypesHandlerAdapter();
-			}
-			@Override
-			public Adapter caseStringToRoomType(Map.Entry<String, RoomType> object) {
-				return createStringToRoomTypeAdapter();
-			}
-			@Override
 			public Adapter caseStringToListsMap(Map.Entry<String, EList<Integer>> object) {
 				return createStringToListsMapAdapter();
 			}
@@ -146,6 +138,14 @@ public class MaintenancemodelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseRoomMaintenance(RoomMaintenance object) {
 				return createRoomMaintenanceAdapter();
+			}
+			@Override
+			public Adapter caseRoomTypesHandler(RoomTypesHandler object) {
+				return createRoomTypesHandlerAdapter();
+			}
+			@Override
+			public Adapter caseStringToRoomType(Map.Entry<String, RoomType> object) {
+				return createStringToRoomTypeAdapter();
 			}
 			@Override
 			public Adapter caseMaintenanceProvidesForBooking(MaintenanceProvidesForBooking object) {

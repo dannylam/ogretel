@@ -70,11 +70,11 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 			case MaintenancemodelPackage.ROOM_HANDLER: return createRoomHandler();
 			case MaintenancemodelPackage.INTEGER_TO_ROOM_MAP: return (EObject)createIntegerToRoomMap();
 			case MaintenancemodelPackage.CALENDAR: return createCalendar();
-			case MaintenancemodelPackage.ROOM_TYPES_HANDLER: return createRoomTypesHandler();
-			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE: return (EObject)createStringToRoomType();
 			case MaintenancemodelPackage.STRING_TO_LISTS_MAP: return (EObject)createStringToListsMap();
 			case MaintenancemodelPackage.EXTRAS_MAINTENANCE: return createExtrasMaintenance();
 			case MaintenancemodelPackage.ROOM_MAINTENANCE: return createRoomMaintenance();
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER: return createRoomTypesHandler();
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE: return (EObject)createStringToRoomType();
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING: return createMaintenanceProvidesForBooking();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
