@@ -229,7 +229,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public Booking getBooking(String bookingRef) {
-		if(bookingRef!= null){
+		if(!(bookingRef.equals(null))){
 			return this.bookingHandler.getBooking(bookingRef);
 		} else {
 			//TODO:change this later on
@@ -295,6 +295,9 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		 * Check with the changes if they are possible, ask maintenacne, if so, then the changes are registered 
 		 * in the booking
 		 * */
+		
+		
+		
 		
 		//TODO: implement this method
 		return result;
