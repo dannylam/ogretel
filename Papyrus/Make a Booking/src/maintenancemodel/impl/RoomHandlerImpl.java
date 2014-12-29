@@ -108,13 +108,20 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * If the Room exists it is removed.
+	 * @return 0 if it was removed else 1.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int removeRoom(int roomID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		if(this.exists(roomID)){
+			this.getIntegerToRoomMap().removeKey(roomID);
+			return 0;
+		}
+		return 1;
+		
+		// TODO: test
 	}
 
 	/**
