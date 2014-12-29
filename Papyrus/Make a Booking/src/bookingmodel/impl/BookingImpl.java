@@ -44,7 +44,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link bookingmodel.impl.BookingImpl#getGuestList <em>Guest List</em>}</li>
  *   <li>{@link bookingmodel.impl.BookingImpl#isIsPayed <em>Is Payed</em>}</li>
  *   <li>{@link bookingmodel.impl.BookingImpl#getRoomIDToGuestMap <em>Room ID To Guest Map</em>}</li>
- *   <li>{@link bookingmodel.impl.BookingImpl#getRoomTypeToRoomIDMap <em>Room Type To Room ID Map</em>}</li>
+ *   <li>{@link bookingmodel.impl.BookingImpl#getRoomIDToRoomTypeMap <em>Room ID To Room Type Map</em>}</li>
  *   <li>{@link bookingmodel.impl.BookingImpl#getPaymentMethod <em>Payment Method</em>}</li>
  *   <li>{@link bookingmodel.impl.BookingImpl#getExtraToIsPayedMap <em>Extra To Is Payed Map</em>}</li>
  * </ul>
@@ -194,14 +194,14 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	protected EMap<Integer, String> roomIDToGuestMap;
 
 	/**
-	 * The cached value of the '{@link #getRoomTypeToRoomIDMap() <em>Room Type To Room ID Map</em>}' map.
+	 * The cached value of the '{@link #getRoomIDToRoomTypeMap() <em>Room ID To Room Type Map</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRoomTypeToRoomIDMap()
+	 * @see #getRoomIDToRoomTypeMap()
 	 * @generated
 	 * @ordered
 	 */
-	protected EMap<String, Integer> roomTypeToRoomIDMap;
+	protected EMap<Integer, String> roomIDToRoomTypeMap;
 
 	/**
 	 * The default value of the '{@link #getPaymentMethod() <em>Payment Method</em>}' attribute.
@@ -360,12 +360,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated
 	 */
 	public void setNrOfGuests(int newNrOfGuests) {
-		if(!(newNrOfGuests != 0)){
 		int oldNrOfGuests = nrOfGuests;
 		nrOfGuests = newNrOfGuests;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.BOOKING__NR_OF_GUESTS, oldNrOfGuests, nrOfGuests));
-		}
 	}
 
 	/**
@@ -456,11 +454,11 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EMap<String, Integer> getRoomTypeToRoomIDMap() {
-		if (roomTypeToRoomIDMap == null) {
-			roomTypeToRoomIDMap = new EcoreEMap<String,Integer>(BookingmodelPackage.Literals.ROOM_TYPE_TO_ROOM_ID_ENTRY, RoomTypeToRoomIDEntryImpl.class, this, BookingmodelPackage.BOOKING__ROOM_TYPE_TO_ROOM_ID_MAP);
+	public EMap<Integer, String> getRoomIDToRoomTypeMap() {
+		if (roomIDToRoomTypeMap == null) {
+			roomIDToRoomTypeMap = new EcoreEMap<Integer,String>(BookingmodelPackage.Literals.ROOM_ID_TO_ROOM_TYPE_ENTRY, RoomIDToRoomTypeEntryImpl.class, this, BookingmodelPackage.BOOKING__ROOM_ID_TO_ROOM_TYPE_MAP);
 		}
-		return roomTypeToRoomIDMap;
+		return roomIDToRoomTypeMap;
 	}
 
 	/**
@@ -573,7 +571,40 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated NOT
 	 */
 	public int getNrOfRooms() {
-		return this.roomTypeToRoomIDMap.size(); 
+		return this.roomIDToRoomTypeMap.size(); 
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setExtras(EList<String> extras) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setRoomTypes(EList<String> roomTypes) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setRoomIDs(EList<Integer> roomIDs) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -622,8 +653,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		if(!(roomTypes.isEmpty())){
 		//TODO check if map is not empty first
 			for (int i = 0; i < roomTypes.size(); i++) {
-				this.roomTypeToRoomIDMap.put(roomTypes.get(i), null);
-				this.roomIDToGuestMap.put(null,roomTypes.get(i));
+				this.roomIDToGuestMap.put(null, roomTypes.get(i));
+				this.roomIDToRoomTypeMap.put(null,roomTypes.get(i));
 			}
 		}
 		return result;
@@ -640,8 +671,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		switch (featureID) {
 			case BookingmodelPackage.BOOKING__ROOM_ID_TO_GUEST_MAP:
 				return ((InternalEList<?>)getRoomIDToGuestMap()).basicRemove(otherEnd, msgs);
-			case BookingmodelPackage.BOOKING__ROOM_TYPE_TO_ROOM_ID_MAP:
-				return ((InternalEList<?>)getRoomTypeToRoomIDMap()).basicRemove(otherEnd, msgs);
+			case BookingmodelPackage.BOOKING__ROOM_ID_TO_ROOM_TYPE_MAP:
+				return ((InternalEList<?>)getRoomIDToRoomTypeMap()).basicRemove(otherEnd, msgs);
 			case BookingmodelPackage.BOOKING__EXTRA_TO_IS_PAYED_MAP:
 				return ((InternalEList<?>)getExtraToIsPayedMap()).basicRemove(otherEnd, msgs);
 		}
@@ -676,9 +707,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case BookingmodelPackage.BOOKING__ROOM_ID_TO_GUEST_MAP:
 				if (coreType) return getRoomIDToGuestMap();
 				else return getRoomIDToGuestMap().map();
-			case BookingmodelPackage.BOOKING__ROOM_TYPE_TO_ROOM_ID_MAP:
-				if (coreType) return getRoomTypeToRoomIDMap();
-				else return getRoomTypeToRoomIDMap().map();
+			case BookingmodelPackage.BOOKING__ROOM_ID_TO_ROOM_TYPE_MAP:
+				if (coreType) return getRoomIDToRoomTypeMap();
+				else return getRoomIDToRoomTypeMap().map();
 			case BookingmodelPackage.BOOKING__PAYMENT_METHOD:
 				return getPaymentMethod();
 			case BookingmodelPackage.BOOKING__EXTRA_TO_IS_PAYED_MAP:
@@ -726,8 +757,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case BookingmodelPackage.BOOKING__ROOM_ID_TO_GUEST_MAP:
 				((EStructuralFeature.Setting)getRoomIDToGuestMap()).set(newValue);
 				return;
-			case BookingmodelPackage.BOOKING__ROOM_TYPE_TO_ROOM_ID_MAP:
-				((EStructuralFeature.Setting)getRoomTypeToRoomIDMap()).set(newValue);
+			case BookingmodelPackage.BOOKING__ROOM_ID_TO_ROOM_TYPE_MAP:
+				((EStructuralFeature.Setting)getRoomIDToRoomTypeMap()).set(newValue);
 				return;
 			case BookingmodelPackage.BOOKING__PAYMENT_METHOD:
 				setPaymentMethod((PaymentMethod)newValue);
@@ -774,8 +805,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case BookingmodelPackage.BOOKING__ROOM_ID_TO_GUEST_MAP:
 				getRoomIDToGuestMap().clear();
 				return;
-			case BookingmodelPackage.BOOKING__ROOM_TYPE_TO_ROOM_ID_MAP:
-				getRoomTypeToRoomIDMap().clear();
+			case BookingmodelPackage.BOOKING__ROOM_ID_TO_ROOM_TYPE_MAP:
+				getRoomIDToRoomTypeMap().clear();
 				return;
 			case BookingmodelPackage.BOOKING__PAYMENT_METHOD:
 				setPaymentMethod(PAYMENT_METHOD_EDEFAULT);
@@ -813,8 +844,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return isPayed != IS_PAYED_EDEFAULT;
 			case BookingmodelPackage.BOOKING__ROOM_ID_TO_GUEST_MAP:
 				return roomIDToGuestMap != null && !roomIDToGuestMap.isEmpty();
-			case BookingmodelPackage.BOOKING__ROOM_TYPE_TO_ROOM_ID_MAP:
-				return roomTypeToRoomIDMap != null && !roomTypeToRoomIDMap.isEmpty();
+			case BookingmodelPackage.BOOKING__ROOM_ID_TO_ROOM_TYPE_MAP:
+				return roomIDToRoomTypeMap != null && !roomIDToRoomTypeMap.isEmpty();
 			case BookingmodelPackage.BOOKING__PAYMENT_METHOD:
 				return paymentMethod != PAYMENT_METHOD_EDEFAULT;
 			case BookingmodelPackage.BOOKING__EXTRA_TO_IS_PAYED_MAP:

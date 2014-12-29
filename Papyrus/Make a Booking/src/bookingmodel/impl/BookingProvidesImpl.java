@@ -262,7 +262,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		int result = 0;
 		// TODO: implement this method
 		String extras = this.bookingHandler.getBooking(bookingRef).getExtraToIsPayedMap().keySet().toString();
-		String roomtypes = this.bookingHandler.getBooking(bookingRef).getRoomTypeToRoomIDMap().values().toString();
+		//String roomtypes = this.bookingHandler.getBooking(bookingRef).getRoomTypeToRoomIDMap().values().toString();
 		
 		//maintenanceComponent.getPrice(extras);
 		//maintenanceComponent.getPrice(roomtypes);

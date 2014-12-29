@@ -191,15 +191,15 @@ public interface Booking extends EObject {
 	 */
 	EMap<Integer, String> getRoomIDToGuestMap();
 
+
 	/**
 	 * Returns a set of room IDs and their responsible guests.
 	 * @return the value of the '<em>Room Type To Room ID Map</em>' map.
 	 * @see bookingmodel.BookingmodelPackage#getBooking_RoomTypeToRoomIDMap()
-	 * @model mapType="bookingmodel.RoomTypeToRoomIDEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EIntegerObject>" ordered="false"
+	 * @model mapType="bookingmodel.RoomIDToRoomTypeEntry<org.eclipse.emf.ecore.EIntegerObject, org.eclipse.emf.ecore.EString>" ordered="false"
 	 * @generated NOT
 	 */
-	EMap<String, Integer> getRoomTypeToRoomIDMap();
-
+	EMap<Integer, String> getRoomIDToRoomTypeMap();
 	/**
 	 * Returns the payment method: credit card, cash or voucher.
 	 * @return the value of the '<em>Payment Method</em>' attribute.
