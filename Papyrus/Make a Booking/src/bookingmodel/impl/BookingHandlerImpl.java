@@ -117,8 +117,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 
 
 	/**
-	 * A method which edits a booking such as the start date, end date, 
-	 * number of guests, room type and extras.
+	 * @inheritDoc
 	 * @param bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras
 	 * @generated NOT
 	 */
@@ -129,10 +128,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				this.getBooking(bookingRef).setStartDate(startDate);
 				this.getBooking(bookingRef).setEndDate(endDate);
 				this.getBooking(bookingRef).setNrOfGuests(nrOfGuests);
-				// Get specific roomtype/extra hence list? 
 				this.getBooking(bookingRef).setRoomTypes(roomTypes);
 				this.getBooking(bookingRef).setExtras(extras);
-				//TODO: check if correct
+				//TODO: check other cases
 			}
 		return result;
 	}
@@ -215,6 +213,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {

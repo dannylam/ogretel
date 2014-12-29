@@ -241,12 +241,16 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	protected BookingImpl() {
 		super();
 	}
-	
+
 	/**
-	 * TODO: Javadoc
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * Constructs a the implementation of a booking with the number of guests, start- date & enddate,
+	 * the roomtypes, extras given and generates a booking reference to it. 
+	 * @param nrOfGuests
+	 * @param startDate
+	 * @param endDate
+	 * @param roomTypes
+	 * @param extras
+	 *  @generated NOT
 	 */
 	public BookingImpl(int nrOfGuests, String startDate, String endDate, List<String> roomTypes, List<String> extras) {
 		this.setNrOfGuests(nrOfGuests);
@@ -254,6 +258,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		this.setEndDate(endDate);
 		this.setRoomTypes(roomTypes);
 		this.setExtras(extras);
+		this.generateBookingRef();
 	}
 
 	/**
@@ -303,10 +308,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public void setStartDate(String newStartDate) {
 		if(!(newStartDate.equals(null))){
-		String oldStartDate = startDate;
-		startDate = newStartDate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.BOOKING__START_DATE, oldStartDate, startDate));
+			String oldStartDate = startDate;
+			startDate = newStartDate;
+			if (eNotificationRequired())
+				eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.BOOKING__START_DATE, oldStartDate, startDate));
 		}
 	}
 
@@ -535,7 +540,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 
 	/**
 	 * @inheritDoc
-	 *TODO: check if correct
 	 * @generated NOT
 	 */
 	public int setResponsibleGuest(int roomID, String guestEmail) {
@@ -544,11 +548,11 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			this.roomIDToGuestMap.get(roomID).setValue(guestEmail);
 		}
 		return result;
+		//TODO: check other cases
 	}
 	
 	/**
 	 * @inheritDoc
-	 *TODO: check if correct
 	 * @generated NOT
 	 */
 	public int setResponsibleGuestToAllRooms(String guestEmail) {
@@ -563,48 +567,15 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			}
 		}
 		return result;
+		//TODO: check other cases
 	}
 
 	/**
 	 * @inheritDoc 
-	 * TODO: check if its correct
 	 * @generated NOT
 	 */
 	public int getNrOfRooms() {
 		return this.roomIDToRoomTypeMap.size(); 
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setExtras(EList<String> extras) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setRoomTypes(EList<String> roomTypes) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setRoomIDs(EList<Integer> roomIDs) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -622,12 +593,13 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public int setRoomIDs(List<Integer> roomIDs) {
 		int result = 0;
-		//TODO check if map is not empty first
-		for (int i = 0; i < roomIDs.size(); i++) {
-			this.roomIDToGuestMap.put(roomIDs.get(i),roomIDToGuestMap.get(i).getValue());
+		if(!roomIDs.isEmpty() || !roomIDs.equals(null)){
+			for (int i = 0; i < roomIDs.size(); i++) {
+				this.roomIDToGuestMap.put(roomIDs.get(i),roomIDToGuestMap.get(i).getValue());
+			}
 		}
 		return result;
-		//TODO check if its correct
+		//TODO check other cases
 	}
 	
 	/**
@@ -636,12 +608,13 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public int setExtras(List<String> extras) {
 		int result = 0;
-		//TODO check if map is not empty first
-		for (int i = 0; i < extras.size(); i++) {
-			this.extraToIsPayedMap.put(extras.get(i),false);
+		if(!extras.isEmpty() || !extras.equals(null)){
+			for (int i = 0; i < extras.size(); i++) {
+				this.extraToIsPayedMap.put(extras.get(i),false);
+			}
 		}
 		return result;
-		//TODO check if its correct
+		//TODO check other cases
 	}
 
 	/**
@@ -650,15 +623,14 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public int setRoomTypes(List<String> roomTypes) {
 		int result = 0;
-		if(!(roomTypes.isEmpty())){
-		//TODO check if map is not empty first
+		if(!roomTypes.isEmpty() || !roomTypes.equals(null)){
 			for (int i = 0; i < roomTypes.size(); i++) {
 				this.roomIDToGuestMap.put(null, roomTypes.get(i));
 				this.roomIDToRoomTypeMap.put(null,roomTypes.get(i));
 			}
 		}
 		return result;
-		//TODO check if its correct
+		//TODO check other cases
 	}
 
 	/**
