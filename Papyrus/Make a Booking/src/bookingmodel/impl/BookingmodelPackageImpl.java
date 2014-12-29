@@ -493,6 +493,15 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getBooking__GenerateBookingRef() {
+		return bookingEClass.getEOperations().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCustomer() {
 		return customerEClass;
 	}
@@ -999,6 +1008,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		createEOperation(bookingEClass, BOOKING___SET_EXTRAS__ELIST);
 		createEOperation(bookingEClass, BOOKING___SET_ROOM_TYPES__ELIST);
 		createEOperation(bookingEClass, BOOKING___SET_ROOM_IDS__ELIST);
+		createEOperation(bookingEClass, BOOKING___GENERATE_BOOKING_REF);
 
 		customerEClass = createEClass(CUSTOMER);
 		createEReference(customerEClass, CUSTOMER__PAYMENT_DETAILS);
@@ -1148,6 +1158,8 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 
 		op = initEOperation(getBooking__SetRoomIDs__EList(), theTypesPackage.getInteger(), "setRoomIDs", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomIDs", 0, -1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getBooking__GenerateBookingRef(), null, "generateBookingRef", 1, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(customerEClass, Customer.class, "Customer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCustomer_PaymentDetails(), this.getPaymentDetails(), null, "paymentDetails", null, 1, -1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

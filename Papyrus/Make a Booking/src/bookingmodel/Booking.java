@@ -285,4 +285,11 @@ public interface Booking extends EObject {
 	 */
 	int setRoomIDs(List<Integer> roomIDs);
 
+	/**
+	 * Generates a booking reference to this booking
+	 * @model
+	 * @generated NOT
+	 */
+	void generateBookingRef();
+
 } // Booking
