@@ -11,6 +11,7 @@ import bookingmodel.PaymentMethod;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.List;
+import java.util.UUID;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -579,9 +580,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated NOT
 	 */
 	public void generateBookingRef() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		String bookingRef = UUID.randomUUID().toString();
+		this.setBookingRef(bookingRef);
 	}
 
 	/**
