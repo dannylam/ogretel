@@ -356,7 +356,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String book(String startDate, String endDate, int nrOfGuests, String roomTypes, String extras) {
 		String bookingRef = "";

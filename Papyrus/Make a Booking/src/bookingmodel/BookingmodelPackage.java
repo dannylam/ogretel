@@ -840,7 +840,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER___EDIT_BOOKING__STRING_STRING_STRING_INT_STRING_STRING = 4;
+	int BOOKING_HANDLER___EDIT_BOOKING__STRING_STRING_STRING_INT_ELIST_ELIST = 4;
 
 	/**
 	 * The number of operations of the '<em>Booking Handler</em>' class.
@@ -1892,14 +1892,14 @@ public interface BookingmodelPackage extends EPackage {
 	EOperation getBookingHandler__GetBooking__String();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.BookingHandler#editBooking(java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String) <em>Edit Booking</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.BookingHandler#editBooking(java.lang.String, java.lang.String, java.lang.String, int, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList) <em>Edit Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Edit Booking</em>' operation.
-	 * @see bookingmodel.BookingHandler#editBooking(java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String)
+	 * @see bookingmodel.BookingHandler#editBooking(java.lang.String, java.lang.String, java.lang.String, int, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getBookingHandler__EditBooking__String_String_String_int_String_String();
+	EOperation getBookingHandler__EditBooking__String_String_String_int_EList_EList();
 
 	/**
 	 * Returns the meta object for class '{@link bookingmodel.IBookingProvidesForHost <em>IBooking Provides For Host</em>}'.
@@ -2639,7 +2639,7 @@ public interface BookingmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_HANDLER___EDIT_BOOKING__STRING_STRING_STRING_INT_STRING_STRING = eINSTANCE.getBookingHandler__EditBooking__String_String_String_int_String_String();
+		EOperation BOOKING_HANDLER___EDIT_BOOKING__STRING_STRING_STRING_INT_ELIST_ELIST = eINSTANCE.getBookingHandler__EditBooking__String_String_String_int_EList_EList();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.IBookingProvidesForHost <em>IBooking Provides For Host</em>}' class.

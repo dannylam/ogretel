@@ -2,8 +2,9 @@
  */
 package bookingmodel;
 
-import org.eclipse.emf.common.util.EMap;
+import java.util.List;
 
+import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -75,9 +76,9 @@ public interface BookingHandler extends EObject {
 	 * A method that edits the booking reference, nr of nights, nr of guests, start of the date, 
 	 * end of the date, the type of the rooms and extras
 	 * @param bookingRef, nrOfNights, nrOfGuests, startDate, endDate, roomTypes, extras
-	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesDataType="types.String" roomTypesRequired="true" roomTypesOrdered="false" extrasDataType="types.String" extrasRequired="true" extrasOrdered="false"
-	 * @generated NOT
+	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesRequired="true" roomTypesMany="false" roomTypesOrdered="false" extrasMany="false" extrasOrdered="false"
+	 * @generated
 	 */
-	int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, String roomTypes, String extras);
+	int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras);
 
 } // BookingHandler
