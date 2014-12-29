@@ -369,13 +369,15 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
+<<<<<<< HEAD
+	 * <!-- begin-user-doc --> 
+	 * Return a list of all RoomTypeEnums available.
+	 * <!-- end-user-doc -->
 	 */
 	public EList<String> getRoomTypeEnums() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		return this.roomTypes.getRoomTypes();
+		// TODO: test
 	}
 
 	/**

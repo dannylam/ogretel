@@ -90,11 +90,16 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	/**
 	 * <!-- begin-user-doc -->
 	 * If isProduct is true then the given extra is a product, if it is false, the given extra is an experience
+	 * @return returns 1 if the ID already exists.
+	 * @return returns 0 if ok.
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public int addExtra(int extraID, int price, String name, String description, boolean isProduct) {
 		AbstractExtraImpl extra;
+		if(intToExtraMap.containsKey(extraID)) {
+			return 1;
+		}
 		if(isProduct) {
 			extra = new ProductImpl();
 		} else {
@@ -137,7 +142,6 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 			list.add(extraArray[i].toString());
 		}
 		return list;
-		//TODO
 	}
 
 	/**
