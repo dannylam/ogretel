@@ -200,6 +200,7 @@ public interface Booking extends EObject {
 	 * @generated NOT
 	 */
 	EMap<Integer, String> getRoomIDToRoomTypeMap();
+	
 	/**
 	 * Returns the payment method: credit card, cash or voucher.
 	 * @return the value of the '<em>Payment Method</em>' attribute.
