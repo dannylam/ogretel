@@ -75,11 +75,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
 	}
 	
 		/**
-		 * <!-- begin-user-doc -->
 		 * Returns true if there is a RoomType with the given String ID
 		 * @param ID
 		 * 		the RoomType ID to be checked if it exists
-		 * <!-- end-user-doc -->
 		 * 
 		 * @generated NOT
 		 */
@@ -87,7 +85,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 	
 			return this.getStringToRoomType().containsKey(ID);
 			// TODO: TEST
-			// Ensure that you remove @generated or mark it @generated NOT
 		}
 	
 		/**
