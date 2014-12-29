@@ -166,10 +166,6 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_k4694HlEEeScv6HJEKdjpA" name="Calendar">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_mXWqwHlEEeScv6HJEKdjpA" name="roomTypeCapTable" visibility="private" type="_GrhyMHlEEeScv6HJEKdjpA">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_E76dAIXtEeSU1psjCnSubg"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_E77rIIXtEeSU1psjCnSubg" value="*"/>
-      </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_W_kFIYXsEeSU1psjCnSubg" name="stringToListsMap" type="_qj6rAIXrEeSU1psjCnSubg" aggregation="composite" association="_W_kFIIXsEeSU1psjCnSubg">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_W_kFIoXsEeSU1psjCnSubg" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_W_kFI4XsEeSU1psjCnSubg" value="1"/>
@@ -181,9 +177,7 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_1EOu4HlEEeScv6HJEKdjpA" name="end">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6O6EAHlEEeScv6HJEKdjpA" name="roomType">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6O6EAHlEEeScv6HJEKdjpA" name="roomType" type="_CLdSkHk_EeScv6HJEKdjpA"/>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_-aUUgHlEEeScv6HJEKdjpA" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NnkkUIkIEeSbSvqLDtDSJA"/>
@@ -197,10 +191,11 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Aw5xYnlFEeScv6HJEKdjpA" name="end">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Aw5xY3lFEeScv6HJEKdjpA" name="roomType">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Aw5xY3lFEeScv6HJEKdjpA" name="roomType" type="_CLdSkHk_EeScv6HJEKdjpA"/>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_HjVugHlFEeScv6HJEKdjpA" name="nrOfRooms">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_5ygJ8I8_EeSxiJTOMlfhSg" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
@@ -396,6 +391,15 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ETR2gI8_EeSxiJTOMlfhSg" name="getRoomStatuses">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_crk3EI8_EeSxiJTOMlfhSg" name="statuses" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_oyxc8I9AEeSxiJTOMlfhSg" name="getRoomTypeEnum"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_qHxhAI9AEeSxiJTOMlfhSg" name="getRoomTypePrice"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_rcAwEI9AEeSxiJTOMlfhSg" name="getRoomTypeMaxNrOfGuests"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_x_V6MI9AEeSxiJTOMlfhSg" name="getRoomTypeDescription"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_dj3DAH2xEeSp56Ha0EyLeQ" name="IExtrasMaintenance">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_xoj2oHmvEeScv6HJEKdjpA" name="addExtra">
