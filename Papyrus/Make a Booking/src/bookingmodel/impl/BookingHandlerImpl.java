@@ -127,34 +127,18 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, String roomTypes, String extras) {
 		int result = 0;
 		// TODO: implement this method
 		/*check which inparams which are null, these are not to be changed, and have their oldvalue
 		 * then create a new booking with the old booking reference */
 		 
-			if(this.exists(bookingRef)) {			//kolla om booking ref finns
-					
-					this.getBooking(bookingRef).setStartDate(startDate);
-					
-					this.getBooking(bookingRef).setEndDate(endDate);
-					
-					this.getBooking(bookingRef).setNrOfGuests(nrOfGuests);
-	
-			//		this.getBooking(bookingRef).setRoomTypes(roomTypes);
-					
-			//		this.getBooking(bookingRef).setExtras(extras);
-			}
+		if(this.exists(bookingRef)) {			//kolla om booking ref finns
+			this.getBooking(bookingRef).setStartDate(startDate);
+			this.getBooking(bookingRef).setEndDate(endDate);
+			this.getBooking(bookingRef).setNrOfGuests(nrOfGuests);	
+			this.getBooking(bookingRef).setRoomTypes(roomTypes);
+			this.getBooking(bookingRef).setExtras(extras);
+		}
 		return result;
 	}
 
