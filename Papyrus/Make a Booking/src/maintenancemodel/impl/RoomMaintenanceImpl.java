@@ -321,8 +321,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Returns a list of the current Room IDs.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<String> getRoomIDs() {
 		
