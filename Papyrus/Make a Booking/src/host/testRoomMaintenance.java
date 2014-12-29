@@ -249,5 +249,13 @@ public class testRoomMaintenance {
 		assertTrue(edR == 0);
 		
 	}
+	
+	/**
+	 * Tests the function getRoomStatuses
+	 * @generated NOT
+	 */
+	public void testGetRoomStatuses(){
+		
+	}
 
 }
