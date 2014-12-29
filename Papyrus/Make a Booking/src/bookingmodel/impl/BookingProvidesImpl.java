@@ -295,13 +295,14 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, String roomTypes, String extras) {
 		int result = 0;
-
 		/*
 		 * Check with the changes if they are possible, ask maintenacne, if so, then the changes are registered 
 		 * in the booking
 		 * */
 		
-		this.getBookingHandler().editBooking(bookingRef, startDate, endDate, nrOfGuests, stringToList(roomTypes), stringToList(extras));
+		
+		
+		
 		//TODO: implement this method
 		return result;
 	}
