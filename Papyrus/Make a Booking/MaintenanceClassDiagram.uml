@@ -288,7 +288,7 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Tses8Xl5EeScv6HJEKdjpA" name="roomID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SbpqcIQ-EeSbvJ56HGFnrw" name="roomType">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_SbpqcIQ-EeSbvJ56HGFnrw" name="roomTypeID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_x0x5IIdiEeS_DZIcq0Rfuw" name="result" direction="return">
