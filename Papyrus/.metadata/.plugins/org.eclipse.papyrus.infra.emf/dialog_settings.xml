@@ -1,24 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<section name="org.eclipse.papyrus.infra.emf.providers.EMFGraphicalContentProvider_history__platform:/resource/Make%20a%20Booking/MaintenanceClassDiagram.uml:uml:Type:type">
-		<section name="History">
-			<list key="PreviousSelection">
-				<item value="platform:/resource/Make%20a%20Booking/MaintenanceClassDiagram.uml#_CLdSkHk_EeScv6HJEKdjpA"/>
-				<item value="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-				<item value="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-			</list>
-		</section>
-	</section>
-	<section name="org.eclipse.papyrus.infra.emf.providers.EMFGraphicalContentProvider_history__uml:Type:type">
-		<section name="History">
-			<list key="PreviousSelection">
-				<item value="platform:/resource/Make%20a%20Booking/MaintenanceClassDiagram.uml#_CLdSkHk_EeScv6HJEKdjpA"/>
-				<item value="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-				<item value="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-				<item value="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-			</list>
-		</section>
-	</section>
 	<section name="org.eclipse.papyrus.infra.emf.customizationManager">
 	</section>
 </section>
