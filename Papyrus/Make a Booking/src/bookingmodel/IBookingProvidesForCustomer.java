@@ -70,12 +70,12 @@ public interface IBookingProvidesForCustomer extends EObject {
 	int setPersonalDetails(String firstName, String lastName, int age, String email, String bookingRef);
 
 	/**
-	  * Make a booking such as number of nights, number of guests,
-	 * start and end date, number of rooms, roomtypes and extras.
-	 * @param nrOfNights, nrOfGuests, date, nrOfRooms, roomTypes, extras
-	 * @model dataType="types.Integer" required="true" ordered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesDataType="types.String" roomTypesRequired="true" roomTypesOrdered="false" extrasDataType="types.String" extrasRequired="true" extrasOrdered="false"
+	  * Make a booking such for the given start- and enddate, number of guests,
+	  * roomtypes (and how many of each roomtype) and extras.
+	 * @param startDate, endDate, nrOfGuests, roomTypes, extras
+	 * @model dataType="types.String" required="true" ordered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesDataType="types.String" roomTypesRequired="true" roomTypesOrdered="false" extrasDataType="types.String" extrasRequired="true" extrasOrdered="false"
 	 * @generated NOT
 	 */
-	int book(String startDate, String endDate, int nrOfGuests, String roomTypes, String extras);
+	String book(String startDate, String endDate, int nrOfGuests, String roomTypes, String extras);
 
 } // IBookingProvidesForCustomer
