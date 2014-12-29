@@ -352,14 +352,14 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		return result;
 	}
 
+
 	/**
-	 *TODO: javadoc
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public int book(String startDate, String endDate, int nrOfGuests, String roomTypes, String extras) {
-		int result = 0;
+	public String book(String startDate, String endDate, int nrOfGuests, String roomTypes, String extras) {
+		String bookingRef = "";
 		// TODO: implement this method
 
 		/*
@@ -368,10 +368,13 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		
 		/*if(maintenanceComponent.canBook(roomTypes, startDate, endDate){
 			Booking booking = new BookingImpl(nrOfGuests, startDate, endDate, stringToList(roomTypes), stringToList(extras));	
+			//
+			
 			this.bookingHandler.addBooking(booking);
 		}*/
-		return result;
+		return bookingRef;
 	}
+
 
 	/**
 	 * <!-- begin-user-doc -->
