@@ -3,6 +3,7 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
 
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.Room;
@@ -14,6 +15,7 @@ import maintenancemodel.RoomTypesHandler;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -323,20 +325,23 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public EList<String> getRoomIDs() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		Integer[] ids = this.rooms.getIntegerToRoomMap().keySet().toArray(new Integer[0]);
+		return new BasicEList( Arrays.asList(ids) );
+		// TODO: TEST
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Returns a list of the current RoomType IDs.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<String> getRoomTypeIDs() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		String[] ids = this.roomTypes.getStringToRoomType().keySet().toArray(new String[0]);
+		return new BasicEList( Arrays.asList(ids) );
+		// TODO: test
 	}
 
 	/**

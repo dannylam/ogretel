@@ -102,13 +102,11 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int addExtra(int extraID, int price, String name,
 			String description, boolean isProduct) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return extras.addExtra(extraID, price, name, description, isProduct);
 	}
 
 	/**
@@ -117,19 +115,25 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 	 * @generated NOT
 	 */
 	public int removeExtra(int extra) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return extras.removeExtra(extra);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int editExtra(int extraID, int price, String name, String description) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		AbstractExtraImpl extra;
+		if(extras.exists(extraID)) {
+			extra = (AbstractExtraImpl) extras.getExtra(extraID);
+			extra.setName(name);
+			extra.setDescription(description);
+			extra.setPrice(price);
+			extra.setID(extraID);
+			return 0;
+		} else {
+			return 1;
+		}
 	}
 
 	/**
@@ -138,9 +142,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 	 * @generated NOT
 	 */
 	public Extra getExtra(int ID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return extras.getExtra(ID);
 	}
 
 	/**

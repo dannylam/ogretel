@@ -3,9 +3,12 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Map.Entry;
+
 import maintenancemodel.Extra;
 import maintenancemodel.ExtraHandler;
 import maintenancemodel.MaintenancemodelPackage;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -86,13 +89,24 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * If isProduct is true then the given extra is a product, if it is false, the given extra is an experience
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int addExtra(int extraID, int price, String name, String description, boolean isProduct) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		AbstractExtraImpl extra;
+		if(isProduct) {
+			extra = new ProductImpl();
+		} else {
+			extra = new ExperienceImpl();
+		}
+		extra.setName(name);
+		extra.setID(extraID);
+		extra.setPrice(price);
+		extra.setDescription(description);
+		
+		//TODO
+		return 0;
 	}
 
 	/**
@@ -135,13 +149,15 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Returns the price of the extra
+	 * @return Returns the price of the extra
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getPrice(int extraID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Integer integer = new Integer (extraID);
+		AbstractExtraImpl extra = (AbstractExtraImpl) intToExtraMap.get(integer);
+		return extra.getPrice();
 	}
 
 	/**

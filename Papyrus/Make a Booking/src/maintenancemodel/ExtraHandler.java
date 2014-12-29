@@ -80,5 +80,14 @@ public interface ExtraHandler extends EObject {
 	 * @generated
 	 */
 	int getPrice(int extraID);
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * Returns null if there is no Extra with that key
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	
+	public Extra getExtra(int ID);
 
 } // ExtraHandler
