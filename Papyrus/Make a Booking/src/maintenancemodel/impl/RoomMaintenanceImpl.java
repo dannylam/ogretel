@@ -11,6 +11,7 @@ import maintenancemodel.RoomHandler;
 import maintenancemodel.RoomMaintenance;
 import maintenancemodel.RoomStatusEnum;
 import maintenancemodel.RoomType;
+import maintenancemodel.RoomTypeEnum;
 import maintenancemodel.RoomTypesHandler;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -354,9 +355,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
 	 * {@inheritDoc}
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public String getRoomTypeID(int roomID) {
@@ -369,21 +368,23 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-<<<<<<< HEAD
-	 * <!-- begin-user-doc --> 
-	 * Return a list of all RoomTypeEnums available.
-	 * <!-- end-user-doc -->
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public EList<String> getRoomTypeEnums() {
-		
-		return this.roomTypes.getRoomTypes();
+		RoomTypeEnum[] enums = RoomTypeEnum.values();
+		EList<String> strings = new BasicEList<String>(enums.length);
+
+		for (RoomTypeEnum e : enums) {
+			strings.add(e.toString());
+		}
+
+		return strings;
 		// TODO: test
 	}
 
 	/**
-	 * <!-- begin-user-doc --> Edit the RoomType with @param roomTypeID so that
-	 * it has the values given in the other parameters. <!-- end-user-doc -->
-	 * 
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int editRoomType(String roomTypeID, String roomTypeEnum, int price,

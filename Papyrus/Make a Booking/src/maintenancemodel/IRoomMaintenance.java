@@ -156,12 +156,14 @@ public interface IRoomMaintenance extends EObject {
 	EList<String> getRoomStatuses();
 
 	/**
-	 * TODO finish documentation
+	 * Makes it simpler for user of the system to choose a correct RoomTypeEnum.
+	 * 
+	 * @return a list of Strings of the RoomTypeEnum
 	 * 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true"
 	 *        ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String"
 	 *        roomTypeIDRequired="true" roomTypeIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	String getRoomTypeEnum(String roomTypeID);
 

@@ -40,10 +40,9 @@ public interface RoomHandler extends EObject {
 	EMap<Integer, Room> getIntegerToRoomMap();
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @return true if there is a Room with roomID given by inparam
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	boolean exists(int roomID);
 
