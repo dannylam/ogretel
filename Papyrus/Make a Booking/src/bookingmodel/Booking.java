@@ -283,6 +283,7 @@ public interface Booking extends EObject {
 	int setRoomTypes(List<String> roomTypes);
 
 	/**
+	 * 
 	 * Adds roomIDs from a booking into the map with roomIDs.
 	 * @model dataType="types.Integer" required="true" roomIDsDataType="types.Integer" roomIDsMany="true"
 	 * @generated
