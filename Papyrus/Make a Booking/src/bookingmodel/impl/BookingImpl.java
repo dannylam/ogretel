@@ -582,12 +582,62 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int setRoomIDs(List<Integer> roomIDs) {
+	public int setExtras(EList<String> extras) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setRoomTypes(EList<String> roomTypes) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setRoomIDs(EList<Integer> roomIDs) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 *  TODO: javadoc
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void generateBookingRef() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * TODO: javadoc
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public int setRoomIDs(List<Integer> roomIDs) {
+		int result = 0;
+		//TODO check if map is not empty first
+		for (int i = 0; i < roomIDs.size(); i++) {
+			this.roomIDToGuestMap.put(roomIDs.get(i),roomIDToGuestMap.get(i).getValue());
+		}
+		return result;
+		//TODO check if its correct
+	}
+	
 	/**
 	 * Sets all payed extras into a list, where the results 
 	 * indicate how it went. 
@@ -613,6 +663,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		//TODO check if map is not empty first
 		for (int i = 0; i < roomTypes.size(); i++) {
 			this.roomTypeToRoomIDMap.put(roomTypes.get(i), null);
+			this.roomIDToGuestMap.put(null,roomTypes.get(i));
 		}
 		return result;
 		//TODO check if its correct
@@ -836,6 +887,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return setRoomTypes((EList<String>)arguments.get(0));
 			case BookingmodelPackage.BOOKING___SET_ROOM_IDS__ELIST:
 				return setRoomIDs((EList<Integer>)arguments.get(0));
+			case BookingmodelPackage.BOOKING___GENERATE_BOOKING_REF:
+				generateBookingRef();
+				return null;
 		}
 		return super.eInvoke(operationID, arguments);
 	}
