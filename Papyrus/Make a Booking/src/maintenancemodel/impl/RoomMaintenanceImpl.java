@@ -183,13 +183,18 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Remove a Room.
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public int removeRoom(int roomID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		if(this.rooms.exists(roomID)){
+			this.rooms.removeRoom(roomID);
+			return 0;
+		}
+		return 1;
+		// TODO: 
 	}
 
 	/**

@@ -83,9 +83,9 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public boolean exists(int roomID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		return this.getIntegerToRoomMap().containsKey(roomID);
+		// TODO: 
 	}
 
 
