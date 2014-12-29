@@ -75,9 +75,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * TODO: javadoc
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public boolean exists(String bookingRef) {
@@ -86,19 +84,18 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * TODO: javadoc
-	 * @return 
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public int addBooking(Booking booking) {
 		int result = 0;
 		this.bookingsMap.put(booking.getBookingRef(), booking);
-		//TODO: check if correct
+		//TODO: check other cases
 		return result;
 	}
 
 	/**
-	 * TODO: javadoc
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public int removeBooking(String bookingRef) {
@@ -106,17 +103,16 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		if(this.exists(bookingRef)){
 			this.bookingsMap.remove(getBooking(bookingRef));
 		}	
-		//TODO: check if correct
+		//TODO: check other cases
 		return result;
 	}
 
 	/**
-	 * TODO: javadoc
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public Booking getBooking(String bookingRef) {
 		return this.bookingsMap.get(bookingRef);
-		//TODO: check if correct
 	}
 
 
