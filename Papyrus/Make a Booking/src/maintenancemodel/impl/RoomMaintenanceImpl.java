@@ -324,13 +324,16 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
+	 * <!-- begin-user-doc -->Get the RoomTypes price. <!-- end-user-doc -->
+	 * @generated NOT
 	 */
 	public int getRoomTypePrice(String roomTypeID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		if( this.roomTypes.exists(roomTypeID)){
+			return this.roomTypes.getRoomType(roomTypeID).getPrice();
+		}
+		return 1;
+		// TODO: test
 	}
 
 	/**
@@ -369,7 +372,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-<<<<<<< HEAD
 	 * <!-- begin-user-doc --> 
 	 * Return a list of all RoomTypeEnums available.
 	 * <!-- end-user-doc -->

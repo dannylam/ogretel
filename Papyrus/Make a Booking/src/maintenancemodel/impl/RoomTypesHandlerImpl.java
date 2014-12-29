@@ -137,13 +137,18 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Get the RoomType from its ID.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public RoomType getRoomType(String roomTypeID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		if(this.getStringToRoomType().containsKey(roomTypeID)){
+			return this.getStringToRoomType().get(roomTypeID);
+		}
+		return null;
+		
+		// TODO: test. & is return null good?
 	}
 
 	/**

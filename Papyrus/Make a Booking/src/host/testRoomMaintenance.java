@@ -392,5 +392,28 @@ public class testRoomMaintenance {
 		assertTrue(this.rm.getRoomTypeEnums().contains(roomTypeID));
 		
 	}
+	
+	/**
+	 * Tests whether it is possible to get a RoomTypes price.
+	 * @generated NOT
+	 */
+	@Test
+	public void testGetRoomTypePrice() {
+
+		//Create RoomType
+		String roomTypeID = "Paula";
+		String roomTypeEnum = "luxurysuite";
+		int price = 500;
+		int maxNrOfGuests = 3;
+		String description = "Hello to you.";
+
+		//Add the RT
+		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		assertTrue(addRT == 0);
+		
+		// Get its price
+		assertTrue(this.rm.getRoomTypePrice(roomTypeID) == 500);
+		
+	}
 
 }
