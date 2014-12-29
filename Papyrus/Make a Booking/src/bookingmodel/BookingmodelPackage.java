@@ -396,13 +396,22 @@ public interface BookingmodelPackage extends EPackage {
 	int BOOKING___SET_ROOM_IDS__ELIST = 7;
 
 	/**
+	 * The operation id for the '<em>Generate Booking Ref</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING___GENERATE_BOOKING_REF = 8;
+
+	/**
 	 * The number of operations of the '<em>Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_OPERATION_COUNT = 8;
+	int BOOKING_OPERATION_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.impl.PersonImpl <em>Person</em>}' class.
@@ -1606,6 +1615,16 @@ public interface BookingmodelPackage extends EPackage {
 	EOperation getBooking__SetRoomIDs__EList();
 
 	/**
+	 * Returns the meta object for the '{@link bookingmodel.Booking#generateBookingRef() <em>Generate Booking Ref</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Generate Booking Ref</em>' operation.
+	 * @see bookingmodel.Booking#generateBookingRef()
+	 * @generated
+	 */
+	EOperation getBooking__GenerateBookingRef();
+
+	/**
 	 * Returns the meta object for class '{@link bookingmodel.Customer <em>Customer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2393,6 +2412,14 @@ public interface BookingmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING___SET_ROOM_IDS__ELIST = eINSTANCE.getBooking__SetRoomIDs__EList();
+
+		/**
+		 * The meta object literal for the '<em><b>Generate Booking Ref</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING___GENERATE_BOOKING_REF = eINSTANCE.getBooking__GenerateBookingRef();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.impl.CustomerImpl <em>Customer</em>}' class.
