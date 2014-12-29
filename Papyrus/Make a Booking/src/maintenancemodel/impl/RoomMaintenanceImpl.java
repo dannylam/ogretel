@@ -362,8 +362,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * {@inheritDoc}
-	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getRoomTypeEnum(String roomTypeID) {
 		String result = null;
