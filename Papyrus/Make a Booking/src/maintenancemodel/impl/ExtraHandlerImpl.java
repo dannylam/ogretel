@@ -3,9 +3,11 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import maintenancemodel.Extra;
 import maintenancemodel.ExtraHandler;
 import maintenancemodel.MaintenancemodelPackage;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -13,6 +15,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.BasicInternalEList;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -102,7 +105,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 		extra.setPrice(price);
 		extra.setDescription(description);
 		
-		//TODO
+		intToExtraMap.put(extraID, extra);
 		return 0;
 	}
 
@@ -125,12 +128,16 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<String> getExtras() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		Extra[] extraArray = (Extra[]) intToExtraMap.values().toArray();
+		EList<String> list = new BasicInternalEList<String>(getClass());
+		for(int i = 0; i < extraArray.length; i++) {
+			list.add(extraArray[i].toString());
+		}
+		return list;
+		//TODO
 	}
 
 	/**
