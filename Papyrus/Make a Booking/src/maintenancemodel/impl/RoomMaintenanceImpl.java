@@ -347,7 +347,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public EList<String> getRoomStatuses() {
 		RoomStatusEnum[] enums = RoomStatusEnum.values();
-		BasicEList<String> strings = new BasicEList<String>(enums.length);
+		EList<String> strings = new BasicEList<String>(enums.length);
 
 		for (RoomStatusEnum e : enums) {
 			strings.add(e.toString());
