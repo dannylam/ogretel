@@ -132,21 +132,20 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		int result = 0;
 		// TODO: implement this method
 		/*check which inparams which are null, these are not to be changed, and have their oldvalue
-		 * then create a new booking with the old booking reference
+		 * then create a new booking with the old booking reference */
 		 
-			Booking newBooking = new BookingImpl(nrOfNights, nrOfGuests, date, stringToList(roomTypes), stringToList(extras));	
-
-			
-			Booking booking = this.bookingsMap.get(bookingRef);
-			Booking newBooking = new BookingImpl();
-			
-			booking.setStartDate(startDate);
-			booking.setEndDate(endDate);
-			booking.setNrOfGuests(nrOfGuests);
-			booking.setRoomTypes(roomTypes);
-			booking.setExtras(extras);*/
-			
-			return result;
+			if(this.exists(bookingRef)) {			//kolla om booking ref finns
+					
+					this.getBooking(bookingRef).setStartDate(startDate);
+					
+					this.getBooking(bookingRef).setEndDate(endDate);
+					
+					this.getBooking(bookingRef).setNrOfGuests(nrOfGuests);
+	
+			//		this.getBooking(bookingRef).setRoomTypes(roomTypes);
+					
+				//	this.getBooking(bookingRef).setExtras(extras);
+			}
 	}
 
 	/**
