@@ -133,8 +133,10 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				this.getBooking(bookingRef).setStartDate(startDate);
 				this.getBooking(bookingRef).setEndDate(endDate);
 				this.getBooking(bookingRef).setNrOfGuests(nrOfGuests);
+				// Get specific roomtype/extra hence list? 
 				this.getBooking(bookingRef).setRoomTypes(roomTypes);
 				this.getBooking(bookingRef).setExtras(extras);
+				//TODO: check if correct
 			}
 		return result;
 	}
