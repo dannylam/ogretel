@@ -186,7 +186,7 @@ public class testRoomMaintenance {
 		int addedR = this.rm.addRoom(10, roomTypeID);
 		
 		assertTrue(addedR == 0);
-		assertTrue(this.rm.getRoomTypeIDs().contains(10));	
+		assertTrue(this.rm.getRoomIDs().contains(10));	
 	}
 
 }
