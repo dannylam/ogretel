@@ -131,8 +131,10 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, String roomTypes, String extras) {
 		int result = 0;
 		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-			/*Booking newBooking = new BookingImpl(nrOfNights, nrOfGuests, date, stringToList(roomTypes), stringToList(extras));	
+		/*check which inparams which are null, these are not to be changed, and have their oldvalue
+		 * then create a new booking with the old booking reference
+		 
+			Booking newBooking = new BookingImpl(nrOfNights, nrOfGuests, date, stringToList(roomTypes), stringToList(extras));	
 
 			
 			Booking booking = this.bookingsMap.get(bookingRef);
