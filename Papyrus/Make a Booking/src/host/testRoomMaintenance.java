@@ -446,5 +446,28 @@ public class testRoomMaintenance {
 		assertTrue(this.rm.getRoomTypeDescription(roomTypeID) == description);
 		
 	}
+	
+	/**
+	 * Tests whether it is possible to get a RoomTypes max number of guests.
+	 * @generated NOT
+	 */
+	@Test
+	public void testGetRoomTypeMNG() {
+
+		//Create RoomType
+		String roomTypeID = "Sara";
+		String roomTypeEnum = "luxurysuite";
+		int price = 500;
+		int maxNrOfGuests = 3;
+		String description = "Hello to you.";
+
+		//Add the RT
+		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		assertTrue(addRT == 0);
+		
+		// Get its price
+		assertTrue(this.rm.getRoomTypeMaxNrOfGuests(roomTypeID) == 3);
+		
+	}
 
 }

@@ -389,14 +389,18 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
+	 * @generated NOT
 	 */
 	public int getRoomTypeMaxNrOfGuests(String roomTypeID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		if (this.roomTypes.exists(roomTypeID)) {
+			return this.roomTypes.getRoomType(roomTypeID).getMaxNrOfGuests();
+		}
+		return 1;
+		// TODO
 	}
 
 	/**
