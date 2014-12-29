@@ -239,6 +239,20 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	protected BookingImpl() {
 		super();
 	}
+	
+	/**
+	 * TODO: Javadoc
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public BookingImpl(int nrOfGuests, String startDate, String endDate, List<String> roomTypes, List<String> extras) {
+		this.setNrOfGuests(nrOfGuests);
+		this.setStartDate(startDate);
+		this.setEndDate(endDate);
+		this.setRoomTypes(roomTypes);
+		this.setExtras(extras);
+	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -562,6 +576,18 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		return this.roomTypeToRoomIDMap.size(); 
 	}
 
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setRoomIDs(List<Integer> roomIDs) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
 	/**
 	 * Sets all payed extras into a list, where the results 
 	 * indicate how it went. 
@@ -569,6 +595,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public int setExtras(List<String> extras) {
 		int result = 0;
+		//TODO check if map is not empty first
 		for (int i = 0; i < extras.size(); i++) {
 			this.extraToIsPayedMap.put(extras.get(i),false);
 		}
@@ -583,6 +610,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public int setRoomTypes(List<String> roomTypes) {
 		int result = 0;
+		//TODO check if map is not empty first
 		for (int i = 0; i < roomTypes.size(); i++) {
 			this.roomTypeToRoomIDMap.put(roomTypes.get(i), null);
 		}
@@ -806,6 +834,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return setExtras((EList<String>)arguments.get(0));
 			case BookingmodelPackage.BOOKING___SET_ROOM_TYPES__ELIST:
 				return setRoomTypes((EList<String>)arguments.get(0));
+			case BookingmodelPackage.BOOKING___SET_ROOM_IDS__ELIST:
+				return setRoomIDs((EList<Integer>)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

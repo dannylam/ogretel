@@ -22,6 +22,7 @@ import java.util.Map;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EGenericType;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -483,6 +484,15 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getBooking__SetRoomIDs__EList() {
+		return bookingEClass.getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCustomer() {
 		return customerEClass;
 	}
@@ -780,7 +790,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingProvidesForCustomer__GetBooking__String() {
+	public EOperation getIBookingProvidesForCustomer__Pay__String() {
 		return iBookingProvidesForCustomerEClass.getEOperations().get(0);
 	}
 
@@ -789,7 +799,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingProvidesForCustomer__Pay__String() {
+	public EOperation getIBookingProvidesForCustomer__GetPrice__String() {
 		return iBookingProvidesForCustomerEClass.getEOperations().get(1);
 	}
 
@@ -798,7 +808,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingProvidesForCustomer__GetPrice__String() {
+	public EOperation getIBookingProvidesForCustomer__RemoveBooking__String() {
 		return iBookingProvidesForCustomerEClass.getEOperations().get(2);
 	}
 
@@ -807,7 +817,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingProvidesForCustomer__RemoveBooking__String() {
+	public EOperation getIBookingProvidesForCustomer__EditBooking__String_String_String_int_String_String() {
 		return iBookingProvidesForCustomerEClass.getEOperations().get(3);
 	}
 
@@ -816,7 +826,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingProvidesForCustomer__EditBooking__String_String_String_int_String_String() {
+	public EOperation getIBookingProvidesForCustomer__SetPaymentMethod__String() {
 		return iBookingProvidesForCustomerEClass.getEOperations().get(4);
 	}
 
@@ -825,7 +835,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingProvidesForCustomer__ChoosePaymentMethod__String() {
+	public EOperation getIBookingProvidesForCustomer__SetPaymentDetails__String_String_int_int_String_String_String() {
 		return iBookingProvidesForCustomerEClass.getEOperations().get(5);
 	}
 
@@ -834,7 +844,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingProvidesForCustomer__SetPaymentDetails__String_String_int_int_String_String() {
+	public EOperation getIBookingProvidesForCustomer__SetPersonalDetails__String_String_int_String_String() {
 		return iBookingProvidesForCustomerEClass.getEOperations().get(6);
 	}
 
@@ -843,26 +853,8 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingProvidesForCustomer__SetPersonalDetails__String_String_int_String() {
-		return iBookingProvidesForCustomerEClass.getEOperations().get(7);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getIBookingProvidesForCustomer__SetCustomerToBooking__String_String() {
-		return iBookingProvidesForCustomerEClass.getEOperations().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getIBookingProvidesForCustomer__Book__String_String_int_String_String() {
-		return iBookingProvidesForCustomerEClass.getEOperations().get(9);
+		return iBookingProvidesForCustomerEClass.getEOperations().get(7);
 	}
 
 	/**
@@ -1006,6 +998,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		createEOperation(bookingEClass, BOOKING___GET_NR_OF_ROOMS);
 		createEOperation(bookingEClass, BOOKING___SET_EXTRAS__ELIST);
 		createEOperation(bookingEClass, BOOKING___SET_ROOM_TYPES__ELIST);
+		createEOperation(bookingEClass, BOOKING___SET_ROOM_IDS__ELIST);
 
 		customerEClass = createEClass(CUSTOMER);
 		createEReference(customerEClass, CUSTOMER__PAYMENT_DETAILS);
@@ -1047,15 +1040,13 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		createEOperation(iBookingProvidesForHostEClass, IBOOKING_PROVIDES_FOR_HOST___GET_SERVICE_NOTES__STRING);
 
 		iBookingProvidesForCustomerEClass = createEClass(IBOOKING_PROVIDES_FOR_CUSTOMER);
-		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___GET_BOOKING__STRING);
 		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___PAY__STRING);
 		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___GET_PRICE__STRING);
 		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___REMOVE_BOOKING__STRING);
 		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___EDIT_BOOKING__STRING_STRING_STRING_INT_STRING_STRING);
-		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___CHOOSE_PAYMENT_METHOD__STRING);
-		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___SET_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING);
-		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___SET_PERSONAL_DETAILS__STRING_STRING_INT_STRING);
-		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___SET_CUSTOMER_TO_BOOKING__STRING_STRING);
+		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___SET_PAYMENT_METHOD__STRING);
+		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___SET_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_STRING);
+		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___SET_PERSONAL_DETAILS__STRING_STRING_INT_STRING_STRING);
 		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___BOOK__STRING_STRING_INT_STRING_STRING);
 
 		iBookingProvidesForGuestEClass = createEClass(IBOOKING_PROVIDES_FOR_GUEST);
@@ -1155,6 +1146,9 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		op = initEOperation(getBooking__SetRoomTypes__EList(), theTypesPackage.getInteger(), "setRoomTypes", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomTypes", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
+		op = initEOperation(getBooking__SetRoomIDs__EList(), theTypesPackage.getInteger(), "setRoomIDs", 1, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "roomIDs", 0, -1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(customerEClass, Customer.class, "Customer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCustomer_PaymentDetails(), this.getPaymentDetails(), null, "paymentDetails", null, 1, -1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
@@ -1216,13 +1210,14 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		op = initEOperation(getIBookingProvidesForHost__RemoveServiceNote__String(), theTypesPackage.getInteger(), "removeServiceNote", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "serviceNote", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingProvidesForHost__GetServiceNotes__String(), theTypesPackage.getString(), "getServiceNotes", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookingProvidesForHost__GetServiceNotes__String(), null, "getServiceNotes", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EGenericType g1 = createEGenericType(ecorePackage.getEEList());
+		EGenericType g2 = createEGenericType();
+		g1.getETypeArguments().add(g2);
+		initEOperation(op, g1);
 
 		initEClass(iBookingProvidesForCustomerEClass, IBookingProvidesForCustomer.class, "IBookingProvidesForCustomer", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		op = initEOperation(getIBookingProvidesForCustomer__GetBooking__String(), this.getBooking(), "getBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "bookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIBookingProvidesForCustomer__Pay__String(), theTypesPackage.getInteger(), "pay", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1241,25 +1236,23 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		addEParameter(op, theTypesPackage.getString(), "roomTypes", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "extras", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingProvidesForCustomer__ChoosePaymentMethod__String(), theTypesPackage.getInteger(), "choosePaymentMethod", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookingProvidesForCustomer__SetPaymentMethod__String(), theTypesPackage.getInteger(), "setPaymentMethod", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "method", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingProvidesForCustomer__SetPaymentDetails__String_String_int_int_String_String(), theTypesPackage.getInteger(), "setPaymentDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookingProvidesForCustomer__SetPaymentDetails__String_String_int_int_String_String_String(), theTypesPackage.getInteger(), "setPaymentDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccNumber", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ccv", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "expiryMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "expiryYear", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "customerEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingProvidesForCustomer__SetPersonalDetails__String_String_int_String(), theTypesPackage.getInteger(), "setPersonalDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookingProvidesForCustomer__SetPersonalDetails__String_String_int_String_String(), theTypesPackage.getInteger(), "setPersonalDetails", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "firstName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "age", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "email", 1, 1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getIBookingProvidesForCustomer__SetCustomerToBooking__String_String(), theTypesPackage.getInteger(), "setCustomerToBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "customerEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIBookingProvidesForCustomer__Book__String_String_int_String_String(), theTypesPackage.getInteger(), "book", 1, 1, IS_UNIQUE, !IS_ORDERED);

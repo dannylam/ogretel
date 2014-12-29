@@ -23,14 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface IBookingProvidesForCustomer extends EObject {
 	/**
-	* Get a specific booking.
-	 * @param bookingRef
-	 * @model required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated NOT
-	 */
-	Booking getBooking(String bookingRef);
-
-	/**
 	 * Pay the price of a specific booking.
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
@@ -64,38 +56,18 @@ public interface IBookingProvidesForCustomer extends EObject {
 	int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, String roomTypes, String extras);
 
 	/**
-	 /**
-	 * A method for choosing a payment method such as credit card, cash and voucher
-	 * @param method
-	 * @model dataType="types.Integer" required="true" ordered="false" methodDataType="types.String" methodRequired="true" methodOrdered="false"
-	 * @generated NOT
-	 */
-	int choosePaymentMethod(String method);
-
-	/**
-	 * Set payment details such as credit card number, card code verification, 
-	 * expiration month, expiration year, first name and last name.
-	 * @param ccNr, ccV, expiryMonth, expiryYear, firstName, lastName
-	 * @model dataType="types.Integer" required="true" ordered="false" ccNumberDataType="types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="types.String" ccvRequired="true" ccvOrdered="false" expiryMonthDataType="types.Integer" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearDataType="types.Integer" expiryYearRequired="true" expiryYearOrdered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false"
-	 * @generated NOT
-	 */
-	int setPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model dataType="types.Integer" required="true" ordered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false" ageDataType="types.Integer" ageRequired="true" ageOrdered="false" emailDataType="types.String" emailRequired="true" emailOrdered="false"
 	 * @generated NOT
 	 */
-	int setPersonalDetails(String firstName, String lastName, int age, String email);
+	int setPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, String customerEmail);
 
 	/**
-	  * Set personal details such as first name, last name, age and email of a guest.
+	 * Set personal details such as first name, last name, age and email of a customer and assigns this customer to a booking.
 	 * @param firstName, lastName, age, email
 	 * @model dataType="types.Integer" required="true" ordered="false" customerEmailDataType="types.String" customerEmailRequired="true" customerEmailOrdered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
-	int setCustomerToBooking(String customerEmail, String bookingRef);
+	int setPersonalDetails(String firstName, String lastName, int age, String email, String bookingRef);
 
 	/**
 	  * Make a booking such as number of nights, number of guests,

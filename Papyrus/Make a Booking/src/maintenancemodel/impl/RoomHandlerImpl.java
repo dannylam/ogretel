@@ -3,10 +3,13 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.Room;
 import maintenancemodel.RoomHandler;
 import maintenancemodel.RoomType;
+import maintenancemodel.RoomTypesHandler;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -40,6 +43,12 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected EMap<Integer, Room> integerToRoomMap;
+	
+	/**
+	 * Handles RoomTypes
+	 * @generated NOT
+	 */
+	protected RoomTypesHandler rtHandler = new RoomTypesHandlerImpl();
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -79,29 +88,22 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 		throw new UnsupportedOperationException();
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int addRoom(int roomID, RoomType roomType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * Adds a Room with the given ID and Roomtype.
+	 * <!-- end-user-doc -->
 	 * 
 	 * @return
 	 * @generated NOT
 	 */
-	public int addRoom(int numberID, String roomType) {
-		Room r = new RoomImpl(numberID, roomType);
-		// this.room.add(r);
-		return 0;
-		// TODO: Checking
-		// Ensure that you remove @generated or mark it @generated NOT
+	public int addRoom(int numberID, RoomType roomType) {
+		
+			Room r = new RoomImpl(numberID, roomType);	
+			this.getIntegerToRoomMap().put(numberID, r);
+			return 0;
+		// No null check?
+		// TODO TEST
 	}
 
 	/**
@@ -199,7 +201,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments)
