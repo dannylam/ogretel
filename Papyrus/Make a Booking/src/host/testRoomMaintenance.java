@@ -214,5 +214,40 @@ public class testRoomMaintenance {
 		assertTrue(rmR == 0);
 		assertTrue(!this.rm.getRoomIDs().contains(11));
 	}
+	
+	/**
+	 * Tests whether it is possible to edit a Room.
+	 * @generated NOT
+	 */
+	@Test
+	public void testEditRoom() {
+		//First RoomType
+		String roomTypeID = "Alone";
+		String roomTypeEnum = "singlebed";
+		int price = 250;
+		int maxNrOfGuests = 1;
+		String description = "Here you can be alone for a while. Just relax. Mmmm.";
+		
+		//Add the RT
+		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		assertTrue(addRT == 0);
+		
+		//Add a R with the RT
+		int addedR = this.rm.addRoom(12, roomTypeID);
+		assertTrue(addedR == 0);
+		assertTrue(this.rm.getRoomIDs().contains(12));
+		
+		//New RT
+		String roomTypeID2 = " Not Alone";
+		String roomTypeEnum2 = "singlebed";
+		int price2 = 300;
+		int maxNrOfGuests2 = 2;
+		String description2 = "Now this Room can have two guests.";
+		
+		//edit the R (give new RT)
+		int edR = this.rm.editRoom(12, roomTypeID2);
+		assertTrue(edR == 0);
+		
+	}
 
 }

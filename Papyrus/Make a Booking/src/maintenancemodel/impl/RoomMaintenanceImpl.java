@@ -52,10 +52,10 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRooms()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected RoomHandler rooms;
+	protected RoomHandler rooms = new RoomHandlerImpl();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -392,13 +392,15 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Edit the Room with @param roomID. I.e. give it another (or same,
+	 * if you feel like it...) RoomType.
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int editRoom(int roomID, String roomTypeID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		this.removeRoom(roomID);
+		return this.addRoom(roomID, roomTypeID);
+		// TODO:test
 	}
 
 	/**
@@ -408,9 +410,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public EList<String> getRoomIDs() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		// TODO: 
+		Integer[] ids = this.rooms.getIntegerToRoomMap().keySet().toArray(new Integer[0]);
+		return new BasicEList( Arrays.asList(ids) );
 	}
 
 	/**
