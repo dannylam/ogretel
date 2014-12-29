@@ -146,6 +146,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 					
 				//	this.getBooking(bookingRef).setExtras(extras);
 			}
+			
+			return 0;
 	}
 
 	/**
