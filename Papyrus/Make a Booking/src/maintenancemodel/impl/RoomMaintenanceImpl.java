@@ -164,16 +164,16 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * Add Room with given ID and RoomType
-	 * <!-- end-user-doc -->
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
-	public int addRoom(int numberID, String roomType) {
+	public int addRoom(int roomID, String roomType) {
+		
+		//TODO add case where roomID not unique (suggested return value = 2)
 		
 		if(this.getRoomTypeHandler().exists(roomType)){
 			RoomType rt = this.getRoomTypeHandler().getStringToRoomType().get(roomType);
-			this.getRoomHandler().addRoom(numberID, rt);
+			this.getRoomHandler().addRoom(roomID, rt);
 			return 0;
 		}
 		return 1;
@@ -182,8 +182,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int removeRoom(int roomID) {
@@ -193,9 +192,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * Adds a RoomType with the given parameters.
-	 * <!-- end-user-doc -->
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int addRoomType(String roomTypeID, String roomTypeEnum, int price, int maxNrOfGuests, String description) {
