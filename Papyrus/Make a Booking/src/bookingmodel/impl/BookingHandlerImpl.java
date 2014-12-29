@@ -121,8 +121,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * A method which edits a booking such as the start date, end date, 
+	 * number of guests, room type and extras.
+	 * @param bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras
 	 * @generated NOT
 	 */
 	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras) {
