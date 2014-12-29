@@ -496,9 +496,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 
 
 	/**
-	 * Checks if all the rooms in the booking
-	 * has a responsible guest. If so, then true is returned,
-	 * otherwise false is returned.
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public boolean checkedInAllGuest() {
@@ -517,9 +515,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * Checks if at least one room in the booking
-	 * has a responsible guest. If so, then true is returned,
-	 * otherwise false is returned.
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public boolean checkedInAGuest() {
@@ -538,10 +534,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * Sets a guest its responsibility to a specific room,
-	 * by connecting their email address to a roomID. 
+	 * @inheritDoc
 	 *TODO: check if correct
-	 * @param roomID, guestEmail
 	 * @generated NOT
 	 */
 	public int setResponsibleGuest(int roomID, String guestEmail) {
@@ -553,10 +547,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 	
 	/**
-	 * Sets a guest its responsibility to all its booked rooms,
-	 * by connecting their email address to a set of room IDs. 
+	 * @inheritDoc
 	 *TODO: check if correct
-	 * @param guestEmail
 	 * @generated NOT
 	 */
 	public int setResponsibleGuestToAllRooms(String guestEmail) {
@@ -574,7 +566,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * Returns the number of specific booked rooms. 
+	 * @inheritDoc 
 	 * TODO: check if its correct
 	 * @generated NOT
 	 */
@@ -582,45 +574,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		return this.roomTypeToRoomIDMap.size(); 
 	}
 
-
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setExtras(EList<String> extras) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setRoomTypes(EList<String> roomTypes) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setRoomIDs(EList<Integer> roomIDs) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 *  TODO: javadoc
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @inheritDoc
+	 * @generated NOT
 	 */
 	public void generateBookingRef() {
 		// TODO: implement this method
@@ -629,9 +585,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * TODO: javadoc
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public int setRoomIDs(List<Integer> roomIDs) {
