@@ -259,7 +259,7 @@ public class testRoomMaintenance {
 	 * @generated NOT
 	 */
 	public void testGetRoomStatuses(){
-		
+		//TODO
 	}
 
 	//---------------------------------------------------------------------------------------------
