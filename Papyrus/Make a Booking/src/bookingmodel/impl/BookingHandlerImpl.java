@@ -144,8 +144,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	
 			//		this.getBooking(bookingRef).setRoomTypes(roomTypes);
 					
-				//	this.getBooking(bookingRef).setExtras(extras);
+			//		this.getBooking(bookingRef).setExtras(extras);
 			}
+		return result;
 	}
 
 	/**

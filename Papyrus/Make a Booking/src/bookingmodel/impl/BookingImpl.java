@@ -666,15 +666,15 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public int setRoomTypes(List<String> roomTypes) {
 		int result = 0;
-		if(!(roomTypes.isEmpty()){
+		if(!(roomTypes.isEmpty())){
 		//TODO check if map is not empty first
-		for (int i = 0; i < roomTypes.size(); i++) {
-			this.roomTypeToRoomIDMap.put(roomTypes.get(i), null);
-			this.roomIDToGuestMap.put(null,roomTypes.get(i));
+			for (int i = 0; i < roomTypes.size(); i++) {
+				this.roomTypeToRoomIDMap.put(roomTypes.get(i), null);
+				this.roomIDToGuestMap.put(null,roomTypes.get(i));
+			}
 		}
 		return result;
 		//TODO check if its correct
-	}
 	}
 
 	/**
