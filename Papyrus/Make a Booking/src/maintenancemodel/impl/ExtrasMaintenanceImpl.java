@@ -104,39 +104,16 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int addExtra(String extraID, int price, String name, String description, boolean isProduct) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public boolean exists(String extraID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		extras.exists(extraID);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int removeExtra(String extraID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int addExtra(int extraID, int price, String name,
+	public int addExtra(String extraID, int price, String name,
 			String description, boolean isProduct) {
 		return extras.addExtra(extraID, price, name, description, isProduct);
 	}
@@ -146,7 +123,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated NOT
 	 */
-	public int removeExtra(int extra) {
+	public int removeExtra(String extra) {
 		return extras.removeExtra(extra);
 	}
 
@@ -154,7 +131,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int editExtra(int extraID, int price, String name, String description) {
+	public int editExtra(String extraID, int price, String name, String description) {
 		AbstractExtraImpl extra;
 		if(extras.exists(extraID)) {
 			extra = (AbstractExtraImpl) extras.getExtra(extraID);
@@ -173,7 +150,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated NOT
 	 */
-	public Extra getExtra(int ID) {
+	public Extra getExtra(String ID) {
 		return extras.getExtra(ID);
 	}
 
