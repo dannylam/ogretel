@@ -278,7 +278,7 @@
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_MadaQI6VEeS0D-EMhs8Yvw" name="getPriceExtra">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Th9L8I6WEeS0D-EMhs8Yvw" name="extraIDs">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CPvB8I6xEeSqUPpyrwDcyg"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CP1IkI6xEeSqUPpyrwDcyg" value="*"/>
         </ownedParameter>
