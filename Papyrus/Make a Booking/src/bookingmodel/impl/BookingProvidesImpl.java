@@ -203,9 +203,20 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int checkOut(String bookingRef, String guestEmail) {
+		int result = 0;
+		
+		if(this.bookingHandler.exists(bookingRef)){
+			if(this.bookingHandler.getBooking(bookingRef).checkedInAllGuest()){
+				//this.getBookingHandler().getBooking(bookingRef).getRoomIDToGuestMap().get(key)
+			} else {
+				result = -1;
+			}			
+		} else {
+			result = -1;
+		}
+		
+		return result;
 		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
