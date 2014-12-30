@@ -516,7 +516,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getExtraHandler__Exists__int() {
+	public EOperation getExtraHandler__Exists__String() {
 		return extraHandlerEClass.getEOperations().get(0);
 	}
 
@@ -525,7 +525,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getExtraHandler__AddExtra__int_int_String_String_boolean() {
+	public EOperation getExtraHandler__AddExtra__String_int_String_String_boolean() {
 		return extraHandlerEClass.getEOperations().get(1);
 	}
 
@@ -534,7 +534,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getExtraHandler__RemoveExtra__int() {
+	public EOperation getExtraHandler__RemoveExtra__String() {
 		return extraHandlerEClass.getEOperations().get(2);
 	}
 
@@ -552,7 +552,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getExtraHandler__GetPrice__int() {
+	public EOperation getExtraHandler__GetPrice__String() {
 		return extraHandlerEClass.getEOperations().get(4);
 	}
 
@@ -849,7 +849,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIMaintenanceProvidesForBooking__MakeBooking__String_String_String() {
+	public EOperation getIMaintenanceProvidesForBooking__MakeBooking__EList_String_String() {
 		return iMaintenanceProvidesForBookingEClass.getEOperations().get(1);
 	}
 
@@ -858,7 +858,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIMaintenanceProvidesForBooking__RemoveBooking__String_int_String_String() {
+	public EOperation getIMaintenanceProvidesForBooking__RemoveBooking__EList_int_String_String() {
 		return iMaintenanceProvidesForBookingEClass.getEOperations().get(2);
 	}
 
@@ -867,7 +867,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIMaintenanceProvidesForBooking__SetBookingAsActive__String() {
+	public EOperation getIMaintenanceProvidesForBooking__GetRoomAndSetActive__String() {
 		return iMaintenanceProvidesForBookingEClass.getEOperations().get(3);
 	}
 
@@ -1065,7 +1065,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIExtrasMaintenance__AddExtra__int_int_String_String_boolean() {
+	public EOperation getIExtrasMaintenance__AddExtra__String_int_String_String_boolean() {
 		return iExtrasMaintenanceEClass.getEOperations().get(0);
 	}
 
@@ -1074,7 +1074,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIExtrasMaintenance__RemoveExtra__int() {
+	public EOperation getIExtrasMaintenance__Exists__String() {
 		return iExtrasMaintenanceEClass.getEOperations().get(1);
 	}
 
@@ -1092,7 +1092,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIExtrasMaintenance__EditExtra__int_int_String_String() {
+	public EOperation getIExtrasMaintenance__RemoveExtra__String() {
 		return iExtrasMaintenanceEClass.getEOperations().get(3);
 	}
 
@@ -1282,11 +1282,11 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 
 		extraHandlerEClass = createEClass(EXTRA_HANDLER);
 		createEReference(extraHandlerEClass, EXTRA_HANDLER__INT_TO_EXTRA_MAP);
-		createEOperation(extraHandlerEClass, EXTRA_HANDLER___EXISTS__INT);
-		createEOperation(extraHandlerEClass, EXTRA_HANDLER___ADD_EXTRA__INT_INT_STRING_STRING_BOOLEAN);
-		createEOperation(extraHandlerEClass, EXTRA_HANDLER___REMOVE_EXTRA__INT);
+		createEOperation(extraHandlerEClass, EXTRA_HANDLER___EXISTS__STRING);
+		createEOperation(extraHandlerEClass, EXTRA_HANDLER___ADD_EXTRA__STRING_INT_STRING_STRING_BOOLEAN);
+		createEOperation(extraHandlerEClass, EXTRA_HANDLER___REMOVE_EXTRA__STRING);
 		createEOperation(extraHandlerEClass, EXTRA_HANDLER___GET_EXTRAS);
-		createEOperation(extraHandlerEClass, EXTRA_HANDLER___GET_PRICE__INT);
+		createEOperation(extraHandlerEClass, EXTRA_HANDLER___GET_PRICE__STRING);
 
 		integerToExtraMapEClass = createEClass(INTEGER_TO_EXTRA_MAP);
 		createEAttribute(integerToExtraMapEClass, INTEGER_TO_EXTRA_MAP__KEY);
@@ -1314,9 +1314,9 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 
 		iMaintenanceProvidesForBookingEClass = createEClass(IMAINTENANCE_PROVIDES_FOR_BOOKING);
 		createEOperation(iMaintenanceProvidesForBookingEClass, IMAINTENANCE_PROVIDES_FOR_BOOKING___CAN_BOOK__ELIST_STRING_STRING);
-		createEOperation(iMaintenanceProvidesForBookingEClass, IMAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__STRING_STRING_STRING);
-		createEOperation(iMaintenanceProvidesForBookingEClass, IMAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__STRING_INT_STRING_STRING);
-		createEOperation(iMaintenanceProvidesForBookingEClass, IMAINTENANCE_PROVIDES_FOR_BOOKING___SET_BOOKING_AS_ACTIVE__STRING);
+		createEOperation(iMaintenanceProvidesForBookingEClass, IMAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__ELIST_STRING_STRING);
+		createEOperation(iMaintenanceProvidesForBookingEClass, IMAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_INT_STRING_STRING);
+		createEOperation(iMaintenanceProvidesForBookingEClass, IMAINTENANCE_PROVIDES_FOR_BOOKING___GET_ROOM_AND_SET_ACTIVE__STRING);
 		createEOperation(iMaintenanceProvidesForBookingEClass, IMAINTENANCE_PROVIDES_FOR_BOOKING___GET_PRICE_ROOM__ELIST);
 		createEOperation(iMaintenanceProvidesForBookingEClass, IMAINTENANCE_PROVIDES_FOR_BOOKING___GET_PRICE_EXTRA__ELIST);
 
@@ -1340,10 +1340,10 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		createEOperation(iRoomMaintenanceEClass, IROOM_MAINTENANCE___GET_ROOM_TYPE_ENUMS);
 
 		iExtrasMaintenanceEClass = createEClass(IEXTRAS_MAINTENANCE);
-		createEOperation(iExtrasMaintenanceEClass, IEXTRAS_MAINTENANCE___ADD_EXTRA__INT_INT_STRING_STRING_BOOLEAN);
-		createEOperation(iExtrasMaintenanceEClass, IEXTRAS_MAINTENANCE___REMOVE_EXTRA__INT);
+		createEOperation(iExtrasMaintenanceEClass, IEXTRAS_MAINTENANCE___ADD_EXTRA__STRING_INT_STRING_STRING_BOOLEAN);
+		createEOperation(iExtrasMaintenanceEClass, IEXTRAS_MAINTENANCE___EXISTS__STRING);
 		createEOperation(iExtrasMaintenanceEClass, IEXTRAS_MAINTENANCE___GET_EXTRAS);
-		createEOperation(iExtrasMaintenanceEClass, IEXTRAS_MAINTENANCE___EDIT_EXTRA__INT_INT_STRING_STRING);
+		createEOperation(iExtrasMaintenanceEClass, IEXTRAS_MAINTENANCE___REMOVE_EXTRA__STRING);
 
 		extrasMaintenanceEClass = createEClass(EXTRAS_MAINTENANCE);
 		createEReference(extrasMaintenanceEClass, EXTRAS_MAINTENANCE__EXTRAS);
@@ -1430,7 +1430,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		initEAttribute(getExperience_NrOfSpotsFree(), theTypesPackage.getInteger(), "nrOfSpotsFree", null, 1, 1, Experience.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(abstractExtraEClass, AbstractExtra.class, "AbstractExtra", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAbstractExtra_ID(), theTypesPackage.getInteger(), "ID", null, 1, 1, AbstractExtra.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getAbstractExtra_ID(), theTypesPackage.getString(), "ID", null, 1, 1, AbstractExtra.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAbstractExtra_Price(), theTypesPackage.getInteger(), "price", null, 1, 1, AbstractExtra.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAbstractExtra_Name(), theTypesPackage.getString(), "name", null, 1, 1, AbstractExtra.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getAbstractExtra_Description(), theTypesPackage.getString(), "description", null, 1, 1, AbstractExtra.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1451,26 +1451,26 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		initEClass(extraHandlerEClass, ExtraHandler.class, "ExtraHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getExtraHandler_IntToExtraMap(), this.getIntegerToExtraMap(), null, "intToExtraMap", null, 0, -1, ExtraHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		EOperation op = initEOperation(getExtraHandler__Exists__int(), theTypesPackage.getBoolean(), "exists", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "extraID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getExtraHandler__Exists__String(), theTypesPackage.getBoolean(), "exists", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "extraID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getExtraHandler__AddExtra__int_int_String_String_boolean(), theTypesPackage.getInteger(), "addExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "extraID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getExtraHandler__AddExtra__String_int_String_String_boolean(), theTypesPackage.getInteger(), "addExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "extraID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getBoolean(), "isProduct", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getExtraHandler__RemoveExtra__int(), theTypesPackage.getInteger(), "removeExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "extraID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getExtraHandler__RemoveExtra__String(), theTypesPackage.getInteger(), "removeExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "extraID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getExtraHandler__GetExtras(), theTypesPackage.getString(), "getExtras", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getExtraHandler__GetPrice__int(), theTypesPackage.getInteger(), "getPrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "extraID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getExtraHandler__GetPrice__String(), theTypesPackage.getInteger(), "getPrice", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "extraID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(integerToExtraMapEClass, Map.Entry.class, "IntegerToExtraMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getIntegerToExtraMap_Key(), ecorePackage.getEIntegerObject(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getIntegerToExtraMap_Key(), theTypesPackage.getString(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getIntegerToExtraMap_Value(), this.getExtra(), null, "value", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(roomHandlerEClass, RoomHandler.class, "RoomHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1513,30 +1513,30 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 
 		initEClass(iMaintenanceProvidesForBookingEClass, IMaintenanceProvidesForBooking.class, "IMaintenanceProvidesForBooking", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getIMaintenanceProvidesForBooking__CanBook__EList_String_String(), theTypesPackage.getBoolean(), "canBook", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIMaintenanceProvidesForBooking__CanBook__EList_String_String(), theTypesPackage.getBoolean(), "canBook", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomTypeIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "start", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "end", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIMaintenanceProvidesForBooking__MakeBooking__String_String_String(), theTypesPackage.getInteger(), "makeBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIMaintenanceProvidesForBooking__MakeBooking__EList_String_String(), theTypesPackage.getInteger(), "makeBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomType", 1, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "start", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "end", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIMaintenanceProvidesForBooking__RemoveBooking__String_int_String_String(), theTypesPackage.getInteger(), "removeBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIMaintenanceProvidesForBooking__RemoveBooking__EList_int_String_String(), theTypesPackage.getInteger(), "removeBooking", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomType", 1, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "nrOfRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "start", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "end", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIMaintenanceProvidesForBooking__SetBookingAsActive__String(), theTypesPackage.getInteger(), "setBookingAsActive", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "bookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIMaintenanceProvidesForBooking__GetRoomAndSetActive__String(), theTypesPackage.getInteger(), "getRoomAndSetActive", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIMaintenanceProvidesForBooking__GetPriceRoom__EList(), theTypesPackage.getInteger(), "getPriceRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomTypeIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIMaintenanceProvidesForBooking__GetPriceExtra__EList(), theTypesPackage.getInteger(), "getPriceExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "extraIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "extraIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(iRoomMaintenanceEClass, IRoomMaintenance.class, "IRoomMaintenance", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1600,23 +1600,20 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 
 		initEClass(iExtrasMaintenanceEClass, IExtrasMaintenance.class, "IExtrasMaintenance", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getIExtrasMaintenance__AddExtra__int_int_String_String_boolean(), theTypesPackage.getInteger(), "addExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "extraID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIExtrasMaintenance__AddExtra__String_int_String_String_boolean(), theTypesPackage.getInteger(), "addExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "extraID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getBoolean(), "isProduct", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIExtrasMaintenance__RemoveExtra__int(), theTypesPackage.getInteger(), "removeExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "extraID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIExtrasMaintenance__Exists__String(), theTypesPackage.getBoolean(), "exists", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "extraID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIExtrasMaintenance__GetExtras(), theTypesPackage.getString(), "getExtras", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIExtrasMaintenance__EditExtra__int_int_String_String(), theTypesPackage.getInteger(), "editExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "extraID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "name", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIExtrasMaintenance__RemoveExtra__String(), theTypesPackage.getInteger(), "removeExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "extraID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(extrasMaintenanceEClass, ExtrasMaintenance.class, "ExtrasMaintenance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getExtrasMaintenance_Extras(), this.getExtraHandler(), null, "extras", null, 1, 1, ExtrasMaintenance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

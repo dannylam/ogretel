@@ -166,15 +166,16 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int addRoom(int roomID, String roomType) {
 
-		// TODO add case where roomID not unique (suggested return value = 2)
-
-		if (this.getRoomTypeHandler().exists(roomType)) {
-			RoomType rt = this.getRoomTypeHandler().getStringToRoomType()
-					.get(roomType);
-			this.getRoomHandler().addRoom(roomID, rt);
-			return 0;
+		if (this.getRoomHandler().exists(roomID)) {
+			if (this.getRoomTypeHandler().exists(roomType)) {
+				RoomType rt = this.getRoomTypeHandler().getStringToRoomType()
+						.get(roomType);
+				this.getRoomHandler().addRoom(roomID, rt);
+				return 0;
+			}
+			return 1;
 		}
-		return 1;
+		return 2;
 
 		// TODO TEST
 	}
@@ -317,6 +318,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * {@inheritDoc}
+	 * 
 	 * @generated NOT
 	 */
 	public String getRoomTypeEnum(String roomTypeID) {
@@ -344,13 +346,12 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> 
-	 * {@inheritDoc}
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
 	public int getRoomTypeMaxNrOfGuests(String roomTypeID) {
-		
+
 		if (this.roomTypes.exists(roomTypeID)) {
 			return this.roomTypes.getRoomType(roomTypeID).getMaxNrOfGuests();
 		}

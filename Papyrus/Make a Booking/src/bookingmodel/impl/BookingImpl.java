@@ -508,15 +508,15 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		boolean hasResponsible = true;
 		if(!this.roomIDToGuestMap.isEmpty()){
 			for (String guestEmail: roomIDToGuestMap.values()) {
-				while(hasResponsible){
-					if(guestEmail.isEmpty() || guestEmail.equals("out")){
-						hasResponsible = false;
-					}
+				if(guestEmail.isEmpty() || guestEmail.equals("out")){
+					hasResponsible = false;
 				}
+				
 			}
+		}else{
+			hasResponsible = false;
 		}
 		return hasResponsible;
-		//TODO: Lägga till try-catch och fånga exceptions på ett lämpligt sätt.
 	}
 
 	/**
@@ -527,15 +527,14 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		boolean hasResponsible = false;
 		if(!this.roomIDToGuestMap.isEmpty()){
 			for (String guestEmail : roomIDToGuestMap.values()) {
-				while(!hasResponsible){
-					if(!guestEmail.isEmpty() || !guestEmail.equals("out")){
+				if(!guestEmail.isEmpty() || !guestEmail.equals("out")){
 						hasResponsible = true;
-					}
 				}
 			}
+		}else{
+			hasResponsible = true;
 		}
 		return hasResponsible;
-		//TODO: Lägga till try-catch och fånga exceptions på ett lämpligt sätt.
 	}
 
 	/**
@@ -543,12 +542,13 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated NOT
 	 */
 	public int setResponsibleGuest(int roomID, String guestEmail) {
-		int result = 0;
-		if(this.roomIDToGuestMap.get(roomID).getValue().isEmpty()){
-			this.roomIDToGuestMap.get(roomID).setValue(guestEmail);
+		int result = 0;														
+		if(this.roomIDToGuestMap.get(roomID).getValue().isEmpty()){			//om rumsID ‰r tom
+			this.roomIDToGuestMap.get(roomID).setValue(guestEmail);			//koppla rumsID till g‰stens email
+		}else{
+			result = -1;													//om rumsID inte ‰r tom, koppla ej 
 		}
 		return result;
-		//TODO: check other cases
 	}
 	
 	/**
@@ -557,17 +557,18 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public int setResponsibleGuestToAllRooms(String guestEmail) {
 		int result = 0;
-		if(!this.roomIDToGuestMap.isEmpty()){
-			int i = 0;
-			for (String key: this.roomIDToGuestMap.values()) {
+		if(!this.roomIDToGuestMap.isEmpty()){								//om listan pÂ kopplade rumsIDn/mail INTE ‰r tom
+			int i = 0;														
+			for (String key: this.roomIDToGuestMap.values()) {				
 				if(key.isEmpty()){
-					this.roomIDToGuestMap.get(i).setValue(guestEmail);
+					this.roomIDToGuestMap.get(i).setValue(guestEmail);		//koppla allas g‰sters mail till rumsID
 				}
 			i++;
 			}
+		}else{																//om listan pÂ kopplade rumsIDn/mail ‰r tom
+			result = -1;													//dÂ finns inget mejl som man kan koppla till = -1
 		}
 		return result;
-		//TODO: check other cases
 	}
 
 	/**
@@ -593,13 +594,14 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public int setRoomIDs(List<Integer> roomIDs) {
 		int result = 0;
-		if(!roomIDs.isEmpty() || !roomIDs.equals(null)){
-			for (int i = 0; i < roomIDs.size(); i++) {
-				this.roomIDToGuestMap.put(roomIDs.get(i),roomIDToGuestMap.get(i).getValue());
+		if(!roomIDs.isEmpty() || !roomIDs.equals(null)){										//om rumsID-listan INTE ‰r tom
+			for (int i = 0; i < roomIDs.size(); i++) {											//gÂ igenom listan
+				this.roomIDToGuestMap.put(roomIDs.get(i),roomIDToGuestMap.get(i).getValue());	//s‰tt in rumsID:n
 			}
+		}else{
+			result = -1;
 		}
 		return result;
-		//TODO check other cases
 	}
 	
 	/**
@@ -608,13 +610,14 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public int setExtras(List<String> extras) {
 		int result = 0;
-		if(!extras.isEmpty() || !extras.equals(null)){
-			for (int i = 0; i < extras.size(); i++) {
-				this.extraToIsPayedMap.put(extras.get(i),false);
+		if(!(extras.isEmpty()) || !(extras.equals(null))){			//om extra-listan INTE ‰r tom
+			for (int i = 0; i < extras.size(); i++) {				// gÂ igenom listan
+				this.extraToIsPayedMap.put(extras.get(i),false);	//s‰tt in extras i map
 			}
+		}else{														
+			result = -1;											//returnera fel
 		}
 		return result;
-		//TODO check other cases
 	}
 
 	/**
@@ -623,14 +626,15 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public int setRoomTypes(List<String> roomTypes) {
 		int result = 0;
-		if(!roomTypes.isEmpty() || !roomTypes.equals(null)){
-			for (int i = 0; i < roomTypes.size(); i++) {
-				this.roomIDToGuestMap.put(null, roomTypes.get(i));
-				this.roomIDToRoomTypeMap.put(null,roomTypes.get(i));
+		if(!roomTypes.isEmpty() || !roomTypes.equals(null)){			//om roomtype-listan INTE ‰r tom
+			for (int i = 0; i < roomTypes.size(); i++) {				//gÂ igenom listan
+				this.roomIDToGuestMap.put(null, roomTypes.get(i));		//s‰tt in rumsID med g‰stsmap
+				this.roomIDToRoomTypeMap.put(null,roomTypes.get(i));	//s‰tt in rumsID med roomstypsmap
 			}
+		}else{
+			result = -1;												//om listan ‰r tom, kan ej s‰tta rumstyp
 		}
 		return result;
-		//TODO check other cases
 	}
 
 	/**

@@ -42,7 +42,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	 * @generated
 	 * @ordered
 	 */
-	protected EMap<Integer, Extra> intToExtraMap;
+	protected EMap<String, Extra> intToExtraMap;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,6 +74,39 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 			intToExtraMap = new EcoreEMap<Integer,Extra>(MaintenancemodelPackage.Literals.INTEGER_TO_EXTRA_MAP, IntegerToExtraMapImpl.class, this, MaintenancemodelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP);
 		}
 		return intToExtraMap;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean exists(String extraID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int addExtra(String extraID, int price, String name, String description, boolean isProduct) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int removeExtra(String extraID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -142,6 +175,17 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 			list.add(extraArray[i].toString());
 		}
 		return list;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getPrice(String extraID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -250,16 +294,16 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case MaintenancemodelPackage.EXTRA_HANDLER___EXISTS__INT:
-				return exists((Integer)arguments.get(0));
-			case MaintenancemodelPackage.EXTRA_HANDLER___ADD_EXTRA__INT_INT_STRING_STRING_BOOLEAN:
-				return addExtra((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (Boolean)arguments.get(4));
-			case MaintenancemodelPackage.EXTRA_HANDLER___REMOVE_EXTRA__INT:
-				return removeExtra((Integer)arguments.get(0));
+			case MaintenancemodelPackage.EXTRA_HANDLER___EXISTS__STRING:
+				return exists((String)arguments.get(0));
+			case MaintenancemodelPackage.EXTRA_HANDLER___ADD_EXTRA__STRING_INT_STRING_STRING_BOOLEAN:
+				return addExtra((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (Boolean)arguments.get(4));
+			case MaintenancemodelPackage.EXTRA_HANDLER___REMOVE_EXTRA__STRING:
+				return removeExtra((String)arguments.get(0));
 			case MaintenancemodelPackage.EXTRA_HANDLER___GET_EXTRAS:
 				return getExtras();
-			case MaintenancemodelPackage.EXTRA_HANDLER___GET_PRICE__INT:
-				return getPrice((Integer)arguments.get(0));
+			case MaintenancemodelPackage.EXTRA_HANDLER___GET_PRICE__STRING:
+				return getPrice((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
