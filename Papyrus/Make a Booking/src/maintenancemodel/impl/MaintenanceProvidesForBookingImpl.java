@@ -262,7 +262,6 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 */
 	public EList<Boolean> canBook(EList<String> roomTypeIDs, String start, String end) {
 		
-		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
