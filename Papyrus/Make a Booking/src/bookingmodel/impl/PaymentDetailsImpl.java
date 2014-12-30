@@ -23,6 +23,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link bookingmodel.impl.PaymentDetailsImpl#getCcV <em>Cc V</em>}</li>
  *   <li>{@link bookingmodel.impl.PaymentDetailsImpl#getExpMonth <em>Exp Month</em>}</li>
  *   <li>{@link bookingmodel.impl.PaymentDetailsImpl#getExpYear <em>Exp Year</em>}</li>
+ *   <li>{@link bookingmodel.impl.PaymentDetailsImpl#getFirstName <em>First Name</em>}</li>
+ *   <li>{@link bookingmodel.impl.PaymentDetailsImpl#getLastName <em>Last Name</em>}</li>
  * </ul>
  * </p>
  *
@@ -108,6 +110,46 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected int expYear = EXP_YEAR_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFirstName() <em>First Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFirstName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FIRST_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getFirstName() <em>First Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFirstName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String firstName = FIRST_NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLastName() <em>Last Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LAST_NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getLastName() <em>Last Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String lastName = LAST_NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -217,6 +259,48 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getFirstName() {
+		return firstName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFirstName(String newFirstName) {
+		String oldFirstName = firstName;
+		firstName = newFirstName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.PAYMENT_DETAILS__FIRST_NAME, oldFirstName, firstName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getLastName() {
+		return lastName;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLastName(String newLastName) {
+		String oldLastName = lastName;
+		lastName = newLastName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.PAYMENT_DETAILS__LAST_NAME, oldLastName, lastName));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -228,6 +312,10 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 				return getExpMonth();
 			case BookingmodelPackage.PAYMENT_DETAILS__EXP_YEAR:
 				return getExpYear();
+			case BookingmodelPackage.PAYMENT_DETAILS__FIRST_NAME:
+				return getFirstName();
+			case BookingmodelPackage.PAYMENT_DETAILS__LAST_NAME:
+				return getLastName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -251,6 +339,12 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case BookingmodelPackage.PAYMENT_DETAILS__EXP_YEAR:
 				setExpYear((Integer)newValue);
+				return;
+			case BookingmodelPackage.PAYMENT_DETAILS__FIRST_NAME:
+				setFirstName((String)newValue);
+				return;
+			case BookingmodelPackage.PAYMENT_DETAILS__LAST_NAME:
+				setLastName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -276,6 +370,12 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 			case BookingmodelPackage.PAYMENT_DETAILS__EXP_YEAR:
 				setExpYear(EXP_YEAR_EDEFAULT);
 				return;
+			case BookingmodelPackage.PAYMENT_DETAILS__FIRST_NAME:
+				setFirstName(FIRST_NAME_EDEFAULT);
+				return;
+			case BookingmodelPackage.PAYMENT_DETAILS__LAST_NAME:
+				setLastName(LAST_NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -296,6 +396,10 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 				return expMonth != EXP_MONTH_EDEFAULT;
 			case BookingmodelPackage.PAYMENT_DETAILS__EXP_YEAR:
 				return expYear != EXP_YEAR_EDEFAULT;
+			case BookingmodelPackage.PAYMENT_DETAILS__FIRST_NAME:
+				return FIRST_NAME_EDEFAULT == null ? firstName != null : !FIRST_NAME_EDEFAULT.equals(firstName);
+			case BookingmodelPackage.PAYMENT_DETAILS__LAST_NAME:
+				return LAST_NAME_EDEFAULT == null ? lastName != null : !LAST_NAME_EDEFAULT.equals(lastName);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -318,6 +422,10 @@ public class PaymentDetailsImpl extends MinimalEObjectImpl.Container implements 
 		result.append(expMonth);
 		result.append(", expYear: ");
 		result.append(expYear);
+		result.append(", firstName: ");
+		result.append(firstName);
+		result.append(", lastName: ");
+		result.append(lastName);
 		result.append(')');
 		return result.toString();
 	}
