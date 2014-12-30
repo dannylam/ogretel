@@ -47,9 +47,9 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	protected ExtraHandlerImpl() {
+	public ExtraHandlerImpl() {
 		super();
 	}
 
