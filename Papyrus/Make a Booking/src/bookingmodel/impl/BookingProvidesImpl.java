@@ -1,19 +1,11 @@
 /**
  */
 package bookingmodel.impl;
-import bookingmodel.Booking;
-import bookingmodel.BookingHandler;
-import bookingmodel.BookingProvides;
-import bookingmodel.BookingmodelPackage;
-import bookingmodel.Customer;
-import bookingmodel.IBookingProvidesForGuest;
-import bookingmodel.IBookingProvidesForHost;
-import bookingmodel.PaymentDetails;
-import bookingmodel.PaymentMethod;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.List;
+
+import javax.xml.soap.SOAPException;
 
 import maintenancemodel.MaintenanceProvidesForBooking;
 
@@ -23,6 +15,16 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import bookingmodel.Booking;
+import bookingmodel.BookingHandler;
+import bookingmodel.BookingProvides;
+import bookingmodel.BookingmodelPackage;
+import bookingmodel.Customer;
+import bookingmodel.IBookingProvidesForGuest;
+import bookingmodel.IBookingProvidesForHost;
+import bookingmodel.PaymentDetails;
+import bookingmodel.PaymentMethod;
 
 /**
  * <!-- begin-user-doc -->
@@ -218,13 +220,36 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Makes a payment
+	 * @return
+	 * 		if 0 all went well.
+	 * 		if 1 an error occoured
+	 * 		if 2 invalid creditcard
+	 * 		if 3 not enough money on card or invalid card.
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public int pay(String ccNumber, String ccv, int expMonth,
+						int expYear, String firstName, String lastName) {
+		try {
+			se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires banking = se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires
+				.instance();
+			if (!banking.isCreditCardValid(ccNumber, ccv,  expMonth, 
+						expYear, firstName, lastName)) {
+				return 2;
+			}
+			if (!banking.makePayment(ccNumber, ccv,  expMonth, 
+					expYear, firstName, lastName, 6)) {
+				return 3;
+			}
+
+		} catch (SOAPException e) {
+			System.err
+				.println("Error occurred while communicating with the bank");
+				e.printStackTrace();
+			return 1;
+		}
+		return 0;
 	}
 
 	/**
