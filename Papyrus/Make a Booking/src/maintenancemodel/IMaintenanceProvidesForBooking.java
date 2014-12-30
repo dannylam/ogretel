@@ -90,6 +90,7 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 
 	/**
 	 * A method to set a booking as active
+<<<<<<< HEAD
 	 * 
 	 * @return int: 0 is successful, else int to be connected with an
 	 *         error-message
@@ -97,8 +98,13 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 	 *        ordered="false" bookingRefDataType="org.eclipse.uml2.types.String"
 	 *        bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
+=======
+	 * @return int: 0 is successful, else int to be connected with an error-message
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @generated 
+>>>>>>> f8dd5b5de829a2013ca1442c2c15ad9546804866
 	 */
-	int setBookingAsActive(String bookingRef);
+	int setActive(String roomTypeID);
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->

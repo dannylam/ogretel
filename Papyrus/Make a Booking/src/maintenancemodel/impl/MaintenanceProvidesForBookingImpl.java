@@ -257,6 +257,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * @generated NOT
 	 */
 	public boolean canBook(EList<String> roomTypeIDs, String start, String end) {
+
 		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -316,17 +317,6 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 		// Booking: BookingHandler/Bookingprovidesfor: exists(bookingRef): boolean
 		// removeBooking	
 		// calendar.unSet()?
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * @inheritDoc
-	 * @generated NOT
-	 */
-	public int setBookingAsActive(String bookingRef) {
-		// TODO: implement this method
-		// RoomImpl: setRoomStatusEnum(RoomStatusEnum status): void
-		// protected RoomStatusEnum roomStatusEnum -> kontroll
 		throw new UnsupportedOperationException();
 	}
 
@@ -459,12 +449,19 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 		switch (operationID) {
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___CAN_BOOK__ELIST_STRING_STRING:
 				return canBook((EList<String>)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
+<<<<<<< HEAD
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__ELIST_STRING_STRING:
 				return makeBooking((EList<String>)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_INT_STRING_STRING:
 				return removeBooking((EList<String>)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___GET_ROOM_AND_SET_ACTIVE__STRING:
 				return getRoomAndSetActive((String)arguments.get(0));
+=======
+			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__STRING_STRING_STRING:
+				return makeBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
+			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__STRING_INT_STRING_STRING:
+				return removeBooking((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
+>>>>>>> f8dd5b5de829a2013ca1442c2c15ad9546804866
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___GET_PRICE_ROOM__ELIST:
 				return getPriceRoom((EList<String>)arguments.get(0));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___GET_PRICE_EXTRA__ELIST:
@@ -472,5 +469,12 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 		}
 		return super.eInvoke(operationID, arguments);
 	}
+
+	@Override
+	public int setActive(String roomTypeID) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 
 } //MaintenanceProvidesForBookingImpl
