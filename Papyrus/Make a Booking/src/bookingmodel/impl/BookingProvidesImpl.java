@@ -284,9 +284,10 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * TODO: javadoc
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Edit a booking such as start date,
+	 * end date, number of guests, room types and extras.
+	 * Changing roomTypes and extras from String to list.
+	 * @param bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras
 	 * @generated NOT
 	 */
 	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, String roomTypes, String extras) {
