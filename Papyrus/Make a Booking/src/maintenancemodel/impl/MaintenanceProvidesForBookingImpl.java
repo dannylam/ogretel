@@ -265,7 +265,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationExce  ption();
+		throw new UnsupportedOperationException();
 	}
 
 
