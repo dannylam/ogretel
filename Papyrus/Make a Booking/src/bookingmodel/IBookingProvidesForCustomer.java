@@ -56,25 +56,34 @@ public interface IBookingProvidesForCustomer extends EObject {
 	int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, String roomTypes, String extras);
 
 	/**
-	 * @model dataType="types.Integer" required="true" ordered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false" ageDataType="types.Integer" ageRequired="true" ageOrdered="false" emailDataType="types.String" emailRequired="true" emailOrdered="false"
+	 * Sets the method for paying a booking to the booking with the given booking reference
+	 * @param method, bookingRef
+	 * @model dataType="types.Integer" required="true" ordered="false" methodDataType="types.String" methodRequired="true" methodOrdered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
-	int setPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, String customerEmail);
+	int setPaymentMethod(String method, String bookingRef);
+
+	/**
+	 * Sets the payment details of a customer of a booking by using the bookign reference
+	 * @model dataType="types.Integer" required="true" ordered="false" ccNumberDataType="types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="types.String" ccvRequired="true" ccvOrdered="false" expiryMonthDataType="types.Integer" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearDataType="types.Integer" expiryYearRequired="true" expiryYearOrdered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false" customerEmailDataType="types.String" customerEmailRequired="true" customerEmailOrdered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @generated NOT
+	 */
+	int setPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, String customerEmail, String bookingRef);
 
 	/**
 	 * Set personal details such as first name, last name, age and email of a customer and assigns this customer to a booking.
 	 * @param firstName, lastName, age, email
-	 * @model dataType="types.Integer" required="true" ordered="false" customerEmailDataType="types.String" customerEmailRequired="true" customerEmailOrdered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated NOT
+	 * @model dataType="types.Integer" required="true" ordered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false" ageDataType="types.Integer" ageRequired="true" ageOrdered="false" emailDataType="types.String" emailRequired="true" emailOrdered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @generated
 	 */
 	int setPersonalDetails(String firstName, String lastName, int age, String email, String bookingRef);
 
 	/**
-	  * Make a booking such for the given start- and enddate, number of guests,
-	  * roomtypes (and how many of each roomtype) and extras.
+	 * Make a booking such for the given start- and enddate, number of guests,
+	 * roomtypes (and how many of each roomtype) and extras.
 	 * @param startDate, endDate, nrOfGuests, roomTypes, extras
 	 * @model dataType="types.String" required="true" ordered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesDataType="types.String" roomTypesRequired="true" roomTypesOrdered="false" extrasDataType="types.String" extrasRequired="true" extrasOrdered="false"
-	 * @generated NOT
+	 * @generated
 	 */
 	String book(String startDate, String endDate, int nrOfGuests, String roomTypes, String extras);
 

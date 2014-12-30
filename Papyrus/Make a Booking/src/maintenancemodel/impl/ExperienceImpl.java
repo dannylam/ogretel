@@ -90,7 +90,7 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ExperienceImpl() {
+	public ExperienceImpl() {
 		super();
 	}
 
