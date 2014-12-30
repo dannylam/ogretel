@@ -514,6 +514,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 					}
 				}
 			}
+		}else{
+			// TODO
 		}
 		return hasResponsible;
 		//TODO: Lägga till try-catch och fånga exceptions på ett lämpligt sätt.
