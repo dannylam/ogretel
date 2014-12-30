@@ -24,7 +24,7 @@ public interface IBookingProvidesForGuest extends EObject {
 	int checkIn(String bookingRef, String guestEmail);
 
 	/**
-	 * Checks out a guest/booking reference.
+	 * Checks out all rooms of a booking by removing the responsible guest of the booking with the given booking reference for all rooms.
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated NOT
 	 */
