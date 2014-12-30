@@ -14,10 +14,9 @@ import org.eclipse.emf.ecore.EObject;
 public interface IMaintenanceProvidesForBooking extends EObject {
 	
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * A method that checks if a booking can be made with given parameters
 	 * @model dataType="org.eclipse.uml2.types.Boolean" ordered="false" roomTypeIDsDataType="org.eclipse.uml2.types.String" roomTypeIDsMany="true" roomTypeIDsOrdered="false" startDataType="org.eclipse.uml2.types.String" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.String" endRequired="true" endOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	boolean canBook(EList<String> roomTypeIDs, String start, String end);
 

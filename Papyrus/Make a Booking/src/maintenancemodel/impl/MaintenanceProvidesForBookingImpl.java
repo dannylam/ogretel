@@ -255,13 +255,11 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
 	 * {@inheritDoc}
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public boolean canBook(EList<String> roomTypeIDs, String start, String end) {
-		
+
 		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
