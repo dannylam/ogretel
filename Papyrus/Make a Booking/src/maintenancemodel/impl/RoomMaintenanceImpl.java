@@ -369,6 +369,28 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int editRoomType(String roomTypeID, String roomTypeEnum, int price,
 			int maxNrOfGuests, String description, int nrOfRooms) {
+		if(!this.roomTypes.exists(roomTypeID)){
+			return 1;
+		}
+		if(!this.getRoomTypeEnums().contains(roomTypeEnum)){
+			return 2;
+		}
+		if(price < 0){
+			return 3;
+		}
+		if(maxNrOfGuests < 0){
+			return 4;
+		}
+		if(nrOfRooms < 0){
+			return 5;
+		}
+		
+		RoomType rt = this.roomTypes.getRoomType(roomTypeID);
+		rt.setRoomTypeEnum(RoomTypeEnum.valueOf(roomTypeEnum));
+		rt.setPrice(price);
+		rt.setMaxNrOfGuests(maxNrOfGuests);
+		rt.setDescription(description);
+		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
