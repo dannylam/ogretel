@@ -40,9 +40,9 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 	 * A method to set a booking as active
 	 * @return int: 0 is successful, else int to be connected with an error-message
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated NOT
+	 * @generated 
 	 */
-	int setBookingAsActive(String bookingRef);
+	int setActive(String roomTypeID);
 
 	/**
 	 * <!-- begin-user-doc -->
