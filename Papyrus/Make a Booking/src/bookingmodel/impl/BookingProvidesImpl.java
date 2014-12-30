@@ -289,12 +289,28 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	//TODO: change inparams so that it also takes in a booking reference
-	public int setPaymentMethod(String method) {
+	//int method: 1=bankcard, 2=cash, 3=voucher
+	public int setPaymentMethod(int method) {
 		int result = 0;
-	        
+		
+		int method1 = 0;
+	    String paymentString;    
 		PaymentMethod paymentMethod = null;
-	        switch (method) {
-	            case PaymentMethod.BANKCARD.toString():  
+	        switch (method1) {
+	        	case 1: paymentString = "Bankcard";
+	        		break;
+	        	
+	        	case 2: paymentString = "Cash";
+	        		break;
+	        	
+	        	case 3: paymentString = "Voucher";
+	        		break;
+	        	
+	        	default: paymentString = "Invalid payment";
+	        		break;
+	        }
+	        
+	        /*case PaymentMethod.BANKCARD.toString():  
 	            	paymentMethod = PaymentMethod.BANKCARD;
 	            	break;
 	            case PaymentMethod.CASH.toString():  
@@ -305,7 +321,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	                break;
 	            default:
 	            	break;
-	     }
+	     }*/
 	     if(!paymentMethod.equals(null)){
 	    	 String bookingRef; //will be removed later on when inparam correct
 	    	 this.getBookingHandler().getBooking(bookingRef).setPaymentMethod(paymentMethod);
