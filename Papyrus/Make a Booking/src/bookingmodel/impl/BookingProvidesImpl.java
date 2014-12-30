@@ -64,7 +64,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BookingProvidesImpl() {
+	protected BookingProvidesImpl() {
 		super();
 	}
 	
@@ -179,77 +179,38 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * @inheritDoc
-	 * @generated NOT
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
 	 */
-	public int checkIn(String bookingRef, String guestEmail) {
-		int result = 0;
-		if(this.bookingHandler.exists(bookingRef) && !this.bookingHandler.getBooking(bookingRef).checkedInAllGuest()){
-			
-			/*
-			 * Give maintenance the roomstypes for this booking and get roomIDs in return
-			 * Maintenance will then set these roomIDs as checkedIn
-			 * Then set the guest as responsible
-			 */
-			this.bookingHandler.getBooking(bookingRef).setResponsibleGuestToAllRooms(guestEmail);
-			//maintenanceComponent.setBookingAsActive(bookingRef); denna metoden ska väl bort i maintenance?
-			
-		}
-		//TODO: implement this method, we are waiting for maintenance 
-		// TODO: check other cases
-		return result;
+	public int checkIn(int roomID, String guestEmail) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
-	/**
-	 * @inheritDoc
-	 * @generated NOT
-	 */
-	public int checkOut(String bookingRef, String guestEmail) {
-		int result = 0;
-		if(this.bookingHandler.exists(bookingRef)){
-			if(this.bookingHandler.getBooking(bookingRef).checkedInAllGuest()){
-				result = this.getBookingHandler().getBooking(bookingRef).removeResponsibleGuestToAllRooms(guestEmail);
-			} else {
-				result = -1;
-			}			
-		} else {
-			result = -1;
-		}	
-		return result;
-	}
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Makes a payment
-	 * @return
-	 * 		if 0 all went well.
-	 * 		if 1 an error occoured
-	 * 		if 2 invalid creditcard
-	 * 		if 3 not enough money on card or invalid card.
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
-	public int pay(String ccNumber, String ccv, int expMonth,
-						int expYear, String firstName, String lastName) {
-		try {
-			se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires banking = se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires
-				.instance();
-			if (!banking.isCreditCardValid(ccNumber, ccv,  expMonth, 
-						expYear, firstName, lastName)) {
-				return 2;
-			}
-			if (!banking.makePayment(ccNumber, ccv,  expMonth, 
-					expYear, firstName, lastName, 6)) {
-				return 3;
-			}
+	public int checkOut(int roomID, String guestEmail) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
 
-		} catch (SOAPException e) {
-			System.err
-				.println("Error occurred while communicating with the bank");
-				e.printStackTrace();
-			return 1;
-		}
-		return 0;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, List<String> extra) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	
@@ -308,12 +269,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		} else {
 			return 4;
 		}
-			
-		/*if(this.getBookingHandler().exists(bookingRef)){
-			int price = this.getPrice(bookingRef);
-			PaymentDetails paymentdetails = this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().get(0);
-			//invoke pay() in bankingcomponent med price & get delar från paymentdetails
-		}*/
 	}
 
 	/**
@@ -530,9 +485,9 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == IBookingProvidesForGuest.class) {
 			switch (baseOperationID) {
-				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___CHECK_IN__STRING_STRING: return BookingmodelPackage.BOOKING_PROVIDES___CHECK_IN__STRING_STRING;
-				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___CHECK_OUT__STRING_STRING: return BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__STRING_STRING;
-				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___PAY__STRING_STRING_INT_INT_STRING_STRING: return BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING;
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___CHECK_IN__INT_STRING: return BookingmodelPackage.BOOKING_PROVIDES___CHECK_IN__INT_STRING;
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___CHECK_OUT__INT_STRING: return BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__INT_STRING;
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST: return BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST;
 				default: return -1;
 			}
 		}
@@ -569,12 +524,12 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 				return removeServiceNote((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_PROVIDES___GET_SERVICE_NOTES__STRING:
 				return getServiceNotes((String)arguments.get(0));
-			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_IN__STRING_STRING:
-				return checkIn((String)arguments.get(0), (String)arguments.get(1));
-			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__STRING_STRING:
-				return checkOut((String)arguments.get(0), (String)arguments.get(1));
-			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING:
-				return pay((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
+			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_IN__INT_STRING:
+				return checkIn((Integer)arguments.get(0), (String)arguments.get(1));
+			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__INT_STRING:
+				return checkOut((Integer)arguments.get(0), (String)arguments.get(1));
+			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST:
+				return pay((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (List<String>)arguments.get(6));
 			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING:
 				return pay((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_PROVIDES___GET_PRICE__STRING:

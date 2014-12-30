@@ -1140,7 +1140,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_GUEST___CHECK_IN__STRING_STRING = 0;
+	int IBOOKING_PROVIDES_FOR_GUEST___CHECK_IN__INT_STRING = 0;
 
 	/**
 	 * The operation id for the '<em>Check Out</em>' operation.
@@ -1149,7 +1149,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_GUEST___CHECK_OUT__STRING_STRING = 1;
+	int IBOOKING_PROVIDES_FOR_GUEST___CHECK_OUT__INT_STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Pay</em>' operation.
@@ -1158,7 +1158,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_GUEST___PAY__STRING_STRING_INT_INT_STRING_STRING = 2;
+	int IBOOKING_PROVIDES_FOR_GUEST___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST = 2;
 
 	/**
 	 * The number of operations of the '<em>IBooking Provides For Guest</em>' class.
@@ -1276,7 +1276,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___CHECK_IN__STRING_STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 0;
+	int BOOKING_PROVIDES___CHECK_IN__INT_STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Check Out</em>' operation.
@@ -1285,7 +1285,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___CHECK_OUT__STRING_STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 1;
+	int BOOKING_PROVIDES___CHECK_OUT__INT_STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Pay</em>' operation.
@@ -1294,7 +1294,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 2;
+	int BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Enable Self Management</em>' operation.
@@ -2235,34 +2235,34 @@ public interface BookingmodelPackage extends EPackage {
 	EClass getIBookingProvidesForGuest();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForGuest#checkIn(java.lang.String, java.lang.String) <em>Check In</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForGuest#checkIn(int, java.lang.String) <em>Check In</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check In</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForGuest#checkIn(java.lang.String, java.lang.String)
+	 * @see bookingmodel.IBookingProvidesForGuest#checkIn(int, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookingProvidesForGuest__CheckIn__String_String();
+	EOperation getIBookingProvidesForGuest__CheckIn__int_String();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForGuest#checkOut(java.lang.String, java.lang.String) <em>Check Out</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForGuest#checkOut(int, java.lang.String) <em>Check Out</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Check Out</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForGuest#checkOut(java.lang.String, java.lang.String)
+	 * @see bookingmodel.IBookingProvidesForGuest#checkOut(int, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookingProvidesForGuest__CheckOut__String_String();
+	EOperation getIBookingProvidesForGuest__CheckOut__int_String();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForGuest#pay(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String) <em>Pay</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForGuest#pay(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, org.eclipse.emf.common.util.EList) <em>Pay</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Pay</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForGuest#pay(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)
+	 * @see bookingmodel.IBookingProvidesForGuest#pay(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getIBookingProvidesForGuest__Pay__String_String_int_int_String_String();
+	EOperation getIBookingProvidesForGuest__Pay__String_String_int_int_String_String_EList();
 
 	/**
 	 * Returns the meta object for class '{@link bookingmodel.BookingProvides <em>Booking Provides</em>}'.
@@ -3018,7 +3018,7 @@ public interface BookingmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_PROVIDES_FOR_GUEST___CHECK_IN__STRING_STRING = eINSTANCE.getIBookingProvidesForGuest__CheckIn__String_String();
+		EOperation IBOOKING_PROVIDES_FOR_GUEST___CHECK_IN__INT_STRING = eINSTANCE.getIBookingProvidesForGuest__CheckIn__int_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Check Out</b></em>' operation.
@@ -3026,7 +3026,7 @@ public interface BookingmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_PROVIDES_FOR_GUEST___CHECK_OUT__STRING_STRING = eINSTANCE.getIBookingProvidesForGuest__CheckOut__String_String();
+		EOperation IBOOKING_PROVIDES_FOR_GUEST___CHECK_OUT__INT_STRING = eINSTANCE.getIBookingProvidesForGuest__CheckOut__int_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Pay</b></em>' operation.
@@ -3034,7 +3034,7 @@ public interface BookingmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_PROVIDES_FOR_GUEST___PAY__STRING_STRING_INT_INT_STRING_STRING = eINSTANCE.getIBookingProvidesForGuest__Pay__String_String_int_int_String_String();
+		EOperation IBOOKING_PROVIDES_FOR_GUEST___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST = eINSTANCE.getIBookingProvidesForGuest__Pay__String_String_int_int_String_String_EList();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.impl.BookingProvidesImpl <em>Booking Provides</em>}' class.
