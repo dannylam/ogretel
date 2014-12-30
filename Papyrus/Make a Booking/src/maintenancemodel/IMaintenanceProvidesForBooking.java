@@ -102,6 +102,9 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 	 * @return int: 0 is successful, else int to be connected with an error-message
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated 
+<<<<<<< HEAD
+>>>>>>> f8dd5b5de829a2013ca1442c2c15ad9546804866
+=======
 >>>>>>> f8dd5b5de829a2013ca1442c2c15ad9546804866
 	 */
 	int setActive(String roomTypeID);

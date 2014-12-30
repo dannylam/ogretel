@@ -309,6 +309,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
+<<<<<<< HEAD
 	 * @inheritDoc
 	 * @generated NOT
 	 */
@@ -321,6 +322,8 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
+=======
+>>>>>>> f8dd5b5de829a2013ca1442c2c15ad9546804866
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -461,6 +464,9 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 				return makeBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__STRING_INT_STRING_STRING:
 				return removeBooking((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
+<<<<<<< HEAD
+>>>>>>> f8dd5b5de829a2013ca1442c2c15ad9546804866
+=======
 >>>>>>> f8dd5b5de829a2013ca1442c2c15ad9546804866
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___GET_PRICE_ROOM__ELIST:
 				return getPriceRoom((EList<String>)arguments.get(0));
