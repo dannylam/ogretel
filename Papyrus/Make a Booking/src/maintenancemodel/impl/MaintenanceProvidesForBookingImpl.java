@@ -255,12 +255,10 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
 	 * {@inheritDoc}
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public EList<Boolean> canBook(EList<String> roomTypeIDs, String start, String end) {
+	public boolean canBook(EList<String> roomTypeIDs, String start, String end) {
 		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -442,12 +440,6 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 				return getPriceExtra((EList<Integer>)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
-	}
-
-	@Override
-	public boolean canBook(String roomType, String start, String end) {
-		// TODO Auto-generated method stub
-		return false;
 	}
 
 } //MaintenanceProvidesForBookingImpl
