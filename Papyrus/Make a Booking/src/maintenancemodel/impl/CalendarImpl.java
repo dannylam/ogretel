@@ -3,7 +3,10 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
+<<<<<<< HEAD
+=======
 import java.util.Map;
+>>>>>>> branch 'classcodegens' of https://github.com/dannylam/ogretel.git
 
 import maintenancemodel.Calendar;
 import maintenancemodel.MaintenancemodelPackage;
@@ -40,7 +43,13 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	 * @ordered
 	 */
 	protected EMap<String, EList<Integer>> stringToListsMap;
-
+	
+	/**
+	 * Max amount of Rooms that can be available a day.
+	 * @generated NOT
+	 */
+	protected static final Integer MAX_CAPACITY = 725;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -69,39 +78,6 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 		return stringToListsMap;
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetStringToListsMap(Map.Entry<String, EList<Integer>> newStringToListsMap, NotificationChain msgs) {
-		Map.Entry<String, EList<Integer>> oldStringToListsMap = stringToListsMap;
-		stringToListsMap = newStringToListsMap;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP, oldStringToListsMap, newStringToListsMap);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStringToListsMap(Map.Entry<String, EList<Integer>> newStringToListsMap) {
-		if (newStringToListsMap != stringToListsMap) {
-			NotificationChain msgs = null;
-			if (stringToListsMap != null)
-				msgs = ((InternalEObject)stringToListsMap).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP, null, msgs);
-			if (newStringToListsMap != null)
-				msgs = ((InternalEObject)newStringToListsMap).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP, null, msgs);
-			msgs = basicSetStringToListsMap(newStringToListsMap, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP, newStringToListsMap, newStringToListsMap));
-	}
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -139,13 +115,30 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Get the lowest capacity (free rooms) of the days in the interval.
+	 * @param start
+	 * 		amount of days from now that the interval starts.
+	 * @param end
+	 * 		amount of days from now that the interval ends.
+	 * @param roomType
+	 * 		the roomtypeID to get capacity for
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<Integer> getCap(int start, int end, String roomType) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public Integer getCap(int start, int end, String roomType) {
+		
+		Integer cap = this.MAX_CAPACITY;
+		
+		EList<Integer> capacities = this.getStringToListsMap().get(roomType);
+		//Get the capacity of the day with the lowest capacity:
+		for(int day=start; day<=end; day++){
+			if(capacities.get(day) < cap){
+				cap = capacities.get(day);
+			}
+		}
+		
+		return cap;
+		// TODO: test
 	}
 
 	/**

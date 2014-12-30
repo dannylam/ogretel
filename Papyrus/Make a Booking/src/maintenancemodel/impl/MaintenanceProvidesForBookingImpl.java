@@ -44,47 +44,47 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCalendar()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected Calendar calendar;
+	protected Calendar calendar = new CalendarImpl();
 
 	/**
 	 * The cached value of the '{@link #getRoomTypes() <em>Room Types</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRoomTypes()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected RoomTypesHandler roomTypes;
+	protected RoomTypesHandler roomTypes = new RoomTypesHandlerImpl();
 
 	/**
 	 * The cached value of the '{@link #getRooms() <em>Rooms</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRooms()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected RoomHandler rooms;
+	protected RoomHandler rooms = new RoomHandlerImpl();
 
 	/**
 	 * The cached value of the '{@link #getExtraHandler() <em>Extra Handler</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getExtraHandler()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected ExtraHandler extraHandler;
+	protected ExtraHandler extraHandler = new ExtraHandlerImpl();
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	protected MaintenanceProvidesForBookingImpl() {
+	public MaintenanceProvidesForBookingImpl() {
 		super();
 	}
 
@@ -273,12 +273,20 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean canBook(EList<String> roomTypeIDs, String start, String end) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+
+		//For all requested roomtypes
+		for(String id : roomTypeIDs){
+				
+			//For all those roomtypes list of 
+			
+		}
+		return false;
+		
+		// TODO test
+
 	}
 
 	/**
@@ -306,7 +314,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated 
 	 */
 	public int getRoomAndSetActive(String roomTypeID) {
 		// TODO: implement this method
