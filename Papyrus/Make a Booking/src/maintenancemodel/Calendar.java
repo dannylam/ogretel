@@ -55,9 +55,9 @@ public interface Calendar extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<Integer> getCap(int start, int end, String roomType);
+	Integer getCap(int start, int end, String roomType);
 
 	/**
 	 * <!-- begin-user-doc -->

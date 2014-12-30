@@ -3,8 +3,6 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.Map;
-import java.util.Map.Entry;
 
 import maintenancemodel.Calendar;
 import maintenancemodel.MaintenancemodelPackage;
@@ -41,7 +39,13 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	 * @ordered
 	 */
 	protected EMap<String, EList<Integer>> stringToListsMap;
-
+	
+	/**
+	 * Max amount of Rooms that can be available a day.
+	 * @generated NOT
+	 */
+	protected static final Integer MAX_CAPACITY = 725;
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -106,10 +110,27 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Get the lowest capacity (free rooms) of the days in the interval.
+	 * @param start
+	 * 		amount of days from now that the interval starts.
+	 * @param end
+	 * 		amount of days from now that the interval ends.
+	 * @param roomType
+	 * 		the roomtypeID to get capacity for
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<Integer> getCap(int start, int end, String roomType) {
+	public Integer getCap(int start, int end, String roomType) {
+		
+		Integer cap = this.MAX_CAPACITY;
+		
+//		EList<Integer> capacities = this.getStringToListsMap().get(roomType);
+//		for(int day=start; day<=end; day++){
+//			if(){
+//				
+//			}
+//		}
+		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
