@@ -33,7 +33,7 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NR_OF_SPOTS_EDEFAULT = 10;
+	protected static final int NR_OF_SPOTS_EDEFAULT = 0;
 
 	/**
 	 * The cached value of the '{@link #getNrOfSpots() <em>Nr Of Spots</em>}' attribute.
@@ -90,7 +90,7 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExperienceImpl() {
+	protected ExperienceImpl() {
 		super();
 	}
 

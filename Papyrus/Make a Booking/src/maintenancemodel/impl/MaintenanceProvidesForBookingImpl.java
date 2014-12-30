@@ -45,7 +45,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * @generated
 	 * @ordered
 	 */
-	protected Calendar calendar = new CalendarImpl();
+	protected Calendar calendar;
 
 	/**
 	 * The cached value of the '{@link #getRoomTypes() <em>Room Types</em>}' containment reference.
@@ -260,7 +260,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean canBook(EList<String> roomTypeIDs, String start, String end) {
+	public EList<Boolean> canBook(EList<String> roomTypeIDs, String start, String end) {
 		
 		
 		// TODO: implement this method

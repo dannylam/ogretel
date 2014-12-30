@@ -2,6 +2,7 @@
  */
 package maintenancemodel;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -12,6 +13,14 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface IMaintenanceProvidesForBooking extends EObject {
 	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Boolean" ordered="false" roomTypeIDsDataType="org.eclipse.uml2.types.String" roomTypeIDsMany="true" roomTypeIDsOrdered="false" startDataType="org.eclipse.uml2.types.String" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.String" endRequired="true" endOrdered="false"
+	 * @generated
+	 */
+	EList<Boolean> canBook(EList<String> roomTypeIDs, String start, String end);
+
 	/**
 	 * A method that checks if a booking can be made with given parameters
 	 * @return boolean: true if booking is possible, else false.
@@ -43,5 +52,21 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 	 * @generated NOT
 	 */
 	int setBookingAsActive(String bookingRef);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDsDataType="org.eclipse.uml2.types.String" roomTypeIDsMany="true" roomTypeIDsOrdered="false"
+	 * @generated
+	 */
+	int getPriceRoom(EList<String> roomTypeIDs);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extraIDsDataType="org.eclipse.uml2.types.Integer" extraIDsMany="true" extraIDsOrdered="false"
+	 * @generated
+	 */
+	int getPriceExtra(EList<Integer> extraIDs);
 
 } // IMaintenanceProvidesForBooking
