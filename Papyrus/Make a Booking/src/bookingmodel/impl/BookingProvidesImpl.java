@@ -252,20 +252,56 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		return 0;
 	}
 
+	
+	/**
+	 * <!-- begin-user-doc -->
+	 * Makes a payment
+	 * @return
+	 * 		if 0 all went well.
+	 * 		if 1 an error occoured
+	 * 		if 2 invalid creditcard
+	 * 		if 3 not enough money on card or invalid card.
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	private int pay(String ccNumber, String ccv, int expMonth,
+						int expYear, String firstName, String lastName, int sum) {
+		try {
+			se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires banking = se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires
+				.instance();
+			if (!banking.isCreditCardValid(ccNumber, ccv,  expMonth, 
+						expYear, firstName, lastName)) {
+				return 2;
+			}
+			if (!banking.makePayment(ccNumber, ccv,  expMonth, 
+					expYear, firstName, lastName, sum)) {
+				return 3;
+			}
+
+		} catch (SOAPException e) {
+			System.err
+				.println("Error occurred while communicating with the bank");
+				e.printStackTrace();
+			return 1;
+		}
+		return 0;
+	}
+	
 	/**
 	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public int pay(String bookingRef) {
-		int result = 0;
-		if(this.getBookingHandler().exists(bookingRef)){
+		PaymentDetails bookingdetails = getBookingHandler().getBooking(bookingRef).getCustomer().getPaymentDetails().get(0);
+		return pay(bookingdetails.getCcNr(), bookingdetails.getCcV(),bookingdetails.getExpMonth(),
+						bookingdetails.getExpYear(), bookingdetails.getFirstName(), bookingdetails.getLastName(),
+						6);
+		//TODO Calculate the price 
+		/*if(this.getBookingHandler().exists(bookingRef)){
 			int price = this.getPrice(bookingRef);
 			PaymentDetails paymentdetails = this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().get(0);
 			//invoke pay() in bankingcomponent med price & get delar från paymentdetails
-		}
-		// TODO: check other cases
-		//TODO: we are waiting for the banking code to be added
-		return result;
+		}*/
 	}
 
 	/**
