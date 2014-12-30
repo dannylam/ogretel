@@ -9,12 +9,14 @@ import bookingmodel.Guest;
 import bookingmodel.PaymentMethod;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
@@ -511,7 +513,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				if(guestEmail.isEmpty() || guestEmail.equals("out")){
 					hasResponsible = false;
 				}
-				
 			}
 		}else{
 			hasResponsible = false;
@@ -577,7 +578,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public int getNrOfRooms() {
 		return this.roomIDToRoomTypeMap.size(); 
-	}
+	} 
 
 	/**
 	 * @inheritDoc
@@ -586,6 +587,33 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	public void generateBookingRef() {
 		String bookingRef = UUID.randomUUID().toString();
 		this.setBookingRef(bookingRef);
+	}
+
+	/**
+	 * @inheritDoc
+	 * @generated NOT
+	 */
+	public EList<String> getExtras() {
+		String[] extras = this.extraToIsPayedMap.keySet().toArray(new String[0]);
+		return new BasicEList(Arrays.asList(extras));
+	}
+
+	/**
+	 * @inheritDoc
+	 * @generated NOT
+	 */
+	public EList<String> getRoomTypes() {
+		String[] roomTypes = this.roomIDToRoomTypeMap.values().toArray(new String[0]);
+		return new BasicEList(Arrays.asList(roomTypes));
+	}
+
+	/**
+	 * @inheritDoc
+	 * @generated NOT
+	 */
+	public EList<String> getRoomIDs() {
+		Integer[] roomIDs = this.roomIDToRoomTypeMap.keySet().toArray(new Integer[0]);
+		return new BasicEList(Arrays.asList(roomIDs));
 	}
 
 	/**
@@ -858,6 +886,12 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case BookingmodelPackage.BOOKING___GENERATE_BOOKING_REF:
 				generateBookingRef();
 				return null;
+			case BookingmodelPackage.BOOKING___GET_EXTRAS:
+				return getExtras();
+			case BookingmodelPackage.BOOKING___GET_ROOM_TYPES:
+				return getRoomTypes();
+			case BookingmodelPackage.BOOKING___GET_ROOM_IDS:
+				return getRoomIDs();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
