@@ -508,15 +508,15 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		boolean hasResponsible = true;
 		if(!this.roomIDToGuestMap.isEmpty()){
 			for (String guestEmail: roomIDToGuestMap.values()) {
-				while(hasResponsible){
-					if(guestEmail.isEmpty() || guestEmail.equals("out")){
-						hasResponsible = false;
-					}
+				if(guestEmail.isEmpty() || guestEmail.equals("out")){
+					hasResponsible = false;
 				}
+				
 			}
+		}else{
+			hasResponsible = false;
 		}
 		return hasResponsible;
-		//TODO: Lägga till try-catch och fånga exceptions på ett lämpligt sätt.
 	}
 
 	/**
@@ -527,15 +527,14 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		boolean hasResponsible = false;
 		if(!this.roomIDToGuestMap.isEmpty()){
 			for (String guestEmail : roomIDToGuestMap.values()) {
-				while(!hasResponsible){
-					if(!guestEmail.isEmpty() || !guestEmail.equals("out")){
+				if(!guestEmail.isEmpty() || !guestEmail.equals("out")){
 						hasResponsible = true;
-					}
 				}
 			}
+		}else{
+			hasResponsible = true;
 		}
 		return hasResponsible;
-		//TODO: Lägga till try-catch och fånga exceptions på ett lämpligt sätt.
 	}
 
 	/**
@@ -550,7 +549,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			result = -1;													//om rumsID inte ‰r tom, koppla ej 
 		}
 		return result;
-		//TODO: check other cases
 	}
 	
 	/**
@@ -571,7 +569,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			result = -1;													//dÂ finns inget mejl som man kan koppla till = -1
 		}
 		return result;
-		//TODO: check other cases
 	}
 
 	/**
@@ -605,7 +602,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			result = -1;
 		}
 		return result;
-		//TODO check other cases
 	}
 	
 	/**
@@ -622,7 +618,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			result = -1;											//returnera fel
 		}
 		return result;
-		//TODO check other cases
 	}
 
 	/**
@@ -640,7 +635,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			result = -1;												//om listan ‰r tom, kan ej s‰tta rumstyp
 		}
 		return result;
-		//TODO check other cases
 	}
 
 	/**
