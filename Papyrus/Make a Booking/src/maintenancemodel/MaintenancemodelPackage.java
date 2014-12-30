@@ -890,7 +890,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__STRING_STRING_STRING = 1;
+	int IMAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__ELIST_STRING_STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Remove Booking</em>' operation.
@@ -899,16 +899,16 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__STRING_INT_STRING_STRING = 2;
+	int IMAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_INT_STRING_STRING = 2;
 
 	/**
-	 * The operation id for the '<em>Set Booking As Active</em>' operation.
+	 * The operation id for the '<em>Get Room And Set Active</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAINTENANCE_PROVIDES_FOR_BOOKING___SET_BOOKING_AS_ACTIVE__STRING = 3;
+	int IMAINTENANCE_PROVIDES_FOR_BOOKING___GET_ROOM_AND_SET_ACTIVE__STRING = 3;
 
 	/**
 	 * The operation id for the '<em>Get Price Room</em>' operation.
@@ -1642,7 +1642,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__STRING_STRING_STRING = IMAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__STRING_STRING_STRING;
+	int MAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__ELIST_STRING_STRING = IMAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__ELIST_STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Remove Booking</em>' operation.
@@ -1651,16 +1651,16 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__STRING_INT_STRING_STRING = IMAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__STRING_INT_STRING_STRING;
+	int MAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_INT_STRING_STRING = IMAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_INT_STRING_STRING;
 
 	/**
-	 * The operation id for the '<em>Set Booking As Active</em>' operation.
+	 * The operation id for the '<em>Get Room And Set Active</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAINTENANCE_PROVIDES_FOR_BOOKING___SET_BOOKING_AS_ACTIVE__STRING = IMAINTENANCE_PROVIDES_FOR_BOOKING___SET_BOOKING_AS_ACTIVE__STRING;
+	int MAINTENANCE_PROVIDES_FOR_BOOKING___GET_ROOM_AND_SET_ACTIVE__STRING = IMAINTENANCE_PROVIDES_FOR_BOOKING___GET_ROOM_AND_SET_ACTIVE__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Price Room</em>' operation.
@@ -2398,34 +2398,34 @@ public interface MaintenancemodelPackage extends EPackage {
 	EOperation getIMaintenanceProvidesForBooking__CanBook__EList_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#makeBooking(java.lang.String, java.lang.String, java.lang.String) <em>Make Booking</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#makeBooking(org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String) <em>Make Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Make Booking</em>' operation.
-	 * @see maintenancemodel.IMaintenanceProvidesForBooking#makeBooking(java.lang.String, java.lang.String, java.lang.String)
+	 * @see maintenancemodel.IMaintenanceProvidesForBooking#makeBooking(org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIMaintenanceProvidesForBooking__MakeBooking__String_String_String();
+	EOperation getIMaintenanceProvidesForBooking__MakeBooking__EList_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#removeBooking(java.lang.String, int, java.lang.String, java.lang.String) <em>Remove Booking</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#removeBooking(org.eclipse.emf.common.util.EList, int, java.lang.String, java.lang.String) <em>Remove Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Booking</em>' operation.
-	 * @see maintenancemodel.IMaintenanceProvidesForBooking#removeBooking(java.lang.String, int, java.lang.String, java.lang.String)
+	 * @see maintenancemodel.IMaintenanceProvidesForBooking#removeBooking(org.eclipse.emf.common.util.EList, int, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIMaintenanceProvidesForBooking__RemoveBooking__String_int_String_String();
+	EOperation getIMaintenanceProvidesForBooking__RemoveBooking__EList_int_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#setBookingAsActive(java.lang.String) <em>Set Booking As Active</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#getRoomAndSetActive(java.lang.String) <em>Get Room And Set Active</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Set Booking As Active</em>' operation.
-	 * @see maintenancemodel.IMaintenanceProvidesForBooking#setBookingAsActive(java.lang.String)
+	 * @return the meta object for the '<em>Get Room And Set Active</em>' operation.
+	 * @see maintenancemodel.IMaintenanceProvidesForBooking#getRoomAndSetActive(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIMaintenanceProvidesForBooking__SetBookingAsActive__String();
+	EOperation getIMaintenanceProvidesForBooking__GetRoomAndSetActive__String();
 
 	/**
 	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#getPriceRoom(org.eclipse.emf.common.util.EList) <em>Get Price Room</em>}' operation.
@@ -3387,7 +3387,7 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__STRING_STRING_STRING = eINSTANCE.getIMaintenanceProvidesForBooking__MakeBooking__String_String_String();
+		EOperation IMAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__ELIST_STRING_STRING = eINSTANCE.getIMaintenanceProvidesForBooking__MakeBooking__EList_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Booking</b></em>' operation.
@@ -3395,15 +3395,15 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__STRING_INT_STRING_STRING = eINSTANCE.getIMaintenanceProvidesForBooking__RemoveBooking__String_int_String_String();
+		EOperation IMAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_INT_STRING_STRING = eINSTANCE.getIMaintenanceProvidesForBooking__RemoveBooking__EList_int_String_String();
 
 		/**
-		 * The meta object literal for the '<em><b>Set Booking As Active</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Room And Set Active</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMAINTENANCE_PROVIDES_FOR_BOOKING___SET_BOOKING_AS_ACTIVE__STRING = eINSTANCE.getIMaintenanceProvidesForBooking__SetBookingAsActive__String();
+		EOperation IMAINTENANCE_PROVIDES_FOR_BOOKING___GET_ROOM_AND_SET_ACTIVE__STRING = eINSTANCE.getIMaintenanceProvidesForBooking__GetRoomAndSetActive__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Price Room</b></em>' operation.
