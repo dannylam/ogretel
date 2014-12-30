@@ -46,5 +46,20 @@ public class testExtras {
 		assertTrue(product.getDescription().compareTo(description) == 0);
 		assertTrue(product.getName().compareTo(productName) == 0);
 		assertTrue(product.getPrice() == price);
-		assertTrue(product.getID() == productID);	}
+		assertTrue(product.getID() == productID);	
+		}
+	
+	public void testRemoveAndExistsExtra() {
+		ExtraHandler extraHandler = new ExtraHandlerImpl();
+		String description = "Such fun, verry wow";
+		int price = 100;
+		String name = "Yoloing";
+		int ID = 0;
+		
+		extraHandler.addExtra(ID, price, name, description, false);
+		AbstractExtra extra = (AbstractExtra) extraHandler.getExtra(ID);
+		assertTrue(extraHandler.exists(ID));
+		extraHandler.removeExtra(ID);
+		assertTrue(extraHandler.getExtra(ID) == null);
+	}
 }
