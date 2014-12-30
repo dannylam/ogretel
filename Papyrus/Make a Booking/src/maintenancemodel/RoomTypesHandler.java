@@ -89,4 +89,12 @@ public interface RoomTypesHandler extends EObject {
 	 */
 	RoomType getRoomType(String roomTypeID);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model calendarRequired="true" calendarOrdered="false"
+	 * @generated
+	 */
+	void getCalendar(Calendar calendar);
+
 } // RoomTypesHandler

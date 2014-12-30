@@ -3,6 +3,7 @@
 	package maintenancemodel.impl;
 	
 	import java.lang.reflect.InvocationTargetException;
+import maintenancemodel.Calendar;
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.RoomType;
 import maintenancemodel.RoomTypeEnum;
@@ -142,6 +143,17 @@ import org.eclipse.emf.ecore.util.InternalEList;
 		return null;
 		
 		// TODO: test. & is return null good?
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void getCalendar(Calendar calendar) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**

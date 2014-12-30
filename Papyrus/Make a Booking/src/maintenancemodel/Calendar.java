@@ -47,16 +47,6 @@ public interface Calendar extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>String To Lists Map</em>' map.
 	 * @see #getStringToListsMap()
-	 * @generated
-	 */
-	void setStringToListsMap(Map.Entry<String, EList<Integer>> value);
-
-	/**
-	 * Sets the value of the '{@link maintenancemodel.Calendar#getStringToListsMap <em>String To Lists Map</em>}' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>String To Lists Map</em>' map.
-	 * @see #getStringToListsMap()
 	 * @generated NOT
 	 */
 	void setStringToListsMap(EMap<String, EList<Integer>> value);

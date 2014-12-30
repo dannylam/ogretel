@@ -314,9 +314,9 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated 
+	 * @generated
 	 */
-	public int getRoomAndSetActive(String roomTypeID) {
+	public int setActive(String roomTypeID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -467,8 +467,8 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 				return makeBooking((EList<String>)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_INT_STRING_STRING:
 				return removeBooking((EList<String>)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
-			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___GET_ROOM_AND_SET_ACTIVE__STRING:
-				return getRoomAndSetActive((String)arguments.get(0));
+			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___SET_ACTIVE__STRING:
+				return setActive((String)arguments.get(0));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___GET_PRICE_ROOM__ELIST:
 				return getPriceRoom((EList<String>)arguments.get(0));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___GET_PRICE_EXTRA__ELIST:

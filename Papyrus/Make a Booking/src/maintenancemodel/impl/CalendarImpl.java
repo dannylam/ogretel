@@ -3,10 +3,7 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
-<<<<<<< HEAD
-=======
 import java.util.Map;
->>>>>>> branch 'classcodegens' of https://github.com/dannylam/ogretel.git
 
 import maintenancemodel.Calendar;
 import maintenancemodel.MaintenancemodelPackage;

@@ -294,16 +294,16 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case MaintenancemodelPackage.EXTRA_HANDLER___EXISTS__STRING:
-				return exists((String)arguments.get(0));
-			case MaintenancemodelPackage.EXTRA_HANDLER___ADD_EXTRA__STRING_INT_STRING_STRING_BOOLEAN:
-				return addExtra((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (Boolean)arguments.get(4));
-			case MaintenancemodelPackage.EXTRA_HANDLER___REMOVE_EXTRA__STRING:
-				return removeExtra((String)arguments.get(0));
 			case MaintenancemodelPackage.EXTRA_HANDLER___GET_EXTRAS:
 				return getExtras();
 			case MaintenancemodelPackage.EXTRA_HANDLER___GET_PRICE__STRING:
 				return getPrice((String)arguments.get(0));
+			case MaintenancemodelPackage.EXTRA_HANDLER___ADD_EXTRA__STRING_INT_STRING_STRING_BOOLEAN:
+				return addExtra((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (Boolean)arguments.get(4));
+			case MaintenancemodelPackage.EXTRA_HANDLER___REMOVE_EXTRA__STRING:
+				return removeExtra((String)arguments.get(0));
+			case MaintenancemodelPackage.EXTRA_HANDLER___EXISTS__STRING:
+				return exists((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

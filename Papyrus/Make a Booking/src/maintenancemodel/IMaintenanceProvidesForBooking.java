@@ -55,7 +55,7 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
 	 * @generated
 	 */
-	int getRoomAndSetActive(String roomTypeID);
+	int setActive(String roomTypeID);
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -66,7 +66,7 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extraIDsDataType="org.eclipse.uml2.types.String" extraIDsMany="true" extraIDsOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extraIDsMany="true" extraIDsOrdered="false"
 	 * @generated
 	 */
 	int getPriceExtra(EList<String> extraIDs);
