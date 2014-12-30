@@ -121,8 +121,8 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testBook() {
+		assertTrue(bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
 		
-	
 		fail("Not yet implemented");
 	}
 
