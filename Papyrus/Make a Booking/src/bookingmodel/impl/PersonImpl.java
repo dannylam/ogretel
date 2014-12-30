@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link bookingmodel.impl.PersonImpl#getEmail <em>Email</em>}</li>
  *   <li>{@link bookingmodel.impl.PersonImpl#getTelephoneNr <em>Telephone Nr</em>}</li>
  *   <li>{@link bookingmodel.impl.PersonImpl#getAddress <em>Address</em>}</li>
+ *   <li>{@link bookingmodel.impl.PersonImpl#getAge <em>Age</em>}</li>
  * </ul>
  * </p>
  *
@@ -129,6 +130,26 @@ public abstract class PersonImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String address = ADDRESS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getAge() <em>Age</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAge()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int AGE_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getAge() <em>Age</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAge()
+	 * @generated
+	 * @ordered
+	 */
+	protected int age = AGE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -259,6 +280,27 @@ public abstract class PersonImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getAge() {
+		return age;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAge(int newAge) {
+		int oldAge = age;
+		age = newAge;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.PERSON__AGE, oldAge, age));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -272,6 +314,8 @@ public abstract class PersonImpl extends MinimalEObjectImpl.Container implements
 				return getTelephoneNr();
 			case BookingmodelPackage.PERSON__ADDRESS:
 				return getAddress();
+			case BookingmodelPackage.PERSON__AGE:
+				return getAge();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -298,6 +342,9 @@ public abstract class PersonImpl extends MinimalEObjectImpl.Container implements
 				return;
 			case BookingmodelPackage.PERSON__ADDRESS:
 				setAddress((String)newValue);
+				return;
+			case BookingmodelPackage.PERSON__AGE:
+				setAge((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -326,6 +373,9 @@ public abstract class PersonImpl extends MinimalEObjectImpl.Container implements
 			case BookingmodelPackage.PERSON__ADDRESS:
 				setAddress(ADDRESS_EDEFAULT);
 				return;
+			case BookingmodelPackage.PERSON__AGE:
+				setAge(AGE_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -348,6 +398,8 @@ public abstract class PersonImpl extends MinimalEObjectImpl.Container implements
 				return TELEPHONE_NR_EDEFAULT == null ? telephoneNr != null : !TELEPHONE_NR_EDEFAULT.equals(telephoneNr);
 			case BookingmodelPackage.PERSON__ADDRESS:
 				return ADDRESS_EDEFAULT == null ? address != null : !ADDRESS_EDEFAULT.equals(address);
+			case BookingmodelPackage.PERSON__AGE:
+				return age != AGE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -372,6 +424,8 @@ public abstract class PersonImpl extends MinimalEObjectImpl.Container implements
 		result.append(telephoneNr);
 		result.append(", Address: ");
 		result.append(address);
+		result.append(", age: ");
+		result.append(age);
 		result.append(')');
 		return result.toString();
 	}

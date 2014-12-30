@@ -17,6 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  * setTelephoneNr - sets the telephone number of a person.
  * getAddress - returns the address of a person.
  * setAddress - sets the address of a person.
+ * getAge - returns the age of a person.
+ * setAge - sets the age of a person.
  * 
  * <p>
  * The following features are supported:
@@ -127,5 +129,23 @@ public interface Person extends EObject {
 	 * @generated NOT
 	 */
 	void setAddress(String value);
+
+	/**
+	 * Returns a person's age.
+	 * @return the value of the '<em>Age</em>' attribute.
+	 * @see #setAge(int)
+	 * @see bookingmodel.BookingmodelPackage#getPerson_Age()
+	 * @model dataType="types.Integer" required="true" ordered="false"
+	 * @generated
+	 */
+	int getAge();
+
+	/**
+	 * Sets a person's age.
+	 * @param value the new value of the '<em>Age</em>' attribute.
+	 * @see #getAge()
+	 * @generated
+	 */
+	void setAge(int value);
 
 } // Person

@@ -43,39 +43,56 @@ public interface BookingHandler extends EObject {
 	/**
 	 * A method that checks if the booking reference exists
 	 * @param bookingRef
+	 * @return boolean which indicating if the given booking reference exists in the map of bookings
 	 * @model dataType="types.Boolean" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
 	boolean exists(String bookingRef);
 
 	/**
-	 * A method that adds a booking 
+	 * Adds a booking to the map where the key is the bookingreference and the value the booking. 
+	 * The integer returned by the function indicates success or failure and reason for failure.
 	 * @param booking
+	 *  //TODO
+	 * @return  0 if success 
+	 * 			1 if ??
+	 * 			2 if ??
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRequired="true" bookingOrdered="false"
 	 * @generated NOT
 	 */
 	int addBooking(Booking booking);
 
 	/**
-	 * A method that removes a booking 
+	 * Removes a booking from the map with the given booking reference.
+	 * The integer returned by the function indicates success or failure and reason for failure.
 	 * @param booking
+	 * //TODO
+	 * @return  0 if success 
+	 * 			1 if ??
+	 * 			2 if ??
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
 	int removeBooking(String bookingRef);
 
 	/**
-	 * A method that gets a booking with booking reference
+	 * Gets a booking with a specific booking reference.
 	 * @param bookingRef
+	 * @return a booking
 	 * @model required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
 	Booking getBooking(String bookingRef);
 
 	/**
-	 * A method that edits the booking reference, nr of nights, nr of guests, start of the date, 
-	 * end of the date, the type of the rooms and extras
+	 * Edits a booking's, nr of nights, nr of guests, start of the date, 
+	 * end of the date, the type of the rooms and extras with the given booking reference.
+	 * The integer returned by the function indicates success or failure and reason for failure.
 	 * @param bookingRef, nrOfNights, nrOfGuests, startDate, endDate, roomTypes, extras
+	 *  //TODO
+	 * @return  0 if success 
+	 * 			1 if ??
+	 * 			2 if ??
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesRequired="true" roomTypesMany="false" roomTypesOrdered="false" extrasMany="false" extrasOrdered="false"
 	 * @generated
 	 */

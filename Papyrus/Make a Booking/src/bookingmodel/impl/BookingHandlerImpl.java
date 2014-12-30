@@ -75,9 +75,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * TODO: javadoc
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public boolean exists(String bookingRef) {
@@ -86,19 +84,18 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * TODO: javadoc
-	 * @return 
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public int addBooking(Booking booking) {
 		int result = 0;
 		this.bookingsMap.put(booking.getBookingRef(), booking);
-		//TODO: check if correct
+		//TODO: check other cases
 		return result;
 	}
 
 	/**
-	 * TODO: javadoc
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public int removeBooking(String bookingRef) {
@@ -106,23 +103,21 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		if(this.exists(bookingRef)){
 			this.bookingsMap.remove(getBooking(bookingRef));
 		}	
-		//TODO: check if correct
+		//TODO: check other cases
 		return result;
 	}
 
 	/**
-	 * TODO: javadoc
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public Booking getBooking(String bookingRef) {
 		return this.bookingsMap.get(bookingRef);
-		//TODO: check if correct
 	}
 
 
 	/**
-	 * A method which edits a booking such as the start date, end date, 
-	 * number of guests, room type and extras.
+	 * @inheritDoc
 	 * @param bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras
 	 * @generated NOT
 	 */
@@ -133,10 +128,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				this.getBooking(bookingRef).setStartDate(startDate);
 				this.getBooking(bookingRef).setEndDate(endDate);
 				this.getBooking(bookingRef).setNrOfGuests(nrOfGuests);
-				// Get specific roomtype/extra hence list? 
 				this.getBooking(bookingRef).setRoomTypes(roomTypes);
 				this.getBooking(bookingRef).setExtras(extras);
-				//TODO: check if correct
+				//TODO: check other cases
 			}
 		return result;
 	}
@@ -219,6 +213,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {

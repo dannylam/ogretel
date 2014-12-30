@@ -6,8 +6,11 @@ import bookingmodel.Booking;
 import bookingmodel.BookingHandler;
 import bookingmodel.BookingProvides;
 import bookingmodel.BookingmodelPackage;
+import bookingmodel.Customer;
 import bookingmodel.IBookingProvidesForGuest;
 import bookingmodel.IBookingProvidesForHost;
+import bookingmodel.PaymentDetails;
+import bookingmodel.PaymentMethod;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
@@ -124,8 +127,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public int enableSelfManagement() {
@@ -135,8 +137,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public int addServiceNote(String serviceNote) {
@@ -179,30 +180,29 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * Checks-in the guests of the booking by setting the booking as active
-	 * and the guest provided the email as responsible if the booking is not already
-	 * checked in and is valid.
-	 * Returns an integer indicating the result of the invoke, where 0 stands for success.
-	 * 
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public int checkIn(String bookingRef, String guestEmail) {
 		int result = 0;
 		if(this.bookingHandler.exists(bookingRef) && !this.bookingHandler.getBooking(bookingRef).checkedInAllGuest()){
 			
-			//get vacant rooms from maintenance which are to be added in the map roomtypeToRoomID in booking
-			maintenanceComponent.setBookingAsActive(bookingRef);
+			/*
+			 * Give maintenance the roomstypes for this booking and get roomIDs in return
+			 * Maintenance will then set these roomIDs as checkedIn
+			 * Then set the guest as responsible
+			 */
 			this.bookingHandler.getBooking(bookingRef).setResponsibleGuestToAllRooms(guestEmail);
-			
+			//maintenanceComponent.setBookingAsActive(bookingRef); denna metoden ska väl bort i maintenance?
 			
 		}
-		// TODO: check if correct
+		//TODO: implement this method, we are waiting for maintenance 
+		// TODO: check other cases
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public int checkOut(String bookingRef, String guestEmail) {
@@ -223,159 +223,147 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * TODO: javadoc
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public Booking getBooking(String bookingRef) {
-		if(!(bookingRef.equals(null))){
-			return this.bookingHandler.getBooking(bookingRef);
-		} else {
-			//TODO:change this later on
-			return null;
-		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public int pay(String bookingRef) {
 		int result = 0;
-		/*
-		 *check if this booking exists and is not null
-		 *get the price
-		 *take the paymentdetails from the customer of this booking
-		 *invoke pay() in banking 
-		 */
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
+		if(this.getBookingHandler().exists(bookingRef)){
+			int price = this.getPrice(bookingRef);
+			PaymentDetails paymentdetails = this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().get(0);
+			//invoke pay() in bankingcomponent med price & get delar från paymentdetails
+		}
+		// TODO: check other cases
+		//TODO: we are waiting for the banking code to be added
 		return result;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @inhertDoc
 	 * @generated NOT
 	 */
 	public int getPrice(String bookingRef) {
-		// TODO: implement this method
+		int price = 0;
+		String extras = this.bookingHandler.getBooking(bookingRef).getExtraToIsPayedMap().keySet().toString();
+		//String roomtypes = this.bookingHandler.getBooking(bookingRef).getRoomTypeToRoomIDMap().values().toString();
+		
+		//maintenanceComponent.getPrice(extras);
+		//maintenanceComponent.getPrice(roomtypes);
 		/*
 		 * Ska från en bookingRef få reda på vilka extras och hur många av varjerumstyp vi har
 		 * och därefter kan vi fråga maintenance om vad priset för varje är och sedan summera och returnera
 		 */
-		throw new UnsupportedOperationException();
+		//TODO: implement this method, we are waiting for maintenance 
+		// TODO: check other cases
+		return price;
 	}
 
 	/**
-	 * TODO: javadoc
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public int removeBooking(String bookingRef) {
-		int result = 0;
-		//checka att bookingref är av bra format etc sen
-		//this.getBookingHandler().removeBooking(bookingRef);
-		// TODO: implement this method
-		return result;
+		return this.getBookingHandler().removeBooking(bookingRef);
 	}
 
 	/**
-	 * Edit a booking such as start date,
-	 * end date, number of guests, room types and extras.
-	 * Changing roomTypes and extras from String to list.
-	 * @param bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, String roomTypes, String extras) {
 		int result = 0;
-
 		/*
 		 * Check with the changes if they are possible, ask maintenacne, if so, then the changes are registered 
 		 * in the booking
 		 * */
 		
-		this.getBookingHandler().editBooking(bookingRef, startDate, endDate, nrOfGuests, stringToList(roomTypes), stringToList(extras));
-		//TODO: implement this method
+		this.bookingHandler.editBooking(bookingRef, startDate, endDate, nrOfGuests, this.stringToList(roomTypes), this.stringToList(extras));
+		
+		//TODO: implement this method, we are waiting for maintenance 
+		// TODO: check other cases
 		return result;
 	}
 
 	/**
-	 * TODO: javadoc
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @inheritDoc
 	 * @generated NOT
 	 */
+	//TODO: change inparams so that it also takes in a booking reference
 	public int setPaymentMethod(String method) {
 		int result = 0;
-		/*
-		 * Check if the method matches with one of the enums in paymentmethod
-		 * set the paymentmethod in booking as this method
-		 * 
-		 */
-		// TODO: implement this method
+	        
+		PaymentMethod paymentMethod = null;
+	        switch (method) {
+	            case PaymentMethod.BANKCARD.toString():  
+	            	paymentMethod = PaymentMethod.BANKCARD;
+	            	break;
+	            case PaymentMethod.CASH.toString():  
+	            	paymentMethod = PaymentMethod.CASH;
+	                break;
+	            case PaymentMethod.VOUCHER.toString():  
+	            	paymentMethod = PaymentMethod.VOUCHER;
+	                break;
+	            default:
+	            	break;
+	     }
+	     if(!paymentMethod.equals(null)){
+	    	 String bookingRef; //will be removed later on when inparam correct
+	    	 this.getBookingHandler().getBooking(bookingRef).setPaymentMethod(paymentMethod);
+	     }
 		return result;
+		// TODO: check other cases
 	}
 
 
 	/**
-	 * TODO: javadoc
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @inheritDoc
 	 * @generated NOT
 	 */
+	//TODO: change inparams so that it  takes in a booking reference instead of the customeremail
 	public int setPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, String customerEmail) {
 		int result = 0;
 		/*
-		 * check if there exists a customer with that email
+		 * check if there exists a booking with that booking reference
 		 * create a paymentdetails with all those imparams
-		 * set this paymentdetails to that customer
+		 * set this paymentdetails to the customer of that booking
 		 */
 		// TODO: implement this method
 		return result;
 	}
 
 	/**
-	 *TODO: javadoc
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public int setPersonalDetails(String firstName, String lastName, int age, String email, String bookingRef) {
 		int result = 0;
-		/*
-		 * create a customer with these inparams
-		 * assign this customer to the booking of that bookingreference 
-		 */
-		
-		// TODO: implement this method
+		Customer customer = new CustomerImpl();
+		customer.setFirstName(firstName);
+		customer.setLastName(lastName);
+		customer.setEmail(email);
+		customer.setAge(age);
+		this.getBookingHandler().getBooking(bookingRef).setCustomer(customer);
+		// TODO: check other cases
 		return result;
 	}
 
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public String book(String startDate, String endDate, int nrOfGuests, String roomTypes, String extras) {
 		String bookingRef = "";
 		// TODO: implement this method
 
-		/*
-		 * 
-		 */
-		
 		/*if(maintenanceComponent.canBook(roomTypes, startDate, endDate){
 			Booking booking = new BookingImpl(nrOfGuests, startDate, endDate, stringToList(roomTypes), stringToList(extras));	
-			//
-			
+			//tell maintenance to set those roomtypes and extras as busy
 			this.bookingHandler.addBooking(booking);
+			bookingRef = booking.getBookingRef();
 		}*/
 		return bookingRef;
+		// TODO: check other cases
 	}
 
 
