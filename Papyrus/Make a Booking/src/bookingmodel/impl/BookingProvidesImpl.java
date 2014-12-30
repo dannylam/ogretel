@@ -2,7 +2,6 @@
  */
 package bookingmodel.impl;
 
-import bookingmodel.Booking;
 import bookingmodel.BookingHandler;
 import bookingmodel.BookingProvides;
 import bookingmodel.BookingmodelPackage;
@@ -11,13 +10,10 @@ import bookingmodel.IBookingProvidesForGuest;
 import bookingmodel.IBookingProvidesForHost;
 import bookingmodel.PaymentDetails;
 import bookingmodel.PaymentMethod;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.List;
-
 import maintenancemodel.MaintenanceProvidesForBooking;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -288,10 +284,9 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @inheritDoc
 	 * @generated NOT
 	 */
-	//TODO: change inparams so that it also takes in a booking reference
-	public int setPaymentMethod(String method) {
+	public int setPaymentMethod(String method, String bookingRef) {
 		int result = 0;
-	        
+        
 		PaymentMethod paymentMethod = null;
 	        switch (method) {
 	            case PaymentMethod.BANKCARD.toString():  
@@ -307,7 +302,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	            	break;
 	     }
 	     if(!paymentMethod.equals(null)){
-	    	 String bookingRef; //will be removed later on when inparam correct
 	    	 this.getBookingHandler().getBooking(bookingRef).setPaymentMethod(paymentMethod);
 	     }
 		return result;
@@ -319,8 +313,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @inheritDoc
 	 * @generated NOT
 	 */
-	//TODO: change inparams so that it  takes in a booking reference instead of the customeremail
-	public int setPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, String customerEmail) {
+	public int setPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, String customerEmail, String bookingRef) {
 		int result = 0;
 		/*
 		 * check if there exists a booking with that booking reference
@@ -488,10 +481,10 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 				return removeBooking((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_PROVIDES___EDIT_BOOKING__STRING_STRING_STRING_INT_STRING_STRING:
 				return editBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
-			case BookingmodelPackage.BOOKING_PROVIDES___SET_PAYMENT_METHOD__STRING:
-				return setPaymentMethod((String)arguments.get(0));
-			case BookingmodelPackage.BOOKING_PROVIDES___SET_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_STRING:
-				return setPaymentDetails((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6));
+			case BookingmodelPackage.BOOKING_PROVIDES___SET_PAYMENT_METHOD__STRING_STRING:
+				return setPaymentMethod((String)arguments.get(0), (String)arguments.get(1));
+			case BookingmodelPackage.BOOKING_PROVIDES___SET_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_STRING_STRING:
+				return setPaymentDetails((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7));
 			case BookingmodelPackage.BOOKING_PROVIDES___SET_PERSONAL_DETAILS__STRING_STRING_INT_STRING_STRING:
 				return setPersonalDetails((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4));
 			case BookingmodelPackage.BOOKING_PROVIDES___BOOK__STRING_STRING_INT_STRING_STRING:
