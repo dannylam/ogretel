@@ -45,7 +45,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * @generated
 	 * @ordered
 	 */
-	protected Calendar calendar = new CalendarImpl();
+	protected Calendar calendar;
 
 	/**
 	 * The cached value of the '{@link #getRoomTypes() <em>Room Types</em>}' containment reference.
@@ -262,9 +262,10 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 */
 	public boolean canBook(EList<String> roomTypeIDs, String start, String end) {
 		
+		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		throw new UnsupportedOperationExce  ption();
 	}
 
 
@@ -444,10 +445,5 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 		return super.eInvoke(operationID, arguments);
 	}
 
-	@Override
-	public boolean canBook(String roomType, String start, String end) {
-		// TODO Auto-generated method stub
-		return false;
-	}
 
 } //MaintenanceProvidesForBookingImpl

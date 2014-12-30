@@ -3,15 +3,11 @@
 	package maintenancemodel.impl;
 	
 	import java.lang.reflect.InvocationTargetException;
-import java.util.Arrays;
-
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.RoomType;
 import maintenancemodel.RoomTypeEnum;
 import maintenancemodel.RoomTypesHandler;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
@@ -127,9 +123,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
 	 * @generated
 	 */
 	public EList<String> getRoomTypes() {
-		String[] rts = this.getStringToRoomType().keySet().toArray(new String[0]);
-		return new BasicEList( Arrays.asList(rts) );
-		// TODO: test
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
