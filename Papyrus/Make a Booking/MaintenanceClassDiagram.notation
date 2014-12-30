@@ -389,6 +389,10 @@
           <element xmi:type="uml:Operation" href="MaintenanceClassDiagram.uml#_SM24oI9DEeSxiJTOMlfhSg"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_SM4t0Y9DEeSxiJTOMlfhSg"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_t0N5gJAwEeSDD5PQGfw72g" type="3007">
+          <element xmi:type="uml:Operation" href="MaintenanceClassDiagram.uml#_ty2nkJAwEeSDD5PQGfw72g"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_t0N5gZAwEeSDD5PQGfw72g"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_VHq5132xEeSp56Ha0EyLeQ"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_VHq52H2xEeSp56Ha0EyLeQ"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_VHq52X2xEeSp56Ha0EyLeQ"/>
@@ -401,7 +405,7 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VHq5332xEeSp56Ha0EyLeQ"/>
       </children>
       <element xmi:type="uml:Interface" href="MaintenanceClassDiagram.uml#_VHpEoH2xEeSp56Ha0EyLeQ"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VHqSwX2xEeSp56Ha0EyLeQ" x="996" y="-112"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VHqSwX2xEeSp56Ha0EyLeQ" x="942" y="-112" width="939"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_dj4RIH2xEeSp56Ha0EyLeQ" type="2004">
       <children xmi:type="notation:DecorationNode" xmi:id="_dj4RIn2xEeSp56Ha0EyLeQ" type="5011"/>
