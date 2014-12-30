@@ -612,6 +612,9 @@
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_ooOuMI6uEeSqUPpyrwDcyg" type="_CLdSkHk_EeScv6HJEKdjpA" direction="return"/>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_R8mAcJAyEeSDD5PQGfw72g" name="getCalendar">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YiU-UJAyEeSDD5PQGfw72g" name="calendar" type="_k4694HlEEeScv6HJEKdjpA"/>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_JJ2gI321EeSp56Ha0EyLeQ" memberEnd="_JJ2gJH21EeSp56Ha0EyLeQ _JJ2gIH21EeSp56Ha0EyLeQ">
       <ownedEnd xmi:type="uml:Property" xmi:id="_JJ2gJH21EeSp56Ha0EyLeQ" name="extrasMaintenance" type="_YvWVsH2yEeSp56Ha0EyLeQ" association="_JJ2gI321EeSp56Ha0EyLeQ">
@@ -621,7 +624,7 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_u8IkIH22EeSp56Ha0EyLeQ" memberEnd="_u8IkIX22EeSp56Ha0EyLeQ _u8H9EH22EeSp56Ha0EyLeQ">
       <name xsi:nil="true"/>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_u8IkIX22EeSp56Ha0EyLeQ" name="maintenanceProvidesForBooking" type="_w1eBIH2yEeSp56Ha0EyLeQ" association="_u8IkIH22EeSp56Ha0EyLeQ">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_u8IkIX22EeSp56Ha0EyLeQ" name="maintenanceProvidesForBooking" type="_GrhyMHlEEeScv6HJEKdjpA" association="_u8IkIH22EeSp56Ha0EyLeQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_u8IkIn22EeSp56Ha0EyLeQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_u8IkI322EeSp56Ha0EyLeQ" value="1"/>
       </ownedEnd>
