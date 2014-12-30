@@ -20,8 +20,10 @@ public interface IRoomMaintenance extends EObject {
 	 * unique and the roomTypeID must exist in the system. The integer returned
 	 * by the function indicates success or failure and reason for failure.
 	 * 
-	 * @return 0 if success 1 if roomTypeID does not exist 2 if roomID not
-	 *         unique
+	 * @return
+	 * 0 if success
+	 * 1 if roomTypeID does not exist
+	 * 2 if roomID not unique
 	 * 
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true"
 	 *        ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer"
@@ -45,7 +47,9 @@ public interface IRoomMaintenance extends EObject {
 	int removeRoom(int roomID);
 
 	/**
-	 * Adds a RoomType with the given parameters. TODO finish documentation
+	 * Adds a RoomType with the given parameters. 
+	 * 
+	 * TODO finish documentation
 	 * 
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true"
 	 *        ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String"

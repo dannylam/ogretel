@@ -100,7 +100,7 @@ public class MaintenancemodelAdapterFactory extends AdapterFactoryImpl {
 				return createExtraHandlerAdapter();
 			}
 			@Override
-			public Adapter caseIntegerToExtraMap(Map.Entry<Integer, Extra> object) {
+			public Adapter caseIntegerToExtraMap(Map.Entry<String, Extra> object) {
 				return createIntegerToExtraMapAdapter();
 			}
 			@Override

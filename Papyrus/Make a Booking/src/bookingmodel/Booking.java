@@ -250,6 +250,9 @@ public interface Booking extends EObject {
 
 	/**
 	 * Sets a responsible guest to a specific roomID by using their email.
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return  -1 if not success
+	 * 			0 if success 
 	 * @model dataType="types.Integer" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated NOT
 	 */
@@ -257,6 +260,9 @@ public interface Booking extends EObject {
 
 	/**
 	 * Sets a guest as responsible to all the rooms in the booking by using their email
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return  -1 if not success
+	 * 			0 if success 
 	 * @model dataType="types.Integer" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated NOT
 	 */
@@ -271,6 +277,9 @@ public interface Booking extends EObject {
 
 	/**
 	 * Adds extras from a booking into the map with extras.
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return  -1 if not success
+	 * 			0 if success 
 	 * @model dataType="types.Integer" required="true" ordered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false"
 	 * @generated NOT
 	 */
@@ -284,8 +293,10 @@ public interface Booking extends EObject {
 	int setRoomTypes(List<String> roomTypes);
 
 	/**
-	 * 
 	 * Adds roomIDs from a booking into the map with roomIDs.
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return  -1 if not success
+	 * 			0 if success 
 	 * @model dataType="types.Integer" required="true" roomIDsDataType="types.Integer" roomIDsMany="true"
 	 * @generated
 	 */
