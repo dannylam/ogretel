@@ -88,6 +88,6 @@ public interface ExtraHandler extends EObject {
 	 * @generated NOT
 	 */
 	
-	public Extra getExtra(int ID);
+	public Extra getExtra(String ID);
 
 } // ExtraHandler

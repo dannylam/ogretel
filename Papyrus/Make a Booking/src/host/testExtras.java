@@ -27,10 +27,10 @@ public class testExtras {
 		int price = 100;
 		
 		String experienceName = "Yoloing";
-		int experienceID = 0;
+		String experienceID = "0";
 		
 		String productName = "Bag of swag";
-		int productID = 1;
+		String productID = "1";
 		
 		extraHandler.addExtra(experienceID, price, experienceName, description, false);
 		extraHandler.addExtra(productID,  price, productName,    description, true);

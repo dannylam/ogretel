@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.EObject;
  * setPaymentMethod - set the payment method to a specific booking
  * checkedInAllGuest - check if all guests are checked in.
  * checkedInAGuest - check if a specific guest is checked in.
+ * TODO: Update with the added methods
  * <p>
  * The following features are supported:
  * <ul>
@@ -50,7 +51,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see bookingmodel.BookingmodelPackage#getBooking()
  * @model
- * @generated NOT
+ * @generated 
  */
 public interface Booking extends EObject {
 	/**
@@ -287,20 +288,13 @@ public interface Booking extends EObject {
 
 	/**
 	 * Adds roomtypes from a booking into the map with roomtypes.
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return  -1 if not success
+	 * 			0 if success 
 	 * @model dataType="types.Integer" required="true" ordered="false" roomTypesDataType="types.String" roomTypesMany="true" roomTypesOrdered="false"
 	 * @generated NOT
 	 */
 	int setRoomTypes(List<String> roomTypes);
-
-	/**
-	 * Adds roomIDs from a booking into the map with roomIDs.
-	 * The integer returned by the function indicates success or failure and reason for failure.
-	 * @return  -1 if not success
-	 * 			0 if success 
-	 * @model dataType="types.Integer" required="true" roomIDsDataType="types.Integer" roomIDsMany="true"
-	 * @generated
-	 */
-	int setRoomIDs(List<Integer> roomIDs);
 
 	/**
 	 * Generates a booking reference to this booking
@@ -308,5 +302,26 @@ public interface Booking extends EObject {
 	 * @generated NOT
 	 */
 	void generateBookingRef();
+
+	/**
+	 * @TODO JAVADOC
+	 * @model kind="operation" required="true" many="false"
+	 * @generated NOT
+	 */
+	EList<String> getExtras();
+
+	/**
+	 * @TODO JAVADOC
+	 * @model kind="operation" required="true" many="false"
+	 * @generated NOT
+	 */
+	EList<String> getRoomTypes();
+
+	/**
+	 * @TODO JAVADOC
+	 * @model kind="operation" required="true" many="false"
+	 * @generated NOT
+	 */
+	EList<String> getRoomIDs();
 
 } // Booking

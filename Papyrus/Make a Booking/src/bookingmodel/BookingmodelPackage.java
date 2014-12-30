@@ -405,13 +405,40 @@ public interface BookingmodelPackage extends EPackage {
 	int BOOKING___GENERATE_BOOKING_REF = 8;
 
 	/**
+	 * The operation id for the '<em>Get Extras</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING___GET_EXTRAS = 9;
+
+	/**
+	 * The operation id for the '<em>Get Room Types</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING___GET_ROOM_TYPES = 10;
+
+	/**
+	 * The operation id for the '<em>Get Room IDs</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING___GET_ROOM_IDS = 11;
+
+	/**
 	 * The number of operations of the '<em>Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_OPERATION_COUNT = 9;
+	int BOOKING_OPERATION_COUNT = 12;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.impl.PersonImpl <em>Person</em>}' class.
@@ -1670,6 +1697,36 @@ public interface BookingmodelPackage extends EPackage {
 	EOperation getBooking__GenerateBookingRef();
 
 	/**
+	 * Returns the meta object for the '{@link bookingmodel.Booking#getExtras() <em>Get Extras</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Extras</em>' operation.
+	 * @see bookingmodel.Booking#getExtras()
+	 * @generated
+	 */
+	EOperation getBooking__GetExtras();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.Booking#getRoomTypes() <em>Get Room Types</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Room Types</em>' operation.
+	 * @see bookingmodel.Booking#getRoomTypes()
+	 * @generated
+	 */
+	EOperation getBooking__GetRoomTypes();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.Booking#getRoomIDs() <em>Get Room IDs</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Room IDs</em>' operation.
+	 * @see bookingmodel.Booking#getRoomIDs()
+	 * @generated
+	 */
+	EOperation getBooking__GetRoomIDs();
+
+	/**
 	 * Returns the meta object for class '{@link bookingmodel.Customer <em>Customer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2498,6 +2555,30 @@ public interface BookingmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING___GENERATE_BOOKING_REF = eINSTANCE.getBooking__GenerateBookingRef();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Extras</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING___GET_EXTRAS = eINSTANCE.getBooking__GetExtras();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Room Types</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING___GET_ROOM_TYPES = eINSTANCE.getBooking__GetRoomTypes();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Room IDs</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING___GET_ROOM_IDS = eINSTANCE.getBooking__GetRoomIDs();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.impl.CustomerImpl <em>Customer</em>}' class.

@@ -69,55 +69,21 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public EMap<Integer, Extra> getIntToExtraMap() {
+	public EMap<String, Extra> getIntToExtraMap() {
 		if (intToExtraMap == null) {
-			intToExtraMap = new EcoreEMap<Integer,Extra>(MaintenancemodelPackage.Literals.INTEGER_TO_EXTRA_MAP, IntegerToExtraMapImpl.class, this, MaintenancemodelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP);
+			intToExtraMap = new EcoreEMap<String,Extra>(MaintenancemodelPackage.Literals.INTEGER_TO_EXTRA_MAP, IntegerToExtraMapImpl.class, this, MaintenancemodelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP);
 		}
 		return intToExtraMap;
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean exists(String extraID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int addExtra(String extraID, int price, String name, String description, boolean isProduct) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int removeExtra(String extraID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
+	
 	/**
 	 * <!-- begin-user-doc -->
 	 * Returns if the element exists or not.
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean exists(int ID) {
-		Integer integer = new Integer (ID);
-		return intToExtraMap.get(integer) != null;
+	public boolean exists(String ID) {
+		return intToExtraMap.containsKey(ID);
 	}
 
 	/**
@@ -128,7 +94,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int addExtra(int extraID, int price, String name, String description, boolean isProduct) {
+	public int addExtra(String extraID, int price, String name, String description, boolean isProduct) {
 		AbstractExtraImpl extra;
 		if(intToExtraMap.containsKey(extraID)) {
 			return 1;
@@ -154,7 +120,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int removeExtra(int extra) {
+	public int removeExtra(String extra) {
 		intToExtraMap.remove(extra);
 		if(intToExtraMap.get(extra) != null) {
 			return 1;
@@ -179,24 +145,12 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getPrice(String extraID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
 	 * Returns null if there is no Extra with that key
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public Extra getExtra(int ID) {
-		Integer integer = new Integer (ID);
-		return intToExtraMap.get(integer);
+	public Extra getExtra(String ID) {
+		return intToExtraMap.get(ID);
 	}
 
 	/**
@@ -206,9 +160,8 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int getPrice(int extraID) {
-		Integer integer = new Integer (extraID);
-		AbstractExtraImpl extra = (AbstractExtraImpl) intToExtraMap.get(integer);
+	public int getPrice(String extraID) {
+		AbstractExtraImpl extra = (AbstractExtraImpl) intToExtraMap.get(extraID);
 		return extra.getPrice();
 	}
 

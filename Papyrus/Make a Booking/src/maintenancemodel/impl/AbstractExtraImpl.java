@@ -133,20 +133,8 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public int getID() {
+	public String getID() {
 		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setID(String newID) {
-		String oldID = id;
-		id = newID;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ABSTRACT_EXTRA__ID, oldID, id));
 	}
 
 	/**
@@ -155,8 +143,8 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public void setID(int newID) {
-		int oldID = id;
+	public void setID(String newID) {
+		String oldID = id;
 		id = newID;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ABSTRACT_EXTRA__ID, oldID, id));
