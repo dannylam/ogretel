@@ -200,18 +200,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int addRoomType(String roomTypeID, String roomTypeEnum, int price, int maxNrOfGuests, int nrOfRooms, String description) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int removeRoomType(String roomTypeID, int nrOfRooms) {
+	public int addRoomType(String roomTypeID, String roomTypeEnum, int price, int maxNrOfGuests, String description) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -223,7 +212,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int addRoomType(String roomTypeID, String roomTypeEnum, int price,
-			int maxNrOfGuests, String description) {
+			int maxNrOfGuests, int nrOfRooms, String description) {
 		RoomTypesHandler rth = this.getRoomTypeHandler();
 		if (price >= 0) {
 			if (maxNrOfGuests >= 0) {
@@ -316,11 +305,11 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int editRoomType(String roomTypeID, String roomTypeEnum, int price, int maxNrOfGuests, String description, int nrOfRooms) {
+	public int editRoomType(String roomTypeID, String roomTypeEnum, int price,
+			int maxNrOfGuests, String description, int nrOfRooms) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -448,7 +437,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getNrOfRooms(String roomTypeID) {
+	public int getNrOfRoomsofType(String roomTypeID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -603,10 +592,10 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 				return addRoom((Integer)arguments.get(0), (String)arguments.get(1));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___REMOVE_ROOM__INT:
 				return removeRoom((Integer)arguments.get(0));
-			case MaintenancemodelPackage.ROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_INT_STRING:
-				return addRoomType((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (Integer)arguments.get(4), (String)arguments.get(5));
-			case MaintenancemodelPackage.ROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING_INT:
-				return removeRoomType((String)arguments.get(0), (Integer)arguments.get(1));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_STRING:
+				return addRoomType((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING:
+				return removeRoomType((String)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM_STATUS__INT_STRING:
 				return editRoomStatus((Integer)arguments.get(0), (String)arguments.get(1));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING_INT:
@@ -633,8 +622,8 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 				return getRoomTypeID((Integer)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ENUMS:
 				return getRoomTypeEnums();
-			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_NR_OF_ROOMS__STRING:
-				return getNrOfRooms((String)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_NR_OF_ROOMSOF_TYPE__STRING:
+				return getNrOfRoomsofType((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

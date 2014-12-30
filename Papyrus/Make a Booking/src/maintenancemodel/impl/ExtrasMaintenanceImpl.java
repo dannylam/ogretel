@@ -105,7 +105,9 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	public boolean exists(String extraID) {
-		extras.exists(extraID);
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 

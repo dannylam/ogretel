@@ -320,9 +320,6 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_aWK0gIQ_EeSbvJ56HGFnrw" name="maxNrOfGuests">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_zCi1AJAvEeSDD5PQGfw72g" name="nrOfRooms">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_bswM8IQ_EeSbvJ56HGFnrw" name="description">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
@@ -333,9 +330,6 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_rgGTIHl5EeScv6HJEKdjpA" name="removeRoomType">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_rgGTIXl5EeScv6HJEKdjpA" name="roomTypeID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_87ny8JAvEeSDD5PQGfw72g" name="nrOfRooms">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_qjO9AI3XEeSb_cQ9NLV5hw" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -462,7 +456,7 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_d-0OUI9EEeSxiJTOMlfhSg" value="*"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_ty2nkJAwEeSDD5PQGfw72g" name="getNrOfRooms">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ty2nkJAwEeSDD5PQGfw72g" name="getNrOfRoomsofType">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_e3gNIJAxEeSDD5PQGfw72g" name="roomTypeID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
