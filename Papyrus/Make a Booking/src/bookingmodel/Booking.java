@@ -304,24 +304,38 @@ public interface Booking extends EObject {
 	void generateBookingRef();
 
 	/**
-	 * @TODO JAVADOC
+	 * TODO JAVADOC
 	 * @model kind="operation" required="true" many="false"
 	 * @generated NOT
 	 */
 	EList<String> getExtras();
 
 	/**
-	 * @TODO JAVADOC
+	 * TODO JAVADOC
 	 * @model kind="operation" required="true" many="false"
 	 * @generated NOT
 	 */
 	EList<String> getRoomTypes();
 
 	/**
-	 * @TODO JAVADOC
+	 * TODO JAVADOC
 	 * @model kind="operation" required="true" many="false"
 	 * @generated NOT
 	 */
 	EList<String> getRoomIDs();
+
+	/**
+	 * TODO JAVADOC
+	 * @model dataType="types.Integer" required="true" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
+	 * @generated NOT
+	 */
+	int removeResponsibleGuestToAllRooms(String guestEmail);
+
+	/**
+	 * TODO JAVADOC
+	 * @model dataType="types.Integer" required="true" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
+	 * @generated NOT
+	 */
+	int removeResponsibleGuest(int roomID, String guestEmail);
 
 } // Booking

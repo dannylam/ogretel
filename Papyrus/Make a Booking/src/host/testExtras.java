@@ -54,7 +54,7 @@ public class testExtras {
 		String description = "Such fun, verry wow";
 		int price = 100;
 		String name = "Yoloing";
-		int ID = 0;
+		String ID = "0";
 		
 		extraHandler.addExtra(ID, price, name, description, false);
 		AbstractExtra extra = (AbstractExtra) extraHandler.getExtra(ID);

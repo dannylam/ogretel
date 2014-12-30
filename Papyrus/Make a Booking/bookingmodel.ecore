@@ -64,6 +64,13 @@
         <eTypeArguments/>
       </eGenericType>
     </eOperations>
+    <eOperations name="removeResponsibleGuestToAllRooms" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="guestEmail" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="removeResponsibleGuest" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+      <eParameters name="guestEmail" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bookingRef" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" ordered="false"
