@@ -215,6 +215,14 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 				this.rooms.addRoom(roomID, this.roomTypes.getStringToRoomType()
 						.get(roomType));
+
+				// If 1st Room of RoomType, create new entry in Map in Calendar
+				if (!this.roomTypes.getCalendar().getStringToListsMap()
+						.containsKey(roomType)) {
+					this.roomTypes.getCalendar().getStringToListsMap()
+							.put(roomType, new BasicEList<Integer>(365));
+				}
+
 				this.roomTypes.getCalendar().setCap(0, 365, roomType, -1);
 
 				return 0;
@@ -241,7 +249,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 			return 0;
 		}
 		return 1;
-		// TODO:
+		// TODO test
 	}
 
 	/**
@@ -361,6 +369,28 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int editRoomType(String roomTypeID, String roomTypeEnum, int price,
 			int maxNrOfGuests, String description, int nrOfRooms) {
+		if(!this.roomTypes.exists(roomTypeID)){
+			return 1;
+		}
+		if(!this.getRoomTypeEnums().contains(roomTypeEnum)){
+			return 2;
+		}
+		if(price < 0){
+			return 3;
+		}
+		if(maxNrOfGuests < 0){
+			return 4;
+		}
+		if(nrOfRooms < 0){
+			return 5;
+		}
+		
+		RoomType rt = this.roomTypes.getRoomType(roomTypeID);
+		rt.setRoomTypeEnum(RoomTypeEnum.valueOf(roomTypeEnum));
+		rt.setPrice(price);
+		rt.setMaxNrOfGuests(maxNrOfGuests);
+		rt.setDescription(description);
+		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

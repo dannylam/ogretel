@@ -3,7 +3,6 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.Map;
 
 import maintenancemodel.Calendar;
 import maintenancemodel.MaintenancemodelPackage;
@@ -73,41 +72,6 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	 */
 	public EMap<String,EList<Integer>> getStringToListsMap() {
 		return stringToListsMap;
-	}
-
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetStringToListsMap(Map.Entry<String, EList<Integer>> newStringToListsMap, NotificationChain msgs) {
-		Map.Entry<String, EList<Integer>> oldStringToListsMap = stringToListsMap;
-		stringToListsMap = newStringToListsMap;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP, oldStringToListsMap, newStringToListsMap);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStringToListsMap(Map.Entry<String, EList<Integer>> newStringToListsMap) {
-		if (newStringToListsMap != stringToListsMap) {
-			NotificationChain msgs = null;
-			if (stringToListsMap != null)
-				msgs = ((InternalEObject)stringToListsMap).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP, null, msgs);
-			if (newStringToListsMap != null)
-				msgs = ((InternalEObject)newStringToListsMap).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP, null, msgs);
-			msgs = basicSetStringToListsMap(newStringToListsMap, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP, newStringToListsMap, newStringToListsMap));
 	}
 
 	/**
