@@ -124,6 +124,8 @@
         lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Address" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="age" ordered="false" lowerBound="1"
+        eType="ecore:EDataType types.ecore#//Integer"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BookingHandler">
     <eOperations name="exists" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">

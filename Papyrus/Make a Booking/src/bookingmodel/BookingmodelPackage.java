@@ -469,13 +469,22 @@ public interface BookingmodelPackage extends EPackage {
 	int PERSON__ADDRESS = 4;
 
 	/**
+	 * The feature id for the '<em><b>Age</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSON__AGE = 5;
+
+	/**
 	 * The number of structural features of the '<em>Person</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON_FEATURE_COUNT = 5;
+	int PERSON_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Person</em>' class.
@@ -540,6 +549,15 @@ public interface BookingmodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int CUSTOMER__ADDRESS = PERSON__ADDRESS;
+
+	/**
+	 * The feature id for the '<em><b>Age</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__AGE = PERSON__AGE;
 
 	/**
 	 * The feature id for the '<em><b>Payment Details</b></em>' reference list.
@@ -686,6 +704,15 @@ public interface BookingmodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int GUEST__ADDRESS = PERSON__ADDRESS;
+
+	/**
+	 * The feature id for the '<em><b>Age</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GUEST__AGE = PERSON__AGE;
 
 	/**
 	 * The feature id for the '<em><b>Room Nr</b></em>' attribute.
@@ -1831,6 +1858,17 @@ public interface BookingmodelPackage extends EPackage {
 	EAttribute getPerson_Address();
 
 	/**
+	 * Returns the meta object for the attribute '{@link bookingmodel.Person#getAge <em>Age</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Age</em>'.
+	 * @see bookingmodel.Person#getAge()
+	 * @see #getPerson()
+	 * @generated
+	 */
+	EAttribute getPerson_Age();
+
+	/**
 	 * Returns the meta object for class '{@link bookingmodel.BookingHandler <em>Booking Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2582,6 +2620,14 @@ public interface BookingmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PERSON__ADDRESS = eINSTANCE.getPerson_Address();
+
+		/**
+		 * The meta object literal for the '<em><b>Age</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PERSON__AGE = eINSTANCE.getPerson_Age();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.impl.BookingHandlerImpl <em>Booking Handler</em>}' class.

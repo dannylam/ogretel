@@ -673,6 +673,15 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getPerson_Age() {
+		return (EAttribute)personEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBookingHandler() {
 		return bookingHandlerEClass;
 	}
@@ -1033,6 +1042,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		createEAttribute(personEClass, PERSON__EMAIL);
 		createEAttribute(personEClass, PERSON__TELEPHONE_NR);
 		createEAttribute(personEClass, PERSON__ADDRESS);
+		createEAttribute(personEClass, PERSON__AGE);
 
 		bookingHandlerEClass = createEClass(BOOKING_HANDLER);
 		createEReference(bookingHandlerEClass, BOOKING_HANDLER__BOOKINGS_MAP);
@@ -1184,6 +1194,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		initEAttribute(getPerson_Email(), theTypesPackage.getString(), "email", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getPerson_TelephoneNr(), theTypesPackage.getString(), "telephoneNr", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getPerson_Address(), theTypesPackage.getString(), "Address", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getPerson_Age(), theTypesPackage.getInteger(), "age", null, 1, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(bookingHandlerEClass, BookingHandler.class, "BookingHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBookingHandler_BookingsMap(), this.getBookingRefToBookingEntry(), null, "bookingsMap", null, 0, -1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
