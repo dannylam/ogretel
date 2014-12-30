@@ -432,13 +432,31 @@ public interface BookingmodelPackage extends EPackage {
 	int BOOKING___GET_ROOM_IDS = 11;
 
 	/**
+	 * The operation id for the '<em>Remove Responsible Guest To All Rooms</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING___REMOVE_RESPONSIBLE_GUEST_TO_ALL_ROOMS__STRING = 12;
+
+	/**
+	 * The operation id for the '<em>Remove Responsible Guest</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING___REMOVE_RESPONSIBLE_GUEST__INT_STRING = 13;
+
+	/**
 	 * The number of operations of the '<em>Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_OPERATION_COUNT = 12;
+	int BOOKING_OPERATION_COUNT = 14;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.impl.PersonImpl <em>Person</em>}' class.
@@ -1727,6 +1745,26 @@ public interface BookingmodelPackage extends EPackage {
 	EOperation getBooking__GetRoomIDs();
 
 	/**
+	 * Returns the meta object for the '{@link bookingmodel.Booking#removeResponsibleGuestToAllRooms(java.lang.String) <em>Remove Responsible Guest To All Rooms</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove Responsible Guest To All Rooms</em>' operation.
+	 * @see bookingmodel.Booking#removeResponsibleGuestToAllRooms(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBooking__RemoveResponsibleGuestToAllRooms__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.Booking#removeResponsibleGuest(int, java.lang.String) <em>Remove Responsible Guest</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove Responsible Guest</em>' operation.
+	 * @see bookingmodel.Booking#removeResponsibleGuest(int, java.lang.String)
+	 * @generated
+	 */
+	EOperation getBooking__RemoveResponsibleGuest__int_String();
+
+	/**
 	 * Returns the meta object for class '{@link bookingmodel.Customer <em>Customer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2579,6 +2617,22 @@ public interface BookingmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING___GET_ROOM_IDS = eINSTANCE.getBooking__GetRoomIDs();
+
+		/**
+		 * The meta object literal for the '<em><b>Remove Responsible Guest To All Rooms</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING___REMOVE_RESPONSIBLE_GUEST_TO_ALL_ROOMS__STRING = eINSTANCE.getBooking__RemoveResponsibleGuestToAllRooms__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Remove Responsible Guest</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING___REMOVE_RESPONSIBLE_GUEST__INT_STRING = eINSTANCE.getBooking__RemoveResponsibleGuest__int_String();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.impl.CustomerImpl <em>Customer</em>}' class.

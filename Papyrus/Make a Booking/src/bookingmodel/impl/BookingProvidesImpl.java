@@ -204,19 +204,16 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int checkOut(String bookingRef, String guestEmail) {
 		int result = 0;
-		
 		if(this.bookingHandler.exists(bookingRef)){
 			if(this.bookingHandler.getBooking(bookingRef).checkedInAllGuest()){
-				//this.getBookingHandler().getBooking(bookingRef).getRoomIDToGuestMap().get(key)
+				result = this.getBookingHandler().getBooking(bookingRef).removeResponsibleGuestToAllRooms(guestEmail);
 			} else {
 				result = -1;
 			}			
 		} else {
 			result = -1;
-		}
-		
+		}	
 		return result;
-		// TODO: implement this method
 	}
 
 	/**
