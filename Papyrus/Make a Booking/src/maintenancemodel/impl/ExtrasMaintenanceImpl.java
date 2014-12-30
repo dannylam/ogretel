@@ -105,7 +105,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 */
 	public boolean exists(String extraID) {
-		extras.exists(extraID);
+		return extras.exists(extraID);
 	}
 
 

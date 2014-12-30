@@ -36,7 +36,7 @@ public interface ExtraHandler extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Int To Extra Map</em>' map.
 	 * @see maintenancemodel.MaintenancemodelPackage#getExtraHandler_IntToExtraMap()
-	 * @model mapType="maintenancemodel.IntegerToExtraMap<org.eclipse.uml2.types.String, maintenancemodel.Extra>" ordered="false"
+	 * @model mapType="maintenancemodel.IntegerToExtraMap<org.eclipse.emf.ecore.EString, maintenancemodel.Extra>" ordered="false"
 	 * @generated
 	 */
 	EMap<String, Extra> getIntToExtraMap();
@@ -44,7 +44,7 @@ public interface ExtraHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" extraIDDataType="org.eclipse.uml2.types.String" extraIDRequired="true" extraIDOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" extraIDRequired="true" extraIDOrdered="false"
 	 * @generated
 	 */
 	boolean exists(String extraID);
@@ -52,7 +52,7 @@ public interface ExtraHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extraIDDataType="org.eclipse.uml2.types.String" extraIDRequired="true" extraIDOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false" isProductDataType="org.eclipse.uml2.types.Boolean" isProductRequired="true" isProductOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extraIDRequired="true" extraIDOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false" isProductDataType="org.eclipse.uml2.types.Boolean" isProductRequired="true" isProductOrdered="false"
 	 * @generated
 	 */
 	int addExtra(String extraID, int price, String name, String description, boolean isProduct);
@@ -60,7 +60,7 @@ public interface ExtraHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extraIDDataType="org.eclipse.uml2.types.String" extraIDRequired="true" extraIDOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extraIDRequired="true" extraIDOrdered="false"
 	 * @generated
 	 */
 	int removeExtra(String extraID);

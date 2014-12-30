@@ -88,9 +88,18 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * If isProduct is true then the given extra is a product, if it is false, the given extra is an experience
-	 * @return returns 1 if the ID already exists.
-	 * @return returns 0 if ok.
+	 * Adds an extra to the Map
+	 * @param extraID 
+	 * 		The extras ID
+	 * @param price
+	 * 		How muck an extra will cost
+	 * @param name
+	 * 		What the Extra is called
+	 * @param description
+	 * 		A short text to describe the extra.
+	 * @param isProduct
+	 * 		If true, the extra should be a product, else it is an experience.
+	 * @return returns 1 if the ID already exists. Returns 0 if ok.
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -115,8 +124,9 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Returns 1 if the Extra was failed to be removed.
-	 * Returns 0 if everything was successful.
+	 * @return
+	 * 		Returns 1 if the Extra was failed to be removed.
+	 * 		Returns 0 if everything was successful.
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -247,16 +257,16 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case MaintenancemodelPackage.EXTRA_HANDLER___EXISTS__STRING:
-				return exists((String)arguments.get(0));
-			case MaintenancemodelPackage.EXTRA_HANDLER___ADD_EXTRA__STRING_INT_STRING_STRING_BOOLEAN:
-				return addExtra((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (Boolean)arguments.get(4));
-			case MaintenancemodelPackage.EXTRA_HANDLER___REMOVE_EXTRA__STRING:
-				return removeExtra((String)arguments.get(0));
 			case MaintenancemodelPackage.EXTRA_HANDLER___GET_EXTRAS:
 				return getExtras();
 			case MaintenancemodelPackage.EXTRA_HANDLER___GET_PRICE__STRING:
 				return getPrice((String)arguments.get(0));
+			case MaintenancemodelPackage.EXTRA_HANDLER___ADD_EXTRA__STRING_INT_STRING_STRING_BOOLEAN:
+				return addExtra((String)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3), (Boolean)arguments.get(4));
+			case MaintenancemodelPackage.EXTRA_HANDLER___REMOVE_EXTRA__STRING:
+				return removeExtra((String)arguments.get(0));
+			case MaintenancemodelPackage.EXTRA_HANDLER___EXISTS__STRING:
+				return exists((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

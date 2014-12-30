@@ -516,40 +516,13 @@ public interface MaintenancemodelPackage extends EPackage {
 	int EXTRA_HANDLER_FEATURE_COUNT = 1;
 
 	/**
-	 * The operation id for the '<em>Exists</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTRA_HANDLER___EXISTS__STRING = 0;
-
-	/**
-	 * The operation id for the '<em>Add Extra</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTRA_HANDLER___ADD_EXTRA__STRING_INT_STRING_STRING_BOOLEAN = 1;
-
-	/**
-	 * The operation id for the '<em>Remove Extra</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTRA_HANDLER___REMOVE_EXTRA__STRING = 2;
-
-	/**
 	 * The operation id for the '<em>Get Extras</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXTRA_HANDLER___GET_EXTRAS = 3;
+	int EXTRA_HANDLER___GET_EXTRAS = 0;
 
 	/**
 	 * The operation id for the '<em>Get Price</em>' operation.
@@ -558,7 +531,34 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXTRA_HANDLER___GET_PRICE__STRING = 4;
+	int EXTRA_HANDLER___GET_PRICE__STRING = 1;
+
+	/**
+	 * The operation id for the '<em>Add Extra</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTRA_HANDLER___ADD_EXTRA__STRING_INT_STRING_STRING_BOOLEAN = 2;
+
+	/**
+	 * The operation id for the '<em>Remove Extra</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTRA_HANDLER___REMOVE_EXTRA__STRING = 3;
+
+	/**
+	 * The operation id for the '<em>Exists</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTRA_HANDLER___EXISTS__STRING = 4;
 
 	/**
 	 * The number of operations of the '<em>Extra Handler</em>' class.
@@ -902,13 +902,13 @@ public interface MaintenancemodelPackage extends EPackage {
 	int IMAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_INT_STRING_STRING = 2;
 
 	/**
-	 * The operation id for the '<em>Get Room And Set Active</em>' operation.
+	 * The operation id for the '<em>Set Active</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAINTENANCE_PROVIDES_FOR_BOOKING___GET_ROOM_AND_SET_ACTIVE__STRING = 3;
+	int IMAINTENANCE_PROVIDES_FOR_BOOKING___SET_ACTIVE__STRING = 3;
 
 	/**
 	 * The operation id for the '<em>Get Price Room</em>' operation.
@@ -981,7 +981,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_STRING = 2;
+	int IROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_INT_STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Remove Room Type</em>' operation.
@@ -990,7 +990,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING = 3;
+	int IROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING_INT = 3;
 
 	/**
 	 * The operation id for the '<em>Edit Room Status</em>' operation.
@@ -1008,7 +1008,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING = 5;
+	int IROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING_INT = 5;
 
 	/**
 	 * The operation id for the '<em>Edit Room</em>' operation.
@@ -1110,13 +1110,22 @@ public interface MaintenancemodelPackage extends EPackage {
 	int IROOM_MAINTENANCE___GET_ROOM_TYPE_ENUMS = 16;
 
 	/**
+	 * The operation id for the '<em>Get Nr Of Rooms</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IROOM_MAINTENANCE___GET_NR_OF_ROOMS__STRING = 17;
+
+	/**
 	 * The number of operations of the '<em>IRoom Maintenance</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_MAINTENANCE_OPERATION_COUNT = 17;
+	int IROOM_MAINTENANCE_OPERATION_COUNT = 18;
 
 	/**
 	 * The meta object id for the '{@link maintenancemodel.IExtrasMaintenance <em>IExtras Maintenance</em>}' class.
@@ -1317,7 +1326,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_STRING = IROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_STRING;
+	int ROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_INT_STRING = IROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_INT_STRING;
 
 	/**
 	 * The operation id for the '<em>Remove Room Type</em>' operation.
@@ -1326,7 +1335,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING = IROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING;
+	int ROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING_INT = IROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING_INT;
 
 	/**
 	 * The operation id for the '<em>Edit Room Status</em>' operation.
@@ -1344,7 +1353,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING = IROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING;
+	int ROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING_INT = IROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING_INT;
 
 	/**
 	 * The operation id for the '<em>Edit Room</em>' operation.
@@ -1446,6 +1455,15 @@ public interface MaintenancemodelPackage extends EPackage {
 	int ROOM_MAINTENANCE___GET_ROOM_TYPE_ENUMS = IROOM_MAINTENANCE___GET_ROOM_TYPE_ENUMS;
 
 	/**
+	 * The operation id for the '<em>Get Nr Of Rooms</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_MAINTENANCE___GET_NR_OF_ROOMS__STRING = IROOM_MAINTENANCE___GET_NR_OF_ROOMS__STRING;
+
+	/**
 	 * The number of operations of the '<em>Room Maintenance</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1527,13 +1545,22 @@ public interface MaintenancemodelPackage extends EPackage {
 	int ROOM_TYPES_HANDLER___GET_ROOM_TYPE__STRING = 5;
 
 	/**
+	 * The operation id for the '<em>Get Calendar</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPES_HANDLER___GET_CALENDAR__CALENDAR = 6;
+
+	/**
 	 * The number of operations of the '<em>Room Types Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPES_HANDLER_OPERATION_COUNT = 6;
+	int ROOM_TYPES_HANDLER_OPERATION_COUNT = 7;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -1654,13 +1681,13 @@ public interface MaintenancemodelPackage extends EPackage {
 	int MAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_INT_STRING_STRING = IMAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_INT_STRING_STRING;
 
 	/**
-	 * The operation id for the '<em>Get Room And Set Active</em>' operation.
+	 * The operation id for the '<em>Set Active</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAINTENANCE_PROVIDES_FOR_BOOKING___GET_ROOM_AND_SET_ACTIVE__STRING = IMAINTENANCE_PROVIDES_FOR_BOOKING___GET_ROOM_AND_SET_ACTIVE__STRING;
+	int MAINTENANCE_PROVIDES_FOR_BOOKING___SET_ACTIVE__STRING = IMAINTENANCE_PROVIDES_FOR_BOOKING___SET_ACTIVE__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Price Room</em>' operation.
@@ -2064,7 +2091,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Integer To Extra Map</em>'.
 	 * @see java.util.Map.Entry
-	 * @model keyDataType="org.eclipse.uml2.types.String" keyRequired="true" keyOrdered="false"
+	 * @model keyDataType="org.eclipse.emf.ecore.EString" keyRequired="true" keyOrdered="false"
 	 *        valueType="maintenancemodel.Extra" valueRequired="true" valueOrdered="false"
 	 * @generated
 	 */
@@ -2310,6 +2337,16 @@ public interface MaintenancemodelPackage extends EPackage {
 	EOperation getRoomTypesHandler__GetRoomType__String();
 
 	/**
+	 * Returns the meta object for the '{@link maintenancemodel.RoomTypesHandler#getCalendar(maintenancemodel.Calendar) <em>Get Calendar</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Calendar</em>' operation.
+	 * @see maintenancemodel.RoomTypesHandler#getCalendar(maintenancemodel.Calendar)
+	 * @generated
+	 */
+	EOperation getRoomTypesHandler__GetCalendar__Calendar();
+
+	/**
 	 * Returns the meta object for class '{@link java.util.Map.Entry <em>String To Room Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2418,14 +2455,14 @@ public interface MaintenancemodelPackage extends EPackage {
 	EOperation getIMaintenanceProvidesForBooking__RemoveBooking__EList_int_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#getRoomAndSetActive(java.lang.String) <em>Get Room And Set Active</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#setActive(java.lang.String) <em>Set Active</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Room And Set Active</em>' operation.
-	 * @see maintenancemodel.IMaintenanceProvidesForBooking#getRoomAndSetActive(java.lang.String)
+	 * @return the meta object for the '<em>Set Active</em>' operation.
+	 * @see maintenancemodel.IMaintenanceProvidesForBooking#setActive(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIMaintenanceProvidesForBooking__GetRoomAndSetActive__String();
+	EOperation getIMaintenanceProvidesForBooking__SetActive__String();
 
 	/**
 	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#getPriceRoom(org.eclipse.emf.common.util.EList) <em>Get Price Room</em>}' operation.
@@ -2478,24 +2515,24 @@ public interface MaintenancemodelPackage extends EPackage {
 	EOperation getIRoomMaintenance__RemoveRoom__int();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.IRoomMaintenance#addRoomType(java.lang.String, java.lang.String, int, int, java.lang.String) <em>Add Room Type</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.IRoomMaintenance#addRoomType(java.lang.String, java.lang.String, int, int, int, java.lang.String) <em>Add Room Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Room Type</em>' operation.
-	 * @see maintenancemodel.IRoomMaintenance#addRoomType(java.lang.String, java.lang.String, int, int, java.lang.String)
+	 * @see maintenancemodel.IRoomMaintenance#addRoomType(java.lang.String, java.lang.String, int, int, int, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIRoomMaintenance__AddRoomType__String_String_int_int_String();
+	EOperation getIRoomMaintenance__AddRoomType__String_String_int_int_int_String();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.IRoomMaintenance#removeRoomType(java.lang.String) <em>Remove Room Type</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.IRoomMaintenance#removeRoomType(java.lang.String, int) <em>Remove Room Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Room Type</em>' operation.
-	 * @see maintenancemodel.IRoomMaintenance#removeRoomType(java.lang.String)
+	 * @see maintenancemodel.IRoomMaintenance#removeRoomType(java.lang.String, int)
 	 * @generated
 	 */
-	EOperation getIRoomMaintenance__RemoveRoomType__String();
+	EOperation getIRoomMaintenance__RemoveRoomType__String_int();
 
 	/**
 	 * Returns the meta object for the '{@link maintenancemodel.IRoomMaintenance#editRoomStatus(int, java.lang.String) <em>Edit Room Status</em>}' operation.
@@ -2508,14 +2545,14 @@ public interface MaintenancemodelPackage extends EPackage {
 	EOperation getIRoomMaintenance__EditRoomStatus__int_String();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.IRoomMaintenance#editRoomType(java.lang.String, java.lang.String, int, int, java.lang.String) <em>Edit Room Type</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.IRoomMaintenance#editRoomType(java.lang.String, java.lang.String, int, int, java.lang.String, int) <em>Edit Room Type</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Edit Room Type</em>' operation.
-	 * @see maintenancemodel.IRoomMaintenance#editRoomType(java.lang.String, java.lang.String, int, int, java.lang.String)
+	 * @see maintenancemodel.IRoomMaintenance#editRoomType(java.lang.String, java.lang.String, int, int, java.lang.String, int)
 	 * @generated
 	 */
-	EOperation getIRoomMaintenance__EditRoomType__String_String_int_int_String();
+	EOperation getIRoomMaintenance__EditRoomType__String_String_int_int_String_int();
 
 	/**
 	 * Returns the meta object for the '{@link maintenancemodel.IRoomMaintenance#editRoom(int, java.lang.String) <em>Edit Room</em>}' operation.
@@ -2626,6 +2663,16 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getIRoomMaintenance__GetRoomTypeEnums();
+
+	/**
+	 * Returns the meta object for the '{@link maintenancemodel.IRoomMaintenance#getNrOfRooms(java.lang.String) <em>Get Nr Of Rooms</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Nr Of Rooms</em>' operation.
+	 * @see maintenancemodel.IRoomMaintenance#getNrOfRooms(java.lang.String)
+	 * @generated
+	 */
+	EOperation getIRoomMaintenance__GetNrOfRooms__String();
 
 	/**
 	 * Returns the meta object for class '{@link maintenancemodel.IExtrasMaintenance <em>IExtras Maintenance</em>}'.
@@ -3312,6 +3359,14 @@ public interface MaintenancemodelPackage extends EPackage {
 		EOperation ROOM_TYPES_HANDLER___GET_ROOM_TYPE__STRING = eINSTANCE.getRoomTypesHandler__GetRoomType__String();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Calendar</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_TYPES_HANDLER___GET_CALENDAR__CALENDAR = eINSTANCE.getRoomTypesHandler__GetCalendar__Calendar();
+
+		/**
 		 * The meta object literal for the '{@link maintenancemodel.impl.StringToRoomTypeImpl <em>String To Room Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3398,12 +3453,12 @@ public interface MaintenancemodelPackage extends EPackage {
 		EOperation IMAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_INT_STRING_STRING = eINSTANCE.getIMaintenanceProvidesForBooking__RemoveBooking__EList_int_String_String();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Room And Set Active</b></em>' operation.
+		 * The meta object literal for the '<em><b>Set Active</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMAINTENANCE_PROVIDES_FOR_BOOKING___GET_ROOM_AND_SET_ACTIVE__STRING = eINSTANCE.getIMaintenanceProvidesForBooking__GetRoomAndSetActive__String();
+		EOperation IMAINTENANCE_PROVIDES_FOR_BOOKING___SET_ACTIVE__STRING = eINSTANCE.getIMaintenanceProvidesForBooking__SetActive__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Price Room</b></em>' operation.
@@ -3453,7 +3508,7 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_STRING = eINSTANCE.getIRoomMaintenance__AddRoomType__String_String_int_int_String();
+		EOperation IROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_INT_STRING = eINSTANCE.getIRoomMaintenance__AddRoomType__String_String_int_int_int_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Room Type</b></em>' operation.
@@ -3461,7 +3516,7 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING = eINSTANCE.getIRoomMaintenance__RemoveRoomType__String();
+		EOperation IROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING_INT = eINSTANCE.getIRoomMaintenance__RemoveRoomType__String_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Edit Room Status</b></em>' operation.
@@ -3477,7 +3532,7 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING = eINSTANCE.getIRoomMaintenance__EditRoomType__String_String_int_int_String();
+		EOperation IROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING_INT = eINSTANCE.getIRoomMaintenance__EditRoomType__String_String_int_int_String_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Edit Room</b></em>' operation.
@@ -3566,6 +3621,14 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IROOM_MAINTENANCE___GET_ROOM_TYPE_ENUMS = eINSTANCE.getIRoomMaintenance__GetRoomTypeEnums();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Nr Of Rooms</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IROOM_MAINTENANCE___GET_NR_OF_ROOMS__STRING = eINSTANCE.getIRoomMaintenance__GetNrOfRooms__String();
 
 		/**
 		 * The meta object literal for the '{@link maintenancemodel.IExtrasMaintenance <em>IExtras Maintenance</em>}' class.
