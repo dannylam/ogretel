@@ -3,12 +3,14 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
+
 import maintenancemodel.Calendar;
 import maintenancemodel.ExtraHandler;
 import maintenancemodel.MaintenanceProvidesForBooking;
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.RoomHandler;
 import maintenancemodel.RoomTypesHandler;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -43,37 +45,37 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * @generated
 	 * @ordered
 	 */
-	protected Calendar calendar;
+	protected Calendar calendar = new CalendarImpl();
 
 	/**
 	 * The cached value of the '{@link #getRoomTypes() <em>Room Types</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRoomTypes()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected RoomTypesHandler roomTypes;
+	protected RoomTypesHandler roomTypes = new RoomTypesHandlerImpl();
 
 	/**
 	 * The cached value of the '{@link #getRooms() <em>Rooms</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRooms()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected RoomHandler rooms;
+	protected RoomHandler rooms = new RoomHandlerImpl();
 
 	/**
 	 * The cached value of the '{@link #getExtraHandler() <em>Extra Handler</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getExtraHandler()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected ExtraHandler extraHandler;
+	protected ExtraHandler extraHandler = new ExtraHandlerImpl();
 
 	/**
 	 * @generated NOT
@@ -254,24 +256,18 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<Boolean> canBook(EList<String> roomTypeIDs, String start, String end) {
+	public boolean canBook(EList<String> roomTypeIDs, String start, String end) {
+		
+		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
-	/**
-	 * @inheritDoc
-	 * @generated NOT
-	 */
-	public boolean canBook(String roomType, String start, String end) {
-		// TODO: implement this method
-		// calendar.isFree?
-		throw new UnsupportedOperationException();
-	}
 
 	/**
 	 * @inheritDoc
@@ -447,6 +443,12 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 				return getPriceExtra((EList<Integer>)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
+	}
+
+	@Override
+	public boolean canBook(String roomType, String start, String end) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 } //MaintenanceProvidesForBookingImpl
