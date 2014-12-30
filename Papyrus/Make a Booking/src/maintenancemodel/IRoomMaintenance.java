@@ -47,22 +47,6 @@ public interface IRoomMaintenance extends EObject {
 	int removeRoom(int roomID);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false" roomTypeEnumDataType="org.eclipse.uml2.types.String" roomTypeEnumRequired="true" roomTypeEnumOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" maxNrOfGuestsDataType="org.eclipse.uml2.types.Integer" maxNrOfGuestsRequired="true" maxNrOfGuestsOrdered="false" nrOfRoomsDataType="org.eclipse.uml2.types.Integer" nrOfRoomsRequired="true" nrOfRoomsOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
-	 * @generated
-	 */
-	int addRoomType(String roomTypeID, String roomTypeEnum, int price, int maxNrOfGuests, int nrOfRooms, String description);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false" nrOfRoomsDataType="org.eclipse.uml2.types.Integer" nrOfRoomsRequired="true" nrOfRoomsOrdered="false"
-	 * @generated
-	 */
-	int removeRoomType(String roomTypeID, int nrOfRooms);
-
-	/**
 	 * Adds a RoomType with the given parameters. 
 	 * 
 	 * @return
@@ -86,6 +70,14 @@ public interface IRoomMaintenance extends EObject {
 	 */
 	int addRoomType(String roomTypeID, String roomTypeEnum, int price,
 			int maxNrOfGuests, String description);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
+	 * @generated
+	 */
+	int removeRoomType(String roomTypeID);
 
 	/**
 	 * TODO finish documentation
@@ -227,6 +219,6 @@ public interface IRoomMaintenance extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
 	 * @generated
 	 */
-	int getNrOfRooms(String roomTypeID);
+	int getNrOfRoomsofType(String roomTypeID);
 
 } // IRoomMaintenance
