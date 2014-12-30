@@ -144,8 +144,8 @@ public class MaintenancemodelAdapterFactory extends AdapterFactoryImpl {
 				return createRoomTypesHandlerAdapter();
 			}
 			@Override
-			public Adapter caseStringToRoomType(Map.Entry<String, RoomType> object) {
-				return createStringToRoomTypeAdapter();
+			public Adapter caseStringToRoomTypeMap(Map.Entry<String, RoomType> object) {
+				return createStringToRoomTypeMapAdapter();
 			}
 			@Override
 			public Adapter caseMaintenanceProvidesForBooking(MaintenanceProvidesForBooking object) {
@@ -340,7 +340,7 @@ public class MaintenancemodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>String To Room Type</em>}'.
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>String To Room Type Map</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
@@ -349,7 +349,7 @@ public class MaintenancemodelAdapterFactory extends AdapterFactoryImpl {
 	 * @see java.util.Map.Entry
 	 * @generated
 	 */
-	public Adapter createStringToRoomTypeAdapter() {
+	public Adapter createStringToRoomTypeMapAdapter() {
 		return null;
 	}
 

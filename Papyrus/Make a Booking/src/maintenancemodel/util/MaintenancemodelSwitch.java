@@ -185,9 +185,9 @@ public class MaintenancemodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE: {
-				@SuppressWarnings("unchecked") Map.Entry<String, RoomType> stringToRoomType = (Map.Entry<String, RoomType>)theEObject;
-				T result = caseStringToRoomType(stringToRoomType);
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE_MAP: {
+				@SuppressWarnings("unchecked") Map.Entry<String, RoomType> stringToRoomTypeMap = (Map.Entry<String, RoomType>)theEObject;
+				T result = caseStringToRoomTypeMap(stringToRoomTypeMap);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -383,17 +383,17 @@ public class MaintenancemodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>String To Room Type</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>String To Room Type Map</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>String To Room Type</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>String To Room Type Map</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStringToRoomType(Map.Entry<String, RoomType> object) {
+	public T caseStringToRoomTypeMap(Map.Entry<String, RoomType> object) {
 		return null;
 	}
 
