@@ -318,12 +318,22 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int setPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, String customerEmail, String bookingRef) {
 		int result = 0;
-		/*
-		 * check if there exists a booking with that booking reference
-		 * create a paymentdetails with all those imparams
-		 * set this paymentdetails to the customer of that booking
-		 */
-		// TODO: implement this method
+		if(this.getBookingHandler().exists(bookingRef)){
+			PaymentDetails paymentDetails = new PaymentDetailsImpl();
+			paymentDetails.setCcNr(ccNumber);
+			paymentDetails.setCcV(ccv);
+			paymentDetails.setExpMonth(expiryMonth);
+			paymentDetails.setExpYear(expiryYear);
+
+			Customer customer = this.getBookingHandler().getBooking(bookingRef).getCustomer();
+			if(customer.getEmail().equals(customerEmail)){
+				customer.getPaymentDetails().add(paymentDetails);
+			}
+
+		}
+
+		// TODO: update inparams
+		//TODO: check other cases
 		return result;
 	}
 
