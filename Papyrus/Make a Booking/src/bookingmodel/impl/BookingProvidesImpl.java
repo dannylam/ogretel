@@ -295,8 +295,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		PaymentDetails bookingdetails = getBookingHandler().getBooking(bookingRef).getCustomer().getPaymentDetails().get(0);
 		return pay(bookingdetails.getCcNr(), bookingdetails.getCcV(),bookingdetails.getExpMonth(),
 						bookingdetails.getExpYear(), bookingdetails.getFirstName(), bookingdetails.getLastName(),
-						6);
-		//TODO Calculate the price 
+						getPrice(bookingRef)); 
 		/*if(this.getBookingHandler().exists(bookingRef)){
 			int price = this.getPrice(bookingRef);
 			PaymentDetails paymentdetails = this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().get(0);
