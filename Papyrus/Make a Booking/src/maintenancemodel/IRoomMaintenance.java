@@ -49,6 +49,10 @@ public interface IRoomMaintenance extends EObject {
 	/**
 	 * Adds a RoomType with the given parameters. 
 	 * 
+	 * @return
+	 * 0 if success
+	 * 1 if roomTypeID incorrect
+	 * 
 	 * TODO finish documentation
 	 * 
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true"
