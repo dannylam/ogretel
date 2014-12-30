@@ -289,13 +289,26 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	
 	/**
 	 * @inheritDoc
+	 *  Makes a payment
+	 * @return
+	 * 		if 0 all went well.
+	 * 		if 1 an error occoured
+	 * 		if 2 invalid creditcard
+	 * 		if 3 not enough money on card or invalid card.
+	 * 		if 4 invalid amount
 	 * @generated NOT
 	 */
 	public int pay(String bookingRef) {
-		PaymentDetails bookingdetails = getBookingHandler().getBooking(bookingRef).getCustomer().getPaymentDetails().get(0);
-		return pay(bookingdetails.getCcNr(), bookingdetails.getCcV(),bookingdetails.getExpMonth(),
-						bookingdetails.getExpYear(), bookingdetails.getFirstName(), bookingdetails.getLastName(),
-						getPrice(bookingRef)); 
+		int price = getPrice(bookingRef);
+		if(price != -1) {
+			PaymentDetails bookingdetails = getBookingHandler().getBooking(bookingRef).getCustomer().getPaymentDetails().get(0);
+			return pay(bookingdetails.getCcNr(), bookingdetails.getCcV(),bookingdetails.getExpMonth(),
+							bookingdetails.getExpYear(), bookingdetails.getFirstName(), bookingdetails.getLastName(),
+							price);
+		} else {
+			return 4;
+		}
+			
 		/*if(this.getBookingHandler().exists(bookingRef)){
 			int price = this.getPrice(bookingRef);
 			PaymentDetails paymentdetails = this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().get(0);
