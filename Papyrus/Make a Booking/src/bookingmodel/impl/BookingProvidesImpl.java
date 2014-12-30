@@ -62,7 +62,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected BookingProvidesImpl() {
+	public BookingProvidesImpl() {
 		super();
 	}
 	
@@ -240,25 +240,14 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int getPrice(String bookingRef) {
-		int price = 0;
-		EList <String> extras; 
-		/*		
-		this.bookingHandler.getBooking(bookingRef).getExtraToIsPayedMap().keySet().toArray();
-		List <String> roomtypes;
-		this.bookingHandler.getBooking(bookingRef).getRoomIDToRoomTypeMap().values().toArray();
+		if(this.bookingHandler.exists(bookingRef)){
+			int extraPrice = this.maintenanceComponent.getPriceExtra(this.bookingHandler.getBooking(bookingRef).getExtras());
+			int roomTypesPrice = this.maintenanceComponent.getPriceRoom(this.bookingHandler.getBooking(bookingRef).getRoomTypes());
 		
-		
-		this.maintenanceComponent.getPriceRoom((EList<String>) this.stringToList(roomtypes));
-		this.maintenanceComponent.getPriceExtra(extras);
-		
-
-		/*
-		 * Ska från en bookingRef få reda på vilka extras och hur många av varjerumstyp vi har
-		 * och därefter kan vi fråga maintenance om vad priset för varje är och sedan summera och returnera
-		 */
-		//TODO: implement this method, we are waiting for maintenance 
-		// TODO: check other cases
-		return price;
+			return extraPrice + roomTypesPrice;
+		} else {
+			return -1;
+		}
 	}
 
 	/**
@@ -293,30 +282,35 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	**/
 	public int setPaymentMethod(String method, String bookingRef) {
 		int result = 0;
-		PaymentMethod paymentMethod = null;
-	        switch (method) {
-	        	case "BANKCARD": 
-	        		paymentMethod = PaymentMethod.BANKCARD;
+		
+		if(this.getBookingHandler().exists(bookingRef)){
+			PaymentMethod paymentMethod = null;
+		    switch (method) {
+		    	case "BANKCARD": 
+		    		paymentMethod = PaymentMethod.BANKCARD;
+		        	break;
+		        	
+		        case "CASH": 
+		       		paymentMethod = PaymentMethod.CASH;
+		       		break;
+		       	
+		       	case "VOUCHER": 
+		       		paymentMethod = PaymentMethod.VOUCHER;
+		       		break;
+		        	
+		       	default: 
+		       		//do nothing
 	        		break;
-	        	
-	        	case "CASH": 
-	        		paymentMethod = PaymentMethod.CASH;
-	        		break;
-	        	
-	        	case "VOUCHER": 
-	        		paymentMethod = PaymentMethod.VOUCHER;
-	        		break;
-	        	
-	        	default: 
-	        		//do nothing
-	        		break;
-	        }
-
-	     if(!paymentMethod.equals(null)){
-	    	 this.getBookingHandler().getBooking(bookingRef).setPaymentMethod(paymentMethod);
-	     }
+		    }
+		    if(!paymentMethod.equals(null)){
+		    	this.getBookingHandler().getBooking(bookingRef).setPaymentMethod(paymentMethod);
+		    } else {
+		    	result = -1;
+		    }
+		} else {
+			result = -1;
+		}	
 		return result;
-		// TODO: check other cases
 	}
 
 
@@ -338,10 +332,12 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 			Customer customer = this.getBookingHandler().getBooking(bookingRef).getCustomer();
 			if(customer.getEmail().equals(customerEmail)){
 				customer.getPaymentDetails().add(paymentDetails);
+			} else {
+				result = -1;
 			}
-
+		} else {
+			result = -1;
 		}
-		//TODO: check other cases
 		return result;
 	}
 
@@ -351,13 +347,16 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int setPersonalDetails(String firstName, String lastName, int age, String email, String bookingRef) {
 		int result = 0;
-		Customer customer = new CustomerImpl();
-		customer.setFirstName(firstName);
-		customer.setLastName(lastName);
-		customer.setEmail(email);
-		customer.setAge(age);
-		this.getBookingHandler().getBooking(bookingRef).setCustomer(customer);
-		// TODO: check other cases
+		if(this.getBookingHandler().exists(bookingRef)){
+			Customer customer = new CustomerImpl();
+			customer.setFirstName(firstName);
+			customer.setLastName(lastName);
+			customer.setEmail(email);
+			customer.setAge(age);
+			this.getBookingHandler().getBooking(bookingRef).setCustomer(customer);
+		} else {
+			result = -1;
+		}
 		return result;
 	}
 

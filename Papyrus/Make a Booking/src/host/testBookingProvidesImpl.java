@@ -4,20 +4,37 @@
 package host;
 
 import static org.junit.Assert.*;
+import maintenancemodel.IRoomMaintenance;
+import maintenancemodel.impl.RoomMaintenanceImpl;
 
 import org.junit.Test;
+
+import bookingmodel.BookingHandler;
+import bookingmodel.BookingProvides;
+import bookingmodel.impl.BookingHandlerImpl;
+import bookingmodel.impl.BookingProvidesImpl;
 
 /**
  * @author Paula
  *
  */
 public class testBookingProvidesImpl {
-
+	String bookingRef;
+	String guestEmail = "grischa@group4.se";
+	String startDate = "141230";
+	String endDate = "150104";
+	int nrOfGuests = 3;
+	String roomTypes = "Single";
+	String extras = "Soaps";
+	
+	private BookingProvides bp = new BookingProvidesImpl();
+	
 	/**
 	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#checkIn(java.lang.String, java.lang.String)}.
 	 */
 	@Test
 	public void testCheckIn() {
+		
 		fail("Not yet implemented");
 	}
 
@@ -66,6 +83,10 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testEditBooking() {
+		int edBP = bp.editBooking(bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras);
+		
+		assertTrue(edBP == 0);
+		
 		fail("Not yet implemented");
 	}
 
@@ -98,6 +119,8 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testBook() {
+		
+	
 		fail("Not yet implemented");
 	}
 
