@@ -83,6 +83,8 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testEditBooking() {
+		testBook();
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
 		int edBP = bp.editBooking(bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras);
 		
 		assertTrue(edBP == 0);
