@@ -27,7 +27,12 @@ import org.eclipse.emf.ecore.EObject;
 public interface Calendar extends EObject {
 	/**
 	 * Returns the value of the '<em><b>String To Lists Map</b></em>' map.
-	 * 
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>String To Lists Map</em>' map isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>String To Lists Map</em>' map.
 	 * @see #setStringToListsMap(Map.Entry)
 	 * @see maintenancemodel.MaintenancemodelPackage#getCalendar_StringToListsMap()
@@ -50,7 +55,7 @@ public interface Calendar extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false"
-	 * @generated NOT
+	 * @generated
 	 */
 	EList<Integer> getCap(int start, int end, String roomType);
 
@@ -58,7 +63,7 @@ public interface Calendar extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false" nrOfRoomsDataType="org.eclipse.uml2.types.Integer" nrOfRoomsRequired="true" nrOfRoomsOrdered="false"
-	 * @generated NOT
+	 * @generated
 	 */
 	int setCap(int start, int end, String roomType, int nrOfRooms);
 
