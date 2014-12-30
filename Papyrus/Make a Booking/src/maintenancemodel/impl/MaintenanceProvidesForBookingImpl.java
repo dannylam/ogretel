@@ -260,10 +260,14 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 */
 	public boolean canBook(EList<String> roomTypeIDs, String start, String end) {
 
+		for(String id : roomTypeIDs){
+			if(this.calendar.getStringToListsMap().get(id).size() < 1){
+				return false;
+			}	
+		}
+		return true;
 		
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		// TODO test
 	}
 
 
