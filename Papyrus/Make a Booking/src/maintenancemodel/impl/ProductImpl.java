@@ -69,7 +69,7 @@ public class ProductImpl extends AbstractExtraImpl implements Product {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ProductImpl() {
+	public ProductImpl() {
 		super();
 	}
 
