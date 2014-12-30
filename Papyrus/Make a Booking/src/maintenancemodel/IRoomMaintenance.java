@@ -37,7 +37,9 @@ public interface IRoomMaintenance extends EObject {
 	/**
 	 * Removes a Room from the system.
 	 * 
-	 * @return 0 if successful 1 if Room with roomID does not exist
+	 * @return
+	 * 0 if successful
+	 * 1 if Room with roomID does not exist
 	 * 
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true"
 	 *        ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer"

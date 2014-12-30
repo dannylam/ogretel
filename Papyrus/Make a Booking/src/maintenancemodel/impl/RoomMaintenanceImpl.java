@@ -215,6 +215,14 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 				this.rooms.addRoom(roomID, this.roomTypes.getStringToRoomType()
 						.get(roomType));
+
+				// If 1st Room of RoomType, create new entry in Map in Calendar
+				if (!this.roomTypes.getCalendar().getStringToListsMap()
+						.containsKey(roomType)) {
+					this.roomTypes.getCalendar().getStringToListsMap()
+							.put(roomType, new BasicEList<Integer>(365));
+				}
+
 				this.roomTypes.getCalendar().setCap(0, 365, roomType, -1);
 
 				return 0;
@@ -241,7 +249,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 			return 0;
 		}
 		return 1;
-		// TODO:
+		// TODO test
 	}
 
 	/**
