@@ -12,12 +12,11 @@ public class testIMPB {
 	
 	
 	/**
-	 * Tests whether canBook does what it should i.e see if there are available rooms.
+	 * Tests whether 
 	 */
 	@Test
-	public void testgetCap() {
+	public void test() {
 		
-//		assertTrue(IMPFB.getCalendar().getCap(start, end, roomType));
 		
 		
 	}
