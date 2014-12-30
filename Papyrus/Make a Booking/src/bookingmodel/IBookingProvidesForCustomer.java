@@ -30,7 +30,10 @@ public interface IBookingProvidesForCustomer extends EObject {
 	int pay(String bookingRef);
 
 	/**
-	 * Get the price of a specific booking.
+	 * Returns the price of a specific booking.
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return  the price is returned if success
+	 * 			-1 if not success
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
@@ -57,6 +60,9 @@ public interface IBookingProvidesForCustomer extends EObject {
 
 	/**
 	 * Sets the method for paying a booking to the booking with the given booking reference
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return  0 if success
+	 * 			-1 if not success
 	 * @param method, bookingRef
 	 * @model dataType="types.Integer" required="true" ordered="false" methodDataType="types.String" methodRequired="true" methodOrdered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
@@ -64,7 +70,10 @@ public interface IBookingProvidesForCustomer extends EObject {
 	int setPaymentMethod(String method, String bookingRef);
 
 	/**
-	 * Sets the payment details of a customer of a booking by using the bookign reference
+	 * Sets the payment details of a customer of a booking by using the booking referenc
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return  0 if success
+	 * 			-1 if not success
 	 * @model dataType="types.Integer" required="true" ordered="false" ccNumberDataType="types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="types.String" ccvRequired="true" ccvOrdered="false" expiryMonthDataType="types.Integer" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearDataType="types.Integer" expiryYearRequired="true" expiryYearOrdered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false" customerEmailDataType="types.String" customerEmailRequired="true" customerEmailOrdered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
@@ -72,6 +81,9 @@ public interface IBookingProvidesForCustomer extends EObject {
 
 	/**
 	 * Set personal details such as first name, last name, age and email of a customer and assigns this customer to a booking.
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return  0 if success
+	 * 			-1 if not success
 	 * @param firstName, lastName, age, email
 	 * @model dataType="types.Integer" required="true" ordered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false" ageDataType="types.Integer" ageRequired="true" ageOrdered="false" emailDataType="types.String" emailRequired="true" emailOrdered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated

@@ -88,9 +88,18 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * If isProduct is true then the given extra is a product, if it is false, the given extra is an experience
-	 * @return returns 1 if the ID already exists.
-	 * @return returns 0 if ok.
+	 * Adds an extra to the Map
+	 * @param extraID 
+	 * 		The extras ID
+	 * @param price
+	 * 		How muck an extra will cost
+	 * @param name
+	 * 		What the Extra is called
+	 * @param description
+	 * 		A short text to describe the extra.
+	 * @param isProduct
+	 * 		If true, the extra should be a product, else it is an experience.
+	 * @return returns 1 if the ID already exists. Returns 0 if ok.
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -115,8 +124,9 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Returns 1 if the Extra was failed to be removed.
-	 * Returns 0 if everything was successful.
+	 * @return
+	 * 		Returns 1 if the Extra was failed to be removed.
+	 * 		Returns 0 if everything was successful.
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
