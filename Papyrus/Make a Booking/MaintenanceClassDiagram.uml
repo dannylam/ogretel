@@ -610,7 +610,7 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_ooOuMI6uEeSqUPpyrwDcyg" type="_CLdSkHk_EeScv6HJEKdjpA" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_R8mAcJAyEeSDD5PQGfw72g" name="getCalendar">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YiU-UJAyEeSDD5PQGfw72g" name="calendar" type="_k4694HlEEeScv6HJEKdjpA"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YiU-UJAyEeSDD5PQGfw72g" name="calendar" type="_k4694HlEEeScv6HJEKdjpA" direction="return"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_JJ2gI321EeSp56Ha0EyLeQ" memberEnd="_JJ2gJH21EeSp56Ha0EyLeQ _JJ2gIH21EeSp56Ha0EyLeQ">
