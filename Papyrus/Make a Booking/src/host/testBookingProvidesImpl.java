@@ -97,6 +97,10 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testSetPaymentMethod() {
+		String method = "VOUCHER";
+		int setPM = bp.setPaymentMethod(method, bookingRef);
+		
+		assertTrue(setPM == 0);
 		fail("Not yet implemented");
 	}
 
