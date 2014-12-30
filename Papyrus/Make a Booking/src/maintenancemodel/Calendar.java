@@ -37,7 +37,7 @@ public interface Calendar extends EObject {
 	 * @see #setStringToListsMap(Map.Entry)
 	 * @see maintenancemodel.MaintenancemodelPackage#getCalendar_StringToListsMap()
 	 * @model mapType="maintenancemodel.StringToListsMap<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EIntegerObject>" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	EMap<String, EList<Integer>> getStringToListsMap();
 
@@ -47,7 +47,7 @@ public interface Calendar extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>String To Lists Map</em>' map.
 	 * @see #getStringToListsMap()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setStringToListsMap(EMap<String, EList<Integer>> value);
 

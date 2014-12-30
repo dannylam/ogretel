@@ -37,7 +37,7 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getStringToListsMap()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
 	protected EMap<String, EList<Integer>> stringToListsMap;
@@ -64,7 +64,7 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EMap<String,EList<Integer>> getStringToListsMap() {
 		return stringToListsMap;
@@ -73,7 +73,7 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public NotificationChain basicSetStringToListsMap(EMap<String, EList<Integer>> newStringToListsMap, NotificationChain msgs) {
 		EMap<String,EList<Integer>> oldStringToListsMap = stringToListsMap;
@@ -88,7 +88,7 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setStringToListsMap(EMap<String, EList<Integer>> newValue) {
 		if (newValue != stringToListsMap) {
