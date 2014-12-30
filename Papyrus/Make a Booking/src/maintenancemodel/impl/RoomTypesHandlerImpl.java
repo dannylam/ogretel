@@ -66,7 +66,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 	 */
 		public EMap<String, RoomType> getStringToRoomType() {
 		if (stringToRoomType == null) {
-			stringToRoomType = new EcoreEMap<String,RoomType>(MaintenancemodelPackage.Literals.STRING_TO_ROOM_TYPE, StringToRoomTypeImpl.class, this, MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE);
+			stringToRoomType = new EcoreEMap<String,RoomType>(MaintenancemodelPackage.Literals.STRING_TO_ROOM_TYPE_MAP, StringToRoomTypeMapImpl.class, this, MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE);
 		}
 		return stringToRoomType;
 	}
@@ -150,7 +150,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getCalendar(Calendar calendar) {
+	public Calendar getCalendar() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

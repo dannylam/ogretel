@@ -83,6 +83,8 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testEditBooking() {
+		testBook();
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
 		int edBP = bp.editBooking(bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras);
 		
 		assertTrue(edBP == 0);
@@ -95,6 +97,10 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testSetPaymentMethod() {
+		String method = "VOUCHER";
+		int setPM = bp.setPaymentMethod(method, bookingRef);
+		
+		assertTrue(setPM == 0);
 		fail("Not yet implemented");
 	}
 
@@ -119,8 +125,8 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testBook() {
+		assertTrue(bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
 		
-	
 		fail("Not yet implemented");
 	}
 

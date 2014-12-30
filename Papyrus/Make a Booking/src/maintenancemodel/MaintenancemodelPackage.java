@@ -800,16 +800,6 @@ public interface MaintenancemodelPackage extends EPackage {
 	int ROOM_TYPES_HANDLER = 17;
 
 	/**
-	 * The meta object id for the '{@link maintenancemodel.impl.StringToRoomTypeImpl <em>String To Room Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see maintenancemodel.impl.StringToRoomTypeImpl
-	 * @see maintenancemodel.impl.MaintenancemodelPackageImpl#getStringToRoomType()
-	 * @generated
-	 */
-	int STRING_TO_ROOM_TYPE = 18;
-
-	/**
 	 * The meta object id for the '{@link maintenancemodel.impl.StringToListsMapImpl <em>String To Lists Map</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1551,7 +1541,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPES_HANDLER___GET_CALENDAR__CALENDAR = 6;
+	int ROOM_TYPES_HANDLER___GET_CALENDAR = 6;
 
 	/**
 	 * The number of operations of the '<em>Room Types Handler</em>' class.
@@ -1563,13 +1553,23 @@ public interface MaintenancemodelPackage extends EPackage {
 	int ROOM_TYPES_HANDLER_OPERATION_COUNT = 7;
 
 	/**
+	 * The meta object id for the '{@link maintenancemodel.impl.StringToRoomTypeMapImpl <em>String To Room Type Map</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see maintenancemodel.impl.StringToRoomTypeMapImpl
+	 * @see maintenancemodel.impl.MaintenancemodelPackageImpl#getStringToRoomTypeMap()
+	 * @generated
+	 */
+	int STRING_TO_ROOM_TYPE_MAP = 18;
+
+	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TO_ROOM_TYPE__KEY = 0;
+	int STRING_TO_ROOM_TYPE_MAP__KEY = 0;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' reference.
@@ -1578,25 +1578,25 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TO_ROOM_TYPE__VALUE = 1;
+	int STRING_TO_ROOM_TYPE_MAP__VALUE = 1;
 
 	/**
-	 * The number of structural features of the '<em>String To Room Type</em>' class.
+	 * The number of structural features of the '<em>String To Room Type Map</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TO_ROOM_TYPE_FEATURE_COUNT = 2;
+	int STRING_TO_ROOM_TYPE_MAP_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>String To Room Type</em>' class.
+	 * The number of operations of the '<em>String To Room Type Map</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_TO_ROOM_TYPE_OPERATION_COUNT = 0;
+	int STRING_TO_ROOM_TYPE_MAP_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link maintenancemodel.impl.MaintenanceProvidesForBookingImpl <em>Maintenance Provides For Booking</em>}' class.
@@ -2337,26 +2337,26 @@ public interface MaintenancemodelPackage extends EPackage {
 	EOperation getRoomTypesHandler__GetRoomType__String();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.RoomTypesHandler#getCalendar(maintenancemodel.Calendar) <em>Get Calendar</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.RoomTypesHandler#getCalendar() <em>Get Calendar</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Calendar</em>' operation.
-	 * @see maintenancemodel.RoomTypesHandler#getCalendar(maintenancemodel.Calendar)
+	 * @see maintenancemodel.RoomTypesHandler#getCalendar()
 	 * @generated
 	 */
-	EOperation getRoomTypesHandler__GetCalendar__Calendar();
+	EOperation getRoomTypesHandler__GetCalendar();
 
 	/**
-	 * Returns the meta object for class '{@link java.util.Map.Entry <em>String To Room Type</em>}'.
+	 * Returns the meta object for class '{@link java.util.Map.Entry <em>String To Room Type Map</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>String To Room Type</em>'.
+	 * @return the meta object for class '<em>String To Room Type Map</em>'.
 	 * @see java.util.Map.Entry
 	 * @model keyDataType="org.eclipse.emf.ecore.EString" keyRequired="true" keyOrdered="false"
 	 *        valueType="maintenancemodel.RoomType" valueRequired="true" valueOrdered="false"
 	 * @generated
 	 */
-	EClass getStringToRoomType();
+	EClass getStringToRoomTypeMap();
 
 	/**
 	 * Returns the meta object for the attribute '{@link java.util.Map.Entry <em>Key</em>}'.
@@ -2364,10 +2364,10 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Key</em>'.
 	 * @see java.util.Map.Entry
-	 * @see #getStringToRoomType()
+	 * @see #getStringToRoomTypeMap()
 	 * @generated
 	 */
-	EAttribute getStringToRoomType_Key();
+	EAttribute getStringToRoomTypeMap_Key();
 
 	/**
 	 * Returns the meta object for the reference '{@link java.util.Map.Entry <em>Value</em>}'.
@@ -2375,10 +2375,10 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Value</em>'.
 	 * @see java.util.Map.Entry
-	 * @see #getStringToRoomType()
+	 * @see #getStringToRoomTypeMap()
 	 * @generated
 	 */
-	EReference getStringToRoomType_Value();
+	EReference getStringToRoomTypeMap_Value();
 
 	/**
 	 * Returns the meta object for class '{@link java.util.Map.Entry <em>String To Lists Map</em>}'.
@@ -3364,17 +3364,17 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ROOM_TYPES_HANDLER___GET_CALENDAR__CALENDAR = eINSTANCE.getRoomTypesHandler__GetCalendar__Calendar();
+		EOperation ROOM_TYPES_HANDLER___GET_CALENDAR = eINSTANCE.getRoomTypesHandler__GetCalendar();
 
 		/**
-		 * The meta object literal for the '{@link maintenancemodel.impl.StringToRoomTypeImpl <em>String To Room Type</em>}' class.
+		 * The meta object literal for the '{@link maintenancemodel.impl.StringToRoomTypeMapImpl <em>String To Room Type Map</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see maintenancemodel.impl.StringToRoomTypeImpl
-		 * @see maintenancemodel.impl.MaintenancemodelPackageImpl#getStringToRoomType()
+		 * @see maintenancemodel.impl.StringToRoomTypeMapImpl
+		 * @see maintenancemodel.impl.MaintenancemodelPackageImpl#getStringToRoomTypeMap()
 		 * @generated
 		 */
-		EClass STRING_TO_ROOM_TYPE = eINSTANCE.getStringToRoomType();
+		EClass STRING_TO_ROOM_TYPE_MAP = eINSTANCE.getStringToRoomTypeMap();
 
 		/**
 		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
@@ -3382,7 +3382,7 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute STRING_TO_ROOM_TYPE__KEY = eINSTANCE.getStringToRoomType_Key();
+		EAttribute STRING_TO_ROOM_TYPE_MAP__KEY = eINSTANCE.getStringToRoomTypeMap_Key();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' reference feature.
@@ -3390,7 +3390,7 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STRING_TO_ROOM_TYPE__VALUE = eINSTANCE.getStringToRoomType_Value();
+		EReference STRING_TO_ROOM_TYPE_MAP__VALUE = eINSTANCE.getStringToRoomTypeMap_Value();
 
 		/**
 		 * The meta object literal for the '{@link maintenancemodel.impl.StringToListsMapImpl <em>String To Lists Map</em>}' class.

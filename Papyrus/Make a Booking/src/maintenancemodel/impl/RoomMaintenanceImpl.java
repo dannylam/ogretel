@@ -212,10 +212,11 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	public int addRoom(int roomID, String roomType) {
 		if (!this.getRoomHandler().exists(roomID)) {
 			if (this.getRoomTypeHandler().exists(roomType)) {
-				RoomTypesHandler rth = this.getRoomTypeHandler();
-				RoomType rt = rth.getStringToRoomType().get(roomType);
-				this.getRoomHandler().addRoom(roomID, rt);
-				// rth.getCalendar().setCap(0,365,roomType, -1);
+
+				this.rooms.addRoom(roomID, this.roomTypes.getStringToRoomType()
+						.get(roomType));
+				this.roomTypes.getCalendar().setCap(0, 365, roomType, -1);
+
 				return 0;
 			}
 			return 1;
@@ -233,7 +234,10 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	public int removeRoom(int roomID) {
 
 		if (this.rooms.exists(roomID)) {
+			this.roomTypes.getCalendar().setCap(0, 365,
+					this.getRoomTypeID(roomID), 1);
 			this.rooms.removeRoom(roomID);
+
 			return 0;
 		}
 		return 1;

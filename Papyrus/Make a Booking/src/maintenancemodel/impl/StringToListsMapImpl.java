@@ -3,20 +3,26 @@
 package maintenancemodel.impl;
 
 import java.util.Collection;
+
 import maintenancemodel.MaintenancemodelPackage;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.BasicEMap;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the maintenancemodel object '<em><b>String To Lists Map</b></em>'.
+ * An implementation of the model object '<em><b>String To Lists Map</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:

@@ -74,7 +74,7 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 			case MaintenancemodelPackage.EXTRAS_MAINTENANCE: return createExtrasMaintenance();
 			case MaintenancemodelPackage.ROOM_MAINTENANCE: return createRoomMaintenance();
 			case MaintenancemodelPackage.ROOM_TYPES_HANDLER: return createRoomTypesHandler();
-			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE: return (EObject)createStringToRoomType();
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE_MAP: return (EObject)createStringToRoomTypeMap();
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING: return createMaintenanceProvidesForBooking();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -228,9 +228,9 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map.Entry<String, RoomType> createStringToRoomType() {
-		StringToRoomTypeImpl stringToRoomType = new StringToRoomTypeImpl();
-		return stringToRoomType;
+	public Map.Entry<String, RoomType> createStringToRoomTypeMap() {
+		StringToRoomTypeMapImpl stringToRoomTypeMap = new StringToRoomTypeMapImpl();
+		return stringToRoomTypeMap;
 	}
 
 	/**

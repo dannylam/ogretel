@@ -4,18 +4,22 @@ package maintenancemodel.impl;
 
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.Room;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.BasicEMap;
 import org.eclipse.emf.common.util.EMap;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the maintenancemodel object '<em><b>Integer To Room Map</b></em>'.
+ * An implementation of the model object '<em><b>Integer To Room Map</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
