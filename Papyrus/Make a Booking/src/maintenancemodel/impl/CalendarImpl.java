@@ -124,9 +124,9 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	 */
 	public Integer getCap(int start, int end, String roomType) {
 		
-		Integer cap = this.MAX_CAPACITY;
-		
 		EList<Integer> capacities = this.getStringToListsMap().get(roomType);
+		Integer cap = capacities.get(start);
+		
 		//Get the capacity of the day with the lowest capacity:
 		for(int day=start; day<=end; day++){
 			if(capacities.get(day) < cap){
