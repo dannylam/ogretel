@@ -1,6 +1,7 @@
 /**
  */
 package bookingmodel.impl;
+import bookingmodel.Booking;
 import bookingmodel.BookingHandler;
 import bookingmodel.BookingProvides;
 import bookingmodel.BookingmodelPackage;
@@ -9,10 +10,13 @@ import bookingmodel.IBookingProvidesForGuest;
 import bookingmodel.IBookingProvidesForHost;
 import bookingmodel.PaymentDetails;
 import bookingmodel.PaymentMethod;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.List;
+
 import maintenancemodel.MaintenanceProvidesForBooking;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -112,9 +116,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * TODO: javadoc
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Converts a String into a List
 	 * @generated NOT
 	 */
 	public List<String> stringToList(String text) {
@@ -239,11 +241,17 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int getPrice(String bookingRef) {
 		int price = 0;
-		String extras = this.bookingHandler.getBooking(bookingRef).getExtraToIsPayedMap().keySet().toString();
-		//String roomtypes = this.bookingHandler.getBooking(bookingRef).getRoomTypeToRoomIDMap().values().toString();
+		EList <String> extras; 
+		/*		
+		this.bookingHandler.getBooking(bookingRef).getExtraToIsPayedMap().keySet().toArray();
+		List <String> roomtypes;
+		this.bookingHandler.getBooking(bookingRef).getRoomIDToRoomTypeMap().values().toArray();
 		
-		//maintenanceComponent.getPrice(extras);
-		//maintenanceComponent.getPrice(roomtypes);
+		
+		this.maintenanceComponent.getPriceRoom((EList<String>) this.stringToList(roomtypes));
+		this.maintenanceComponent.getPriceExtra(extras);
+		
+
 		/*
 		 * Ska från en bookingRef få reda på vilka extras och hur många av varjerumstyp vi har
 		 * och därefter kan vi fråga maintenance om vad priset för varje är och sedan summera och returnera
@@ -362,12 +370,13 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		String bookingRef = "";
 		// TODO: implement this method
 
-		/*if(maintenanceComponent.canBook(roomTypes, startDate, endDate){
+		if(this.maintenanceComponent.canBook( (EList<String>) stringToList(roomTypes), startDate, endDate)){
 			Booking booking = new BookingImpl(nrOfGuests, startDate, endDate, stringToList(roomTypes), stringToList(extras));	
 			//tell maintenance to set those roomtypes and extras as busy
 			this.bookingHandler.addBooking(booking);
 			bookingRef = booking.getBookingRef();
-		}*/
+		}
+
 		return bookingRef;
 		// TODO: check other cases
 	}

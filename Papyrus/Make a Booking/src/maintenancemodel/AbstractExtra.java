@@ -32,12 +32,12 @@ public interface AbstractExtra extends Extra {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>ID</em>' attribute.
-	 * @see #setID(int)
+	 * @see #setID(String)
 	 * @see maintenancemodel.MaintenancemodelPackage#getAbstractExtra_ID()
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
-	int getID();
+	String getID();
 
 	/**
 	 * Sets the value of the '{@link maintenancemodel.AbstractExtra#getID <em>ID</em>}' attribute.
@@ -47,7 +47,7 @@ public interface AbstractExtra extends Extra {
 	 * @see #getID()
 	 * @generated
 	 */
-	void setID(int value);
+	void setID(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Price</b></em>' attribute.

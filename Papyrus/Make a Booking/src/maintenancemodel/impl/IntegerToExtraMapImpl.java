@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class IntegerToExtraMapImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<Integer,Extra> {
+public class IntegerToExtraMapImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String,Extra> {
 	/**
 	 * The default value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -36,7 +36,7 @@ public class IntegerToExtraMapImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Integer KEY_EDEFAULT = null;
+	protected static final String KEY_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
@@ -46,7 +46,7 @@ public class IntegerToExtraMapImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected Integer key = KEY_EDEFAULT;
+	protected String key = KEY_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' reference.
@@ -82,7 +82,7 @@ public class IntegerToExtraMapImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Integer getTypedKey() {
+	public String getTypedKey() {
 		return key;
 	}
 
@@ -91,8 +91,8 @@ public class IntegerToExtraMapImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTypedKey(Integer newKey) {
-		Integer oldKey = key;
+	public void setTypedKey(String newKey) {
+		String oldKey = key;
 		key = newKey;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.INTEGER_TO_EXTRA_MAP__KEY, oldKey, key));
@@ -162,7 +162,7 @@ public class IntegerToExtraMapImpl extends MinimalEObjectImpl.Container implemen
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case MaintenancemodelPackage.INTEGER_TO_EXTRA_MAP__KEY:
-				setTypedKey((Integer)newValue);
+				setTypedKey((String)newValue);
 				return;
 			case MaintenancemodelPackage.INTEGER_TO_EXTRA_MAP__VALUE:
 				setTypedValue((Extra)newValue);
@@ -255,7 +255,7 @@ public class IntegerToExtraMapImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Integer getKey() {
+	public String getKey() {
 		return getTypedKey();
 	}
 
@@ -264,7 +264,7 @@ public class IntegerToExtraMapImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setKey(Integer key) {
+	public void setKey(String key) {
 		setTypedKey(key);
 	}
 
@@ -294,9 +294,9 @@ public class IntegerToExtraMapImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EMap<Integer, Extra> getEMap() {
+	public EMap<String, Extra> getEMap() {
 		EObject container = eContainer();
-		return container == null ? null : (EMap<Integer, Extra>)container.eGet(eContainmentFeature());
+		return container == null ? null : (EMap<String, Extra>)container.eGet(eContainmentFeature());
 	}
 
 } //IntegerToExtraMapImpl
