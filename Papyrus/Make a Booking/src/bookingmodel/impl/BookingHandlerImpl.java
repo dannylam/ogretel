@@ -20,9 +20,8 @@ import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Booking Handler</b></em>'.
- * <!-- end-user-doc -->
+ * A class that handles all the bookings such as adding and removing.
+ * 
  * <p>
  * The following features are implemented:
  * <ul>

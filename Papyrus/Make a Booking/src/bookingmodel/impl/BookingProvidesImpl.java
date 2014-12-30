@@ -321,11 +321,11 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	                break;
 	            default:
 	            	break;
-	     }*/
+	     }
 	     if(!paymentMethod.equals(null)){
 	    	 String bookingRef; //will be removed later on when inparam correct
 	    	 this.getBookingHandler().getBooking(bookingRef).setPaymentMethod(paymentMethod);
-	     }
+	     }*/
 		return result;
 		// TODO: check other cases
 	}
@@ -505,7 +505,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 			case BookingmodelPackage.BOOKING_PROVIDES___EDIT_BOOKING__STRING_STRING_STRING_INT_STRING_STRING:
 				return editBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
 			case BookingmodelPackage.BOOKING_PROVIDES___SET_PAYMENT_METHOD__STRING:
-				return setPaymentMethod((String)arguments.get(0));
+				return setPaymentMethod((int)arguments.get(0));
 			case BookingmodelPackage.BOOKING_PROVIDES___SET_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_STRING:
 				return setPaymentDetails((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6));
 			case BookingmodelPackage.BOOKING_PROVIDES___SET_PERSONAL_DETAILS__STRING_STRING_INT_STRING_STRING:
