@@ -517,7 +517,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			hasResponsible = false;
 		}
 		return hasResponsible;
-		//TODO: Lägga till try-catch och fånga exceptions på ett lämpligt sätt.
 	}
 
 	/**
@@ -536,7 +535,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			hasResponsible = true;
 		}
 		return hasResponsible;
-		//TODO: Lägga till try-catch och fånga exceptions på ett lämpligt sätt.
 	}
 
 	/**
@@ -551,7 +549,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			result = -1;													//om rumsID inte ‰r tom, koppla ej 
 		}
 		return result;
-		//TODO: check other cases
 	}
 	
 	/**
@@ -572,7 +569,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			result = -1;													//dÂ finns inget mejl som man kan koppla till = -1
 		}
 		return result;
-		//TODO: check other cases
 	}
 
 	/**
@@ -606,7 +602,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			result = -1;
 		}
 		return result;
-		//TODO check other cases
 	}
 	
 	/**
@@ -623,7 +618,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			result = -1;											//returnera fel
 		}
 		return result;
-		//TODO check other cases
 	}
 
 	/**
@@ -641,7 +635,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			result = -1;												//om listan ‰r tom, kan ej s‰tta rumstyp
 		}
 		return result;
-		//TODO check other cases
 	}
 
 	/**
