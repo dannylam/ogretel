@@ -241,15 +241,12 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IExtrasMaintenance/addExtra/description"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IExtrasMaintenance/addExtra/isProduct"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//IExtrasMaintenance/removeExtra">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IExtrasMaintenance/removeExtra/extraID"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//IExtrasMaintenance/exists">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IExtrasMaintenance/exists/extraID"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//IExtrasMaintenance/getExtras"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//IExtrasMaintenance/editExtra">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IExtrasMaintenance/editExtra/extraID"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IExtrasMaintenance/editExtra/price"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IExtrasMaintenance/editExtra/name"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IExtrasMaintenance/editExtra/description"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//IExtrasMaintenance/removeExtra">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//IExtrasMaintenance/removeExtra/extraID"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//ExtrasMaintenance">

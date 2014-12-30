@@ -522,7 +522,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXTRA_HANDLER___EXISTS__INT = 0;
+	int EXTRA_HANDLER___EXISTS__STRING = 0;
 
 	/**
 	 * The operation id for the '<em>Add Extra</em>' operation.
@@ -531,7 +531,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXTRA_HANDLER___ADD_EXTRA__INT_INT_STRING_STRING_BOOLEAN = 1;
+	int EXTRA_HANDLER___ADD_EXTRA__STRING_INT_STRING_STRING_BOOLEAN = 1;
 
 	/**
 	 * The operation id for the '<em>Remove Extra</em>' operation.
@@ -540,7 +540,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXTRA_HANDLER___REMOVE_EXTRA__INT = 2;
+	int EXTRA_HANDLER___REMOVE_EXTRA__STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Get Extras</em>' operation.
@@ -558,7 +558,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXTRA_HANDLER___GET_PRICE__INT = 4;
+	int EXTRA_HANDLER___GET_PRICE__STRING = 4;
 
 	/**
 	 * The number of operations of the '<em>Extra Handler</em>' class.
@@ -1144,16 +1144,16 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEXTRAS_MAINTENANCE___ADD_EXTRA__INT_INT_STRING_STRING_BOOLEAN = 0;
+	int IEXTRAS_MAINTENANCE___ADD_EXTRA__STRING_INT_STRING_STRING_BOOLEAN = 0;
 
 	/**
-	 * The operation id for the '<em>Remove Extra</em>' operation.
+	 * The operation id for the '<em>Exists</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEXTRAS_MAINTENANCE___REMOVE_EXTRA__INT = 1;
+	int IEXTRAS_MAINTENANCE___EXISTS__STRING = 1;
 
 	/**
 	 * The operation id for the '<em>Get Extras</em>' operation.
@@ -1165,13 +1165,13 @@ public interface MaintenancemodelPackage extends EPackage {
 	int IEXTRAS_MAINTENANCE___GET_EXTRAS = 2;
 
 	/**
-	 * The operation id for the '<em>Edit Extra</em>' operation.
+	 * The operation id for the '<em>Remove Extra</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IEXTRAS_MAINTENANCE___EDIT_EXTRA__INT_INT_STRING_STRING = 3;
+	int IEXTRAS_MAINTENANCE___REMOVE_EXTRA__STRING = 3;
 
 	/**
 	 * The number of operations of the '<em>IExtras Maintenance</em>' class.
@@ -1217,16 +1217,16 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXTRAS_MAINTENANCE___ADD_EXTRA__INT_INT_STRING_STRING_BOOLEAN = IEXTRAS_MAINTENANCE___ADD_EXTRA__INT_INT_STRING_STRING_BOOLEAN;
+	int EXTRAS_MAINTENANCE___ADD_EXTRA__STRING_INT_STRING_STRING_BOOLEAN = IEXTRAS_MAINTENANCE___ADD_EXTRA__STRING_INT_STRING_STRING_BOOLEAN;
 
 	/**
-	 * The operation id for the '<em>Remove Extra</em>' operation.
+	 * The operation id for the '<em>Exists</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXTRAS_MAINTENANCE___REMOVE_EXTRA__INT = IEXTRAS_MAINTENANCE___REMOVE_EXTRA__INT;
+	int EXTRAS_MAINTENANCE___EXISTS__STRING = IEXTRAS_MAINTENANCE___EXISTS__STRING;
 
 	/**
 	 * The operation id for the '<em>Get Extras</em>' operation.
@@ -1238,13 +1238,13 @@ public interface MaintenancemodelPackage extends EPackage {
 	int EXTRAS_MAINTENANCE___GET_EXTRAS = IEXTRAS_MAINTENANCE___GET_EXTRAS;
 
 	/**
-	 * The operation id for the '<em>Edit Extra</em>' operation.
+	 * The operation id for the '<em>Remove Extra</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXTRAS_MAINTENANCE___EDIT_EXTRA__INT_INT_STRING_STRING = IEXTRAS_MAINTENANCE___EDIT_EXTRA__INT_INT_STRING_STRING;
+	int EXTRAS_MAINTENANCE___REMOVE_EXTRA__STRING = IEXTRAS_MAINTENANCE___REMOVE_EXTRA__STRING;
 
 	/**
 	 * The number of operations of the '<em>Extras Maintenance</em>' class.
@@ -2009,34 +2009,34 @@ public interface MaintenancemodelPackage extends EPackage {
 	EReference getExtraHandler_IntToExtraMap();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.ExtraHandler#exists(int) <em>Exists</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.ExtraHandler#exists(java.lang.String) <em>Exists</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Exists</em>' operation.
-	 * @see maintenancemodel.ExtraHandler#exists(int)
+	 * @see maintenancemodel.ExtraHandler#exists(java.lang.String)
 	 * @generated
 	 */
-	EOperation getExtraHandler__Exists__int();
+	EOperation getExtraHandler__Exists__String();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.ExtraHandler#addExtra(int, int, java.lang.String, java.lang.String, boolean) <em>Add Extra</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.ExtraHandler#addExtra(java.lang.String, int, java.lang.String, java.lang.String, boolean) <em>Add Extra</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Extra</em>' operation.
-	 * @see maintenancemodel.ExtraHandler#addExtra(int, int, java.lang.String, java.lang.String, boolean)
+	 * @see maintenancemodel.ExtraHandler#addExtra(java.lang.String, int, java.lang.String, java.lang.String, boolean)
 	 * @generated
 	 */
-	EOperation getExtraHandler__AddExtra__int_int_String_String_boolean();
+	EOperation getExtraHandler__AddExtra__String_int_String_String_boolean();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.ExtraHandler#removeExtra(int) <em>Remove Extra</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.ExtraHandler#removeExtra(java.lang.String) <em>Remove Extra</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Extra</em>' operation.
-	 * @see maintenancemodel.ExtraHandler#removeExtra(int)
+	 * @see maintenancemodel.ExtraHandler#removeExtra(java.lang.String)
 	 * @generated
 	 */
-	EOperation getExtraHandler__RemoveExtra__int();
+	EOperation getExtraHandler__RemoveExtra__String();
 
 	/**
 	 * Returns the meta object for the '{@link maintenancemodel.ExtraHandler#getExtras() <em>Get Extras</em>}' operation.
@@ -2049,14 +2049,14 @@ public interface MaintenancemodelPackage extends EPackage {
 	EOperation getExtraHandler__GetExtras();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.ExtraHandler#getPrice(int) <em>Get Price</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.ExtraHandler#getPrice(java.lang.String) <em>Get Price</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Price</em>' operation.
-	 * @see maintenancemodel.ExtraHandler#getPrice(int)
+	 * @see maintenancemodel.ExtraHandler#getPrice(java.lang.String)
 	 * @generated
 	 */
-	EOperation getExtraHandler__GetPrice__int();
+	EOperation getExtraHandler__GetPrice__String();
 
 	/**
 	 * Returns the meta object for class '{@link java.util.Map.Entry <em>Integer To Extra Map</em>}'.
@@ -2064,7 +2064,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Integer To Extra Map</em>'.
 	 * @see java.util.Map.Entry
-	 * @model keyDataType="org.eclipse.emf.ecore.EIntegerObject" keyRequired="true" keyOrdered="false"
+	 * @model keyDataType="org.eclipse.uml2.types.String" keyRequired="true" keyOrdered="false"
 	 *        valueType="maintenancemodel.Extra" valueRequired="true" valueOrdered="false"
 	 * @generated
 	 */
@@ -2638,24 +2638,24 @@ public interface MaintenancemodelPackage extends EPackage {
 	EClass getIExtrasMaintenance();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.IExtrasMaintenance#addExtra(int, int, java.lang.String, java.lang.String, boolean) <em>Add Extra</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.IExtrasMaintenance#addExtra(java.lang.String, int, java.lang.String, java.lang.String, boolean) <em>Add Extra</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Extra</em>' operation.
-	 * @see maintenancemodel.IExtrasMaintenance#addExtra(int, int, java.lang.String, java.lang.String, boolean)
+	 * @see maintenancemodel.IExtrasMaintenance#addExtra(java.lang.String, int, java.lang.String, java.lang.String, boolean)
 	 * @generated
 	 */
-	EOperation getIExtrasMaintenance__AddExtra__int_int_String_String_boolean();
+	EOperation getIExtrasMaintenance__AddExtra__String_int_String_String_boolean();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.IExtrasMaintenance#removeExtra(int) <em>Remove Extra</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.IExtrasMaintenance#exists(java.lang.String) <em>Exists</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Extra</em>' operation.
-	 * @see maintenancemodel.IExtrasMaintenance#removeExtra(int)
+	 * @return the meta object for the '<em>Exists</em>' operation.
+	 * @see maintenancemodel.IExtrasMaintenance#exists(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIExtrasMaintenance__RemoveExtra__int();
+	EOperation getIExtrasMaintenance__Exists__String();
 
 	/**
 	 * Returns the meta object for the '{@link maintenancemodel.IExtrasMaintenance#getExtras() <em>Get Extras</em>}' operation.
@@ -2668,14 +2668,14 @@ public interface MaintenancemodelPackage extends EPackage {
 	EOperation getIExtrasMaintenance__GetExtras();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.IExtrasMaintenance#editExtra(int, int, java.lang.String, java.lang.String) <em>Edit Extra</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.IExtrasMaintenance#removeExtra(java.lang.String) <em>Remove Extra</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Edit Extra</em>' operation.
-	 * @see maintenancemodel.IExtrasMaintenance#editExtra(int, int, java.lang.String, java.lang.String)
+	 * @return the meta object for the '<em>Remove Extra</em>' operation.
+	 * @see maintenancemodel.IExtrasMaintenance#removeExtra(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIExtrasMaintenance__EditExtra__int_int_String_String();
+	EOperation getIExtrasMaintenance__RemoveExtra__String();
 
 	/**
 	 * Returns the meta object for class '{@link maintenancemodel.ExtrasMaintenance <em>Extras Maintenance</em>}'.
@@ -3075,7 +3075,7 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EXTRA_HANDLER___EXISTS__INT = eINSTANCE.getExtraHandler__Exists__int();
+		EOperation EXTRA_HANDLER___EXISTS__STRING = eINSTANCE.getExtraHandler__Exists__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Add Extra</b></em>' operation.
@@ -3083,7 +3083,7 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EXTRA_HANDLER___ADD_EXTRA__INT_INT_STRING_STRING_BOOLEAN = eINSTANCE.getExtraHandler__AddExtra__int_int_String_String_boolean();
+		EOperation EXTRA_HANDLER___ADD_EXTRA__STRING_INT_STRING_STRING_BOOLEAN = eINSTANCE.getExtraHandler__AddExtra__String_int_String_String_boolean();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Extra</b></em>' operation.
@@ -3091,7 +3091,7 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EXTRA_HANDLER___REMOVE_EXTRA__INT = eINSTANCE.getExtraHandler__RemoveExtra__int();
+		EOperation EXTRA_HANDLER___REMOVE_EXTRA__STRING = eINSTANCE.getExtraHandler__RemoveExtra__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Extras</b></em>' operation.
@@ -3107,7 +3107,7 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation EXTRA_HANDLER___GET_PRICE__INT = eINSTANCE.getExtraHandler__GetPrice__int();
+		EOperation EXTRA_HANDLER___GET_PRICE__STRING = eINSTANCE.getExtraHandler__GetPrice__String();
 
 		/**
 		 * The meta object literal for the '{@link maintenancemodel.impl.IntegerToExtraMapImpl <em>Integer To Extra Map</em>}' class.
@@ -3583,15 +3583,15 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IEXTRAS_MAINTENANCE___ADD_EXTRA__INT_INT_STRING_STRING_BOOLEAN = eINSTANCE.getIExtrasMaintenance__AddExtra__int_int_String_String_boolean();
+		EOperation IEXTRAS_MAINTENANCE___ADD_EXTRA__STRING_INT_STRING_STRING_BOOLEAN = eINSTANCE.getIExtrasMaintenance__AddExtra__String_int_String_String_boolean();
 
 		/**
-		 * The meta object literal for the '<em><b>Remove Extra</b></em>' operation.
+		 * The meta object literal for the '<em><b>Exists</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IEXTRAS_MAINTENANCE___REMOVE_EXTRA__INT = eINSTANCE.getIExtrasMaintenance__RemoveExtra__int();
+		EOperation IEXTRAS_MAINTENANCE___EXISTS__STRING = eINSTANCE.getIExtrasMaintenance__Exists__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Extras</b></em>' operation.
@@ -3602,12 +3602,12 @@ public interface MaintenancemodelPackage extends EPackage {
 		EOperation IEXTRAS_MAINTENANCE___GET_EXTRAS = eINSTANCE.getIExtrasMaintenance__GetExtras();
 
 		/**
-		 * The meta object literal for the '<em><b>Edit Extra</b></em>' operation.
+		 * The meta object literal for the '<em><b>Remove Extra</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IEXTRAS_MAINTENANCE___EDIT_EXTRA__INT_INT_STRING_STRING = eINSTANCE.getIExtrasMaintenance__EditExtra__int_int_String_String();
+		EOperation IEXTRAS_MAINTENANCE___REMOVE_EXTRA__STRING = eINSTANCE.getIExtrasMaintenance__RemoveExtra__String();
 
 		/**
 		 * The meta object literal for the '{@link maintenancemodel.impl.ExtrasMaintenanceImpl <em>Extras Maintenance</em>}' class.

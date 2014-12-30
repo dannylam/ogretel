@@ -36,7 +36,7 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int ID_EDEFAULT = 0;
+	protected static final String ID_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getID() <em>ID</em>}' attribute.
@@ -46,7 +46,7 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 	 * @generated
 	 * @ordered
 	 */
-	protected int id = ID_EDEFAULT;
+	protected String id = ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getPrice() <em>Price</em>}' attribute.
@@ -135,6 +135,18 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 	 */
 	public int getID() {
 		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setID(String newID) {
+		String oldID = id;
+		id = newID;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ABSTRACT_EXTRA__ID, oldID, id));
 	}
 
 	/**
@@ -258,7 +270,7 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case MaintenancemodelPackage.ABSTRACT_EXTRA__ID:
-				setID((Integer)newValue);
+				setID((String)newValue);
 				return;
 			case MaintenancemodelPackage.ABSTRACT_EXTRA__PRICE:
 				setPrice((Integer)newValue);
@@ -306,7 +318,7 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case MaintenancemodelPackage.ABSTRACT_EXTRA__ID:
-				return id != ID_EDEFAULT;
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case MaintenancemodelPackage.ABSTRACT_EXTRA__PRICE:
 				return price != PRICE_EDEFAULT;
 			case MaintenancemodelPackage.ABSTRACT_EXTRA__NAME:

@@ -178,7 +178,7 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map.Entry<Integer, Extra> createIntegerToExtraMap() {
+	public Map.Entry<String, Extra> createIntegerToExtraMap() {
 		IntegerToExtraMapImpl integerToExtraMap = new IntegerToExtraMapImpl();
 		return integerToExtraMap;
 	}

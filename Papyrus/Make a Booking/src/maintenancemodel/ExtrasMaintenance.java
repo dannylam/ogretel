@@ -2,7 +2,6 @@
  */
 package maintenancemodel;
 
-import org.eclipse.emf.common.util.EList;
 
 
 
@@ -42,7 +41,7 @@ public interface ExtrasMaintenance extends IExtrasMaintenance {
 	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
-	EList<String> getExtras();
+	ExtraHandler getExtras();
 
 	/**
 	 * Sets the value of the '{@link maintenancemodel.ExtrasMaintenance#getExtras <em>Extras</em>}' containment reference.

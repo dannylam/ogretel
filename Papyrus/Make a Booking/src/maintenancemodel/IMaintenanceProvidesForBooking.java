@@ -58,58 +58,6 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 	int getRoomAndSetActive(String roomTypeID);
 
 	/**
-	 * A method that creates a booking with given parameters in our calendar
-	 * 
-	 * @return int: 0 if successful, else int to be connected with an
-	 *         error-message
-	 * @model roomTypeDataType="org.eclipse.uml2.types.String"
-	 *        roomTypeRequired="true" roomTypeOrdered="false"
-	 *        startDataType="org.eclipse.uml2.types.String" startRequired="true"
-	 *        startOrdered="false" endDataType="org.eclipse.uml2.types.String"
-	 *        endRequired="true" endOrdered="false"
-	 * @generated NOT
-	 */
-	int makeBooking(String roomType, String start, String end);
-
-	/**
-	 * A method that removes a booking with given parameters from our calendar
-	 * 
-	 * @return int: 0 if successful, else int to be connected with an
-	 *         error-message
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true"
-	 *        ordered="false" roomTypeDataType="org.eclipse.uml2.types.String"
-	 *        roomTypeRequired="true" roomTypeOrdered="false"
-	 *        nrOfRoomsDataType="org.eclipse.uml2.types.Integer"
-	 *        nrOfRoomsRequired="true" nrOfRoomsOrdered="false"
-	 *        startDataType="org.eclipse.uml2.types.String" startRequired="true"
-	 *        startOrdered="false" endDataType="org.eclipse.uml2.types.String"
-	 *        endRequired="true" endOrdered="false"
-	 * @generated NOT
-	 */
-	int removeBooking(String roomType, int nrOfRooms, String start, String end);
-
-	/**
-	 * A method to set a booking as active
-<<<<<<< HEAD
-	 * 
-	 * @return int: 0 is successful, else int to be connected with an
-	 *         error-message
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true"
-	 *        ordered="false" bookingRefDataType="org.eclipse.uml2.types.String"
-	 *        bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated NOT
-=======
-	 * @return int: 0 is successful, else int to be connected with an error-message
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated 
-<<<<<<< HEAD
->>>>>>> f8dd5b5de829a2013ca1442c2c15ad9546804866
-=======
->>>>>>> f8dd5b5de829a2013ca1442c2c15ad9546804866
-	 */
-	int setActive(String roomTypeID);
-
-	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDsDataType="org.eclipse.uml2.types.String" roomTypeIDsMany="true" roomTypeIDsOrdered="false"
 	 * @generated
@@ -118,9 +66,9 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extraIDsDataType="org.eclipse.uml2.types.Integer" extraIDsMany="true" extraIDsOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extraIDsDataType="org.eclipse.uml2.types.String" extraIDsMany="true" extraIDsOrdered="false"
 	 * @generated
 	 */
-	int getPriceExtra(EList<Integer> extraIDs);
+	int getPriceExtra(EList<String> extraIDs);
 
 } // IMaintenanceProvidesForBooking
