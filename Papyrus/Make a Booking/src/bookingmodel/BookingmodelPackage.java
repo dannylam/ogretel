@@ -633,13 +633,31 @@ public interface BookingmodelPackage extends EPackage {
 	int PAYMENT_DETAILS__EXP_YEAR = 3;
 
 	/**
+	 * The feature id for the '<em><b>First Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_DETAILS__FIRST_NAME = 4;
+
+	/**
+	 * The feature id for the '<em><b>Last Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAYMENT_DETAILS__LAST_NAME = 5;
+
+	/**
 	 * The number of structural features of the '<em>Payment Details</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAYMENT_DETAILS_FEATURE_COUNT = 4;
+	int PAYMENT_DETAILS_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Payment Details</em>' class.
@@ -1727,6 +1745,28 @@ public interface BookingmodelPackage extends EPackage {
 	EAttribute getPaymentDetails_ExpYear();
 
 	/**
+	 * Returns the meta object for the attribute '{@link bookingmodel.PaymentDetails#getFirstName <em>First Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>First Name</em>'.
+	 * @see bookingmodel.PaymentDetails#getFirstName()
+	 * @see #getPaymentDetails()
+	 * @generated
+	 */
+	EAttribute getPaymentDetails_FirstName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link bookingmodel.PaymentDetails#getLastName <em>Last Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Last Name</em>'.
+	 * @see bookingmodel.PaymentDetails#getLastName()
+	 * @see #getPaymentDetails()
+	 * @generated
+	 */
+	EAttribute getPaymentDetails_LastName();
+
+	/**
 	 * Returns the meta object for class '{@link bookingmodel.Guest <em>Guest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2518,6 +2558,22 @@ public interface BookingmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PAYMENT_DETAILS__EXP_YEAR = eINSTANCE.getPaymentDetails_ExpYear();
+
+		/**
+		 * The meta object literal for the '<em><b>First Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PAYMENT_DETAILS__FIRST_NAME = eINSTANCE.getPaymentDetails_FirstName();
+
+		/**
+		 * The meta object literal for the '<em><b>Last Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PAYMENT_DETAILS__LAST_NAME = eINSTANCE.getPaymentDetails_LastName();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.impl.GuestImpl <em>Guest</em>}' class.

@@ -324,6 +324,8 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 			paymentDetails.setCcV(ccv);
 			paymentDetails.setExpMonth(expiryMonth);
 			paymentDetails.setExpYear(expiryYear);
+			paymentDetails.setFirstName(firstName);
+			paymentDetails.setLastName(lastName);
 
 			Customer customer = this.getBookingHandler().getBooking(bookingRef).getCustomer();
 			if(customer.getEmail().equals(customerEmail)){
@@ -331,8 +333,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 			}
 
 		}
-
-		// TODO: update inparams
 		//TODO: check other cases
 		return result;
 	}

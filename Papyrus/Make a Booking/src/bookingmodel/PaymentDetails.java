@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see bookingmodel.BookingmodelPackage#getPaymentDetails()
  * @model
- * @generated NOT
+ * @generated 
  */
 public interface PaymentDetails extends EObject {
 	/**
@@ -110,5 +110,57 @@ public interface PaymentDetails extends EObject {
 	 * @generated NOT
 	 */
 	void setExpYear(int value);
+
+	/**
+	 * Returns the value of the '<em><b>First Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>First Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>First Name</em>' attribute.
+	 * @see #setFirstName(String)
+	 * @see bookingmodel.BookingmodelPackage#getPaymentDetails_FirstName()
+	 * @model unique="false" dataType="types.String" required="true" ordered="false"
+	 * @generated NOT
+	 */
+	String getFirstName();
+
+	/**
+	 * Sets the value of the '{@link bookingmodel.PaymentDetails#getFirstName <em>First Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>First Name</em>' attribute.
+	 * @see #getFirstName()
+	 * @generated NOT
+	 */
+	void setFirstName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Last Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Last Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Last Name</em>' attribute.
+	 * @see #setLastName(String)
+	 * @see bookingmodel.BookingmodelPackage#getPaymentDetails_LastName()
+	 * @model dataType="types.String" required="true" ordered="false"
+	 * @generated NOT
+	 */
+	String getLastName();
+
+	/**
+	 * Sets the value of the '{@link bookingmodel.PaymentDetails#getLastName <em>Last Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Last Name</em>' attribute.
+	 * @see #getLastName()
+	 * @generated NOT
+	 */
+	void setLastName(String value);
 
 } // PaymentDetails
