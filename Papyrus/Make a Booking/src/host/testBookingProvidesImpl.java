@@ -123,9 +123,9 @@ public class testBookingProvidesImpl {
 		String lastName =  "Grischa";
 		String customerEmail = "grischa@group4.se";
 		
-		int setPD = bp.setPaymentDetails(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, customerEmail, bookingRef);
+		int setPaD = bp.setPaymentDetails(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, customerEmail, bookingRef);
 	
-		assertTrue(setPD == 0);
+		assertTrue(setPaD == 0);
 		
 		fail("Not yet implemented");
 	}
@@ -135,6 +135,19 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testSetPersonalDetails() {
+		testBook();			
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		
+		String firstName = "Mr";
+		String lastName =  "Grischa";
+		int age = 30; 
+		String customerEmail = "grischa@group4.se";
+		
+		//NOTE: i BookingProvidesImpl heter det email och inte customerEmail.
+		int setPeD = bp.setPersonalDetails(firstName, lastName, age, customerEmail, bookingRef);
+		
+		assertTrue(setPeD == 0);
+		
 		fail("Not yet implemented");
 	}
 
