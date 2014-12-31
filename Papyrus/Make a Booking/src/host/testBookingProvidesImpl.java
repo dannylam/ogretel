@@ -75,6 +75,15 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testRemoveBooking() {
+		testBook();
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		
+		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
+		
+		int rmB = bp.removeBooking(bookingRef);
+		assertTrue(rmB == 0);
+		assertTrue(!(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef)));
+		
 		fail("Not yet implemented");
 	}
 
