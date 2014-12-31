@@ -2,6 +2,7 @@
  */
 package maintenancemodel;
 
+import java.util.Map;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
@@ -64,5 +65,21 @@ public interface Calendar extends EObject {
 	 * @generated
 	 */
 	int setCap(int start, int end, String roomType, int nrOfRooms);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false" incrementDataType="org.eclipse.uml2.types.Integer" incrementRequired="true" incrementOrdered="false"
+	 * @generated
+	 */
+	int incCap(int start, int end, String roomType, int increment);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false" decrementDataType="org.eclipse.uml2.types.Integer" decrementRequired="true" decrementOrdered="false"
+	 * @generated
+	 */
+	int decCap(int start, int end, String roomType, int decrement);
 
 } // Calendar
