@@ -289,6 +289,14 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_459eoJDPEeS-OrkE_s2uog" name="setInactive">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-yh0gJDPEeS-OrkE_s2uog" name="roomID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_FZdFMJDQEeS-OrkE_s2uog" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_VHpEoH2xEeSp56Ha0EyLeQ" name="IRoomMaintenance">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_Tses8Hl5EeScv6HJEKdjpA" name="addRoom">

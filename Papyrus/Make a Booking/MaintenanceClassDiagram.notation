@@ -302,6 +302,10 @@
           <element xmi:type="uml:Operation" href="MaintenanceClassDiagram.uml#_MadaQI6VEeS0D-EMhs8Yvw"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_MafPcY6VEeS0D-EMhs8Yvw"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_46XuUJDPEeS-OrkE_s2uog" type="3007">
+          <element xmi:type="uml:Operation" href="MaintenanceClassDiagram.uml#_459eoJDPEeS-OrkE_s2uog"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_46XuUZDPEeS-OrkE_s2uog"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_zIMql3lFEeScv6HJEKdjpA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_zIMqmHlFEeScv6HJEKdjpA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_zIMqmXlFEeScv6HJEKdjpA"/>
