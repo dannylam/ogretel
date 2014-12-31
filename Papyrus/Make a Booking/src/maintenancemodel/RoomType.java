@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link maintenancemodel.RoomType#getDescription <em>Description</em>}</li>
  *   <li>{@link maintenancemodel.RoomType#getRoomTypeEnum <em>Room Type Enum</em>}</li>
  *   <li>{@link maintenancemodel.RoomType#getRoomTypeID <em>Room Type ID</em>}</li>
+ *   <li>{@link maintenancemodel.RoomType#getNrOfRooms <em>Nr Of Rooms</em>}</li>
  * </ul>
  * </p>
  *
@@ -170,5 +171,31 @@ public interface RoomType extends EObject {
 	 * @generated
 	 */
 	void setRoomTypeID(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Nr Of Rooms</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Nr Of Rooms</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Nr Of Rooms</em>' attribute.
+	 * @see #setNrOfRooms(int)
+	 * @see maintenancemodel.MaintenancemodelPackage#getRoomType_NrOfRooms()
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false"
+	 * @generated
+	 */
+	int getNrOfRooms();
+
+	/**
+	 * Sets the value of the '{@link maintenancemodel.RoomType#getNrOfRooms <em>Nr Of Rooms</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Nr Of Rooms</em>' attribute.
+	 * @see #getNrOfRooms()
+	 * @generated
+	 */
+	void setNrOfRooms(int value);
 
 } // RoomType
