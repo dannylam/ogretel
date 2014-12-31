@@ -114,13 +114,22 @@ public interface MaintenancemodelPackage extends EPackage {
 	int ROOM_TYPE__ROOM_TYPE_ID = 4;
 
 	/**
+	 * The feature id for the '<em><b>Nr Of Rooms</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPE__NR_OF_ROOMS = 5;
+
+	/**
 	 * The number of structural features of the '<em>Room Type</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE_FEATURE_COUNT = 5;
+	int ROOM_TYPE_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Room Type</em>' class.
@@ -919,13 +928,22 @@ public interface MaintenancemodelPackage extends EPackage {
 	int IMAINTENANCE_PROVIDES_FOR_BOOKING___GET_PRICE_EXTRA__ELIST = 5;
 
 	/**
+	 * The operation id for the '<em>Set Inactive</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMAINTENANCE_PROVIDES_FOR_BOOKING___SET_INACTIVE__INT = 6;
+
+	/**
 	 * The number of operations of the '<em>IMaintenance Provides For Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IMAINTENANCE_PROVIDES_FOR_BOOKING_OPERATION_COUNT = 6;
+	int IMAINTENANCE_PROVIDES_FOR_BOOKING_OPERATION_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link maintenancemodel.IRoomMaintenance <em>IRoom Maintenance</em>}' class.
@@ -1708,6 +1726,15 @@ public interface MaintenancemodelPackage extends EPackage {
 	int MAINTENANCE_PROVIDES_FOR_BOOKING___GET_PRICE_EXTRA__ELIST = IMAINTENANCE_PROVIDES_FOR_BOOKING___GET_PRICE_EXTRA__ELIST;
 
 	/**
+	 * The operation id for the '<em>Set Inactive</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAINTENANCE_PROVIDES_FOR_BOOKING___SET_INACTIVE__INT = IMAINTENANCE_PROVIDES_FOR_BOOKING___SET_INACTIVE__INT;
+
+	/**
 	 * The number of operations of the '<em>Maintenance Provides For Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1821,6 +1848,17 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRoomType_RoomTypeID();
+
+	/**
+	 * Returns the meta object for the attribute '{@link maintenancemodel.RoomType#getNrOfRooms <em>Nr Of Rooms</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Nr Of Rooms</em>'.
+	 * @see maintenancemodel.RoomType#getNrOfRooms()
+	 * @see #getRoomType()
+	 * @generated
+	 */
+	EAttribute getRoomType_NrOfRooms();
 
 	/**
 	 * Returns the meta object for class '{@link maintenancemodel.Experience <em>Experience</em>}'.
@@ -2485,6 +2523,16 @@ public interface MaintenancemodelPackage extends EPackage {
 	EOperation getIMaintenanceProvidesForBooking__GetPriceExtra__EList();
 
 	/**
+	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#setInactive(int) <em>Set Inactive</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Set Inactive</em>' operation.
+	 * @see maintenancemodel.IMaintenanceProvidesForBooking#setInactive(int)
+	 * @generated
+	 */
+	EOperation getIMaintenanceProvidesForBooking__SetInactive__int();
+
+	/**
 	 * Returns the meta object for class '{@link maintenancemodel.IRoomMaintenance <em>IRoom Maintenance</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2943,6 +2991,14 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ROOM_TYPE__ROOM_TYPE_ID = eINSTANCE.getRoomType_RoomTypeID();
+
+		/**
+		 * The meta object literal for the '<em><b>Nr Of Rooms</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROOM_TYPE__NR_OF_ROOMS = eINSTANCE.getRoomType_NrOfRooms();
 
 		/**
 		 * The meta object literal for the '{@link maintenancemodel.impl.ExperienceImpl <em>Experience</em>}' class.
@@ -3475,6 +3531,14 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IMAINTENANCE_PROVIDES_FOR_BOOKING___GET_PRICE_EXTRA__ELIST = eINSTANCE.getIMaintenanceProvidesForBooking__GetPriceExtra__EList();
+
+		/**
+		 * The meta object literal for the '<em><b>Set Inactive</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IMAINTENANCE_PROVIDES_FOR_BOOKING___SET_INACTIVE__INT = eINSTANCE.getIMaintenanceProvidesForBooking__SetInactive__int();
 
 		/**
 		 * The meta object literal for the '{@link maintenancemodel.IRoomMaintenance <em>IRoom Maintenance</em>}' class.
