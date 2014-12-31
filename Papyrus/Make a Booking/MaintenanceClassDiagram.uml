@@ -407,9 +407,6 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_KzjB5IREEeSbvJ56HGFnrw" name="description">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QGaz4JAwEeSDD5PQGfw72g" name="nrOfRooms">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_FNRX0IdjEeS_DZIcq0Rfuw" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
