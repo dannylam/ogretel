@@ -157,6 +157,12 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case BookingmodelPackage.ROOM_ID_TO_BOOKING_REF_ENTRY: {
+				@SuppressWarnings("unchecked") Map.Entry<Integer, String> roomIDToBookingRefEntry = (Map.Entry<Integer, String>)theEObject;
+				T result = caseRoomIDToBookingRefEntry(roomIDToBookingRefEntry);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -368,6 +374,21 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseBookingProvides(BookingProvides object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Room ID To Booking Ref Entry</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Room ID To Booking Ref Entry</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRoomIDToBookingRefEntry(Map.Entry<Integer, String> object) {
 		return null;
 	}
 
