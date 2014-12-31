@@ -321,10 +321,10 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int editRoomType(String roomTypeID, String roomTypeEnum, int price,
 			int maxNrOfGuests, String description) {
-		if (!this.roomTypes.exists(roomTypeID)) {
+		if (roomTypeID == null || !this.roomTypes.exists(roomTypeID)) {
 			return 1;
 		}
-		if (!this.getRoomTypeEnums().contains(roomTypeEnum)) {
+		if (roomTypeEnum == null || !this.getRoomTypeEnums().contains(roomTypeEnum)) {
 			return 2;
 		}
 		if (price < 0) {
@@ -338,11 +338,10 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 		rt.setRoomTypeEnum(RoomTypeEnum.valueOf(roomTypeEnum));
 		rt.setPrice(price);
 		rt.setMaxNrOfGuests(maxNrOfGuests);
+		
 		if (description != null) {
 			rt.setDescription(description);
 		}
-
-		// TODO implement
 
 		return 0;
 	}
