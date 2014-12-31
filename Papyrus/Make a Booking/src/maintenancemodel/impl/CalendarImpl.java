@@ -42,12 +42,6 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	protected EMap<String, EList<Integer>> stringToListsMap;
 
 	/**
-	 * Max amount of Rooms that can be available a day.
-	 * @generated NOT
-	 */
-	protected static final Integer MAX_CAPACITY = 725;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -160,7 +154,7 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 		EList<Integer> capacities = this.getStringToListsMap().get(roomType);
 		Integer cap = capacities.get(start);
 
-		//Get the capacity of the day with the lowest capacity:
+		//Get the capacity of the day with the lowest capacity
 		for(int day=start; day<=end; day++){
 			if(capacities.get(day) < cap){
 				cap = capacities.get(day);
@@ -206,7 +200,6 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 			return 1;
 		}
 		return 1;
-
 		// TODO: test
 	}
 

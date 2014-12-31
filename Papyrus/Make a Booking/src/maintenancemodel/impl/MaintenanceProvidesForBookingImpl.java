@@ -3,6 +3,9 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import maintenancemodel.Calendar;
 import maintenancemodel.ExtraHandler;
@@ -13,12 +16,9 @@ import maintenancemodel.RoomTypesHandler;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -272,6 +272,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Check if it is possible to book the requested roomtypes for the requested interval.
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -279,8 +280,23 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 
 		//For all requested roomtypes
 		for(String id : roomTypeIDs){
-				
-			//For all those roomtypes list of 
+			
+			int amount = 1;
+			//Check how many of this type
+			for(String id2 : roomTypeIDs){
+				if(id2.equals(id)){
+					amount++;
+				}
+			}
+			
+			//Convert start & end to ints
+			DateFormat dateFormat = new SimpleDateFormat("yyMMdd");
+			Date date = new Date();
+			System.out.println(dateFormat.format(date));
+	
+			//Get cap
+			
+			//Check if cap is lower/same as the length of the list of
 			
 		}
 		return false;
