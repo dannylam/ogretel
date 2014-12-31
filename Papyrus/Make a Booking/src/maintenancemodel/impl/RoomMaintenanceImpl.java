@@ -345,9 +345,8 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 		rt.setMaxNrOfGuests(maxNrOfGuests);
 		rt.setDescription(description);
 		
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return 0;
+		//TODO test
 	}
 
 	/**
