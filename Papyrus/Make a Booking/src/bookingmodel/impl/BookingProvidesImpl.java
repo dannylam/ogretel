@@ -184,14 +184,23 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	/*
 	 * THIS IS WRONG. IT SHOULD TAKE IN A BOOKINGREFERENCE AND ROOMSTYPE. NATTI
+	 * Its now corrected!
 	 */
-	public int checkIn(int roomID, String guestEmail) {
+	
+	public int checkIn(String bookingRef, String roomsType, String guestEmail) {
 		int result = 0;
-		Booking booking = this.getBookingHandler().getBooking(roomID);
+		Booking booking = this.getBookingHandler().getBooking(bookingRef);
 			if(this.getBookingHandler().exists(booking.getBookingRef())){
+			//	if(this.getBookingHandler().exists(bookingRef)){  //Not sure about this though
+				
 			//get the rooms from maintenance
+			int roomID= maintenanceComponent.setActive(bookingRef);
+			
 			//add the room 
 			booking.setResponsibleGuest(roomID, guestEmail);
+			
+				
+			
 		} else {
 			result = -1;
 		}
