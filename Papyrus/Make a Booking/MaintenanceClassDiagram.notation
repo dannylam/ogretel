@@ -255,6 +255,14 @@
           <element xmi:type="uml:Operation" href="MaintenanceClassDiagram.uml#_Aw5xYHlFEeScv6HJEKdjpA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_AxBtMXlFEeScv6HJEKdjpA"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_wvXiIJDXEeS-OrkE_s2uog" type="3013">
+          <element xmi:type="uml:Operation" href="MaintenanceClassDiagram.uml#_wvUe0JDXEeS-OrkE_s2uog"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_wvXiIZDXEeS-OrkE_s2uog"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_8C_ygJDXEeS-OrkE_s2uog" type="3013">
+          <element xmi:type="uml:Operation" href="MaintenanceClassDiagram.uml#_8C7hEJDXEeS-OrkE_s2uog"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_8C_ygZDXEeS-OrkE_s2uog"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_k4-BN3lEEeScv6HJEKdjpA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_k4-BOHlEEeScv6HJEKdjpA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_k4-BOXlEEeScv6HJEKdjpA"/>
