@@ -97,6 +97,9 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testSetPaymentMethod() {
+		testBook();			// antag att det finns en bokningsreferens redan
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		
 		String method = "VOUCHER";
 		int setPM = bp.setPaymentMethod(method, bookingRef);
 		
@@ -109,6 +112,21 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testSetPaymentDetails() {
+		testBook();			
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		
+		String ccNumber = "5545 0111 1337 4242 6666";
+		String ccv = "112";
+		int expiryMonth = 06;
+		int expiryYear = 18;
+		String firstName = "Mr";
+		String lastName =  "Grischa";
+		String customerEmail = "grischa@group4.se";
+		
+		int setPD = bp.setPaymentDetails(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, customerEmail, bookingRef);
+	
+		assertTrue(setPD == 0);
+		
 		fail("Not yet implemented");
 	}
 
