@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Hotelsystem/src" modelPluginID="Hotelsystem" modelName="Bookingmodel"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>bookingmodel.ecore</foreignModel>
+  <genPackages prefix="Bookingmodel" disposableProviderFactory="true" ecorePackage="bookingmodel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bookingmodel.ecore#//GuestTypes">
+      <genEnumLiterals ecoreEnumLiteral="bookingmodel.ecore#//GuestTypes/Regular"/>
+      <genEnumLiterals ecoreEnumLiteral="bookingmodel.ecore#//GuestTypes/BlackListed"/>
+      <genEnumLiterals ecoreEnumLiteral="bookingmodel.ecore#//GuestTypes/VIP"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="bookingmodel.ecore#//PaymentMethod">
+      <genEnumLiterals ecoreEnumLiteral="bookingmodel.ecore#//PaymentMethod/bankcard"/>
+      <genEnumLiterals ecoreEnumLiteral="bookingmodel.ecore#//PaymentMethod/cash"/>
+      <genEnumLiterals ecoreEnumLiteral="bookingmodel.ecore#//PaymentMethod/voucher"/>
+    </genEnums>
+    <genClasses ecoreClass="bookingmodel.ecore#//RoomtypeToGuestIDEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//RoomtypeToGuestIDEntry/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//RoomtypeToGuestIDEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="bookingmodel.ecore#//NrToRoomEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//NrToRoomEntry/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//NrToRoomEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="bookingmodel.ecore#//BookingRefToBookingEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//BookingRefToBookingEntry/key"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bookingmodel.ecore#//BookingRefToBookingEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="bookingmodel.ecore#//Booking">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//Booking/bookingRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//Booking/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//Booking/nrOfNights"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//Booking/serviceNotes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//Booking/nrOfGuests"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bookingmodel.ecore#//Booking/customer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bookingmodel.ecore#//Booking/guestList"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//Booking/isPayed"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bookingmodel.ecore#//Booking/roomGuestMap"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bookingmodel.ecore#//Booking/roomTypeMap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//Booking/paymentMethod"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bookingmodel.ecore#//Booking/extraIsPayedMap"/>
+      <genOperations ecoreOperation="bookingmodel.ecore#//Booking/checkedInAllGuest"/>
+      <genOperations ecoreOperation="bookingmodel.ecore#//Booking/checkedInAGuest"/>
+      <genOperations ecoreOperation="bookingmodel.ecore#//Booking/setResponsibleGuest">
+        <genParameters ecoreParameter="bookingmodel.ecore#//Booking/setResponsibleGuest/room"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//Booking/setResponsibleGuest/guestEmail"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//Booking/getNrOfRooms"/>
+      <genOperations ecoreOperation="bookingmodel.ecore#//Booking/setExtras">
+        <genParameters ecoreParameter="bookingmodel.ecore#//Booking/setExtras/extras"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//Booking/setRoomTypes">
+        <genParameters ecoreParameter="bookingmodel.ecore#//Booking/setRoomTypes/extras"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="bookingmodel.ecore#//Customer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bookingmodel.ecore#//Customer/paymentDetails"/>
+    </genClasses>
+    <genClasses ecoreClass="bookingmodel.ecore#//PaymentDetails">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//PaymentDetails/ccNr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//PaymentDetails/ccV"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//PaymentDetails/expMonth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//PaymentDetails/expYear"/>
+    </genClasses>
+    <genClasses ecoreClass="bookingmodel.ecore#//Guest">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//Guest/roomNr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//Guest/guestTypes"/>
+    </genClasses>
+    <genClasses ecoreClass="bookingmodel.ecore#//ExtraToIsPayedEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//ExtraToIsPayedEntry/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//ExtraToIsPayedEntry/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="bookingmodel.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//Person/firstName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//Person/lastName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//Person/email"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//Person/telephoneNr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute bookingmodel.ecore#//Person/Address"/>
+    </genClasses>
+    <genClasses ecoreClass="bookingmodel.ecore#//BookingHandler">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference bookingmodel.ecore#//BookingHandler/bookingsMap"/>
+      <genOperations ecoreOperation="bookingmodel.ecore#//BookingHandler/exists">
+        <genParameters ecoreParameter="bookingmodel.ecore#//BookingHandler/exists/bookingRef"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//BookingHandler/addBooking">
+        <genParameters ecoreParameter="bookingmodel.ecore#//BookingHandler/addBooking/booking"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//BookingHandler/removeBooking">
+        <genParameters ecoreParameter="bookingmodel.ecore#//BookingHandler/removeBooking/bookingRef"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//BookingHandler/getBooking">
+        <genParameters ecoreParameter="bookingmodel.ecore#//BookingHandler/getBooking/bookingRef"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//BookingHandler/editBooking">
+        <genParameters ecoreParameter="bookingmodel.ecore#//BookingHandler/editBooking/bookingRef"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//BookingHandler/editBooking/startDate"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//BookingHandler/editBooking/endDate"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//BookingHandler/editBooking/nrOfGuests"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//BookingHandler/editBooking/roomTypes"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//BookingHandler/editBooking/extras"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="bookingmodel.ecore#//IBookingProvidesForHost">
+      <genOperations ecoreOperation="bookingmodel.ecore#//IBookingProvidesForHost/enableSelfManagement"/>
+      <genOperations ecoreOperation="bookingmodel.ecore#//IBookingProvidesForHost/addServiceNote">
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForHost/addServiceNote/serviceNote"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//IBookingProvidesForHost/editServiceNote">
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForHost/editServiceNote/oldServiceNote"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForHost/editServiceNote/newServiceNote"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//IBookingProvidesForHost/removeServiceNote">
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForHost/removeServiceNote/serviceNote"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//IBookingProvidesForHost/getServiceNotes">
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForHost/getServiceNotes/bookingRef"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="bookingmodel.ecore#//IBookingProvidesForCustomer">
+      <genOperations ecoreOperation="bookingmodel.ecore#//IBookingProvidesForCustomer/getBooking">
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/getBooking/bookingRef"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//IBookingProvidesForCustomer/pay">
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/pay/bookingRef"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//IBookingProvidesForCustomer/getPrice">
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/getPrice/bookingRef"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//IBookingProvidesForCustomer/removeBooking">
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/removeBooking/bookingRef"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//IBookingProvidesForCustomer/editBooking">
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/editBooking/bookingRef"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/editBooking/startDate"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/editBooking/endDate"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/editBooking/nrOfGuests"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/editBooking/roomTypes"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/editBooking/extras"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//IBookingProvidesForCustomer/choosePaymentMethod">
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/choosePaymentMethod/method"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//IBookingProvidesForCustomer/setPaymentDetails">
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/setPaymentDetails/ccNumber"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/setPaymentDetails/ccv"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/setPaymentDetails/expiryMonth"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/setPaymentDetails/expiryYear"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/setPaymentDetails/firstName"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/setPaymentDetails/lastName"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//IBookingProvidesForCustomer/setPersonalDetails">
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/setPersonalDetails/firstName"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/setPersonalDetails/lastName"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/setPersonalDetails/age"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/setPersonalDetails/email"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//IBookingProvidesForCustomer/setCustomerToBooking">
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/setCustomerToBooking/customerEmail"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/setCustomerToBooking/bookingRef"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//IBookingProvidesForCustomer/book">
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/book/startDate"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/book/endDate"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/book/nrOfGuests"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/book/roomTypes"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/book/extras"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="bookingmodel.ecore#//IBookingProvidesForGuest">
+      <genOperations ecoreOperation="bookingmodel.ecore#//IBookingProvidesForGuest/checkIn">
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/checkIn/bookingRef"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/checkIn/guestEmail"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//IBookingProvidesForGuest/checkOut">
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/checkOut/bookingRef"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/checkOut/guestEmail"/>
+      </genOperations>
+      <genOperations ecoreOperation="bookingmodel.ecore#//IBookingProvidesForGuest/pay">
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/pay/ccNumber"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/pay/ccv"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/pay/expMonth"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/pay/expYear"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/pay/firstName"/>
+        <genParameters ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/pay/lastName"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="bookingmodel.ecore#//BookingProvides">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference bookingmodel.ecore#//BookingProvides/bookingHandler"/>
+      <genOperations ecoreOperation="bookingmodel.ecore#//BookingProvides/stringToList">
+        <genParameters ecoreParameter="bookingmodel.ecore#//BookingProvides/stringToList/text"/>
+      </genOperations>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Types" disposableProviderFactory="true" ecorePackage="types.ecore#/">
+    <genDataTypes ecoreDataType="types.ecore#//Boolean"/>
+    <genDataTypes ecoreDataType="types.ecore#//Integer"/>
+    <genDataTypes ecoreDataType="types.ecore#//Real"/>
+    <genDataTypes ecoreDataType="types.ecore#//UnlimitedNatural"/>
+    <genDataTypes ecoreDataType="types.ecore#//String"/>
+  </genPackages>
+</genmodel:GenModel>
