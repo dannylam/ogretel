@@ -34,7 +34,14 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testCheckIn() {
+		//bara koperat från annat test
+		testBook();
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		int CI = bp.editBooking(bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras);
 		
+		assertTrue(CI == 0);
+		
+		fail("Not yet implemented");
 		fail("Not yet implemented");
 	}
 
