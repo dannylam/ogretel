@@ -182,6 +182,9 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @inheritDoc
 	 * @generated NOT
 	 */
+	/*
+	 * THIS IS WRONG. IT SHOULD TAKE IN A BOOKINGREFERENCE AND ROOMSTYPE. NATTI
+	 */
 	public int checkIn(int roomID, String guestEmail) {
 		int result = 0;
 		Booking booking = this.getBookingHandler().getBooking(roomID);
