@@ -344,9 +344,13 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 		rt.setPrice(price);
 		rt.setMaxNrOfGuests(maxNrOfGuests);
 		rt.setDescription(description);
+		int oldNr = rt.getNrOfRooms();
+		this.roomTypes.getCalendar().setCap(0, 365, roomTypeID, (nrOfRooms - oldNr));
+		rt.setNrOfRooms(nrOfRooms);
+
+		//TODO implement
 		
 		return 0;
-		//TODO test
 	}
 
 	/**

@@ -187,12 +187,14 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 */
 	public RoomTypeImpl(String roomTypeID, String roomTypeEnum, int price,
 			int maxNrOfGuests, String description) {
-		
+		this();
+				
 		this.ID = roomTypeID;
 		this.roomTypeEnum = this.stringToRoomTypeEnum(roomTypeEnum);
 		this.price = price;
 		this.maxNrOfGuests = maxNrOfGuests;
 		this.description = description;
+		this.nrOfRooms = 0;
 
 		// TODO Auto-generated constructor stub
 	}
