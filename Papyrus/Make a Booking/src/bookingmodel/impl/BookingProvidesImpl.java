@@ -179,14 +179,20 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @inheritDoc
+	 * @generated NOT
 	 */
 	public int checkIn(int roomID, String guestEmail) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		int result = 0;
+		Booking booking = this.getBookingHandler().getBooking(roomID);
+			if(this.getBookingHandler().exists(booking.getBookingRef())){
+			//get the rooms from maintenance
+			//add the room 
+			booking.setResponsibleGuest(roomID, guestEmail);
+		} else {
+			result = -1;
+		}
+		return result;
 	}
 
 
@@ -196,6 +202,15 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public int checkOut(int roomID, String guestEmail) {
+		int result = 0;
+		Booking booking = this.getBookingHandler().getBooking(roomID);
+		if(this.getBookingHandler().exists(booking.getBookingRef())){
+			booking.removeResponsibleGuest(roomID, guestEmail);
+			//Set the roomID as available in maintenance
+		} else {
+			result = -1;
+		}
+		
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -203,14 +218,11 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * @inheritDoc
+	 * @generated NOT
 	 */
 	public int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, List<String> extra) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return this.pay(ccNumber, ccv, expMonth, expYear, firstName, lastName, this.maintenanceComponent.getPriceExtra((EList<String>) extra));
 	}
 
 	
