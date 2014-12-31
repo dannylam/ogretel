@@ -753,7 +753,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_W_jeEoXsEeSU1psjCnSubg" value="*"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_M0kbUIXtEeSU1psjCnSubg" name="StringToRoomType">
+    <packagedElement xmi:type="uml:Class" xmi:id="_M0kbUIXtEeSU1psjCnSubg" name="StringToRoomTypeMap">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_MFom0IXvEeSU1psjCnSubg" name="key">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>

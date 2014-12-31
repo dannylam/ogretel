@@ -2,6 +2,8 @@
  */
 package bookingmodel;
 
+import java.util.List;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -13,31 +15,31 @@ import org.eclipse.emf.ecore.EObject;
  * 
  * @see bookingmodel.BookingmodelPackage#getIBookingProvidesForGuest()
  * @model interface="true" abstract="true"
- * @generated NOT
+ * @generated 
  */
 public interface IBookingProvidesForGuest extends EObject {
 	/**
-	 * Checks in a guest/booking reference.
-	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
+	 * Checks in a room and sets the guest as responsible.
+	 * @model dataType="types.Integer" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated NOT
 	 */
-	int checkIn(String bookingRef, String guestEmail);
+	int checkIn(int roomID, String guestEmail);
 
 	/**
-	 * Checks out a guest/booking reference.
-	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
+	 * Checks out a room and removes the responsible guest
+	 * @model dataType="types.Integer" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated NOT
 	 */
-	int checkOut(String bookingRef, String guestEmail);
+	int checkOut(int roomID, String guestEmail);
 
 	/**
 	 * Make a payment by inserting credit card number, 
 	 * card code verification, expiration month, expiration year,
 	 * first name and last name.
 	 * @param ccNr, ccV, expMonth, expYear, firstName, lastName
-	 * @model dataType="types.Integer" required="true" ordered="false" ccNumberDataType="types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="types.String" ccvRequired="true" ccvOrdered="false" expMonthDataType="types.Integer" expMonthRequired="true" expMonthOrdered="false" expYearDataType="types.Integer" expYearRequired="true" expYearOrdered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false"
+	 * @model dataType="types.Integer" required="true" ordered="false" ccNumberDataType="types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="types.String" ccvRequired="true" ccvOrdered="false" expMonthDataType="types.Integer" expMonthRequired="true" expMonthOrdered="false" expYearDataType="types.Integer" expYearRequired="true" expYearOrdered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false" extraRequired="true" extraMany="false" extraOrdered="false"
 	 * @generated NOT
 	 */
-	int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName);
+	int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, List<String> extra);
 
 } // IBookingProvidesForGuest

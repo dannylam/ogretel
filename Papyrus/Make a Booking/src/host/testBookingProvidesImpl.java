@@ -75,6 +75,15 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testRemoveBooking() {
+		testBook();
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		
+		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
+		
+		int rmB = bp.removeBooking(bookingRef);
+		assertTrue(rmB == 0);
+		assertTrue(!(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef)));
+		
 		fail("Not yet implemented");
 	}
 
@@ -83,6 +92,8 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testEditBooking() {
+		testBook();
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
 		int edBP = bp.editBooking(bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras);
 		
 		assertTrue(edBP == 0);
@@ -95,6 +106,13 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testSetPaymentMethod() {
+		testBook();			// antag att det finns en bokningsreferens redan
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		
+		String method = "VOUCHER";
+		int setPM = bp.setPaymentMethod(method, bookingRef);
+		
+		assertTrue(setPM == 0);
 		fail("Not yet implemented");
 	}
 
@@ -103,6 +121,21 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testSetPaymentDetails() {
+		testBook();			
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		
+		String ccNumber = "5545 0111 1337 4242 6666";
+		String ccv = "112";
+		int expiryMonth = 06;
+		int expiryYear = 18;
+		String firstName = "Mr";
+		String lastName =  "Grischa";
+		String customerEmail = "grischa@group4.se";
+		
+		int setPaD = bp.setPaymentDetails(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, customerEmail, bookingRef);
+	
+		assertTrue(setPaD == 0);
+		
 		fail("Not yet implemented");
 	}
 
@@ -111,6 +144,19 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testSetPersonalDetails() {
+		testBook();			
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		
+		String firstName = "Mr";
+		String lastName =  "Grischa";
+		int age = 30; 
+		String customerEmail = "grischa@group4.se";
+		
+		//NOTE: i BookingProvidesImpl heter det email och inte customerEmail.
+		int setPeD = bp.setPersonalDetails(firstName, lastName, age, customerEmail, bookingRef);
+		
+		assertTrue(setPeD == 0);
+		
 		fail("Not yet implemented");
 	}
 
@@ -119,8 +165,8 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testBook() {
+		assertTrue(bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
 		
-	
 		fail("Not yet implemented");
 	}
 

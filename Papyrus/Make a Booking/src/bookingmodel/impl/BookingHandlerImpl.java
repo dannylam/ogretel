@@ -43,6 +43,16 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	protected EMap<String, Booking> bookingsMap;
 
 	/**
+	 * The cached value of the '{@link #getRoomIDToBookingRefMap() <em>Room ID To Booking Ref Map</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoomIDToBookingRefMap()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<Integer, String> roomIDToBookingRefMap;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -74,12 +84,23 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EMap<Integer, String> getRoomIDToBookingRefMap() {
+		if (roomIDToBookingRefMap == null) {
+			roomIDToBookingRefMap = new EcoreEMap<Integer,String>(BookingmodelPackage.Literals.ROOM_ID_TO_BOOKING_REF_ENTRY, RoomIDToBookingRefEntryImpl.class, this, BookingmodelPackage.BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP);
+		}
+		return roomIDToBookingRefMap;
+	}
+
+	/**
 	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public boolean exists(String bookingRef) {
 		return this.bookingsMap.containsKey(bookingRef);
-		//TODO:check if correct
 	}
 
 	/**
@@ -88,8 +109,11 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public int addBooking(Booking booking) {
 		int result = 0;
-		this.bookingsMap.put(booking.getBookingRef(), booking);
-		//TODO: check other cases
+		if(!this.bookingsMap.equals(null)){
+			this.bookingsMap.put(booking.getBookingRef(), booking);
+		} else {
+			result = -1;
+		}
 		return result;
 	}
 
@@ -101,8 +125,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		int result = 0;
 		if(this.exists(bookingRef)){
 			this.bookingsMap.remove(getBooking(bookingRef));
-		}	
-		//TODO: check other cases
+		} else {
+			result = -1;
+		}
 		return result;
 	}
 
@@ -114,6 +139,13 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		return this.bookingsMap.get(bookingRef);
 	}
 
+	/**
+	 * @inheritDoc
+	 * @generated NOT
+	 */
+	public Booking getBooking(int roomID) {
+		return this.getBooking(this.roomIDToBookingRefMap.get(roomID).getValue());
+	}
 
 	/**
 	 * @inheritDoc
@@ -122,14 +154,14 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras) {
 		int result = 0;
-		
 			if(this.exists(bookingRef)){
 				this.getBooking(bookingRef).setStartDate(startDate);
 				this.getBooking(bookingRef).setEndDate(endDate);
 				this.getBooking(bookingRef).setNrOfGuests(nrOfGuests);
 				this.getBooking(bookingRef).setRoomTypes(roomTypes);
 				this.getBooking(bookingRef).setExtras(extras);
-				//TODO: check other cases
+			} else {
+				result = -1;
 			}
 		return result;
 	}
@@ -144,6 +176,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case BookingmodelPackage.BOOKING_HANDLER__BOOKINGS_MAP:
 				return ((InternalEList<?>)getBookingsMap()).basicRemove(otherEnd, msgs);
+			case BookingmodelPackage.BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP:
+				return ((InternalEList<?>)getRoomIDToBookingRefMap()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -159,6 +193,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			case BookingmodelPackage.BOOKING_HANDLER__BOOKINGS_MAP:
 				if (coreType) return getBookingsMap();
 				else return getBookingsMap().map();
+			case BookingmodelPackage.BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP:
+				if (coreType) return getRoomIDToBookingRefMap();
+				else return getRoomIDToBookingRefMap().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -173,6 +210,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case BookingmodelPackage.BOOKING_HANDLER__BOOKINGS_MAP:
 				((EStructuralFeature.Setting)getBookingsMap()).set(newValue);
+				return;
+			case BookingmodelPackage.BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP:
+				((EStructuralFeature.Setting)getRoomIDToBookingRefMap()).set(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -189,6 +229,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			case BookingmodelPackage.BOOKING_HANDLER__BOOKINGS_MAP:
 				getBookingsMap().clear();
 				return;
+			case BookingmodelPackage.BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP:
+				getRoomIDToBookingRefMap().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -203,6 +246,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case BookingmodelPackage.BOOKING_HANDLER__BOOKINGS_MAP:
 				return bookingsMap != null && !bookingsMap.isEmpty();
+			case BookingmodelPackage.BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP:
+				return roomIDToBookingRefMap != null && !roomIDToBookingRefMap.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -226,6 +271,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return getBooking((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_HANDLER___EDIT_BOOKING__STRING_STRING_STRING_INT_ELIST_ELIST:
 				return editBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (List<String>)arguments.get(4), (List<String>)arguments.get(5));
+			case BookingmodelPackage.BOOKING_HANDLER___GET_BOOKING__INT:
+				return getBooking((Integer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -134,7 +134,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass stringToRoomTypeEClass = null;
+	private EClass stringToRoomTypeMapEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -777,7 +777,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRoomTypesHandler__GetCalendar__Calendar() {
+	public EOperation getRoomTypesHandler__GetCalendar() {
 		return roomTypesHandlerEClass.getEOperations().get(6);
 	}
 
@@ -786,8 +786,8 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getStringToRoomType() {
-		return stringToRoomTypeEClass;
+	public EClass getStringToRoomTypeMap() {
+		return stringToRoomTypeMapEClass;
 	}
 
 	/**
@@ -795,8 +795,8 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getStringToRoomType_Key() {
-		return (EAttribute)stringToRoomTypeEClass.getEStructuralFeatures().get(0);
+	public EAttribute getStringToRoomTypeMap_Key() {
+		return (EAttribute)stringToRoomTypeMapEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -804,8 +804,8 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStringToRoomType_Value() {
-		return (EReference)stringToRoomTypeEClass.getEStructuralFeatures().get(1);
+	public EReference getStringToRoomTypeMap_Value() {
+		return (EReference)stringToRoomTypeMapEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1379,11 +1379,11 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___GET_PRICE__STRING);
 		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___GET_ROOM_TYPES);
 		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___GET_ROOM_TYPE__STRING);
-		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___GET_CALENDAR__CALENDAR);
+		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___GET_CALENDAR);
 
-		stringToRoomTypeEClass = createEClass(STRING_TO_ROOM_TYPE);
-		createEAttribute(stringToRoomTypeEClass, STRING_TO_ROOM_TYPE__KEY);
-		createEReference(stringToRoomTypeEClass, STRING_TO_ROOM_TYPE__VALUE);
+		stringToRoomTypeMapEClass = createEClass(STRING_TO_ROOM_TYPE_MAP);
+		createEAttribute(stringToRoomTypeMapEClass, STRING_TO_ROOM_TYPE_MAP__KEY);
+		createEReference(stringToRoomTypeMapEClass, STRING_TO_ROOM_TYPE_MAP__VALUE);
 
 		maintenanceProvidesForBookingEClass = createEClass(MAINTENANCE_PROVIDES_FOR_BOOKING);
 		createEReference(maintenanceProvidesForBookingEClass, MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR);
@@ -1647,7 +1647,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		initEReference(getRoomMaintenance_Rooms(), this.getRoomHandler(), null, "rooms", null, 1, 1, RoomMaintenance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(roomTypesHandlerEClass, RoomTypesHandler.class, "RoomTypesHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRoomTypesHandler_StringToRoomType(), this.getStringToRoomType(), null, "stringToRoomType", null, 0, -1, RoomTypesHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getRoomTypesHandler_StringToRoomType(), this.getStringToRoomTypeMap(), null, "stringToRoomType", null, 0, -1, RoomTypesHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		op = initEOperation(getRoomTypesHandler__Exists__String(), theTypesPackage.getBoolean(), "exists", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "ID", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1670,12 +1670,11 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		op = initEOperation(getRoomTypesHandler__GetRoomType__String(), this.getRoomType(), "getRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getRoomTypesHandler__GetCalendar__Calendar(), null, "getCalendar", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, this.getCalendar(), "calendar", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getRoomTypesHandler__GetCalendar(), this.getCalendar(), "getCalendar", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEClass(stringToRoomTypeEClass, Map.Entry.class, "StringToRoomType", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getStringToRoomType_Key(), ecorePackage.getEString(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getStringToRoomType_Value(), this.getRoomType(), null, "value", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEClass(stringToRoomTypeMapEClass, Map.Entry.class, "StringToRoomTypeMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStringToRoomTypeMap_Key(), ecorePackage.getEString(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getStringToRoomTypeMap_Value(), this.getRoomType(), null, "value", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(maintenanceProvidesForBookingEClass, MaintenanceProvidesForBooking.class, "MaintenanceProvidesForBooking", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMaintenanceProvidesForBooking_Calendar(), this.getCalendar(), null, "calendar", null, 1, 1, MaintenanceProvidesForBooking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

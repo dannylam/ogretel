@@ -4,6 +4,7 @@ package bookingmodel;
 
 import java.util.List;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 
@@ -25,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * 
  * @see bookingmodel.BookingmodelPackage#getBookingHandler()
  * @model
- * @generated NOT
+ * @generated 
  */
 public interface BookingHandler extends EObject {
 	 /**
@@ -39,6 +40,23 @@ public interface BookingHandler extends EObject {
 	 * @generated
 	 */
 	EMap<String, Booking> getBookingsMap();
+
+	/**
+	 * Returns the value of the '<em><b>Room ID To Booking Ref Map</b></em>' map.
+	 * The key is of type {@link java.lang.Integer},
+	 * and the value is of type {@link java.lang.String},
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Room ID To Booking Ref Map</em>' map isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Room ID To Booking Ref Map</em>' map.
+	 * @see bookingmodel.BookingmodelPackage#getBookingHandler_RoomIDToBookingRefMap()
+	 * @model mapType="bookingmodel.RoomIDToBookingRefEntry<org.eclipse.emf.ecore.EIntegerObject, org.eclipse.emf.ecore.EString>" ordered="false"
+	 * @generated
+	 */
+	EMap<Integer, String> getRoomIDToBookingRefMap();
 
 	/**
 	 * A method that checks if the booking reference exists
@@ -76,7 +94,7 @@ public interface BookingHandler extends EObject {
 	int removeBooking(String bookingRef);
 
 	/**
-	 * Gets a booking with a specific booking reference.
+	 * Returns a booking with a specific booking reference.
 	 * @param bookingRef
 	 * @return a booking
 	 * @model required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
@@ -85,17 +103,22 @@ public interface BookingHandler extends EObject {
 	Booking getBooking(String bookingRef);
 
 	/**
-	 * Edits a booking's, nr of nights, nr of guests, start of the date, 
-	 * end of the date, the type of the rooms and extras with the given booking reference.
+	 * Edits a booking with the specified parameters given.
 	 * The integer returned by the function indicates success or failure and reason for failure.
-	 * @param bookingRef, nrOfNights, nrOfGuests, startDate, endDate, roomTypes, extras
-	 *  //TODO
+	 * //TODO
 	 * @return  0 if success 
 	 * 			1 if ??
 	 * 			2 if ??
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesRequired="true" roomTypesMany="false" roomTypesOrdered="false" extrasMany="false" extrasOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras);
+
+	/**
+	 *  Returns the booking which a rooms is associated to if that room is already checked in.
+	 * @model required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
+	 * @generated NOT
+	 */
+	Booking getBooking(int roomID);
 
 } // BookingHandler

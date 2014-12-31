@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see bookingmodel.BookingmodelPackage#getIBookingProvidesForCustomer()
  * @model interface="true" abstract="true"
- * @generated NOT
+ * @generated 
  */
 public interface IBookingProvidesForCustomer extends EObject {
 	/**

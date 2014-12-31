@@ -286,14 +286,12 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomTypesHandler/getRoomType">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/getRoomType/roomTypeID"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomTypesHandler/getCalendar">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/getCalendar/calendar"/>
-      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomTypesHandler/getCalendar"/>
     </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//StringToRoomType">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//StringToRoomType/key"/>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//StringToRoomTypeMap">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//StringToRoomTypeMap/key"/>
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"
-          propertySortChoices="true" ecoreFeature="ecore:EReference maintenancemodel.ecore#//StringToRoomType/value"/>
+          propertySortChoices="true" ecoreFeature="ecore:EReference maintenancemodel.ecore#//StringToRoomTypeMap/value"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//MaintenanceProvidesForBooking">
       <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"

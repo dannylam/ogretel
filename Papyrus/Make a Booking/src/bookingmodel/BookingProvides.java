@@ -34,7 +34,7 @@ import java.util.List;
  *
  * @see bookingmodel.BookingmodelPackage#getBookingProvides()
  * @model
- * @generated NOT
+ * @generated 
  */
 public interface BookingProvides extends IBookingProvidesForCustomer, IBookingProvidesForGuest, IBookingProvidesForHost {
 	/**

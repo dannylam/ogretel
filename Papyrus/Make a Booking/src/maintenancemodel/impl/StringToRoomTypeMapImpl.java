@@ -3,7 +3,7 @@
 package maintenancemodel.impl;
 
 import maintenancemodel.MaintenancemodelPackage;
-import maintenancemodel.Room;
+import maintenancemodel.RoomType;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -19,19 +19,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Integer To Room Map</b></em>'.
+ * An implementation of the model object '<em><b>String To Room Type Map</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link maintenancemodel.impl.IntegerToRoomMapImpl#getTypedKey <em>Key</em>}</li>
- *   <li>{@link maintenancemodel.impl.IntegerToRoomMapImpl#getTypedValue <em>Value</em>}</li>
+ *   <li>{@link maintenancemodel.impl.StringToRoomTypeMapImpl#getTypedKey <em>Key</em>}</li>
+ *   <li>{@link maintenancemodel.impl.StringToRoomTypeMapImpl#getTypedValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<Integer,Room> {
+public class StringToRoomTypeMapImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String,RoomType> {
 	/**
 	 * The default value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Integer KEY_EDEFAULT = null;
+	protected static final String KEY_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
@@ -50,7 +50,7 @@ public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 * @ordered
 	 */
-	protected Integer key = KEY_EDEFAULT;
+	protected String key = KEY_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' reference.
@@ -60,14 +60,14 @@ public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 * @ordered
 	 */
-	protected Room value;
+	protected RoomType value;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IntegerToRoomMapImpl() {
+	protected StringToRoomTypeMapImpl() {
 		super();
 	}
 
@@ -78,7 +78,7 @@ public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implement
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MaintenancemodelPackage.Literals.INTEGER_TO_ROOM_MAP;
+		return MaintenancemodelPackage.Literals.STRING_TO_ROOM_TYPE_MAP;
 	}
 
 	/**
@@ -86,7 +86,7 @@ public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Integer getTypedKey() {
+	public String getTypedKey() {
 		return key;
 	}
 
@@ -95,11 +95,11 @@ public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTypedKey(Integer newKey) {
-		Integer oldKey = key;
+	public void setTypedKey(String newKey) {
+		String oldKey = key;
 		key = newKey;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.INTEGER_TO_ROOM_MAP__KEY, oldKey, key));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.STRING_TO_ROOM_TYPE_MAP__KEY, oldKey, key));
 	}
 
 	/**
@@ -107,13 +107,13 @@ public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Room getTypedValue() {
+	public RoomType getTypedValue() {
 		if (value != null && value.eIsProxy()) {
 			InternalEObject oldValue = (InternalEObject)value;
-			value = (Room)eResolveProxy(oldValue);
+			value = (RoomType)eResolveProxy(oldValue);
 			if (value != oldValue) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MaintenancemodelPackage.INTEGER_TO_ROOM_MAP__VALUE, oldValue, value));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MaintenancemodelPackage.STRING_TO_ROOM_TYPE_MAP__VALUE, oldValue, value));
 			}
 		}
 		return value;
@@ -124,7 +124,7 @@ public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Room basicGetTypedValue() {
+	public RoomType basicGetTypedValue() {
 		return value;
 	}
 
@@ -133,11 +133,11 @@ public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTypedValue(Room newValue) {
-		Room oldValue = value;
+	public void setTypedValue(RoomType newValue) {
+		RoomType oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.INTEGER_TO_ROOM_MAP__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.STRING_TO_ROOM_TYPE_MAP__VALUE, oldValue, value));
 	}
 
 	/**
@@ -148,9 +148,9 @@ public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MaintenancemodelPackage.INTEGER_TO_ROOM_MAP__KEY:
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE_MAP__KEY:
 				return getTypedKey();
-			case MaintenancemodelPackage.INTEGER_TO_ROOM_MAP__VALUE:
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE_MAP__VALUE:
 				if (resolve) return getTypedValue();
 				return basicGetTypedValue();
 		}
@@ -165,11 +165,11 @@ public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MaintenancemodelPackage.INTEGER_TO_ROOM_MAP__KEY:
-				setTypedKey((Integer)newValue);
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE_MAP__KEY:
+				setTypedKey((String)newValue);
 				return;
-			case MaintenancemodelPackage.INTEGER_TO_ROOM_MAP__VALUE:
-				setTypedValue((Room)newValue);
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE_MAP__VALUE:
+				setTypedValue((RoomType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -183,11 +183,11 @@ public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MaintenancemodelPackage.INTEGER_TO_ROOM_MAP__KEY:
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE_MAP__KEY:
 				setTypedKey(KEY_EDEFAULT);
 				return;
-			case MaintenancemodelPackage.INTEGER_TO_ROOM_MAP__VALUE:
-				setTypedValue((Room)null);
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE_MAP__VALUE:
+				setTypedValue((RoomType)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -201,9 +201,9 @@ public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MaintenancemodelPackage.INTEGER_TO_ROOM_MAP__KEY:
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE_MAP__KEY:
 				return KEY_EDEFAULT == null ? key != null : !KEY_EDEFAULT.equals(key);
-			case MaintenancemodelPackage.INTEGER_TO_ROOM_MAP__VALUE:
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE_MAP__VALUE:
 				return value != null;
 		}
 		return super.eIsSet(featureID);
@@ -259,7 +259,7 @@ public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Integer getKey() {
+	public String getKey() {
 		return getTypedKey();
 	}
 
@@ -268,7 +268,7 @@ public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setKey(Integer key) {
+	public void setKey(String key) {
 		setTypedKey(key);
 	}
 
@@ -277,7 +277,7 @@ public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Room getValue() {
+	public RoomType getValue() {
 		return getTypedValue();
 	}
 
@@ -286,8 +286,8 @@ public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Room setValue(Room value) {
-		Room oldValue = getValue();
+	public RoomType setValue(RoomType value) {
+		RoomType oldValue = getValue();
 		setTypedValue(value);
 		return oldValue;
 	}
@@ -298,9 +298,9 @@ public class IntegerToRoomMapImpl extends MinimalEObjectImpl.Container implement
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
-	public EMap<Integer, Room> getEMap() {
+	public EMap<String, RoomType> getEMap() {
 		EObject container = eContainer();
-		return container == null ? null : (EMap<Integer, Room>)container.eGet(eContainmentFeature());
+		return container == null ? null : (EMap<String, RoomType>)container.eGet(eContainmentFeature());
 	}
 
-} //IntegerToRoomMapImpl
+} //StringToRoomTypeMapImpl
