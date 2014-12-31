@@ -277,7 +277,10 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * @generated NOT
 	 */
 	public boolean canBook(EList<String> roomTypeIDs, String start, String end) {
-
+		
+		//THE DIFFERENT THINGS WILL BE REFACTORED INTO DIFFERENT METHODS
+		//DOING ONLY ONE THING ('N DOIN' IT WELL) AS APPROPRIATE.
+		
 		//For all requested roomtypes
 		for(String id : roomTypeIDs){
 			
@@ -290,9 +293,12 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 			}
 			
 			//Convert start & end to ints
+			//Curr date
 			DateFormat dateFormat = new SimpleDateFormat("yyMMdd");
-			Date date = new Date();
-			System.out.println(dateFormat.format(date));
+			String currDate = dateFormat.format(new Date());
+			
+			int startDays = this.getDaysBetween(currDate, start);
+			int endDays = this.getDaysBetween(currDate, end);
 	
 			//Get cap
 			
@@ -303,6 +309,23 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 		
 		// TODO test
 
+	}
+	
+	private Integer getDaysBetween(String date1, String date2){
+		//Get year, month, day & convert to ints
+		int year1 = Integer.parseInt(date1.substring(0, 2));
+		int month1 = Integer.parseInt(date1.substring(2, 4));
+		int day1 = Integer.parseInt(date1.substring(4, 6));
+		
+		int year2 = Integer.parseInt(date2.substring(0, 2));
+		int month2 = Integer.parseInt(date2.substring(2, 4));
+		int day2 = Integer.parseInt(date2.substring(4, 6));
+		
+		return 0;
+	}
+	
+	private boolean isDateValid(int year, int month, int day){
+		return false;
 	}
 
 	/**
