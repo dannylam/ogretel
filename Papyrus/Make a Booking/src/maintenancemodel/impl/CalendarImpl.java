@@ -215,6 +215,28 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int incCap(int start, int end, String roomType, int increment) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int decCap(int start, int end, String roomType, int decrement) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -295,6 +317,10 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 				return getCap((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2));
 			case MaintenancemodelPackage.CALENDAR___SET_CAP__INT_INT_STRING_INT:
 				return setCap((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
+			case MaintenancemodelPackage.CALENDAR___INC_CAP__INT_INT_STRING_INT:
+				return incCap((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
+			case MaintenancemodelPackage.CALENDAR___DEC_CAP__INT_INT_STRING_INT:
+				return decCap((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

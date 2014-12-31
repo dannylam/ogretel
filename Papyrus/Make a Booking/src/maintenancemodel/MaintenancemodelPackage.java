@@ -790,13 +790,31 @@ public interface MaintenancemodelPackage extends EPackage {
 	int CALENDAR___SET_CAP__INT_INT_STRING_INT = 1;
 
 	/**
+	 * The operation id for the '<em>Inc Cap</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALENDAR___INC_CAP__INT_INT_STRING_INT = 2;
+
+	/**
+	 * The operation id for the '<em>Dec Cap</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALENDAR___DEC_CAP__INT_INT_STRING_INT = 3;
+
+	/**
 	 * The number of operations of the '<em>Calendar</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALENDAR_OPERATION_COUNT = 2;
+	int CALENDAR_OPERATION_COUNT = 4;
 
 	/**
 	 * The meta object id for the '{@link maintenancemodel.impl.RoomTypesHandlerImpl <em>Room Types Handler</em>}' class.
@@ -2294,6 +2312,26 @@ public interface MaintenancemodelPackage extends EPackage {
 	EOperation getCalendar__SetCap__int_int_String_int();
 
 	/**
+	 * Returns the meta object for the '{@link maintenancemodel.Calendar#incCap(int, int, java.lang.String, int) <em>Inc Cap</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Inc Cap</em>' operation.
+	 * @see maintenancemodel.Calendar#incCap(int, int, java.lang.String, int)
+	 * @generated
+	 */
+	EOperation getCalendar__IncCap__int_int_String_int();
+
+	/**
+	 * Returns the meta object for the '{@link maintenancemodel.Calendar#decCap(int, int, java.lang.String, int) <em>Dec Cap</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Dec Cap</em>' operation.
+	 * @see maintenancemodel.Calendar#decCap(int, int, java.lang.String, int)
+	 * @generated
+	 */
+	EOperation getCalendar__DecCap__int_int_String_int();
+
+	/**
 	 * Returns the meta object for class '{@link maintenancemodel.RoomTypesHandler <em>Room Types Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3347,6 +3385,22 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation CALENDAR___SET_CAP__INT_INT_STRING_INT = eINSTANCE.getCalendar__SetCap__int_int_String_int();
+
+		/**
+		 * The meta object literal for the '<em><b>Inc Cap</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CALENDAR___INC_CAP__INT_INT_STRING_INT = eINSTANCE.getCalendar__IncCap__int_int_String_int();
+
+		/**
+		 * The meta object literal for the '<em><b>Dec Cap</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CALENDAR___DEC_CAP__INT_INT_STRING_INT = eINSTANCE.getCalendar__DecCap__int_int_String_int();
 
 		/**
 		 * The meta object literal for the '{@link maintenancemodel.impl.RoomTypesHandlerImpl <em>Room Types Handler</em>}' class.
