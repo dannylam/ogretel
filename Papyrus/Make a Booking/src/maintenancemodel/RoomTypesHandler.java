@@ -100,9 +100,9 @@ public interface RoomTypesHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
 	 */
-	String getRoomTypeEnums();
+	EList<String> getRoomTypeEnums();
 
 } // RoomTypesHandler

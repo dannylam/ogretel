@@ -5,6 +5,7 @@ package maintenancemodel.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 
+import maintenancemodel.Calendar;
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.Room;
 import maintenancemodel.RoomHandler;
@@ -217,13 +218,16 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 						.get(roomType));
 
 				// If 1st Room of RoomType, create new entry in Map in Calendar
-				if (!this.roomTypes.getCalendar().getStringToListsMap()
-						.containsKey(roomType)) {
-					this.roomTypes.getCalendar().getStringToListsMap()
-							.put(roomType, new BasicEList<Integer>(365));
+				Calendar cal = this.roomTypes.getCalendar();
+				if (!cal.getStringToListsMap().containsKey(roomType)) {
+					cal.getStringToListsMap().put(roomType,
+							new BasicEList<Integer>(365));
 				}
 
 				this.roomTypes.getCalendar().incCap(0, 365, roomType, 1);
+				
+				RoomType rt = this.roomTypes.getRoomType(roomType);
+				rt.setNrOfRooms(rt.getNrOfRooms() + 1);
 
 				return 0;
 			}
@@ -244,6 +248,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 		if (this.rooms.exists(roomID)) {
 			this.roomTypes.getCalendar().decCap(0, 365,
 					this.getRoomTypeID(roomID), 1);
+			RoomType rt = this.rooms.getRoom(roomID).getRoomType();
+			rt.setNrOfRooms(rt.getNrOfRooms() - 1);
+			
 			this.rooms.removeRoom(roomID);
 
 			return 0;
@@ -251,7 +258,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 		return 1;
 		// TODO test
 	}
-
+	
 	/**
 	 * {@inheritDoc}
 	 * 
@@ -261,8 +268,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 			int maxNrOfGuests, String description) {
 		return this.roomTypes.addRoomType(roomTypeID, roomTypeEnum, price,
 				maxNrOfGuests, description);
-
-		// TODO
 	}
 
 	/**
@@ -273,35 +278,10 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int removeRoomType(String roomType) {
 		return this.roomTypes.removeRoomType(roomType);
-		// TODO
 	}
 
 	/**
-	 * <!-- begin-user-doc --> Returns the RoomHandler. <!-- end-user-doc -->
-	 * 
-	 * @generated NOT
-	 */
-	public RoomHandler getRoomHandler() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		return this.rooms;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated NOT
-	 */
-	public RoomTypesHandler getRoomTypeHandler() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		return this.roomTypes;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} If 0 is returned everything went
-	 * fine If 1 is returned the status is not ok and nothing has been changed.
-	 * If 2 is returned the roomID does not exist. <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -461,7 +441,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public String getRoomTypeID(int roomID) {
-
 		if (this.rooms.exists(roomID)) {
 			return this.rooms.getRoom(roomID).getRoomType().getID();
 		}
@@ -482,12 +461,13 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getNrOfRoomsofType(String roomTypeID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (this.roomTypes.exists(roomTypeID)) {
+			return this.roomTypes.getRoomType(roomTypeID).getNrOfRooms();
+		}
+		return 1;
 	}
 
 	/**

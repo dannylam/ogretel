@@ -1737,7 +1737,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 
 		initEOperation(getRoomTypesHandler__GetCalendar(), this.getCalendar(), "getCalendar", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getRoomTypesHandler__GetRoomTypeEnums(), theTypesPackage.getString(), "getRoomTypeEnums", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getRoomTypesHandler__GetRoomTypeEnums(), theTypesPackage.getString(), "getRoomTypeEnums", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(stringToRoomTypeMapEClass, Map.Entry.class, "StringToRoomTypeMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStringToRoomTypeMap_Key(), ecorePackage.getEString(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
