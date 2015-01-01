@@ -15,8 +15,7 @@ import bookingmodel.impl.BookingHandlerImpl;
 import bookingmodel.impl.BookingProvidesImpl;
 
 /**
- * @author Paula
- *
+ * Testing the booking provides class.
  */
 public class testBookingProvidesImpl {
 	String bookingRef;
@@ -34,14 +33,9 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testCheckIn() {
-		//bara koperat från annat test
-		testBook();
-		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
-		int CI = bp.editBooking(bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras);
+		//checka in med bookingref, guestemail och roomstype.
+		//ej skapa bokning/edit
 		
-		assertTrue(CI == 0);
-		
-		fail("Not yet implemented");
 		fail("Not yet implemented");
 	}
 
