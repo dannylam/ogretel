@@ -193,9 +193,17 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 			// get a room from maintenance
 			int roomID = maintenanceComponent.setActive(roomsType);
 
-			// add the room
-			booking.setResponsibleGuest(roomID, guestEmail);
-
+			if(roomID != -1){
+				//add the room and the booking reference in the map of rooms and which bookingreference they belong to
+				this.bookingHandler.getRoomIDToBookingRefMap().put(roomID, bookingRef);
+			
+				// set the guest as responsible to the room
+				booking.setResponsibleGuest(roomID, guestEmail);
+				
+			} else {
+				result = 1;
+			}
+			
 		} else {
 			result = -1;
 		}

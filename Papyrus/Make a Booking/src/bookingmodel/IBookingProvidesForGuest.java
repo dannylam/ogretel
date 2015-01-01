@@ -21,6 +21,10 @@ import org.eclipse.emf.ecore.EObject;
 public interface IBookingProvidesForGuest extends EObject {
 	/**
 	 * Checks in a room of a booking and sets the guest as responsible by using their email.
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return	0 if success 
+	 * 			-1 if an the booking reference does not exist
+	 * 			1 if there are no rooms of the given roomtype vacant
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false" roomTypeDataType="types.String" roomTypeRequired="true" roomTypeOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated NOT
 	 */
