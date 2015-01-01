@@ -78,14 +78,14 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	/**
 	 * Returns true if there is a RoomType with the given String ID
 	 * 
-	 * @param ID
+	 * @param roomTypeID
 	 *            the RoomType ID to be checked if it exists
 	 * 
 	 * @generated NOT
 	 */
-	public boolean exists(String ID) {
+	public boolean exists(String roomTypeID) {
 
-		return this.getStringToRoomType().containsKey(ID);
+		return this.getStringToRoomType().containsKey(roomTypeID);
 		// TODO: TEST
 	}
 
@@ -122,12 +122,13 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getPrice(String roomTypeID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.exists(roomTypeID)){
+			return this.getRoomType(roomTypeID).getPrice();
+		}
+		return -1;
 	}
 
 	/**
@@ -159,11 +160,12 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public Calendar getCalendar() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
+		
 		throw new UnsupportedOperationException();
 	}
 
