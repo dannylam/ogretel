@@ -23,7 +23,13 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface IBookingProvidesForCustomer extends EObject {
 	/**
-	 * Pay the price of a specific booking.
+	 * Makes a payment for a specific booking
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return	0 if success 
+	 * 			1 if an error occurred
+	 * 			2 if the credit card is invalid
+	 * 			3 if not enough money on the card or invalid card
+	 * 			4 if the amount is invalid 
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */

@@ -37,6 +37,11 @@ public interface IBookingProvidesForGuest extends EObject {
 	 * Make a payment by inserting credit card number, 
 	 * card code verification, expiration month, expiration year,
 	 * first name and last name.
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return	0 if success 
+	 * 			1 if an error occurred
+	 * 			2 if the credit card is invalid
+	 * 			3 if not enough money on the card or invalid card
 	 * @param ccNr, ccV, expMonth, expYear, firstName, lastName
 	 * @model dataType="types.Integer" required="true" ordered="false" ccNumberDataType="types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="types.String" ccvRequired="true" ccvOrdered="false" expMonthDataType="types.Integer" expMonthRequired="true" expMonthOrdered="false" expYearDataType="types.Integer" expYearRequired="true" expYearOrdered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false" extraRequired="true" extraMany="false" extraOrdered="false"
 	 * @generated NOT
