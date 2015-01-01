@@ -51,6 +51,9 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @return
+	 * 0 if successful
+	 * -1 if roomTypeID is invalid
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
 	 * @generated

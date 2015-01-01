@@ -657,6 +657,8 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_b6aRUJHbEeSNJKY2RR7Z1w" name="getRoomTypeEnums">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_iC0aAJHbEeSNJKY2RR7Z1w" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_i9bKoJHnEeSNJKY2RR7Z1w"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_i9c_0JHnEeSNJKY2RR7Z1w" value="*"/>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>

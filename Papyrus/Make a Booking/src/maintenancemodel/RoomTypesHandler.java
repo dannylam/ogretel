@@ -43,10 +43,10 @@ public interface RoomTypesHandler extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" IDDataType="org.eclipse.uml2.types.String" IDRequired="true" IDOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
 	 * @generated
 	 */
-	boolean exists(String ID);
+	boolean exists(String roomTypeID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -79,7 +79,7 @@ public interface RoomTypesHandler extends EObject {
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
 	 */
-	EList<String> getRoomTypes();
+	EList<String> getRoomTypeIDs();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -96,5 +96,13 @@ public interface RoomTypesHandler extends EObject {
 	 * @generated
 	 */
 	Calendar getCalendar();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
+	 * @generated
+	 */
+	String getRoomTypeEnums();
 
 } // RoomTypesHandler

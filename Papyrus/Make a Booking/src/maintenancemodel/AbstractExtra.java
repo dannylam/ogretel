@@ -34,7 +34,7 @@ public interface AbstractExtra extends Extra {
 	 * @return the value of the '<em>ID</em>' attribute.
 	 * @see #setID(String)
 	 * @see maintenancemodel.MaintenancemodelPackage#getAbstractExtra_ID()
-	 * @model required="true" ordered="false"
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false"
 	 * @generated
 	 */
 	String getID();

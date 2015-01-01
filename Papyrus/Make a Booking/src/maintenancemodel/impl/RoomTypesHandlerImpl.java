@@ -3,12 +3,16 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
+
 import maintenancemodel.Calendar;
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.RoomType;
 import maintenancemodel.RoomTypeEnum;
 import maintenancemodel.RoomTypesHandler;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
@@ -107,7 +111,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 				if (roomTypeEnum != null
 						&& getRoomTypeEnums().contains(roomTypeEnum)) {
 					if (roomTypeID != null
-							&& !getRoomTypes().contains(roomTypeID)) {
+							&& !getRoomTypeIDs().contains(roomTypeID)) {
 						RoomType newRT = new RoomTypeImpl(roomTypeID,
 								roomTypeEnum, price, maxNrOfGuests, description);
 						this.getStringToRoomType().put(newRT.getID(), newRT);
@@ -138,12 +142,12 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
-	public EList<String> getRoomTypes() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public EList<String> getRoomTypeIDs() {
+		String[] ids = this.stringToRoomType.keySet()
+				.toArray(new String[0]);
+		return new BasicEList<String>(Arrays.asList(ids));
 	}
 
 	/**
@@ -171,6 +175,22 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated NOT
+	 */
+	public EList<String> getRoomTypeEnums() {
+		RoomTypeEnum[] enums = RoomTypeEnum.values();
+		EList<String> strings = new BasicEList<String>(enums.length);
+
+		for (RoomTypeEnum e : enums) {
+			strings.add(e.toString());
+		}
+
+		return strings;
 	}
 
 	/**

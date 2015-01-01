@@ -282,7 +282,7 @@
       <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
           createChild="true" ecoreFeature="ecore:EReference maintenancemodel.ecore#//RoomTypesHandler/stringToRoomType"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomTypesHandler/exists">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/exists/ID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/exists/roomTypeID"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomTypesHandler/addRoomType">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/addRoomType/roomTypeID"/>
@@ -297,11 +297,12 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomTypesHandler/getPrice">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/getPrice/roomTypeID"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomTypesHandler/getRoomTypes"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomTypesHandler/getRoomTypeIDs"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomTypesHandler/getRoomType">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/getRoomType/roomTypeID"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomTypesHandler/getCalendar"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomTypesHandler/getRoomTypeEnums"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//StringToRoomTypeMap">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//StringToRoomTypeMap/key"/>

@@ -1553,13 +1553,13 @@ public interface MaintenancemodelPackage extends EPackage {
 	int ROOM_TYPES_HANDLER___GET_PRICE__STRING = 3;
 
 	/**
-	 * The operation id for the '<em>Get Room Types</em>' operation.
+	 * The operation id for the '<em>Get Room Type IDs</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPES_HANDLER___GET_ROOM_TYPES = 4;
+	int ROOM_TYPES_HANDLER___GET_ROOM_TYPE_IDS = 4;
 
 	/**
 	 * The operation id for the '<em>Get Room Type</em>' operation.
@@ -1580,13 +1580,22 @@ public interface MaintenancemodelPackage extends EPackage {
 	int ROOM_TYPES_HANDLER___GET_CALENDAR = 6;
 
 	/**
+	 * The operation id for the '<em>Get Room Type Enums</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPES_HANDLER___GET_ROOM_TYPE_ENUMS = 7;
+
+	/**
 	 * The number of operations of the '<em>Room Types Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPES_HANDLER_OPERATION_COUNT = 7;
+	int ROOM_TYPES_HANDLER_OPERATION_COUNT = 8;
 
 	/**
 	 * The meta object id for the '{@link maintenancemodel.impl.StringToRoomTypeMapImpl <em>String To Room Type Map</em>}' class.
@@ -2147,7 +2156,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Integer To Extra Map</em>'.
 	 * @see java.util.Map.Entry
-	 * @model keyDataType="org.eclipse.emf.ecore.EString" keyRequired="true" keyOrdered="false"
+	 * @model keyDataType="org.eclipse.uml2.types.String" keyRequired="true" keyOrdered="false"
 	 *        valueType="maintenancemodel.Extra" valueRequired="true" valueOrdered="false"
 	 * @generated
 	 */
@@ -2393,14 +2402,14 @@ public interface MaintenancemodelPackage extends EPackage {
 	EOperation getRoomTypesHandler__GetPrice__String();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.RoomTypesHandler#getRoomTypes() <em>Get Room Types</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.RoomTypesHandler#getRoomTypeIDs() <em>Get Room Type IDs</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Room Types</em>' operation.
-	 * @see maintenancemodel.RoomTypesHandler#getRoomTypes()
+	 * @return the meta object for the '<em>Get Room Type IDs</em>' operation.
+	 * @see maintenancemodel.RoomTypesHandler#getRoomTypeIDs()
 	 * @generated
 	 */
-	EOperation getRoomTypesHandler__GetRoomTypes();
+	EOperation getRoomTypesHandler__GetRoomTypeIDs();
 
 	/**
 	 * Returns the meta object for the '{@link maintenancemodel.RoomTypesHandler#getRoomType(java.lang.String) <em>Get Room Type</em>}' operation.
@@ -2421,6 +2430,16 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getRoomTypesHandler__GetCalendar();
+
+	/**
+	 * Returns the meta object for the '{@link maintenancemodel.RoomTypesHandler#getRoomTypeEnums() <em>Get Room Type Enums</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Room Type Enums</em>' operation.
+	 * @see maintenancemodel.RoomTypesHandler#getRoomTypeEnums()
+	 * @generated
+	 */
+	EOperation getRoomTypesHandler__GetRoomTypeEnums();
 
 	/**
 	 * Returns the meta object for class '{@link java.util.Map.Entry <em>String To Room Type Map</em>}'.
@@ -3453,12 +3472,12 @@ public interface MaintenancemodelPackage extends EPackage {
 		EOperation ROOM_TYPES_HANDLER___GET_PRICE__STRING = eINSTANCE.getRoomTypesHandler__GetPrice__String();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Room Types</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Room Type IDs</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ROOM_TYPES_HANDLER___GET_ROOM_TYPES = eINSTANCE.getRoomTypesHandler__GetRoomTypes();
+		EOperation ROOM_TYPES_HANDLER___GET_ROOM_TYPE_IDS = eINSTANCE.getRoomTypesHandler__GetRoomTypeIDs();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Room Type</b></em>' operation.
@@ -3475,6 +3494,14 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ROOM_TYPES_HANDLER___GET_CALENDAR = eINSTANCE.getRoomTypesHandler__GetCalendar();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Room Type Enums</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_TYPES_HANDLER___GET_ROOM_TYPE_ENUMS = eINSTANCE.getRoomTypesHandler__GetRoomTypeEnums();
 
 		/**
 		 * The meta object literal for the '{@link maintenancemodel.impl.StringToRoomTypeMapImpl <em>String To Room Type Map</em>}' class.

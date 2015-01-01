@@ -330,9 +330,10 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int setActive(String roomTypeID) {
+		//return 0 if successful and -1 if not
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

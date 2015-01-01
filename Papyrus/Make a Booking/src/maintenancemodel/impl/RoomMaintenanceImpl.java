@@ -4,6 +4,7 @@ package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
+
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.Room;
 import maintenancemodel.RoomHandler;
@@ -12,6 +13,7 @@ import maintenancemodel.RoomStatusEnum;
 import maintenancemodel.RoomType;
 import maintenancemodel.RoomTypeEnum;
 import maintenancemodel.RoomTypesHandler;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
@@ -257,8 +259,8 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int addRoomType(String roomTypeID, String roomTypeEnum, int price,
 			int maxNrOfGuests, String description) {
-		return this.roomTypes.addRoomType(roomTypeID, roomTypeEnum,
-				price, maxNrOfGuests, description);
+		return this.roomTypes.addRoomType(roomTypeID, roomTypeEnum, price,
+				maxNrOfGuests, description);
 
 		// TODO
 	}
@@ -473,14 +475,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public EList<String> getRoomTypeEnums() {
-		RoomTypeEnum[] enums = RoomTypeEnum.values();
-		EList<String> strings = new BasicEList<String>(enums.length);
-
-		for (RoomTypeEnum e : enums) {
-			strings.add(e.toString());
-		}
-
-		return strings;
+		return this.roomTypes.getRoomTypeEnums();
 		// TODO: test
 	}
 
@@ -530,10 +525,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public EList<String> getRoomTypeIDs() {
-
-		String[] ids = this.roomTypes.getStringToRoomType().keySet()
-				.toArray(new String[0]);
-		return new BasicEList<String>(Arrays.asList(ids));
+		return this.roomTypes.getRoomTypeIDs();
 		// TODO: test
 	}
 
