@@ -170,13 +170,25 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public List<String> getServiceNotes(String bookingRef) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public int checkIn(String bookingRef, String roomType, String guestEmail) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
 
 	/**
 	 * @inheritDoc
@@ -205,15 +217,18 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public int checkOut(int roomID, String guestEmail) {
-		int result = 0;
-		Booking booking = this.getBookingHandler().getBooking(roomID);
-		if(this.getBookingHandler().exists(booking.getBookingRef())){
-			booking.removeResponsibleGuest(roomID, guestEmail);
-			//Set the roomID as available in maintenance
-		} else {
-			result = -1;
-		}
-		
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, EList<?> extra) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -500,7 +515,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == IBookingProvidesForGuest.class) {
 			switch (baseOperationID) {
-				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___CHECK_IN__INT_STRING: return BookingmodelPackage.BOOKING_PROVIDES___CHECK_IN__INT_STRING;
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___CHECK_IN__STRING_STRING_STRING: return BookingmodelPackage.BOOKING_PROVIDES___CHECK_IN__STRING_STRING_STRING;
 				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___CHECK_OUT__INT_STRING: return BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__INT_STRING;
 				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST: return BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST;
 				default: return -1;
@@ -539,12 +554,12 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 				return removeServiceNote((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_PROVIDES___GET_SERVICE_NOTES__STRING:
 				return getServiceNotes((String)arguments.get(0));
-			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_IN__INT_STRING:
-				return checkIn((Integer)arguments.get(0), (String)arguments.get(1));
+			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_IN__STRING_STRING_STRING:
+				return checkIn((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__INT_STRING:
 				return checkOut((Integer)arguments.get(0), (String)arguments.get(1));
 			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST:
-				return pay((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (List<String>)arguments.get(6));
+				return pay((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (EList<?>)arguments.get(6));
 			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING:
 				return pay((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_PROVIDES___GET_PRICE__STRING:

@@ -4,6 +4,7 @@ package bookingmodel;
 
 import java.util.List;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -19,11 +20,11 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface IBookingProvidesForGuest extends EObject {
 	/**
-	 * Checks in a room and sets the guest as responsible.
-	 * @model dataType="types.Integer" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
+	 * Checks in a room of a booking and sets the guest as responsible by using their email.
+	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false" roomTypeDataType="types.String" roomTypeRequired="true" roomTypeOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated NOT
 	 */
-	int checkIn(int roomID, String guestEmail);
+	int checkIn(String bookingRef, String roomType, String guestEmail);
 
 	/**
 	 * Checks out a room and removes the responsible guest
