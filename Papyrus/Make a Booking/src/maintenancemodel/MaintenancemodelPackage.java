@@ -916,7 +916,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_INT_STRING_STRING = 2;
+	int IMAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_STRING_STRING = 2;
 
 	/**
 	 * The operation id for the '<em>Set Active</em>' operation.
@@ -1508,13 +1508,22 @@ public interface MaintenancemodelPackage extends EPackage {
 	int ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Calendar</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPES_HANDLER__CALENDAR = 1;
+
+	/**
 	 * The number of structural features of the '<em>Room Types Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPES_HANDLER_FEATURE_COUNT = 1;
+	int ROOM_TYPES_HANDLER_FEATURE_COUNT = 2;
 
 	/**
 	 * The operation id for the '<em>Exists</em>' operation.
@@ -1571,22 +1580,13 @@ public interface MaintenancemodelPackage extends EPackage {
 	int ROOM_TYPES_HANDLER___GET_ROOM_TYPE__STRING = 5;
 
 	/**
-	 * The operation id for the '<em>Get Calendar</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_TYPES_HANDLER___GET_CALENDAR = 6;
-
-	/**
 	 * The operation id for the '<em>Get Room Type Enums</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPES_HANDLER___GET_ROOM_TYPE_ENUMS = 7;
+	int ROOM_TYPES_HANDLER___GET_ROOM_TYPE_ENUMS = 6;
 
 	/**
 	 * The number of operations of the '<em>Room Types Handler</em>' class.
@@ -1595,7 +1595,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPES_HANDLER_OPERATION_COUNT = 8;
+	int ROOM_TYPES_HANDLER_OPERATION_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link maintenancemodel.impl.StringToRoomTypeMapImpl <em>String To Room Type Map</em>}' class.
@@ -1654,22 +1654,13 @@ public interface MaintenancemodelPackage extends EPackage {
 	int MAINTENANCE_PROVIDES_FOR_BOOKING = 19;
 
 	/**
-	 * The feature id for the '<em><b>Calendar</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR = IMAINTENANCE_PROVIDES_FOR_BOOKING_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Room Types</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES = IMAINTENANCE_PROVIDES_FOR_BOOKING_FEATURE_COUNT + 1;
+	int MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES = IMAINTENANCE_PROVIDES_FOR_BOOKING_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Rooms</b></em>' containment reference.
@@ -1678,7 +1669,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS = IMAINTENANCE_PROVIDES_FOR_BOOKING_FEATURE_COUNT + 2;
+	int MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS = IMAINTENANCE_PROVIDES_FOR_BOOKING_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Extra Handler</b></em>' containment reference.
@@ -1687,7 +1678,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAINTENANCE_PROVIDES_FOR_BOOKING__EXTRA_HANDLER = IMAINTENANCE_PROVIDES_FOR_BOOKING_FEATURE_COUNT + 3;
+	int MAINTENANCE_PROVIDES_FOR_BOOKING__EXTRA_HANDLER = IMAINTENANCE_PROVIDES_FOR_BOOKING_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Maintenance Provides For Booking</em>' class.
@@ -1696,7 +1687,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAINTENANCE_PROVIDES_FOR_BOOKING_FEATURE_COUNT = IMAINTENANCE_PROVIDES_FOR_BOOKING_FEATURE_COUNT + 4;
+	int MAINTENANCE_PROVIDES_FOR_BOOKING_FEATURE_COUNT = IMAINTENANCE_PROVIDES_FOR_BOOKING_FEATURE_COUNT + 3;
 
 	/**
 	 * The operation id for the '<em>Can Book</em>' operation.
@@ -1723,7 +1714,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_INT_STRING_STRING = IMAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_INT_STRING_STRING;
+	int MAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_STRING_STRING = IMAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_STRING_STRING;
 
 	/**
 	 * The operation id for the '<em>Set Active</em>' operation.
@@ -2362,6 +2353,17 @@ public interface MaintenancemodelPackage extends EPackage {
 	EReference getRoomTypesHandler_StringToRoomType();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link maintenancemodel.RoomTypesHandler#getCalendar <em>Calendar</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Calendar</em>'.
+	 * @see maintenancemodel.RoomTypesHandler#getCalendar()
+	 * @see #getRoomTypesHandler()
+	 * @generated
+	 */
+	EReference getRoomTypesHandler_Calendar();
+
+	/**
 	 * Returns the meta object for the '{@link maintenancemodel.RoomTypesHandler#exists(java.lang.String) <em>Exists</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2420,16 +2422,6 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getRoomTypesHandler__GetRoomType__String();
-
-	/**
-	 * Returns the meta object for the '{@link maintenancemodel.RoomTypesHandler#getCalendar() <em>Get Calendar</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Calendar</em>' operation.
-	 * @see maintenancemodel.RoomTypesHandler#getCalendar()
-	 * @generated
-	 */
-	EOperation getRoomTypesHandler__GetCalendar();
 
 	/**
 	 * Returns the meta object for the '{@link maintenancemodel.RoomTypesHandler#getRoomTypeEnums() <em>Get Room Type Enums</em>}' operation.
@@ -2540,14 +2532,14 @@ public interface MaintenancemodelPackage extends EPackage {
 	EOperation getIMaintenanceProvidesForBooking__MakeBooking__EList_String_String();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#removeBooking(org.eclipse.emf.common.util.EList, int, java.lang.String, java.lang.String) <em>Remove Booking</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#removeBooking(org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String) <em>Remove Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Booking</em>' operation.
-	 * @see maintenancemodel.IMaintenanceProvidesForBooking#removeBooking(org.eclipse.emf.common.util.EList, int, java.lang.String, java.lang.String)
+	 * @see maintenancemodel.IMaintenanceProvidesForBooking#removeBooking(org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String)
 	 * @generated
 	 */
-	EOperation getIMaintenanceProvidesForBooking__RemoveBooking__EList_int_String_String();
+	EOperation getIMaintenanceProvidesForBooking__RemoveBooking__EList_String_String();
 
 	/**
 	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#setActive(java.lang.String) <em>Set Active</em>}' operation.
@@ -2891,17 +2883,6 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getMaintenanceProvidesForBooking();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link maintenancemodel.MaintenanceProvidesForBooking#getCalendar <em>Calendar</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Calendar</em>'.
-	 * @see maintenancemodel.MaintenanceProvidesForBooking#getCalendar()
-	 * @see #getMaintenanceProvidesForBooking()
-	 * @generated
-	 */
-	EReference getMaintenanceProvidesForBooking_Calendar();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link maintenancemodel.MaintenanceProvidesForBooking#getRoomTypes <em>Room Types</em>}'.
@@ -3440,6 +3421,14 @@ public interface MaintenancemodelPackage extends EPackage {
 		EReference ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE = eINSTANCE.getRoomTypesHandler_StringToRoomType();
 
 		/**
+		 * The meta object literal for the '<em><b>Calendar</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROOM_TYPES_HANDLER__CALENDAR = eINSTANCE.getRoomTypesHandler_Calendar();
+
+		/**
 		 * The meta object literal for the '<em><b>Exists</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3486,14 +3475,6 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ROOM_TYPES_HANDLER___GET_ROOM_TYPE__STRING = eINSTANCE.getRoomTypesHandler__GetRoomType__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Calendar</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ROOM_TYPES_HANDLER___GET_CALENDAR = eINSTANCE.getRoomTypesHandler__GetCalendar();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Room Type Enums</b></em>' operation.
@@ -3587,7 +3568,7 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_INT_STRING_STRING = eINSTANCE.getIMaintenanceProvidesForBooking__RemoveBooking__EList_int_String_String();
+		EOperation IMAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_STRING_STRING = eINSTANCE.getIMaintenanceProvidesForBooking__RemoveBooking__EList_String_String();
 
 		/**
 		 * The meta object literal for the '<em><b>Set Active</b></em>' operation.
@@ -3870,14 +3851,6 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MAINTENANCE_PROVIDES_FOR_BOOKING = eINSTANCE.getMaintenanceProvidesForBooking();
-
-		/**
-		 * The meta object literal for the '<em><b>Calendar</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR = eINSTANCE.getMaintenanceProvidesForBooking_Calendar();
 
 		/**
 		 * The meta object literal for the '<em><b>Room Types</b></em>' containment reference feature.

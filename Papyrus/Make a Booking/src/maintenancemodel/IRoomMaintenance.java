@@ -69,10 +69,7 @@ public interface IRoomMaintenance extends EObject {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true"
-	 *        ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String"
-	 *        roomTypeIDRequired="true" roomTypeIDOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
 	 * @generated
 	 */
 	int removeRoomType(String roomTypeID);
@@ -93,18 +90,7 @@ public interface IRoomMaintenance extends EObject {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true"
-	 *        ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String"
-	 *        roomTypeIDRequired="true" roomTypeIDOrdered="false"
-	 *        roomTypeEnumDataType="org.eclipse.uml2.types.String"
-	 *        roomTypeEnumRequired="true" roomTypeEnumOrdered="false"
-	 *        priceDataType="org.eclipse.uml2.types.Integer"
-	 *        priceRequired="true" priceOrdered="false"
-	 *        maxNrOfGuestsDataType="org.eclipse.uml2.types.Integer"
-	 *        maxNrOfGuestsRequired="true" maxNrOfGuestsOrdered="false"
-	 *        descriptionDataType="org.eclipse.uml2.types.String"
-	 *        descriptionRequired="true" descriptionOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false" roomTypeEnumDataType="org.eclipse.uml2.types.String" roomTypeEnumRequired="true" roomTypeEnumOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" maxNrOfGuestsDataType="org.eclipse.uml2.types.Integer" maxNrOfGuestsRequired="true" maxNrOfGuestsOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
 	 * @generated
 	 */
 	int editRoomType(String roomTypeID, String roomTypeEnum, int price,
@@ -226,10 +212,7 @@ public interface IRoomMaintenance extends EObject {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true"
-	 *        ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String"
-	 *        roomTypeIDRequired="true" roomTypeIDOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
 	 * @generated
 	 */
 	int getNrOfRoomsofType(String roomTypeID);

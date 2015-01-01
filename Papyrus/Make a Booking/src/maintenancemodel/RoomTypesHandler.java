@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link maintenancemodel.RoomTypesHandler#getStringToRoomType <em>String To Room Type</em>}</li>
+ *   <li>{@link maintenancemodel.RoomTypesHandler#getCalendar <em>Calendar</em>}</li>
  * </ul>
  * </p>
  *
@@ -90,12 +91,26 @@ public interface RoomTypesHandler extends EObject {
 	RoomType getRoomType(String roomTypeID);
 
 	/**
+	 * Returns the value of the '<em><b>Calendar</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model kind="operation" required="true" ordered="false"
+	 * @return the value of the '<em>Calendar</em>' containment reference.
+	 * @see #setCalendar(Calendar)
+	 * @see maintenancemodel.MaintenancemodelPackage#getRoomTypesHandler_Calendar()
+	 * @model containment="true" required="true" ordered="false"
 	 * @generated
 	 */
 	Calendar getCalendar();
+
+	/**
+	 * Sets the value of the '{@link maintenancemodel.RoomTypesHandler#getCalendar <em>Calendar</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Calendar</em>' containment reference.
+	 * @see #getCalendar()
+	 * @generated
+	 */
+	void setCalendar(Calendar value);
 
 	/**
 	 * <!-- begin-user-doc -->
