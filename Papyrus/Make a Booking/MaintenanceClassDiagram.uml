@@ -282,9 +282,6 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tQW6YI9zEeS7vdv1tOcp_w" value="1"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tQXhcI9zEeS7vdv1tOcp_w" value="*"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Rgi2Un5aEeSmC8PUBKk0Qw" name="nrOfRooms">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Rgi2U35aEeSmC8PUBKk0Qw" name="start">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
