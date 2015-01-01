@@ -428,7 +428,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__CheckedInAllGuest() {
+	public EOperation getBooking__CheckedInAllRooms() {
 		return bookingEClass.getEOperations().get(0);
 	}
 
@@ -437,7 +437,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__CheckedInAGuest() {
+	public EOperation getBooking__CheckedInRoom__int() {
 		return bookingEClass.getEOperations().get(1);
 	}
 
@@ -977,7 +977,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingProvidesForGuest__CheckIn__int_String() {
+	public EOperation getIBookingProvidesForGuest__CheckIn__String_String_String() {
 		return iBookingProvidesForGuestEClass.getEOperations().get(0);
 	}
 
@@ -1124,8 +1124,8 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		createEReference(bookingEClass, BOOKING__ROOM_ID_TO_ROOM_TYPE_MAP);
 		createEAttribute(bookingEClass, BOOKING__PAYMENT_METHOD);
 		createEReference(bookingEClass, BOOKING__EXTRA_TO_IS_PAYED_MAP);
-		createEOperation(bookingEClass, BOOKING___CHECKED_IN_ALL_GUEST);
-		createEOperation(bookingEClass, BOOKING___CHECKED_IN_AGUEST);
+		createEOperation(bookingEClass, BOOKING___CHECKED_IN_ALL_ROOMS);
+		createEOperation(bookingEClass, BOOKING___CHECKED_IN_ROOM__INT);
 		createEOperation(bookingEClass, BOOKING___SET_RESPONSIBLE_GUEST__INT_STRING);
 		createEOperation(bookingEClass, BOOKING___SET_RESPONSIBLE_GUEST_TO_ALL_ROOMS__STRING);
 		createEOperation(bookingEClass, BOOKING___GET_NR_OF_ROOMS);
@@ -1194,7 +1194,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___BOOK__STRING_STRING_INT_STRING_STRING);
 
 		iBookingProvidesForGuestEClass = createEClass(IBOOKING_PROVIDES_FOR_GUEST);
-		createEOperation(iBookingProvidesForGuestEClass, IBOOKING_PROVIDES_FOR_GUEST___CHECK_IN__INT_STRING);
+		createEOperation(iBookingProvidesForGuestEClass, IBOOKING_PROVIDES_FOR_GUEST___CHECK_IN__STRING_STRING_STRING);
 		createEOperation(iBookingProvidesForGuestEClass, IBOOKING_PROVIDES_FOR_GUEST___CHECK_OUT__INT_STRING);
 		createEOperation(iBookingProvidesForGuestEClass, IBOOKING_PROVIDES_FOR_GUEST___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST);
 
@@ -1275,11 +1275,12 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		initEAttribute(getBooking_PaymentMethod(), this.getPaymentMethod(), "paymentMethod", null, 1, 1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBooking_ExtraToIsPayedMap(), this.getExtraToIsPayedEntry(), null, "extraToIsPayedMap", null, 0, -1, Booking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
-		initEOperation(getBooking__CheckedInAllGuest(), theTypesPackage.getBoolean(), "checkedInAllGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		initEOperation(getBooking__CheckedInAllRooms(), theTypesPackage.getBoolean(), "checkedInAllRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		initEOperation(getBooking__CheckedInAGuest(), theTypesPackage.getBoolean(), "checkedInAGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		EOperation op = initEOperation(getBooking__CheckedInRoom__int(), theTypesPackage.getBoolean(), "checkedInRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		EOperation op = initEOperation(getBooking__SetResponsibleGuest__int_String(), theTypesPackage.getInteger(), "setResponsibleGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBooking__SetResponsibleGuest__int_String(), theTypesPackage.getInteger(), "setResponsibleGuest", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "guestEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
@@ -1454,8 +1455,9 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 
 		initEClass(iBookingProvidesForGuestEClass, IBookingProvidesForGuest.class, "IBookingProvidesForGuest", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		op = initEOperation(getIBookingProvidesForGuest__CheckIn__int_String(), theTypesPackage.getInteger(), "checkIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookingProvidesForGuest__CheckIn__String_String_String(), theTypesPackage.getInteger(), "checkIn", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "guestEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIBookingProvidesForGuest__CheckOut__int_String(), theTypesPackage.getInteger(), "checkOut", 1, 1, IS_UNIQUE, !IS_ORDERED);

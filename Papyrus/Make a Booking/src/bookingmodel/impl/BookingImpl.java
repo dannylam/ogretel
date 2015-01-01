@@ -506,7 +506,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @inheritDoc
 	 * @generated NOT
 	 */
-	public boolean checkedInAllGuest() {
+	public boolean checkedInAllRooms() {
 		boolean hasResponsible = true;
 		if(!this.roomIDToGuestMap.isEmpty()){
 			for (String guestEmail: roomIDToGuestMap.values()) {
@@ -524,16 +524,13 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @inheritDoc
 	 * @generated NOT
 	 */
-	public boolean checkedInAGuest() {
+	public boolean checkedInRoom(int roomID) {
 		boolean hasResponsible = false;
 		if(!this.roomIDToGuestMap.isEmpty()){
-			for (String guestEmail : roomIDToGuestMap.values()) {
+			String guestEmail = this.roomIDToGuestMap.get(roomID).getValue();
 				if(!guestEmail.isEmpty() || !guestEmail.equals("out")){
 						hasResponsible = true;
 				}
-			}
-		}else{
-			hasResponsible = true;
 		}
 		return hasResponsible;
 	}
@@ -544,10 +541,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public int setResponsibleGuest(int roomID, String guestEmail) {
 		int result = 0;														
-		if(this.roomIDToGuestMap.get(roomID).getValue().isEmpty()){			//om rumsID är tom
-			this.roomIDToGuestMap.get(roomID).setValue(guestEmail);			//koppla rumsID till gästens email
+		if(this.roomIDToGuestMap.get(roomID).getValue().isEmpty()){		
+			this.roomIDToGuestMap.get(roomID).setValue(guestEmail);			
 		}else{
-			result = -1;													//om rumsID inte är tom, koppla ej 
+			result = -1;												
 		}
 		return result;
 	}
@@ -579,6 +576,39 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	public int getNrOfRooms() {
 		return this.roomIDToRoomTypeMap.size(); 
 	} 
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setExtras(EList<String> extras) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setRoomTypes(EList<String> roomTypes) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setRoomIDs(EList<Integer> roomIDs) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
 
 	/**
 	 * @inheritDoc
@@ -907,10 +937,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-			case BookingmodelPackage.BOOKING___CHECKED_IN_ALL_GUEST:
-				return checkedInAllGuest();
-			case BookingmodelPackage.BOOKING___CHECKED_IN_AGUEST:
-				return checkedInAGuest();
+			case BookingmodelPackage.BOOKING___CHECKED_IN_ALL_ROOMS:
+				return checkedInAllRooms();
+			case BookingmodelPackage.BOOKING___CHECKED_IN_ROOM__INT:
+				return checkedInRoom((Integer)arguments.get(0));
 			case BookingmodelPackage.BOOKING___SET_RESPONSIBLE_GUEST__INT_STRING:
 				return setResponsibleGuest((Integer)arguments.get(0), (String)arguments.get(1));
 			case BookingmodelPackage.BOOKING___SET_RESPONSIBLE_GUEST_TO_ALL_ROOMS__STRING:
