@@ -324,22 +324,22 @@ public interface BookingmodelPackage extends EPackage {
 	int BOOKING_FEATURE_COUNT = 12;
 
 	/**
-	 * The operation id for the '<em>Checked In All Guest</em>' operation.
+	 * The operation id for the '<em>Checked In All Rooms</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___CHECKED_IN_ALL_GUEST = 0;
+	int BOOKING___CHECKED_IN_ALL_ROOMS = 0;
 
 	/**
-	 * The operation id for the '<em>Checked In AGuest</em>' operation.
+	 * The operation id for the '<em>Checked In Room</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___CHECKED_IN_AGUEST = 1;
+	int BOOKING___CHECKED_IN_ROOM__INT = 1;
 
 	/**
 	 * The operation id for the '<em>Set Responsible Guest</em>' operation.
@@ -1689,24 +1689,24 @@ public interface BookingmodelPackage extends EPackage {
 	EReference getBooking_ExtraToIsPayedMap();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.Booking#checkedInAllGuest() <em>Checked In All Guest</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.Booking#checkedInAllRooms() <em>Checked In All Rooms</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Checked In All Guest</em>' operation.
-	 * @see bookingmodel.Booking#checkedInAllGuest()
+	 * @return the meta object for the '<em>Checked In All Rooms</em>' operation.
+	 * @see bookingmodel.Booking#checkedInAllRooms()
 	 * @generated
 	 */
-	EOperation getBooking__CheckedInAllGuest();
+	EOperation getBooking__CheckedInAllRooms();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.Booking#checkedInAGuest() <em>Checked In AGuest</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.Booking#checkedInRoom(int) <em>Checked In Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Checked In AGuest</em>' operation.
-	 * @see bookingmodel.Booking#checkedInAGuest()
+	 * @return the meta object for the '<em>Checked In Room</em>' operation.
+	 * @see bookingmodel.Booking#checkedInRoom(int)
 	 * @generated
 	 */
-	EOperation getBooking__CheckedInAGuest();
+	EOperation getBooking__CheckedInRoom__int();
 
 	/**
 	 * Returns the meta object for the '{@link bookingmodel.Booking#setResponsibleGuest(int, java.lang.String) <em>Set Responsible Guest</em>}' operation.
@@ -2642,20 +2642,20 @@ public interface BookingmodelPackage extends EPackage {
 		EReference BOOKING__EXTRA_TO_IS_PAYED_MAP = eINSTANCE.getBooking_ExtraToIsPayedMap();
 
 		/**
-		 * The meta object literal for the '<em><b>Checked In All Guest</b></em>' operation.
+		 * The meta object literal for the '<em><b>Checked In All Rooms</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING___CHECKED_IN_ALL_GUEST = eINSTANCE.getBooking__CheckedInAllGuest();
+		EOperation BOOKING___CHECKED_IN_ALL_ROOMS = eINSTANCE.getBooking__CheckedInAllRooms();
 
 		/**
-		 * The meta object literal for the '<em><b>Checked In AGuest</b></em>' operation.
+		 * The meta object literal for the '<em><b>Checked In Room</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING___CHECKED_IN_AGUEST = eINSTANCE.getBooking__CheckedInAGuest();
+		EOperation BOOKING___CHECKED_IN_ROOM__INT = eINSTANCE.getBooking__CheckedInRoom__int();
 
 		/**
 		 * The meta object literal for the '<em><b>Set Responsible Guest</b></em>' operation.

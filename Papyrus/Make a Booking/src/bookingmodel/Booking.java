@@ -232,22 +232,22 @@ public interface Booking extends EObject {
 	EMap<String, Boolean> getExtraToIsPayedMap();
 
 	/**
-	 * Checks if all the rooms in the booking
+	 * Checks if all the rooms in the booking are checked in which they are if they
 	 * has a responsible guest. If so, then true is returned,
 	 * otherwise false is returned.
 	 * @model dataType="types.Boolean" required="true" ordered="false"
 	 * @generated NOT
 	 */
-	boolean checkedInAllGuest();
+	boolean checkedInAllRooms();
 
 	/**
-	 * Checks if at least one room in the booking
+	 * Checks if a specific the rooms in the booking is checked in which it is if it
 	 * has a responsible guest. If so, then true is returned,
 	 * otherwise false is returned.
-	 * @model dataType="types.Boolean" required="true" ordered="false"
+	 * @model dataType="types.Boolean" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
 	 */
-	boolean checkedInAGuest();
+	boolean checkedInRoom(int roomID);
 
 	/**
 	 * Sets a responsible guest to a specific roomID by using their email.
@@ -275,6 +275,30 @@ public interface Booking extends EObject {
 	 * @generated NOT
 	 */
 	int getNrOfRooms();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="types.Integer" required="true" ordered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false"
+	 * @generated
+	 */
+	int setExtras(EList<String> extras);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="types.Integer" required="true" ordered="false" roomTypesDataType="types.String" roomTypesMany="true" roomTypesOrdered="false"
+	 * @generated
+	 */
+	int setRoomTypes(EList<String> roomTypes);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="types.Integer" required="true" roomIDsDataType="types.Integer" roomIDsMany="true"
+	 * @generated
+	 */
+	int setRoomIDs(EList<Integer> roomIDs);
 
 	/**
 	 * Adds extras from a booking into the map with extras.

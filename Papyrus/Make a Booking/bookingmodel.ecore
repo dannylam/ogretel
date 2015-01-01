@@ -29,8 +29,10 @@
         lowerBound="1" eType="#//Booking"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Booking">
-    <eOperations name="checkedInAllGuest" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
-    <eOperations name="checkedInAGuest" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
+    <eOperations name="checkedInAllRooms" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
+    <eOperations name="checkedInRoom" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
+      <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+    </eOperations>
     <eOperations name="setResponsibleGuest" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
       <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       <eParameters name="guestEmail" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>

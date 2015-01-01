@@ -28,6 +28,11 @@ public interface IBookingProvidesForGuest extends EObject {
 
 	/**
 	 * Checks out a room and removes the responsible guest
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return	0 if success 
+	 * 			-1 if an the booking reference does not exist
+	 * 			1 if the room has not been checked-in
+	 * 			2 if the room could not be set as vacant
 	 * @model dataType="types.Integer" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated NOT
 	 */
