@@ -208,8 +208,8 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int addRoom(int roomID, String roomType) {
-		if (!this.getRoomHandler().exists(roomID)) {
-			if (this.getRoomTypeHandler().exists(roomType)) {
+		if (!this.rooms.exists(roomID)) {
+			if (this.roomTypes.exists(roomType)) {
 
 				this.rooms.addRoom(roomID, this.roomTypes.getStringToRoomType()
 						.get(roomType));
@@ -257,7 +257,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int addRoomType(String roomTypeID, String roomTypeEnum, int price,
 			int maxNrOfGuests, String description) {
-		return this.getRoomTypeHandler().addRoomType(roomTypeID, roomTypeEnum,
+		return this.roomTypes.addRoomType(roomTypeID, roomTypeEnum,
 				price, maxNrOfGuests, description);
 
 		// TODO
@@ -270,7 +270,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int removeRoomType(String roomType) {
-		return this.getRoomTypeHandler().removeRoomType(roomType);
+		return this.roomTypes.removeRoomType(roomType);
 		// TODO
 	}
 
@@ -520,7 +520,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 		// TODO:
 		Integer[] ids = this.rooms.getIntegerToRoomMap().keySet()
 				.toArray(new Integer[0]);
-		return new BasicEList(Arrays.asList(ids));
+		return new BasicEList<Integer>(Arrays.asList(ids));
 	}
 
 	/**
@@ -533,7 +533,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 		String[] ids = this.roomTypes.getStringToRoomType().keySet()
 				.toArray(new String[0]);
-		return new BasicEList(Arrays.asList(ids));
+		return new BasicEList<String>(Arrays.asList(ids));
 		// TODO: test
 	}
 
