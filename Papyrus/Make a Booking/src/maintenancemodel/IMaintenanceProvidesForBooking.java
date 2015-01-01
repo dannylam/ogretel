@@ -71,4 +71,12 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 	 */
 	int getPriceExtra(EList<String> extraIDs);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false"
+	 * @generated
+	 */
+	int setInactive(int roomID);
+
 } // IMaintenanceProvidesForBooking

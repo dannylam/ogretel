@@ -3,6 +3,7 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.Map;
 
 import maintenancemodel.Calendar;
 import maintenancemodel.MaintenancemodelPackage;
@@ -41,12 +42,6 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	protected EMap<String, EList<Integer>> stringToListsMap;
 
 	/**
-	 * Max amount of Rooms that can be available a day.
-	 * @generated NOT
-	 */
-	protected static final Integer MAX_CAPACITY = 725;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -72,6 +67,40 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	 */
 	public EMap<String,EList<Integer>> getStringToListsMap() {
 		return stringToListsMap;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetStringToListsMap(Map.Entry<String, EList<Integer>> newStringToListsMap, NotificationChain msgs) {
+		Map.Entry<String, EList<Integer>> oldStringToListsMap = stringToListsMap;
+		stringToListsMap = newStringToListsMap;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP, oldStringToListsMap, newStringToListsMap);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStringToListsMap(Map.Entry<String, EList<Integer>> newStringToListsMap) {
+		if (newStringToListsMap != stringToListsMap) {
+			NotificationChain msgs = null;
+			if (stringToListsMap != null)
+				msgs = ((InternalEObject)stringToListsMap).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP, null, msgs);
+			if (newStringToListsMap != null)
+				msgs = ((InternalEObject)newStringToListsMap).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP, null, msgs);
+			msgs = basicSetStringToListsMap(newStringToListsMap, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP, newStringToListsMap, newStringToListsMap));
 	}
 
 	/**
@@ -125,7 +154,7 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 		EList<Integer> capacities = this.getStringToListsMap().get(roomType);
 		Integer cap = capacities.get(start);
 
-		//Get the capacity of the day with the lowest capacity:
+		//Get the capacity of the day with the lowest capacity
 		for(int day=start; day<=end; day++){
 			if(capacities.get(day) < cap){
 				cap = capacities.get(day);
@@ -171,8 +200,29 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 			return 1;
 		}
 		return 1;
-
 		// TODO: test
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int incCap(int start, int end, String roomType, int increment) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int decCap(int start, int end, String roomType, int decrement) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -183,8 +233,8 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP:
-			return basicSetStringToListsMap(null, msgs);
+			case MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP:
+				return basicSetStringToListsMap(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -197,8 +247,8 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP:
-			return getStringToListsMap();
+			case MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP:
+				return getStringToListsMap();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -242,8 +292,8 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP:
-			return stringToListsMap != null;
+			case MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP:
+				return stringToListsMap != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -256,10 +306,14 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements Calend
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case MaintenancemodelPackage.CALENDAR___GET_CAP__INT_INT_STRING:
-			return getCap((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2));
-		case MaintenancemodelPackage.CALENDAR___SET_CAP__INT_INT_STRING_INT:
-			return setCap((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
+			case MaintenancemodelPackage.CALENDAR___GET_CAP__INT_INT_STRING:
+				return getCap((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2));
+			case MaintenancemodelPackage.CALENDAR___SET_CAP__INT_INT_STRING_INT:
+				return setCap((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
+			case MaintenancemodelPackage.CALENDAR___INC_CAP__INT_INT_STRING_INT:
+				return incCap((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
+			case MaintenancemodelPackage.CALENDAR___DEC_CAP__INT_INT_STRING_INT:
+				return decCap((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

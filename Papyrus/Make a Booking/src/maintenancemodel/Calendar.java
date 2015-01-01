@@ -2,6 +2,7 @@
  */
 package maintenancemodel;
 
+import java.util.Map;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
@@ -45,6 +46,16 @@ public interface Calendar extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>String To Lists Map</em>' map.
 	 * @see #getStringToListsMap()
+	 * @generated
+	 */
+	void setStringToListsMap(Map.Entry<String, EList<Integer>> value);
+
+	/**
+	 * Sets the value of the '{@link maintenancemodel.Calendar#getStringToListsMap <em>String To Lists Map</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>String To Lists Map</em>' map.
+	 * @see #getStringToListsMap()
 	 * @generated NOT
 	 */
 	void setStringToListsMap(EMap<String, EList<Integer>> value);
@@ -64,5 +75,21 @@ public interface Calendar extends EObject {
 	 * @generated
 	 */
 	int setCap(int start, int end, String roomType, int nrOfRooms);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false" incrementDataType="org.eclipse.uml2.types.Integer" incrementRequired="true" incrementOrdered="false"
+	 * @generated
+	 */
+	int incCap(int start, int end, String roomType, int increment);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false" decrementDataType="org.eclipse.uml2.types.Integer" decrementRequired="true" decrementOrdered="false"
+	 * @generated
+	 */
+	int decCap(int start, int end, String roomType, int decrement);
 
 } // Calendar

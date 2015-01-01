@@ -336,6 +336,15 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRoomType_NrOfRooms() {
+		return (EAttribute)roomTypeEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getExperience() {
 		return experienceEClass;
 	}
@@ -705,6 +714,24 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getCalendar__IncCap__int_int_String_int() {
+		return calendarEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getCalendar__DecCap__int_int_String_int() {
+		return calendarEClass.getEOperations().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRoomTypesHandler() {
 		return roomTypesHandlerEClass;
 	}
@@ -903,6 +930,15 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getIMaintenanceProvidesForBooking__SetInactive__int() {
+		return iMaintenanceProvidesForBookingEClass.getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIRoomMaintenance() {
 		return iRoomMaintenanceEClass;
 	}
@@ -957,7 +993,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRoomMaintenance__EditRoomType__String_String_int_int_String_int() {
+	public EOperation getIRoomMaintenance__EditRoomType__String_String_int_int_String() {
 		return iRoomMaintenanceEClass.getEOperations().get(5);
 	}
 
@@ -1274,6 +1310,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		createEAttribute(roomTypeEClass, ROOM_TYPE__DESCRIPTION);
 		createEAttribute(roomTypeEClass, ROOM_TYPE__ROOM_TYPE_ENUM);
 		createEAttribute(roomTypeEClass, ROOM_TYPE__ROOM_TYPE_ID);
+		createEAttribute(roomTypeEClass, ROOM_TYPE__NR_OF_ROOMS);
 
 		experienceEClass = createEClass(EXPERIENCE);
 		createEAttribute(experienceEClass, EXPERIENCE__NR_OF_SPOTS);
@@ -1325,6 +1362,8 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		createEReference(calendarEClass, CALENDAR__STRING_TO_LISTS_MAP);
 		createEOperation(calendarEClass, CALENDAR___GET_CAP__INT_INT_STRING);
 		createEOperation(calendarEClass, CALENDAR___SET_CAP__INT_INT_STRING_INT);
+		createEOperation(calendarEClass, CALENDAR___INC_CAP__INT_INT_STRING_INT);
+		createEOperation(calendarEClass, CALENDAR___DEC_CAP__INT_INT_STRING_INT);
 
 		stringToListsMapEClass = createEClass(STRING_TO_LISTS_MAP);
 		createEAttribute(stringToListsMapEClass, STRING_TO_LISTS_MAP__KEY);
@@ -1337,6 +1376,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		createEOperation(iMaintenanceProvidesForBookingEClass, IMAINTENANCE_PROVIDES_FOR_BOOKING___SET_ACTIVE__STRING);
 		createEOperation(iMaintenanceProvidesForBookingEClass, IMAINTENANCE_PROVIDES_FOR_BOOKING___GET_PRICE_ROOM__ELIST);
 		createEOperation(iMaintenanceProvidesForBookingEClass, IMAINTENANCE_PROVIDES_FOR_BOOKING___GET_PRICE_EXTRA__ELIST);
+		createEOperation(iMaintenanceProvidesForBookingEClass, IMAINTENANCE_PROVIDES_FOR_BOOKING___SET_INACTIVE__INT);
 
 		iRoomMaintenanceEClass = createEClass(IROOM_MAINTENANCE);
 		createEOperation(iRoomMaintenanceEClass, IROOM_MAINTENANCE___ADD_ROOM__INT_STRING);
@@ -1344,7 +1384,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		createEOperation(iRoomMaintenanceEClass, IROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_STRING);
 		createEOperation(iRoomMaintenanceEClass, IROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING);
 		createEOperation(iRoomMaintenanceEClass, IROOM_MAINTENANCE___EDIT_ROOM_STATUS__INT_STRING);
-		createEOperation(iRoomMaintenanceEClass, IROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING_INT);
+		createEOperation(iRoomMaintenanceEClass, IROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING);
 		createEOperation(iRoomMaintenanceEClass, IROOM_MAINTENANCE___EDIT_ROOM__INT_STRING);
 		createEOperation(iRoomMaintenanceEClass, IROOM_MAINTENANCE___GET_ROOM_IDS);
 		createEOperation(iRoomMaintenanceEClass, IROOM_MAINTENANCE___GET_ROOM_TYPE_IDS);
@@ -1443,6 +1483,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		initEAttribute(getRoomType_Description(), theTypesPackage.getString(), "description", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomType_RoomTypeEnum(), this.getRoomTypeEnum(), "roomTypeEnum", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomType_RoomTypeID(), theTypesPackage.getString(), "roomTypeID", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRoomType_NrOfRooms(), theTypesPackage.getInteger(), "nrOfRooms", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(experienceEClass, Experience.class, "Experience", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExperience_NrOfSpots(), theTypesPackage.getInteger(), "nrOfSpots", null, 1, 1, Experience.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1527,6 +1568,18 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "nrOfRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
+		op = initEOperation(getCalendar__IncCap__int_int_String_int(), theTypesPackage.getInteger(), "incCap", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "start", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "end", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "increment", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getCalendar__DecCap__int_int_String_int(), theTypesPackage.getInteger(), "decCap", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "start", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "end", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "decrement", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(stringToListsMapEClass, Map.Entry.class, "StringToListsMap", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStringToListsMap_Key(), ecorePackage.getEString(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getStringToListsMap_Value(), ecorePackage.getEIntegerObject(), "value", null, 0, -1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1558,6 +1611,9 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		op = initEOperation(getIMaintenanceProvidesForBooking__GetPriceExtra__EList(), theTypesPackage.getInteger(), "getPriceExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "extraIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
+		op = initEOperation(getIMaintenanceProvidesForBooking__SetInactive__int(), theTypesPackage.getInteger(), "setInactive", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(iRoomMaintenanceEClass, IRoomMaintenance.class, "IRoomMaintenance", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getIRoomMaintenance__AddRoom__int_String(), theTypesPackage.getInteger(), "addRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1581,13 +1637,12 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "status", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIRoomMaintenance__EditRoomType__String_String_int_int_String_int(), theTypesPackage.getInteger(), "editRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIRoomMaintenance__EditRoomType__String_String_int_int_String(), theTypesPackage.getInteger(), "editRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomTypeEnum", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "price", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "maxNrOfGuests", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "description", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "nrOfRooms", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getIRoomMaintenance__EditRoom__int_String(), theTypesPackage.getInteger(), "editRoom", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
