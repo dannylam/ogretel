@@ -120,6 +120,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 						RoomType newRT = new RoomTypeImpl(roomTypeID,
 								roomTypeEnum, price, maxNrOfGuests, description);
 						this.getStringToRoomType().put(newRT.getID(), newRT);
+						this.getCalendar().getStringToListsMap().put(roomTypeID, new BasicEList<Integer>(365));
 						return 0;
 					}
 					return 1;
@@ -237,7 +238,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	 * @generated NOT
 	 */
 	public RoomTypeEnum stringToRoomTypeEnum(String roomTypeEnum) {
-
+		
 		switch (roomTypeEnum) {
 		case "doublebed":
 			return RoomTypeEnum.DOUBLEBED;
@@ -260,7 +261,8 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	 */
 	public int removeRoomType(String roomType) {
 
-		if (exists(roomType)) {
+		if (this.exists(roomType)) {
+			this.getCalendar().getStringToListsMap().removeKey(roomType);
 			this.getStringToRoomType().remove(roomType);
 			return 0;
 		}
