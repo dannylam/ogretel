@@ -51,6 +51,13 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testCheckOut() {
+		int roomID =378;
+		int checkOut;
+		testBook();
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		checkOut = bp.checkOut(roomID, guestEmail);
+		assertTrue(checkOut==0);
+		
 		fail("Not yet implemented");
 	}
 
