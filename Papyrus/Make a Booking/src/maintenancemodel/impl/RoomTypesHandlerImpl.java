@@ -89,11 +89,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * Returns true if there is a RoomType with the given String ID
-	 * 
-	 * @param roomTypeID
-	 *            the RoomType ID to be checked if it exists
-	 * 
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public boolean exists(String roomTypeID) {
@@ -102,15 +98,15 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc --> Add a RoomType with the given parameters <!--
+	 * <!-- begin-user-doc --> {@inheritDoc} <!--
 	 * end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
 	public int addRoomType(String roomTypeID, String roomTypeEnum, int price,
 			int maxNrOfGuests, String description) {
-		if (price >= 0) {
-			if (maxNrOfGuests >= 0) {
+		if (price < 0) {
+			if (maxNrOfGuests <= 0) {
 				if (roomTypeEnum != null
 						&& getRoomTypeEnums().contains(roomTypeEnum)) {
 					if (roomTypeID != null
@@ -128,12 +124,10 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 			return 3;
 		}
 		return 4;
-
-		// TODO
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public int getPrice(String roomTypeID) {
@@ -144,7 +138,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -155,7 +149,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc --> Get the RoomType from its ID. <!-- end-user-doc
+	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc
 	 * -->
 	 * 
 	 * @generated NOT
@@ -167,7 +161,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 		}
 		return null;
 
-		// TODO: test. & is return null good?
+		// TODO: test
 	}
 
 	/**
@@ -213,7 +207,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -251,9 +245,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc --> Remove the RoomType sent in from the list of
-	 * known objects of the RoomType class. If it was removed 0 is returned else
-	 * 1. <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */

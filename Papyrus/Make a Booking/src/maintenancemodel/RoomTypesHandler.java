@@ -43,6 +43,7 @@ public interface RoomTypesHandler extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @return true if roomTypeID valid, else false
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
 	 * @generated
@@ -51,6 +52,12 @@ public interface RoomTypesHandler extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @return
+	 * 0 if successful
+	 * 1 if roomTypeID invalid
+	 * 2 if roomTypeEnum invalid
+	 * 3 if maxNrOfGuests <= 0
+	 * 4 if price < 0
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false" roomTypeEnumDataType="org.eclipse.uml2.types.String" roomTypeEnumRequired="true" roomTypeEnumOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" maxNrOfGuestsDataType="org.eclipse.uml2.types.Integer" maxNrOfGuestsRequired="true" maxNrOfGuestsOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
 	 * @generated
@@ -58,9 +65,16 @@ public interface RoomTypesHandler extends EObject {
 	int addRoomType(String roomTypeID, String roomTypeEnum, int price, int maxNrOfGuests, String description);
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> Remove the RoomType sent in from the list of
+	 * known objects of the RoomType class.
+	 * @return
+	 * 0 if it was removed 
+	 * 1 else
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
+	 * 
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true"
+	 *        ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String"
+	 *        roomTypeIDRequired="true" roomTypeIDOrdered="false"
 	 * @generated
 	 */
 	int removeRoomType(String roomTypeID);
@@ -68,6 +82,9 @@ public interface RoomTypesHandler extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @return
+	 * price if roomTypeID valid
+	 * -1 otherwise
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
 	 * @generated
@@ -76,6 +93,7 @@ public interface RoomTypesHandler extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @return List of all RoomTypeIDs currently in the system
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
@@ -84,6 +102,7 @@ public interface RoomTypesHandler extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @return RoomType indicated by roomTypeID, null if invalid
 	 * <!-- end-user-doc -->
 	 * @model required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
 	 * @generated
@@ -114,6 +133,7 @@ public interface RoomTypesHandler extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @return List of Strings of the available RoomTypeEnums
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated
