@@ -26,8 +26,8 @@ public class testBookingProvidesImpl {
 	String roomTypes = "Single";
 	String extras = "Soaps";
 	
-	//Didnt we fix this?
-	private BookingProvides bp = new BookingProvidesImpl();
+	//Just nu är BookingProvides en publik konstruktor istället för protected
+	BookingProvides bp = new BookingProvidesImpl();
 	
 	/**
 	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#checkIn(java.lang.String, java.lang.String)}.
@@ -35,9 +35,9 @@ public class testBookingProvidesImpl {
 	@Test
 	public void testCheckIn() {
 		//checka in med bookingref, guestemail och roomstype.
-		//ej skapa bokning/edit
 		testBook();
 		//ang ej skapa bokning-hur får vi tag på bookingRef till checkIn om vi inte använder bp.book(...)?
+		//sant, men det var mer än bara book(), typ edit osv, så blev fösrvirrad.
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
 		int checkIn = bp.checkIn(bookingRef, roomTypes, guestEmail);
 		assertTrue(checkIn==0);
@@ -101,7 +101,7 @@ public class testBookingProvidesImpl {
 		assertTrue(rmB == 0);
 		assertTrue(!(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef)));
 		
-		fail("Not yet implemented");
+		fail("No booking reference or wrong inparametres.");
 	}
 
 	/**
@@ -115,7 +115,7 @@ public class testBookingProvidesImpl {
 		
 		assertTrue(edBP == 0);
 		
-		fail("Not yet implemented");
+		fail("No booking reference or wrong inparametres.");
 	}
 
 	/**
@@ -130,7 +130,7 @@ public class testBookingProvidesImpl {
 		int setPM = bp.setPaymentMethod(method, bookingRef);
 		
 		assertTrue(setPM == 0);
-		fail("Not yet implemented");
+		fail("No booking reference or wrong inparametres.");
 	}
 
 	/**
@@ -153,7 +153,7 @@ public class testBookingProvidesImpl {
 	
 		assertTrue(setPaD == 0);
 		
-		fail("Not yet implemented");
+		fail("No booking reference or wrong inparametres.");
 	}
 
 	/**
@@ -174,7 +174,7 @@ public class testBookingProvidesImpl {
 		
 		assertTrue(setPeD == 0);
 		
-		fail("Not yet implemented");
+		fail("No personal details found or wrong inparametres.");
 	}
 
 	/**
@@ -184,7 +184,7 @@ public class testBookingProvidesImpl {
 	public void testBook() {
 		assertTrue(bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
 		
-		fail("Not yet implemented");
+		fail("No booking found or wrong inparametres.");
 	}
 
 }
