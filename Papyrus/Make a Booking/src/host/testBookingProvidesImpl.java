@@ -26,6 +26,7 @@ public class testBookingProvidesImpl {
 	String roomTypes = "Single";
 	String extras = "Soaps";
 	
+	//Didnt we fix this?
 	private BookingProvides bp = new BookingProvidesImpl();
 	
 	/**
@@ -40,7 +41,7 @@ public class testBookingProvidesImpl {
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
 		int checkIn = bp.checkIn(bookingRef, roomTypes, guestEmail);
 		assertTrue(checkIn==0);
-		fail("Not yet implemented");
+		fail("testCheckIn failed");
 	}
 
 	/**
@@ -54,7 +55,7 @@ public class testBookingProvidesImpl {
 		checkOut = bp.checkOut(roomID, guestEmail);
 		assertTrue(checkOut==0);
 		
-		fail("Not yet implemented");
+		fail("testCheckOut failed");
 	}
 
 	/**
@@ -78,7 +79,12 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testGetPrice() {
-		fail("Not yet implemented");
+		testBook();
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		int price = bp.getPrice(bookingRef);
+		//this feels a bit ridiculous but Im not sure how else the price should be compared/accessed.
+		assertTrue(price == bp.getPrice(bookingRef));
+		fail("GetPrice failed");
 	}
 
 	/**
