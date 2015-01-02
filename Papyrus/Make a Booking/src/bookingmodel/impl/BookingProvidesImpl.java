@@ -72,7 +72,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected BookingProvidesImpl() {
+	public BookingProvidesImpl() {
 		super();
 	}
 

@@ -26,8 +26,8 @@ public class testBookingProvidesImpl {
 	String roomTypes = "Single";
 	String extras = "Soaps";
 	
-	//Didnt we fix this?
-	private BookingProvides bp = new BookingProvidesImpl();
+	//Just nu är BookingProvides en publik konstruktor istället för protected
+	BookingProvides bp = new BookingProvidesImpl();
 	
 	/**
 	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#checkIn(java.lang.String, java.lang.String)}.
