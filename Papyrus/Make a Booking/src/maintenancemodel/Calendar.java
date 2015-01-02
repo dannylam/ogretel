@@ -46,16 +46,6 @@ public interface Calendar extends EObject {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>String To Lists Map</em>' map.
 	 * @see #getStringToListsMap()
-	 * @generated
-	 */
-	void setStringToListsMap(Map.Entry<String, EList<Integer>> value);
-
-	/**
-	 * Sets the value of the '{@link maintenancemodel.Calendar#getStringToListsMap <em>String To Lists Map</em>}' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>String To Lists Map</em>' map.
-	 * @see #getStringToListsMap()
 	 * @generated NOT
 	 */
 	void setStringToListsMap(EMap<String, EList<Integer>> value);
@@ -78,6 +68,11 @@ public interface Calendar extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @return
+	 * 0 if successful
+	 * 1 if roomType invalid
+	 * 2 if start < 0
+	 * 3 if end out of bounds
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false" incrementDataType="org.eclipse.uml2.types.Integer" incrementRequired="true" incrementOrdered="false"
 	 * @generated
