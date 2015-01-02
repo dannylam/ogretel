@@ -6,6 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Set;
 
 import maintenancemodel.ExtraHandler;
 import maintenancemodel.MaintenanceProvidesForBooking;
@@ -228,8 +229,10 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	public boolean canBook(EList<String> roomTypeIDs, String start, String end) {
 
 		//For all requested roomtypes
+		Set<String> types = new Set<String>();
+		
 		for(String id : roomTypeIDs){
-			
+
 			int amount = 1;
 			//Check how many of this type
 			for(String id2 : roomTypeIDs){
@@ -278,11 +281,11 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public int setActive(String roomTypeID) {
-		//return roomID if successful and -1 if not
 		if(roomTypes.exists(roomTypeID)){
 			RoomType rt = roomTypes.getRoomType(roomTypeID);
 			EList<Room> roomsOfType = rt.getRoom();
@@ -333,9 +336,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @return
-	 * 0 if successful
-	 * 1 if roomID invalid
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
