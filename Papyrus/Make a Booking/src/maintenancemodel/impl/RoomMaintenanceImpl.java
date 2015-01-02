@@ -229,9 +229,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 				return 0;
 			}
-			return 1;
+			return 2;
 		}
-		return 2;
+		return 1;
 
 		// TODO TEST
 	}
@@ -270,7 +270,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> Remove the RoomType wit the given ID. <!--
+	 * <!-- begin-user-doc --> {@inheritDoc} <!--
 	 * end-user-doc -->
 	 * 
 	 * @generated NOT
@@ -376,8 +376,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 		}
 
 		return strings;
-
-		// TODO tests
 	}
 
 	/**
@@ -396,7 +394,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->Get the RoomTypes price. <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -405,7 +403,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 		if (this.roomTypes.exists(roomTypeID)) {
 			return this.roomTypes.getRoomType(roomTypeID).getPrice();
 		}
-		return 1;
+		return -1;
 		// TODO: test
 	}
 
@@ -415,23 +413,23 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int getRoomTypeMaxNrOfGuests(String roomTypeID) {
-
 		if (this.roomTypes.exists(roomTypeID)) {
 			return this.roomTypes.getRoomType(roomTypeID).getMaxNrOfGuests();
 		}
-		return 1;
+		return -1;
 		// TODO
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getRoomTypeDescription(String roomTypeID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (this.roomTypes.exists(roomTypeID)) {
+			return this.roomTypes.getRoomType(roomTypeID).getDescription();
+		}
+		return null;
 	}
 
 	/**
@@ -454,11 +452,10 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public EList<String> getRoomTypeEnums() {
 		return this.roomTypes.getRoomTypeEnums();
-		// TODO: test
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -466,12 +463,11 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 		if (this.roomTypes.exists(roomTypeID)) {
 			return this.roomTypes.getRoomType(roomTypeID).getNrOfRooms();
 		}
-		return 1;
+		return -1;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> Edit the Room with @param roomID. I.e. give it
-	 * another (or same, if you feel like it...) RoomType. <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -480,25 +476,24 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 		if (this.removeRoom(roomID) == 0) {
 			return this.addRoom(roomID, roomTypeID);
 		}
-		return 1;
+		return 3;
 		// TODO:test
 	}
 
 	/**
-	 * <!-- begin-user-doc --> Returns a list of the current Room IDs. <!--
+	 * <!-- begin-user-doc --> {@inheritDoc} <!--
 	 * end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
 	public EList<Integer> getRoomIDs() {
-		// TODO:
 		Integer[] ids = this.rooms.getIntegerToRoomMap().keySet()
 				.toArray(new Integer[0]);
 		return new BasicEList<Integer>(Arrays.asList(ids));
 	}
 
 	/**
-	 * <!-- begin-user-doc --> Returns a list of the current RoomType IDs. <!--
+	 * <!-- begin-user-doc --> {@inheritDoc} <!--
 	 * end-user-doc -->
 	 * 
 	 * @generated NOT
