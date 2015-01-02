@@ -36,11 +36,8 @@ public class testBookingProvidesImpl {
 		//checka in med bookingref, guestemail och roomstype.
 		//ej skapa bokning/edit
 		testBook();
+		//ang ej skapa bokning-hur får vi tag på bookingRef till checkIn om vi inte använder bp.book(...)?
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
-		//String bookingRef = "";
-		//String roomsType = "single";
-		//String guestEmail = "grischa@group4.se";
-		
 		int checkIn = bp.checkIn(bookingRef, roomTypes, guestEmail);
 		assertTrue(checkIn==0);
 		fail("Not yet implemented");
@@ -54,7 +51,6 @@ public class testBookingProvidesImpl {
 		int roomID =378;
 		int checkOut;
 		testBook();
-		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
 		checkOut = bp.checkOut(roomID, guestEmail);
 		assertTrue(checkOut==0);
 		
