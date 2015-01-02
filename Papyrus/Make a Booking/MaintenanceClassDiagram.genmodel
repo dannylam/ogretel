@@ -38,6 +38,11 @@
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="maintenancemodel.ecore#//RoomTypeEnum/Doublebed"/>
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="maintenancemodel.ecore#//RoomTypeEnum/Luxurysuite"/>
     </genEnums>
+    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="maintenancemodel.ecore#//RoomStatusEnum">
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="maintenancemodel.ecore#//RoomStatusEnum/Vacant"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="maintenancemodel.ecore#//RoomStatusEnum/Busy"/>
+      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="maintenancemodel.ecore#//RoomStatusEnum/Maintenance"/>
+    </genEnums>
     <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="maintenancemodel.ecore#//ExperienceStatusEnum">
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="maintenancemodel.ecore#//ExperienceStatusEnum/ready"/>
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="maintenancemodel.ecore#//ExperienceStatusEnum/maintenance"/>
@@ -47,18 +52,20 @@
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="maintenancemodel.ecore#//ProductStatusEnum/outOfStock"/>
       <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="maintenancemodel.ecore#//ProductStatusEnum/restocking"/>
     </genEnums>
-    <genEnums xsi:type="genmodel:GenEnum" typeSafeEnumCompatible="false" ecoreEnum="maintenancemodel.ecore#//RoomStatusEnum">
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="maintenancemodel.ecore#//RoomStatusEnum/Vacant"/>
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="maintenancemodel.ecore#//RoomStatusEnum/Busy"/>
-      <genEnumLiterals xsi:type="genmodel:GenEnumLiteral" ecoreEnumLiteral="maintenancemodel.ecore#//RoomStatusEnum/Maintenance"/>
-    </genEnums>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//RoomType">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//RoomType/price"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//RoomType/maxNrOfGuests"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//RoomType/description"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//RoomType/roomTypeEnum"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//RoomType/roomTypeID"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//RoomType/nrOfRooms"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference maintenancemodel.ecore#//RoomType/room"/>
+    </genClasses>
+    <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//Room">
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//Room/roomID"/>
+      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//Room/roomStatusEnum"/>
+      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
+          createChild="true" ecoreFeature="ecore:EReference maintenancemodel.ecore#//Room/roomType"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//Experience">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//Experience/nrOfSpots"/>
@@ -77,12 +84,6 @@
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//Product">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//Product/stock"/>
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//Product/productStatusEnum"/>
-    </genClasses>
-    <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//Room">
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//Room/roomID"/>
-      <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//Room/roomStatusEnum"/>
-      <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"
-          createChild="true" ecoreFeature="ecore:EReference maintenancemodel.ecore#//Room/roomType"/>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//ExtraHandler">
       <genFeatures xsi:type="genmodel:GenFeature" property="None" children="true"

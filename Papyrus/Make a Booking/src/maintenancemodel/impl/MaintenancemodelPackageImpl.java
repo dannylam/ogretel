@@ -336,8 +336,8 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRoomType_NrOfRooms() {
-		return (EAttribute)roomTypeEClass.getEStructuralFeatures().get(5);
+	public EReference getRoomType_Room() {
+		return (EReference)roomTypeEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -1328,7 +1328,12 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		createEAttribute(roomTypeEClass, ROOM_TYPE__DESCRIPTION);
 		createEAttribute(roomTypeEClass, ROOM_TYPE__ROOM_TYPE_ENUM);
 		createEAttribute(roomTypeEClass, ROOM_TYPE__ROOM_TYPE_ID);
-		createEAttribute(roomTypeEClass, ROOM_TYPE__NR_OF_ROOMS);
+		createEReference(roomTypeEClass, ROOM_TYPE__ROOM);
+
+		roomEClass = createEClass(ROOM);
+		createEAttribute(roomEClass, ROOM__ROOM_ID);
+		createEAttribute(roomEClass, ROOM__ROOM_STATUS_ENUM);
+		createEReference(roomEClass, ROOM__ROOM_TYPE);
 
 		experienceEClass = createEClass(EXPERIENCE);
 		createEAttribute(experienceEClass, EXPERIENCE__NR_OF_SPOTS);
@@ -1347,11 +1352,6 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		productEClass = createEClass(PRODUCT);
 		createEAttribute(productEClass, PRODUCT__STOCK);
 		createEAttribute(productEClass, PRODUCT__PRODUCT_STATUS_ENUM);
-
-		roomEClass = createEClass(ROOM);
-		createEAttribute(roomEClass, ROOM__ROOM_ID);
-		createEAttribute(roomEClass, ROOM__ROOM_STATUS_ENUM);
-		createEReference(roomEClass, ROOM__ROOM_TYPE);
 
 		extraHandlerEClass = createEClass(EXTRA_HANDLER);
 		createEReference(extraHandlerEClass, EXTRA_HANDLER__INT_TO_EXTRA_MAP);
@@ -1453,9 +1453,9 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 
 		// Create enums
 		roomTypeEnumEEnum = createEEnum(ROOM_TYPE_ENUM);
+		roomStatusEnumEEnum = createEEnum(ROOM_STATUS_ENUM);
 		experienceStatusEnumEEnum = createEEnum(EXPERIENCE_STATUS_ENUM);
 		productStatusEnumEEnum = createEEnum(PRODUCT_STATUS_ENUM);
-		roomStatusEnumEEnum = createEEnum(ROOM_STATUS_ENUM);
 	}
 
 	/**
@@ -1503,7 +1503,12 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		initEAttribute(getRoomType_Description(), theTypesPackage.getString(), "description", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomType_RoomTypeEnum(), this.getRoomTypeEnum(), "roomTypeEnum", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomType_RoomTypeID(), theTypesPackage.getString(), "roomTypeID", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getRoomType_NrOfRooms(), theTypesPackage.getInteger(), "nrOfRooms", null, 1, 1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getRoomType_Room(), this.getRoom(), null, "room", null, 0, -1, RoomType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(roomEClass, Room.class, "Room", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRoom_RoomID(), theTypesPackage.getInteger(), "roomID", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getRoom_RoomStatusEnum(), this.getRoomStatusEnum(), "roomStatusEnum", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getRoom_RoomType(), this.getRoomType(), null, "roomType", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(experienceEClass, Experience.class, "Experience", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getExperience_NrOfSpots(), theTypesPackage.getInteger(), "nrOfSpots", null, 1, 1, Experience.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1523,11 +1528,6 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		initEClass(productEClass, Product.class, "Product", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProduct_Stock(), theTypesPackage.getInteger(), "stock", null, 1, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getProduct_ProductStatusEnum(), this.getProductStatusEnum(), "productStatusEnum", null, 1, 1, Product.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-
-		initEClass(roomEClass, Room.class, "Room", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRoom_RoomID(), theTypesPackage.getInteger(), "roomID", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getRoom_RoomStatusEnum(), this.getRoomStatusEnum(), "roomStatusEnum", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEReference(getRoom_RoomType(), this.getRoomType(), null, "roomType", null, 1, 1, Room.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		initEClass(extraHandlerEClass, ExtraHandler.class, "ExtraHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getExtraHandler_IntToExtraMap(), this.getIntegerToExtraMap(), null, "intToExtraMap", null, 0, -1, ExtraHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1768,6 +1768,11 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		addEEnumLiteral(roomTypeEnumEEnum, RoomTypeEnum.DOUBLEBED);
 		addEEnumLiteral(roomTypeEnumEEnum, RoomTypeEnum.LUXURYSUITE);
 
+		initEEnum(roomStatusEnumEEnum, RoomStatusEnum.class, "RoomStatusEnum");
+		addEEnumLiteral(roomStatusEnumEEnum, RoomStatusEnum.VACANT);
+		addEEnumLiteral(roomStatusEnumEEnum, RoomStatusEnum.BUSY);
+		addEEnumLiteral(roomStatusEnumEEnum, RoomStatusEnum.MAINTENANCE);
+
 		initEEnum(experienceStatusEnumEEnum, ExperienceStatusEnum.class, "ExperienceStatusEnum");
 		addEEnumLiteral(experienceStatusEnumEEnum, ExperienceStatusEnum.READY);
 		addEEnumLiteral(experienceStatusEnumEEnum, ExperienceStatusEnum.MAINTENANCE);
@@ -1776,11 +1781,6 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		addEEnumLiteral(productStatusEnumEEnum, ProductStatusEnum.IN_STOCK);
 		addEEnumLiteral(productStatusEnumEEnum, ProductStatusEnum.OUT_OF_STOCK);
 		addEEnumLiteral(productStatusEnumEEnum, ProductStatusEnum.RESTOCKING);
-
-		initEEnum(roomStatusEnumEEnum, RoomStatusEnum.class, "RoomStatusEnum");
-		addEEnumLiteral(roomStatusEnumEEnum, RoomStatusEnum.VACANT);
-		addEEnumLiteral(roomStatusEnumEEnum, RoomStatusEnum.BUSY);
-		addEEnumLiteral(roomStatusEnumEEnum, RoomStatusEnum.MAINTENANCE);
 
 		// Create resource
 		createResource(eNS_URI);

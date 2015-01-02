@@ -76,6 +76,12 @@ public class MaintenancemodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case MaintenancemodelPackage.ROOM: {
+				Room room = (Room)theEObject;
+				T result = caseRoom(room);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case MaintenancemodelPackage.EXPERIENCE: {
 				Experience experience = (Experience)theEObject;
 				T result = caseExperience(experience);
@@ -102,12 +108,6 @@ public class MaintenancemodelSwitch<T> extends Switch<T> {
 				T result = caseProduct(product);
 				if (result == null) result = caseAbstractExtra(product);
 				if (result == null) result = caseExtra(product);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case MaintenancemodelPackage.ROOM: {
-				Room room = (Room)theEObject;
-				T result = caseRoom(room);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

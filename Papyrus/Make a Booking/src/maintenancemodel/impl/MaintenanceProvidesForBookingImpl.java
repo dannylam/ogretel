@@ -6,15 +6,12 @@ import java.lang.reflect.InvocationTargetException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import maintenancemodel.Calendar;
 import maintenancemodel.ExtraHandler;
 import maintenancemodel.MaintenanceProvidesForBooking;
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.RoomHandler;
 import maintenancemodel.RoomStatusEnum;
 import maintenancemodel.RoomTypesHandler;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;

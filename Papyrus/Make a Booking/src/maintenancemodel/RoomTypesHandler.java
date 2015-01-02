@@ -71,10 +71,7 @@ public interface RoomTypesHandler extends EObject {
 	 * 0 if it was removed 
 	 * 1 else
 	 * <!-- end-user-doc -->
-	 * 
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true"
-	 *        ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String"
-	 *        roomTypeIDRequired="true" roomTypeIDOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
 	 * @generated
 	 */
 	int removeRoomType(String roomTypeID);

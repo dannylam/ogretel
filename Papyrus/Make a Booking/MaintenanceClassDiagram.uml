@@ -18,10 +18,7 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_jXtRwI6YEeS0D-EMhs8Yvw" name="roomTypeID" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_2sTwwJDOEeS-OrkE_s2uog" name="nrOfRooms" visibility="private">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_CJzVwJKmEeSb1fPQxH1C6w" name="room" type="_itkoAHlBEeScv6HJEKdjpA" aggregation="composite" association="_CJ0j4JKmEeSb1fPQxH1C6w">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_CJzVwJKmEeSb1fPQxH1C6w" name="roomsOf Type" type="_itkoAHlBEeScv6HJEKdjpA" aggregation="composite" association="_CJ0j4JKmEeSb1fPQxH1C6w">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CJzVwZKmEeSb1fPQxH1C6w"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CJzVwpKmEeSb1fPQxH1C6w" value="*"/>
       </ownedAttribute>

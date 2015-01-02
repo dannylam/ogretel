@@ -62,9 +62,9 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case MaintenancemodelPackage.ROOM_TYPE: return createRoomType();
+			case MaintenancemodelPackage.ROOM: return createRoom();
 			case MaintenancemodelPackage.EXPERIENCE: return createExperience();
 			case MaintenancemodelPackage.PRODUCT: return createProduct();
-			case MaintenancemodelPackage.ROOM: return createRoom();
 			case MaintenancemodelPackage.EXTRA_HANDLER: return createExtraHandler();
 			case MaintenancemodelPackage.INTEGER_TO_EXTRA_MAP: return (EObject)createIntegerToExtraMap();
 			case MaintenancemodelPackage.ROOM_HANDLER: return createRoomHandler();
@@ -91,12 +91,12 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 		switch (eDataType.getClassifierID()) {
 			case MaintenancemodelPackage.ROOM_TYPE_ENUM:
 				return createRoomTypeEnumFromString(eDataType, initialValue);
+			case MaintenancemodelPackage.ROOM_STATUS_ENUM:
+				return createRoomStatusEnumFromString(eDataType, initialValue);
 			case MaintenancemodelPackage.EXPERIENCE_STATUS_ENUM:
 				return createExperienceStatusEnumFromString(eDataType, initialValue);
 			case MaintenancemodelPackage.PRODUCT_STATUS_ENUM:
 				return createProductStatusEnumFromString(eDataType, initialValue);
-			case MaintenancemodelPackage.ROOM_STATUS_ENUM:
-				return createRoomStatusEnumFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -112,12 +112,12 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 		switch (eDataType.getClassifierID()) {
 			case MaintenancemodelPackage.ROOM_TYPE_ENUM:
 				return convertRoomTypeEnumToString(eDataType, instanceValue);
+			case MaintenancemodelPackage.ROOM_STATUS_ENUM:
+				return convertRoomStatusEnumToString(eDataType, instanceValue);
 			case MaintenancemodelPackage.EXPERIENCE_STATUS_ENUM:
 				return convertExperienceStatusEnumToString(eDataType, instanceValue);
 			case MaintenancemodelPackage.PRODUCT_STATUS_ENUM:
 				return convertProductStatusEnumToString(eDataType, instanceValue);
-			case MaintenancemodelPackage.ROOM_STATUS_ENUM:
-				return convertRoomStatusEnumToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}

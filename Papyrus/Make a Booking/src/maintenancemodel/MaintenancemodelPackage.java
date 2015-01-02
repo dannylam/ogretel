@@ -114,13 +114,13 @@ public interface MaintenancemodelPackage extends EPackage {
 	int ROOM_TYPE__ROOM_TYPE_ID = 4;
 
 	/**
-	 * The feature id for the '<em><b>Nr Of Rooms</b></em>' attribute.
+	 * The feature id for the '<em><b>Room</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPE__NR_OF_ROOMS = 5;
+	int ROOM_TYPE__ROOM = 5;
 
 	/**
 	 * The number of structural features of the '<em>Room Type</em>' class.
@@ -148,7 +148,92 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @see maintenancemodel.impl.MaintenancemodelPackageImpl#getExtra()
 	 * @generated
 	 */
-	int EXTRA = 3;
+	int EXTRA = 4;
+
+	/**
+	 * The meta object id for the '{@link maintenancemodel.impl.AbstractExtraImpl <em>Abstract Extra</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see maintenancemodel.impl.AbstractExtraImpl
+	 * @see maintenancemodel.impl.MaintenancemodelPackageImpl#getAbstractExtra()
+	 * @generated
+	 */
+	int ABSTRACT_EXTRA = 3;
+
+	/**
+	 * The meta object id for the '{@link maintenancemodel.impl.ExperienceImpl <em>Experience</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see maintenancemodel.impl.ExperienceImpl
+	 * @see maintenancemodel.impl.MaintenancemodelPackageImpl#getExperience()
+	 * @generated
+	 */
+	int EXPERIENCE = 2;
+
+	/**
+	 * The meta object id for the '{@link maintenancemodel.impl.ProductImpl <em>Product</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see maintenancemodel.impl.ProductImpl
+	 * @see maintenancemodel.impl.MaintenancemodelPackageImpl#getProduct()
+	 * @generated
+	 */
+	int PRODUCT = 5;
+
+	/**
+	 * The meta object id for the '{@link maintenancemodel.impl.RoomImpl <em>Room</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see maintenancemodel.impl.RoomImpl
+	 * @see maintenancemodel.impl.MaintenancemodelPackageImpl#getRoom()
+	 * @generated
+	 */
+	int ROOM = 1;
+
+	/**
+	 * The feature id for the '<em><b>Room ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM__ROOM_ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Room Status Enum</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM__ROOM_STATUS_ENUM = 1;
+
+	/**
+	 * The feature id for the '<em><b>Room Type</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM__ROOM_TYPE = 2;
+
+	/**
+	 * The number of structural features of the '<em>Room</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Room</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_OPERATION_COUNT = 0;
 
 	/**
 	 * The number of structural features of the '<em>Extra</em>' class.
@@ -176,16 +261,6 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int EXTRA_OPERATION_COUNT = 1;
-
-	/**
-	 * The meta object id for the '{@link maintenancemodel.impl.AbstractExtraImpl <em>Abstract Extra</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see maintenancemodel.impl.AbstractExtraImpl
-	 * @see maintenancemodel.impl.MaintenancemodelPackageImpl#getAbstractExtra()
-	 * @generated
-	 */
-	int ABSTRACT_EXTRA = 2;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -249,16 +324,6 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int ABSTRACT_EXTRA_OPERATION_COUNT = EXTRA_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link maintenancemodel.impl.ExperienceImpl <em>Experience</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see maintenancemodel.impl.ExperienceImpl
-	 * @see maintenancemodel.impl.MaintenancemodelPackageImpl#getExperience()
-	 * @generated
-	 */
-	int EXPERIENCE = 1;
 
 	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
@@ -351,16 +416,6 @@ public interface MaintenancemodelPackage extends EPackage {
 	int EXPERIENCE_OPERATION_COUNT = ABSTRACT_EXTRA_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link maintenancemodel.impl.ProductImpl <em>Product</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see maintenancemodel.impl.ProductImpl
-	 * @see maintenancemodel.impl.MaintenancemodelPackageImpl#getProduct()
-	 * @generated
-	 */
-	int PRODUCT = 4;
-
-	/**
 	 * The feature id for the '<em><b>ID</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -440,61 +495,6 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int PRODUCT_OPERATION_COUNT = ABSTRACT_EXTRA_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link maintenancemodel.impl.RoomImpl <em>Room</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see maintenancemodel.impl.RoomImpl
-	 * @see maintenancemodel.impl.MaintenancemodelPackageImpl#getRoom()
-	 * @generated
-	 */
-	int ROOM = 5;
-
-	/**
-	 * The feature id for the '<em><b>Room ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM__ROOM_ID = 0;
-
-	/**
-	 * The feature id for the '<em><b>Room Status Enum</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM__ROOM_STATUS_ENUM = 1;
-
-	/**
-	 * The feature id for the '<em><b>Room Type</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM__ROOM_TYPE = 2;
-
-	/**
-	 * The number of structural features of the '<em>Room</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Room</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link maintenancemodel.impl.ExtraHandlerImpl <em>Extra Handler</em>}' class.
@@ -1797,7 +1797,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @see maintenancemodel.impl.MaintenancemodelPackageImpl#getExperienceStatusEnum()
 	 * @generated
 	 */
-	int EXPERIENCE_STATUS_ENUM = 21;
+	int EXPERIENCE_STATUS_ENUM = 22;
 
 	/**
 	 * The meta object id for the '{@link maintenancemodel.ProductStatusEnum <em>Product Status Enum</em>}' enum.
@@ -1807,7 +1807,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @see maintenancemodel.impl.MaintenancemodelPackageImpl#getProductStatusEnum()
 	 * @generated
 	 */
-	int PRODUCT_STATUS_ENUM = 22;
+	int PRODUCT_STATUS_ENUM = 23;
 
 	/**
 	 * The meta object id for the '{@link maintenancemodel.RoomStatusEnum <em>Room Status Enum</em>}' enum.
@@ -1817,7 +1817,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @see maintenancemodel.impl.MaintenancemodelPackageImpl#getRoomStatusEnum()
 	 * @generated
 	 */
-	int ROOM_STATUS_ENUM = 23;
+	int ROOM_STATUS_ENUM = 21;
 
 
 	/**
@@ -1886,15 +1886,15 @@ public interface MaintenancemodelPackage extends EPackage {
 	EAttribute getRoomType_RoomTypeID();
 
 	/**
-	 * Returns the meta object for the attribute '{@link maintenancemodel.RoomType#getNrOfRooms <em>Nr Of Rooms</em>}'.
+	 * Returns the meta object for the containment reference list '{@link maintenancemodel.RoomType#getRoom <em>Room</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Nr Of Rooms</em>'.
-	 * @see maintenancemodel.RoomType#getNrOfRooms()
+	 * @return the meta object for the containment reference list '<em>Room</em>'.
+	 * @see maintenancemodel.RoomType#getRoom()
 	 * @see #getRoomType()
 	 * @generated
 	 */
-	EAttribute getRoomType_NrOfRooms();
+	EReference getRoomType_Room();
 
 	/**
 	 * Returns the meta object for class '{@link maintenancemodel.Experience <em>Experience</em>}'.
@@ -3069,12 +3069,12 @@ public interface MaintenancemodelPackage extends EPackage {
 		EAttribute ROOM_TYPE__ROOM_TYPE_ID = eINSTANCE.getRoomType_RoomTypeID();
 
 		/**
-		 * The meta object literal for the '<em><b>Nr Of Rooms</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Room</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ROOM_TYPE__NR_OF_ROOMS = eINSTANCE.getRoomType_NrOfRooms();
+		EReference ROOM_TYPE__ROOM = eINSTANCE.getRoomType_Room();
 
 		/**
 		 * The meta object literal for the '{@link maintenancemodel.impl.ExperienceImpl <em>Experience</em>}' class.

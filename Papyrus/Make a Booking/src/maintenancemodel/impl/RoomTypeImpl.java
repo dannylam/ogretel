@@ -2,14 +2,23 @@
  */
 package maintenancemodel.impl;
 
+import java.util.Collection;
+
 import maintenancemodel.MaintenancemodelPackage;
+import maintenancemodel.Room;
 import maintenancemodel.RoomType;
 import maintenancemodel.RoomTypeEnum;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +32,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getRoomTypeEnum <em>Room Type Enum</em>}</li>
  *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getRoomTypeID <em>Room Type ID</em>}</li>
- *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getNrOfRooms <em>Nr Of Rooms</em>}</li>
+ *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getRoom <em>Room</em>}</li>
  * </ul>
  * </p>
  *
@@ -131,24 +140,14 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	protected String roomTypeID = ROOM_TYPE_ID_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getNrOfRooms() <em>Nr Of Rooms</em>}' attribute.
+	 * The cached value of the '{@link #getRoom() <em>Room</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNrOfRooms()
+	 * @see #getRoom()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NR_OF_ROOMS_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getNrOfRooms() <em>Nr Of Rooms</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNrOfRooms()
-	 * @generated
-	 * @ordered
-	 */
-	protected int nrOfRooms = NR_OF_ROOMS_EDEFAULT;
+	protected EList<Room> room;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -194,7 +193,7 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 		this.price = price;
 		this.maxNrOfGuests = maxNrOfGuests;
 		this.description = description;
-		this.nrOfRooms = 0;
+		this.room = new BasicEList<Room>();
 
 		// TODO Auto-generated constructor stub
 	}
@@ -342,8 +341,11 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getNrOfRooms() {
-		return nrOfRooms;
+	public EList<Room> getRoom() {
+		if (room == null) {
+			room = new EObjectContainmentEList<Room>(Room.class, this, MaintenancemodelPackage.ROOM_TYPE__ROOM);
+		}
+		return room;
 	}
 
 	/**
@@ -351,11 +353,13 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNrOfRooms(int newNrOfRooms) {
-		int oldNrOfRooms = nrOfRooms;
-		nrOfRooms = newNrOfRooms;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ROOM_TYPE__NR_OF_ROOMS, oldNrOfRooms, nrOfRooms));
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case MaintenancemodelPackage.ROOM_TYPE__ROOM:
+				return ((InternalEList<?>)getRoom()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -376,8 +380,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return getRoomTypeEnum();
 			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ID:
 				return getRoomTypeID();
-			case MaintenancemodelPackage.ROOM_TYPE__NR_OF_ROOMS:
-				return getNrOfRooms();
+			case MaintenancemodelPackage.ROOM_TYPE__ROOM:
+				return getRoom();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -387,6 +391,7 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -405,8 +410,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ID:
 				setRoomTypeID((String)newValue);
 				return;
-			case MaintenancemodelPackage.ROOM_TYPE__NR_OF_ROOMS:
-				setNrOfRooms((Integer)newValue);
+			case MaintenancemodelPackage.ROOM_TYPE__ROOM:
+				getRoom().clear();
+				getRoom().addAll((Collection<? extends Room>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -435,8 +441,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ID:
 				setRoomTypeID(ROOM_TYPE_ID_EDEFAULT);
 				return;
-			case MaintenancemodelPackage.ROOM_TYPE__NR_OF_ROOMS:
-				setNrOfRooms(NR_OF_ROOMS_EDEFAULT);
+			case MaintenancemodelPackage.ROOM_TYPE__ROOM:
+				getRoom().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -460,8 +466,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return roomTypeEnum != ROOM_TYPE_ENUM_EDEFAULT;
 			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ID:
 				return ROOM_TYPE_ID_EDEFAULT == null ? roomTypeID != null : !ROOM_TYPE_ID_EDEFAULT.equals(roomTypeID);
-			case MaintenancemodelPackage.ROOM_TYPE__NR_OF_ROOMS:
-				return nrOfRooms != NR_OF_ROOMS_EDEFAULT;
+			case MaintenancemodelPackage.ROOM_TYPE__ROOM:
+				return room != null && !room.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -486,8 +492,6 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 		result.append(roomTypeEnum);
 		result.append(", roomTypeID: ");
 		result.append(roomTypeID);
-		result.append(", nrOfRooms: ");
-		result.append(nrOfRooms);
 		result.append(')');
 		return result.toString();
 	}
