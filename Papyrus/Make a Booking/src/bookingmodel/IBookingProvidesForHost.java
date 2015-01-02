@@ -2,8 +2,6 @@
  */
 package bookingmodel;
 
-import java.util.List;
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -28,23 +26,22 @@ public interface IBookingProvidesForHost extends EObject {
 	int enableSelfManagement();
 
 	/**
-	 * Add a specific service note.
-	 * @param serviceNote
-	 * @model dataType="types.Integer" required="true" ordered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
+	 * Add a specific service note and its description.
+	 * @return	0 if success 
+	 * 			-1 if the map of service notes is null
+	 * 			1 if the inparams are null
+	 * @param serviceNote, description
+	 * @model dataType="types.Integer" required="true" ordered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false" descriptionDataType="types.String" descriptionRequired="true" descriptionOrdered="false"
 	 * @generated NOT
 	 */
-	int addServiceNote(String serviceNote);
-
-	/**
-	 * Edit a service note by changing a specific service note into a new service note.
-	 * @param oldServiceNote, newServiceNote
-	 * @model dataType="types.Integer" required="true" ordered="false" oldServiceNoteDataType="types.String" oldServiceNoteRequired="true" oldServiceNoteOrdered="false" newServiceNoteDataType="types.String" newServiceNoteRequired="true" newServiceNoteOrdered="false"
-	 * @generated NOT
-	 */
-	int editServiceNote(String oldServiceNote, String newServiceNote);
+	int addServiceNote(String serviceNote, String description);
 
 	/**
 	 * Remove a specific service note
+	 * @return	0 if success 
+	 * 			-1 if of service notes is null
+	 * 			1 if the service does not exist
+	 * 			2 if the inparam are null
 	 * @param serviceNote
 	 * @model dataType="types.Integer" required="true" ordered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
 	 * @generated NOT
@@ -52,11 +49,40 @@ public interface IBookingProvidesForHost extends EObject {
 	int removeServiceNote(String serviceNote);
 
 	/**
-	 * Get service notes from a specific booking.
+	 * Returns the service notes from a specific booking. 
 	 * @param bookingRef
-	 * @model dataType="types.String" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @model required="true" many="false" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
-	List<String> getServiceNotes(String bookingRef);
+	EList<String> getServiceNotesOfBooking(String bookingRef);
+
+	/**
+	 * Changes a the description of a service note.
+	 * @model dataType="types.Integer" required="true" ordered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false" descriptionDataType="types.String" descriptionRequired="true" descriptionOrdered="false"
+	 * @generated NOT
+	 */
+	int editServiceNoteDescription(String serviceNote, String description);
+
+	/**
+	 * Returns a list of all the service notes. 
+	 * @model kind="operation" required="true" many="false" ordered="false"
+	 * @generated NOT
+	 */
+	EList<String> getServiceNotes();
+
+	/**
+	 * Returns the description of a service note
+	 * @model dataType="types.String" required="true" ordered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
+	 * @generated NOT
+	 */
+	String getServiceNoteDescription(String serviceNote);
+
+	/**
+	 * Returns is the given booking is payed or not
+	 * @model bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @generated NOT
+	 */
+	boolean isPayed(String bookingRef);
+
 
 } // IBookingProvidesForHost

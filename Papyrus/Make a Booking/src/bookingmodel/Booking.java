@@ -7,6 +7,7 @@ import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 
 /**
+ * TODO update the javadoc with return and their values!
  * An interface class which represents Booking, extending EObject.
  * which extends an EObject and has 21 methods:
  * getBookingRef - get a specific booking
@@ -279,26 +280,10 @@ public interface Booking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="types.Integer" required="true" ordered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false"
-	 * @generated
-	 */
-	int setExtras(EList<String> extras);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="types.Integer" required="true" ordered="false" roomTypesDataType="types.String" roomTypesMany="true" roomTypesOrdered="false"
-	 * @generated
-	 */
-	int setRoomTypes(EList<String> roomTypes);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
 	 * @model dataType="types.Integer" required="true" roomIDsDataType="types.Integer" roomIDsMany="true"
 	 * @generated
 	 */
-	int setRoomIDs(EList<Integer> roomIDs);
+	int setRoomIDs(List<Integer> roomIDs);
 
 	/**
 	 * Adds extras from a booking into the map with extras.
@@ -328,35 +313,35 @@ public interface Booking extends EObject {
 	void generateBookingRef();
 
 	/**
-	 * TODO JAVADOC
+	 * Returns a list of all extras of a booking.
 	 * @model kind="operation" required="true" many="false"
 	 * @generated NOT
 	 */
 	EList<String> getExtras();
 
 	/**
-	 * TODO JAVADOC
+	 * Returns a list of all roomtypes of a booking.
 	 * @model kind="operation" required="true" many="false"
 	 * @generated NOT
 	 */
 	EList<String> getRoomTypes();
 
 	/**
-	 * TODO JAVADOC
+	 * Returns a list of all roomsIDs of a booking.
 	 * @model kind="operation" required="true" many="false"
 	 * @generated NOT
 	 */
 	EList<String> getRoomIDs();
 
 	/**
-	 * TODO JAVADOC
+	 * Removes the responsible guest from all the rooms in a booking.
 	 * @model dataType="types.Integer" required="true" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated NOT
 	 */
 	int removeResponsibleGuestToAllRooms(String guestEmail);
 
 	/**
-	 * TODO JAVADOC
+	 * Removes the responsible guest from the given room in a booking.
 	 * @model dataType="types.Integer" required="true" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated NOT
 	 */

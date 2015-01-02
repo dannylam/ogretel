@@ -130,6 +130,14 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 				return createRoomIDToBookingRefEntryAdapter();
 			}
 			@Override
+			public Adapter caseServiceNoteHandler(ServiceNoteHandler object) {
+				return createServiceNoteHandlerAdapter();
+			}
+			@Override
+			public Adapter caseServiceNoteToDescriptionEntry(Map.Entry<String, String> object) {
+				return createServiceNoteToDescriptionEntryAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -356,6 +364,34 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRoomIDToBookingRefEntryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link bookingmodel.ServiceNoteHandler <em>Service Note Handler</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see bookingmodel.ServiceNoteHandler
+	 * @generated
+	 */
+	public Adapter createServiceNoteHandlerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Service Note To Description Entry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see java.util.Map.Entry
+	 * @generated
+	 */
+	public Adapter createServiceNoteToDescriptionEntryAdapter() {
 		return null;
 	}
 
