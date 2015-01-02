@@ -251,9 +251,9 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	public int addEntry(String roomTypeID) {
 		if(!this.stringToListsMap.containsKey(roomTypeID)){
@@ -264,14 +264,16 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	public int removeEntry(String roomTypeID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.stringToListsMap.containsKey(roomTypeID)){
+			this.stringToListsMap.removeKey(roomTypeID);
+			return 0;
+		}
+		return 1;
 	}
 
 	/**

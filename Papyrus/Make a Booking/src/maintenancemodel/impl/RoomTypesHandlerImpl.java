@@ -97,7 +97,6 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	 * @generated NOT
 	 */
 	public boolean exists(String roomTypeID) {
-
 		return this.getStringToRoomType().containsKey(roomTypeID);
 		// TODO: TEST
 	}
@@ -110,7 +109,6 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	 */
 	public int addRoomType(String roomTypeID, String roomTypeEnum, int price,
 			int maxNrOfGuests, String description) {
-
 		if (price >= 0) {
 			if (maxNrOfGuests >= 0) {
 				if (roomTypeEnum != null
@@ -119,8 +117,8 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 							&& !getRoomTypeIDs().contains(roomTypeID)) {
 						RoomType newRT = new RoomTypeImpl(roomTypeID,
 								roomTypeEnum, price, maxNrOfGuests, description);
-						this.getStringToRoomType().put(newRT.getID(), newRT);
-						this.getCalendar().getStringToListsMap().put(roomTypeID, new BasicEList<Integer>(365));
+						this.stringToRoomType.put(newRT.getID(), newRT);
+						this.getCalendar().addEntry(roomTypeID);
 						return 0;
 					}
 					return 1;
@@ -261,8 +259,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	 */
 	public int removeRoomType(String roomType) {
 
-		if (this.exists(roomType)) {
-			this.getCalendar().removeEntry(roomType);
+		if (this.exists(roomType) && this.getCalendar().removeEntry(roomType) == 0) {
 			this.getStringToRoomType().remove(roomType);
 			return 0;
 		}
