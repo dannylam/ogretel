@@ -297,13 +297,20 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getPriceRoom(EList<String> roomTypeIDs) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		int sum = 0;
+		for(String id : roomTypeIDs){
+			if(!roomTypes.exists(id)){
+				return -1;
+			}
+			sum += roomTypes.getPrice(id);
+		}
+		
+		return sum;
 	}
 
 	/**
