@@ -35,7 +35,11 @@ public class testBookingProvidesImpl {
 	public void testCheckIn() {
 		//checka in med bookingref, guestemail och roomstype.
 		//ej skapa bokning/edit
-		
+		testBook();
+		//ang ej skapa bokning-hur får vi tag på bookingRef till checkIn om vi inte använder bp.book(...)?
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		int checkIn = bp.checkIn(bookingRef, roomTypes, guestEmail);
+		assertTrue(checkIn==0);
 		fail("Not yet implemented");
 	}
 
@@ -44,6 +48,12 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testCheckOut() {
+		int roomID =378;
+		int checkOut;
+		testBook();
+		checkOut = bp.checkOut(roomID, guestEmail);
+		assertTrue(checkOut==0);
+		
 		fail("Not yet implemented");
 	}
 
