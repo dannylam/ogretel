@@ -21,6 +21,10 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_2sTwwJDOEeS-OrkE_s2uog" name="nrOfRooms" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_CJzVwJKmEeSb1fPQxH1C6w" name="room" type="_itkoAHlBEeScv6HJEKdjpA" aggregation="composite" association="_CJ0j4JKmEeSb1fPQxH1C6w">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CJzVwZKmEeSb1fPQxH1C6w"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CJzVwpKmEeSb1fPQxH1C6w" value="*"/>
+      </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_U6TXUHk_EeScv6HJEKdjpA" name="Experience">
       <generalization xmi:type="uml:Generalization" xmi:id="_kwXBsIXPEeSUfsUdvz7rGg" general="_g7-xIIXPEeSUfsUdvz7rGg"/>
@@ -833,6 +837,12 @@
       <ownedEnd xmi:type="uml:Property" xmi:id="_Pfg6QZIEEeSNJKY2RR7Z1w" name="roomTypesHandler" type="_GrhyMHlEEeScv6HJEKdjpA" association="_Pfg6QJIEEeSNJKY2RR7Z1w">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Pfg6QpIEEeSNJKY2RR7Z1w" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Pfg6Q5IEEeSNJKY2RR7Z1w" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_CJ0j4JKmEeSb1fPQxH1C6w" memberEnd="_CJ0j4ZKmEeSb1fPQxH1C6w _CJzVwJKmEeSb1fPQxH1C6w">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_CJ0j4ZKmEeSb1fPQxH1C6w" name="roomType" type="_CLdSkHk_EeScv6HJEKdjpA" association="_CJ0j4JKmEeSb1fPQxH1C6w">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CJ0j4pKmEeSb1fPQxH1C6w" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CJ0j45KmEeSb1fPQxH1C6w" value="1"/>
       </ownedEnd>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Qp5nMHlBEeScv6HJEKdjpA">

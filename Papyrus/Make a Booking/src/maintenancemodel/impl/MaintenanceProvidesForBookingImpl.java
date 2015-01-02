@@ -12,6 +12,7 @@ import maintenancemodel.ExtraHandler;
 import maintenancemodel.MaintenanceProvidesForBooking;
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.RoomHandler;
+import maintenancemodel.RoomStatusEnum;
 import maintenancemodel.RoomTypesHandler;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -38,15 +39,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * @generated
  */
 public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Container implements MaintenanceProvidesForBooking {
-	/**
-	 * The cached value of the '{@link #getCalendar() <em>Calendar</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCalendar()
-	 * @generated NOT
-	 * @ordered
-	 */
-	protected Calendar calendar = new CalendarImpl();
 
 	/**
 	 * The cached value of the '{@link #getRoomTypes() <em>Room Types</em>}' containment reference.
@@ -289,7 +281,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * @generated NOT
 	 */
 	public int setActive(String roomTypeID) {
-		//return 0 if successful and -1 if not
+		//return roomID if successful and -1 if not
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -315,24 +307,36 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getPriceExtra(EList<String> extraIDs) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		int sum = 0;
+		for(String id : extraIDs){
+			if(!extraHandler.exists(id)){
+				return -1;
+			}
+			sum += extraHandler.getPrice(id);
+		}
+		
+		return sum;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @return
+	 * 0 if successful
+	 * 1 if roomID invalid
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int setInactive(int roomID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.rooms.exists(roomID)){
+			this.rooms.getRoom(roomID).setRoomStatusEnum(RoomStatusEnum.VACANT);
+			return 0;
+		}
+		return 1;
 	}
 
 	/**

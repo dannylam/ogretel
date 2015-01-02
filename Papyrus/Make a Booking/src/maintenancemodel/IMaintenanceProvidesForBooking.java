@@ -67,14 +67,18 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 	 * -1 if any String entry in the List is invalid   
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDsDataType="org.eclipse.uml2.types.String" roomTypeIDsMany="true" roomTypeIDsOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int getPriceRoom(EList<String> roomTypeIDs);
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * @return
+	 * the sum of the prices of the Extras indicated by the String entries in the List extraIDs
+	 * -1 if any String entry in the List is invalid   
+	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extraIDsMany="true" extraIDsOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int getPriceExtra(EList<String> extraIDs);
 
