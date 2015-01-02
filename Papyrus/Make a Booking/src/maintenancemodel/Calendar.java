@@ -81,6 +81,12 @@ public interface Calendar extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @return
+	 * 0 if successful
+	 * 1 if roomType invalid
+	 * 2 if decCap would result in cap < 0 
+	 * 3 if start < 0
+	 * 4 if end out of bounds
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false" decrementDataType="org.eclipse.uml2.types.Integer" decrementRequired="true" decrementOrdered="false"
 	 * @generated

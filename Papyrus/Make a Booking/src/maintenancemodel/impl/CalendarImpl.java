@@ -197,7 +197,6 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int incCap(int start, int end, String roomType, int increment) {
-
 		if (!this.stringToListsMap.containsKey(roomType)) {
 			return 1;
 		}
@@ -220,14 +219,34 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	public int decCap(int start, int end, String roomType, int decrement) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (!this.stringToListsMap.containsKey(roomType)) {
+			return 1;
+		}
+		
+		if(this.getCap(start, end, roomType) - decrement < 0){
+			return 2;
+		}
+
+		if (start < 0) {
+			return 3;
+		}
+		
+		EList<Integer> table = this.stringToListsMap.get(roomType);
+		
+		if (table.size() < end) {
+			return 4;
+		}
+
+		for (int i = start; i <= end; i++) {
+			table.set(i, table.get(i) - decrement);
+		}
+		
+		return 0;
 	}
 
 	/**
