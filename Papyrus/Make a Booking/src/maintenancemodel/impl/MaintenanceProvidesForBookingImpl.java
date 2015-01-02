@@ -6,12 +6,16 @@ import java.lang.reflect.InvocationTargetException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 import maintenancemodel.ExtraHandler;
 import maintenancemodel.MaintenanceProvidesForBooking;
 import maintenancemodel.MaintenancemodelPackage;
+import maintenancemodel.Room;
 import maintenancemodel.RoomHandler;
 import maintenancemodel.RoomStatusEnum;
+import maintenancemodel.RoomType;
 import maintenancemodel.RoomTypesHandler;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -279,9 +283,16 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 */
 	public int setActive(String roomTypeID) {
 		//return roomID if successful and -1 if not
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(roomTypes.exists(roomTypeID)){
+			RoomType rt = roomTypes.getRoomType(roomTypeID);
+			EList<Room> roomsOfType = rt.getRoom();
+			for(Room r : roomsOfType){
+				if(r.getRoomStatusEnum().equals(RoomStatusEnum.VACANT)){
+					return r.getRoomID();
+				}
+			}
+		}
+		return -1;
 	}
 
 	/**
