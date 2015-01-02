@@ -266,7 +266,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int makeBooking(EList<String> roomType, String start, String end) {
+	public int makeBooking(EList<String> roomTypeIDs, String start, String end) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -277,7 +277,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int removeBooking(EList<String> roomType, String start, String end) {
+	public int removeBooking(EList<String> roomTypeID, String start, String end) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();

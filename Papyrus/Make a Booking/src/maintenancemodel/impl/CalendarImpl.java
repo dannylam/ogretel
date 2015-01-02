@@ -9,6 +9,7 @@ import maintenancemodel.MaintenancemodelPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
@@ -204,9 +205,9 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 		if (start < 0) {
 			return 2;
 		}
-		
+
 		EList<Integer> table = this.stringToListsMap.get(roomType);
-		
+
 		if (table.size() < end) {
 			return 3;
 		}
@@ -214,7 +215,7 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 		for (int i = start; i <= end; i++) {
 			table.set(i, table.get(i) + increment);
 		}
-		
+
 		return 0;
 	}
 
@@ -227,17 +228,17 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 		if (!this.stringToListsMap.containsKey(roomType)) {
 			return 1;
 		}
-		
-		if(this.getCap(start, end, roomType) - decrement < 0){
+
+		if (this.getCap(start, end, roomType) - decrement < 0) {
 			return 2;
 		}
 
 		if (start < 0) {
 			return 3;
 		}
-		
+
 		EList<Integer> table = this.stringToListsMap.get(roomType);
-		
+
 		if (table.size() < end) {
 			return 4;
 		}
@@ -245,8 +246,32 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 		for (int i = start; i <= end; i++) {
 			table.set(i, table.get(i) - decrement);
 		}
-		
+
 		return 0;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public int addEntry(String roomTypeID) {
+		if(!this.stringToListsMap.containsKey(roomTypeID)){
+			this.stringToListsMap.put(roomTypeID, new BasicEList<Integer>(365));
+			return 0;
+		}
+		return 1;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
+	 * @generated
+	 */
+	public int removeEntry(String roomTypeID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -347,6 +372,10 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 			return decCap((Integer) arguments.get(0),
 					(Integer) arguments.get(1), (String) arguments.get(2),
 					(Integer) arguments.get(3));
+		case MaintenancemodelPackage.CALENDAR___ADD_ENTRY__STRING:
+			return addEntry((String) arguments.get(0));
+		case MaintenancemodelPackage.CALENDAR___REMOVE_ENTRY__STRING:
+			return removeEntry((String) arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

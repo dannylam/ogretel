@@ -808,13 +808,31 @@ public interface MaintenancemodelPackage extends EPackage {
 	int CALENDAR___DEC_CAP__INT_INT_STRING_INT = 3;
 
 	/**
+	 * The operation id for the '<em>Add Entry</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALENDAR___ADD_ENTRY__STRING = 4;
+
+	/**
+	 * The operation id for the '<em>Remove Entry</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALENDAR___REMOVE_ENTRY__STRING = 5;
+
+	/**
 	 * The number of operations of the '<em>Calendar</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALENDAR_OPERATION_COUNT = 4;
+	int CALENDAR_OPERATION_COUNT = 6;
 
 	/**
 	 * The meta object id for the '{@link maintenancemodel.impl.RoomTypesHandlerImpl <em>Room Types Handler</em>}' class.
@@ -2332,6 +2350,26 @@ public interface MaintenancemodelPackage extends EPackage {
 	EOperation getCalendar__DecCap__int_int_String_int();
 
 	/**
+	 * Returns the meta object for the '{@link maintenancemodel.Calendar#addEntry(java.lang.String) <em>Add Entry</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Entry</em>' operation.
+	 * @see maintenancemodel.Calendar#addEntry(java.lang.String)
+	 * @generated
+	 */
+	EOperation getCalendar__AddEntry__String();
+
+	/**
+	 * Returns the meta object for the '{@link maintenancemodel.Calendar#removeEntry(java.lang.String) <em>Remove Entry</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove Entry</em>' operation.
+	 * @see maintenancemodel.Calendar#removeEntry(java.lang.String)
+	 * @generated
+	 */
+	EOperation getCalendar__RemoveEntry__String();
+
+	/**
 	 * Returns the meta object for class '{@link maintenancemodel.RoomTypesHandler <em>Room Types Handler</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3401,6 +3439,22 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation CALENDAR___DEC_CAP__INT_INT_STRING_INT = eINSTANCE.getCalendar__DecCap__int_int_String_int();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Entry</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CALENDAR___ADD_ENTRY__STRING = eINSTANCE.getCalendar__AddEntry__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Remove Entry</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CALENDAR___REMOVE_ENTRY__STRING = eINSTANCE.getCalendar__RemoveEntry__String();
 
 		/**
 		 * The meta object literal for the '{@link maintenancemodel.impl.RoomTypesHandlerImpl <em>Room Types Handler</em>}' class.

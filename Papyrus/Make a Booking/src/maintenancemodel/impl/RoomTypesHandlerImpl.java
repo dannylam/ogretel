@@ -262,7 +262,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	public int removeRoomType(String roomType) {
 
 		if (this.exists(roomType)) {
-			this.getCalendar().getStringToListsMap().removeKey(roomType);
+			this.getCalendar().removeEntry(roomType);
 			this.getStringToRoomType().remove(roomType);
 			return 0;
 		}

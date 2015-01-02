@@ -61,10 +61,10 @@ public interface Calendar extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false" nrOfRoomsDataType="org.eclipse.uml2.types.Integer" nrOfRoomsRequired="true" nrOfRoomsOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false" nrOfRoomsDataType="org.eclipse.uml2.types.Integer" nrOfRoomsRequired="true" nrOfRoomsOrdered="false"
 	 * @generated
 	 */
-	int setCap(int start, int end, String roomType, int nrOfRooms);
+	int setCap(int start, int end, String roomTypeID, int nrOfRooms);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,10 +74,10 @@ public interface Calendar extends EObject {
 	 * 2 if start < 0
 	 * 3 if end out of bounds
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false" incrementDataType="org.eclipse.uml2.types.Integer" incrementRequired="true" incrementOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false" incrementDataType="org.eclipse.uml2.types.Integer" incrementRequired="true" incrementOrdered="false"
 	 * @generated
 	 */
-	int incCap(int start, int end, String roomType, int increment);
+	int incCap(int start, int end, String roomTypeID, int increment);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -88,9 +88,28 @@ public interface Calendar extends EObject {
 	 * 3 if start < 0
 	 * 4 if end out of bounds
 	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false" decrementDataType="org.eclipse.uml2.types.Integer" decrementRequired="true" decrementOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false" decrementDataType="org.eclipse.uml2.types.Integer" decrementRequired="true" decrementOrdered="false"
 	 * @generated
 	 */
-	int decCap(int start, int end, String roomType, int decrement);
+	int decCap(int start, int end, String roomTypeID, int decrement);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * @return
+	 * 0 if successfully added
+	 * 1 if roomTypeID already part of entry in Map
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
+	 * @generated
+	 */
+	int addEntry(String roomTypeID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
+	 * @generated
+	 */
+	int removeEntry(String roomTypeID);
 
 } // Calendar
