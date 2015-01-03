@@ -64,11 +64,11 @@ public class testBookingProvidesImpl {
 		// Asserts that the condition is true. If it isn't, it throws an AssertionError with the given message.
 		assertTrue("The check out failed", checkOut==0);
 		
-		// Asserts that the guest responsible to the room has been removed and "out" (true).
+		// Asserts true if the guest responsible to the room has been removed and "out".
 		// If it isn't, it throws an AssertionError with the given message.
 		assertTrue("Failed to remove room.", bp.getBookingHandler().getBooking(roomID).getRoomIDToGuestMap().get(roomID).equals("out"));
 		
-		// Asserts that the bookingreference connected to the room has been removed (true).
+		// Asserts true if the booking reference connected to the room has been removed.
 		// If it isn't, it throws an AssertionError with the given message.
 		assertTrue("Failed to remove booking reference.", bp.getBookingHandler().getRoomIDToBookingRefMap().get(roomID).equals(null));
 		
@@ -233,6 +233,7 @@ public class testBookingProvidesImpl {
 
 	/**
 	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#book(java.lang.String, java.lang.String, int, java.lang.String, java.lang.String)}.
+	 * Test make a booking.
 	 */
 	@Test
 	public void testBook() {
