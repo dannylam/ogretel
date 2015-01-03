@@ -43,6 +43,10 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Removes a booking from the system.
+	 * @return
+	 * 0 if successful
+	 * 1 if any String entry in the List is doesn't match with the start and end date. 
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDMany="true" roomTypeIDOrdered="false" startDataType="org.eclipse.uml2.types.String" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.String" endRequired="true" endOrdered="false"
 	 * @generated
