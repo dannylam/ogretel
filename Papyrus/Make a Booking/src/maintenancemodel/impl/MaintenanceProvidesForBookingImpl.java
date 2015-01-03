@@ -321,13 +321,32 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int removeBooking(EList<String> roomTypeID, String start, String end) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		//TODO: Kontrollera hur start/end ser ut, samma som i canBook!
+		int startDate = Integer.parseInt(start);
+		int endDate = Integer.parseInt(end);
+				
+		maintenancemodel.Calendar copyOfCalendar = roomTypes.getCalendar();
+				
+		int result = 0;
+						
+		for(int i = 0; i < roomTypeID.size(); i++){
+			if(copyOfCalendar.incCap(startDate, endDate, roomTypeID.get(i), 1) != 0){
+				result++;
+			};
+		}
+						
+		if(result == 0){
+			roomTypes.setCalendar(copyOfCalendar);
+			return 0;
+		}
+						
+		return 1;
 	}
 
 	/**
