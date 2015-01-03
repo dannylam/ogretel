@@ -22,10 +22,10 @@ value; GuestEmail: String
 value is &quot;out&quot; when a room which has previously 
 been checked-in is checked-out in a specific booking </body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13d85NNEeSexbuF790S1w" name="key" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13d85NNEeSexbuF790S1w" name="key" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EIntegerObject"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13d9JNNEeSexbuF790S1w" name="value" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13d9JNNEeSexbuF790S1w" name="value" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
     </packagedElement>
@@ -38,10 +38,10 @@ value: nr: int</body>
         <body>key: RoomType: String
 value: nr: int</body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13d95NNEeSexbuF790S1w" name="key" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13d95NNEeSexbuF790S1w" name="key" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EIntegerObject"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13d-JNNEeSexbuF790S1w" name="value" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13d-JNNEeSexbuF790S1w" name="value" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
     </packagedElement>
@@ -54,33 +54,33 @@ value: booking</body>
         <body>key: bookingRef
 value: booking</body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13d-5NNEeSexbuF790S1w" name="key" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13d-5NNEeSexbuF790S1w" name="key" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_F13d_ZNNEeSexbuF790S1w" name="Booking">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13d_pNNEeSexbuF790S1w" name="bookingRef" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13d_pNNEeSexbuF790S1w" name="bookingRef" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13d_5NNEeSexbuF790S1w" name="startDate" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13d_5NNEeSexbuF790S1w" name="startDate" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13eAJNNEeSexbuF790S1w" name="endDate" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13eAJNNEeSexbuF790S1w" name="endDate" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13eAZNNEeSexbuF790S1w" name="serviceNotes" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13eAZNNEeSexbuF790S1w" name="serviceNotes" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F13eApNNEeSexbuF790S1w"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F13eA5NNEeSexbuF790S1w" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13eBJNNEeSexbuF790S1w" name="nrOfGuests" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13eBJNNEeSexbuF790S1w" name="nrOfGuests" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_F13eBZNNEeSexbuF790S1w" name="customer" type="_F14FMZNNEeSexbuF790S1w" association="_F14FRZNNEeSexbuF790S1w"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_F13eBpNNEeSexbuF790S1w" name="guestList" type="_F14FR5NNEeSexbuF790S1w" association="_F14FT5NNEeSexbuF790S1w">
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F13eB5NNEeSexbuF790S1w" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13eCJNNEeSexbuF790S1w" name="isPayed" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13eCJNNEeSexbuF790S1w" name="isPayed" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_F13eCZNNEeSexbuF790S1w" name="roomIDToGuestMap" type="_F13d8ZNNEeSexbuF790S1w" aggregation="composite" association="_F14FUZNNEeSexbuF790S1w">
@@ -91,7 +91,7 @@ value: booking</body>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F13eDZNNEeSexbuF790S1w"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F13eDpNNEeSexbuF790S1w" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13eD5NNEeSexbuF790S1w" name="paymentMethod" visibility="public" type="_F14FVZNNEeSexbuF790S1w"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13eD5NNEeSexbuF790S1w" name="paymentMethod" visibility="private" type="_F14FVZNNEeSexbuF790S1w"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_F13eEJNNEeSexbuF790S1w" name="extraToIsPayedMap" type="_F14FWZNNEeSexbuF790S1w" aggregation="composite" association="_F14FXZNNEeSexbuF790S1w">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F13eEZNNEeSexbuF790S1w"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F13eEpNNEeSexbuF790S1w" value="*"/>
@@ -230,22 +230,22 @@ value: booking</body>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_F14FNZNNEeSexbuF790S1w" name="Person" isAbstract="true">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FNpNNEeSexbuF790S1w" name="firstName" visibility="public" isUnique="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FNpNNEeSexbuF790S1w" name="firstName" visibility="private" isUnique="false">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FN5NNEeSexbuF790S1w" name="lastName" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FN5NNEeSexbuF790S1w" name="lastName" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FOJNNEeSexbuF790S1w" name="email" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FOJNNEeSexbuF790S1w" name="email" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FOZNNEeSexbuF790S1w" name="telephoneNr" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FOZNNEeSexbuF790S1w" name="telephoneNr" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FOpNNEeSexbuF790S1w" name="Address" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FOpNNEeSexbuF790S1w" name="Address" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FO5NNEeSexbuF790S1w" name="age" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FO5NNEeSexbuF790S1w" name="age" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
     </packagedElement>
@@ -277,7 +277,7 @@ value: booking</body>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_F14FR5NNEeSexbuF790S1w" name="Guest">
       <generalization xmi:type="uml:Generalization" xmi:id="_F14FSJNNEeSexbuF790S1w" general="_F14FNZNNEeSexbuF790S1w"/>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FSZNNEeSexbuF790S1w" name="roomNr" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FSZNNEeSexbuF790S1w" name="roomNr" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FSpNNEeSexbuF790S1w" name="guestTypes" visibility="public" type="_F14FS5NNEeSexbuF790S1w"/>
@@ -314,10 +314,10 @@ value; GuestEmail: String
 value is &quot;out&quot; when a room which has previously 
 been checked-in is checked-out in a specific booking </body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FW5NNEeSexbuF790S1w" name="key" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FW5NNEeSexbuF790S1w" name="key" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FXJNNEeSexbuF790S1w" name="value" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FXJNNEeSexbuF790S1w" name="value" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EBooleanObject"/>
       </ownedAttribute>
     </packagedElement>
@@ -431,10 +431,10 @@ value; GuestEmail: String
 value is &quot;out&quot; when a room which has previously 
 been checked-in is checked-out in a specific booking </body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FjJNNEeSexbuF790S1w" name="key" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FjJNNEeSexbuF790S1w" name="key" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EIntegerObject"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FjZNNEeSexbuF790S1w" name="value" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FjZNNEeSexbuF790S1w" name="value" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
     </packagedElement>
@@ -820,10 +820,10 @@ value; GuestEmail: String
 value is &quot;out&quot; when a room which has previously 
 been checked-in is checked-out in a specific booking </body>
       </ownedComment>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14GIZNNEeSexbuF790S1w" name="key" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14GIZNNEeSexbuF790S1w" name="key" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14GIpNNEeSexbuF790S1w" name="value" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14GIpNNEeSexbuF790S1w" name="value" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
     </packagedElement>
