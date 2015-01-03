@@ -31,16 +31,21 @@ public class testBookingProvidesImpl {
 	
 	/**
 	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#checkIn(java.lang.String, java.lang.String)}.
+	 * Check-in by first creating a booking, and use its booking reference,
+	 * the roomtype (in this case, "Single"), and guestEmail (in this case, grischa@group4.com)
+	 * in order to check-in. If success, the checkIn method will return 0.
+	 * assertTrue will asserts if the condition is true.
 	 */
 	@Test
 	public void testCheckIn() {
-		//checka in med bookingref, guestemail och roomstype.
+		// Create a booking with booking reference
 		testBook();
-		//ang ej skapa bokning-hur får vi tag på bookingRef till checkIn om vi inte använder bp.book(...)?
-		//sant, men det var mer än bara book(), typ edit osv, så blev fösrvirrad.
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		// Check in with booking reference, roomtype and email
 		int checkIn = bp.checkIn(bookingRef, roomTypes, guestEmail);
-		assertTrue(checkIn==0);
+		
+		//Asserts that (checkIn == 0) is true. If it isn't, it throws an AssertionError with the given message.
+		assertTrue("The check in failed.", checkIn==0);
 		fail("testCheckIn failed");
 	}
 
