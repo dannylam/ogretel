@@ -5,7 +5,11 @@ package maintenancemodel.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
 
@@ -363,14 +367,13 @@ public class MaintenanceProvidesForBookingImpl extends
 			return -1;
 		}
 
+		// Make Calendars to get correct daysInMonth
+		Calendar c1 = new GregorianCalendar(2015, month1, day1);
+		Calendar c2 = new GregorianCalendar(2015, month2, day2);
+
 		// Continue computing....
 
 		return 0;
-	}
-
-	private boolean isDateValid(int year, int month, int day) {
-		return year > 0 && year < 100 && month > 0 && month < 13 && day > 0
-				&& day < 32;
 	}
 
 	private int getDayOfYear(int year, int month, int day) {
@@ -396,6 +399,11 @@ public class MaintenanceProvidesForBookingImpl extends
 		}
 
 		return 0;
+	}
+
+	private boolean isDateValid(int year, int month, int day) {
+		return year > 0 && year < 100 && month > 0 && month < 13 && day > 0
+				&& day < 32;
 	}
 
 	/**

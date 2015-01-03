@@ -15,7 +15,7 @@ import bookingmodel.impl.BookingHandlerImpl;
 import bookingmodel.impl.BookingProvidesImpl;
 
 /**
- * Testing the booking provides class.
+ * Testing the class BookingProvidesImpl and its methods.
  */
 public class testBookingProvidesImpl {
 	String bookingRef;
@@ -26,7 +26,7 @@ public class testBookingProvidesImpl {
 	String roomTypes = "Single";
 	String extras = "Soaps";
 	
-	//Just nu är BookingProvides en publik konstruktor istället för protected
+	//Just nu är BookingProvides() en publik konstruktor istället för protected
 	BookingProvides bp = new BookingProvidesImpl();
 	
 	/**
@@ -38,9 +38,11 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testCheckIn() {
-		// Create a booking with booking reference
+		// Create a booking reference and assert true if it is equals to the returned value of a booking.
 		testBook();
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
+		
 		// Check in with booking reference, roomtype and email
 		int checkIn = bp.checkIn(bookingRef, roomTypes, guestEmail);
 		
@@ -53,7 +55,7 @@ public class testBookingProvidesImpl {
 	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#checkOut(java.lang.String, java.lang.String)}.
 	 * Check-out by first creating a booking, and use its booking reference,
 	 * the roomID, and checkOut (in this case, checking out using roomID and guestEmail). 
-	 * If success, the checkIn method will return 0.
+	 * If success, the checkOut method will return 0.
 	 * assertTrue will asserts if the condition is true.
 	 */
 	@Test
@@ -62,8 +64,9 @@ public class testBookingProvidesImpl {
 		int roomID = 378;
 		int checkOut = bp.checkOut(roomID, guestEmail);
 		
-		// Create a booking
-		testBook();
+		/* TODO: should we create a booking and try to check-out? 
+		testBook();*/
+		
 		// Asserts that the condition is true. If it isn't, it throws an AssertionError with the given message.
 		assertTrue("The check out failed", checkOut==0);
 		
@@ -98,38 +101,44 @@ public class testBookingProvidesImpl {
 
 	/**
 	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#getPrice(java.lang.String)}.
-	 * Get prive by first creating a booking, and use its booking reference,
+	 * Get price by first creating a booking, and use its booking reference,
 	 * and the price of the given bookingRef. 
 	 * If success, the getPrice method will return 0.
 	 * AssertTrue will asserts if the condition is true.
 	 */
 	@Test
 	public void testGetPrice() {
-		// Create a booking
+		// Create a booking reference and assert true if it is equals to the returned value of a booking.
 		testBook();
-		// 
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
-		int price = bp.getPrice(bookingRef);
-		//this feels a bit ridiculous but Im not sure how else the price should be compared/accessed.
-		assertTrue("Failed to get price", price == bp.getPrice(bookingRef));
-		fail("GetPrice failed");
+		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
+		
+		// TODO: this feels a bit ridiculous but Im not sure how else the price should be compared/accessed.
+		// TODO: The getPrice returns extraPrice + roomTypesPrice, shouldn't it return 0 as a success?
+		assertTrue("Failed to get price", (bp.getPrice(bookingRef) == 0));
+		fail("getPrice failed");
 	}
 
 	/**
 	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#removeBooking(java.lang.String)}.
+	 * Test by first creating a booking, and use its booking reference.
+	 * assertTrue will asserts if the created booking reference is equals to the returned value of a booking.
+	 * Remove the booking reference and assertTrue if it has been removed.
+	 * Also assertTrue if the booking reference is NOT equals to the returned value of a booking.
 	 */
 	@Test
 	public void testRemoveBooking() {
+		// Create a booking reference and assert true if it is equals to the returned value of a booking.
 		testBook();
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
-		
 		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
 		
+		// Remove a booking reference and assert true if it is NOT equal to the returned value of a booking.
 		int rmB = bp.removeBooking(bookingRef);
-		assertTrue(rmB == 0);
-		assertTrue(!(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef)));
+		assertTrue("Failed to remove a booking", rmB == 0);
+		assertTrue("The booking reference is still there!", !(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef)));
 		
-		fail("No booking reference or wrong inparametres.");
+		fail("removeBooking failed");
 	}
 
 	/**
@@ -137,13 +146,16 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testEditBooking() {
+		// Create a booking reference and assert true if it is equals to the returned value of a booking.
 		testBook();
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
-		int edBP = bp.editBooking(bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras);
+		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
 		
+		// Edit a booking and assert true if it is equal to 0.
+		int edBP = bp.editBooking(bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras);
 		assertTrue(edBP == 0);
 		
-		fail("No booking reference or wrong inparametres.");
+		fail("editBooking failed");
 	}
 
 	/**
