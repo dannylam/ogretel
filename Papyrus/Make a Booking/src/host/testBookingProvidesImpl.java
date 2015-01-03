@@ -46,7 +46,7 @@ public class testBookingProvidesImpl {
 		
 		//Asserts that (checkIn == 0) is true. If it isn't, it throws an AssertionError with the given message.
 		assertTrue("The check in failed.", checkIn==0);
-		fail("testCheckIn failed");
+		fail("testCheckIn failed");	
 	}
 
 	/**
@@ -58,7 +58,14 @@ public class testBookingProvidesImpl {
 		int checkOut;
 		testBook();
 		checkOut = bp.checkOut(roomID, guestEmail);
+		
 		assertTrue(checkOut==0);
+		
+		//the guest responsbile to the room has been removed and "out" is set
+		assertTrue(bp.getBookingHandler().getBooking(roomID).getRoomIDToGuestMap().get(roomID).equals("out"));
+		
+		//the bookingreference connected to the room has been removed
+		assertTrue(bp.getBookingHandler().getRoomIDToBookingRefMap().get(roomID).equals(null));
 		
 		fail("testCheckOut failed");
 	}

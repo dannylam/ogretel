@@ -285,6 +285,9 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		if (this.getBookingHandler().exists(booking.getBookingRef())) {
 			if(booking.checkedInRoom(roomID)){
 				booking.removeResponsibleGuest(roomID, guestEmail);
+				
+				//removes the bookingreference from the room in the map of rooms and which bookingreference they belong to
+				this.bookingHandler.getRoomIDToBookingRefMap().put(roomID, null);
 				if(this.maintenanceComponent.setInactive(roomID) == -1){
 					return 2;
 				}
