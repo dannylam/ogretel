@@ -57,7 +57,6 @@ value: booking</body>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_F13d-5NNEeSexbuF790S1w" name="key" visibility="public">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F13d_JNNEeSexbuF790S1w" name="value" type="_F13d_ZNNEeSexbuF790S1w" association="_F14FX5NNEeSexbuF790S1w"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_F13d_ZNNEeSexbuF790S1w" name="Booking">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_F13d_pNNEeSexbuF790S1w" name="bookingRef" visibility="public">
@@ -251,22 +250,22 @@ value: booking</body>
       </ownedAttribute>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_F14FPJNNEeSexbuF790S1w" name="PaymentDetails">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FPZNNEeSexbuF790S1w" name="ccNr" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FPZNNEeSexbuF790S1w" name="ccNr" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FPpNNEeSexbuF790S1w" name="ccV" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FPpNNEeSexbuF790S1w" name="ccV" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FP5NNEeSexbuF790S1w" name="expMonth" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FP5NNEeSexbuF790S1w" name="expMonth" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FQJNNEeSexbuF790S1w" name="expYear" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FQJNNEeSexbuF790S1w" name="expYear" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FQZNNEeSexbuF790S1w" name="firstName" visibility="public" isUnique="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FQZNNEeSexbuF790S1w" name="firstName" visibility="private" isUnique="false">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FQpNNEeSexbuF790S1w" name="lastName" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FQpNNEeSexbuF790S1w" name="lastName" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
     </packagedElement>
@@ -324,9 +323,6 @@ been checked-in is checked-out in a specific booking </body>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_F14FXZNNEeSexbuF790S1w" memberEnd="_F13eEJNNEeSexbuF790S1w _F14FXpNNEeSexbuF790S1w">
       <ownedEnd xmi:type="uml:Property" xmi:id="_F14FXpNNEeSexbuF790S1w" type="_F13d_ZNNEeSexbuF790S1w" association="_F14FXZNNEeSexbuF790S1w"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_F14FX5NNEeSexbuF790S1w" memberEnd="_F13d_JNNEeSexbuF790S1w _F14FYJNNEeSexbuF790S1w">
-      <ownedEnd xmi:type="uml:Property" xmi:id="_F14FYJNNEeSexbuF790S1w" type="_F13d-ZNNEeSexbuF790S1w" association="_F14FX5NNEeSexbuF790S1w"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_F14FYZNNEeSexbuF790S1w" name="BookingHandler">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_F14FYpNNEeSexbuF790S1w" name="bookingsMap" type="_F13d-ZNNEeSexbuF790S1w" aggregation="composite" association="_F14FiJNNEeSexbuF790S1w">
@@ -649,9 +645,13 @@ been checked-in is checked-out in a specific booking </body>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14F3pNNEeSexbuF790S1w" name="roomTypes">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FBcd8JN6EeSZ_IwO16Zn9Q"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FBgIUJN6EeSZ_IwO16Zn9Q" value="*"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14F35NNEeSexbuF790S1w" name="extras">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_H5LgEJN6EeSZ_IwO16Zn9Q"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_H5MHIJN6EeSZ_IwO16Zn9Q" value="*"/>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
@@ -844,7 +844,6 @@ been checked-in is checked-out in a specific booking </body>
   <Ecore:EClass xmi:id="_F14GKpNNEeSexbuF790S1w" instanceClassName="java.util.Map$Entry" base_Class="_F13d8ZNNEeSexbuF790S1w"/>
   <Ecore:EClass xmi:id="_F14sEJNNEeSexbuF790S1w" instanceClassName="java.util.Map$Entry" base_Class="_F13d9ZNNEeSexbuF790S1w"/>
   <Ecore:EClass xmi:id="_F14sEZNNEeSexbuF790S1w" instanceClassName="java.util.Map$Entry" base_Class="_F13d-ZNNEeSexbuF790S1w"/>
-  <Ecore:EReference xmi:id="_F14sEpNNEeSexbuF790S1w" base_Property="_F13d_JNNEeSexbuF790S1w"/>
   <Ecore:EClass xmi:id="_F14sE5NNEeSexbuF790S1w" base_Class="_F13d_ZNNEeSexbuF790S1w"/>
   <Ecore:EReference xmi:id="_F14sFJNNEeSexbuF790S1w" base_Property="_F13eBZNNEeSexbuF790S1w"/>
   <Ecore:EReference xmi:id="_F14sFZNNEeSexbuF790S1w" base_Property="_F13eBpNNEeSexbuF790S1w"/>
