@@ -321,11 +321,18 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 		int month2 = Integer.parseInt(date2.substring(2, 4));
 		int day2 = Integer.parseInt(date2.substring(4, 6));
 		
+		//Validate
+		if(!isDateValid(year1, month1, day1) || !isDateValid(year2, month2, day2)){
+			return -1;
+		}
+		
+		//Continue computing....
+		
 		return 0;
 	}
 	
 	private boolean isDateValid(int year, int month, int day){
-		return false;
+		return year>0 && year<100 && month>0 && month<13 && day>0 && day<32;
 	}
 
 	/**
