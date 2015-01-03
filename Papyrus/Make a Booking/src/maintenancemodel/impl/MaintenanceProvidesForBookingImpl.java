@@ -346,27 +346,35 @@ MinimalEObjectImpl.Container implements MaintenanceProvidesForBooking {
 
 	}
 
-	private int getYear(String date){
+	private int getYear(String date) throws NumberFormatException{
 		return Integer.parseInt(date.substring(0, 2));
 	}
 
-	private int getMonth(String date){
+	private int getMonth(String date) throws NumberFormatException{
 		return Integer.parseInt(date.substring(2, 4));
 	}
 
-	private int getDay(String date){
+	private int getDay(String date) throws NumberFormatException{
 		return Integer.parseInt(date.substring(4, 6));
 	}
 
 	private Integer getDaysBetween(String date1, String date2) {
 		
-		int year1 = getYear(date1); 
-		int month1 = getMonth(date1); 
-		int day1 = getDay(date1);
+		int year1; int year2;
+		int month1; int month2;
+		int day1; int day2;
+		try{
+			year1 = getYear(date1); 
+			month1 = getMonth(date1); 
+			day1 = getDay(date1);
 
-		int year2 = getYear(date2);
-		int month2 = getMonth(date2);
-		int day2 = getDay(date2);
+			year2 = getYear(date2);
+			month2 = getMonth(date2);
+			day2 = getDay(date2);
+			
+		}catch(NumberFormatException e){
+			return -1;
+		}
 
 		// Validate
 		if (!isDateValid(year1, month1, day1)
