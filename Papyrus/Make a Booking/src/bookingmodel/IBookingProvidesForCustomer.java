@@ -30,7 +30,7 @@ public interface IBookingProvidesForCustomer extends EObject {
 	 * 			2 if the credit card is invalid
 	 * 			3 if not enough money on the card or invalid card
 	 * 			4 if the amount is invalid 
-	 * 			5 if the booking is already payed
+	 * 			5 if the booking is already payed or the payment method is not by card
 	 * 			-1 if the booking reference does not exist
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
@@ -60,6 +60,10 @@ public interface IBookingProvidesForCustomer extends EObject {
 	 * A method for editing a specific booking such as number of nights, number of guests,
 	 * start and end date, number of rooms, room types, extras and 
 	 * booking reference. 
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return  0 if success
+	 * 			-1 if the bookingreference does not exit
+	 * 			1 if the change is not possible
 	 * @param  nrOfNights, nrOfGuests, date, nrOfRooms, roomTypes, extras, bookingRef
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesDataType="types.String" roomTypesRequired="true" roomTypesOrdered="false" extrasDataType="types.String" extrasRequired="true" extrasOrdered="false"
 	 * @generated NOT

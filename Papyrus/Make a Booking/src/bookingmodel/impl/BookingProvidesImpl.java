@@ -329,6 +329,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int pay(String ccNumber, String ccv, int expMonth, int expYear,
 			String firstName, String lastName, List<String> extra) {
+
 		return pay(ccNumber, ccv, expMonth, expYear, firstName, lastName,
 				maintenanceComponent.getPriceExtra((EList<String>) extra));
 	}
@@ -387,11 +388,11 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	public int pay(String bookingRef) {
 		int result = -1;
 		if(this.getBookingHandler().exists(bookingRef)){
-			if(!this.getBookingHandler().getBooking(bookingRef).isIsPayed()){
+			Booking booking = this.getBookingHandler().getBooking(bookingRef);
+			if(!booking.isIsPayed() && booking.getPaymentMethod().toString().equals("bankcard")){
 				int price = getPrice(bookingRef);
 				if (price != -1) {
-					PaymentDetails bookingdetails = getBookingHandler()
-							.getBooking(bookingRef).getCustomer().getPaymentDetails()
+					PaymentDetails bookingdetails = booking.getCustomer().getPaymentDetails()
 							.get(0);
 		
 					result = pay(bookingdetails.getCcNr(), bookingdetails.getCcV(),
@@ -467,30 +468,41 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int editBooking(String bookingRef, String startDate, String endDate,
 			int nrOfGuests, String roomTypes, String extras) {
-		/* Detta bör räcka för denna metoden 
-		 * return bookingHandler.editBooking(bookingRef, startDate, endDate,
-				nrOfGuests, this.stringToList(roomTypes),
-				stringToList(extras));
-		 */
-		
-		Booking booking = this.bookingHandler.getBooking(bookingRef);
-		
-		if (this.maintenanceComponent.canBook(
-				(EList<String>) stringToList(roomTypes), startDate, endDate)) {
+		if(this.bookingHandler.exists(bookingRef)){
+			Booking booking = this.bookingHandler.getBooking(bookingRef);
+			List <String> rts = this.stringToList(roomTypes);
+			List <String> xtras = this.stringToList(extras);
 			
+			//checks if any inparam is null, meaning not changed, if so, takes the value stored in the booking
+			if(startDate.equals(null)){
+				startDate = booking.getStartDate();
+			}
+			if(endDate.equals(null)){
+				endDate = booking.getEndDate();
+			}
+			if(nrOfGuests == 0){
+				nrOfGuests = booking.getNrOfGuests();
+			}
+			if(roomTypes.equals(null)){
+				rts = booking.getRoomTypes();
+			}
+			if(xtras.equals(null)){
+				xtras = booking.getExtras();
+			}
+			
+			//checks with maintenance if the change is possible
+			if (this.maintenanceComponent.canBook(
+				(EList<String>) rts, startDate, endDate)) {
+				
+				//sets the change in the booking
+				this.bookingHandler.editBooking(bookingRef, startDate, endDate,
+						nrOfGuests, rts, xtras);
+				return 0;
+			}
+			return 1;
 		}
+		return -1;
 		
-		int result = 0;
-		/*
-		 * Check with the changes if they are possible, ask maintenacne, if so,
-		 * then the changes are registered in the booking
-		 */
-
-		this.bookingHandler.editBooking(bookingRef, startDate, endDate,
-				nrOfGuests, this.stringToList(roomTypes),
-				this.stringToList(extras));
-		// TODO: implement this method, we are waiting for maintenance 
-		return result;
 	}
 
 	/**
