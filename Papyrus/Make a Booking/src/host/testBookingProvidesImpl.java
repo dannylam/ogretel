@@ -15,7 +15,7 @@ import bookingmodel.impl.BookingHandlerImpl;
 import bookingmodel.impl.BookingProvidesImpl;
 
 /**
- * Testing the booking provides class.
+ * Testing the class BookingProvidesImpl and its methods.
  */
 public class testBookingProvidesImpl {
 	String bookingRef;
@@ -26,7 +26,7 @@ public class testBookingProvidesImpl {
 	String roomTypes = "Single";
 	String extras = "Soaps";
 	
-	//Just nu är BookingProvides en publik konstruktor istället för protected
+	//Just nu är BookingProvides() en publik konstruktor istället för protected
 	BookingProvides bp = new BookingProvidesImpl();
 	
 	/**
@@ -38,10 +38,11 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testCheckIn() {
-		// Create a booking with booking reference
+		// Create a booking reference and assert true if it is equals to the returned value of a booking.
 		testBook();
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
 		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
+		
 		// Check in with booking reference, roomtype and email
 		int checkIn = bp.checkIn(bookingRef, roomTypes, guestEmail);
 		
@@ -63,8 +64,9 @@ public class testBookingProvidesImpl {
 		int roomID = 378;
 		int checkOut = bp.checkOut(roomID, guestEmail);
 		
-		// Create a booking
-		testBook();
+		/* TODO: should we create a booking and try to check-out? 
+		testBook();*/
+		
 		// Asserts that the condition is true. If it isn't, it throws an AssertionError with the given message.
 		assertTrue("The check out failed", checkOut==0);
 		
@@ -106,14 +108,15 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testGetPrice() {
-		// Create a booking reference.
+		// Create a booking reference and assert true if it is equals to the returned value of a booking.
 		testBook();
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
 		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
+		
 		// TODO: this feels a bit ridiculous but Im not sure how else the price should be compared/accessed.
 		// TODO: The getPrice returns extraPrice + roomTypesPrice, shouldn't it return 0 as a success?
 		assertTrue("Failed to get price", (bp.getPrice(bookingRef) == 0));
-		fail("GetPrice failed");
+		fail("getPrice failed");
 	}
 
 	/**
@@ -125,17 +128,17 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testRemoveBooking() {
-		// Create a booking reference and check if it's correct.
+		// Create a booking reference and assert true if it is equals to the returned value of a booking.
 		testBook();
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
-		
 		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
 		
+		// Remove a booking reference and assert true if it is NOT equal to the returned value of a booking.
 		int rmB = bp.removeBooking(bookingRef);
-		assertTrue(rmB == 0);
-		assertTrue(!(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef)));
+		assertTrue("Failed to remove a booking", rmB == 0);
+		assertTrue("The booking reference is still there!", !(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef)));
 		
-		fail("No booking reference or wrong inparametres.");
+		fail("removeBooking failed");
 	}
 
 	/**
@@ -143,13 +146,16 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testEditBooking() {
+		// Create a booking reference and assert true if it is equals to the returned value of a booking.
 		testBook();
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
-		int edBP = bp.editBooking(bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras);
+		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
 		
+		// Edit a booking and assert true if it is equal to 0.
+		int edBP = bp.editBooking(bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras);
 		assertTrue(edBP == 0);
 		
-		fail("No booking reference or wrong inparametres.");
+		fail("editBooking failed");
 	}
 
 	/**
