@@ -109,7 +109,7 @@ public class testBookingProvidesImpl {
 		
 		// TODO: this feels a bit ridiculous but Im not sure how else the price should be compared/accessed.
 		// TODO: The getPrice returns extraPrice + roomTypesPrice, shouldn't it return 0 as a success?
-		assertTrue("Failed to get price", (bp.getPrice(bookingRef) == 0));
+		assertTrue("Failed to get price", (bp.getPrice(bookingRef) >= 0));
 		fail("getPrice failed");
 	}
 
