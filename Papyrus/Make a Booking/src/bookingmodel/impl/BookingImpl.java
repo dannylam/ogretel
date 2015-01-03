@@ -254,12 +254,13 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @param extras
 	 *  @generated NOT
 	 */
-	public BookingImpl(int nrOfGuests, String startDate, String endDate, List<String> roomTypes, List<String> extras) {
+	public BookingImpl(int nrOfGuests, String startDate, String endDate, List<String> roomTypes, List<String> extras, List <String> services) {
 		this.setNrOfGuests(nrOfGuests);
 		this.setStartDate(startDate);
 		this.setEndDate(endDate);
 		this.setRoomTypes(roomTypes);
 		this.setExtras(extras);
+		this.serviceNotes = (EList<String>) services;
 		this.generateBookingRef();
 	}
 

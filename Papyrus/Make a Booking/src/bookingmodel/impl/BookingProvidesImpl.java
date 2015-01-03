@@ -546,10 +546,9 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public String book(String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras, List<String> services) {
-		String bookingRef = "";
 		if(!startDate.equals(null) && !endDate.equals(null) && nrOfGuests > 0 && !roomTypes.equals(null)){
 			if (this.maintenanceComponent.canBook((EList<String>) roomTypes, startDate, endDate)) {
-				Booking booking = new BookingImpl(nrOfGuests, startDate, endDate, roomTypes, extras);
+				Booking booking = new BookingImpl(nrOfGuests, startDate, endDate, roomTypes, extras, services);
 				this.bookingHandler.addBooking(booking);
 				return booking.getBookingRef();
 			}
