@@ -168,7 +168,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int enableSelfManagement() {
@@ -178,7 +178,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int addServiceNote(String serviceNote, String description) {
@@ -190,7 +190,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int editServiceNoteDescription(String serviceNote, String description) {
@@ -201,7 +201,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 	
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int removeServiceNote(String serviceNote) {
@@ -212,7 +212,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public EList<String> getServiceNotesOfBooking(String bookingRef) {
@@ -223,7 +223,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 	
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public EList<String> getServiceNotes() {
@@ -232,7 +232,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 
 	
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public String getServiceNoteDescription(String serviceNote) {
@@ -243,7 +243,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public boolean isPayed(String bookingRef) {
@@ -254,7 +254,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int checkIn(String bookingRef, String roomsType, String guestEmail) {
@@ -277,7 +277,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int checkOut(int roomID, String guestEmail) {
@@ -285,6 +285,8 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		if (this.getBookingHandler().exists(booking.getBookingRef())) {
 			if(booking.checkedInRoom(roomID)){
 				booking.removeResponsibleGuest(roomID, guestEmail);
+				
+				//check if the room is payed or not, if not, return an int indicating this
 				
 				//removes the bookingreference from the room in the map of rooms and which bookingreference they belong to
 				this.bookingHandler.getRoomIDToBookingRefMap().put(roomID, null);
@@ -302,35 +304,27 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 
 
 	/**
-	 * @inheritDoc
-	 * Pays for an extra
-	 * @param ccNumber
-	 * The cards ccNumber
-	 * @param ccv
-	 * The cards ccv number
-	 * @param expMonth
-	 * the month the card expiers
-	 * @param expYear
-	 * The year the card expiers
-	 * @param firstName
-	 * The card owners first name
-	 * @param lastName 
-	 * Same as firstName but last name
-	 * @param extra
-	 * A list of the extras to pay
-	 * 
-	 * @return 
-	 * 			0 if success 
-	 * 			1 if an error occurred
-	 * 			2 if the credit card is invalid
-	 * 			3 if not enough money on the card or invalid card
-	 * @generated
+	 * {inheritDoc}
+	 * @generated NOT
 	 */
-	public int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, List<String> extra, int roomID) {
-		return pay(ccNumber, ccv, expMonth, expYear, firstName, lastName,
-				maintenanceComponent.getPriceExtra((EList<String>) extra));
+	public int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, List<String> extras, int roomID) {
+		if(this.bookingHandler.exists(this.bookingHandler.getBooking(roomID).getBookingRef())){
+			if(!extras.equals(null)){
+				if(check if the extra(s) is not already payed){ //TODO: when we have a set/list/map for it
+					return pay(ccNumber, ccv, expMonth, expYear, firstName, lastName,
+							maintenanceComponent.getPriceExtra((EList<String>) extras));
+				}
+				return 4;
+			}
+			return 5;
+		}
+		return -1;
 	}
 
+	public int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, int roomID){
+		return roomID;
+		
+	}
 
 	/**
 	 * Makes a payment
@@ -341,7 +335,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * 			3 if not enough money on the card or invalid card
 	 * @generated NOT
 	 */
-	private int pay(String ccNumber, String ccv, int expMonth, int expYear,
+	private int paySum(String ccNumber, String ccv, int expMonth, int expYear,
 			String firstName, String lastName, int sum) {
 		try {
 			se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires banking = se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires
@@ -365,22 +359,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * @inheritDoc
-	 * Pays for a booking
-	 * @param ccNumber
-	 * The cards ccNumber
-	 * @param ccv
-	 * The cards ccv number
-	 * @param expMonth
-	 * the month the card expiers
-	 * @param expYear
-	 * The year the card expiers
-	 * @param firstName
-	 * The card owners first name
-	 * @param lastName 
-	 * Same as firstName but last name
-	 * @param extra
-	 * A list of the extras to pay
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int pay(String bookingRef) {
@@ -393,7 +372,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 					PaymentDetails bookingdetails = booking.getCustomer().getPaymentDetails()
 							.get(0);
 		
-					result = pay(bookingdetails.getCcNr(), bookingdetails.getCcV(),
+					result = paySum(bookingdetails.getCcNr(), bookingdetails.getCcV(),
 							bookingdetails.getExpMonth(), bookingdetails.getExpYear(),
 							bookingdetails.getFirstName(),
 							bookingdetails.getLastName(), price);
@@ -409,13 +388,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * @inhertDoc
-	 * Get a price for the booking
-	 * @param bookingRef
-	 * A bookingreference
-	 * @return
-	 * The bookings price
-	 * If the booking doesnt exist, -1 is returned
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int getPrice(String bookingRef) {
@@ -433,7 +406,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * Removes the booking
 	 * @param bookingRef
 	 * Bookingreference
@@ -444,24 +417,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * @inheritDoc
-	 * Edits a booking
-	 * @param bookingRef
-	 * Bookingreference of an existing booking
-	 * @param startDate
-	 * The date you want the booking to start
-	 * @param endDate
-	 * The date you want the booking to end
-	 * @param nrOfGuests
-	 * The amount of guests the booking will have
-	 * @param roomTypes
-	 * What room type the booking will contain
-	 * @param extras
-	 * Any extras the booking shoulg contain
-	 * 
-	 * @return TODO
-	 * 
-	 * 
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int editBooking(String bookingRef, String startDate, String endDate,
@@ -504,7 +460,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 **/
 	public int setPaymentMethod(String method, String bookingRef) {
@@ -532,12 +488,13 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 						.setPaymentMethod(paymentMethod);
 				return 0;
 			} 
+			return 1;
 		}
 		return -1;
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int setPaymentDetails(String ccNumber, String ccv, int expiryMonth,
@@ -563,7 +520,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int setPersonalDetails(String firstName, String lastName, int age,
@@ -585,21 +542,20 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * {@inheritDoc}
+	 * {{@inheritDoc}}
 	 * @generated NOT
 	 */
 	public String book(String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras, List<String> services) {
 		String bookingRef = "";
-		
 		if(!startDate.equals(null) && !endDate.equals(null) && nrOfGuests > 0 && !roomTypes.equals(null)){
 			if (this.maintenanceComponent.canBook((EList<String>) roomTypes, startDate, endDate)) {
 				Booking booking = new BookingImpl(nrOfGuests, startDate, endDate, roomTypes, extras);
 				this.bookingHandler.addBooking(booking);
-				bookingRef = booking.getBookingRef();
+				return booking.getBookingRef();
 			}
-			return "Startdate, enddate, number of guests and roomtypes cannot be empty";
+			return "";
 		}
-		return bookingRef;
+		return "Startdate, enddate, number of guests and roomtypes cannot be empty";
 	}
 
 	/**
@@ -729,7 +685,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__INT_STRING:
 				return checkOut((Integer)arguments.get(0), (String)arguments.get(1));
 			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST_INT:
-				return pay((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (EList<?>)arguments.get(6), (Integer)arguments.get(7));
+				return pay((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (List<String>)arguments.get(6), (Integer)arguments.get(7));
 			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING_INT:
 				return pay((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Integer)arguments.get(6));
 			case BookingmodelPackage.BOOKING_PROVIDES___ENABLE_SELF_MANAGEMENT:

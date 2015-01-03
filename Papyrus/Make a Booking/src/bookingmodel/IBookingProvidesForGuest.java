@@ -45,10 +45,29 @@ public interface IBookingProvidesForGuest extends EObject {
 	 * card code verification, expiration month, expiration year,
 	 * first name and last name.
 	 * The integer returned by the function indicates success or failure and reason for failure.
-	 * @return	0 if success 
+	 * @return 
+	 * 			0 if success 
 	 * 			1 if an error occurred
 	 * 			2 if the credit card is invalid
 	 * 			3 if not enough money on the card or invalid card
+	 * 			4 if the extra(s) is already payed
+	 * 			5 if the extra(s) given are empty
+	 * 			-1 if the booking reference does not exist
+	 * Pays for an extra
+	 * @param ccNumber
+	 * The cards ccNumber
+	 * @param ccv
+	 * The cards ccv number
+	 * @param expMonth
+	 * the month the card expiers
+	 * @param expYear
+	 * The year the card expiers
+	 * @param firstName
+	 * The card owners first name
+	 * @param lastName 
+	 * Same as firstName but last name
+	 * @param extra
+	 * A list of the extras to pay
 	 * @model dataType="types.Integer" required="true" ordered="false" ccNumberDataType="types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="types.String" ccvRequired="true" ccvOrdered="false" expMonthDataType="types.Integer" expMonthRequired="true" expMonthOrdered="false" expYearDataType="types.Integer" expYearRequired="true" expYearOrdered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false" extraRequired="true" extraMany="false" extraOrdered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
 	 */

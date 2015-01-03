@@ -33,16 +33,33 @@ public interface IBookingProvidesForCustomer extends EObject {
 	 * 			4 if the amount is invalid 
 	 * 			5 if the booking is already payed or the payment method is not by card
 	 * 			-1 if the booking reference does not exist
+	 * @param ccNumber
+	 * The cards ccNumber
+	 * @param ccv
+	 * The cards ccv number
+	 * @param expMonth
+	 * the month the card expiers
+	 * @param expYear
+	 * The year the card expiers
+	 * @param firstName
+	 * The card owners first name
+	 * @param lastName 
+	 * Same as firstName but last name
+	 * @param extra
+	 * A list of the extras to pay
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
 	int pay(String bookingRef);
 
 	/**
+	 * 
 	 * Returns the price of a specific booking.
 	 * The integer returned by the function indicates success or failure and reason for failure.
-	 * @return  the price is returned if success
+	 * @return  the price if the booking is returned if success
 	 * 			-1 if not success
+	 * @param bookingRef
+	 * A bookingreference
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
@@ -51,6 +68,9 @@ public interface IBookingProvidesForCustomer extends EObject {
 	/**
 	 * A method for removing a specific booking
 	 * @param bookingRef
+	 *  The integer returned by the function indicates success or failure and reason for failure.
+	 * @return  0 if success
+	 * 			-1 if the bookingreference does not exit
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
@@ -75,7 +95,8 @@ public interface IBookingProvidesForCustomer extends EObject {
 	 * Sets the method for paying a booking to the booking with the given booking reference
 	 * The integer returned by the function indicates success or failure and reason for failure.
 	 * @return  0 if success
-	 * 			-1 if not success
+	 * 			-1 if the booking reference does not exist
+	 * 			1 if the paymentmethod given is not "bankcard, cash or voucher"
 	 * @param method, bookingRef
 	 * @model dataType="types.Integer" required="true" ordered="false" methodDataType="types.String" methodRequired="true" methodOrdered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
@@ -86,7 +107,7 @@ public interface IBookingProvidesForCustomer extends EObject {
 	 * Sets the payment details of a customer of a booking by using the booking reference
 	 * The integer returned by the function indicates success or failure and reason for failure.
 	 * @return  0 if success
-	 * 			-1 if not success
+	 * 			-1 if the booking reference does not exist
 	 * @model dataType="types.Integer" required="true" ordered="false" ccNumberDataType="types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="types.String" ccvRequired="true" ccvOrdered="false" expiryMonthDataType="types.Integer" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearDataType="types.Integer" expiryYearRequired="true" expiryYearOrdered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false" customerEmailDataType="types.String" customerEmailRequired="true" customerEmailOrdered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
@@ -107,7 +128,10 @@ public interface IBookingProvidesForCustomer extends EObject {
 
 	/**
 	 * Make a booking such for the given start- and enddate, number of guests,
-	 * roomtypes (and how many of each roomtype) and extras.
+	 * roomtypes (and how many of each roomtype), extras and services.
+	 * @return the booking reference if success
+	 * 			empty if the booking was not successful
+	 * 			"Startdate, enddate, number of guests and roomtypes cannot be empty" if one or more params are empty
 	 * @model dataType="types.String" required="true" ordered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesDataType="types.String" roomTypesMany="true" roomTypesOrdered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false" servicesDataType="types.String" servicesMany="true" servicesOrdered="false"
 	 * @generated NOT
 	 */

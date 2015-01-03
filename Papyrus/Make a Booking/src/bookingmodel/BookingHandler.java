@@ -116,6 +116,10 @@ public interface BookingHandler extends EObject {
 
 	/**
 	 *  Returns the booking which a rooms is associated to if that room is already checked in.
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return  0 if success 
+	 * 			1 if the booking is not possible
+	 * 			2 if ?? 
 	 * @model required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
 	 */
