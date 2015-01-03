@@ -339,11 +339,15 @@ public class MaintenanceProvidesForBookingImpl extends
 			int endDays = this.getDaysBetween(currDate, end);
 
 			// Get cap
-
-			// Check if cap is lower/same as the length of the list of
+			
+			// Check if cap is lower as the amount of identical roomTypeIDs
+			
+			if(this.roomTypes.getCalendar().getCap(startDays, endDays, id) < amount){
+				return false;
+			}
 
 		}
-		return false;
+		return true;
 
 		// TODO test
 
@@ -369,6 +373,8 @@ public class MaintenanceProvidesForBookingImpl extends
 		Calendar c1 = new GregorianCalendar(2015, month1, day1);
 		Calendar c2 = new GregorianCalendar(2015, month2, day2);
 
+		int dateSpan = this.getDayOfYear(year2, month2, day2) - this.getDayOfYear(year1, month1, day1);
+		
 		// Continue computing....
 
 		return 0;
@@ -393,6 +399,7 @@ public class MaintenanceProvidesForBookingImpl extends
 						result += 28;
 					}
 				}
+				// January not required
 			}
 		}
 
