@@ -38,7 +38,7 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testCheckIn() {
-		// Create a booking reference and assert true if it is equals to the returned value of a booking.
+		// Create a booking reference and assert true if it is equal to the returned value of a booking.
 		testBook();
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
 		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
@@ -108,7 +108,7 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testGetPrice() {
-		// Create a booking reference and assert true if it is equals to the returned value of a booking.
+		// Create a booking reference and assert true if it is equal to the returned value of a booking.
 		testBook();
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
 		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
@@ -128,7 +128,7 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testRemoveBooking() {
-		// Create a booking reference and assert true if it is equals to the returned value of a booking.
+		// Create a booking reference and assert true if it is equal to the returned value of a booking.
 		testBook();
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
 		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
@@ -143,43 +143,56 @@ public class testBookingProvidesImpl {
 
 	/**
 	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#editBooking(java.lang.String, java.lang.String, java.lang.String, int, java.lang.String, java.lang.String)}.
+	 * Test by first creating a booking, and use its booking reference.
+	 * assertTrue will asserts if the created booking reference is equals to the returned value of a booking.
+	 * Edit the booking reference and assertTrue if it has been edited.
+	 * Also assertTrue if the booking reference is NOT equals to the returned value of a booking.
 	 */
 	@Test
 	public void testEditBooking() {
-		// Create a booking reference and assert true if it is equals to the returned value of a booking.
+		// Create a booking reference and assert true if it is equal to the returned value of a booking.
 		testBook();
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
 		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
 		
 		// Edit a booking and assert true if it is equal to 0.
 		int edBP = bp.editBooking(bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras);
-		assertTrue(edBP == 0);
+		assertTrue("Failed to edit a booking", edBP == 0);
 		
 		fail("editBooking failed");
 	}
 
 	/**
 	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#setPaymentMethod(java.lang.String, java.lang.String)}.
+	 * Test by first creating a booking, and use its booking reference.
+	 * assertTrue will asserts true if the created booking reference is equals to the returned value of a booking.
+	 * Then set payment method and asserts true if it is equal to 0.
 	 */
 	@Test
 	public void testSetPaymentMethod() {
-		testBook();			// antag att det finns en bokningsreferens redan
+		// Create a booking reference and assert true if it is equal to the returned value of a booking.
+		testBook();	
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
 		
+		// Set payment method to a specific booking reference and assert true if it is equal to 0.
 		String method = "VOUCHER";
 		int setPM = bp.setPaymentMethod(method, bookingRef);
+		assertTrue("Failed to set payment method", setPM == 0);
 		
-		assertTrue(setPM == 0);
-		fail("No booking reference or wrong inparametres.");
+		fail("setPaymentMethod failed");
 	}
 
 	/**
 	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#setPaymentDetails(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String)}.
+	 * 
 	 */
 	@Test
 	public void testSetPaymentDetails() {
-		testBook();			
+		// Create a booking reference and assert true if it is equal to the returned value of a booking.
+		testBook();	
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
 		
 		String ccNumber = "5545 0111 1337 4242 6666";
 		String ccv = "112";
@@ -189,9 +202,9 @@ public class testBookingProvidesImpl {
 		String lastName =  "Grischa";
 		String customerEmail = "grischa@group4.se";
 		
+		// Set payment details to a specific booking reference and assert true if it is equal to 0.
 		int setPaD = bp.setPaymentDetails(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, customerEmail, bookingRef);
-	
-		assertTrue(setPaD == 0);
+		assertTrue("Failed to set payment details", setPaD == 0);
 		
 		fail("No booking reference or wrong inparametres.");
 	}
