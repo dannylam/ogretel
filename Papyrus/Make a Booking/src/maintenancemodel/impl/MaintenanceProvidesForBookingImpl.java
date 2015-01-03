@@ -48,7 +48,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * @generated
  */
 public class MaintenanceProvidesForBookingImpl extends
-		MinimalEObjectImpl.Container implements MaintenanceProvidesForBooking {
+MinimalEObjectImpl.Container implements MaintenanceProvidesForBooking {
 
 	/**
 	 * The cached value of the '{@link #getRoomTypes() <em>Room Types</em>}'
@@ -142,18 +142,18 @@ public class MaintenanceProvidesForBookingImpl extends
 			NotificationChain msgs = null;
 			if (roomTypes != null)
 				msgs = ((InternalEObject) roomTypes)
-						.eInverseRemove(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES,
-								null, msgs);
+				.eInverseRemove(
+						this,
+						EOPPOSITE_FEATURE_BASE
+						- MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES,
+						null, msgs);
 			if (newRoomTypes != null)
 				msgs = ((InternalEObject) newRoomTypes)
-						.eInverseAdd(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES,
-								null, msgs);
+				.eInverseAdd(
+						this,
+						EOPPOSITE_FEATURE_BASE
+						- MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES,
+						null, msgs);
 			msgs = basicSetRoomTypes(newRoomTypes, msgs);
 			if (msgs != null)
 				msgs.dispatch();
@@ -207,18 +207,18 @@ public class MaintenanceProvidesForBookingImpl extends
 			NotificationChain msgs = null;
 			if (rooms != null)
 				msgs = ((InternalEObject) rooms)
-						.eInverseRemove(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS,
-								null, msgs);
+				.eInverseRemove(
+						this,
+						EOPPOSITE_FEATURE_BASE
+						- MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS,
+						null, msgs);
 			if (newRooms != null)
 				msgs = ((InternalEObject) newRooms)
-						.eInverseAdd(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS,
-								null, msgs);
+				.eInverseAdd(
+						this,
+						EOPPOSITE_FEATURE_BASE
+						- MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS,
+						null, msgs);
 			msgs = basicSetRooms(newRooms, msgs);
 			if (msgs != null)
 				msgs.dispatch();
@@ -272,18 +272,18 @@ public class MaintenanceProvidesForBookingImpl extends
 			NotificationChain msgs = null;
 			if (extraHandler != null)
 				msgs = ((InternalEObject) extraHandler)
-						.eInverseRemove(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__EXTRA_HANDLER,
-								null, msgs);
+				.eInverseRemove(
+						this,
+						EOPPOSITE_FEATURE_BASE
+						- MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__EXTRA_HANDLER,
+						null, msgs);
 			if (newExtraHandler != null)
 				msgs = ((InternalEObject) newExtraHandler)
-						.eInverseAdd(
-								this,
-								EOPPOSITE_FEATURE_BASE
-										- MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__EXTRA_HANDLER,
-								null, msgs);
+				.eInverseAdd(
+						this,
+						EOPPOSITE_FEATURE_BASE
+						- MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__EXTRA_HANDLER,
+						null, msgs);
 			msgs = basicSetExtraHandler(newExtraHandler, msgs);
 			if (msgs != null)
 				msgs.dispatch();
@@ -302,9 +302,6 @@ public class MaintenanceProvidesForBookingImpl extends
 	 * @generated NOT
 	 */
 	public boolean canBook(EList<String> roomTypeIDs, String start, String end) {
-
-		// THE DIFFERENT THINGS WILL BE REFACTORED INTO DIFFERENT METHODS
-		// DOING ONLY ONE THING ('N DOIN' IT WELL) AS APPROPRIATE.
 
 		// false if incorrect formats
 		if (start.length() != 6 && end.length() != 6) {
@@ -330,18 +327,14 @@ public class MaintenanceProvidesForBookingImpl extends
 				}
 			}
 
-			// Convert start & end to ints
-			// Curr date
 			DateFormat dateFormat = new SimpleDateFormat("yyMMdd");
 			String currDate = dateFormat.format(new Date());
 
 			int startDays = this.getDaysBetween(currDate, start);
 			int endDays = this.getDaysBetween(currDate, end);
 
-			// Get cap
-			
+
 			// Check if cap is lower as the amount of identical roomTypeIDs
-			
 			if(this.roomTypes.getCalendar().getCap(startDays, endDays, id) < amount){
 				return false;
 			}
@@ -353,15 +346,27 @@ public class MaintenanceProvidesForBookingImpl extends
 
 	}
 
-	private Integer getDaysBetween(String date1, String date2) {
-		// Get year, month, day & convert to ints
-		int year1 = Integer.parseInt(date1.substring(0, 2));
-		int month1 = Integer.parseInt(date1.substring(2, 4));
-		int day1 = Integer.parseInt(date1.substring(4, 6));
+	private int getYear(String date){
+		return Integer.parseInt(date.substring(0, 2));
+	}
 
-		int year2 = Integer.parseInt(date2.substring(0, 2));
-		int month2 = Integer.parseInt(date2.substring(2, 4));
-		int day2 = Integer.parseInt(date2.substring(4, 6));
+	private int getMonth(String date){
+		return Integer.parseInt(date.substring(2, 4));
+	}
+
+	private int getDay(String date){
+		return Integer.parseInt(date.substring(4, 6));
+	}
+
+	private Integer getDaysBetween(String date1, String date2) {
+		
+		int year1 = getYear(date1); 
+		int month1 = getMonth(date1); 
+		int day1 = getDay(date1);
+
+		int year2 = getYear(date2);
+		int month2 = getMonth(date2);
+		int day2 = getDay(date2);
 
 		// Validate
 		if (!isDateValid(year1, month1, day1)
@@ -369,15 +374,10 @@ public class MaintenanceProvidesForBookingImpl extends
 			return -1;
 		}
 
-		// Make Calendars to get correct daysInMonth
-		Calendar c1 = new GregorianCalendar(2015, month1, day1);
-		Calendar c2 = new GregorianCalendar(2015, month2, day2);
-
+		//Compute span
 		int dateSpan = this.getDayOfYear(year2, month2, day2) - this.getDayOfYear(year1, month1, day1);
-		
-		// Continue computing....
 
-		return 0;
+		return dateSpan;
 	}
 
 	private int getDayOfYear(int year, int month, int day) {
@@ -429,26 +429,26 @@ public class MaintenanceProvidesForBookingImpl extends
 	 * @generated NOT
 	 */
 	public int removeBooking(EList<String> roomTypeID, String start, String end) {
-		
+
 		//TODO: Kontrollera hur start/end ser ut, samma som i canBook!
 		int startDate = Integer.parseInt(start);
 		int endDate = Integer.parseInt(end);
-				
+
 		maintenancemodel.Calendar copyOfCalendar = roomTypes.getCalendar();
-				
+
 		int result = 0;
-						
+
 		for(int i = 0; i < roomTypeID.size(); i++){
 			if(copyOfCalendar.incCap(startDate, endDate, roomTypeID.get(i), 1) != 0){
 				result++;
 			};
 		}
-						
+
 		if(result == 0){
 			roomTypes.setCalendar(copyOfCalendar);
 			return 0;
 		}
-						
+
 		return 1;
 	}
 
