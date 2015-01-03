@@ -30,6 +30,8 @@ public interface IBookingProvidesForCustomer extends EObject {
 	 * 			2 if the credit card is invalid
 	 * 			3 if not enough money on the card or invalid card
 	 * 			4 if the amount is invalid 
+	 * 			5 if the booking is already payed
+	 * 			-1 if the booking reference does not exist
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
@@ -76,7 +78,7 @@ public interface IBookingProvidesForCustomer extends EObject {
 	int setPaymentMethod(String method, String bookingRef);
 
 	/**
-	 * Sets the payment details of a customer of a booking by using the booking referenc
+	 * Sets the payment details of a customer of a booking by using the booking reference
 	 * The integer returned by the function indicates success or failure and reason for failure.
 	 * @return  0 if success
 	 * 			-1 if not success
@@ -86,10 +88,12 @@ public interface IBookingProvidesForCustomer extends EObject {
 	int setPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, String customerEmail, String bookingRef);
 
 	/**
-	 * Set personal details such as first name, last name, age and email of a customer and assigns this customer to a booking.
+	 * Set personal details such as first name, last name, age and email of a customer and assigns this customer to a booking if
+	 * the customers age is above 18.
 	 * The integer returned by the function indicates success or failure and reason for failure.
 	 * @return  0 if success
-	 * 			-1 if not success
+	 * 			-1 if the bookingreference does not exist
+	 * 			1 if the age of the customer is below 18
 	 * @param firstName, lastName, age, email
 	 * @model dataType="types.Integer" required="true" ordered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false" ageDataType="types.Integer" ageRequired="true" ageOrdered="false" emailDataType="types.String" emailRequired="true" emailOrdered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated

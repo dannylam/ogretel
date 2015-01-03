@@ -217,7 +217,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public EList<String> getServiceNotesOfBooking(String bookingRef) {
 		if (this.bookingHandler.exists(bookingRef)) {
-			this.bookingHandler.getBooking(bookingRef).getServiceNotes();
+			return this.bookingHandler.getBooking(bookingRef).getServiceNotes();
 		}
 		return null;
 	}
@@ -385,20 +385,26 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int pay(String bookingRef) {
-		int result = 4;
-		int price = getPrice(bookingRef);
-		if (price != -1) {
-			PaymentDetails bookingdetails = getBookingHandler()
-					.getBooking(bookingRef).getCustomer().getPaymentDetails()
-					.get(0);
+		int result = -1;
+		if(this.getBookingHandler().exists(bookingRef)){
+			if(!this.getBookingHandler().getBooking(bookingRef).isIsPayed()){
+				int price = getPrice(bookingRef);
+				if (price != -1) {
+					PaymentDetails bookingdetails = getBookingHandler()
+							.getBooking(bookingRef).getCustomer().getPaymentDetails()
+							.get(0);
 		
-			result = pay(bookingdetails.getCcNr(), bookingdetails.getCcV(),
-					bookingdetails.getExpMonth(), bookingdetails.getExpYear(),
-					bookingdetails.getFirstName(),
-					bookingdetails.getLastName(), price);
-			if(result == 0){
-				this.bookingHandler.getBooking(bookingRef).setIsPayed(true);
+					result = pay(bookingdetails.getCcNr(), bookingdetails.getCcV(),
+							bookingdetails.getExpMonth(), bookingdetails.getExpYear(),
+							bookingdetails.getFirstName(),
+							bookingdetails.getLastName(), price);
+					if(result == 0){
+						this.bookingHandler.getBooking(bookingRef).setIsPayed(true);
+					}
+				}
+				result = 4;	
 			}
+			result = 5;
 		}
 		return result;
 	}
@@ -466,6 +472,14 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 				nrOfGuests, this.stringToList(roomTypes),
 				stringToList(extras));
 		 */
+		
+		Booking booking = this.bookingHandler.getBooking(bookingRef);
+		
+		if (this.maintenanceComponent.canBook(
+				(EList<String>) stringToList(roomTypes), startDate, endDate)) {
+			
+		}
+		
 		int result = 0;
 		/*
 		 * Check with the changes if they are possible, ask maintenacne, if so,
@@ -545,14 +559,17 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	public int setPersonalDetails(String firstName, String lastName, int age,
 			String email, String bookingRef) {
 		if (this.getBookingHandler().exists(bookingRef)) {
-			Customer customer = new CustomerImpl();
-			customer.setFirstName(firstName);
-			customer.setLastName(lastName);
-			customer.setEmail(email);
-			customer.setAge(age);
-			this.getBookingHandler().getBooking(bookingRef)
+			if(age >= 18){
+				Customer customer = new CustomerImpl();
+				customer.setFirstName(firstName);
+				customer.setLastName(lastName);
+				customer.setEmail(email);
+				customer.setAge(age);
+				this.getBookingHandler().getBooking(bookingRef)
 					.setCustomer(customer);
 			return 0;
+			}
+			return 1;
 		} 
 		return -1;
 	}
@@ -561,11 +578,10 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
+	//TODO: add services?
 	public String book(String startDate, String endDate, int nrOfGuests,
 			String roomTypes, String extras) {
 		String bookingRef = "";
-		// TODO: implement this method
-
 		if (this.maintenanceComponent.canBook(
 				(EList<String>) stringToList(roomTypes), startDate, endDate)) {
 			Booking booking = new BookingImpl(nrOfGuests, startDate, endDate,
