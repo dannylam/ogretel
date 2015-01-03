@@ -4,14 +4,8 @@
 package host;
 
 import static org.junit.Assert.*;
-import maintenancemodel.IRoomMaintenance;
-import maintenancemodel.impl.RoomMaintenanceImpl;
-
 import org.junit.Test;
-
-import bookingmodel.BookingHandler;
 import bookingmodel.BookingProvides;
-import bookingmodel.impl.BookingHandlerImpl;
 import bookingmodel.impl.BookingProvidesImpl;
 
 /**
