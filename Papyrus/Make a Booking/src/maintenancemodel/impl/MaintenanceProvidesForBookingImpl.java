@@ -7,6 +7,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Set;
+import java.util.concurrent.CopyOnWriteArraySet;
 
 import maintenancemodel.ExtraHandler;
 import maintenancemodel.MaintenanceProvidesForBooking;
@@ -231,12 +232,23 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 		//THE DIFFERENT THINGS WILL BE REFACTORED INTO DIFFERENT METHODS
 		//DOING ONLY ONE THING ('N DOIN' IT WELL) AS APPROPRIATE.
 		
-		//For all requested roomtypes
-		Set<String> types = new Set<String>();
+		// false if incorrect formats
+		if(start.length() != 6 && end.length() != 6){
+			return false;
+		}
 		
-		for(String id : roomTypeIDs){
+		// Using a Set, every roomTypeID is only included once
+		Set<String> types = new CopyOnWriteArraySet<String>(roomTypeIDs);
+		
+		//For all requested roomtypes
+		for(String id : types){
+			
+			// false if invalid roomTypeID
+			if(!roomTypes.exists(id)){
+				return false;
+			}
 
-			int amount = 1;
+			int amount = 0;
 			//Check how many of this type
 			for(String id2 : roomTypeIDs){
 				if(id2.equals(id)){
