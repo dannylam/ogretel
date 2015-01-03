@@ -15,8 +15,7 @@ import bookingmodel.impl.BookingHandlerImpl;
 import bookingmodel.impl.BookingProvidesImpl;
 
 /**
- * @author Paula
- *
+ * Testing the booking provides class.
  */
 public class testBookingProvidesImpl {
 	String bookingRef;
@@ -27,15 +26,27 @@ public class testBookingProvidesImpl {
 	String roomTypes = "Single";
 	String extras = "Soaps";
 	
-	private BookingProvides bp = new BookingProvidesImpl();
+	//Just nu är BookingProvides en publik konstruktor istället för protected
+	BookingProvides bp = new BookingProvidesImpl();
 	
 	/**
 	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#checkIn(java.lang.String, java.lang.String)}.
+	 * Check-in by first creating a booking, and use its booking reference,
+	 * the roomtype (in this case, "Single"), and guestEmail (in this case, grischa@group4.com)
+	 * in order to check-in. If success, the checkIn method will return 0.
+	 * assertTrue will asserts if the condition is true.
 	 */
 	@Test
 	public void testCheckIn() {
+		// Create a booking with booking reference
+		testBook();
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		// Check in with booking reference, roomtype and email
+		int checkIn = bp.checkIn(bookingRef, roomTypes, guestEmail);
 		
-		fail("Not yet implemented");
+		//Asserts that (checkIn == 0) is true. If it isn't, it throws an AssertionError with the given message.
+		assertTrue("The check in failed.", checkIn==0);
+		fail("testCheckIn failed");	
 	}
 
 	/**
@@ -43,7 +54,20 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testCheckOut() {
-		fail("Not yet implemented");
+		int roomID =378;
+		int checkOut;
+		testBook();
+		checkOut = bp.checkOut(roomID, guestEmail);
+		
+		assertTrue(checkOut==0);
+		
+		//the guest responsbile to the room has been removed and "out" is set
+		assertTrue(bp.getBookingHandler().getBooking(roomID).getRoomIDToGuestMap().get(roomID).equals("out"));
+		
+		//the bookingreference connected to the room has been removed
+		assertTrue(bp.getBookingHandler().getRoomIDToBookingRefMap().get(roomID).equals(null));
+		
+		fail("testCheckOut failed");
 	}
 
 	/**
@@ -67,7 +91,12 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testGetPrice() {
-		fail("Not yet implemented");
+		testBook();
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		int price = bp.getPrice(bookingRef);
+		//this feels a bit ridiculous but Im not sure how else the price should be compared/accessed.
+		assertTrue(price == bp.getPrice(bookingRef));
+		fail("GetPrice failed");
 	}
 
 	/**
@@ -84,7 +113,7 @@ public class testBookingProvidesImpl {
 		assertTrue(rmB == 0);
 		assertTrue(!(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef)));
 		
-		fail("Not yet implemented");
+		fail("No booking reference or wrong inparametres.");
 	}
 
 	/**
@@ -98,7 +127,7 @@ public class testBookingProvidesImpl {
 		
 		assertTrue(edBP == 0);
 		
-		fail("Not yet implemented");
+		fail("No booking reference or wrong inparametres.");
 	}
 
 	/**
@@ -113,7 +142,7 @@ public class testBookingProvidesImpl {
 		int setPM = bp.setPaymentMethod(method, bookingRef);
 		
 		assertTrue(setPM == 0);
-		fail("Not yet implemented");
+		fail("No booking reference or wrong inparametres.");
 	}
 
 	/**
@@ -136,7 +165,7 @@ public class testBookingProvidesImpl {
 	
 		assertTrue(setPaD == 0);
 		
-		fail("Not yet implemented");
+		fail("No booking reference or wrong inparametres.");
 	}
 
 	/**
@@ -157,7 +186,7 @@ public class testBookingProvidesImpl {
 		
 		assertTrue(setPeD == 0);
 		
-		fail("Not yet implemented");
+		fail("No personal details found or wrong inparametres.");
 	}
 
 	/**
@@ -167,7 +196,7 @@ public class testBookingProvidesImpl {
 	public void testBook() {
 		assertTrue(bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
 		
-		fail("Not yet implemented");
+		fail("No booking found or wrong inparametres.");
 	}
 
 }

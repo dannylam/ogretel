@@ -156,7 +156,7 @@ public class testRoomMaintenance {
 		// assertTrue(this.rm.getRoomTypeHandler().exists(roomTypeID));
 
 		int edRT = this.rm.editRoomType(roomTypeID, "singlebed", 200, 1,
-				"Hèˆ� bor en apa.",0);
+				"Hèˆ� bor en apa.");
 		assertTrue(edRT == 0);
 
 		// TODO

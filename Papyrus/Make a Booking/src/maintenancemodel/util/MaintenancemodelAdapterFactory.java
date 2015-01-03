@@ -76,6 +76,10 @@ public class MaintenancemodelAdapterFactory extends AdapterFactoryImpl {
 				return createRoomTypeAdapter();
 			}
 			@Override
+			public Adapter caseRoom(Room object) {
+				return createRoomAdapter();
+			}
+			@Override
 			public Adapter caseExperience(Experience object) {
 				return createExperienceAdapter();
 			}
@@ -90,10 +94,6 @@ public class MaintenancemodelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseProduct(Product object) {
 				return createProductAdapter();
-			}
-			@Override
-			public Adapter caseRoom(Room object) {
-				return createRoomAdapter();
 			}
 			@Override
 			public Adapter caseExtraHandler(ExtraHandler object) {

@@ -29,8 +29,10 @@
         lowerBound="1" eType="#//Booking"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Booking">
-    <eOperations name="checkedInAllGuest" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
-    <eOperations name="checkedInAGuest" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
+    <eOperations name="checkedInAllRooms" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
+    <eOperations name="checkedInRoom" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
+      <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+    </eOperations>
     <eOperations name="setResponsibleGuest" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
       <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       <eParameters name="guestEmail" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
@@ -195,18 +197,31 @@
     <eOperations name="enableSelfManagement" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
     <eOperations name="addServiceNote" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
       <eParameters name="serviceNote" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-    </eOperations>
-    <eOperations name="editServiceNote" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
-      <eParameters name="oldServiceNote" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
-      <eParameters name="newServiceNote" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="removeServiceNote" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
       <eParameters name="serviceNote" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="getServiceNotesOfBooking" ordered="false" lowerBound="1">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList">
+        <eTypeArguments/>
+      </eGenericType>
+      <eParameters name="bookingRef" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="editServiceNoteDescription" ordered="false" lowerBound="1"
+        eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="serviceNote" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="getServiceNotes" ordered="false" lowerBound="1">
       <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList">
         <eTypeArguments/>
       </eGenericType>
+    </eOperations>
+    <eOperations name="getServiceNoteDescription" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+      <eParameters name="serviceNote" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="isPayed" eType="ecore:EDataType types.ecore#//Boolean">
       <eParameters name="bookingRef" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
   </eClassifiers>
@@ -261,7 +276,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="IBookingProvidesForGuest" abstract="true"
       interface="true">
     <eOperations name="checkIn" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
-      <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+      <eParameters name="bookingRef" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="roomType" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="guestEmail" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="checkOut" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
@@ -288,6 +304,8 @@
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="bookingHandler" ordered="false"
         lowerBound="1" eType="#//BookingHandler"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serviceNoteHandler" ordered="false"
+        lowerBound="1" eType="#//ServiceNoteHandler"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RoomIDToBookingRefEntry" instanceClassName="java.util.Map$Entry">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -295,6 +313,42 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceNoteHandler">
+    <eOperations name="exists" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
+      <eParameters name="serviceNote" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="addServiceNote" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="serviceNote" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="removeServiceNote" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="serviceNote" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="getServiceNoteDescription" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
+      <eParameters name="serviceNote" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="editServiceNoteDescription" ordered="false" lowerBound="1"
+        eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="serviceNote" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="description" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="getServices" lowerBound="1">
+      <eGenericType eClassifier="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList">
+        <eTypeArguments/>
+      </eGenericType>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serviceNoteMap" ordered="false"
+        upperBound="-1" eType="#//ServiceNoteToDescriptionEntry" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServiceNoteToDescriptionEntry" instanceClassName="java.util.Map$Entry">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="key; RoomID: Integer&#xA;value; GuestEmail: String&#xA;value is &quot;out&quot; when a room which has previously &#xA;been checked-in is checked-out in a specific booking &#xA;key; RoomID: Integer&#xA;value; GuestEmail: String&#xA;value is &quot;out&quot; when a room which has previously &#xA;been checked-in is checked-out in a specific booking "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" ordered="false" lowerBound="1"
+        eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>

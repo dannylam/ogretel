@@ -3,7 +3,6 @@
 package bookingmodel;
 
 import java.util.List;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -19,14 +18,23 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface IBookingProvidesForGuest extends EObject {
 	/**
-	 * Checks in a room and sets the guest as responsible.
-	 * @model dataType="types.Integer" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
+	 * Checks in a room of a booking and sets the guest as responsible by using their email.
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return	0 if success 
+	 * 			-1 if an the booking reference does not exist
+	 * 			1 if there are no rooms of the given roomtype vacant
+	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false" roomTypeDataType="types.String" roomTypeRequired="true" roomTypeOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated NOT
 	 */
-	int checkIn(int roomID, String guestEmail);
+	int checkIn(String bookingRef, String roomType, String guestEmail);
 
 	/**
 	 * Checks out a room and removes the responsible guest
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return	0 if success 
+	 * 			-1 if an the booking reference does not exist
+	 * 			1 if the room has not been checked-in
+	 * 			2 if the room could not be set as vacant
 	 * @model dataType="types.Integer" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated NOT
 	 */
@@ -36,6 +44,11 @@ public interface IBookingProvidesForGuest extends EObject {
 	 * Make a payment by inserting credit card number, 
 	 * card code verification, expiration month, expiration year,
 	 * first name and last name.
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return	0 if success 
+	 * 			1 if an error occurred
+	 * 			2 if the credit card is invalid
+	 * 			3 if not enough money on the card or invalid card
 	 * @param ccNr, ccV, expMonth, expYear, firstName, lastName
 	 * @model dataType="types.Integer" required="true" ordered="false" ccNumberDataType="types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="types.String" ccvRequired="true" ccvOrdered="false" expMonthDataType="types.Integer" expMonthRequired="true" expMonthOrdered="false" expYearDataType="types.Integer" expYearRequired="true" expYearOrdered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false" extraRequired="true" extraMany="false" extraOrdered="false"
 	 * @generated NOT

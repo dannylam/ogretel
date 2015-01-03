@@ -163,6 +163,18 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case BookingmodelPackage.SERVICE_NOTE_HANDLER: {
+				ServiceNoteHandler serviceNoteHandler = (ServiceNoteHandler)theEObject;
+				T result = caseServiceNoteHandler(serviceNoteHandler);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BookingmodelPackage.SERVICE_NOTE_TO_DESCRIPTION_ENTRY: {
+				@SuppressWarnings("unchecked") Map.Entry<String, String> serviceNoteToDescriptionEntry = (Map.Entry<String, String>)theEObject;
+				T result = caseServiceNoteToDescriptionEntry(serviceNoteToDescriptionEntry);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -389,6 +401,36 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRoomIDToBookingRefEntry(Map.Entry<Integer, String> object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Service Note Handler</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Service Note Handler</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseServiceNoteHandler(ServiceNoteHandler object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Service Note To Description Entry</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Service Note To Description Entry</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseServiceNoteToDescriptionEntry(Map.Entry<String, String> object) {
 		return null;
 	}
 

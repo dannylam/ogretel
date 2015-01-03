@@ -76,6 +76,15 @@ public interface BookingmodelFactory extends EFactory {
 	BookingProvides createBookingProvides();
 
 	/**
+	 * Returns a new object of class '<em>Service Note Handler</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Service Note Handler</em>'.
+	 * @generated
+	 */
+	ServiceNoteHandler createServiceNoteHandler();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -56,6 +56,32 @@ public interface BookingProvides extends IBookingProvidesForCustomer, IBookingPr
 	void setBookingHandler(BookingHandler value);
 
 	/**
+	 * Returns the value of the '<em><b>Service Note Handler</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Service Note Handler</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Service Note Handler</em>' reference.
+	 * @see #setServiceNoteHandler(ServiceNoteHandler)
+	 * @see bookingmodel.BookingmodelPackage#getBookingProvides_ServiceNoteHandler()
+	 * @model required="true" ordered="false"
+	 * @generated
+	 */
+	ServiceNoteHandler getServiceNoteHandler();
+
+	/**
+	 * Sets the value of the '{@link bookingmodel.BookingProvides#getServiceNoteHandler <em>Service Note Handler</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Service Note Handler</em>' reference.
+	 * @see #getServiceNoteHandler()
+	 * @generated
+	 */
+	void setServiceNoteHandler(ServiceNoteHandler value);
+
+	/**
 	 * Make a text string into a list. 
 	 * @model dataType="types.String" ordered="false" textDataType="types.String" textRequired="true" textOrdered="false"
 	 * @generated NOT
