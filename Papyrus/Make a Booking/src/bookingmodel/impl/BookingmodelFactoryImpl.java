@@ -68,8 +68,8 @@ public class BookingmodelFactoryImpl extends EFactoryImpl implements Bookingmode
 			case BookingmodelPackage.GUEST: return createGuest();
 			case BookingmodelPackage.EXTRA_TO_IS_PAYED_ENTRY: return (EObject)createExtraToIsPayedEntry();
 			case BookingmodelPackage.BOOKING_HANDLER: return createBookingHandler();
-			case BookingmodelPackage.BOOKING_PROVIDES: return createBookingProvides();
 			case BookingmodelPackage.ROOM_ID_TO_BOOKING_REF_ENTRY: return (EObject)createRoomIDToBookingRefEntry();
+			case BookingmodelPackage.BOOKING_PROVIDES: return createBookingProvides();
 			case BookingmodelPackage.SERVICE_NOTE_HANDLER: return createServiceNoteHandler();
 			case BookingmodelPackage.SERVICE_NOTE_TO_DESCRIPTION_ENTRY: return (EObject)createServiceNoteToDescriptionEntry();
 			default:

@@ -72,7 +72,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BookingProvidesImpl() {
+	protected BookingProvidesImpl() {
 		super();
 	}
 
@@ -324,15 +324,13 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * 			1 if an error occurred
 	 * 			2 if the credit card is invalid
 	 * 			3 if not enough money on the card or invalid card
-	 * 
-	 * @generated NOT
+	 * @generated
 	 */
-	public int pay(String ccNumber, String ccv, int expMonth, int expYear,
-			String firstName, String lastName, List<String> extra) {
-
+	public int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, List<String> extra, int roomID) {
 		return pay(ccNumber, ccv, expMonth, expYear, firstName, lastName,
 				maintenanceComponent.getPriceExtra((EList<String>) extra));
 	}
+
 
 	/**
 	 * Makes a payment
@@ -590,19 +588,17 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
-	//TODO: add services?
-	public String book(String startDate, String endDate, int nrOfGuests,
-			String roomTypes, String extras) {
+	public String book(String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras, List<String> services) {
 		String bookingRef = "";
-		if (this.maintenanceComponent.canBook(
-				(EList<String>) stringToList(roomTypes), startDate, endDate)) {
-			Booking booking = new BookingImpl(nrOfGuests, startDate, endDate,
-					stringToList(roomTypes), stringToList(extras));
-			
-			this.bookingHandler.addBooking(booking);
-			bookingRef = booking.getBookingRef();
+		
+		if(!startDate.equals(null) && !endDate.equals(null) && nrOfGuests > 0 && !roomTypes.equals(null)){
+			if (this.maintenanceComponent.canBook((EList<String>) roomTypes, startDate, endDate)) {
+				Booking booking = new BookingImpl(nrOfGuests, startDate, endDate, roomTypes, extras);
+				this.bookingHandler.addBooking(booking);
+				bookingRef = booking.getBookingRef();
+			}
+			return "Startdate, enddate, number of guests and roomtypes cannot be empty";
 		}
-
 		return bookingRef;
 	}
 
@@ -682,7 +678,8 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 			switch (baseOperationID) {
 				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___CHECK_IN__STRING_STRING_STRING: return BookingmodelPackage.BOOKING_PROVIDES___CHECK_IN__STRING_STRING_STRING;
 				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___CHECK_OUT__INT_STRING: return BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__INT_STRING;
-				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST: return BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST;
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST_INT: return BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST_INT;
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___PAY__STRING_STRING_INT_INT_STRING_STRING_INT: return BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING_INT;
 				default: return -1;
 			}
 		}
@@ -707,11 +704,34 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
+	@SuppressWarnings("unchecked")
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case BookingmodelPackage.BOOKING_PROVIDES___STRING_TO_LIST__STRING:
-				return stringToList((String)arguments.get(0));
+			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING:
+				return pay((String)arguments.get(0));
+			case BookingmodelPackage.BOOKING_PROVIDES___GET_PRICE__STRING:
+				return getPrice((String)arguments.get(0));
+			case BookingmodelPackage.BOOKING_PROVIDES___REMOVE_BOOKING__STRING:
+				return removeBooking((String)arguments.get(0));
+			case BookingmodelPackage.BOOKING_PROVIDES___EDIT_BOOKING__STRING_STRING_STRING_INT_STRING_STRING:
+				return editBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
+			case BookingmodelPackage.BOOKING_PROVIDES___SET_PAYMENT_METHOD__STRING_STRING:
+				return setPaymentMethod((String)arguments.get(0), (String)arguments.get(1));
+			case BookingmodelPackage.BOOKING_PROVIDES___SET_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_STRING_STRING:
+				return setPaymentDetails((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7));
+			case BookingmodelPackage.BOOKING_PROVIDES___SET_PERSONAL_DETAILS__STRING_STRING_INT_STRING_STRING:
+				return setPersonalDetails((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4));
+			case BookingmodelPackage.BOOKING_PROVIDES___BOOK__STRING_STRING_INT_ELIST_ELIST_ELIST:
+				return book((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (EList<String>)arguments.get(3), (EList<String>)arguments.get(4), (EList<String>)arguments.get(5));
+			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_IN__STRING_STRING_STRING:
+				return checkIn((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
+			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__INT_STRING:
+				return checkOut((Integer)arguments.get(0), (String)arguments.get(1));
+			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST_INT:
+				return pay((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (EList<?>)arguments.get(6), (Integer)arguments.get(7));
+			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING_INT:
+				return pay((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Integer)arguments.get(6));
 			case BookingmodelPackage.BOOKING_PROVIDES___ENABLE_SELF_MANAGEMENT:
 				return enableSelfManagement();
 			case BookingmodelPackage.BOOKING_PROVIDES___ADD_SERVICE_NOTE__STRING_STRING:
@@ -728,28 +748,8 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 				return getServiceNoteDescription((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_PROVIDES___IS_PAYED__STRING:
 				return isPayed((String)arguments.get(0));
-			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_IN__STRING_STRING_STRING:
-				return checkIn((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
-			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__INT_STRING:
-				return checkOut((Integer)arguments.get(0), (String)arguments.get(1));
-			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST:
-				return pay((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (EList<?>)arguments.get(6));
-			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING:
-				return pay((String)arguments.get(0));
-			case BookingmodelPackage.BOOKING_PROVIDES___GET_PRICE__STRING:
-				return getPrice((String)arguments.get(0));
-			case BookingmodelPackage.BOOKING_PROVIDES___REMOVE_BOOKING__STRING:
-				return removeBooking((String)arguments.get(0));
-			case BookingmodelPackage.BOOKING_PROVIDES___EDIT_BOOKING__STRING_STRING_STRING_INT_STRING_STRING:
-				return editBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
-			case BookingmodelPackage.BOOKING_PROVIDES___SET_PAYMENT_METHOD__STRING_STRING:
-				return setPaymentMethod((String)arguments.get(0), (String)arguments.get(1));
-			case BookingmodelPackage.BOOKING_PROVIDES___SET_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_STRING_STRING:
-				return setPaymentDetails((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7));
-			case BookingmodelPackage.BOOKING_PROVIDES___SET_PERSONAL_DETAILS__STRING_STRING_INT_STRING_STRING:
-				return setPersonalDetails((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4));
-			case BookingmodelPackage.BOOKING_PROVIDES___BOOK__STRING_STRING_INT_STRING_STRING:
-				return book((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (String)arguments.get(3), (String)arguments.get(4));
+			case BookingmodelPackage.BOOKING_PROVIDES___STRING_TO_LIST__STRING:
+				return stringToList((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

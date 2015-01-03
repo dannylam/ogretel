@@ -90,6 +90,10 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 				return createCustomerAdapter();
 			}
 			@Override
+			public Adapter casePerson(Person object) {
+				return createPersonAdapter();
+			}
+			@Override
 			public Adapter casePaymentDetails(PaymentDetails object) {
 				return createPaymentDetailsAdapter();
 			}
@@ -102,12 +106,12 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 				return createExtraToIsPayedEntryAdapter();
 			}
 			@Override
-			public Adapter casePerson(Person object) {
-				return createPersonAdapter();
-			}
-			@Override
 			public Adapter caseBookingHandler(BookingHandler object) {
 				return createBookingHandlerAdapter();
+			}
+			@Override
+			public Adapter caseRoomIDToBookingRefEntry(Map.Entry<Integer, String> object) {
+				return createRoomIDToBookingRefEntryAdapter();
 			}
 			@Override
 			public Adapter caseIBookingProvidesForHost(IBookingProvidesForHost object) {
@@ -124,10 +128,6 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseBookingProvides(BookingProvides object) {
 				return createBookingProvidesAdapter();
-			}
-			@Override
-			public Adapter caseRoomIDToBookingRefEntry(Map.Entry<Integer, String> object) {
-				return createRoomIDToBookingRefEntryAdapter();
 			}
 			@Override
 			public Adapter caseServiceNoteHandler(ServiceNoteHandler object) {

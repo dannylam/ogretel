@@ -2,6 +2,7 @@
  */
 package bookingmodel;
 
+import java.util.List;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -100,17 +101,16 @@ public interface IBookingProvidesForCustomer extends EObject {
 	 * 			1 if the age of the customer is below 18
 	 * @param firstName, lastName, age, email
 	 * @model dataType="types.Integer" required="true" ordered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false" ageDataType="types.Integer" ageRequired="true" ageOrdered="false" emailDataType="types.String" emailRequired="true" emailOrdered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int setPersonalDetails(String firstName, String lastName, int age, String email, String bookingRef);
 
 	/**
 	 * Make a booking such for the given start- and enddate, number of guests,
 	 * roomtypes (and how many of each roomtype) and extras.
-	 * @param startDate, endDate, nrOfGuests, roomTypes, extras
-	 * @model dataType="types.String" required="true" ordered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesDataType="types.String" roomTypesRequired="true" roomTypesOrdered="false" extrasDataType="types.String" extrasRequired="true" extrasOrdered="false"
-	 * @generated
+	 * @model dataType="types.String" required="true" ordered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesDataType="types.String" roomTypesMany="true" roomTypesOrdered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false" servicesDataType="types.String" servicesMany="true" servicesOrdered="false"
+	 * @generated NOT
 	 */
-	String book(String startDate, String endDate, int nrOfGuests, String roomTypes, String extras);
+	String book(String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras, List<String> services);
 
 } // IBookingProvidesForCustomer
