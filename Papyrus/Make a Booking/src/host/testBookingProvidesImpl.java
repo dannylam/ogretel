@@ -185,7 +185,9 @@ public class testBookingProvidesImpl {
 
 	/**
 	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#setPaymentDetails(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String, java.lang.String, java.lang.String)}.
-	 * 
+	 * Test by first creating a booking, and use its booking reference.
+	 * assertTrue will asserts true if the created booking reference is equals to the returned value of a booking.
+	 * Set payment details and asserts true if it is equal to 0.
 	 */
 	@Test
 	public void testSetPaymentDetails() {
@@ -206,28 +208,33 @@ public class testBookingProvidesImpl {
 		int setPaD = bp.setPaymentDetails(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, customerEmail, bookingRef);
 		assertTrue("Failed to set payment details", setPaD == 0);
 		
-		fail("No booking reference or wrong inparametres.");
+		fail("setPaymentDetails failed.");
 	}
 
 	/**
 	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#setPersonalDetails(java.lang.String, java.lang.String, int, java.lang.String, java.lang.String)}.
+	 * Test by first creating a booking, and use its booking reference.
+	 * assertTrue will asserts true if the created booking reference is equals to the returned value of a booking.
+	 * Set personal details and asserts true if it is equal to 0.
 	 */
 	@Test
 	public void testSetPersonalDetails() {
-		testBook();			
-		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);
+		// Create a booking reference and assert true if it is equal to the returned value of a booking.
+		testBook();	
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras);	
+		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
 		
 		String firstName = "Mr";
 		String lastName =  "Grischa";
 		int age = 30; 
 		String customerEmail = "grischa@group4.se";
 		
+		// Set personal details and asserts true if it is equal to 0.
 		//NOTE: i BookingProvidesImpl heter det email och inte customerEmail.
 		int setPeD = bp.setPersonalDetails(firstName, lastName, age, customerEmail, bookingRef);
+		assertTrue("Failed to set personal details", setPeD == 0);
 		
-		assertTrue(setPeD == 0);
-		
-		fail("No personal details found or wrong inparametres.");
+		fail("setPersonalDetails failed.");
 	}
 
 	/**
@@ -235,9 +242,10 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testBook() {
-		assertTrue(bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
+		// Assert true if the booking reference is equal to the returned value of the booking. 
+		assertTrue("Failed to book.", bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
 		
-		fail("No booking found or wrong inparametres.");
+		fail("book failed.");
 	}
 
 }
