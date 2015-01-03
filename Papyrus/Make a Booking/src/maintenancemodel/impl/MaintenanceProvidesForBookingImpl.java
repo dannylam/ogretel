@@ -387,7 +387,7 @@ public class MaintenanceProvidesForBookingImpl extends
 					result += 30;
 				} else if (i == 1) {
 					// February
-					if (year / 4 == 0) {
+					if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
 						result += 29;
 					} else {
 						result += 28;
