@@ -303,12 +303,34 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * @inheritDoc
+	 * Pays for an extra
+	 * @param ccNumber
+	 * The cards ccNumber
+	 * @param ccv
+	 * The cards ccv number
+	 * @param expMonth
+	 * the month the card expiers
+	 * @param expYear
+	 * The year the card expiers
+	 * @param firstName
+	 * The card owners first name
+	 * @param lastName 
+	 * Same as firstName but last name
+	 * @param extra
+	 * A list of the extras to pay
+	 * 
+	 * @return 
+	 * 			0 if success 
+	 * 			1 if an error occurred
+	 * 			2 if the credit card is invalid
+	 * 			3 if not enough money on the card or invalid card
+	 * 
 	 * @generated NOT
 	 */
 	public int pay(String ccNumber, String ccv, int expMonth, int expYear,
 			String firstName, String lastName, List<String> extra) {
-		return this.pay(ccNumber, ccv, expMonth, expYear, firstName, lastName,
-				this.maintenanceComponent.getPriceExtra((EList<String>) extra));
+		return pay(ccNumber, ccv, expMonth, expYear, firstName, lastName,
+				maintenanceComponent.getPriceExtra((EList<String>) extra));
 	}
 
 	/**
@@ -345,6 +367,21 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * @inheritDoc
+	 * Pays for a booking
+	 * @param ccNumber
+	 * The cards ccNumber
+	 * @param ccv
+	 * The cards ccv number
+	 * @param expMonth
+	 * the month the card expiers
+	 * @param expYear
+	 * The year the card expiers
+	 * @param firstName
+	 * The card owners first name
+	 * @param lastName 
+	 * Same as firstName but last name
+	 * @param extra
+	 * A list of the extras to pay
 	 * @generated NOT
 	 */
 	public int pay(String bookingRef) {
@@ -368,6 +405,12 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * @inhertDoc
+	 * Get a price for the booking
+	 * @param bookingRef
+	 * A bookingreference
+	 * @return
+	 * The bookings price
+	 * If the booking doesnt exist, -1 is returned
 	 * @generated NOT
 	 */
 	public int getPrice(String bookingRef) {
@@ -387,6 +430,9 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * @inheritDoc
+	 * Removes the booking
+	 * @param bookingRef
+	 * Bookingreference
 	 * @generated NOT
 	 */
 	public int removeBooking(String bookingRef) {
@@ -395,10 +441,32 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * @inheritDoc
+	 * Edits a booking
+	 * @param bookingRef
+	 * Bookingreference of an existing booking
+	 * @param startDate
+	 * The date you want the booking to start
+	 * @param endDate
+	 * The date you want the booking to end
+	 * @param nrOfGuests
+	 * The amount of guests the booking will have
+	 * @param roomTypes
+	 * What room type the booking will contain
+	 * @param extras
+	 * Any extras the booking shoulg contain
+	 * 
+	 * @return TODO
+	 * 
+	 * 
 	 * @generated NOT
 	 */
 	public int editBooking(String bookingRef, String startDate, String endDate,
 			int nrOfGuests, String roomTypes, String extras) {
+		/* Detta bör räcka för denna metoden 
+		 * return bookingHandler.editBooking(bookingRef, startDate, endDate,
+				nrOfGuests, this.stringToList(roomTypes),
+				stringToList(extras));
+		 */
 		int result = 0;
 		/*
 		 * Check with the changes if they are possible, ask maintenacne, if so,
@@ -408,8 +476,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		this.bookingHandler.editBooking(bookingRef, startDate, endDate,
 				nrOfGuests, this.stringToList(roomTypes),
 				this.stringToList(extras));
-
-		// TODO: implement this method, we are waiting for maintenance
+		// TODO: implement this method, we are waiting for maintenance 
 		return result;
 	}
 
