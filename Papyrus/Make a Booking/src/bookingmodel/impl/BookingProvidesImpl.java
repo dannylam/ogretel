@@ -421,7 +421,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 			int roomTypesPrice = this.maintenanceComponent
 					.getPriceRoom(this.bookingHandler.getBooking(bookingRef)
 							.getRoomTypes());
-
+			// Shouldn't it return 0 as a success? TODO
 			return extraPrice + roomTypesPrice;
 		} else {
 			return -1;
