@@ -572,9 +572,13 @@ been checked-in is checked-out in a specific booking </body>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FwpNNEeSexbuF790S1w" name="roomTypes">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Eh5m8JOVEeSZ_IwO16Zn9Q"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Eh61EJOVEeSZ_IwO16Zn9Q" value="*"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14Fw5NNEeSexbuF790S1w" name="extras">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GUzH8JOVEeSZ_IwO16Zn9Q"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GUzvAJOVEeSZ_IwO16Zn9Q" value="*"/>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FxJNNEeSexbuF790S1w" name="setPaymentMethod" visibility="public">
