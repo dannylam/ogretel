@@ -421,7 +421,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 			int roomTypesPrice = this.maintenanceComponent
 					.getPriceRoom(this.bookingHandler.getBooking(bookingRef)
 							.getRoomTypes());
-			// Shouldn't it return 0 as a success? TODO
 			return extraPrice + roomTypesPrice;
 		} else {
 			return -1;
@@ -559,7 +558,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public String book(String startDate, String endDate, int nrOfGuests,
@@ -572,7 +571,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 			Booking booking = new BookingImpl(nrOfGuests, startDate, endDate,
 					stringToList(roomTypes), stringToList(extras));
 			
-			// tell maintenance to set those roomtypes and extras as busy
 			this.bookingHandler.addBooking(booking);
 			bookingRef = booking.getBookingRef();
 		}
