@@ -614,19 +614,18 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated NOT
 	 */
 	public int removeResponsibleGuestToAllRooms(String guestEmail) {
-		int result = 0;
+		int result = -1;
 		if(!this.roomIDToGuestMap.isEmpty()){								
 			int i = 0;														
 			for (String key: this.roomIDToGuestMap.values()) {				
 				if(!key.isEmpty() && roomIDToGuestMap.get(i).getValue().equals(guestEmail)){
-					this.roomIDToGuestMap.get(i).setValue("out");	
+					this.roomIDToGuestMap.get(i).setValue("out");
+					result = 0;
 				} else {
-					result = -1;
+					return -1;
 				}
 			i++;
 			}
-		}else{																
-			result = -1;												
 		}
 		return result;
 	}

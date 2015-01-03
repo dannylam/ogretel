@@ -71,10 +71,8 @@ public interface BookingHandler extends EObject {
 	 * Adds a booking to the map where the key is the bookingreference and the value the booking. 
 	 * The integer returned by the function indicates success or failure and reason for failure.
 	 * @param booking
-	 *  //TODO
 	 * @return  0 if success 
-	 * 			1 if ??
-	 * 			2 if ??
+	 * 			- 1 if the map of bookings is null
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRequired="true" bookingOrdered="false"
 	 * @generated NOT
 	 */
@@ -84,10 +82,8 @@ public interface BookingHandler extends EObject {
 	 * Removes a booking from the map with the given booking reference.
 	 * The integer returned by the function indicates success or failure and reason for failure.
 	 * @param booking
-	 * //TODO
 	 * @return  0 if success 
-	 * 			1 if ??
-	 * 			2 if ??
+	 * 			-1 if the booking reference does not exist
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
@@ -105,10 +101,8 @@ public interface BookingHandler extends EObject {
 	/**
 	 * Edits a booking with the specified parameters given.
 	 * The integer returned by the function indicates success or failure and reason for failure.
-	 * //TODO
 	 * @return  0 if success 
-	 * 			1 if ??
-	 * 			2 if ??
+	 * 			-1 if the booking reference does not exist
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesRequired="true" roomTypesMany="false" roomTypesOrdered="false" extrasMany="false" extrasOrdered="false"
 	 * @generated NOT
 	 */
@@ -117,9 +111,7 @@ public interface BookingHandler extends EObject {
 	/**
 	 *  Returns the booking which a rooms is associated to if that room is already checked in.
 	 * The integer returned by the function indicates success or failure and reason for failure.
-	 * @return  0 if success 
-	 * 			1 if the booking is not possible
-	 * 			2 if ?? 
+	 * @return  the booking reference associaated with the room.
 	 * @model required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
 	 */

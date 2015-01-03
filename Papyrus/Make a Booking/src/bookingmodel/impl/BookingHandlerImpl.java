@@ -108,27 +108,23 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public int addBooking(Booking booking) {
-		int result = 0;
 		if(!this.bookingsMap.equals(null)){
 			this.bookingsMap.put(booking.getBookingRef(), booking);
-		} else {
-			result = -1;
-		}
-		return result;
+			return 0;
+		} 
+		return -1;
 	}
-
+		
 	/**
 	 * @inheritDoc
 	 * @generated NOT
 	 */
 	public int removeBooking(String bookingRef) {
-		int result = 0;
 		if(this.exists(bookingRef)){
 			this.bookingsMap.remove(getBooking(bookingRef));
-		} else {
-			result = -1;
-		}
-		return result;
+			return 0;
+		} 
+		return -1;
 	}
 
 	/**
@@ -153,17 +149,15 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras) {
-		int result = 0;
-			if(this.exists(bookingRef)){
-				this.getBooking(bookingRef).setStartDate(startDate);
-				this.getBooking(bookingRef).setEndDate(endDate);
-				this.getBooking(bookingRef).setNrOfGuests(nrOfGuests);
-				this.getBooking(bookingRef).setRoomTypes(roomTypes);
-				this.getBooking(bookingRef).setExtras(extras);
-			} else {
-				result = -1;
-			}
-		return result;
+		if(this.exists(bookingRef)){
+			this.getBooking(bookingRef).setStartDate(startDate);
+			this.getBooking(bookingRef).setEndDate(endDate);
+			this.getBooking(bookingRef).setNrOfGuests(nrOfGuests);
+			this.getBooking(bookingRef).setRoomTypes(roomTypes);
+			this.getBooking(bookingRef).setExtras(extras);
+			return 0;
+		}
+		return -1;
 	}
 
 	/**
