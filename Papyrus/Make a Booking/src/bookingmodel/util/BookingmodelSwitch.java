@@ -99,6 +99,12 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case BookingmodelPackage.PERSON: {
+				Person person = (Person)theEObject;
+				T result = casePerson(person);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case BookingmodelPackage.PAYMENT_DETAILS: {
 				PaymentDetails paymentDetails = (PaymentDetails)theEObject;
 				T result = casePaymentDetails(paymentDetails);
@@ -118,15 +124,15 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case BookingmodelPackage.PERSON: {
-				Person person = (Person)theEObject;
-				T result = casePerson(person);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case BookingmodelPackage.BOOKING_HANDLER: {
 				BookingHandler bookingHandler = (BookingHandler)theEObject;
 				T result = caseBookingHandler(bookingHandler);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BookingmodelPackage.ROOM_ID_TO_BOOKING_REF_ENTRY: {
+				@SuppressWarnings("unchecked") Map.Entry<Integer, String> roomIDToBookingRefEntry = (Map.Entry<Integer, String>)theEObject;
+				T result = caseRoomIDToBookingRefEntry(roomIDToBookingRefEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -154,12 +160,6 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseIBookingProvidesForCustomer(bookingProvides);
 				if (result == null) result = caseIBookingProvidesForGuest(bookingProvides);
 				if (result == null) result = caseIBookingProvidesForHost(bookingProvides);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case BookingmodelPackage.ROOM_ID_TO_BOOKING_REF_ENTRY: {
-				@SuppressWarnings("unchecked") Map.Entry<Integer, String> roomIDToBookingRefEntry = (Map.Entry<Integer, String>)theEObject;
-				T result = caseRoomIDToBookingRefEntry(roomIDToBookingRefEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
