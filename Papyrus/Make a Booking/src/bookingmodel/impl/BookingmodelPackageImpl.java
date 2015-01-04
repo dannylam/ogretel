@@ -584,7 +584,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__IsExtraPayed__int() {
+	public EOperation getBooking__IsExtraPayed__String() {
 		return bookingEClass.getEOperations().get(18);
 	}
 
@@ -595,6 +595,15 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 */
 	public EOperation getBooking__GetUnPayedExtras() {
 		return bookingEClass.getEOperations().get(19);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBooking__SetExtrasAsPayed__EList() {
+		return bookingEClass.getEOperations().get(20);
 	}
 
 	/**
@@ -1235,8 +1244,9 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		createEOperation(bookingEClass, BOOKING___CHECKED_OUT_ROOM__INT);
 		createEOperation(bookingEClass, BOOKING___CHECKED_OUT_ALL_ROOMS);
 		createEOperation(bookingEClass, BOOKING___ALL_EXTRAS_PAYED);
-		createEOperation(bookingEClass, BOOKING___IS_EXTRA_PAYED__INT);
+		createEOperation(bookingEClass, BOOKING___IS_EXTRA_PAYED__STRING);
 		createEOperation(bookingEClass, BOOKING___GET_UN_PAYED_EXTRAS);
+		createEOperation(bookingEClass, BOOKING___SET_EXTRAS_AS_PAYED__ELIST);
 
 		customerEClass = createEClass(CUSTOMER);
 		createEReference(customerEClass, CUSTOMER__PAYMENT_DETAILS);
@@ -1428,10 +1438,13 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 
 		initEOperation(getBooking__AllExtrasPayed(), theTypesPackage.getBoolean(), "allExtrasPayed", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getBooking__IsExtraPayed__int(), theTypesPackage.getBoolean(), "isExtraPayed", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBooking__IsExtraPayed__String(), theTypesPackage.getBoolean(), "isExtraPayed", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "extra", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getBooking__GetUnPayedExtras(), theTypesPackage.getString(), "getUnPayedExtras", 0, -1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getBooking__SetExtrasAsPayed__EList(), theTypesPackage.getInteger(), "setExtrasAsPayed", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "extras", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(customerEClass, Customer.class, "Customer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCustomer_PaymentDetails(), this.getPaymentDetails(), null, "paymentDetails", null, 1, 1, Customer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

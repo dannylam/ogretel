@@ -2,6 +2,8 @@
  */
 package bookingmodel;
 
+import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -20,56 +22,11 @@ import org.eclipse.emf.ecore.EObject;
 public interface IBookingProvidesForHost extends EObject {
 
 	/**
-	 * Add a specific service note and its description.
-	 * @return	0 if success 
-	 * 			-1 if the map of service notes is null
-	 * 			1 if the inparams are null
-	 * @param serviceNote, description
-	 * @model dataType="types.Integer" required="true" ordered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false" descriptionDataType="types.String" descriptionRequired="true" descriptionOrdered="false"
-	 * @generated NOT
-	 */
-	int addServiceNote(String serviceNote, String description);
-
-	/**
-	 * Remove a specific service note
-	 * @return	0 if success 
-	 * 			-1 if of service notes is null
-	 * 			1 if the service does not exist
-	 * 			2 if the inparam are null
-	 * @param serviceNote
-	 * @model dataType="types.Integer" required="true" ordered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
-	 * @generated NOT
-	 */
-	int removeServiceNote(String serviceNote);
-
-	/**
 	 * Returns the service notes from a specific booking. 
-	 * @param bookingRef
-	 * @model required="true" many="false" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @model dataType="types.String" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
-	EList<String> getServiceNotesOfBooking(String bookingRef);
-
-	/**
-	 * Changes a the description of a service note.
-	 * @model dataType="types.Integer" required="true" ordered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false" descriptionDataType="types.String" descriptionRequired="true" descriptionOrdered="false"
-	 * @generated NOT
-	 */
-	int editServiceNoteDescription(String serviceNote, String description);
-
-	/**
-	 * Returns a list of all the service notes. 
-	 * @model kind="operation" required="true" many="false" ordered="false"
-	 * @generated NOT
-	 */
-	EList<String> getServiceNotes();
-
-	/**
-	 * Returns the description of a service note
-	 * @model dataType="types.String" required="true" ordered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
-	 * @generated NOT
-	 */
-	String getServiceNoteDescription(String serviceNote);
+	List<String> getServiceNotes(String bookingRef);
 
 	/**
 	 * Returns is the given booking is payed or not
@@ -77,6 +34,55 @@ public interface IBookingProvidesForHost extends EObject {
 	 * @generated NOT
 	 */
 	boolean isPayed(String bookingRef);
+
+	/**
+	 * Returns the start date of a booking
+	 * @model dataType="types.String" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @generated NOT
+	 */
+	String getStartDate(String bookingRef);
+
+	/**
+	 * Returns the end date of a booking
+	 * @model dataType="types.String" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @generated NOT
+	 */
+	String getEndDate(String bookingRef);
+
+	/**
+	 * Returns the number of guests of a booking
+	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @generated NOT
+	 */
+	int getNrOfGuests(String bookingRef);
+
+	/**
+	 * Returns the extras of a booking
+	 * @model dataType="types.String" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @generated NOT
+	 */
+	List<String> getExtras(String bookingRef);
+
+	/**
+	 * Returns a list of the rooms of a booking
+	 * @model dataType="types.Integer" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @generated NOT
+	 */
+	List<Integer> getRooms(String bookingRef);
+
+	/**
+	 * Returns the paymentmethod of a booking
+	 * @model dataType="types.String" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @generated NOT
+	 */
+	String getPaymentMethod(String bookingRef);
+
+	/**
+	 * Returns a list of the roomtypes of a booking
+	 * @model dataType="types.String" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @generated NOT
+	 */
+	List<String> getRoomTypes(String bookingRef);
 
 
 } // IBookingProvidesForHost

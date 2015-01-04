@@ -115,9 +115,12 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/checkedOutAllRooms"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/allExtrasPayed"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/isExtraPayed">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//Booking/isExtraPayed/roomID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//Booking/isExtraPayed/extra"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/getUnPayedExtras"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/setExtrasAsPayed">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//Booking/setExtrasAsPayed/extras"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="bookingmodel.ecore#//Customer">
       <genFeatures xsi:type="genmodel:GenFeature" notify="false" createChild="false"

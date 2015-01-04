@@ -72,9 +72,12 @@
     <eOperations name="checkedOutAllRooms" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
     <eOperations name="allExtrasPayed" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean"/>
     <eOperations name="isExtraPayed" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Boolean">
-      <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
+      <eParameters name="extra" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="getUnPayedExtras" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+    <eOperations name="setExtrasAsPayed" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="extras" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bookingRef" ordered="false"
         lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" ordered="false"

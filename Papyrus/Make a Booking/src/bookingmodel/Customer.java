@@ -2,7 +2,6 @@
  */
 package bookingmodel;
 
-import org.eclipse.emf.common.util.EList;
 
  /**
  * An interface class which represents a Customer, extending EObject.
@@ -18,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see bookingmodel.BookingmodelPackage#getCustomer()
  * @model
- * @generated NOT
+ * @generated 
  */
 public interface Customer extends Person {
 	/**
@@ -27,8 +26,18 @@ public interface Customer extends Person {
 	 * @return the value of the '<em>Payment Details</em>' reference list.
 	 * @see bookingmodel.BookingmodelPackage#getCustomer_PaymentDetails()
 	 * @model required="true" ordered="false"
-	 * @generated NOT
+	 * @generated 
 	 */
-	EList<PaymentDetails> getPaymentDetails();
+	PaymentDetails getPaymentDetails();
+
+	/**
+	 * Sets the value of the '{@link bookingmodel.Customer#getPaymentDetails <em>Payment Details</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Payment Details</em>' containment reference.
+	 * @see #getPaymentDetails()
+	 * @generated
+	 */
+	void setPaymentDetails(PaymentDetails value);
 
 } // Customer

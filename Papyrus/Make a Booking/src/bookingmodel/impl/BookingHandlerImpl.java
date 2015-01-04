@@ -104,18 +104,19 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		return this.bookingsMap.containsKey(bookingRef);
 	}
 
+
 	/**
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
-	public int addBooking(int nrOfGuests, String startDate, String endDate, List<String> roomTypes, List<String> extras, List<String> services) {
+	public String addBooking(int nrOfGuests, String startDate, String endDate, List<String> roomTypes, List<String> extras, List<String> services) {
 		if(!this.bookingsMap.equals(null)){
 			Booking booking = new BookingImpl(nrOfGuests, startDate, endDate, roomTypes, extras, services);
 			booking.setBookingRef(this.generateBookingRef());
 			this.bookingsMap.put(booking.getBookingRef(), booking);
-			return 0;
+			return booking.getBookingRef();
 		} 
-		return -1;
+		return null;
 	}
 	
 	/**
