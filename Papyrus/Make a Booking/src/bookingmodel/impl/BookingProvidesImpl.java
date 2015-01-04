@@ -605,9 +605,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 						}
 					services = newServiceNotes;
 				}
-				Booking booking = new BookingImpl(nrOfGuests, startDate, endDate, roomTypes, extras, services);
-				this.bookingHandler.addBooking(booking);
-				return booking.getBookingRef();
+				return addBooking(nrOfGuests, startDate, endDate, roomTypes, extras, services);
 			}
 			return "";
 		}

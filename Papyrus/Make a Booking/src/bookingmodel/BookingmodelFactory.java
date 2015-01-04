@@ -76,13 +76,13 @@ public interface BookingmodelFactory extends EFactory {
 	BookingProvides createBookingProvides();
 
 	/**
-	 * Returns a new object of class '<em>Service Note Handler</em>'.
+	 * Returns a new object of class '<em>Integer To Boolean Entry</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Service Note Handler</em>'.
+	 * @return a new object of class '<em>Integer To Boolean Entry</em>'.
 	 * @generated
 	 */
-	ServiceNoteHandler createServiceNoteHandler();
+	IntegerToBooleanEntry createIntegerToBooleanEntry();
 
 	/**
 	 * Returns the package supported by this factory.

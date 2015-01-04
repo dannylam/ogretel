@@ -331,13 +331,6 @@ public interface Booking extends EObject {
 	int setRoomTypes(List<String> roomTypes);
 
 	/**
-	 * Generates a booking reference to this booking
-	 * @model
-	 * @generated NOT
-	 */
-	void generateBookingRef();
-
-	/**
 	 * Returns a list of all extras of a booking.
 	 * @model kind="operation" required="true" many="false"
 	 * @generated NOT

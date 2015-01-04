@@ -581,15 +581,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
-	public void generateBookingRef() {
-		String bookingRef = UUID.randomUUID().toString();
-		this.setBookingRef(bookingRef);
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * @generated NOT
-	 */
 	public EList<String> getExtras() {
 		String[] extras = this.extraToIsPayedMap.keySet().toArray(new String[0]);
 		return new BasicEList(Arrays.asList(extras));
