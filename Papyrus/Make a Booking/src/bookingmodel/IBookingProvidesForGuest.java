@@ -71,7 +71,7 @@ public interface IBookingProvidesForGuest extends EObject {
 	 * @model dataType="types.Integer" required="true" ordered="false" ccNumberDataType="types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="types.String" ccvRequired="true" ccvOrdered="false" expMonthDataType="types.Integer" expMonthRequired="true" expMonthOrdered="false" expYearDataType="types.Integer" expYearRequired="true" expYearOrdered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false" extraRequired="true" extraMany="false" extraOrdered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
 	 */
-	int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, List<String> extra, int roomID);
+	int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, List<String> extras, int roomID);
 
 	/**
 	 * Make a payment for a room by inserting credit card number, 

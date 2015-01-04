@@ -310,9 +310,15 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	public int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, List<String> extras, int roomID) {
 		if(this.bookingHandler.exists(this.bookingHandler.getBooking(roomID).getBookingRef())){
 			if(!extras.equals(null)){
-				if(check if the extra(s) is not already payed){ //TODO: when we have a set/list/map for it
-					return pay(ccNumber, ccv, expMonth, expYear, firstName, lastName,
-							maintenanceComponent.getPriceExtra((EList<String>) extras));
+				EList<String> extrasToBePayed = null;
+				for(String extra: extras){
+					if(!this.getBookingHandler().getBooking(roomID).getExtraToIsPayedMap().get(extra).booleanValue()){
+						extrasToBePayed.add(extra);
+					}
+				}
+				if(!extrasToBePayed.equals(null)){
+				return pay(ccNumber, ccv, expMonth, expYear, firstName, lastName,
+						maintenanceComponent.getPriceExtra(extrasToBePayed));
 				}
 				return 4;
 			}

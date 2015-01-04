@@ -31,7 +31,6 @@ import org.eclipse.emf.ecore.EObject;
  * setPaymentMethod - set the payment method to a specific booking
  * checkedInAllGuest - check if all guests are checked in.
  * checkedInAGuest - check if a specific guest is checked in.
- * TODO: Update with the added methods
  * <p>
  * The following features are supported:
  * <ul>
