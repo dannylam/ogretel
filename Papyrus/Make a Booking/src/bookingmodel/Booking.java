@@ -355,4 +355,52 @@ public interface Booking extends EObject {
 	 */
 	int removeResponsibleGuest(int roomID, String guestEmail);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model resultDataType="types.Boolean" resultRequired="true" resultOrdered="false"
+	 * @generated
+	 */
+	void isOld(boolean result);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="types.Boolean" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
+	 * @generated
+	 */
+	boolean checkedOutRoom(int roomID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean checkedOutAllRooms();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean allExtrasPayed();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="types.Boolean" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
+	 * @generated
+	 */
+	boolean isExtraPayed(int roomID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" dataType="types.String"
+	 * @generated
+	 */
+	List<String> getUnPayedExtras();
+
 } // Booking

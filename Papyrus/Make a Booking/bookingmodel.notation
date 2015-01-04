@@ -211,6 +211,26 @@
           <element xmi:type="uml:Operation" href="bookingmodel.uml#_BdnOwJQSEeSxUuvOeThlRQ"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_BdnOwpQSEeSxUuvOeThlRQ"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_2OTbsJQnEeSkhq3pp1wxlw" type="3013">
+          <element xmi:type="uml:Operation" href="bookingmodel.uml#_2OH1gJQnEeSkhq3pp1wxlw"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_2OTbsZQnEeSkhq3pp1wxlw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_2OUCwJQnEeSkhq3pp1wxlw" type="3013">
+          <element xmi:type="uml:Operation" href="bookingmodel.uml#_2OC9AJQnEeSkhq3pp1wxlw"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_2OUCwZQnEeSkhq3pp1wxlw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="__GvcAJQnEeSkhq3pp1wxlw" type="3013">
+          <element xmi:type="uml:Operation" href="bookingmodel.uml#__GpVYJQnEeSkhq3pp1wxlw"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="__GvcAZQnEeSkhq3pp1wxlw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_k3j84JQoEeSkhq3pp1wxlw" type="3013">
+          <element xmi:type="uml:Operation" href="bookingmodel.uml#_k3d2QJQoEeSkhq3pp1wxlw"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_k3j84ZQoEeSkhq3pp1wxlw"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_uNkqAJQoEeSkhq3pp1wxlw" type="3013">
+          <element xmi:type="uml:Operation" href="bookingmodel.uml#_uNdVQJQoEeSkhq3pp1wxlw"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_uNkqAZQoEeSkhq3pp1wxlw"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_iwv44ZNNEeSexbuF790S1w"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_iwv44pNNEeSexbuF790S1w"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_iwv445NNEeSexbuF790S1w"/>
