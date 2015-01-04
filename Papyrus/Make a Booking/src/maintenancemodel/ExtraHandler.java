@@ -36,7 +36,7 @@ public interface ExtraHandler extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Int To Extra Map</em>' map.
 	 * @see maintenancemodel.MaintenancemodelPackage#getExtraHandler_IntToExtraMap()
-	 * @model mapType="maintenancemodel.IntegerToExtraMap<org.eclipse.uml2.types.String, maintenancemodel.Extra>" ordered="false"
+	 * @model mapType="maintenancemodel.IntegerToExtraEntry<org.eclipse.uml2.types.String, maintenancemodel.Extra>" ordered="false"
 	 * @generated
 	 */
 	EMap<String, Extra> getIntToExtraMap();

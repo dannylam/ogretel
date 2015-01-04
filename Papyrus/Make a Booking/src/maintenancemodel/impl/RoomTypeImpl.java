@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getRoomTypeEnum <em>Room Type Enum</em>}</li>
  *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getRoomTypeID <em>Room Type ID</em>}</li>
- *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getRoom <em>Room</em>}</li>
+ *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getRoomsOfType <em>Rooms Of Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -140,14 +140,14 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	protected String roomTypeID = ROOM_TYPE_ID_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getRoom() <em>Room</em>}' containment reference list.
+	 * The cached value of the '{@link #getRoomsOfType() <em>Rooms Of Type</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRoom()
+	 * @see #getRoomsOfType()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Room> room;
+	protected EList<Room> roomsOfType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -341,11 +341,11 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Room> getRoom() {
-		if (room == null) {
-			room = new EObjectContainmentEList<Room>(Room.class, this, MaintenancemodelPackage.ROOM_TYPE__ROOM);
+	public EList<Room> getRoomsOfType() {
+		if (roomsOfType == null) {
+			roomsOfType = new EObjectContainmentEList<Room>(Room.class, this, MaintenancemodelPackage.ROOM_TYPE__ROOMS_OF_TYPE);
 		}
-		return room;
+		return roomsOfType;
 	}
 
 	/**
@@ -356,8 +356,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MaintenancemodelPackage.ROOM_TYPE__ROOM:
-				return ((InternalEList<?>)getRoom()).basicRemove(otherEnd, msgs);
+			case MaintenancemodelPackage.ROOM_TYPE__ROOMS_OF_TYPE:
+				return ((InternalEList<?>)getRoomsOfType()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -380,8 +380,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return getRoomTypeEnum();
 			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ID:
 				return getRoomTypeID();
-			case MaintenancemodelPackage.ROOM_TYPE__ROOM:
-				return getRoom();
+			case MaintenancemodelPackage.ROOM_TYPE__ROOMS_OF_TYPE:
+				return getRoomsOfType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -410,9 +410,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ID:
 				setRoomTypeID((String)newValue);
 				return;
-			case MaintenancemodelPackage.ROOM_TYPE__ROOM:
-				getRoom().clear();
-				getRoom().addAll((Collection<? extends Room>)newValue);
+			case MaintenancemodelPackage.ROOM_TYPE__ROOMS_OF_TYPE:
+				getRoomsOfType().clear();
+				getRoomsOfType().addAll((Collection<? extends Room>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -441,8 +441,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ID:
 				setRoomTypeID(ROOM_TYPE_ID_EDEFAULT);
 				return;
-			case MaintenancemodelPackage.ROOM_TYPE__ROOM:
-				getRoom().clear();
+			case MaintenancemodelPackage.ROOM_TYPE__ROOMS_OF_TYPE:
+				getRoomsOfType().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -466,8 +466,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return roomTypeEnum != ROOM_TYPE_ENUM_EDEFAULT;
 			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ID:
 				return ROOM_TYPE_ID_EDEFAULT == null ? roomTypeID != null : !ROOM_TYPE_ID_EDEFAULT.equals(roomTypeID);
-			case MaintenancemodelPackage.ROOM_TYPE__ROOM:
-				return room != null && !room.isEmpty();
+			case MaintenancemodelPackage.ROOM_TYPE__ROOMS_OF_TYPE:
+				return roomsOfType != null && !roomsOfType.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

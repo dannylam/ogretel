@@ -66,15 +66,15 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 			case MaintenancemodelPackage.EXPERIENCE: return createExperience();
 			case MaintenancemodelPackage.PRODUCT: return createProduct();
 			case MaintenancemodelPackage.EXTRA_HANDLER: return createExtraHandler();
-			case MaintenancemodelPackage.INTEGER_TO_EXTRA_MAP: return (EObject)createIntegerToExtraMap();
+			case MaintenancemodelPackage.INTEGER_TO_EXTRA_ENTRY: return (EObject)createIntegerToExtraEntry();
 			case MaintenancemodelPackage.ROOM_HANDLER: return createRoomHandler();
-			case MaintenancemodelPackage.INTEGER_TO_ROOM_MAP: return (EObject)createIntegerToRoomMap();
+			case MaintenancemodelPackage.INTEGER_TO_ROOM_ENTRY: return (EObject)createIntegerToRoomEntry();
 			case MaintenancemodelPackage.CALENDAR: return createCalendar();
-			case MaintenancemodelPackage.STRING_TO_LISTS_MAP: return (EObject)createStringToListsMap();
+			case MaintenancemodelPackage.STRING_TO_LISTS_ENTRY: return (EObject)createStringToListsEntry();
 			case MaintenancemodelPackage.EXTRAS_MAINTENANCE: return createExtrasMaintenance();
 			case MaintenancemodelPackage.ROOM_MAINTENANCE: return createRoomMaintenance();
 			case MaintenancemodelPackage.ROOM_TYPES_HANDLER: return createRoomTypesHandler();
-			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE_MAP: return (EObject)createStringToRoomTypeMap();
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE_ENTRY: return (EObject)createStringToRoomTypeEntry();
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING: return createMaintenanceProvidesForBooking();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -178,9 +178,9 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map.Entry<String, Extra> createIntegerToExtraMap() {
-		IntegerToExtraMapImpl integerToExtraMap = new IntegerToExtraMapImpl();
-		return integerToExtraMap;
+	public Map.Entry<String, Extra> createIntegerToExtraEntry() {
+		IntegerToExtraEntryImpl integerToExtraEntry = new IntegerToExtraEntryImpl();
+		return integerToExtraEntry;
 	}
 
 	/**
@@ -198,9 +198,9 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map.Entry<Integer, Room> createIntegerToRoomMap() {
-		IntegerToRoomMapImpl integerToRoomMap = new IntegerToRoomMapImpl();
-		return integerToRoomMap;
+	public Map.Entry<Integer, Room> createIntegerToRoomEntry() {
+		IntegerToRoomEntryImpl integerToRoomEntry = new IntegerToRoomEntryImpl();
+		return integerToRoomEntry;
 	}
 
 	/**
@@ -218,6 +218,16 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Map.Entry<String, EList<Integer>> createStringToListsEntry() {
+		StringToListsEntryImpl stringToListsEntry = new StringToListsEntryImpl();
+		return stringToListsEntry;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public RoomTypesHandler createRoomTypesHandler() {
 		RoomTypesHandlerImpl roomTypesHandler = new RoomTypesHandlerImpl();
 		return roomTypesHandler;
@@ -228,19 +238,9 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Map.Entry<String, RoomType> createStringToRoomTypeMap() {
-		StringToRoomTypeMapImpl stringToRoomTypeMap = new StringToRoomTypeMapImpl();
-		return stringToRoomTypeMap;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Map.Entry<String, EList<Integer>> createStringToListsMap() {
-		StringToListsMapImpl stringToListsMap = new StringToListsMapImpl();
-		return stringToListsMap;
+	public Map.Entry<String, RoomType> createStringToRoomTypeEntry() {
+		StringToRoomTypeEntryImpl stringToRoomTypeEntry = new StringToRoomTypeEntryImpl();
+		return stringToRoomTypeEntry;
 	}
 
 	/**

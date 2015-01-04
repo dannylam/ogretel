@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link maintenancemodel.RoomType#getDescription <em>Description</em>}</li>
  *   <li>{@link maintenancemodel.RoomType#getRoomTypeEnum <em>Room Type Enum</em>}</li>
  *   <li>{@link maintenancemodel.RoomType#getRoomTypeID <em>Room Type ID</em>}</li>
- *   <li>{@link maintenancemodel.RoomType#getRoom <em>Room</em>}</li>
+ *   <li>{@link maintenancemodel.RoomType#getRoomsOfType <em>Rooms Of Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -174,19 +174,20 @@ public interface RoomType extends EObject {
 	void setRoomTypeID(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Room</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Rooms Of Type</b></em>' containment reference list.
 	 * The list contents are of type {@link maintenancemodel.Room}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Room</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Rooms Of Type</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Room</em>' containment reference list.
-	 * @see maintenancemodel.MaintenancemodelPackage#getRoomType_Room()
+	 * @return the value of the '<em>Rooms Of Type</em>' containment reference list.
+	 * @see maintenancemodel.MaintenancemodelPackage#getRoomType_RoomsOfType()
 	 * @model containment="true" ordered="false"
+	 *        annotation="http://www.eclipse.org/uml2/2.0.0/UML originalName='roomsOf Type'"
 	 * @generated
 	 */
-	EList<Room> getRoom();
+	EList<Room> getRoomsOfType();
 
 } // RoomType

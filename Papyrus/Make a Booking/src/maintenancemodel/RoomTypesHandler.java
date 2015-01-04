@@ -36,7 +36,7 @@ public interface RoomTypesHandler extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>String To Room Type</em>' map.
 	 * @see maintenancemodel.MaintenancemodelPackage#getRoomTypesHandler_StringToRoomType()
-	 * @model mapType="maintenancemodel.StringToRoomTypeMap<org.eclipse.emf.ecore.EString, maintenancemodel.RoomType>" ordered="false"
+	 * @model mapType="maintenancemodel.StringToRoomTypeEntry<org.eclipse.emf.ecore.EString, maintenancemodel.RoomType>" ordered="false"
 	 * @generated
 	 */
 	EMap<String, RoomType> getStringToRoomType();

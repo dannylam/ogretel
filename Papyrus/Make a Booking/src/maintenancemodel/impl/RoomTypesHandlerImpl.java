@@ -83,7 +83,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	 */
 	public EMap<String, RoomType> getStringToRoomType() {
 		if (stringToRoomType == null) {
-			stringToRoomType = new EcoreEMap<String,RoomType>(MaintenancemodelPackage.Literals.STRING_TO_ROOM_TYPE_MAP, StringToRoomTypeMapImpl.class, this, MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE);
+			stringToRoomType = new EcoreEMap<String,RoomType>(MaintenancemodelPackage.Literals.STRING_TO_ROOM_TYPE_ENTRY, StringToRoomTypeEntryImpl.class, this, MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE);
 		}
 		return stringToRoomType;
 	}

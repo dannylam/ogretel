@@ -74,7 +74,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public EMap<Integer, Room> getIntegerToRoomMap() {
 		if (integerToRoomMap == null) {
-			integerToRoomMap = new EcoreEMap<Integer,Room>(MaintenancemodelPackage.Literals.INTEGER_TO_ROOM_MAP, IntegerToRoomMapImpl.class, this, MaintenancemodelPackage.ROOM_HANDLER__INTEGER_TO_ROOM_MAP);
+			integerToRoomMap = new EcoreEMap<Integer,Room>(MaintenancemodelPackage.Literals.INTEGER_TO_ROOM_ENTRY, IntegerToRoomEntryImpl.class, this, MaintenancemodelPackage.ROOM_HANDLER__INTEGER_TO_ROOM_MAP);
 		}
 		return integerToRoomMap;
 	}

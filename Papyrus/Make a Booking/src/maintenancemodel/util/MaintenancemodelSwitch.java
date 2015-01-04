@@ -117,9 +117,9 @@ public class MaintenancemodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MaintenancemodelPackage.INTEGER_TO_EXTRA_MAP: {
-				@SuppressWarnings("unchecked") Map.Entry<String, Extra> integerToExtraMap = (Map.Entry<String, Extra>)theEObject;
-				T result = caseIntegerToExtraMap(integerToExtraMap);
+			case MaintenancemodelPackage.INTEGER_TO_EXTRA_ENTRY: {
+				@SuppressWarnings("unchecked") Map.Entry<String, Extra> integerToExtraEntry = (Map.Entry<String, Extra>)theEObject;
+				T result = caseIntegerToExtraEntry(integerToExtraEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -129,9 +129,9 @@ public class MaintenancemodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MaintenancemodelPackage.INTEGER_TO_ROOM_MAP: {
-				@SuppressWarnings("unchecked") Map.Entry<Integer, Room> integerToRoomMap = (Map.Entry<Integer, Room>)theEObject;
-				T result = caseIntegerToRoomMap(integerToRoomMap);
+			case MaintenancemodelPackage.INTEGER_TO_ROOM_ENTRY: {
+				@SuppressWarnings("unchecked") Map.Entry<Integer, Room> integerToRoomEntry = (Map.Entry<Integer, Room>)theEObject;
+				T result = caseIntegerToRoomEntry(integerToRoomEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -141,9 +141,9 @@ public class MaintenancemodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MaintenancemodelPackage.STRING_TO_LISTS_MAP: {
-				@SuppressWarnings("unchecked") Map.Entry<String, EList<Integer>> stringToListsMap = (Map.Entry<String, EList<Integer>>)theEObject;
-				T result = caseStringToListsMap(stringToListsMap);
+			case MaintenancemodelPackage.STRING_TO_LISTS_ENTRY: {
+				@SuppressWarnings("unchecked") Map.Entry<String, EList<Integer>> stringToListsEntry = (Map.Entry<String, EList<Integer>>)theEObject;
+				T result = caseStringToListsEntry(stringToListsEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -176,6 +176,7 @@ public class MaintenancemodelSwitch<T> extends Switch<T> {
 				RoomMaintenance roomMaintenance = (RoomMaintenance)theEObject;
 				T result = caseRoomMaintenance(roomMaintenance);
 				if (result == null) result = caseIRoomMaintenance(roomMaintenance);
+				if (result == null) result = caseIRoomTypeMaintenance(roomMaintenance);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -185,9 +186,15 @@ public class MaintenancemodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE_MAP: {
-				@SuppressWarnings("unchecked") Map.Entry<String, RoomType> stringToRoomTypeMap = (Map.Entry<String, RoomType>)theEObject;
-				T result = caseStringToRoomTypeMap(stringToRoomTypeMap);
+			case MaintenancemodelPackage.STRING_TO_ROOM_TYPE_ENTRY: {
+				@SuppressWarnings("unchecked") Map.Entry<String, RoomType> stringToRoomTypeEntry = (Map.Entry<String, RoomType>)theEObject;
+				T result = caseStringToRoomTypeEntry(stringToRoomTypeEntry);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE: {
+				IRoomTypeMaintenance iRoomTypeMaintenance = (IRoomTypeMaintenance)theEObject;
+				T result = caseIRoomTypeMaintenance(iRoomTypeMaintenance);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -308,17 +315,17 @@ public class MaintenancemodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Integer To Extra Map</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Integer To Extra Entry</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Integer To Extra Map</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Integer To Extra Entry</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIntegerToExtraMap(Map.Entry<String, Extra> object) {
+	public T caseIntegerToExtraEntry(Map.Entry<String, Extra> object) {
 		return null;
 	}
 
@@ -338,17 +345,17 @@ public class MaintenancemodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Integer To Room Map</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Integer To Room Entry</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Integer To Room Map</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Integer To Room Entry</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIntegerToRoomMap(Map.Entry<Integer, Room> object) {
+	public T caseIntegerToRoomEntry(Map.Entry<Integer, Room> object) {
 		return null;
 	}
 
@@ -368,6 +375,21 @@ public class MaintenancemodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>String To Lists Entry</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>String To Lists Entry</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStringToListsEntry(Map.Entry<String, EList<Integer>> object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Room Types Handler</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -383,32 +405,32 @@ public class MaintenancemodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>String To Room Type Map</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>String To Room Type Entry</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>String To Room Type Map</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>String To Room Type Entry</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStringToRoomTypeMap(Map.Entry<String, RoomType> object) {
+	public T caseStringToRoomTypeEntry(Map.Entry<String, RoomType> object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>String To Lists Map</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>IRoom Type Maintenance</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>String To Lists Map</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>IRoom Type Maintenance</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseStringToListsMap(Map.Entry<String, EList<Integer>> object) {
+	public T caseIRoomTypeMaintenance(IRoomTypeMaintenance object) {
 		return null;
 	}
 

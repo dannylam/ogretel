@@ -235,15 +235,4 @@ public interface IRoomMaintenance extends EObject {
 	 */
 	EList<String> getRoomTypeEnums();
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * @return
-	 * nrOfRooms of RoomType of indicated by roomTypeID
-	 * -1 if roomTypeID invalid
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
-	 * @generated
-	 */
-	int getNrOfRoomsofType(String roomTypeID);
-
 } // IRoomMaintenance

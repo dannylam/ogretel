@@ -20,7 +20,7 @@ package maintenancemodel;
  * @model
  * @generated
  */
-public interface RoomMaintenance extends IRoomMaintenance {
+public interface RoomMaintenance extends IRoomMaintenance, IRoomTypeMaintenance {
 	/**
 	 * Returns the value of the '<em><b>Room Types</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

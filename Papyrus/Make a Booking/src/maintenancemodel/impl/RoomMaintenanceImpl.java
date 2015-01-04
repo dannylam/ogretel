@@ -6,6 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 
 import maintenancemodel.Calendar;
+import maintenancemodel.IRoomTypeMaintenance;
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.Room;
 import maintenancemodel.RoomHandler;
@@ -537,6 +538,31 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
+		if (baseClass == IRoomTypeMaintenance.class) {
+			switch (baseOperationID) {
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_STRING: return MaintenancemodelPackage.ROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_STRING;
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___REMOVE_ROOM_TYPE__STRING: return MaintenancemodelPackage.ROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING;
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING: return MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING;
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_IDS: return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_IDS;
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_ENUM__STRING: return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ENUM__STRING;
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_PRICE__STRING: return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_PRICE__STRING;
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_MAX_NR_OF_GUESTS__STRING: return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_MAX_NR_OF_GUESTS__STRING;
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_DESCRIPTION__STRING: return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_DESCRIPTION__STRING;
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_ENUMS: return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ENUMS;
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_NR_OF_ROOMSOF_TYPE__STRING: return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_NR_OF_ROOMSOF_TYPE__STRING;
+				default: return -1;
+			}
+		}
+		return super.eDerivedOperationID(baseOperationID, baseClass);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -548,24 +574,26 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 				return addRoom((Integer)arguments.get(0), (String)arguments.get(1));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___REMOVE_ROOM__INT:
 				return removeRoom((Integer)arguments.get(0));
-			case MaintenancemodelPackage.ROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_STRING:
-				return addRoomType((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4));
-			case MaintenancemodelPackage.ROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING:
-				return removeRoomType((String)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM_STATUS__INT_STRING:
 				return editRoomStatus((Integer)arguments.get(0), (String)arguments.get(1));
-			case MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING:
-				return editRoomType((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM__INT_STRING:
 				return editRoom((Integer)arguments.get(0), (String)arguments.get(1));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_IDS:
 				return getRoomIDs();
-			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_IDS:
-				return getRoomTypeIDs();
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_STATUS__INT:
 				return getRoomStatus((Integer)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_STATUSES:
 				return getRoomStatuses();
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ID__INT:
+				return getRoomTypeID((Integer)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_STRING:
+				return addRoomType((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING:
+				return removeRoomType((String)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING:
+				return editRoomType((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_IDS:
+				return getRoomTypeIDs();
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ENUM__STRING:
 				return getRoomTypeEnum((String)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_PRICE__STRING:
@@ -574,8 +602,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 				return getRoomTypeMaxNrOfGuests((String)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_DESCRIPTION__STRING:
 				return getRoomTypeDescription((String)arguments.get(0));
-			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ID__INT:
-				return getRoomTypeID((Integer)arguments.get(0));
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ENUMS:
 				return getRoomTypeEnums();
 			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_NR_OF_ROOMSOF_TYPE__STRING:

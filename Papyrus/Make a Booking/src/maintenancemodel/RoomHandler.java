@@ -34,7 +34,7 @@ public interface RoomHandler extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Integer To Room Map</em>' map.
 	 * @see maintenancemodel.MaintenancemodelPackage#getRoomHandler_IntegerToRoomMap()
-	 * @model mapType="maintenancemodel.IntegerToRoomMap<org.eclipse.emf.ecore.EIntegerObject, maintenancemodel.Room>" ordered="false"
+	 * @model mapType="maintenancemodel.IntegerToRoomEntry<org.eclipse.emf.ecore.EIntegerObject, maintenancemodel.Room>" ordered="false"
 	 * @generated
 	 */
 	EMap<Integer, Room> getIntegerToRoomMap();
