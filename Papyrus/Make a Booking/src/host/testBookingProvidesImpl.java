@@ -124,8 +124,6 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testGetPrice() {
-		this.intiate();
-		// Create a booking reference and assert true if it is equal to the returned value of a booking.
 		testBook();
 		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services);
 		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services).equals(bookingRef));
@@ -145,11 +143,7 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testRemoveBooking() {
-		this.intiate();
-		// Create a booking reference and assert true if it is equal to the returned value of a booking.
 		testBook();
-		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services);
-		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services).equals(bookingRef));
 		
 		// Remove a booking reference and assert true if it is NOT equal to the returned value of a booking.
 		int rmB = bp.removeBooking(bookingRef);
@@ -169,10 +163,7 @@ public class testBookingProvidesImpl {
 	@Test
 	public void testEditBooking() {
 		this.intiate();
-		// Create a booking reference and assert true if it is equal to the returned value of a booking.
 		testBook();
-		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services);
-		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services).equals(bookingRef));
 		
 		// Edit a booking and assert true if it is equal to 0.
 		int edBP = bp.editBooking(bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras, services);
@@ -189,11 +180,7 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testSetPaymentMethod() {
-		this.intiate();
-		// Create a booking reference and assert true if it is equal to the returned value of a booking.
 		testBook();	
-		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services);
-		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services).equals(bookingRef));
 		
 		// Set payment method to a specific booking reference and assert true if it is equal to 0.
 		String method = "VOUCHER";
@@ -211,7 +198,6 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testSetPaymentDetails() {
-		this.intiate();
 		testBook();	
 		
 		String ccNumber = "5545 0111 1337 4242 6666";
@@ -237,8 +223,6 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testSetPersonalDetails() {
-		this.intiate();
-		// Create a booking reference and assert true if it is equal to the returned value of a booking.
 		testBook();	
 		
 		String firstName = "Mr";
