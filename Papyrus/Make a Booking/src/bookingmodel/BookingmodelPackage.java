@@ -504,13 +504,22 @@ public interface BookingmodelPackage extends EPackage {
 	int BOOKING___GET_UN_PAYED_EXTRAS = 19;
 
 	/**
+	 * The operation id for the '<em>Set Extras As Payed</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING___SET_EXTRAS_AS_PAYED__ELIST = 20;
+
+	/**
 	 * The number of operations of the '<em>Booking</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_OPERATION_COUNT = 20;
+	int BOOKING_OPERATION_COUNT = 21;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.impl.PersonImpl <em>Person</em>}' class.
@@ -2033,6 +2042,16 @@ public interface BookingmodelPackage extends EPackage {
 	EOperation getBooking__GetUnPayedExtras();
 
 	/**
+	 * Returns the meta object for the '{@link bookingmodel.Booking#setExtrasAsPayed(org.eclipse.emf.common.util.EList) <em>Set Extras As Payed</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Set Extras As Payed</em>' operation.
+	 * @see bookingmodel.Booking#setExtrasAsPayed(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getBooking__SetExtrasAsPayed__EList();
+
+	/**
 	 * Returns the meta object for class '{@link bookingmodel.Customer <em>Customer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3054,6 +3073,14 @@ public interface BookingmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING___GET_UN_PAYED_EXTRAS = eINSTANCE.getBooking__GetUnPayedExtras();
+
+		/**
+		 * The meta object literal for the '<em><b>Set Extras As Payed</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING___SET_EXTRAS_AS_PAYED__ELIST = eINSTANCE.getBooking__SetExtrasAsPayed__EList();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.impl.CustomerImpl <em>Customer</em>}' class.

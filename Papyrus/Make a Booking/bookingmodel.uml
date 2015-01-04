@@ -256,6 +256,16 @@ value: booking</body>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uNdVQ5QoEeSkhq3pp1wxlw" value="*"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_slLrsJQvEeSkhq3pp1wxlw" name="setExtrasAsPayed" visibility="package">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_slLrsZQvEeSkhq3pp1wxlw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_slLrspQvEeSkhq3pp1wxlw" name="extras">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_slLrs5QvEeSkhq3pp1wxlw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_slLrtJQvEeSkhq3pp1wxlw" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_F14FJZNNEeSexbuF790S1w" name="Wildcard"/>
       <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_F14FJpNNEeSexbuF790S1w" name="EEList_Wildcard">
         <templateBinding xmi:type="uml:TemplateBinding" xmi:id="_F14FJ5NNEeSexbuF790S1w">
@@ -1088,4 +1098,6 @@ been checked-in is checked-out in a specific booking </body>
   <Ecore:EParameter xmi:id="_k3kj8JQoEeSkhq3pp1wxlw" base_Parameter="_k3d2QpQoEeSkhq3pp1wxlw"/>
   <Ecore:EOperation xmi:id="_k3kj8ZQoEeSkhq3pp1wxlw" base_Operation="_k3d2QJQoEeSkhq3pp1wxlw"/>
   <Ecore:EOperation xmi:id="_uNlREJQoEeSkhq3pp1wxlw" base_Operation="_uNdVQJQoEeSkhq3pp1wxlw"/>
+  <Ecore:EOperation xmi:id="_snexwJQvEeSkhq3pp1wxlw" base_Operation="_slLrsJQvEeSkhq3pp1wxlw"/>
+  <Ecore:EParameter xmi:id="_sngm8JQvEeSkhq3pp1wxlw" base_Parameter="_slLrspQvEeSkhq3pp1wxlw"/>
 </xmi:XMI>

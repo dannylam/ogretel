@@ -29,13 +29,6 @@ public interface IBookingProvidesForHost extends EObject {
 	List<String> getServiceNotes(String bookingRef);
 
 	/**
-	 * Changes a the description of a service note.
-	 * @model dataType="types.Integer" required="true" ordered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false" descriptionDataType="types.String" descriptionRequired="true" descriptionOrdered="false"
-	 * @generated NOT
-	 */
-	int editServiceNoteDescription(String serviceNote, String description);
-
-	/**
 	 * Returns is the given booking is payed or not
 	 * @model bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
@@ -59,35 +52,35 @@ public interface IBookingProvidesForHost extends EObject {
 	/**
 	 * Returns the number of guests of a booking
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int getNrOfGuests(String bookingRef);
 
 	/**
 	 * Returns the extras of a booking
 	 * @model dataType="types.String" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	List<String> getExtras(String bookingRef);
 
 	/**
 	 * Returns a list of the rooms of a booking
 	 * @model dataType="types.Integer" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	List<Integer> getRooms(String bookingRef);
 
 	/**
 	 * Returns the paymentmethod of a booking
 	 * @model dataType="types.String" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	String getPaymentMethod(String bookingRef);
 
 	/**
 	 * Returns a list of the roomtypes of a booking
 	 * @model dataType="types.String" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	List<String> getRoomTypes(String bookingRef);
 

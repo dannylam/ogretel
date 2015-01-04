@@ -3,6 +3,7 @@
 package bookingmodel;
 
 import java.util.List;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 
@@ -69,12 +70,12 @@ public interface BookingHandler extends EObject {
 	 * Creates and adds a booking to the map where the key is a bookingreference and the value the booking. 
 	 * The integer returned by the function indicates success or failure and reason for failure.
 	 * @param booking
-	 * @return  0 if success 
-	 * 			- 1 if the map of bookings is null
-	 * @model dataType="types.Integer" required="true" ordered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" roomTypesDataType="types.String" roomTypesMany="true" roomTypesOrdered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false" servicesDataType="types.String" servicesMany="true" servicesOrdered="false"
+	 * @return a bookingreference if success 
+	 * 			null if the map of bookings is null
+	 * @model dataType="types.String" required="true" ordered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" roomTypesDataType="types.String" roomTypesMany="true" roomTypesOrdered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false" servicesDataType="types.String" servicesMany="true" servicesOrdered="false"
 	 * @generated NOT
 	 */
-	int addBooking(int nrOfGuests, String startDate, String endDate, List<String> roomTypes, List<String> extras, List<String> services);
+	String addBooking(int nrOfGuests, String startDate, String endDate, List<String> roomTypes, List<String> extras, List<String> services);
 
 	/**
 	 * Removes a booking from the map with the given booking reference.

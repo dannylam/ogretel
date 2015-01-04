@@ -577,7 +577,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	public int getNrOfRooms() {
 		return this.roomIDToRoomTypeMap.size(); 
 	} 
-
+	
 	/**
 	 * {@inheritDoc}
 	 * @generated NOT
@@ -600,7 +600,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
-	public EList<String> getRoomIDs() {
+	public EList<Integer> getRoomIDs() {
 		Integer[] roomIDs = this.roomIDToRoomTypeMap.keySet().toArray(new Integer[0]);
 		return new BasicEList(Arrays.asList(roomIDs));
 	}
@@ -707,6 +707,20 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 					unpaidExtras.add(extra);
 				}
 		return unpaidExtras;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @generated NOT
+	 */
+	public int setExtrasAsPayed(EList<String> extras) {
+		if(!extras.isEmpty() || !extras.equals(null)){										
+			for(String extra: extras){										
+				this.extraToIsPayedMap.put(extra,true);	
+			}
+			return 0;
+		}
+		return -1;
 	}
 
 	/**
@@ -1009,10 +1023,12 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return checkedOutAllRooms();
 			case BookingmodelPackage.BOOKING___ALL_EXTRAS_PAYED:
 				return allExtrasPayed();
-			case BookingmodelPackage.BOOKING___IS_EXTRA_PAYED__INT:
-				return isExtraPayed((Integer)arguments.get(0));
+			case BookingmodelPackage.BOOKING___IS_EXTRA_PAYED__STRING:
+				return isExtraPayed((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING___GET_UN_PAYED_EXTRAS:
 				return getUnPayedExtras();
+			case BookingmodelPackage.BOOKING___SET_EXTRAS_AS_PAYED__ELIST:
+				return setExtrasAsPayed((EList<String>)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

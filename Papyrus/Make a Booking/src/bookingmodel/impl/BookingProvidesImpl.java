@@ -6,8 +6,11 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 import javax.xml.soap.SOAPException;
+
 import maintenancemodel.MaintenanceProvidesForBooking;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -15,6 +18,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import bookingmodel.Booking;
 import bookingmodel.BookingHandler;
 import bookingmodel.BookingProvides;
@@ -173,7 +177,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int getNrOfGuests(String bookingRef) {
 		if (this.bookingHandler.exists(bookingRef)) {
-			return this.getBookingHandler().getBooking(bookingRef).getEndDate();
+			return this.getBookingHandler().getBooking(bookingRef).getNrOfGuests();
 		}	
 		return -1;
 	}
@@ -334,8 +338,9 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 						extrasToBePayed.add(extra);
 					}
 				}
-				if(!extrasToBePayed.equals(null)){
-				//mark these extras in the booking as payed
+				if(!extrasToBePayed.equals(null)){	
+					//mark these extras in the booking as payed
+					this.bookingHandler.getBooking(roomID).setExtrasAsPayed(extrasToBePayed);
 				return paySum(ccNumber, ccv, expMonth, expYear, firstName, lastName,
 						maintenanceComponent.getPriceExtra(extrasToBePayed));
 				}

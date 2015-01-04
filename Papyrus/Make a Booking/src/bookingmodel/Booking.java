@@ -7,7 +7,6 @@ import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * TODO update the javadoc with return and their values!
  * An interface class which represents Booking, extending EObject.
  * which extends an EObject and has 21 methods:
  * getBookingRef - get a specific booking
@@ -283,15 +282,6 @@ public interface Booking extends EObject {
 	int getNrOfRooms();
 
 	/**
-	 * Adds roomIDs from a booking into the map with roomIDs.
-	 * @return  -1 if not success
-	 * 			0 if success 
-	 * @model dataType="types.Integer" required="true" roomIDsDataType="types.Integer" roomIDsMany="true"
-	 * @generated NOT
-	 */
-	int setRoomIDs(List<Integer> roomIDs);
-
-	/**
 	 * Adds services from a booking into the map with roomIDs.
 	 * @return  -1 if not success
 	 * 			0 if success 
@@ -339,7 +329,7 @@ public interface Booking extends EObject {
 	 * @model kind="operation" required="true" many="false"
 	 * @generated NOT
 	 */
-	EList<String> getRoomIDs();
+	EList<Integer> getRoomIDs();
 
 	/**
 	 * Removes the responsible guest from all the rooms in a booking.
@@ -397,5 +387,12 @@ public interface Booking extends EObject {
 	 * @generated NOT
 	 */
 	List<String> getUnPayedExtras();
+
+	/**
+	 * Sets the list of extras as payed.
+	 * @model dataType="types.Integer" required="true" ordered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false"
+	 * @generated
+	 */
+	int setExtrasAsPayed(List<String> extras);
 
 } // Booking
