@@ -146,7 +146,6 @@ public class testBookingProvidesImpl {
 		int rmB = bp.removeBooking(bookingRef);
 		assertTrue("Failed to remove a booking", rmB == 0);
 		assertTrue("The booking reference is still there!", !(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services).equals(bookingRef)));
-		
 		fail("removeBooking failed");
 	}
 
@@ -210,12 +209,12 @@ public class testBookingProvidesImpl {
 		assertTrue("Failed to set payment details", setPaD == 0);
 		
 		Customer customer = bp.getBookingHandler().getBooking(bookingRef).getCustomer();
-		assertTrue(customer.getPaymentDetails().get(0).getCcNr().equals(ccNumber));
-		assertTrue(customer.getPaymentDetails().get(0).getCcV().equals(ccv));
-		assertTrue(customer.getPaymentDetails().get(0).getExpMonth() == expiryMonth);
-		assertTrue(customer.getPaymentDetails().get(0).getExpYear() == expiryYear);
-		assertTrue(customer.getPaymentDetails().get(0).getFirstName().equals(firstName));
-		assertTrue(customer.getPaymentDetails().get(0).getLastName().equals(lastName));
+		assertTrue(customer.getPaymentDetails().getCcNr().equals(ccNumber));
+		assertTrue(customer.getPaymentDetails().getCcV().equals(ccv));
+		assertTrue(customer.getPaymentDetails().getExpMonth() == expiryMonth);
+		assertTrue(customer.getPaymentDetails().getExpYear() == expiryYear);
+		assertTrue(customer.getPaymentDetails().getFirstName().equals(firstName));
+		assertTrue(customer.getPaymentDetails().getLastName().equals(lastName));
 		assertTrue(customer.getEmail().equals(customerEmail));
 		fail("setPaymentDetails failed.");
 	}
@@ -230,6 +229,7 @@ public class testBookingProvidesImpl {
 	public void testSetPersonalDetails() {
 		testBook();	
 		
+		//borde ändras! vi får enbart använda metoder tillgängliga i bp
 		String firstName = "Mr";
 		String lastName =  "Grischa";
 		int age = 30; 
@@ -238,8 +238,9 @@ public class testBookingProvidesImpl {
 		// Set personal details and asserts true if it is equal to 0 and the details are saved for the customer
 		int setPeD = bp.setPersonalDetails(firstName, lastName, age, customerEmail, bookingRef);
 		assertTrue("Failed to set personal details", setPeD == 0);
+
 		
-		//
+		//borde ändras! vi får enbart använda metoder tillgängliga i bp
 		Customer customer = bp.getBookingHandler().getBooking(bookingRef).getCustomer();
 		assertTrue(customer.getFirstName().equals(firstName));
 		assertTrue(customer.getLastName().equals(lastName));
@@ -257,13 +258,17 @@ public class testBookingProvidesImpl {
 	@Test
 	public void testBook() {
 		this.intiate();
-		// Create a booking reference and assert true if it is equal to the returned value of a booking.
-		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services);	
+		// Create a booking reference 
+		bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services);	
 		
-		// Assert true if the booking reference is equal to the returned value of the booking. 
-		assertTrue("Failed to book.", this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services).equals(bookingRef));
-		
-		fail("book failed.");
+		// Assert true if the imparams is equal to what is stored in the booking
+		assertTrue(bp.getStartDate(bookingRef).equals(startDate));
+		assertTrue(bp.getEndDate(bookingRef).equals(endDate));
+		assertTrue(bp.getNrOfGuests(bookingRef) == nrOfGuests);
+		assertTrue(bp.getRoomTypes(bookingRef).equals(roomTypes));
+		assertTrue(bp.getExtras(bookingRef).equals(extras));
+		assertTrue(bp.getServiceNotes(bookingRef).equals(services));
+		fail("Failed to book.");
 	}
 
 }
