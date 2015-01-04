@@ -373,8 +373,8 @@ been checked-in is checked-out in a specific booking </body>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_F14Fa5NNEeSexbuF790S1w" name="addBooking" visibility="package">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FbJNNEeSexbuF790S1w" direction="return">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FbJNNEeSexbuF790S1w" name="bookingRef" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FbZNNEeSexbuF790S1w" name="nrOfGuests">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -557,6 +557,42 @@ been checked-in is checked-out in a specific booking </body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_o2ze0JQWEeSxUuvOeThlRQ" name="endDate" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_0HihUJQYEeSakoow8HAMlw" name="getNrOfGuests" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_363B8JQYEeSakoow8HAMlw" name="bookingRef">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_A_qqUJQZEeSakoow8HAMlw" name="nrOfGuests" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_SRBgkJQdEeSakoow8HAMlw" name="getExtras">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_VHtZ0JQdEeSakoow8HAMlw" name="bookingRef">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_XfvBIJQdEeSakoow8HAMlw" name="extras" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Y7MSgJQdEeSakoow8HAMlw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Y7NgoJQdEeSakoow8HAMlw" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_aq25UJQdEeSakoow8HAMlw" name="getRooms">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ePCxwJQdEeSakoow8HAMlw" name="bookingRef">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_heoTMJQdEeSakoow8HAMlw" name="rooms" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iQyv8JQdEeSakoow8HAMlw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iQz-EJQdEeSakoow8HAMlw" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_FMQ-4JQfEeSakoow8HAMlw" name="getPaymentMethod">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_OA-VwJQfEeSakoow8HAMlw" name="bookingRef">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QKiqUJQfEeSakoow8HAMlw" name="paymentMethod" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
@@ -832,7 +868,6 @@ been checked-in is checked-out in a specific booking </body>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kYkek5OKEeSZ_IwO16Zn9Q" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_mljxwJQSEeSxUuvOeThlRQ" name="IntegerToBooleanEntry"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_F14GJ5NNEeSexbuF790S1w">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F14GKJNNEeSexbuF790S1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA"/>
