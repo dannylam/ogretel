@@ -233,7 +233,7 @@ MinimalEObjectImpl.Container implements MaintenanceProvidesForBooking {
 		for (String id : types) {
 
 			// false if invalid roomTypeID
-			if (!roomTypes.exists(id)) {
+			if (!this.roomTypes.exists(id)) {
 				return false;
 			}
 
@@ -329,7 +329,7 @@ MinimalEObjectImpl.Container implements MaintenanceProvidesForBooking {
 			}
 		}
 
-		return 0;
+		return result;
 	}
 
 	private boolean isDateValid(int year, int month, int day) {
@@ -409,7 +409,7 @@ MinimalEObjectImpl.Container implements MaintenanceProvidesForBooking {
 	public int setActive(String roomTypeID) {
 		if (roomTypes.exists(roomTypeID)) {
 			RoomType rt = roomTypes.getRoomType(roomTypeID);
-			EList<Room> roomsOfType = rt.getRoom();
+			EList<Room> roomsOfType = rt.getRoomsOfType();
 			for (Room r : roomsOfType) {
 				if (r.getRoomStatusEnum().equals(RoomStatusEnum.VACANT)) {
 					return r.getRoomID();
