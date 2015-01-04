@@ -421,13 +421,34 @@ MinimalEObjectImpl.Container implements MaintenanceProvidesForBooking {
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public int makeBooking(EList<String> roomTypeIDs, String start, String end) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		
+		maintenancemodel.Calendar calendar = roomTypes.getCalendar();
+		
+		DateFormat dateFormat = new SimpleDateFormat("yyMMdd");
+		String currDate = dateFormat.format(new Date());
+
+		int startDays = this.getDaysBetween(currDate, start);
+		int endDays = this.getDaysBetween(currDate, end);
+		
+		int result = 0;
+		
+		if(canBook(roomTypeIDs, start, end)){
+			for(int i = 0; i < roomTypeIDs.size(); i++){
+				calendar.decCap(startDays, endDays, roomTypeIDs.get(i), 1);
+				result++;
+			}
+		}
+		
+		if(result == roomTypeIDs.size()){
+			roomTypes.setCalendar(calendar);
+			return 0;
+		}
+
+		return 1;
 	}
 
 	/**
@@ -438,16 +459,18 @@ MinimalEObjectImpl.Container implements MaintenanceProvidesForBooking {
 	 */
 	public int removeBooking(EList<String> roomTypeID, String start, String end) {
 
-		//TODO: Kontrollera hur start/end ser ut, samma som i canBook!
-		int startDate = Integer.parseInt(start);
-		int endDate = Integer.parseInt(end);
+		DateFormat dateFormat = new SimpleDateFormat("yyMMdd");
+		String currDate = dateFormat.format(new Date());
+
+		int startDays = this.getDaysBetween(currDate, start);
+		int endDays = this.getDaysBetween(currDate, end);
 
 		maintenancemodel.Calendar copyOfCalendar = roomTypes.getCalendar();
 
 		int result = 0;
 
 		for(int i = 0; i < roomTypeID.size(); i++){
-			if(copyOfCalendar.incCap(startDate, endDate, roomTypeID.get(i), 1) != 0){
+			if(copyOfCalendar.incCap(startDays, endDays, roomTypeID.get(i), 1) != 0){
 				result++;
 			};
 		}
