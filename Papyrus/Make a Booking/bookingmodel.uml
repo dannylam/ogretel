@@ -596,6 +596,16 @@ been checked-in is checked-out in a specific booking </body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_SbZdMJQgEeSakoow8HAMlw" name="getRoomTypes">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_W5fZIJQgEeSakoow8HAMlw" name="bookingRef">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_a-_O4JQgEeSakoow8HAMlw" name="roomTypes" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cNPKsJQgEeSakoow8HAMlw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cNPxwJQgEeSakoow8HAMlw" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_F14FspNNEeSexbuF790S1w" name="IBookingProvidesForCustomer">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_F14Fs5NNEeSexbuF790S1w" name="payBooking" visibility="public">

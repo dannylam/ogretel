@@ -766,7 +766,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_klHwI4XREeSUfsUdvz7rGg" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_KvQWoIXXEeS36vV1PdpyWw" name="IntegerToRoomMap">
+    <packagedElement xmi:type="uml:Class" xmi:id="_KvQWoIXXEeS36vV1PdpyWw" name="IntegerToRoomEntry">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_2g800IXXEeS36vV1PdpyWw" name="key" visibility="private">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EIntegerObject"/>
       </ownedAttribute>
@@ -778,7 +778,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LZ-x04XbEeS36vV1PdpyWw" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_j5TCkIXqEeSU1psjCnSubg" name="IntegerToExtraMap">
+    <packagedElement xmi:type="uml:Class" xmi:id="_j5TCkIXqEeSU1psjCnSubg" name="IntegerToExtraEntry">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_At3aIIXrEeSU1psjCnSubg" name="key">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
@@ -790,7 +790,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nwhy04XqEeSU1psjCnSubg" value="1"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_qj6rAIXrEeSU1psjCnSubg" name="StringToListsMap">
+    <packagedElement xmi:type="uml:Class" xmi:id="_qj6rAIXrEeSU1psjCnSubg" name="StringToListsEntry">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_yuGeMIXrEeSU1psjCnSubg" name="key">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
@@ -806,7 +806,7 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_W_jeEoXsEeSU1psjCnSubg" value="*"/>
       </ownedEnd>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_M0kbUIXtEeSU1psjCnSubg" name="StringToRoomTypeMap">
+    <packagedElement xmi:type="uml:Class" xmi:id="_M0kbUIXtEeSU1psjCnSubg" name="StringToRoomTypeEntry">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_MFom0IXvEeSU1psjCnSubg" name="key">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
       </ownedAttribute>
