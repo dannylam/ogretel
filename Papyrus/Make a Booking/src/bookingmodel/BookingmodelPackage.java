@@ -396,13 +396,22 @@ public interface BookingmodelPackage extends EPackage {
 	int BOOKING___SET_ROOM_IDS__ELIST = 7;
 
 	/**
+	 * The operation id for the '<em>Set Services</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING___SET_SERVICES__ELIST = 8;
+
+	/**
 	 * The operation id for the '<em>Generate Booking Ref</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___GENERATE_BOOKING_REF = 8;
+	int BOOKING___GENERATE_BOOKING_REF = 9;
 
 	/**
 	 * The operation id for the '<em>Get Extras</em>' operation.
@@ -411,7 +420,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___GET_EXTRAS = 9;
+	int BOOKING___GET_EXTRAS = 10;
 
 	/**
 	 * The operation id for the '<em>Get Room Types</em>' operation.
@@ -420,7 +429,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___GET_ROOM_TYPES = 10;
+	int BOOKING___GET_ROOM_TYPES = 11;
 
 	/**
 	 * The operation id for the '<em>Get Room IDs</em>' operation.
@@ -429,7 +438,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___GET_ROOM_IDS = 11;
+	int BOOKING___GET_ROOM_IDS = 12;
 
 	/**
 	 * The operation id for the '<em>Remove Responsible Guest To All Rooms</em>' operation.
@@ -438,7 +447,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___REMOVE_RESPONSIBLE_GUEST_TO_ALL_ROOMS__STRING = 12;
+	int BOOKING___REMOVE_RESPONSIBLE_GUEST_TO_ALL_ROOMS__STRING = 13;
 
 	/**
 	 * The operation id for the '<em>Remove Responsible Guest</em>' operation.
@@ -447,7 +456,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___REMOVE_RESPONSIBLE_GUEST__INT_STRING = 13;
+	int BOOKING___REMOVE_RESPONSIBLE_GUEST__INT_STRING = 14;
 
 	/**
 	 * The number of operations of the '<em>Booking</em>' class.
@@ -456,7 +465,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_OPERATION_COUNT = 14;
+	int BOOKING_OPERATION_COUNT = 15;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.impl.PersonImpl <em>Person</em>}' class.
@@ -1969,6 +1978,16 @@ public interface BookingmodelPackage extends EPackage {
 	EOperation getBooking__SetRoomIDs__EList();
 
 	/**
+	 * Returns the meta object for the '{@link bookingmodel.Booking#setServices(org.eclipse.emf.common.util.EList) <em>Set Services</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Set Services</em>' operation.
+	 * @see bookingmodel.Booking#setServices(org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getBooking__SetServices__EList();
+
+	/**
 	 * Returns the meta object for the '{@link bookingmodel.Booking#generateBookingRef() <em>Generate Booking Ref</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3060,6 +3079,14 @@ public interface BookingmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING___SET_ROOM_IDS__ELIST = eINSTANCE.getBooking__SetRoomIDs__EList();
+
+		/**
+		 * The meta object literal for the '<em><b>Set Services</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING___SET_SERVICES__ELIST = eINSTANCE.getBooking__SetServices__EList();
 
 		/**
 		 * The meta object literal for the '<em><b>Generate Booking Ref</b></em>' operation.

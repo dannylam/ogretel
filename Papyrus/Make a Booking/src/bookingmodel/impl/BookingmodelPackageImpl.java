@@ -510,7 +510,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__GenerateBookingRef() {
+	public EOperation getBooking__SetServices__EList() {
 		return bookingEClass.getEOperations().get(8);
 	}
 
@@ -519,7 +519,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__GetExtras() {
+	public EOperation getBooking__GenerateBookingRef() {
 		return bookingEClass.getEOperations().get(9);
 	}
 
@@ -528,7 +528,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__GetRoomTypes() {
+	public EOperation getBooking__GetExtras() {
 		return bookingEClass.getEOperations().get(10);
 	}
 
@@ -537,7 +537,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__GetRoomIDs() {
+	public EOperation getBooking__GetRoomTypes() {
 		return bookingEClass.getEOperations().get(11);
 	}
 
@@ -546,7 +546,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__RemoveResponsibleGuestToAllRooms__String() {
+	public EOperation getBooking__GetRoomIDs() {
 		return bookingEClass.getEOperations().get(12);
 	}
 
@@ -555,8 +555,17 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__RemoveResponsibleGuest__int_String() {
+	public EOperation getBooking__RemoveResponsibleGuestToAllRooms__String() {
 		return bookingEClass.getEOperations().get(13);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getBooking__RemoveResponsibleGuest__int_String() {
+		return bookingEClass.getEOperations().get(14);
 	}
 
 	/**
@@ -1277,6 +1286,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		createEOperation(bookingEClass, BOOKING___SET_EXTRAS__ELIST);
 		createEOperation(bookingEClass, BOOKING___SET_ROOM_TYPES__ELIST);
 		createEOperation(bookingEClass, BOOKING___SET_ROOM_IDS__ELIST);
+		createEOperation(bookingEClass, BOOKING___SET_SERVICES__ELIST);
 		createEOperation(bookingEClass, BOOKING___GENERATE_BOOKING_REF);
 		createEOperation(bookingEClass, BOOKING___GET_EXTRAS);
 		createEOperation(bookingEClass, BOOKING___GET_ROOM_TYPES);
@@ -1459,6 +1469,9 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 
 		op = initEOperation(getBooking__SetRoomIDs__EList(), theTypesPackage.getInteger(), "setRoomIDs", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomIDs", 0, -1, IS_UNIQUE, IS_ORDERED);
+
+		op = initEOperation(getBooking__SetServices__EList(), theTypesPackage.getInteger(), "setServices", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "services", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getBooking__GenerateBookingRef(), theTypesPackage.getString(), "generateBookingRef", 1, 1, IS_UNIQUE, IS_ORDERED);
 

@@ -166,6 +166,22 @@ public interface Booking extends EObject {
 	EList<Guest> getGuestList();
 
 	/**
+	 * Returns the value of the '<em><b>Is Payed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Payed</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Payed</em>' attribute.
+	 * @see #setIsPayed(boolean)
+	 * @see bookingmodel.BookingmodelPackage#getBooking_IsPayed()
+	 * @model dataType="types.Boolean" required="true" ordered="false"
+	 * @generated
+	 */
+	boolean isPayed();
+
+	/**
 	 * Returns false or true if a payment has been made.
 	 * @return the value of the '<em>Is Payed</em>' attribute.
 	 * @see #setIsPayed(boolean)
@@ -277,11 +293,22 @@ public interface Booking extends EObject {
 	int getNrOfRooms();
 
 	/**
-	 * Adds roomIDs of a booking into the maps with roomIDs.
+	 * Adds roomIDs from a booking into the map with roomIDs.
+	 * @return  -1 if not success
+	 * 			0 if success 
 	 * @model dataType="types.Integer" required="true" roomIDsDataType="types.Integer" roomIDsMany="true"
-	 * @generated
+	 * @generated NOT
 	 */
 	int setRoomIDs(List<Integer> roomIDs);
+
+	/**
+	 * Adds services from a booking into the map with roomIDs.
+	 * @return  -1 if not success
+	 * 			0 if success 
+	 * @model dataType="types.Integer" required="true" ordered="false" servicesDataType="types.String" servicesMany="true" servicesOrdered="false"
+	 * @generated NOT
+	 */
+	int setServices(List<String> services);
 
 	/**
 	 * Adds extras from a booking into the map with extras.

@@ -96,7 +96,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public boolean exists(String bookingRef) {
@@ -104,7 +104,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int addBooking(Booking booking) {
@@ -116,7 +116,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	}
 		
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int removeBooking(String bookingRef) {
@@ -128,7 +128,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public Booking getBooking(String bookingRef) {
@@ -137,7 +137,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public Booking getBooking(int roomID) {
@@ -145,7 +145,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @param bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras
 	 * @generated NOT
 	 */
@@ -155,6 +155,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			this.getBooking(bookingRef).setNrOfGuests(nrOfGuests);
 			this.getBooking(bookingRef).setRoomTypes(roomTypes);
 			this.getBooking(bookingRef).setExtras(extras);
+			this.getBooking(bookingRef).setServices(services);
 			return 0;
 	}
 

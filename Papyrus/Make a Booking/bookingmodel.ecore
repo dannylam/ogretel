@@ -50,6 +50,9 @@
     <eOperations name="setRoomIDs" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
       <eParameters name="roomIDs" upperBound="-1" eType="ecore:EDataType types.ecore#//Integer"/>
     </eOperations>
+    <eOperations name="setServices" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="services" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
     <eOperations name="generateBookingRef" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     <eOperations name="getExtras" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
     <eOperations name="getRoomTypes" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>

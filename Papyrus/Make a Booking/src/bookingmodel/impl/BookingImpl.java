@@ -7,13 +7,11 @@ import bookingmodel.BookingmodelPackage;
 import bookingmodel.Customer;
 import bookingmodel.Guest;
 import bookingmodel.PaymentMethod;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
@@ -25,7 +23,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -44,11 +42,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link bookingmodel.impl.BookingImpl#getNrOfGuests <em>Nr Of Guests</em>}</li>
  *   <li>{@link bookingmodel.impl.BookingImpl#getCustomer <em>Customer</em>}</li>
  *   <li>{@link bookingmodel.impl.BookingImpl#getGuestList <em>Guest List</em>}</li>
- *   <li>{@link bookingmodel.impl.BookingImpl#isIsPayed <em>Is Payed</em>}</li>
+ *   <li>{@link bookingmodel.impl.BookingImpl#isPayed <em>Is Payed</em>}</li>
  *   <li>{@link bookingmodel.impl.BookingImpl#getRoomIDToGuestMap <em>Room ID To Guest Map</em>}</li>
  *   <li>{@link bookingmodel.impl.BookingImpl#getRoomIDToRoomTypeMap <em>Room ID To Room Type Map</em>}</li>
- *   <li>{@link bookingmodel.impl.BookingImpl#getPaymentMethod <em>Payment Method</em>}</li>
  *   <li>{@link bookingmodel.impl.BookingImpl#getExtraToIsPayedMap <em>Extra To Is Payed Map</em>}</li>
+ *   <li>{@link bookingmodel.impl.BookingImpl#getPaymentMethod <em>Payment Method</em>}</li>
  * </ul>
  * </p>
  *
@@ -146,7 +144,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	protected int nrOfGuests = NR_OF_GUESTS_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getCustomer() <em>Customer</em>}' reference.
+	 * The cached value of the '{@link #getCustomer() <em>Customer</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCustomer()
@@ -156,7 +154,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	protected Customer customer;
 
 	/**
-	 * The cached value of the '{@link #getGuestList() <em>Guest List</em>}' reference list.
+	 * The cached value of the '{@link #getGuestList() <em>Guest List</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getGuestList()
@@ -166,20 +164,20 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	protected EList<Guest> guestList;
 
 	/**
-	 * The default value of the '{@link #isIsPayed() <em>Is Payed</em>}' attribute.
+	 * The default value of the '{@link #isPayed() <em>Is Payed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIsPayed()
+	 * @see #isPayed()
 	 * @generated
 	 * @ordered
 	 */
 	protected static final boolean IS_PAYED_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isIsPayed() <em>Is Payed</em>}' attribute.
+	 * The cached value of the '{@link #isPayed() <em>Is Payed</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIsPayed()
+	 * @see #isPayed()
 	 * @generated
 	 * @ordered
 	 */
@@ -206,6 +204,16 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	protected EMap<Integer, String> roomIDToRoomTypeMap;
 
 	/**
+	 * The cached value of the '{@link #getExtraToIsPayedMap() <em>Extra To Is Payed Map</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExtraToIsPayedMap()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<String, Boolean> extraToIsPayedMap;
+
+	/**
 	 * The default value of the '{@link #getPaymentMethod() <em>Payment Method</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -224,16 +232,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @ordered
 	 */
 	protected PaymentMethod paymentMethod = PAYMENT_METHOD_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getExtraToIsPayedMap() <em>Extra To Is Payed Map</em>}' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExtraToIsPayedMap()
-	 * @generated
-	 * @ordered
-	 */
-	protected EMap<String, Boolean> extraToIsPayedMap;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -380,14 +378,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated
 	 */
 	public Customer getCustomer() {
-		if (customer != null && customer.eIsProxy()) {
-			InternalEObject oldCustomer = (InternalEObject)customer;
-			customer = (Customer)eResolveProxy(oldCustomer);
-			if (customer != oldCustomer) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BookingmodelPackage.BOOKING__CUSTOMER, oldCustomer, customer));
-			}
-		}
 		return customer;
 	}
 
@@ -396,8 +386,14 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Customer basicGetCustomer() {
-		return customer;
+	public NotificationChain basicSetCustomer(Customer newCustomer, NotificationChain msgs) {
+		Customer oldCustomer = customer;
+		customer = newCustomer;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BookingmodelPackage.BOOKING__CUSTOMER, oldCustomer, newCustomer);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -406,10 +402,17 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * @generated
 	 */
 	public void setCustomer(Customer newCustomer) {
-		Customer oldCustomer = customer;
-		customer = newCustomer;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.BOOKING__CUSTOMER, oldCustomer, customer));
+		if (newCustomer != customer) {
+			NotificationChain msgs = null;
+			if (customer != null)
+				msgs = ((InternalEObject)customer).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BookingmodelPackage.BOOKING__CUSTOMER, null, msgs);
+			if (newCustomer != null)
+				msgs = ((InternalEObject)newCustomer).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BookingmodelPackage.BOOKING__CUSTOMER, null, msgs);
+			msgs = basicSetCustomer(newCustomer, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.BOOKING__CUSTOMER, newCustomer, newCustomer));
 	}
 
 	/**
@@ -419,7 +422,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public EList<Guest> getGuestList() {
 		if (guestList == null) {
-			guestList = new EObjectResolvingEList<Guest>(Guest.class, this, BookingmodelPackage.BOOKING__GUEST_LIST);
+			guestList = new EObjectContainmentEList<Guest>(Guest.class, this, BookingmodelPackage.BOOKING__GUEST_LIST);
 		}
 		return guestList;
 	}
@@ -429,7 +432,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isIsPayed() {
+	public boolean isPayed() {
 		return isPayed;
 	}
 
@@ -504,7 +507,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public boolean checkedInAllRooms() {
@@ -522,7 +525,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public boolean checkedInRoom(int roomID) {
@@ -537,7 +540,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int setResponsibleGuest(int roomID, String guestEmail) {													
@@ -549,7 +552,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 	
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int setResponsibleGuestToAllRooms(String guestEmail) {
@@ -567,7 +570,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * @inheritDoc 
+	 * {@inheritDoc} 
 	 * @generated NOT
 	 */
 	public int getNrOfRooms() {
@@ -575,7 +578,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	} 
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public void generateBookingRef() {
@@ -584,7 +587,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public EList<String> getExtras() {
@@ -593,7 +596,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public EList<String> getRoomTypes() {
@@ -602,7 +605,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public EList<String> getRoomIDs() {
@@ -611,7 +614,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int removeResponsibleGuestToAllRooms(String guestEmail) {
@@ -632,7 +635,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int removeResponsibleGuest(int roomID, String guestEmail) {												
@@ -646,7 +649,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int setRoomIDs(List<Integer> roomIDs) {
@@ -660,7 +663,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 	
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int setExtras(List<String> extras) {
@@ -675,7 +678,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * @inheritDoc
+	 * {{@inheritDoc}}
 	 * @generated NOT
 	 */
 	public int setRoomTypes(List<String> roomTypes) {
@@ -683,6 +686,20 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			for (int i = 0; i < roomTypes.size(); i++) {				
 				this.roomIDToGuestMap.put(null, roomTypes.get(i));		
 				this.roomIDToRoomTypeMap.put(null,roomTypes.get(i));	
+			}
+			return 0;
+		}
+		return -1;
+	}
+	
+	/**
+	 * {@inheritDoc}
+	 * @generated NOT
+	 */
+	public int setServices(List<String> services) {
+		if(!services.isEmpty() || !services.equals(null)){			
+			for (String service: services) {				
+				this.serviceNotes.add(service);		
 			}
 			return 0;
 		}
@@ -697,6 +714,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case BookingmodelPackage.BOOKING__CUSTOMER:
+				return basicSetCustomer(null, msgs);
+			case BookingmodelPackage.BOOKING__GUEST_LIST:
+				return ((InternalEList<?>)getGuestList()).basicRemove(otherEnd, msgs);
 			case BookingmodelPackage.BOOKING__ROOM_ID_TO_GUEST_MAP:
 				return ((InternalEList<?>)getRoomIDToGuestMap()).basicRemove(otherEnd, msgs);
 			case BookingmodelPackage.BOOKING__ROOM_ID_TO_ROOM_TYPE_MAP:
@@ -726,23 +747,22 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case BookingmodelPackage.BOOKING__NR_OF_GUESTS:
 				return getNrOfGuests();
 			case BookingmodelPackage.BOOKING__CUSTOMER:
-				if (resolve) return getCustomer();
-				return basicGetCustomer();
+				return getCustomer();
 			case BookingmodelPackage.BOOKING__GUEST_LIST:
 				return getGuestList();
 			case BookingmodelPackage.BOOKING__IS_PAYED:
-				return isIsPayed();
+				return isPayed();
 			case BookingmodelPackage.BOOKING__ROOM_ID_TO_GUEST_MAP:
 				if (coreType) return getRoomIDToGuestMap();
 				else return getRoomIDToGuestMap().map();
 			case BookingmodelPackage.BOOKING__ROOM_ID_TO_ROOM_TYPE_MAP:
 				if (coreType) return getRoomIDToRoomTypeMap();
 				else return getRoomIDToRoomTypeMap().map();
-			case BookingmodelPackage.BOOKING__PAYMENT_METHOD:
-				return getPaymentMethod();
 			case BookingmodelPackage.BOOKING__EXTRA_TO_IS_PAYED_MAP:
 				if (coreType) return getExtraToIsPayedMap();
 				else return getExtraToIsPayedMap().map();
+			case BookingmodelPackage.BOOKING__PAYMENT_METHOD:
+				return getPaymentMethod();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -788,11 +808,11 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case BookingmodelPackage.BOOKING__ROOM_ID_TO_ROOM_TYPE_MAP:
 				((EStructuralFeature.Setting)getRoomIDToRoomTypeMap()).set(newValue);
 				return;
-			case BookingmodelPackage.BOOKING__PAYMENT_METHOD:
-				setPaymentMethod((PaymentMethod)newValue);
-				return;
 			case BookingmodelPackage.BOOKING__EXTRA_TO_IS_PAYED_MAP:
 				((EStructuralFeature.Setting)getExtraToIsPayedMap()).set(newValue);
+				return;
+			case BookingmodelPackage.BOOKING__PAYMENT_METHOD:
+				setPaymentMethod((PaymentMethod)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -836,11 +856,11 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 			case BookingmodelPackage.BOOKING__ROOM_ID_TO_ROOM_TYPE_MAP:
 				getRoomIDToRoomTypeMap().clear();
 				return;
-			case BookingmodelPackage.BOOKING__PAYMENT_METHOD:
-				setPaymentMethod(PAYMENT_METHOD_EDEFAULT);
-				return;
 			case BookingmodelPackage.BOOKING__EXTRA_TO_IS_PAYED_MAP:
 				getExtraToIsPayedMap().clear();
+				return;
+			case BookingmodelPackage.BOOKING__PAYMENT_METHOD:
+				setPaymentMethod(PAYMENT_METHOD_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -874,10 +894,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return roomIDToGuestMap != null && !roomIDToGuestMap.isEmpty();
 			case BookingmodelPackage.BOOKING__ROOM_ID_TO_ROOM_TYPE_MAP:
 				return roomIDToRoomTypeMap != null && !roomIDToRoomTypeMap.isEmpty();
-			case BookingmodelPackage.BOOKING__PAYMENT_METHOD:
-				return paymentMethod != PAYMENT_METHOD_EDEFAULT;
 			case BookingmodelPackage.BOOKING__EXTRA_TO_IS_PAYED_MAP:
 				return extraToIsPayedMap != null && !extraToIsPayedMap.isEmpty();
+			case BookingmodelPackage.BOOKING__PAYMENT_METHOD:
+				return paymentMethod != PAYMENT_METHOD_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -907,9 +927,10 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return setRoomTypes((EList<String>)arguments.get(0));
 			case BookingmodelPackage.BOOKING___SET_ROOM_IDS__ELIST:
 				return setRoomIDs((EList<Integer>)arguments.get(0));
+			case BookingmodelPackage.BOOKING___SET_SERVICES__ELIST:
+				return setServices((EList<String>)arguments.get(0));
 			case BookingmodelPackage.BOOKING___GENERATE_BOOKING_REF:
-				generateBookingRef();
-				return null;
+				return generateBookingRef();
 			case BookingmodelPackage.BOOKING___GET_EXTRAS:
 				return getExtras();
 			case BookingmodelPackage.BOOKING___GET_ROOM_TYPES:

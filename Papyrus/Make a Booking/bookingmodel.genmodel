@@ -93,6 +93,9 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/setRoomIDs">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//Booking/setRoomIDs/roomIDs"/>
       </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/setServices">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//Booking/setServices/services"/>
+      </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/generateBookingRef"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/getExtras"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/getRoomTypes"/>
