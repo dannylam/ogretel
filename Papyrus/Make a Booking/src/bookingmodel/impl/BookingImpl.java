@@ -259,7 +259,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		this.setRoomTypes(roomTypes);
 		this.setExtras(extras);
 		this.serviceNotes = (EList<String>) services;
-		this.generateBookingRef();
 	}
 
 	/**
@@ -920,8 +919,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return setRoomIDs((EList<Integer>)arguments.get(0));
 			case BookingmodelPackage.BOOKING___SET_SERVICES__ELIST:
 				return setServices((EList<String>)arguments.get(0));
-			case BookingmodelPackage.BOOKING___GENERATE_BOOKING_REF:
-				return generateBookingRef();
 			case BookingmodelPackage.BOOKING___GET_EXTRAS:
 				return getExtras();
 			case BookingmodelPackage.BOOKING___GET_ROOM_TYPES:

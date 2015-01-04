@@ -268,7 +268,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public boolean isPayed(String bookingRef) {
 		if (this.bookingHandler.exists(bookingRef)) {
-			return this.bookingHandler.getBooking(bookingRef).isIsPayed();
+			return this.bookingHandler.getBooking(bookingRef).isPayed();
 		}
 		return false;
 	}
@@ -305,12 +305,12 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		if (this.getBookingHandler().exists(booking.getBookingRef())) {
 			if(booking.checkedInRoom(roomID)){
 				booking.removeResponsibleGuest(roomID, guestEmail);
-	
-				//check if the room is payed or not, if not, return an int indicating this
-				if(!booking.getRoomIDToISPayed.get(roomID).booleanValue()){ //TODO: add something with roomIDs and payed
+
+				//check if the booking has been is payed or not, 
+				//if not, return an int indicating that the room needs to be payed
+				if(!this.isPayed(booking.getBookingRef())){
 					return 3;
 				}
-				
 				//removes the bookingreference from the room in the map of rooms and which bookingreference they belong to
 				this.bookingHandler.getRoomIDToBookingRefMap().put(roomID, null);
 				if(this.maintenanceComponent.setInactive(roomID) == -1){
