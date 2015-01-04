@@ -143,7 +143,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public boolean isPayed(String bookingRef) {
-		if (this.bookingHandler.exists(bookingRef)) {
+		if (this.bookingHandler.isActive(bookingRef)) {
 			return this.bookingHandler.getBooking(bookingRef).isPayed();
 		}
 		return false;
@@ -154,7 +154,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public String getStartDate(String bookingRef) {
-		if (this.bookingHandler.exists(bookingRef)) {
+		if (this.bookingHandler.isActive(bookingRef)) {
 			return this.getBookingHandler().getBooking(bookingRef).getStartDate();
 		}
 		return "Booking reference does not exist";
@@ -165,7 +165,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public String getEndDate(String bookingRef) {
-		if (this.bookingHandler.exists(bookingRef)) {	
+		if (this.bookingHandler.isActive(bookingRef)) {	
 			return this.getBookingHandler().getBooking(bookingRef).getEndDate();
 		}	
 		return "Booking reference does not exist";
@@ -176,7 +176,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int getNrOfGuests(String bookingRef) {
-		if (this.bookingHandler.exists(bookingRef)) {
+		if (this.bookingHandler.isActive(bookingRef)) {
 			return this.getBookingHandler().getBooking(bookingRef).getNrOfGuests();
 		}	
 		return -1;
@@ -187,7 +187,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public List<String> getExtras(String bookingRef) {
-		if (this.bookingHandler.exists(bookingRef)) {
+		if (this.bookingHandler.isActive(bookingRef)) {
 			return this.getBookingHandler().getBooking(bookingRef).getExtras();
 		}	
 		return null;
@@ -198,7 +198,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public List<Integer> getRooms(String bookingRef) {
-		if (this.bookingHandler.exists(bookingRef)) {
+		if (this.bookingHandler.isActive(bookingRef)) {
 			return this.getBookingHandler().getBooking(bookingRef).getRoomIDs();
 		}	
 		return null;
@@ -209,7 +209,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public String getPaymentMethod(String bookingRef) {
-		if (this.bookingHandler.exists(bookingRef)) {	
+		if (this.bookingHandler.isActive(bookingRef)) {	
 			return this.getBookingHandler().getBooking(bookingRef).getPaymentMethod().toString();
 		}	
 		return "Booking reference does not exist";
@@ -220,7 +220,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public List<String> getRoomTypes(String bookingRef) {
-		if (this.bookingHandler.exists(bookingRef)) {
+		if (this.bookingHandler.isActive(bookingRef)) {
 			return this.getBookingHandler().getBooking(bookingRef).getRoomTypes();
 		}	
 		return null;
@@ -231,7 +231,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public List<String> getServiceNotes(String bookingRef) {
-		if (this.bookingHandler.exists(bookingRef)) {	
+		if (this.bookingHandler.isActive(bookingRef)) {	
 			return this.getBookingHandler().getBooking(bookingRef).getServiceNotes();
 		}	
 		return null;
@@ -243,7 +243,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int checkIn(String bookingRef, String roomsType, String guestEmail) {
-		if (this.bookingHandler.exists(bookingRef)) {
+		if (this.bookingHandler.isActive(bookingRef)) {
 			Booking booking = this.bookingHandler.getBooking(bookingRef);
 
 			// get a room from maintenance
@@ -406,7 +406,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int getPrice(String bookingRef) {
-		if (this.bookingHandler.exists(bookingRef)) {
+		if (this.bookingHandler.isActive(bookingRef)) {
 			int extraPrice = this.maintenanceComponent
 					.getPriceExtra(this.bookingHandler.getBooking(bookingRef)
 							.getExtras());
@@ -435,7 +435,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras, List<String> services) {
-		if(this.bookingHandler.exists(bookingRef)){
+		if(this.bookingHandler.isActive(bookingRef)){
 			Booking booking = this.bookingHandler.getBooking(bookingRef);
 			
 			//checks if any inparam is null, meaning not changed, if so, takes the value stored in the booking

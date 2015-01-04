@@ -346,14 +346,6 @@ public interface Booking extends EObject {
 	int removeResponsibleGuest(int roomID, String guestEmail);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model resultDataType="types.Boolean" resultRequired="true" resultOrdered="false"
-	 * @generated
-	 */
-	void isOld(boolean result);
-
-	/**
 	 * Returns true if the room is checked out and false otherwise.
 	 * @model dataType="types.Boolean" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
@@ -389,9 +381,17 @@ public interface Booking extends EObject {
 	List<String> getUnPayedExtras();
 
 	/**
-	 * Sets the list of extras as payed.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @model dataType="types.Integer" required="true" ordered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false"
 	 * @generated
+	 */
+	int setExtrasAsPayed(EList<String> extras);
+
+	/**
+	 * Sets the list of extras as payed.
+	 * @model dataType="types.Integer" required="true" ordered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false"
+	 * @generated NOT
 	 */
 	int setExtrasAsPayed(List<String> extras);
 

@@ -116,4 +116,11 @@ public interface BookingHandler extends EObject {
 	 */
 	Booking getBooking(int roomID);
 
+	/**
+	 * Returns if a booking is active or not
+	 * @model dataType="types.Boolean" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @generated NOT
+	 */
+	boolean isActive(String bookingRef);
+
 } // BookingHandler

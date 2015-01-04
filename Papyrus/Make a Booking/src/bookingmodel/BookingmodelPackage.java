@@ -450,22 +450,13 @@ public interface BookingmodelPackage extends EPackage {
 	int BOOKING___REMOVE_RESPONSIBLE_GUEST__INT_STRING = 13;
 
 	/**
-	 * The operation id for the '<em>Is Old</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING___IS_OLD__BOOLEAN = 14;
-
-	/**
 	 * The operation id for the '<em>Checked Out Room</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___CHECKED_OUT_ROOM__INT = 15;
+	int BOOKING___CHECKED_OUT_ROOM__INT = 14;
 
 	/**
 	 * The operation id for the '<em>Checked Out All Rooms</em>' operation.
@@ -474,7 +465,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___CHECKED_OUT_ALL_ROOMS = 16;
+	int BOOKING___CHECKED_OUT_ALL_ROOMS = 15;
 
 	/**
 	 * The operation id for the '<em>All Extras Payed</em>' operation.
@@ -483,7 +474,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___ALL_EXTRAS_PAYED = 17;
+	int BOOKING___ALL_EXTRAS_PAYED = 16;
 
 	/**
 	 * The operation id for the '<em>Is Extra Payed</em>' operation.
@@ -492,7 +483,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___IS_EXTRA_PAYED__STRING = 18;
+	int BOOKING___IS_EXTRA_PAYED__STRING = 17;
 
 	/**
 	 * The operation id for the '<em>Get Un Payed Extras</em>' operation.
@@ -501,7 +492,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___GET_UN_PAYED_EXTRAS = 19;
+	int BOOKING___GET_UN_PAYED_EXTRAS = 18;
 
 	/**
 	 * The operation id for the '<em>Set Extras As Payed</em>' operation.
@@ -510,7 +501,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___SET_EXTRAS_AS_PAYED__ELIST = 20;
+	int BOOKING___SET_EXTRAS_AS_PAYED__ELIST = 19;
 
 	/**
 	 * The number of operations of the '<em>Booking</em>' class.
@@ -519,7 +510,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_OPERATION_COUNT = 21;
+	int BOOKING_OPERATION_COUNT = 20;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.impl.PersonImpl <em>Person</em>}' class.
@@ -1014,13 +1005,22 @@ public interface BookingmodelPackage extends EPackage {
 	int BOOKING_HANDLER___GET_BOOKING__INT = 5;
 
 	/**
+	 * The operation id for the '<em>Is Active</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_HANDLER___IS_ACTIVE__STRING = 6;
+
+	/**
 	 * The number of operations of the '<em>Booking Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER_OPERATION_COUNT = 6;
+	int BOOKING_HANDLER_OPERATION_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.IBookingProvidesForHost <em>IBooking Provides For Host</em>}' class.
@@ -1982,16 +1982,6 @@ public interface BookingmodelPackage extends EPackage {
 	EOperation getBooking__RemoveResponsibleGuest__int_String();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.Booking#isOld(boolean) <em>Is Old</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Old</em>' operation.
-	 * @see bookingmodel.Booking#isOld(boolean)
-	 * @generated
-	 */
-	EOperation getBooking__IsOld__boolean();
-
-	/**
 	 * Returns the meta object for the '{@link bookingmodel.Booking#checkedOutRoom(int) <em>Checked Out Room</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2381,6 +2371,16 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getBookingHandler__GetBooking__int();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.BookingHandler#isActive(java.lang.String) <em>Is Active</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Active</em>' operation.
+	 * @see bookingmodel.BookingHandler#isActive(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingHandler__IsActive__String();
 
 	/**
 	 * Returns the meta object for class '{@link bookingmodel.IBookingProvidesForHost <em>IBooking Provides For Host</em>}'.
@@ -3027,14 +3027,6 @@ public interface BookingmodelPackage extends EPackage {
 		EOperation BOOKING___REMOVE_RESPONSIBLE_GUEST__INT_STRING = eINSTANCE.getBooking__RemoveResponsibleGuest__int_String();
 
 		/**
-		 * The meta object literal for the '<em><b>Is Old</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING___IS_OLD__BOOLEAN = eINSTANCE.getBooking__IsOld__boolean();
-
-		/**
 		 * The meta object literal for the '<em><b>Checked Out Room</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3341,6 +3333,14 @@ public interface BookingmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING_HANDLER___GET_BOOKING__INT = eINSTANCE.getBookingHandler__GetBooking__int();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Active</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_HANDLER___IS_ACTIVE__STRING = eINSTANCE.getBookingHandler__IsActive__String();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.IBookingProvidesForHost <em>IBooking Provides For Host</em>}' class.
