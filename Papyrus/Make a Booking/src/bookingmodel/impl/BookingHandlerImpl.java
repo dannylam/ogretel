@@ -108,7 +108,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
-	public int addBooking(int nrOfGuests, String startDate, String endDate, EList<String> roomTypes, EList<String> extras, EList<String> services) {
+	public int addBooking(int nrOfGuests, String startDate, String endDate, List<String> roomTypes, List<String> extras, List<String> services) {
 		if(!this.bookingsMap.equals(null)){
 			Booking booking = new BookingImpl(nrOfGuests, startDate, endDate, roomTypes, extras, services);
 			booking.setBookingRef(this.generateBookingRef());
@@ -149,18 +149,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public Booking getBooking(String bookingRef) {
 		return this.bookingsMap.get(bookingRef);
-	}
-
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, EList<String> roomTypes, EList<String> extras, EList<String> services) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
