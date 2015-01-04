@@ -52,11 +52,15 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testCheckIn() {
-		this.intiate();
+		//must ensure these works before one can test check-in
 		testBook();
+		this.testPayBooking();
 		
 		// Check in with booking reference, roomtype and email
 		int checkIn = bp.checkIn(bookingRef, roomTypes.get(0), guestEmail);
+		
+		//Get concrete rooms, TODO: check if any of these rooms has that email address as responsible, if so assertTrue
+		int roomID = bp.getRooms(bookingRef).get(0);
 		
 		// Asserts that the condition is true. If it isn't, it throws an AssertionError with the given message.
 		assertTrue("The check in failed.", checkIn==0);
@@ -72,20 +76,32 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testCheckOut() {
-		this.intiate();
-		// Create a roomID and a checkout
-		int roomID = 378;
+		//must ensure these works before one can test check-out
+		this.testBook();
+		this.testPayBooking();
+		this.testCheckIn();
+		
+		//make a new booking which is supposed to be unpayed
+		String bookingRef = bp.book("150103", "150114", nrOfGuests, roomTypes, extras, services);
+				
+		//pay for the booking so that we can check-out without any problems
+		bp.payBooking(bookingRef);
+		
+		//checkIn in order to be able to get concrete rooms
+		bp.checkIn(bookingRef, roomTypes.get(0), guestEmail);
+				
+		//Get a from the booking in order to be able to check-out
+		int roomID = bp.getRooms(bookingRef).get(0);
+
+		//invoke check-out
 		int checkOut = bp.checkOut(roomID, guestEmail);
-		
-		/* TODO: should we create a booking and try to check-out? 
-		testBook();*/
-		
+
 		// Asserts that the condition is true. If it isn't, it throws an AssertionError with the given message.
 		assertTrue("The check out failed", checkOut==0);
 		
 		// Asserts true if the guest responsible to the room has been removed and "out".
 		// If it isn't, it throws an AssertionError with the given message.
-		assertTrue("Failed to remove room.", bp.getBookingHandler().getBooking(roomID).getRoomIDToGuestMap().get(roomID).equals("out"));
+		assertTrue("Failed to remove room.", bp.isCheckedOut(roomID)); //TODO a method somethinglike this
 		
 		// Asserts true if the booking reference connected to the room has been removed.
 		// If it isn't, it throws an AssertionError with the given message.
@@ -95,23 +111,100 @@ public class testBookingProvidesImpl {
 	}
 	
 	/**
-	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#pay(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)}.
-	 * TODO: implement this method.
-	 */
-	@Test
-	public void testPayStringStringIntIntStringString() {
-		fail("Not yet implemented");
-	}
-
-	/**
 	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#pay(java.lang.String)}.
 	 * TODO: implement this method.
 	 */
 	@Test
-	public void testPayString() {
-		fail("Not yet implemented");
+	public void testPayBooking() {
+		this.testBook();
+		
+		bp.payBooking(bookingRef);
+		
+		assertTrue("Failed to test pay booking", bp.isPayed(bookingRef));
+		fail("Test pay booking failed");
 	}
 
+	/**
+	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#pay(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)}.
+	 * TODO: implement this method.
+	 */
+	@Test
+	public void testPayRoomID() {
+		//must ensure these works before one can test pay for a room
+		this.testBook();
+		this.testCheckIn();
+		
+		//make a new booking which is supposed to be unpayed
+		String bookingRef = bp.book("150107", "150117", nrOfGuests, roomTypes, extras, services);
+		
+		//checkIn in order to be able to get concrete rooms
+		bp.checkIn(bookingRef, roomTypes.get(0), guestEmail);
+		
+		//Get a room from the booking when checking in
+		Integer roomNrOneOfBooking = bp.getRooms(bookingRef).get(0);
+		
+		//give some new bank-card information
+		String ccNumber = "000 0932 1337 4999 2323";
+		String ccv = "221";
+		int expiryMonth = 9;
+		int expiryYear = 16;
+		String firstName = "Mr";
+		String lastName =  "Grischa";
+		
+		//invoke payroom
+		bp.payRoom(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, roomNrOneOfBooking);
+		
+		assertTrue("Failed to test pay room", bp.isPayed(roomNrOneOfBooking)); //TODO: add that method
+		fail("Test pay room failed");
+	}
+	
+	@Test
+	public void testIsPayed(){
+		
+	}
+	@Test
+	public void testGetServiceNotes(){
+		
+	}
+	
+	/**
+	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#pay(java.lang.String, java.lang.String, int, int, java.lang.String, java.lang.String)}.
+	 * TODO: implement this method.
+	 */
+	@Test
+	public void testPayExtra(){
+		//must ensure these works before one can test pay for an extra
+		this.testBook();
+		this.testCheckIn();
+
+		//make a new booking which is supposed to be unpayed
+		String bookingRef = bp.book("150123", "150128", nrOfGuests, roomTypes, extras, services);
+		
+		//checkIn in order to be able to get concrete rooms
+		bp.checkIn(bookingRef, roomTypes.get(0), guestEmail);
+				
+		//Get a room from the booking when checking in
+		Integer roomID = bp.getRooms(bookingRef).get(0);
+		
+		//Get a extra to pay for
+		List <String> extras = bp.getExtras(bookingRef);
+				
+		//give some new bank-card information
+		String ccNumber = "000 0932 1337 4999 2323";
+		String ccv = "221";
+		int expiryMonth = 9;
+		int expiryYear = 16;
+		String firstName = "Mr";
+		String lastName =  "Grischa";
+		
+		//invoke pay extra
+		bp.payExtra(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, extras, roomID);
+		
+
+		assertTrue("Failed to test pay extra", bp.isPayed(extras)); //TODO: add that method
+		fail("Test pay extra failed");
+	}
+	
 	/**
 	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#getPrice(java.lang.String)}.
 	 * Get price by first creating a booking, and use its booking reference,
@@ -122,8 +215,6 @@ public class testBookingProvidesImpl {
 	@Test
 	public void testGetPrice() {
 		testBook();
-		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services);
-		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services).equals(bookingRef));
 		
 		// TODO: this feels a bit ridiculous but Im not sure how else the price should be compared/accessed.
 		// TODO: The getPrice returns extraPrice + roomTypesPrice, shouldn't it return 0 as a success?
@@ -144,6 +235,7 @@ public class testBookingProvidesImpl {
 		
 		// Remove a booking reference and assert true if it is NOT equal to the returned value of a booking.
 		int rmB = bp.removeBooking(bookingRef);
+		
 		assertTrue("Failed to remove a booking", rmB == 0);
 		assertTrue("The booking reference is still there!", !(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services).equals(bookingRef)));
 		fail("removeBooking failed");
@@ -155,14 +247,18 @@ public class testBookingProvidesImpl {
 	 * assertTrue will asserts if the created booking reference is equals to the returned value of a booking.
 	 * Edit the booking reference and assertTrue if it has been edited.
 	 * Also assertTrue if the booking reference is NOT equals to the returned value of a booking.
+	 * 
+	 * Also testes the getters:
+	 * getStartDate, getEndDate, getNrOfGuests, getRoomTypes, getExtras, getServiceNotes
 	 */
 	@Test
 	public void testEditBooking() {
 		this.intiate();
 		testBook();
-
+		
 		// Edit a booking and assert true if it is equal to 0.
-		assertTrue("Failed to edit a booking",  bp.editBooking(bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras, services) == 0);
+		int edBP = bp.editBooking(bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras, services);
+		assertTrue("Failed to edit a booking", edBP == 0);
 		
 		// Assert true if the imparams is equal to what is stored in the booking
 		assertTrue(bp.getStartDate(bookingRef).equals(startDate));
@@ -180,6 +276,9 @@ public class testBookingProvidesImpl {
 	 * Test by first creating a booking, and use its booking reference.
 	 * assertTrue will asserts true if the created booking reference is equals to the returned value of a booking.
 	 * Then set payment method and asserts true if it is equal to 0.
+	 * 
+	 * Also testes the getter:
+	 * getPaymentMethod
 	 */
 	@Test
 	public void testSetPaymentMethod() {
@@ -189,6 +288,7 @@ public class testBookingProvidesImpl {
 		String method = "VOUCHER";
 		int setPM = bp.setPaymentMethod(method, bookingRef);
 		assertTrue("Failed to set payment method", setPM == 0);
+		assertTrue(bp.getPaymentMethod(bookingRef).equals(method));
 		
 		fail("setPaymentMethod failed");
 	}
@@ -201,7 +301,7 @@ public class testBookingProvidesImpl {
 	 */
 	@Test
 	public void testSetPaymentDetails() {
-		testBook();	
+		this. testBook();	
 		
 		String ccNumber = "5545 0111 1337 4242 6666";
 		String ccv = "112";
@@ -215,6 +315,7 @@ public class testBookingProvidesImpl {
 		int setPaD = bp.setPaymentDetails(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, customerEmail, bookingRef);
 		assertTrue("Failed to set payment details", setPaD == 0);
 		
+		//TODO needs to be updated!
 		Customer customer = bp.getBookingHandler().getBooking(bookingRef).getCustomer();
 		assertTrue(customer.getPaymentDetails().getCcNr().equals(ccNumber));
 		assertTrue(customer.getPaymentDetails().getCcV().equals(ccv));
@@ -261,6 +362,9 @@ public class testBookingProvidesImpl {
 	/**
 	 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#book(java.lang.String, java.lang.String, int, java.lang.String, java.lang.String)}.
 	 * Test make a booking.
+	 * 
+	 * Also testes the getters:
+	 * getStartDate, getEndDate, getNrOfGuests, getRoomTypes, getExtras, getServiceNotes
 	 */
 	@Test
 	public void testBook() {

@@ -481,15 +481,15 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		if (this.getBookingHandler().exists(bookingRef)) {
 			PaymentMethod paymentMethod = null;
 			switch (method) {
-			case "BANKCARD":
+			case "bankcard":
 				paymentMethod = PaymentMethod.BANKCARD;
 				break;
 
-			case "CASH":
+			case "cash":
 				paymentMethod = PaymentMethod.CASH;
 				break;
 
-			case "VOUCHER":
+			case "voucher":
 				paymentMethod = PaymentMethod.VOUCHER;
 				break;
 
