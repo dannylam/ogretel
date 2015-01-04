@@ -579,6 +579,16 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_i9c_0JHnEeSNJKY2RR7Z1w" value="*"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_HqOOEJQqEeSakoow8HAMlw" name="addRoomToRoomType" visibility="package">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Xv-JoJQqEeSakoow8HAMlw" name="roomTypeID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_TM94gJQqEeSakoow8HAMlw" name="removeRoomFromRoomType" visibility="package">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_aWJhsJQqEeSakoow8HAMlw" name="roomTypeID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_JJ2gI321EeSp56Ha0EyLeQ" memberEnd="_JJ2gJH21EeSp56Ha0EyLeQ _JJ2gIH21EeSp56Ha0EyLeQ">
       <ownedEnd xmi:type="uml:Property" xmi:id="_JJ2gJH21EeSp56Ha0EyLeQ" name="extrasMaintenance" type="_YvWVsH2yEeSp56Ha0EyLeQ" association="_JJ2gI321EeSp56Ha0EyLeQ">

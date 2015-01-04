@@ -992,15 +992,6 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIRoomTypeMaintenance__GetNrOfRoomsofType__String() {
-		return iRoomTypeMaintenanceEClass.getEOperations().get(9);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getIMaintenanceProvidesForBooking() {
 		return iMaintenanceProvidesForBookingEClass;
 	}
@@ -1147,6 +1138,15 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 */
 	public EOperation getIRoomMaintenance__GetRoomTypeID__int() {
 		return iRoomMaintenanceEClass.getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIRoomMaintenance__GetNrOfRoomsofType__String() {
+		return iRoomMaintenanceEClass.getEOperations().get(8);
 	}
 
 	/**
@@ -1424,6 +1424,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		createEOperation(iRoomMaintenanceEClass, IROOM_MAINTENANCE___GET_ROOM_STATUS__INT);
 		createEOperation(iRoomMaintenanceEClass, IROOM_MAINTENANCE___GET_ROOM_STATUSES);
 		createEOperation(iRoomMaintenanceEClass, IROOM_MAINTENANCE___GET_ROOM_TYPE_ID__INT);
+		createEOperation(iRoomMaintenanceEClass, IROOM_MAINTENANCE___GET_NR_OF_ROOMSOF_TYPE__STRING);
 
 		iExtrasMaintenanceEClass = createEClass(IEXTRAS_MAINTENANCE);
 		createEOperation(iExtrasMaintenanceEClass, IEXTRAS_MAINTENANCE___ADD_EXTRA__STRING_INT_STRING_STRING_BOOLEAN);
@@ -1463,7 +1464,6 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		createEOperation(iRoomTypeMaintenanceEClass, IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_MAX_NR_OF_GUESTS__STRING);
 		createEOperation(iRoomTypeMaintenanceEClass, IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_DESCRIPTION__STRING);
 		createEOperation(iRoomTypeMaintenanceEClass, IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_ENUMS);
-		createEOperation(iRoomTypeMaintenanceEClass, IROOM_TYPE_MAINTENANCE___GET_NR_OF_ROOMSOF_TYPE__STRING);
 
 		maintenanceProvidesForBookingEClass = createEClass(MAINTENANCE_PROVIDES_FOR_BOOKING);
 		createEReference(maintenanceProvidesForBookingEClass, MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES);
@@ -1686,6 +1686,9 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		op = initEOperation(getIRoomMaintenance__GetRoomTypeID__int(), theTypesPackage.getString(), "getRoomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
+		op = initEOperation(getIRoomMaintenance__GetNrOfRoomsofType__String(), theTypesPackage.getInteger(), "getNrOfRoomsofType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(iExtrasMaintenanceEClass, IExtrasMaintenance.class, "IExtrasMaintenance", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getIExtrasMaintenance__AddExtra__String_int_String_String_boolean(), theTypesPackage.getInteger(), "addExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1775,9 +1778,6 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		addEParameter(op, theTypesPackage.getString(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getIRoomTypeMaintenance__GetRoomTypeEnums(), theTypesPackage.getString(), "getRoomTypeEnums", 0, -1, IS_UNIQUE, !IS_ORDERED);
-
-		op = initEOperation(getIRoomTypeMaintenance__GetNrOfRoomsofType__String(), theTypesPackage.getInteger(), "getNrOfRoomsofType", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(maintenanceProvidesForBookingEClass, MaintenanceProvidesForBooking.class, "MaintenanceProvidesForBooking", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMaintenanceProvidesForBooking_RoomTypes(), this.getRoomTypesHandler(), null, "roomTypes", null, 1, 1, MaintenanceProvidesForBooking.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

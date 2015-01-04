@@ -1073,13 +1073,22 @@ public interface MaintenancemodelPackage extends EPackage {
 	int IROOM_MAINTENANCE___GET_ROOM_TYPE_ID__INT = 7;
 
 	/**
+	 * The operation id for the '<em>Get Nr Of Roomsof Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IROOM_MAINTENANCE___GET_NR_OF_ROOMSOF_TYPE__STRING = 8;
+
+	/**
 	 * The number of operations of the '<em>IRoom Maintenance</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_MAINTENANCE_OPERATION_COUNT = 8;
+	int IROOM_MAINTENANCE_OPERATION_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link maintenancemodel.IExtrasMaintenance <em>IExtras Maintenance</em>}' class.
@@ -1328,6 +1337,15 @@ public interface MaintenancemodelPackage extends EPackage {
 	int ROOM_MAINTENANCE___GET_ROOM_TYPE_ID__INT = IROOM_MAINTENANCE___GET_ROOM_TYPE_ID__INT;
 
 	/**
+	 * The operation id for the '<em>Get Nr Of Roomsof Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_MAINTENANCE___GET_NR_OF_ROOMSOF_TYPE__STRING = IROOM_MAINTENANCE___GET_NR_OF_ROOMSOF_TYPE__STRING;
+
+	/**
 	 * The operation id for the '<em>Add Room Type</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1409,22 +1427,13 @@ public interface MaintenancemodelPackage extends EPackage {
 	int ROOM_MAINTENANCE___GET_ROOM_TYPE_ENUMS = IROOM_MAINTENANCE_OPERATION_COUNT + 8;
 
 	/**
-	 * The operation id for the '<em>Get Nr Of Roomsof Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOM_MAINTENANCE___GET_NR_OF_ROOMSOF_TYPE__STRING = IROOM_MAINTENANCE_OPERATION_COUNT + 9;
-
-	/**
 	 * The number of operations of the '<em>Room Maintenance</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_MAINTENANCE_OPERATION_COUNT = IROOM_MAINTENANCE_OPERATION_COUNT + 10;
+	int ROOM_MAINTENANCE_OPERATION_COUNT = IROOM_MAINTENANCE_OPERATION_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>String To Room Type</b></em>' map.
@@ -1672,22 +1681,13 @@ public interface MaintenancemodelPackage extends EPackage {
 	int IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_ENUMS = 8;
 
 	/**
-	 * The operation id for the '<em>Get Nr Of Roomsof Type</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IROOM_TYPE_MAINTENANCE___GET_NR_OF_ROOMSOF_TYPE__STRING = 9;
-
-	/**
 	 * The number of operations of the '<em>IRoom Type Maintenance</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IROOM_TYPE_MAINTENANCE_OPERATION_COUNT = 10;
+	int IROOM_TYPE_MAINTENANCE_OPERATION_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link maintenancemodel.impl.MaintenanceProvidesForBookingImpl <em>Maintenance Provides For Booking</em>}' class.
@@ -2668,16 +2668,6 @@ public interface MaintenancemodelPackage extends EPackage {
 	EOperation getIRoomTypeMaintenance__GetRoomTypeEnums();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.IRoomTypeMaintenance#getNrOfRoomsofType(java.lang.String) <em>Get Nr Of Roomsof Type</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Nr Of Roomsof Type</em>' operation.
-	 * @see maintenancemodel.IRoomTypeMaintenance#getNrOfRoomsofType(java.lang.String)
-	 * @generated
-	 */
-	EOperation getIRoomTypeMaintenance__GetNrOfRoomsofType__String();
-
-	/**
 	 * Returns the meta object for class '{@link maintenancemodel.IMaintenanceProvidesForBooking <em>IMaintenance Provides For Booking</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2846,6 +2836,16 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getIRoomMaintenance__GetRoomTypeID__int();
+
+	/**
+	 * Returns the meta object for the '{@link maintenancemodel.IRoomMaintenance#getNrOfRoomsofType(java.lang.String) <em>Get Nr Of Roomsof Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Nr Of Roomsof Type</em>' operation.
+	 * @see maintenancemodel.IRoomMaintenance#getNrOfRoomsofType(java.lang.String)
+	 * @generated
+	 */
+	EOperation getIRoomMaintenance__GetNrOfRoomsofType__String();
 
 	/**
 	 * Returns the meta object for class '{@link maintenancemodel.IExtrasMaintenance <em>IExtras Maintenance</em>}'.
@@ -3711,14 +3711,6 @@ public interface MaintenancemodelPackage extends EPackage {
 		EOperation IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_ENUMS = eINSTANCE.getIRoomTypeMaintenance__GetRoomTypeEnums();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Nr Of Roomsof Type</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IROOM_TYPE_MAINTENANCE___GET_NR_OF_ROOMSOF_TYPE__STRING = eINSTANCE.getIRoomTypeMaintenance__GetNrOfRoomsofType__String();
-
-		/**
 		 * The meta object literal for the '{@link maintenancemodel.IMaintenanceProvidesForBooking <em>IMaintenance Provides For Booking</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3857,6 +3849,14 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IROOM_MAINTENANCE___GET_ROOM_TYPE_ID__INT = eINSTANCE.getIRoomMaintenance__GetRoomTypeID__int();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Nr Of Roomsof Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IROOM_MAINTENANCE___GET_NR_OF_ROOMSOF_TYPE__STRING = eINSTANCE.getIRoomMaintenance__GetNrOfRoomsofType__String();
 
 		/**
 		 * The meta object literal for the '{@link maintenancemodel.IExtrasMaintenance <em>IExtras Maintenance</em>}' class.

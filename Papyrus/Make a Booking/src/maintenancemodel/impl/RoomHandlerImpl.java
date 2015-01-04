@@ -94,13 +94,14 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	 * @return
 	 * @generated NOT
 	 */
-	public int addRoom(int numberID, RoomType roomType) {
-
-		Room r = new RoomImpl(numberID, roomType);
-		this.getIntegerToRoomMap().put(numberID, r);
-		return 0;
-		// No null check?
-		// TODO TEST
+	public int addRoom(int roomID, RoomType roomType) {
+		if(!this.exists(roomID)){
+			Room room = new RoomImpl(roomID, roomType);
+			roomType.getRoomsOfType().add(room);
+			this.integerToRoomMap.put(roomID, room);
+			return 0;
+		}
+		return 1;
 	}
 
 	/**
@@ -110,14 +111,13 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int removeRoom(int roomID) {
-
 		if (this.exists(roomID)) {
-			this.getIntegerToRoomMap().removeKey(roomID);
+			Room room = this.integerToRoomMap.get(new Integer(roomID)); 
+			room.getRoomType().getRoomsOfType().remove(room);
+			this.integerToRoomMap.removeKey(roomID);
 			return 0;
 		}
 		return 1;
-
-		// TODO: test
 	}
 
 	/**
@@ -125,11 +125,8 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	 * 
 	 * @generated NOT
 	 */
-	public Room getRoom(int ID) {
-		return this.integerToRoomMap.get(new Integer(ID));
-
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
+	public Room getRoom(int roomID) {
+		return this.integerToRoomMap.get(new Integer(roomID));
 	}
 
 	/**
