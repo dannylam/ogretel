@@ -11,6 +11,7 @@ import java.util.List;
 import org.junit.Test;
 
 import bookingmodel.BookingProvides;
+import bookingmodel.Customer;
 import bookingmodel.impl.BookingProvidesImpl;
 
 /**
@@ -153,7 +154,7 @@ public class testBookingProvidesImpl {
 		// Remove a booking reference and assert true if it is NOT equal to the returned value of a booking.
 		int rmB = bp.removeBooking(bookingRef);
 		assertTrue("Failed to remove a booking", rmB == 0);
-		assertTrue("The booking reference is still there!", !(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef)));
+		assertTrue("The booking reference is still there!", !(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services).equals(bookingRef)));
 		
 		fail("removeBooking failed");
 	}
@@ -174,7 +175,7 @@ public class testBookingProvidesImpl {
 		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services).equals(bookingRef));
 		
 		// Edit a booking and assert true if it is equal to 0.
-		int edBP = bp.editBooking(bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras);
+		int edBP = bp.editBooking(bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras, services);
 		assertTrue("Failed to edit a booking", edBP == 0);
 		
 		fail("editBooking failed");
@@ -211,10 +212,7 @@ public class testBookingProvidesImpl {
 	@Test
 	public void testSetPaymentDetails() {
 		this.intiate();
-		// Create a booking reference and assert true if it is equal to the returned value of a booking.
 		testBook();	
-		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services);
-		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services).equals(bookingRef));
 		
 		String ccNumber = "5545 0111 1337 4242 6666";
 		String ccv = "112";
@@ -242,18 +240,23 @@ public class testBookingProvidesImpl {
 		this.intiate();
 		// Create a booking reference and assert true if it is equal to the returned value of a booking.
 		testBook();	
-		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services);	
-		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services).equals(bookingRef));
 		
 		String firstName = "Mr";
 		String lastName =  "Grischa";
 		int age = 30; 
 		String customerEmail = "grischa@group4.se";
 		
-		// Set personal details and asserts true if it is equal to 0.
-		//NOTE: i BookingProvidesImpl heter det email och inte customerEmail.
+		// Set personal details and asserts true if it is equal to 0 and the details are saved for the customer
 		int setPeD = bp.setPersonalDetails(firstName, lastName, age, customerEmail, bookingRef);
 		assertTrue("Failed to set personal details", setPeD == 0);
+		
+		//
+		Customer customer = bp.getBookingHandler().getBooking(bookingRef).getCustomer();
+		assertTrue(customer.getFirstName().equals(firstName));
+		assertTrue(customer.getLastName().equals(lastName));
+		assertTrue(customer.getAge() == age);
+		assertTrue(customer.getEmail().equals(customerEmail));
+		
 		
 		fail("setPersonalDetails failed.");
 	}
@@ -265,8 +268,11 @@ public class testBookingProvidesImpl {
 	@Test
 	public void testBook() {
 		this.intiate();
+		// Create a booking reference and assert true if it is equal to the returned value of a booking.
+		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services);	
+		
 		// Assert true if the booking reference is equal to the returned value of the booking. 
-		assertTrue("Failed to book.", bp.book(startDate, endDate, nrOfGuests, roomTypes, extras).equals(bookingRef));
+		assertTrue("Failed to book.", this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services).equals(bookingRef));
 		
 		fail("book failed.");
 	}
