@@ -311,11 +311,32 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 				if(!this.isPayed(booking.getBookingRef())){
 					return 3;
 				}
+				
+				boolean allCheckedOut = true;
+				int i = 0;
+				while(allCheckedOut && i<booking.getRoomIDToGuestMap().size()){
+					allCheckedOut = booking.getRoomIDToGuestMap().get(i).getValue().equals("out");
+					i++;
+				}
+			
+				boolean allPayed = true;
+				i = 0;
+				while(allPayed && i<booking.getExtraToIsPayedMap().size()){
+					allPayed = booking.getExtraToIsPayedMap().get(i).getValue();
+					i++;
+				}
+		
+				//checks if the the guest is the last person to check-out and therefore needs to pay for all the remaining extras
+				if(allCheckedOut && !allPayed){
+					return 4;
+				}
+				
 				//removes the bookingreference from the room in the map of rooms and which bookingreference they belong to
 				this.bookingHandler.getRoomIDToBookingRefMap().put(roomID, null);
 				if(this.maintenanceComponent.setInactive(roomID) == -1){
 					return 2;
 				}
+	
 			} else {
 				return 1;
 			}	
@@ -333,7 +354,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		int result = -1;
 		if(this.getBookingHandler().exists(bookingRef)){
 			Booking booking = this.getBookingHandler().getBooking(bookingRef);
-			if(!booking.isIsPayed() && booking.getPaymentMethod().toString().equals("bankcard")){
+			if(!booking.isPayed() && booking.getPaymentMethod().toString().equals("bankcard")){
 				int price = getPrice(bookingRef);
 				if (price != -1) {
 					PaymentDetails bookingdetails = booking.getCustomer().getPaymentDetails()
@@ -368,6 +389,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 					}
 				}
 				if(!extrasToBePayed.equals(null)){
+				//mark these extras in the booking as payed
 				return paySum(ccNumber, ccv, expMonth, expYear, firstName, lastName,
 						maintenanceComponent.getPriceExtra(extrasToBePayed));
 				}
@@ -385,7 +407,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	public int payRoom(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, int roomID) {
 		if(this.bookingHandler.exists(this.bookingHandler.getBooking(roomID).getBookingRef())){
 			Booking booking = this.getBookingHandler().getBooking(roomID);
-			if(!booking.getRoomIDToISPayed.get(roomID).booleanValue()){ //TODO: add something with roomIDs and payed
+			if(!booking.getRoomIDToGuestMap().get(roomID).getValue().equals("out")){
 				EList <String> roomType = (EList<String>) this.stringToList(booking.getRoomIDToRoomTypeMap().get(roomID).getValue());
 					return paySum(ccNumber, ccv, expMonth, expYear, firstName, lastName,
 							maintenanceComponent.getPriceRoom(roomType));
@@ -605,7 +627,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 						}
 					services = newServiceNotes;
 				}
-				return addBooking(nrOfGuests, startDate, endDate, roomTypes, extras, services);
+				return this.bookingHandler.addBooking(nrOfGuests, startDate, endDate, roomTypes, extras, services);
 			}
 			return "";
 		}
