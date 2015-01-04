@@ -4,7 +4,6 @@ package maintenancemodel.impl;
 
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.Room;
-import maintenancemodel.RoomHandler;
 import maintenancemodel.RoomStatusEnum;
 import maintenancemodel.RoomType;
 
@@ -82,12 +81,6 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	protected RoomType roomType;
 	
 	/**
-	 * Used to convert String to RoomType
-	 * @generated NOT
-	 */
-	protected RoomHandler rtHandler = new RoomHandlerImpl();
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
@@ -102,9 +95,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	protected RoomImpl(int numberID, RoomType roomType) {
+	protected RoomImpl(int roomID, RoomType roomType) {
 		this();
-		this.roomID = numberID;
+		this.roomID = roomID;
 		this.roomType = roomType;
 	}
 

@@ -94,7 +94,6 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	 */
 	public boolean exists(String roomTypeID) {
 		return this.getStringToRoomType().containsKey(roomTypeID);
-		// TODO: TEST
 	}
 
 	/**
@@ -155,13 +154,10 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	 * @generated NOT
 	 */
 	public RoomType getRoomType(String roomTypeID) {
-
 		if (this.getStringToRoomType().containsKey(roomTypeID)) {
 			return this.getStringToRoomType().get(roomTypeID);
 		}
 		return null;
-
-		// TODO: test
 	}
 
 	/**
