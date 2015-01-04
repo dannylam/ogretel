@@ -1526,13 +1526,31 @@ public interface MaintenancemodelPackage extends EPackage {
 	int ROOM_TYPES_HANDLER___GET_ROOM_TYPE_ENUMS = 6;
 
 	/**
+	 * The operation id for the '<em>Add Room To Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPES_HANDLER___ADD_ROOM_TO_ROOM_TYPE__STRING = 7;
+
+	/**
+	 * The operation id for the '<em>Remove Room From Room Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROOM_TYPES_HANDLER___REMOVE_ROOM_FROM_ROOM_TYPE__STRING = 8;
+
+	/**
 	 * The number of operations of the '<em>Room Types Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPES_HANDLER_OPERATION_COUNT = 7;
+	int ROOM_TYPES_HANDLER_OPERATION_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link maintenancemodel.impl.StringToRoomTypeEntryImpl <em>String To Room Type Entry</em>}' class.
@@ -2532,6 +2550,26 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getRoomTypesHandler__GetRoomTypeEnums();
+
+	/**
+	 * Returns the meta object for the '{@link maintenancemodel.RoomTypesHandler#addRoomToRoomType(java.lang.String) <em>Add Room To Room Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Room To Room Type</em>' operation.
+	 * @see maintenancemodel.RoomTypesHandler#addRoomToRoomType(java.lang.String)
+	 * @generated
+	 */
+	EOperation getRoomTypesHandler__AddRoomToRoomType__String();
+
+	/**
+	 * Returns the meta object for the '{@link maintenancemodel.RoomTypesHandler#removeRoomFromRoomType(java.lang.String) <em>Remove Room From Room Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove Room From Room Type</em>' operation.
+	 * @see maintenancemodel.RoomTypesHandler#removeRoomFromRoomType(java.lang.String)
+	 * @generated
+	 */
+	EOperation getRoomTypesHandler__RemoveRoomFromRoomType__String();
 
 	/**
 	 * Returns the meta object for class '{@link java.util.Map.Entry <em>String To Room Type Entry</em>}'.
@@ -3601,6 +3639,22 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation ROOM_TYPES_HANDLER___GET_ROOM_TYPE_ENUMS = eINSTANCE.getRoomTypesHandler__GetRoomTypeEnums();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Room To Room Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_TYPES_HANDLER___ADD_ROOM_TO_ROOM_TYPE__STRING = eINSTANCE.getRoomTypesHandler__AddRoomToRoomType__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Remove Room From Room Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ROOM_TYPES_HANDLER___REMOVE_ROOM_FROM_ROOM_TYPE__STRING = eINSTANCE.getRoomTypesHandler__RemoveRoomFromRoomType__String();
 
 		/**
 		 * The meta object literal for the '{@link maintenancemodel.impl.StringToRoomTypeEntryImpl <em>String To Room Type Entry</em>}' class.

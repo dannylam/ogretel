@@ -583,10 +583,16 @@
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Xv-JoJQqEeSakoow8HAMlw" name="roomTypeID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_CNHk0JQtEeSakoow8HAMlw" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_TM94gJQqEeSakoow8HAMlw" name="removeRoomFromRoomType" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_aWJhsJQqEeSakoow8HAMlw" name="roomTypeID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-4P6wJQsEeSakoow8HAMlw" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>

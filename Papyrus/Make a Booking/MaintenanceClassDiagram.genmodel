@@ -279,6 +279,12 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/getRoomType/roomTypeID"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomTypesHandler/getRoomTypeEnums"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomTypesHandler/addRoomToRoomType">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/addRoomToRoomType/roomTypeID"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="maintenancemodel.ecore#//RoomTypesHandler/removeRoomFromRoomType">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="maintenancemodel.ecore#//RoomTypesHandler/removeRoomFromRoomType/roomTypeID"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="maintenancemodel.ecore#//StringToRoomTypeEntry">
       <genFeatures xsi:type="genmodel:GenFeature" createChild="false" ecoreFeature="ecore:EAttribute maintenancemodel.ecore#//StringToRoomTypeEntry/key"/>

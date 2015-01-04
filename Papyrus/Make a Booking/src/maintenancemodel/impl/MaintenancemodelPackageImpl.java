@@ -875,6 +875,24 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getRoomTypesHandler__AddRoomToRoomType__String() {
+		return roomTypesHandlerEClass.getEOperations().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getRoomTypesHandler__RemoveRoomFromRoomType__String() {
+		return roomTypesHandlerEClass.getEOperations().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getStringToRoomTypeEntry() {
 		return stringToRoomTypeEntryEClass;
 	}
@@ -1449,6 +1467,8 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___GET_ROOM_TYPE_IDS);
 		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___GET_ROOM_TYPE__STRING);
 		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___GET_ROOM_TYPE_ENUMS);
+		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___ADD_ROOM_TO_ROOM_TYPE__STRING);
+		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___REMOVE_ROOM_FROM_ROOM_TYPE__STRING);
 
 		stringToRoomTypeEntryEClass = createEClass(STRING_TO_ROOM_TYPE_ENTRY);
 		createEAttribute(stringToRoomTypeEntryEClass, STRING_TO_ROOM_TYPE_ENTRY__KEY);
@@ -1739,6 +1759,12 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		addEParameter(op, theTypesPackage.getString(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getRoomTypesHandler__GetRoomTypeEnums(), theTypesPackage.getString(), "getRoomTypeEnums", 0, -1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getRoomTypesHandler__AddRoomToRoomType__String(), theTypesPackage.getInteger(), "addRoomToRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getRoomTypesHandler__RemoveRoomFromRoomType__String(), theTypesPackage.getInteger(), "removeRoomFromRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(stringToRoomTypeEntryEClass, Map.Entry.class, "StringToRoomTypeEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStringToRoomTypeEntry_Key(), ecorePackage.getEString(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

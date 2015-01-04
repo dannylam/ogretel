@@ -212,24 +212,15 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int addRoom(int roomID, String roomTypeID) {
-		if (!this.rooms.exists(roomID)) {
-			if (this.roomTypes.exists(roomTypeID)) {
-				int result = this.rooms.addRoom(roomID, this.roomTypes
-						.getStringToRoomType().get(roomTypeID));
-
-				// If 1st Room of RoomType, create new entry in Map in Calendar
-				Calendar cal = this.roomTypes.getCalendar();
-				if (!cal.getStringToListsMap().containsKey(roomTypeID)) {
-					cal.addEntry(roomTypeID);
-				}
-
-				this.roomTypes.getCalendar().incCap(0, 365, roomTypeID, 1);
-
-				return result;
+		int result = this.rooms.addRoom(roomID, this.roomTypes
+				.getStringToRoomType().get(roomTypeID));
+		if (result == 0) {
+			if (this.roomTypes.addRoomToRoomType(roomTypeID) == 0) {
+				return 0;
 			}
 			return 2;
 		}
-		return 1;
+		return result;
 	}
 
 	/**
@@ -238,12 +229,10 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int removeRoom(int roomID) {
-
-		if (this.rooms.exists(roomID)
-				&& this.roomTypes.getCalendar().decCap(0, 365,
-						this.getRoomTypeID(roomID), 1) == 0) {
-
-			return this.rooms.removeRoom(roomID);
+		if (this.rooms.removeRoom(roomID) == 0
+				&& this.roomTypes.removeRoomFromRoomType(this.rooms
+						.getRoom(roomID).getRoomType().getID()) == 0) {
+			return 0;
 		}
 		return 1;
 	}
@@ -448,7 +437,8 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int getNrOfRoomsofType(String roomTypeID) {
 		if (this.roomTypes.exists(roomTypeID)) {
-			return this.roomTypes.getRoomType(roomTypeID).getRoom().size();
+			return this.roomTypes.getRoomType(roomTypeID).getRoomsOfType()
+					.size();
 		}
 		return -1;
 	}

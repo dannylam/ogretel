@@ -137,4 +137,26 @@ public interface RoomTypesHandler extends EObject {
 	 */
 	EList<String> getRoomTypeEnums();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * @return
+	 * 0 if successful
+	 * 1 if roomTypeID invalid
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
+	 * @generated NOT
+	 */
+	int addRoomToRoomType(String roomTypeID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * @return
+	 * 0 if successful
+	 * 1 if roomTypeID invalid
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
+	 * @generated
+	 */
+	int removeRoomFromRoomType(String roomTypeID);
+
 } // RoomTypesHandler
