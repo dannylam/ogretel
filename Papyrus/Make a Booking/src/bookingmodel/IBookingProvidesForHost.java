@@ -18,12 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface IBookingProvidesForHost extends EObject {
-	/**
-	 * Enable self management to a specific host.
-	 * @model dataType="types.Integer" required="true" ordered="false"
-	 * @generated NOT
-	 */
-	int enableSelfManagement();
 
 	/**
 	 * Add a specific service note and its description.

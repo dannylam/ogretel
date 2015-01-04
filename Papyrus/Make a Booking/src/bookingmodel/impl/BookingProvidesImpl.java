@@ -11,6 +11,7 @@ import javax.xml.soap.SOAPException;
 import maintenancemodel.MaintenanceProvidesForBooking;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -44,7 +45,7 @@ import bookingmodel.ServiceNoteHandler;
 public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		BookingProvides {
 	/**
-	 * The cached value of the '{@link #getBookingHandler() <em>Booking Handler</em>}' reference.
+	 * The cached value of the '{@link #getBookingHandler() <em>Booking Handler</em>}' containment reference.
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
 	 * @see #getBookingHandler()
@@ -54,7 +55,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	protected BookingHandler bookingHandler;
 
 	/**
-	 * The cached value of the '{@link #getServiceNoteHandler() <em>Service Note Handler</em>}' reference.
+	 * The cached value of the '{@link #getServiceNoteHandler() <em>Service Note Handler</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getServiceNoteHandler()
@@ -70,9 +71,9 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	protected BookingProvidesImpl() {
+	public BookingProvidesImpl() {
 		super();
 	}
 
@@ -90,23 +91,22 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public BookingHandler getBookingHandler() {
-		if (bookingHandler != null && bookingHandler.eIsProxy()) {
-			InternalEObject oldBookingHandler = (InternalEObject)bookingHandler;
-			bookingHandler = (BookingHandler)eResolveProxy(oldBookingHandler);
-			if (bookingHandler != oldBookingHandler) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BookingmodelPackage.BOOKING_PROVIDES__BOOKING_HANDLER, oldBookingHandler, bookingHandler));
-			}
-		}
 		return bookingHandler;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public BookingHandler basicGetBookingHandler() {
-		return bookingHandler;
+	public NotificationChain basicSetBookingHandler(BookingHandler newBookingHandler, NotificationChain msgs) {
+		BookingHandler oldBookingHandler = bookingHandler;
+		bookingHandler = newBookingHandler;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BookingmodelPackage.BOOKING_PROVIDES__BOOKING_HANDLER, oldBookingHandler, newBookingHandler);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -114,10 +114,17 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public void setBookingHandler(BookingHandler newBookingHandler) {
-		BookingHandler oldBookingHandler = bookingHandler;
-		bookingHandler = newBookingHandler;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.BOOKING_PROVIDES__BOOKING_HANDLER, oldBookingHandler, bookingHandler));
+		if (newBookingHandler != bookingHandler) {
+			NotificationChain msgs = null;
+			if (bookingHandler != null)
+				msgs = ((InternalEObject)bookingHandler).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BookingmodelPackage.BOOKING_PROVIDES__BOOKING_HANDLER, null, msgs);
+			if (newBookingHandler != null)
+				msgs = ((InternalEObject)newBookingHandler).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BookingmodelPackage.BOOKING_PROVIDES__BOOKING_HANDLER, null, msgs);
+			msgs = basicSetBookingHandler(newBookingHandler, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.BOOKING_PROVIDES__BOOKING_HANDLER, newBookingHandler, newBookingHandler));
 	}
 
 	/**
@@ -126,14 +133,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public ServiceNoteHandler getServiceNoteHandler() {
-		if (serviceNoteHandler != null && serviceNoteHandler.eIsProxy()) {
-			InternalEObject oldServiceNoteHandler = (InternalEObject)serviceNoteHandler;
-			serviceNoteHandler = (ServiceNoteHandler)eResolveProxy(oldServiceNoteHandler);
-			if (serviceNoteHandler != oldServiceNoteHandler) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BookingmodelPackage.BOOKING_PROVIDES__SERVICE_NOTE_HANDLER, oldServiceNoteHandler, serviceNoteHandler));
-			}
-		}
 		return serviceNoteHandler;
 	}
 
@@ -142,8 +141,14 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ServiceNoteHandler basicGetServiceNoteHandler() {
-		return serviceNoteHandler;
+	public NotificationChain basicSetServiceNoteHandler(ServiceNoteHandler newServiceNoteHandler, NotificationChain msgs) {
+		ServiceNoteHandler oldServiceNoteHandler = serviceNoteHandler;
+		serviceNoteHandler = newServiceNoteHandler;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BookingmodelPackage.BOOKING_PROVIDES__SERVICE_NOTE_HANDLER, oldServiceNoteHandler, newServiceNoteHandler);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -152,11 +157,19 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public void setServiceNoteHandler(ServiceNoteHandler newServiceNoteHandler) {
-		ServiceNoteHandler oldServiceNoteHandler = serviceNoteHandler;
-		serviceNoteHandler = newServiceNoteHandler;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.BOOKING_PROVIDES__SERVICE_NOTE_HANDLER, oldServiceNoteHandler, serviceNoteHandler));
+		if (newServiceNoteHandler != serviceNoteHandler) {
+			NotificationChain msgs = null;
+			if (serviceNoteHandler != null)
+				msgs = ((InternalEObject)serviceNoteHandler).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BookingmodelPackage.BOOKING_PROVIDES__SERVICE_NOTE_HANDLER, null, msgs);
+			if (newServiceNoteHandler != null)
+				msgs = ((InternalEObject)newServiceNoteHandler).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BookingmodelPackage.BOOKING_PROVIDES__SERVICE_NOTE_HANDLER, null, msgs);
+			msgs = basicSetServiceNoteHandler(newServiceNoteHandler, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.BOOKING_PROVIDES__SERVICE_NOTE_HANDLER, newServiceNoteHandler, newServiceNoteHandler));
 	}
+
 
 	/**
 	 * Converts a String into a List
@@ -168,13 +181,19 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * {@inheritDoc}
-	 * @generated NOT
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
 	 */
-	public int enableSelfManagement() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BookingmodelPackage.BOOKING_PROVIDES__BOOKING_HANDLER:
+				return basicSetBookingHandler(null, msgs);
+			case BookingmodelPackage.BOOKING_PROVIDES__SERVICE_NOTE_HANDLER:
+				return basicSetServiceNoteHandler(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -301,13 +320,41 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		}
 		return 0;
 	}
-
+	
+	/**
+	 * {@inheritDoc}
+	 * @generated NOT
+	 */
+	public int payBooking(String bookingRef) {
+		int result = -1;
+		if(this.getBookingHandler().exists(bookingRef)){
+			Booking booking = this.getBookingHandler().getBooking(bookingRef);
+			if(!booking.isIsPayed() && booking.getPaymentMethod().toString().equals("bankcard")){
+				int price = getPrice(bookingRef);
+				if (price != -1) {
+					PaymentDetails bookingdetails = booking.getCustomer().getPaymentDetails()
+							.get(0);
+		
+					result = paySum(bookingdetails.getCcNr(), bookingdetails.getCcV(),
+							bookingdetails.getExpMonth(), bookingdetails.getExpYear(),
+							bookingdetails.getFirstName(),
+							bookingdetails.getLastName(), price);
+					if(result == 0){
+						this.bookingHandler.getBooking(bookingRef).setIsPayed(true);
+					}
+				}
+				result = 4;	
+			}
+			result = 5;
+		}
+		return result;
+	}
 
 	/**
 	 * {inheritDoc}
 	 * @generated NOT
 	 */
-	public int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, List<String> extras, int roomID) {
+	public int payExtra(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, List<String> extras, int roomID) {
 		if(this.bookingHandler.exists(this.bookingHandler.getBooking(roomID).getBookingRef())){
 			if(!extras.equals(null)){
 				EList<String> extrasToBePayed = null;
@@ -317,7 +364,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 					}
 				}
 				if(!extrasToBePayed.equals(null)){
-				return pay(ccNumber, ccv, expMonth, expYear, firstName, lastName,
+				return paySum(ccNumber, ccv, expMonth, expYear, firstName, lastName,
 						maintenanceComponent.getPriceExtra(extrasToBePayed));
 				}
 				return 4;
@@ -327,10 +374,23 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		return -1;
 	}
 
-	public int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, int roomID){
-		return roomID;
-		
+	/**
+	 * {@inheritDoc}
+	 * @generated NOT
+	 */
+	public int payRoom(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, int roomID) {
+		if(this.bookingHandler.exists(this.bookingHandler.getBooking(roomID).getBookingRef())){
+			Booking booking = this.getBookingHandler().getBooking(roomID);
+			if(!booking.getRoomIDToISPayed.get(roomID).booleanValue()){ //TODO: add something with roomIDs and payed
+				EList <String> roomType = (EList<String>) this.stringToList(booking.getRoomIDToRoomTypeMap().get(roomID).getValue());
+					return paySum(ccNumber, ccv, expMonth, expYear, firstName, lastName,
+							maintenanceComponent.getPriceRoom(roomType));
+			}
+			return 4;
+		}	
+		return -1;
 	}
+
 
 	/**
 	 * Makes a payment
@@ -368,35 +428,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
-	public int pay(String bookingRef) {
-		int result = -1;
-		if(this.getBookingHandler().exists(bookingRef)){
-			Booking booking = this.getBookingHandler().getBooking(bookingRef);
-			if(!booking.isIsPayed() && booking.getPaymentMethod().toString().equals("bankcard")){
-				int price = getPrice(bookingRef);
-				if (price != -1) {
-					PaymentDetails bookingdetails = booking.getCustomer().getPaymentDetails()
-							.get(0);
-		
-					result = paySum(bookingdetails.getCcNr(), bookingdetails.getCcV(),
-							bookingdetails.getExpMonth(), bookingdetails.getExpYear(),
-							bookingdetails.getFirstName(),
-							bookingdetails.getLastName(), price);
-					if(result == 0){
-						this.bookingHandler.getBooking(bookingRef).setIsPayed(true);
-					}
-				}
-				result = 4;	
-			}
-			result = 5;
-		}
-		return result;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * @generated NOT
-	 */
 	public int getPrice(String bookingRef) {
 		if (this.bookingHandler.exists(bookingRef)) {
 			int extraPrice = this.maintenanceComponent
@@ -426,12 +457,9 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
-	public int editBooking(String bookingRef, String startDate, String endDate,
-			int nrOfGuests, String roomTypes, String extras) {
+	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras, List<String> services) {
 		if(this.bookingHandler.exists(bookingRef)){
 			Booking booking = this.bookingHandler.getBooking(bookingRef);
-			List <String> rts = this.stringToList(roomTypes);
-			List <String> xtras = this.stringToList(extras);
 			
 			//checks if any inparam is null, meaning not changed, if so, takes the value stored in the booking
 			if(startDate.equals(null)){
@@ -444,19 +472,19 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 				nrOfGuests = booking.getNrOfGuests();
 			}
 			if(roomTypes.equals(null)){
-				rts = booking.getRoomTypes();
+				roomTypes = booking.getRoomTypes();
 			}
-			if(xtras.equals(null)){
-				xtras = booking.getExtras();
+			if(extras.equals(null)){
+				extras = booking.getExtras();
 			}
 			
 			//checks with maintenance if the change is possible
 			if (this.maintenanceComponent.canBook(
-				(EList<String>) rts, startDate, endDate)) {
+				(EList<String>) roomTypes, startDate, endDate)) {
 				
 				//sets the change in the booking
 				this.bookingHandler.editBooking(bookingRef, startDate, endDate,
-						nrOfGuests, rts, xtras);
+						nrOfGuests, roomTypes, extras, services);
 				return 0;
 			}
 			return 1;
@@ -571,11 +599,9 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case BookingmodelPackage.BOOKING_PROVIDES__BOOKING_HANDLER:
-				if (resolve) return getBookingHandler();
-				return basicGetBookingHandler();
+				return getBookingHandler();
 			case BookingmodelPackage.BOOKING_PROVIDES__SERVICE_NOTE_HANDLER:
-				if (resolve) return getServiceNoteHandler();
-				return basicGetServiceNoteHandler();
+				return getServiceNoteHandler();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -639,14 +665,13 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 			switch (baseOperationID) {
 				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___CHECK_IN__STRING_STRING_STRING: return BookingmodelPackage.BOOKING_PROVIDES___CHECK_IN__STRING_STRING_STRING;
 				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___CHECK_OUT__INT_STRING: return BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__INT_STRING;
-				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST_INT: return BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST_INT;
-				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___PAY__STRING_STRING_INT_INT_STRING_STRING_INT: return BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING_INT;
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___PAY_EXTRA__STRING_STRING_INT_INT_STRING_STRING_ELIST_INT: return BookingmodelPackage.BOOKING_PROVIDES___PAY_EXTRA__STRING_STRING_INT_INT_STRING_STRING_ELIST_INT;
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___PAY_ROOM__STRING_STRING_INT_INT_STRING_STRING_INT: return BookingmodelPackage.BOOKING_PROVIDES___PAY_ROOM__STRING_STRING_INT_INT_STRING_STRING_INT;
 				default: return -1;
 			}
 		}
 		if (baseClass == IBookingProvidesForHost.class) {
 			switch (baseOperationID) {
-				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___ENABLE_SELF_MANAGEMENT: return BookingmodelPackage.BOOKING_PROVIDES___ENABLE_SELF_MANAGEMENT;
 				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___ADD_SERVICE_NOTE__STRING_STRING: return BookingmodelPackage.BOOKING_PROVIDES___ADD_SERVICE_NOTE__STRING_STRING;
 				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___REMOVE_SERVICE_NOTE__STRING: return BookingmodelPackage.BOOKING_PROVIDES___REMOVE_SERVICE_NOTE__STRING;
 				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___GET_SERVICE_NOTES_OF_BOOKING__STRING: return BookingmodelPackage.BOOKING_PROVIDES___GET_SERVICE_NOTES_OF_BOOKING__STRING;
@@ -669,14 +694,14 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING:
-				return pay((String)arguments.get(0));
+			case BookingmodelPackage.BOOKING_PROVIDES___PAY_BOOKING__STRING:
+				return payBooking((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_PROVIDES___GET_PRICE__STRING:
 				return getPrice((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_PROVIDES___REMOVE_BOOKING__STRING:
 				return removeBooking((String)arguments.get(0));
-			case BookingmodelPackage.BOOKING_PROVIDES___EDIT_BOOKING__STRING_STRING_STRING_INT_STRING_STRING:
-				return editBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5));
+			case BookingmodelPackage.BOOKING_PROVIDES___EDIT_BOOKING__STRING_STRING_STRING_INT_ELIST_ELIST_ELIST:
+				return editBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (EList<String>)arguments.get(4), (EList<String>)arguments.get(5), (EList<String>)arguments.get(6));
 			case BookingmodelPackage.BOOKING_PROVIDES___SET_PAYMENT_METHOD__STRING_STRING:
 				return setPaymentMethod((String)arguments.get(0), (String)arguments.get(1));
 			case BookingmodelPackage.BOOKING_PROVIDES___SET_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_STRING_STRING:
@@ -689,12 +714,10 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 				return checkIn((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__INT_STRING:
 				return checkOut((Integer)arguments.get(0), (String)arguments.get(1));
-			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING_ELIST_INT:
-				return pay((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (List<String>)arguments.get(6), (Integer)arguments.get(7));
-			case BookingmodelPackage.BOOKING_PROVIDES___PAY__STRING_STRING_INT_INT_STRING_STRING_INT:
-				return pay((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Integer)arguments.get(6));
-			case BookingmodelPackage.BOOKING_PROVIDES___ENABLE_SELF_MANAGEMENT:
-				return enableSelfManagement();
+			case BookingmodelPackage.BOOKING_PROVIDES___PAY_EXTRA__STRING_STRING_INT_INT_STRING_STRING_ELIST_INT:
+				return payExtra((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (EList<String>)arguments.get(6), (Integer)arguments.get(7));
+			case BookingmodelPackage.BOOKING_PROVIDES___PAY_ROOM__STRING_STRING_INT_INT_STRING_STRING_INT:
+				return payRoom((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Integer)arguments.get(6));
 			case BookingmodelPackage.BOOKING_PROVIDES___ADD_SERVICE_NOTE__STRING_STRING:
 				return addServiceNote((String)arguments.get(0), (String)arguments.get(1));
 			case BookingmodelPackage.BOOKING_PROVIDES___REMOVE_SERVICE_NOTE__STRING:

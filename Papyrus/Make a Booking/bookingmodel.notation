@@ -501,10 +501,6 @@
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_i5VNJJNNEeSexbuF790S1w"/>
       </children>
       <children xmi:type="notation:BasicCompartment" xmi:id="_i5VNJZNNEeSexbuF790S1w" type="7007">
-        <children xmi:type="notation:Shape" xmi:id="_rr8gAJNSEeSexbuF790S1w" type="3007">
-          <element xmi:type="uml:Operation" href="bookingmodel.uml#_F14FmZNNEeSexbuF790S1w"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_rr8gAZNSEeSexbuF790S1w"/>
-        </children>
         <children xmi:type="notation:Shape" xmi:id="_rr9HEJNSEeSexbuF790S1w" type="3007">
           <element xmi:type="uml:Operation" href="bookingmodel.uml#_F14Fm5NNEeSexbuF790S1w"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_rr9HEZNSEeSexbuF790S1w"/>

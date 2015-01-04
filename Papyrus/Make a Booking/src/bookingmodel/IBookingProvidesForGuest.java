@@ -3,6 +3,7 @@
 package bookingmodel;
 
 import java.util.List;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -41,7 +42,7 @@ public interface IBookingProvidesForGuest extends EObject {
 	int checkOut(int roomID, String guestEmail);
 
 	/**
-	 * Make a payment for extra(s) from a room by inserting credit card number, 
+ Make a payment for extra(s) from a room by inserting credit card number, 
 	 * card code verification, expiration month, expiration year,
 	 * first name and last name.
 	 * The integer returned by the function indicates success or failure and reason for failure.
@@ -68,10 +69,10 @@ public interface IBookingProvidesForGuest extends EObject {
 	 * Same as firstName but last name
 	 * @param extra
 	 * A list of the extras to pay
-	 * @model dataType="types.Integer" required="true" ordered="false" ccNumberDataType="types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="types.String" ccvRequired="true" ccvOrdered="false" expMonthDataType="types.Integer" expMonthRequired="true" expMonthOrdered="false" expYearDataType="types.Integer" expYearRequired="true" expYearOrdered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false" extraRequired="true" extraMany="false" extraOrdered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
+	 * @model dataType="types.Integer" required="true" ordered="false" ccNumberDataType="types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="types.String" ccvRequired="true" ccvOrdered="false" expMonthDataType="types.Integer" expMonthRequired="true" expMonthOrdered="false" expYearDataType="types.Integer" expYearRequired="true" expYearOrdered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false" extraDataType="types.String" extraMany="true" extraOrdered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
 	 */
-	int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, List<String> extras, int roomID);
+	int payExtra(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, EList<String> extra, int roomID);
 
 	/**
 	 * Make a payment for a room by inserting credit card number, 
@@ -82,9 +83,11 @@ public interface IBookingProvidesForGuest extends EObject {
 	 * 			1 if an error occurred
 	 * 			2 if the credit card is invalid
 	 * 			3 if not enough money on the card or invalid card
+	 * 			4 if the room is already payed
+	 * 			-1 if the booking reference does not exist
 	 * @model dataType="types.Integer" required="true" ordered="false" ccNumberDataType="types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="types.String" ccvRequired="true" ccvOrdered="false" expMonthDataType="types.Integer" expMonthRequired="true" expMonthOrdered="false" expYearDataType="types.Integer" expYearRequired="true" expYearOrdered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
 	 */
-	int pay(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, int roomID);
+	int payRoom(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, int roomID);
 
 } // IBookingProvidesForGuest

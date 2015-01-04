@@ -3,20 +3,11 @@
 package bookingmodel;
 
 import java.util.List;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
  * An interface class which represents booking provides for the customer, extending EObject.
- * This class has 8 methods;
- * getBooking - get a specific booking
- * book - make a booking
- * pay - make a payment to a specific booking
- * getPrice - get the price of a specific booking
- * removeBooking - remove a specific booking
- * editBooking - edit a specific booking
- * choosePaymentMethod - choose a specific payment method
- * setPaymentDetails - set details of a payment
- * setPersonalDetails - set details of a guest
  *
  * @see bookingmodel.BookingmodelPackage#getIBookingProvidesForCustomer()
  * @model interface="true" abstract="true"
@@ -50,7 +41,7 @@ public interface IBookingProvidesForCustomer extends EObject {
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
-	int pay(String bookingRef);
+	int payBooking(String bookingRef);
 
 	/**
 	 * 
@@ -77,19 +68,28 @@ public interface IBookingProvidesForCustomer extends EObject {
 	int removeBooking(String bookingRef);
 
 	/**
-	 /**
 	 * A method for editing a specific booking such as number of nights, number of guests,
 	 * start and end date, number of rooms, room types, extras and 
 	 * booking reference. 
-	 * The integer returned by the function indicates success or failure and reason for failure.
-	 * @return  0 if success
-	 * 			-1 if the bookingreference does not exit
-	 * 			1 if the change is not possible
-	 * @param  nrOfNights, nrOfGuests, date, nrOfRooms, roomTypes, extras, bookingRef
-	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesDataType="types.String" roomTypesRequired="true" roomTypesOrdered="false" extrasDataType="types.String" extrasRequired="true" extrasOrdered="false"
+	 * @return  0 if success 
+	 * 			1 if the booking is not possible
+	 * 		 	-1 if the booking reference does not exist
+	 * @param bookingRef
+	 * Bookingreference of an existing booking
+	 * @param startDate
+	 * The date you want the booking to start
+	 * @param endDate
+	 * The date you want the booking to end
+	 * @param nrOfGuests
+	 * The amount of guests the booking will have
+	 * @param roomTypes
+	 * What room type the booking will contain
+	 * @param extras
+	 * Any extras the booking should contain
+	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesDataType="types.String" roomTypesMany="true" roomTypesOrdered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false" servicesDataType="types.String" servicesMany="true" servicesOrdered="false"
 	 * @generated NOT
 	 */
-	int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, String roomTypes, String extras);
+	int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, EList<String> roomTypes, EList<String> extras, EList<String> services);
 
 	/**
 	 * Sets the method for paying a booking to the booking with the given booking reference
