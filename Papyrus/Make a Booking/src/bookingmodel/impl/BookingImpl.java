@@ -7,11 +7,13 @@ import bookingmodel.BookingmodelPackage;
 import bookingmodel.Customer;
 import bookingmodel.Guest;
 import bookingmodel.PaymentMethod;
+
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-import java.util.UUID;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
@@ -639,6 +641,75 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void isOld(boolean result) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @generated NOT
+	 */
+	public boolean checkedOutRoom(int roomID) {
+		return this.getRoomIDToGuestMap().get(roomID).getValue().equals("out");
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @generated NOT
+	 */
+	public boolean checkedOutAllRooms() {
+		boolean allCheckedOut = true;
+		int i = 0;
+		while(allCheckedOut && i<this.getRoomIDToGuestMap().size()){
+			allCheckedOut = this.getRoomIDToGuestMap().get(i).getValue().equals("out");
+			i++;
+		}
+		return allCheckedOut;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @generated NOT
+	 */
+	public boolean allExtrasPayed() {
+		boolean allPayed = true;
+		int i = 0;
+		while(allPayed && i<this.getExtraToIsPayedMap().size()){
+			allPayed = this.getExtraToIsPayedMap().get(i).getValue();
+			i++;
+		}
+		return allPayed;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @generated NOT
+	 */
+	public boolean isExtraPayed(String extra) {
+		return this.extraToIsPayedMap.get(extra);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @generated NOT
+	 */
+	public List<String> getUnPayedExtras() {
+		List <String> unpaidExtras = new ArrayList<String>();
+		
+		for(String extra: this.extraToIsPayedMap.keySet())
+				if(this.isExtraPayed(extra)){
+					unpaidExtras.add(extra);
+				}
+		return unpaidExtras;
+	}
+
+	/**
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
@@ -929,6 +1000,19 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return removeResponsibleGuestToAllRooms((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING___REMOVE_RESPONSIBLE_GUEST__INT_STRING:
 				return removeResponsibleGuest((Integer)arguments.get(0), (String)arguments.get(1));
+			case BookingmodelPackage.BOOKING___IS_OLD__BOOLEAN:
+				isOld((Boolean)arguments.get(0));
+				return null;
+			case BookingmodelPackage.BOOKING___CHECKED_OUT_ROOM__INT:
+				return checkedOutRoom((Integer)arguments.get(0));
+			case BookingmodelPackage.BOOKING___CHECKED_OUT_ALL_ROOMS:
+				return checkedOutAllRooms();
+			case BookingmodelPackage.BOOKING___ALL_EXTRAS_PAYED:
+				return allExtrasPayed();
+			case BookingmodelPackage.BOOKING___IS_EXTRA_PAYED__INT:
+				return isExtraPayed((Integer)arguments.get(0));
+			case BookingmodelPackage.BOOKING___GET_UN_PAYED_EXTRAS:
+				return getUnPayedExtras();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

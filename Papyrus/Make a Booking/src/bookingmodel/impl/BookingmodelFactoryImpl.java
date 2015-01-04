@@ -70,7 +70,6 @@ public class BookingmodelFactoryImpl extends EFactoryImpl implements Bookingmode
 			case BookingmodelPackage.BOOKING_HANDLER: return createBookingHandler();
 			case BookingmodelPackage.ROOM_ID_TO_BOOKING_REF_ENTRY: return (EObject)createRoomIDToBookingRefEntry();
 			case BookingmodelPackage.BOOKING_PROVIDES: return createBookingProvides();
-			case BookingmodelPackage.INTEGER_TO_BOOLEAN_ENTRY: return createIntegerToBooleanEntry();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -208,16 +207,6 @@ public class BookingmodelFactoryImpl extends EFactoryImpl implements Bookingmode
 	public BookingProvides createBookingProvides() {
 		BookingProvidesImpl bookingProvides = new BookingProvidesImpl();
 		return bookingProvides;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IntegerToBooleanEntry createIntegerToBooleanEntry() {
-		IntegerToBooleanEntryImpl integerToBooleanEntry = new IntegerToBooleanEntryImpl();
-		return integerToBooleanEntry;
 	}
 
 	/**

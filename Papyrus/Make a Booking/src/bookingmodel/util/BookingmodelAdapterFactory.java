@@ -130,10 +130,6 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 				return createBookingProvidesAdapter();
 			}
 			@Override
-			public Adapter caseIntegerToBooleanEntry(IntegerToBooleanEntry object) {
-				return createIntegerToBooleanEntryAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -346,20 +342,6 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBookingProvidesAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link bookingmodel.IntegerToBooleanEntry <em>Integer To Boolean Entry</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see bookingmodel.IntegerToBooleanEntry
-	 * @generated
-	 */
-	public Adapter createIntegerToBooleanEntryAdapter() {
 		return null;
 	}
 

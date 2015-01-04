@@ -311,23 +311,9 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 				if(!this.isPayed(booking.getBookingRef())){
 					return 3;
 				}
-				
-				boolean allCheckedOut = true;
-				int i = 0;
-				while(allCheckedOut && i<booking.getRoomIDToGuestMap().size()){
-					allCheckedOut = booking.getRoomIDToGuestMap().get(i).getValue().equals("out");
-					i++;
-				}
-			
-				boolean allPayed = true;
-				i = 0;
-				while(allPayed && i<booking.getExtraToIsPayedMap().size()){
-					allPayed = booking.getExtraToIsPayedMap().get(i).getValue();
-					i++;
-				}
-		
+	
 				//checks if the the guest is the last person to check-out and therefore needs to pay for all the remaining extras
-				if(allCheckedOut && !allPayed){
+				if(booking.checkedOutAllRooms() && !booking.allExtrasPayed()){
 					return 4;
 				}
 				
