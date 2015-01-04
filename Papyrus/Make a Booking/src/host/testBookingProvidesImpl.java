@@ -53,10 +53,7 @@ public class testBookingProvidesImpl {
 	@Test
 	public void testCheckIn() {
 		this.intiate();
-		// Create a booking reference and assert true if it is equal to the returned value of a booking.
 		testBook();
-		bookingRef = bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services);
-		assertTrue(this.bp.book(startDate, endDate, nrOfGuests, roomTypes, extras, services).equals(bookingRef));
 		
 		// Check in with booking reference, roomtype and email
 		int checkIn = bp.checkIn(bookingRef, roomTypes.get(0), guestEmail);
@@ -212,6 +209,14 @@ public class testBookingProvidesImpl {
 		int setPaD = bp.setPaymentDetails(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, customerEmail, bookingRef);
 		assertTrue("Failed to set payment details", setPaD == 0);
 		
+		Customer customer = bp.getBookingHandler().getBooking(bookingRef).getCustomer();
+		assertTrue(customer.getPaymentDetails().get(0).getCcNr().equals(ccNumber));
+		assertTrue(customer.getPaymentDetails().get(0).getCcV().equals(ccv));
+		assertTrue(customer.getPaymentDetails().get(0).getExpMonth() == expiryMonth);
+		assertTrue(customer.getPaymentDetails().get(0).getExpYear() == expiryYear);
+		assertTrue(customer.getPaymentDetails().get(0).getFirstName().equals(firstName));
+		assertTrue(customer.getPaymentDetails().get(0).getLastName().equals(lastName));
+		assertTrue(customer.getEmail().equals(customerEmail));
 		fail("setPaymentDetails failed.");
 	}
 

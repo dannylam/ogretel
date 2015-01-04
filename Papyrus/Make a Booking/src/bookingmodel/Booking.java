@@ -182,16 +182,6 @@ public interface Booking extends EObject {
 	boolean isPayed();
 
 	/**
-	 * Returns false or true if a payment has been made.
-	 * @return the value of the '<em>Is Payed</em>' attribute.
-	 * @see #setIsPayed(boolean)
-	 * @see bookingmodel.BookingmodelPackage#getBooking_IsPayed()
-	 * @model dataType="types.Boolean" required="true" ordered="false"
-	 * @generated NOT
-	 */
-	boolean isIsPayed();
-
-	/**
 	 * Sets false or true to a made payment.
 	 * @param value the new value of the '<em>Is Payed</em>' attribute.
 	 * @see #isIsPayed()
@@ -329,13 +319,6 @@ public interface Booking extends EObject {
 	 * @generated NOT
 	 */
 	int setRoomTypes(List<String> roomTypes);
-
-	/**
-	 * Generates a booking reference to this booking
-	 * @model
-	 * @generated NOT
-	 */
-	void generateBookingRef();
 
 	/**
 	 * Returns a list of all extras of a booking.

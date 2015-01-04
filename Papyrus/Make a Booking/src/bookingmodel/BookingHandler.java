@@ -68,15 +68,15 @@ public interface BookingHandler extends EObject {
 	boolean exists(String bookingRef);
 
 	/**
-	 * Adds a booking to the map where the key is the bookingreference and the value the booking. 
+	 * Creates and adds a booking to the map where the key is a bookingreference and the value the booking. 
 	 * The integer returned by the function indicates success or failure and reason for failure.
 	 * @param booking
 	 * @return  0 if success 
 	 * 			- 1 if the map of bookings is null
-	 * @model dataType="types.Integer" required="true" ordered="false" bookingRequired="true" bookingOrdered="false"
+	 * @model dataType="types.Integer" required="true" ordered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" roomTypesDataType="types.String" roomTypesMany="true" roomTypesOrdered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false" servicesDataType="types.String" servicesMany="true" servicesOrdered="false"
 	 * @generated NOT
 	 */
-	int addBooking(Booking booking);
+	int addBooking(int nrOfGuests, String startDate, String endDate, List<String> roomTypes, List<String> extras, List<String> services);
 
 	/**
 	 * Removes a booking from the map with the given booking reference.

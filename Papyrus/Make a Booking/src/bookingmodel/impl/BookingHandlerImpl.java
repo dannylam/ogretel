@@ -8,6 +8,7 @@ import bookingmodel.BookingmodelPackage;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import java.util.UUID;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -107,12 +108,27 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
-	public int addBooking(Booking booking) {
+	public int addBooking(int nrOfGuests, String startDate, String endDate, EList<String> roomTypes, EList<String> extras, EList<String> services) {
 		if(!this.bookingsMap.equals(null)){
+			Booking booking = new BookingImpl(nrOfGuests, startDate, endDate, roomTypes, extras, services);
+			booking.setBookingRef(this.generateBookingRef());
 			this.bookingsMap.put(booking.getBookingRef(), booking);
 			return 0;
 		} 
 		return -1;
+	}
+	
+	/**
+	 * Generates a booking reference to a booking
+	 * @generated NOT
+	 */
+	private String generateBookingRef() {
+		String bookingRef = UUID.randomUUID().toString();
+		if(this.exists(bookingRef)){
+			return generateBookingRef();
+		} else {
+			return bookingRef;
+		}
 	}
 		
 	/**
@@ -135,6 +151,17 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		return this.bookingsMap.get(bookingRef);
 	}
 
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, EList<String> roomTypes, EList<String> extras, EList<String> services) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
 
 	/**
 	 * {@inheritDoc}
@@ -256,8 +283,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		switch (operationID) {
 			case BookingmodelPackage.BOOKING_HANDLER___EXISTS__STRING:
 				return exists((String)arguments.get(0));
-			case BookingmodelPackage.BOOKING_HANDLER___ADD_BOOKING__BOOKING:
-				return addBooking((Booking)arguments.get(0));
+			case BookingmodelPackage.BOOKING_HANDLER___ADD_BOOKING__INT_STRING_STRING_ELIST_ELIST_ELIST:
+				return addBooking((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (EList<String>)arguments.get(3), (EList<String>)arguments.get(4), (EList<String>)arguments.get(5));
 			case BookingmodelPackage.BOOKING_HANDLER___REMOVE_BOOKING__STRING:
 				return removeBooking((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_HANDLER___GET_BOOKING__STRING:

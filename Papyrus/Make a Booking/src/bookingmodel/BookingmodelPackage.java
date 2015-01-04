@@ -405,22 +405,13 @@ public interface BookingmodelPackage extends EPackage {
 	int BOOKING___SET_SERVICES__ELIST = 8;
 
 	/**
-	 * The operation id for the '<em>Generate Booking Ref</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING___GENERATE_BOOKING_REF = 9;
-
-	/**
 	 * The operation id for the '<em>Get Extras</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___GET_EXTRAS = 10;
+	int BOOKING___GET_EXTRAS = 9;
 
 	/**
 	 * The operation id for the '<em>Get Room Types</em>' operation.
@@ -429,7 +420,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___GET_ROOM_TYPES = 11;
+	int BOOKING___GET_ROOM_TYPES = 10;
 
 	/**
 	 * The operation id for the '<em>Get Room IDs</em>' operation.
@@ -438,7 +429,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___GET_ROOM_IDS = 12;
+	int BOOKING___GET_ROOM_IDS = 11;
 
 	/**
 	 * The operation id for the '<em>Remove Responsible Guest To All Rooms</em>' operation.
@@ -447,7 +438,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___REMOVE_RESPONSIBLE_GUEST_TO_ALL_ROOMS__STRING = 13;
+	int BOOKING___REMOVE_RESPONSIBLE_GUEST_TO_ALL_ROOMS__STRING = 12;
 
 	/**
 	 * The operation id for the '<em>Remove Responsible Guest</em>' operation.
@@ -456,7 +447,16 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___REMOVE_RESPONSIBLE_GUEST__INT_STRING = 14;
+	int BOOKING___REMOVE_RESPONSIBLE_GUEST__INT_STRING = 13;
+
+	/**
+	 * The operation id for the '<em>Is Old</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING___IS_OLD__BOOLEAN = 14;
 
 	/**
 	 * The number of operations of the '<em>Booking</em>' class.
@@ -921,7 +921,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER___ADD_BOOKING__BOOKING = 1;
+	int BOOKING_HANDLER___ADD_BOOKING__INT_STRING_STRING_ELIST_ELIST_ELIST = 1;
 
 	/**
 	 * The operation id for the '<em>Remove Booking</em>' operation.
@@ -1064,58 +1064,13 @@ public interface BookingmodelPackage extends EPackage {
 	int IBOOKING_PROVIDES_FOR_HOST_FEATURE_COUNT = 0;
 
 	/**
-	 * The operation id for the '<em>Add Service Note</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IBOOKING_PROVIDES_FOR_HOST___ADD_SERVICE_NOTE__STRING_STRING = 0;
-
-	/**
-	 * The operation id for the '<em>Remove Service Note</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IBOOKING_PROVIDES_FOR_HOST___REMOVE_SERVICE_NOTE__STRING = 1;
-
-	/**
-	 * The operation id for the '<em>Get Service Notes Of Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IBOOKING_PROVIDES_FOR_HOST___GET_SERVICE_NOTES_OF_BOOKING__STRING = 2;
-
-	/**
-	 * The operation id for the '<em>Edit Service Note Description</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IBOOKING_PROVIDES_FOR_HOST___EDIT_SERVICE_NOTE_DESCRIPTION__STRING_STRING = 3;
-
-	/**
 	 * The operation id for the '<em>Get Service Notes</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_HOST___GET_SERVICE_NOTES = 4;
-
-	/**
-	 * The operation id for the '<em>Get Service Note Description</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int IBOOKING_PROVIDES_FOR_HOST___GET_SERVICE_NOTE_DESCRIPTION__STRING = 5;
+	int IBOOKING_PROVIDES_FOR_HOST___GET_SERVICE_NOTES__STRING = 0;
 
 	/**
 	 * The operation id for the '<em>Is Payed</em>' operation.
@@ -1124,7 +1079,25 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_HOST___IS_PAYED__STRING = 6;
+	int IBOOKING_PROVIDES_FOR_HOST___IS_PAYED__STRING = 1;
+
+	/**
+	 * The operation id for the '<em>Get Start Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_HOST___GET_START_DATE__STRING = 2;
+
+	/**
+	 * The operation id for the '<em>Get End Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_HOST___GET_END_DATE__STRING = 3;
 
 	/**
 	 * The number of operations of the '<em>IBooking Provides For Host</em>' class.
@@ -1133,7 +1106,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_HOST_OPERATION_COUNT = 7;
+	int IBOOKING_PROVIDES_FOR_HOST_OPERATION_COUNT = 4;
 
 	/**
 	 * The number of structural features of the '<em>IBooking Provides For Customer</em>' class.
@@ -1289,22 +1262,13 @@ public interface BookingmodelPackage extends EPackage {
 	int BOOKING_PROVIDES__BOOKING_HANDLER = IBOOKING_PROVIDES_FOR_CUSTOMER_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Service Note Handler</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_PROVIDES__SERVICE_NOTE_HANDLER = IBOOKING_PROVIDES_FOR_CUSTOMER_FEATURE_COUNT + 1;
-
-	/**
 	 * The number of structural features of the '<em>Booking Provides</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES_FEATURE_COUNT = IBOOKING_PROVIDES_FOR_CUSTOMER_FEATURE_COUNT + 2;
+	int BOOKING_PROVIDES_FEATURE_COUNT = IBOOKING_PROVIDES_FOR_CUSTOMER_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Pay Booking</em>' operation.
@@ -1415,58 +1379,13 @@ public interface BookingmodelPackage extends EPackage {
 	int BOOKING_PROVIDES___PAY_ROOM__STRING_STRING_INT_INT_STRING_STRING_INT = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 3;
 
 	/**
-	 * The operation id for the '<em>Add Service Note</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_PROVIDES___ADD_SERVICE_NOTE__STRING_STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 4;
-
-	/**
-	 * The operation id for the '<em>Remove Service Note</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_PROVIDES___REMOVE_SERVICE_NOTE__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 5;
-
-	/**
-	 * The operation id for the '<em>Get Service Notes Of Booking</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_PROVIDES___GET_SERVICE_NOTES_OF_BOOKING__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 6;
-
-	/**
-	 * The operation id for the '<em>Edit Service Note Description</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_PROVIDES___EDIT_SERVICE_NOTE_DESCRIPTION__STRING_STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 7;
-
-	/**
 	 * The operation id for the '<em>Get Service Notes</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___GET_SERVICE_NOTES = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 8;
-
-	/**
-	 * The operation id for the '<em>Get Service Note Description</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOKING_PROVIDES___GET_SERVICE_NOTE_DESCRIPTION__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 9;
+	int BOOKING_PROVIDES___GET_SERVICE_NOTES__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Is Payed</em>' operation.
@@ -1475,7 +1394,25 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___IS_PAYED__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 10;
+	int BOOKING_PROVIDES___IS_PAYED__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Get Start Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_START_DATE__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>Get End Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_END_DATE__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 7;
 
 	/**
 	 * The operation id for the '<em>String To List</em>' operation.
@@ -1484,7 +1421,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___STRING_TO_LIST__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 11;
+	int BOOKING_PROVIDES___STRING_TO_LIST__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Booking Provides</em>' class.
@@ -1493,144 +1430,35 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES_OPERATION_COUNT = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 12;
+	int BOOKING_PROVIDES_OPERATION_COUNT = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 9;
 
 	/**
-	 * The meta object id for the '{@link bookingmodel.impl.ServiceNoteHandlerImpl <em>Service Note Handler</em>}' class.
+	 * The meta object id for the '{@link bookingmodel.impl.IntegerToBooleanEntryImpl <em>Integer To Boolean Entry</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see bookingmodel.impl.ServiceNoteHandlerImpl
-	 * @see bookingmodel.impl.BookingmodelPackageImpl#getServiceNoteHandler()
+	 * @see bookingmodel.impl.IntegerToBooleanEntryImpl
+	 * @see bookingmodel.impl.BookingmodelPackageImpl#getIntegerToBooleanEntry()
 	 * @generated
 	 */
-	int SERVICE_NOTE_HANDLER = 15;
+	int INTEGER_TO_BOOLEAN_ENTRY = 15;
 
 	/**
-	 * The feature id for the '<em><b>Service Note Map</b></em>' map.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_NOTE_HANDLER__SERVICE_NOTE_MAP = 0;
-
-	/**
-	 * The number of structural features of the '<em>Service Note Handler</em>' class.
+	 * The number of structural features of the '<em>Integer To Boolean Entry</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_NOTE_HANDLER_FEATURE_COUNT = 1;
+	int INTEGER_TO_BOOLEAN_ENTRY_FEATURE_COUNT = 0;
 
 	/**
-	 * The operation id for the '<em>Exists</em>' operation.
+	 * The number of operations of the '<em>Integer To Boolean Entry</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE_NOTE_HANDLER___EXISTS__STRING = 0;
-
-	/**
-	 * The operation id for the '<em>Add Service Note</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_NOTE_HANDLER___ADD_SERVICE_NOTE__STRING_STRING = 1;
-
-	/**
-	 * The operation id for the '<em>Remove Service Note</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_NOTE_HANDLER___REMOVE_SERVICE_NOTE__STRING = 2;
-
-	/**
-	 * The operation id for the '<em>Get Service Note Description</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_NOTE_HANDLER___GET_SERVICE_NOTE_DESCRIPTION__STRING = 3;
-
-	/**
-	 * The operation id for the '<em>Edit Service Note Description</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_NOTE_HANDLER___EDIT_SERVICE_NOTE_DESCRIPTION__STRING_STRING = 4;
-
-	/**
-	 * The operation id for the '<em>Get Services</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_NOTE_HANDLER___GET_SERVICES = 5;
-
-	/**
-	 * The number of operations of the '<em>Service Note Handler</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_NOTE_HANDLER_OPERATION_COUNT = 6;
-
-	/**
-	 * The meta object id for the '{@link bookingmodel.impl.ServiceNoteToDescriptionEntryImpl <em>Service Note To Description Entry</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see bookingmodel.impl.ServiceNoteToDescriptionEntryImpl
-	 * @see bookingmodel.impl.BookingmodelPackageImpl#getServiceNoteToDescriptionEntry()
-	 * @generated
-	 */
-	int SERVICE_NOTE_TO_DESCRIPTION_ENTRY = 16;
-
-	/**
-	 * The feature id for the '<em><b>Key</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_NOTE_TO_DESCRIPTION_ENTRY__KEY = 0;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_NOTE_TO_DESCRIPTION_ENTRY__VALUE = 1;
-
-	/**
-	 * The number of structural features of the '<em>Service Note To Description Entry</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_NOTE_TO_DESCRIPTION_ENTRY_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Service Note To Description Entry</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SERVICE_NOTE_TO_DESCRIPTION_ENTRY_OPERATION_COUNT = 0;
+	int INTEGER_TO_BOOLEAN_ENTRY_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.GuestTypes <em>Guest Types</em>}' enum.
@@ -1640,7 +1468,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @see bookingmodel.impl.BookingmodelPackageImpl#getGuestTypes()
 	 * @generated
 	 */
-	int GUEST_TYPES = 17;
+	int GUEST_TYPES = 16;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.PaymentMethod <em>Payment Method</em>}' enum.
@@ -1650,7 +1478,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @see bookingmodel.impl.BookingmodelPackageImpl#getPaymentMethod()
 	 * @generated
 	 */
-	int PAYMENT_METHOD = 18;
+	int PAYMENT_METHOD = 17;
 
 
 	/**
@@ -1988,16 +1816,6 @@ public interface BookingmodelPackage extends EPackage {
 	EOperation getBooking__SetServices__EList();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.Booking#generateBookingRef() <em>Generate Booking Ref</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Generate Booking Ref</em>' operation.
-	 * @see bookingmodel.Booking#generateBookingRef()
-	 * @generated
-	 */
-	EOperation getBooking__GenerateBookingRef();
-
-	/**
 	 * Returns the meta object for the '{@link bookingmodel.Booking#getExtras() <em>Get Extras</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2046,6 +1864,16 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getBooking__RemoveResponsibleGuest__int_String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.Booking#isOld(boolean) <em>Is Old</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Old</em>' operation.
+	 * @see bookingmodel.Booking#isOld(boolean)
+	 * @generated
+	 */
+	EOperation getBooking__IsOld__boolean();
 
 	/**
 	 * Returns the meta object for class '{@link bookingmodel.Customer <em>Customer</em>}'.
@@ -2329,14 +2157,14 @@ public interface BookingmodelPackage extends EPackage {
 	EOperation getBookingHandler__Exists__String();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.BookingHandler#addBooking(bookingmodel.Booking) <em>Add Booking</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.BookingHandler#addBooking(int, java.lang.String, java.lang.String, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList) <em>Add Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Booking</em>' operation.
-	 * @see bookingmodel.BookingHandler#addBooking(bookingmodel.Booking)
+	 * @see bookingmodel.BookingHandler#addBooking(int, java.lang.String, java.lang.String, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getBookingHandler__AddBooking__Booking();
+	EOperation getBookingHandler__AddBooking__int_String_String_EList_EList_EList();
 
 	/**
 	 * Returns the meta object for the '{@link bookingmodel.BookingHandler#removeBooking(java.lang.String) <em>Remove Booking</em>}' operation.
@@ -2389,64 +2217,14 @@ public interface BookingmodelPackage extends EPackage {
 	EClass getIBookingProvidesForHost();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#addServiceNote(java.lang.String, java.lang.String) <em>Add Service Note</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Service Note</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForHost#addServiceNote(java.lang.String, java.lang.String)
-	 * @generated
-	 */
-	EOperation getIBookingProvidesForHost__AddServiceNote__String_String();
-
-	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#removeServiceNote(java.lang.String) <em>Remove Service Note</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Service Note</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForHost#removeServiceNote(java.lang.String)
-	 * @generated
-	 */
-	EOperation getIBookingProvidesForHost__RemoveServiceNote__String();
-
-	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#getServiceNotesOfBooking(java.lang.String) <em>Get Service Notes Of Booking</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Service Notes Of Booking</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForHost#getServiceNotesOfBooking(java.lang.String)
-	 * @generated
-	 */
-	EOperation getIBookingProvidesForHost__GetServiceNotesOfBooking__String();
-
-	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#editServiceNoteDescription(java.lang.String, java.lang.String) <em>Edit Service Note Description</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Edit Service Note Description</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForHost#editServiceNoteDescription(java.lang.String, java.lang.String)
-	 * @generated
-	 */
-	EOperation getIBookingProvidesForHost__EditServiceNoteDescription__String_String();
-
-	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#getServiceNotes() <em>Get Service Notes</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#getServiceNotes(java.lang.String) <em>Get Service Notes</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Get Service Notes</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForHost#getServiceNotes()
+	 * @see bookingmodel.IBookingProvidesForHost#getServiceNotes(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookingProvidesForHost__GetServiceNotes();
-
-	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#getServiceNoteDescription(java.lang.String) <em>Get Service Note Description</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Service Note Description</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForHost#getServiceNoteDescription(java.lang.String)
-	 * @generated
-	 */
-	EOperation getIBookingProvidesForHost__GetServiceNoteDescription__String();
+	EOperation getIBookingProvidesForHost__GetServiceNotes__String();
 
 	/**
 	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#isPayed(java.lang.String) <em>Is Payed</em>}' operation.
@@ -2457,6 +2235,26 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getIBookingProvidesForHost__IsPayed__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#getStartDate(java.lang.String) <em>Get Start Date</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Start Date</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForHost#getStartDate(java.lang.String)
+	 * @generated
+	 */
+	EOperation getIBookingProvidesForHost__GetStartDate__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#getEndDate(java.lang.String) <em>Get End Date</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get End Date</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForHost#getEndDate(java.lang.String)
+	 * @generated
+	 */
+	EOperation getIBookingProvidesForHost__GetEndDate__String();
 
 	/**
 	 * Returns the meta object for class '{@link bookingmodel.IBookingProvidesForCustomer <em>IBooking Provides For Customer</em>}'.
@@ -2620,17 +2418,6 @@ public interface BookingmodelPackage extends EPackage {
 	EReference getBookingProvides_BookingHandler();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link bookingmodel.BookingProvides#getServiceNoteHandler <em>Service Note Handler</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Service Note Handler</em>'.
-	 * @see bookingmodel.BookingProvides#getServiceNoteHandler()
-	 * @see #getBookingProvides()
-	 * @generated
-	 */
-	EReference getBookingProvides_ServiceNoteHandler();
-
-	/**
 	 * Returns the meta object for the '{@link bookingmodel.BookingProvides#stringToList(java.lang.String) <em>String To List</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2639,6 +2426,16 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getBookingProvides__StringToList__String();
+
+	/**
+	 * Returns the meta object for class '{@link bookingmodel.IntegerToBooleanEntry <em>Integer To Boolean Entry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Integer To Boolean Entry</em>'.
+	 * @see bookingmodel.IntegerToBooleanEntry
+	 * @generated
+	 */
+	EClass getIntegerToBooleanEntry();
 
 	/**
 	 * Returns the meta object for class '{@link java.util.Map.Entry <em>Room ID To Booking Ref Entry</em>}'.
@@ -2673,121 +2470,6 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRoomIDToBookingRefEntry_Value();
-
-	/**
-	 * Returns the meta object for class '{@link bookingmodel.ServiceNoteHandler <em>Service Note Handler</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Service Note Handler</em>'.
-	 * @see bookingmodel.ServiceNoteHandler
-	 * @generated
-	 */
-	EClass getServiceNoteHandler();
-
-	/**
-	 * Returns the meta object for the map '{@link bookingmodel.ServiceNoteHandler#getServiceNoteMap <em>Service Note Map</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the map '<em>Service Note Map</em>'.
-	 * @see bookingmodel.ServiceNoteHandler#getServiceNoteMap()
-	 * @see #getServiceNoteHandler()
-	 * @generated
-	 */
-	EReference getServiceNoteHandler_ServiceNoteMap();
-
-	/**
-	 * Returns the meta object for the '{@link bookingmodel.ServiceNoteHandler#exists(java.lang.String) <em>Exists</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Exists</em>' operation.
-	 * @see bookingmodel.ServiceNoteHandler#exists(java.lang.String)
-	 * @generated
-	 */
-	EOperation getServiceNoteHandler__Exists__String();
-
-	/**
-	 * Returns the meta object for the '{@link bookingmodel.ServiceNoteHandler#addServiceNote(java.lang.String, java.lang.String) <em>Add Service Note</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Service Note</em>' operation.
-	 * @see bookingmodel.ServiceNoteHandler#addServiceNote(java.lang.String, java.lang.String)
-	 * @generated
-	 */
-	EOperation getServiceNoteHandler__AddServiceNote__String_String();
-
-	/**
-	 * Returns the meta object for the '{@link bookingmodel.ServiceNoteHandler#removeServiceNote(java.lang.String) <em>Remove Service Note</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Service Note</em>' operation.
-	 * @see bookingmodel.ServiceNoteHandler#removeServiceNote(java.lang.String)
-	 * @generated
-	 */
-	EOperation getServiceNoteHandler__RemoveServiceNote__String();
-
-	/**
-	 * Returns the meta object for the '{@link bookingmodel.ServiceNoteHandler#getServiceNoteDescription(java.lang.String) <em>Get Service Note Description</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Service Note Description</em>' operation.
-	 * @see bookingmodel.ServiceNoteHandler#getServiceNoteDescription(java.lang.String)
-	 * @generated
-	 */
-	EOperation getServiceNoteHandler__GetServiceNoteDescription__String();
-
-	/**
-	 * Returns the meta object for the '{@link bookingmodel.ServiceNoteHandler#editServiceNoteDescription(java.lang.String, java.lang.String) <em>Edit Service Note Description</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Edit Service Note Description</em>' operation.
-	 * @see bookingmodel.ServiceNoteHandler#editServiceNoteDescription(java.lang.String, java.lang.String)
-	 * @generated
-	 */
-	EOperation getServiceNoteHandler__EditServiceNoteDescription__String_String();
-
-	/**
-	 * Returns the meta object for the '{@link bookingmodel.ServiceNoteHandler#getServices() <em>Get Services</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Services</em>' operation.
-	 * @see bookingmodel.ServiceNoteHandler#getServices()
-	 * @generated
-	 */
-	EOperation getServiceNoteHandler__GetServices();
-
-	/**
-	 * Returns the meta object for class '{@link java.util.Map.Entry <em>Service Note To Description Entry</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Service Note To Description Entry</em>'.
-	 * @see java.util.Map.Entry
-	 * @model keyDataType="types.String" keyRequired="true" keyOrdered="false"
-	 *        valueDataType="org.eclipse.emf.ecore.EString" valueRequired="true" valueOrdered="false"
-	 * @generated
-	 */
-	EClass getServiceNoteToDescriptionEntry();
-
-	/**
-	 * Returns the meta object for the attribute '{@link java.util.Map.Entry <em>Key</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Key</em>'.
-	 * @see java.util.Map.Entry
-	 * @see #getServiceNoteToDescriptionEntry()
-	 * @generated
-	 */
-	EAttribute getServiceNoteToDescriptionEntry_Key();
-
-	/**
-	 * Returns the meta object for the attribute '{@link java.util.Map.Entry <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see java.util.Map.Entry
-	 * @see #getServiceNoteToDescriptionEntry()
-	 * @generated
-	 */
-	EAttribute getServiceNoteToDescriptionEntry_Value();
 
 	/**
 	 * Returns the meta object for enum '{@link bookingmodel.GuestTypes <em>Guest Types</em>}'.
@@ -3089,14 +2771,6 @@ public interface BookingmodelPackage extends EPackage {
 		EOperation BOOKING___SET_SERVICES__ELIST = eINSTANCE.getBooking__SetServices__EList();
 
 		/**
-		 * The meta object literal for the '<em><b>Generate Booking Ref</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation BOOKING___GENERATE_BOOKING_REF = eINSTANCE.getBooking__GenerateBookingRef();
-
-		/**
 		 * The meta object literal for the '<em><b>Get Extras</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3135,6 +2809,14 @@ public interface BookingmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation BOOKING___REMOVE_RESPONSIBLE_GUEST__INT_STRING = eINSTANCE.getBooking__RemoveResponsibleGuest__int_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Old</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING___IS_OLD__BOOLEAN = eINSTANCE.getBooking__IsOld__boolean();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.impl.CustomerImpl <em>Customer</em>}' class.
@@ -3362,7 +3044,7 @@ public interface BookingmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING_HANDLER___ADD_BOOKING__BOOKING = eINSTANCE.getBookingHandler__AddBooking__Booking();
+		EOperation BOOKING_HANDLER___ADD_BOOKING__INT_STRING_STRING_ELIST_ELIST_ELIST = eINSTANCE.getBookingHandler__AddBooking__int_String_String_EList_EList_EList();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Booking</b></em>' operation.
@@ -3407,52 +3089,12 @@ public interface BookingmodelPackage extends EPackage {
 		EClass IBOOKING_PROVIDES_FOR_HOST = eINSTANCE.getIBookingProvidesForHost();
 
 		/**
-		 * The meta object literal for the '<em><b>Add Service Note</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IBOOKING_PROVIDES_FOR_HOST___ADD_SERVICE_NOTE__STRING_STRING = eINSTANCE.getIBookingProvidesForHost__AddServiceNote__String_String();
-
-		/**
-		 * The meta object literal for the '<em><b>Remove Service Note</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IBOOKING_PROVIDES_FOR_HOST___REMOVE_SERVICE_NOTE__STRING = eINSTANCE.getIBookingProvidesForHost__RemoveServiceNote__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Service Notes Of Booking</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_SERVICE_NOTES_OF_BOOKING__STRING = eINSTANCE.getIBookingProvidesForHost__GetServiceNotesOfBooking__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Edit Service Note Description</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IBOOKING_PROVIDES_FOR_HOST___EDIT_SERVICE_NOTE_DESCRIPTION__STRING_STRING = eINSTANCE.getIBookingProvidesForHost__EditServiceNoteDescription__String_String();
-
-		/**
 		 * The meta object literal for the '<em><b>Get Service Notes</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_SERVICE_NOTES = eINSTANCE.getIBookingProvidesForHost__GetServiceNotes();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Service Note Description</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_SERVICE_NOTE_DESCRIPTION__STRING = eINSTANCE.getIBookingProvidesForHost__GetServiceNoteDescription__String();
+		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_SERVICE_NOTES__STRING = eINSTANCE.getIBookingProvidesForHost__GetServiceNotes__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Payed</b></em>' operation.
@@ -3461,6 +3103,22 @@ public interface BookingmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IBOOKING_PROVIDES_FOR_HOST___IS_PAYED__STRING = eINSTANCE.getIBookingProvidesForHost__IsPayed__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Start Date</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_START_DATE__STRING = eINSTANCE.getIBookingProvidesForHost__GetStartDate__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get End Date</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_END_DATE__STRING = eINSTANCE.getIBookingProvidesForHost__GetEndDate__String();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.IBookingProvidesForCustomer <em>IBooking Provides For Customer</em>}' class.
@@ -3597,20 +3255,22 @@ public interface BookingmodelPackage extends EPackage {
 		EReference BOOKING_PROVIDES__BOOKING_HANDLER = eINSTANCE.getBookingProvides_BookingHandler();
 
 		/**
-		 * The meta object literal for the '<em><b>Service Note Handler</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BOOKING_PROVIDES__SERVICE_NOTE_HANDLER = eINSTANCE.getBookingProvides_ServiceNoteHandler();
-
-		/**
 		 * The meta object literal for the '<em><b>String To List</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EOperation BOOKING_PROVIDES___STRING_TO_LIST__STRING = eINSTANCE.getBookingProvides__StringToList__String();
+
+		/**
+		 * The meta object literal for the '{@link bookingmodel.impl.IntegerToBooleanEntryImpl <em>Integer To Boolean Entry</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see bookingmodel.impl.IntegerToBooleanEntryImpl
+		 * @see bookingmodel.impl.BookingmodelPackageImpl#getIntegerToBooleanEntry()
+		 * @generated
+		 */
+		EClass INTEGER_TO_BOOLEAN_ENTRY = eINSTANCE.getIntegerToBooleanEntry();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.impl.RoomIDToBookingRefEntryImpl <em>Room ID To Booking Ref Entry</em>}' class.
@@ -3637,98 +3297,6 @@ public interface BookingmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ROOM_ID_TO_BOOKING_REF_ENTRY__VALUE = eINSTANCE.getRoomIDToBookingRefEntry_Value();
-
-		/**
-		 * The meta object literal for the '{@link bookingmodel.impl.ServiceNoteHandlerImpl <em>Service Note Handler</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see bookingmodel.impl.ServiceNoteHandlerImpl
-		 * @see bookingmodel.impl.BookingmodelPackageImpl#getServiceNoteHandler()
-		 * @generated
-		 */
-		EClass SERVICE_NOTE_HANDLER = eINSTANCE.getServiceNoteHandler();
-
-		/**
-		 * The meta object literal for the '<em><b>Service Note Map</b></em>' map feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SERVICE_NOTE_HANDLER__SERVICE_NOTE_MAP = eINSTANCE.getServiceNoteHandler_ServiceNoteMap();
-
-		/**
-		 * The meta object literal for the '<em><b>Exists</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SERVICE_NOTE_HANDLER___EXISTS__STRING = eINSTANCE.getServiceNoteHandler__Exists__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Add Service Note</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SERVICE_NOTE_HANDLER___ADD_SERVICE_NOTE__STRING_STRING = eINSTANCE.getServiceNoteHandler__AddServiceNote__String_String();
-
-		/**
-		 * The meta object literal for the '<em><b>Remove Service Note</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SERVICE_NOTE_HANDLER___REMOVE_SERVICE_NOTE__STRING = eINSTANCE.getServiceNoteHandler__RemoveServiceNote__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Service Note Description</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SERVICE_NOTE_HANDLER___GET_SERVICE_NOTE_DESCRIPTION__STRING = eINSTANCE.getServiceNoteHandler__GetServiceNoteDescription__String();
-
-		/**
-		 * The meta object literal for the '<em><b>Edit Service Note Description</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SERVICE_NOTE_HANDLER___EDIT_SERVICE_NOTE_DESCRIPTION__STRING_STRING = eINSTANCE.getServiceNoteHandler__EditServiceNoteDescription__String_String();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Services</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SERVICE_NOTE_HANDLER___GET_SERVICES = eINSTANCE.getServiceNoteHandler__GetServices();
-
-		/**
-		 * The meta object literal for the '{@link bookingmodel.impl.ServiceNoteToDescriptionEntryImpl <em>Service Note To Description Entry</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see bookingmodel.impl.ServiceNoteToDescriptionEntryImpl
-		 * @see bookingmodel.impl.BookingmodelPackageImpl#getServiceNoteToDescriptionEntry()
-		 * @generated
-		 */
-		EClass SERVICE_NOTE_TO_DESCRIPTION_ENTRY = eINSTANCE.getServiceNoteToDescriptionEntry();
-
-		/**
-		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SERVICE_NOTE_TO_DESCRIPTION_ENTRY__KEY = eINSTANCE.getServiceNoteToDescriptionEntry_Key();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SERVICE_NOTE_TO_DESCRIPTION_ENTRY__VALUE = eINSTANCE.getServiceNoteToDescriptionEntry_Value();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.GuestTypes <em>Guest Types</em>}' enum.
