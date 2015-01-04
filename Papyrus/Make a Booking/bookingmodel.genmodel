@@ -157,6 +157,7 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//BookingHandler/editBooking/nrOfGuests"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//BookingHandler/editBooking/roomTypes"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//BookingHandler/editBooking/extras"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//BookingHandler/editBooking/services"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//BookingHandler/getBooking.1">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//BookingHandler/getBooking.1/roomID"/>

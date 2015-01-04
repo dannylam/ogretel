@@ -135,6 +135,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		return this.bookingsMap.get(bookingRef);
 	}
 
+
 	/**
 	 * @inheritDoc
 	 * @generated NOT
@@ -148,16 +149,13 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @param bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras
 	 * @generated NOT
 	 */
-	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras) {
-		if(this.exists(bookingRef)){
+	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras, List<String> services) {
 			this.getBooking(bookingRef).setStartDate(startDate);
 			this.getBooking(bookingRef).setEndDate(endDate);
 			this.getBooking(bookingRef).setNrOfGuests(nrOfGuests);
 			this.getBooking(bookingRef).setRoomTypes(roomTypes);
 			this.getBooking(bookingRef).setExtras(extras);
 			return 0;
-		}
-		return -1;
 	}
 
 	/**
@@ -263,8 +261,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return removeBooking((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_HANDLER___GET_BOOKING__STRING:
 				return getBooking((String)arguments.get(0));
-			case BookingmodelPackage.BOOKING_HANDLER___EDIT_BOOKING__STRING_STRING_STRING_INT_ELIST_ELIST:
-				return editBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (List<String>)arguments.get(4), (List<String>)arguments.get(5));
+			case BookingmodelPackage.BOOKING_HANDLER___EDIT_BOOKING__STRING_STRING_STRING_INT_ELIST_ELIST_ELIST:
+				return editBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (EList<String>)arguments.get(4), (EList<String>)arguments.get(5), (EList<String>)arguments.get(6));
 			case BookingmodelPackage.BOOKING_HANDLER___GET_BOOKING__INT:
 				return getBooking((Integer)arguments.get(0));
 		}

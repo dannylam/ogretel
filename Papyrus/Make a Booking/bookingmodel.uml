@@ -408,6 +408,11 @@ been checked-in is checked-out in a specific booking </body>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F14FfJNNEeSexbuF790S1w"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ngbt8JPyEeSA0oR7n6IIkw" value="*"/>
         </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_95L10JP9EeSkhq3pp1wxlw" name="services">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eF4m0JP-EeSkhq3pp1wxlw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eF5N4JP-EeSkhq3pp1wxlw" value="*"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FfZNNEeSexbuF790S1w" name="getBooking" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FfpNNEeSexbuF790S1w" type="_F13d_ZNNEeSexbuF790S1w" direction="return"/>

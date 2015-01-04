@@ -477,6 +477,9 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 			if(extras.equals(null)){
 				extras = booking.getExtras();
 			}
+			if(services.equals(null)){
+				services = booking.getServiceNotes();
+			}
 			
 			//checks with maintenance if the change is possible
 			if (this.maintenanceComponent.canBook(

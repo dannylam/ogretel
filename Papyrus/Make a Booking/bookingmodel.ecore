@@ -163,6 +163,7 @@
       <eParameters name="nrOfGuests" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
       <eParameters name="roomTypes" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="extras" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="services" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="getBooking" ordered="false" lowerBound="1" eType="#//Booking">
       <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
