@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Ecore="http://www.eclipse.org/uml2/schemas/Ecore/5" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.eclipse.org/uml2/schemas/Ecore/5 pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ActionLanguage="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile" xmlns:Ecore="http://www.eclipse.org/uml2/schemas/Ecore/5" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://www.omg.org/spec/ALF/20120827/ActionLanguage-Profile pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g http://www.eclipse.org/uml2/schemas/Ecore/5 pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA">
   <uml:Model xmi:id="_F13d8JNNEeSexbuF790S1w" name="bookingmodel" URI="http:///bookingmodel.ecore">
     <packagedElement xmi:type="uml:Class" xmi:id="_F13d8ZNNEeSexbuF790S1w" name="RoomToGuestIDEntry">
       <ownedComment xmi:type="uml:Comment" xmi:id="_F13d8pNNEeSexbuF790S1w" annotatedElement="_F13d8ZNNEeSexbuF790S1w">
@@ -100,12 +100,12 @@ value: booking</body>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ULX3MJOKEeSZ_IwO16Zn9Q" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ULX3MZOKEeSZ_IwO16Zn9Q" value="1"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F13eE5NNEeSexbuF790S1w" name="checkedInAllRooms" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F13eE5NNEeSexbuF790S1w" name="checkedInAllRooms" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F13eFJNNEeSexbuF790S1w" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F13eFZNNEeSexbuF790S1w" name="checkedInRoom" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F13eFZNNEeSexbuF790S1w" name="checkedInRoom" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F13eFpNNEeSexbuF790S1w" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
@@ -113,7 +113,7 @@ value: booking</body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F13eGJNNEeSexbuF790S1w" name="setResponsibleGuest" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F13eGJNNEeSexbuF790S1w" name="setResponsibleGuest" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F13eGZNNEeSexbuF790S1w" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
@@ -124,7 +124,7 @@ value: booking</body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FAZNNEeSexbuF790S1w" name="setResponsibleGuestToAllRooms" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FAZNNEeSexbuF790S1w" name="setResponsibleGuestToAllRooms" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FApNNEeSexbuF790S1w" isOrdered="true" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F14FA5NNEeSexbuF790S1w"/>
@@ -133,12 +133,12 @@ value: booking</body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FBZNNEeSexbuF790S1w" name="getNrOfRooms" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FBZNNEeSexbuF790S1w" name="getNrOfRooms" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FBpNNEeSexbuF790S1w" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FB5NNEeSexbuF790S1w" name="setExtras" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FB5NNEeSexbuF790S1w" name="setExtras" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FCJNNEeSexbuF790S1w" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
@@ -148,7 +148,7 @@ value: booking</body>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F14FC5NNEeSexbuF790S1w" value="*"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FDJNNEeSexbuF790S1w" name="setRoomTypes" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FDJNNEeSexbuF790S1w" name="setRoomTypes" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FDZNNEeSexbuF790S1w" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
@@ -158,7 +158,7 @@ value: booking</body>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F14FEJNNEeSexbuF790S1w" value="*"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FEZNNEeSexbuF790S1w" name="setRoomIDs" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FEZNNEeSexbuF790S1w" name="setRoomIDs" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FEpNNEeSexbuF790S1w" isOrdered="true" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
@@ -168,19 +168,33 @@ value: booking</body>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F14FFZNNEeSexbuF790S1w" value="*"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FFpNNEeSexbuF790S1w" name="generateBookingRef" visibility="public">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FF5NNEeSexbuF790S1w" isOrdered="true" direction="return"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FFpNNEeSexbuF790S1w" name="generateBookingRef" visibility="package">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FF5NNEeSexbuF790S1w" isOrdered="true" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FGJNNEeSexbuF790S1w" name="getExtras" visibility="public">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FGZNNEeSexbuF790S1w" type="_F14FJpNNEeSexbuF790S1w" isOrdered="true" direction="return"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FGJNNEeSexbuF790S1w" name="getExtras" visibility="package">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FGZNNEeSexbuF790S1w" isOrdered="true" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WDLnkJPxEeSA0oR7n6IIkw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WDiM4JPxEeSA0oR7n6IIkw" value="*"/>
+        </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FGpNNEeSexbuF790S1w" name="getRoomTypes" visibility="public">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FG5NNEeSexbuF790S1w" type="_F14FKpNNEeSexbuF790S1w" isOrdered="true" direction="return"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FGpNNEeSexbuF790S1w" name="getRoomTypes" visibility="package">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FG5NNEeSexbuF790S1w" isOrdered="true" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ZhI8MJPxEeSA0oR7n6IIkw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZhKKUJPxEeSA0oR7n6IIkw" value="*"/>
+        </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FHJNNEeSexbuF790S1w" name="getRoomIDs" visibility="public">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FHZNNEeSexbuF790S1w" type="_F14FLpNNEeSexbuF790S1w" isOrdered="true" direction="return"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FHJNNEeSexbuF790S1w" name="getRoomIDs" visibility="package">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FHZNNEeSexbuF790S1w" isOrdered="true" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_faKlEJPxEeSA0oR7n6IIkw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_faLMIJPxEeSA0oR7n6IIkw" value="*"/>
+        </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FHpNNEeSexbuF790S1w" name="removeResponsibleGuestToAllRooms" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FHpNNEeSexbuF790S1w" name="removeResponsibleGuestToAllRooms" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FH5NNEeSexbuF790S1w" isOrdered="true" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
@@ -188,7 +202,7 @@ value: booking</body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FIZNNEeSexbuF790S1w" name="removeResponsibleGuest" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FIZNNEeSexbuF790S1w" name="removeResponsibleGuest" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FIpNNEeSexbuF790S1w" isOrdered="true" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
@@ -340,7 +354,7 @@ been checked-in is checked-out in a specific booking </body>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F14FZpNNEeSexbuF790S1w"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F14FZ5NNEeSexbuF790S1w" value="*"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FaJNNEeSexbuF790S1w" name="exists" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FaJNNEeSexbuF790S1w" name="exists" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FaZNNEeSexbuF790S1w" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
@@ -348,13 +362,13 @@ been checked-in is checked-out in a specific booking </body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14Fa5NNEeSexbuF790S1w" name="addBooking" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14Fa5NNEeSexbuF790S1w" name="addBooking" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FbJNNEeSexbuF790S1w" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FbZNNEeSexbuF790S1w" name="booking" type="_F13d_ZNNEeSexbuF790S1w"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FbpNNEeSexbuF790S1w" name="removeBooking" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FbpNNEeSexbuF790S1w" name="removeBooking" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14Fb5NNEeSexbuF790S1w" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
@@ -362,13 +376,13 @@ been checked-in is checked-out in a specific booking </body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FcZNNEeSexbuF790S1w" name="getBooking" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FcZNNEeSexbuF790S1w" name="getBooking" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FcpNNEeSexbuF790S1w" type="_F13d_ZNNEeSexbuF790S1w" direction="return"/>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14Fc5NNEeSexbuF790S1w" name="bookingRef">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FdJNNEeSexbuF790S1w" name="editBooking" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FdJNNEeSexbuF790S1w" name="editBooking" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FdZNNEeSexbuF790S1w" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
@@ -384,12 +398,18 @@ been checked-in is checked-out in a specific booking </body>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FeZNNEeSexbuF790S1w" name="nrOfGuests">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FepNNEeSexbuF790S1w" name="roomTypes" type="_F14FgZNNEeSexbuF790S1w"/>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14Fe5NNEeSexbuF790S1w" name="extras" type="_F14FhZNNEeSexbuF790S1w">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FepNNEeSexbuF790S1w" name="roomTypes">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LU9U4JPyEeSA0oR7n6IIkw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LU978JPyEeSA0oR7n6IIkw" value="*"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14Fe5NNEeSexbuF790S1w" name="extras">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F14FfJNNEeSexbuF790S1w"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ngbt8JPyEeSA0oR7n6IIkw" value="*"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FfZNNEeSexbuF790S1w" name="getBooking" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FfZNNEeSexbuF790S1w" name="getBooking" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FfpNNEeSexbuF790S1w" type="_F13d_ZNNEeSexbuF790S1w" direction="return"/>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14Ff5NNEeSexbuF790S1w" name="roomID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -492,7 +512,11 @@ been checked-in is checked-out in a specific booking </body>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FopNNEeSexbuF790S1w" name="getServiceNotesOfBooking" visibility="public">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14Fo5NNEeSexbuF790S1w" type="_F14FkpNNEeSexbuF790S1w" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14Fo5NNEeSexbuF790S1w" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mXBCcJPxEeSA0oR7n6IIkw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mXCQkJPxEeSA0oR7n6IIkw" value="*"/>
+        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FpJNNEeSexbuF790S1w" name="bookingRef">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
@@ -509,7 +533,11 @@ been checked-in is checked-out in a specific booking </body>
         </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FqZNNEeSexbuF790S1w" name="getServiceNotes" visibility="public">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FqpNNEeSexbuF790S1w" type="_F14FlpNNEeSexbuF790S1w" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FqpNNEeSexbuF790S1w" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_p4F8gJPxEeSA0oR7n6IIkw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p4GjkJPxEeSA0oR7n6IIkw" value="*"/>
+        </ownedParameter>
       </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_F14Fq5NNEeSexbuF790S1w" name="getServiceNoteDescription" visibility="public">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FrJNNEeSexbuF790S1w" direction="return">
@@ -728,7 +756,11 @@ been checked-in is checked-out in a specific booking </body>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14F9ZNNEeSexbuF790S1w" name="lastName">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14F9pNNEeSexbuF790S1w" name="extra" type="_F14F4pNNEeSexbuF790S1w"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14F9pNNEeSexbuF790S1w" name="extra">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_y5x_cJPxEeSA0oR7n6IIkw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_y5ymgJPxEeSA0oR7n6IIkw" value="*"/>
+        </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_JadVgJOOEeSTPajskOzfJQ" name="roomID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
@@ -766,7 +798,7 @@ been checked-in is checked-out in a specific booking </body>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_F14F-pNNEeSexbuF790S1w" client="_F14F95NNEeSexbuF790S1w" supplier="_F14FspNNEeSexbuF790S1w" contract="_F14FspNNEeSexbuF790S1w"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_F14F-5NNEeSexbuF790S1w" client="_F14F95NNEeSexbuF790S1w" supplier="_F14F4JNNEeSexbuF790S1w" contract="_F14F4JNNEeSexbuF790S1w"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_F14F_JNNEeSexbuF790S1w" client="_F14F95NNEeSexbuF790S1w" supplier="_F14FkJNNEeSexbuF790S1w" contract="_F14FkJNNEeSexbuF790S1w"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14F_ZNNEeSexbuF790S1w" name="stringToList" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14F_ZNNEeSexbuF790S1w" name="stringToList" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14F_pNNEeSexbuF790S1w" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F14F_5NNEeSexbuF790S1w"/>
@@ -785,7 +817,7 @@ been checked-in is checked-out in a specific booking </body>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F14GBpNNEeSexbuF790S1w"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F14GB5NNEeSexbuF790S1w" value="*"/>
       </ownedAttribute>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14GCJNNEeSexbuF790S1w" name="exists" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14GCJNNEeSexbuF790S1w" name="exists" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14GCZNNEeSexbuF790S1w" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
         </ownedParameter>
@@ -793,7 +825,7 @@ been checked-in is checked-out in a specific booking </body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14GC5NNEeSexbuF790S1w" name="addServiceNote" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14GC5NNEeSexbuF790S1w" name="addServiceNote" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14GDJNNEeSexbuF790S1w" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
@@ -804,7 +836,7 @@ been checked-in is checked-out in a specific booking </body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14GD5NNEeSexbuF790S1w" name="removeServiceNote" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14GD5NNEeSexbuF790S1w" name="removeServiceNote" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14GEJNNEeSexbuF790S1w" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
@@ -895,6 +927,12 @@ been checked-in is checked-out in a specific booking </body>
         <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Ecore.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_vlawgJOVEeSZ_IwO16Zn9Q">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vmOBwJOVEeSZ_IwO16Zn9Q" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_sYse0YZLEeKyw49uR6nx3g"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
     </profileApplication>
   </uml:Model>
   <Ecore:EPackage xmi:id="_F14GKZNNEeSexbuF790S1w" base_Package="_F13d8JNNEeSexbuF790S1w" nsPrefix="bookingmodel"/>
@@ -1083,4 +1121,5 @@ been checked-in is checked-out in a specific booking </body>
   <Ecore:EParameter xmi:id="_LfTiIJOOEeSTPajskOzfJQ" base_Parameter="_LfOpppOOEeSTPajskOzfJQ"/>
   <Ecore:EParameter xmi:id="_LfXMgJOOEeSTPajskOzfJQ" base_Parameter="_LfOppJOOEeSTPajskOzfJQ"/>
   <Ecore:EParameter xmi:id="_LfXzkZOOEeSTPajskOzfJQ" base_Parameter="_LfOpp5OOEeSTPajskOzfJQ"/>
+  <ActionLanguage:TextualRepresentation xmi:id="_vmgVoJOVEeSZ_IwO16Zn9Q" language="org.eclipse.papyrus.uml.textedit.property.xtext.UmlProperty"/>
 </xmi:XMI>
