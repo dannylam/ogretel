@@ -3,6 +3,7 @@
 package bookingmodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -479,6 +480,14 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 			}
 			if(services.equals(null)){
 				services = booking.getServiceNotes();
+			} else {
+				List <String> newServiceNotes = new ArrayList <String>();
+				for(String service: services)
+				if(this.serviceNoteHandler.exists(service)){
+					newServiceNotes.add(service);
+					
+				}
+				services = newServiceNotes;
 			}
 			
 			//checks with maintenance if the change is possible
