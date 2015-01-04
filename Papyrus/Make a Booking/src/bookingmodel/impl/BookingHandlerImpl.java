@@ -104,7 +104,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		return this.bookingsMap.containsKey(bookingRef);
 	}
 
-
 	/**
 	 * {@inheritDoc}
 	 * @generated NOT
@@ -125,7 +124,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	private String generateBookingRef() {
 		String bookingRef = UUID.randomUUID().toString();
-		if(this.exists(bookingRef)){
+		if(this.isActive(bookingRef)){
 			return generateBookingRef();
 		} else {
 			return bookingRef;
@@ -137,7 +136,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public int removeBooking(String bookingRef) {
-		if(this.exists(bookingRef)){
+		if(this.isActive(bookingRef)){
 			this.bookingsMap.remove(getBooking(bookingRef));
 			return 0;
 		} 
@@ -158,6 +157,18 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public Booking getBooking(int roomID) {
 		return this.getBooking(this.roomIDToBookingRefMap.get(roomID).getValue());
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @generated NOT
+	 */
+	public boolean isActive(String bookingRef) {
+		if(this.isActive(bookingRef)){
+			return !this.bookingsMap.get(bookingRef).checkedOutAllRooms();
+		} else {
+			return false;
+		}
 	}
 
 	/**
@@ -282,6 +293,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return editBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (EList<String>)arguments.get(4), (EList<String>)arguments.get(5), (EList<String>)arguments.get(6));
 			case BookingmodelPackage.BOOKING_HANDLER___GET_BOOKING__INT:
 				return getBooking((Integer)arguments.get(0));
+			case BookingmodelPackage.BOOKING_HANDLER___IS_ACTIVE__STRING:
+				return isActive((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

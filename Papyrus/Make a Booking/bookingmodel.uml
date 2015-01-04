@@ -218,11 +218,6 @@ value: booking</body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_BdnOwJQSEeSxUuvOeThlRQ" name="isOld" visibility="package">
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_EFR0kJQSEeSxUuvOeThlRQ" name="result">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
-        </ownedParameter>
-      </ownedOperation>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_2OC9AJQnEeSkhq3pp1wxlw" name="checkedOutRoom" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_2OC9AZQnEeSkhq3pp1wxlw" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
@@ -495,6 +490,14 @@ been checked-in is checked-out in a specific booking </body>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FfpNNEeSexbuF790S1w" type="_F13d_ZNNEeSexbuF790S1w" direction="return"/>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14Ff5NNEeSexbuF790S1w" name="roomID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_cgiRcJQxEeSkhq3pp1wxlw" name="isActive" visibility="package">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_cgiRcZQxEeSkhq3pp1wxlw" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_cgiRcpQxEeSkhq3pp1wxlw" name="bookingRef">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
       <nestedClassifier xmi:type="uml:Class" xmi:id="_F14FgJNNEeSexbuF790S1w" name="Wildcard"/>
@@ -1100,4 +1103,6 @@ been checked-in is checked-out in a specific booking </body>
   <Ecore:EOperation xmi:id="_uNlREJQoEeSkhq3pp1wxlw" base_Operation="_uNdVQJQoEeSkhq3pp1wxlw"/>
   <Ecore:EOperation xmi:id="_snexwJQvEeSkhq3pp1wxlw" base_Operation="_slLrsJQvEeSkhq3pp1wxlw"/>
   <Ecore:EParameter xmi:id="_sngm8JQvEeSkhq3pp1wxlw" base_Parameter="_slLrspQvEeSkhq3pp1wxlw"/>
+  <Ecore:EOperation xmi:id="_cgnJ8JQxEeSkhq3pp1wxlw" base_Operation="_cgiRcJQxEeSkhq3pp1wxlw"/>
+  <Ecore:EParameter xmi:id="_cgnxAJQxEeSkhq3pp1wxlw" base_Parameter="_cgiRcpQxEeSkhq3pp1wxlw"/>
 </xmi:XMI>

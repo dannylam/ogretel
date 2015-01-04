@@ -579,6 +579,50 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	} 
 	
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setExtras(EList<String> extras) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setRoomTypes(EList<String> roomTypes) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setRoomIDs(EList<Integer> roomIDs) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setServices(EList<String> services) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
@@ -641,17 +685,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void isOld(boolean result) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
@@ -710,10 +743,21 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setExtrasAsPayed(EList<String> extras) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
-	public int setExtrasAsPayed(EList<String> extras) {
+	public int setExtrasAsPayed(List<String> extras) {
 		if(!extras.isEmpty() || !extras.equals(null)){										
 			for(String extra: extras){										
 				this.extraToIsPayedMap.put(extra,true);	
@@ -1014,9 +1058,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return removeResponsibleGuestToAllRooms((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING___REMOVE_RESPONSIBLE_GUEST__INT_STRING:
 				return removeResponsibleGuest((Integer)arguments.get(0), (String)arguments.get(1));
-			case BookingmodelPackage.BOOKING___IS_OLD__BOOLEAN:
-				isOld((Boolean)arguments.get(0));
-				return null;
 			case BookingmodelPackage.BOOKING___CHECKED_OUT_ROOM__INT:
 				return checkedOutRoom((Integer)arguments.get(0));
 			case BookingmodelPackage.BOOKING___CHECKED_OUT_ALL_ROOMS:

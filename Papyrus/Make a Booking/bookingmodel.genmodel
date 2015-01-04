@@ -106,9 +106,6 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//Booking/removeResponsibleGuest/roomID"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//Booking/removeResponsibleGuest/guestEmail"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/isOld">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//Booking/isOld/result"/>
-      </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/checkedOutRoom">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//Booking/checkedOutRoom/roomID"/>
       </genOperations>
@@ -183,6 +180,9 @@
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//BookingHandler/getBooking.1">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//BookingHandler/getBooking.1/roomID"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//BookingHandler/isActive">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//BookingHandler/isActive/bookingRef"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="bookingmodel.ecore#//RoomIDToBookingRefEntry">
