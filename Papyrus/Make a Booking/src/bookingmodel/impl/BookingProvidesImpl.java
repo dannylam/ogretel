@@ -305,8 +305,11 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		if (this.getBookingHandler().exists(booking.getBookingRef())) {
 			if(booking.checkedInRoom(roomID)){
 				booking.removeResponsibleGuest(roomID, guestEmail);
-				
+	
 				//check if the room is payed or not, if not, return an int indicating this
+				if(!booking.getRoomIDToISPayed.get(roomID).booleanValue()){ //TODO: add something with roomIDs and payed
+					return 3;
+				}
 				
 				//removes the bookingreference from the room in the map of rooms and which bookingreference they belong to
 				this.bookingHandler.getRoomIDToBookingRefMap().put(roomID, null);
@@ -588,7 +591,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * {{@inheritDoc}}
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public String book(String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras, List<String> services) {

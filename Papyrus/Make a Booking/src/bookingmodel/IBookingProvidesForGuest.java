@@ -36,6 +36,7 @@ public interface IBookingProvidesForGuest extends EObject {
 	 * 			-1 if an the booking reference does not exist
 	 * 			1 if the room has not been checked-in
 	 * 			2 if the room could not be set as vacant
+	 * 			3 if the room has not been payed yet
 	 * @model dataType="types.Integer" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated NOT
 	 */
@@ -72,7 +73,7 @@ public interface IBookingProvidesForGuest extends EObject {
 	 * @model dataType="types.Integer" required="true" ordered="false" ccNumberDataType="types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="types.String" ccvRequired="true" ccvOrdered="false" expMonthDataType="types.Integer" expMonthRequired="true" expMonthOrdered="false" expYearDataType="types.Integer" expYearRequired="true" expYearOrdered="false" firstNameDataType="types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="types.String" lastNameRequired="true" lastNameOrdered="false" extraDataType="types.String" extraMany="true" extraOrdered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
 	 */
-	int payExtra(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, EList<String> extra, int roomID);
+	int payExtra(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, List<String> extra, int roomID);
 
 	/**
 	 * Make a payment for a room by inserting credit card number, 
