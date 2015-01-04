@@ -193,9 +193,7 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 		this.price = price;
 		this.maxNrOfGuests = maxNrOfGuests;
 		this.description = description;
-		this.room = new BasicEList<Room>();
-
-		// TODO Auto-generated constructor stub
+		this.roomsOfType = new BasicEList<Room>();
 	}
 
 

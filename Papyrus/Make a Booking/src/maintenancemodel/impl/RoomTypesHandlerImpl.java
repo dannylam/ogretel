@@ -265,7 +265,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	/**
 	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	public int removeRoomFromRoomType(String roomTypeID) {
 		if (this.calendar.getStringToListsMap().containsKey(roomTypeID)
