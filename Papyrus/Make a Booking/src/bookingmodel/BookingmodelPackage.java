@@ -492,7 +492,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING___IS_EXTRA_PAYED__INT = 18;
+	int BOOKING___IS_EXTRA_PAYED__STRING = 18;
 
 	/**
 	 * The operation id for the '<em>Get Un Payed Extras</em>' operation.
@@ -2013,14 +2013,14 @@ public interface BookingmodelPackage extends EPackage {
 	EOperation getBooking__AllExtrasPayed();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.Booking#isExtraPayed(int) <em>Is Extra Payed</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.Booking#isExtraPayed(java.lang.String) <em>Is Extra Payed</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Is Extra Payed</em>' operation.
-	 * @see bookingmodel.Booking#isExtraPayed(int)
+	 * @see bookingmodel.Booking#isExtraPayed(java.lang.String)
 	 * @generated
 	 */
-	EOperation getBooking__IsExtraPayed__int();
+	EOperation getBooking__IsExtraPayed__String();
 
 	/**
 	 * Returns the meta object for the '{@link bookingmodel.Booking#getUnPayedExtras() <em>Get Un Payed Extras</em>}' operation.
@@ -3045,7 +3045,7 @@ public interface BookingmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation BOOKING___IS_EXTRA_PAYED__INT = eINSTANCE.getBooking__IsExtraPayed__int();
+		EOperation BOOKING___IS_EXTRA_PAYED__STRING = eINSTANCE.getBooking__IsExtraPayed__String();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Un Payed Extras</b></em>' operation.

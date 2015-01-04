@@ -584,7 +584,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getBooking__IsExtraPayed__int() {
+	public EOperation getBooking__IsExtraPayed__String() {
 		return bookingEClass.getEOperations().get(18);
 	}
 
@@ -1235,7 +1235,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		createEOperation(bookingEClass, BOOKING___CHECKED_OUT_ROOM__INT);
 		createEOperation(bookingEClass, BOOKING___CHECKED_OUT_ALL_ROOMS);
 		createEOperation(bookingEClass, BOOKING___ALL_EXTRAS_PAYED);
-		createEOperation(bookingEClass, BOOKING___IS_EXTRA_PAYED__INT);
+		createEOperation(bookingEClass, BOOKING___IS_EXTRA_PAYED__STRING);
 		createEOperation(bookingEClass, BOOKING___GET_UN_PAYED_EXTRAS);
 
 		customerEClass = createEClass(CUSTOMER);
@@ -1428,8 +1428,8 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 
 		initEOperation(getBooking__AllExtrasPayed(), theTypesPackage.getBoolean(), "allExtrasPayed", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getBooking__IsExtraPayed__int(), theTypesPackage.getBoolean(), "isExtraPayed", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBooking__IsExtraPayed__String(), theTypesPackage.getBoolean(), "isExtraPayed", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "extra", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEOperation(getBooking__GetUnPayedExtras(), theTypesPackage.getString(), "getUnPayedExtras", 0, -1, IS_UNIQUE, IS_ORDERED);
 

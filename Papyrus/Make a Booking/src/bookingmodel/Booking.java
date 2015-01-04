@@ -364,42 +364,37 @@ public interface Booking extends EObject {
 	void isOld(boolean result);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns true if the room is checked out and false otherwise.
 	 * @model dataType="types.Boolean" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	boolean checkedOutRoom(int roomID);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns true if all rooms are checked out and false otherwise.
 	 * @model dataType="types.Boolean" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	boolean checkedOutAllRooms();
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns true if all extras are paid and false otherwise.
 	 * @model dataType="types.Boolean" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	boolean allExtrasPayed();
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns true if that extra is paid and false otherwise.
 	 * @model dataType="types.Boolean" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	boolean isExtraPayed(int roomID);
+	boolean isExtraPayed(String extra);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns a list of all unpaid extras.
 	 * @model kind="operation" dataType="types.String"
-	 * @generated
+	 * @generated NOT
 	 */
 	List<String> getUnPayedExtras();
 
