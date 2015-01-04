@@ -160,11 +160,18 @@ public class testBookingProvidesImpl {
 	public void testEditBooking() {
 		this.intiate();
 		testBook();
-		
+
 		// Edit a booking and assert true if it is equal to 0.
-		int edBP = bp.editBooking(bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras, services);
-		assertTrue("Failed to edit a booking", edBP == 0);
+		assertTrue("Failed to edit a booking",  bp.editBooking(bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras, services) == 0);
 		
+		// Assert true if the imparams is equal to what is stored in the booking
+		assertTrue(bp.getStartDate(bookingRef).equals(startDate));
+		assertTrue(bp.getEndDate(bookingRef).equals(endDate));
+		assertTrue(bp.getNrOfGuests(bookingRef) == nrOfGuests);
+		assertTrue(bp.getRoomTypes(bookingRef).equals(roomTypes));
+		assertTrue(bp.getExtras(bookingRef).equals(extras));
+		assertTrue(bp.getServiceNotes(bookingRef).equals(services));
+
 		fail("editBooking failed");
 	}
 
