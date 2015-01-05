@@ -684,24 +684,31 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 			Booking booking = this.bookingHandler.getBooking(bookingRef);
 			String oldStartDate = booking.getStartDate();
 			String oldEndDate = booking.getEndDate();
-			int oldNrOfGuests = booking.getNrOfGuests();
-			List <String> oldRoomTypes = booking.getRoomTypes();
-			List <String> oldExtras = booking.getExtras();
-			List <String> oldServices = booking.getServiceNotes();
-	
+			EList <String> oldRoomTypes = booking.getRoomTypes();
+			int oldPrice = this.getPrice(booking.getBookingRef());
 			
-			
-			
+			//momentairly removes the current booking from maintenance
+			this.maintenanceComponent.removeBooking(oldRoomTypes, oldStartDate, oldEndDate);
+
 			//checks with maintenance if the change is possible
 			if (this.maintenanceComponent.canBook(
-				(EList<String>) roomTypes, startDate, endDate)) {
+				(EList<String>) roomTypes, startDate, endDate, nrOfGuests)) {
+
+				this.maintenanceComponent.makeBooking((EList<String>)roomTypes, startDate, endDate, nrOfGuests);
 				
 				//sets the change in the booking
 				this.bookingHandler.editBooking(bookingRef, startDate, endDate,
 						nrOfGuests, roomTypes, extras, services);
+				
+				//if this booking is already payed and the price 
+				if(booking.isPayed() && this.getPrice(bookingRef) > oldPrice){
+					return this.getPrice(bookingRef) - oldPrice;
+				}
 				return 0;
+			} else {
+				this.maintenanceComponent.makeBooking((EList<String>)oldRoomTypes, oldStartDate, oldEndDate, nrOfGuests);
+				return -2;
 			}
-			return 1;
 		}
 		return -1;
 		

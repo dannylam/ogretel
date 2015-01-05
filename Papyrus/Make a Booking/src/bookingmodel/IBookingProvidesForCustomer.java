@@ -69,8 +69,8 @@ public interface IBookingProvidesForCustomer extends BookingInfo, CustomerInfo {
 	 * A method for editing a specific booking such as number of nights, number of guests,
 	 * start and end date, number of rooms, room types, extras and 
 	 * booking reference. 
-	 * @return  0 if success 
-	 * 			1 if the booking is not possible
+	 * @return  the price the customer needs to pay if successful
+	 * 			-2 if the booking is not possible
 	 * 		 	-1 if the booking reference does not exist
 	 * @param bookingRef
 	 * Bookingreference of an existing booking
