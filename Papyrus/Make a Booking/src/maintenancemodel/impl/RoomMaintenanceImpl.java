@@ -271,7 +271,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 			return 2;
 		}
 
-		switch (status) {
+		switch (status.toLowerCase()) {
 
 		case "vacant":
 			room.setRoomStatusEnum(RoomStatusEnum.VACANT);
@@ -367,7 +367,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 					.toString();
 		}
 		return result;
-		// TODO tests
 	}
 
 	/**
@@ -381,7 +380,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 			return this.roomTypes.getRoomType(roomTypeID).getPrice();
 		}
 		return -1;
-		// TODO: test
 	}
 
 	/**
@@ -475,7 +473,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public EList<String> getRoomTypeIDs() {
 		return this.roomTypes.getRoomTypeIDs();
-		// TODO: test
 	}
 
 	/**

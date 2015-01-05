@@ -71,7 +71,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	 */
 	public EMap<String, Extra> getIntToExtraMap() {
 		if (intToExtraMap == null) {
-			intToExtraMap = new EcoreEMap<String,Extra>(MaintenancemodelPackage.Literals.INTEGER_TO_EXTRA_MAP, IntegerToExtraMapImpl.class, this, MaintenancemodelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP);
+			intToExtraMap = new EcoreEMap<String,Extra>(MaintenancemodelPackage.Literals.INTEGER_TO_EXTRA_ENTRY, IntegerToExtraEntryImpl.class, this, MaintenancemodelPackage.EXTRA_HANDLER__INT_TO_EXTRA_MAP);
 		}
 		return intToExtraMap;
 	}

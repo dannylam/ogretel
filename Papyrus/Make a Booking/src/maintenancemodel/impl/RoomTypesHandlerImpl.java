@@ -251,7 +251,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated NOT
 	 */
-	public int addRoomToRoomType(String roomTypeID) {
+	public int addRoomToRoomTypeEntry(String roomTypeID) {
 		// If 1st Room of RoomType, create new entry in Map in Calendar
 		if (!this.calendar.getStringToListsMap().containsKey(roomTypeID)) {
 			this.calendar.addEntry(roomTypeID);
@@ -267,7 +267,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	 * 
 	 * @generated NOT
 	 */
-	public int removeRoomFromRoomType(String roomTypeID) {
+	public int removeRoomFromRoomTypeEntry(String roomTypeID) {
 		if (this.calendar.getStringToListsMap().containsKey(roomTypeID)
 				&& this.calendar.decCap(0, 365, roomTypeID, 1) == 0) {
 			return 0;
@@ -284,7 +284,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	 */
 	public RoomTypeEnum stringToRoomTypeEnum(String roomTypeEnum) {
 
-		switch (roomTypeEnum) {
+		switch (roomTypeEnum.toLowerCase()) {
 		case "doublebed":
 			return RoomTypeEnum.DOUBLEBED;
 		case "singlebed":
@@ -303,15 +303,12 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	 * @generated NOT
 	 */
 	public int removeRoomType(String roomType) {
-
 		if (this.exists(roomType)
 				&& this.getCalendar().removeEntry(roomType) == 0) {
 			this.getStringToRoomType().remove(roomType);
 			return 0;
 		}
 		return 1;
-
-		// TODO: TEST
 	}
 
 	/**

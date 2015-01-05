@@ -26,6 +26,8 @@ public interface IExtrasMaintenance extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * @return
+	 * true if Extra indicated by extraID exists, false otherwise 
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" extraIDDataType="org.eclipse.uml2.types.String" extraIDRequired="true" extraIDOrdered="false"
 	 * @generated

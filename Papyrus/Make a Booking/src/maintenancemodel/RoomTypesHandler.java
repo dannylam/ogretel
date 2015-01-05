@@ -146,7 +146,7 @@ public interface RoomTypesHandler extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
 	 * @generated NOT
 	 */
-	int addRoomToRoomType(String roomTypeID);
+	int addRoomToRoomTypeEntry(String roomTypeID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -157,6 +157,6 @@ public interface RoomTypesHandler extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
 	 * @generated
 	 */
-	int removeRoomFromRoomType(String roomTypeID);
+	int removeRoomFromRoomTypeEntry(String roomTypeID);
 
 } // RoomTypesHandler

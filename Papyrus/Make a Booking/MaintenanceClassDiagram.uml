@@ -579,7 +579,7 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_i9c_0JHnEeSNJKY2RR7Z1w" value="*"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_HqOOEJQqEeSakoow8HAMlw" name="addRoomToRoomType" visibility="package">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_HqOOEJQqEeSakoow8HAMlw" name="addRoomToRoomTypeEntry" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_Xv-JoJQqEeSakoow8HAMlw" name="roomTypeID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
@@ -587,7 +587,7 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_TM94gJQqEeSakoow8HAMlw" name="removeRoomFromRoomType" visibility="package">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_TM94gJQqEeSakoow8HAMlw" name="removeRoomFromRoomTypeEntry" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_aWJhsJQqEeSakoow8HAMlw" name="roomTypeID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>

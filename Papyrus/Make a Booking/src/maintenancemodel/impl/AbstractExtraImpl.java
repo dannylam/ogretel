@@ -221,13 +221,11 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 
 	/**
 	 * <!-- begin-user-doc -->
-	 *  Abstract method, should be, anyhow, returns if the extra is avlible or not.
+	 *  Abstract method, should be, anyhow, returns if the extra is available or not.
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean isAvailable() {
-		return false;
-	}
+	public abstract boolean isAvailable();
 
 	/**
 	 * <!-- begin-user-doc -->
