@@ -1050,7 +1050,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @see bookingmodel.impl.BookingmodelPackageImpl#getIBookingProvidesForGuest()
 	 * @generated
 	 */
-	int IBOOKING_PROVIDES_FOR_GUEST = 13;
+	int IBOOKING_PROVIDES_FOR_GUEST = 15;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.impl.BookingProvidesImpl <em>Booking Provides</em>}' class.
@@ -1060,7 +1060,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @see bookingmodel.impl.BookingmodelPackageImpl#getBookingProvides()
 	 * @generated
 	 */
-	int BOOKING_PROVIDES = 14;
+	int BOOKING_PROVIDES = 16;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.impl.RoomIDToBookingRefEntryImpl <em>Room ID To Booking Ref Entry</em>}' class.
@@ -1118,85 +1118,112 @@ public interface BookingmodelPackage extends EPackage {
 	int IBOOKING_PROVIDES_FOR_HOST_FEATURE_COUNT = 0;
 
 	/**
-	 * The operation id for the '<em>Get Service Notes</em>' operation.
+	 * The operation id for the '<em>Is Booking Payed</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_HOST___GET_SERVICE_NOTES__STRING = 0;
+	int IBOOKING_PROVIDES_FOR_HOST___IS_BOOKING_PAYED__STRING = 0;
 
 	/**
-	 * The operation id for the '<em>Is Payed</em>' operation.
+	 * The operation id for the '<em>Is Extra Payed</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_HOST___IS_PAYED__STRING = 1;
+	int IBOOKING_PROVIDES_FOR_HOST___IS_EXTRA_PAYED__INT = 1;
 
 	/**
-	 * The operation id for the '<em>Get Start Date</em>' operation.
+	 * The operation id for the '<em>Is Room Payed</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_HOST___GET_START_DATE__STRING = 2;
+	int IBOOKING_PROVIDES_FOR_HOST___IS_ROOM_PAYED__INT = 2;
 
 	/**
-	 * The operation id for the '<em>Get End Date</em>' operation.
+	 * The operation id for the '<em>Exist Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_HOST___GET_END_DATE__STRING = 3;
+	int IBOOKING_PROVIDES_FOR_HOST___EXIST_BOOKING__STRING = 3;
 
 	/**
-	 * The operation id for the '<em>Get Nr Of Guests</em>' operation.
+	 * The operation id for the '<em>Get Existing Bookings</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_HOST___GET_NR_OF_GUESTS__STRING = 4;
+	int IBOOKING_PROVIDES_FOR_HOST___GET_EXISTING_BOOKINGS = 4;
 
 	/**
-	 * The operation id for the '<em>Get Extras</em>' operation.
+	 * The operation id for the '<em>Get Active Bookings</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_HOST___GET_EXTRAS__STRING = 5;
+	int IBOOKING_PROVIDES_FOR_HOST___GET_ACTIVE_BOOKINGS = 5;
 
 	/**
-	 * The operation id for the '<em>Get Rooms</em>' operation.
+	 * The operation id for the '<em>Is Checked Out</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_HOST___GET_ROOMS__STRING = 6;
+	int IBOOKING_PROVIDES_FOR_HOST___IS_CHECKED_OUT__INT = 6;
 
 	/**
-	 * The operation id for the '<em>Get Payment Method</em>' operation.
+	 * The operation id for the '<em>Is Checked In</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_HOST___GET_PAYMENT_METHOD__STRING = 7;
+	int IBOOKING_PROVIDES_FOR_HOST___IS_CHECKED_IN__INT = 7;
 
 	/**
-	 * The operation id for the '<em>Get Room Types</em>' operation.
+	 * The operation id for the '<em>Get Responsible Guest</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_HOST___GET_ROOM_TYPES__STRING = 8;
+	int IBOOKING_PROVIDES_FOR_HOST___GET_RESPONSIBLE_GUEST__INT = 8;
+
+	/**
+	 * The operation id for the '<em>Get Room ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_HOST___GET_ROOM_ID__STRING = 9;
+
+	/**
+	 * The operation id for the '<em>Add Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_HOST___ADD_SERVICE__INT_STRING = 10;
+
+	/**
+	 * The operation id for the '<em>Remove Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_HOST___REMOVE_SERVICE__INT_STRING = 11;
 
 	/**
 	 * The number of operations of the '<em>IBooking Provides For Host</em>' class.
@@ -1205,7 +1232,116 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_HOST_OPERATION_COUNT = 9;
+	int IBOOKING_PROVIDES_FOR_HOST_OPERATION_COUNT = 12;
+
+	/**
+	 * The meta object id for the '{@link bookingmodel.BookingInfo <em>Booking Info</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see bookingmodel.BookingInfo
+	 * @see bookingmodel.impl.BookingmodelPackageImpl#getBookingInfo()
+	 * @generated
+	 */
+	int BOOKING_INFO = 13;
+
+	/**
+	 * The number of structural features of the '<em>Booking Info</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_INFO_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Get Start Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_INFO___GET_START_DATE__STRING = 0;
+
+	/**
+	 * The operation id for the '<em>Get End Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_INFO___GET_END_DATE__STRING = 1;
+
+	/**
+	 * The operation id for the '<em>Get Nr Of Guests</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_INFO___GET_NR_OF_GUESTS__STRING = 2;
+
+	/**
+	 * The operation id for the '<em>Get Extras</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_INFO___GET_EXTRAS__STRING = 3;
+
+	/**
+	 * The operation id for the '<em>Get Rooms</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_INFO___GET_ROOMS__STRING = 4;
+
+	/**
+	 * The operation id for the '<em>Get Payment Method</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_INFO___GET_PAYMENT_METHOD__STRING = 5;
+
+	/**
+	 * The operation id for the '<em>Get Room Types</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_INFO___GET_ROOM_TYPES__STRING = 6;
+
+	/**
+	 * The operation id for the '<em>Get Service Notes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_INFO___GET_SERVICE_NOTES__STRING = 7;
+
+	/**
+	 * The operation id for the '<em>Get Booking Ref</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_INFO___GET_BOOKING_REF__STRING = 8;
+
+	/**
+	 * The number of operations of the '<em>Booking Info</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_INFO_OPERATION_COUNT = 9;
 
 	/**
 	 * The number of structural features of the '<em>IBooking Provides For Customer</em>' class.
@@ -1214,7 +1350,178 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_CUSTOMER_FEATURE_COUNT = 0;
+	int IBOOKING_PROVIDES_FOR_CUSTOMER_FEATURE_COUNT = BOOKING_INFO_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Start Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_START_DATE__STRING = BOOKING_INFO___GET_START_DATE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get End Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_END_DATE__STRING = BOOKING_INFO___GET_END_DATE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Nr Of Guests</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_NR_OF_GUESTS__STRING = BOOKING_INFO___GET_NR_OF_GUESTS__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Extras</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_EXTRAS__STRING = BOOKING_INFO___GET_EXTRAS__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Rooms</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_ROOMS__STRING = BOOKING_INFO___GET_ROOMS__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Payment Method</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_PAYMENT_METHOD__STRING = BOOKING_INFO___GET_PAYMENT_METHOD__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Room Types</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_ROOM_TYPES__STRING = BOOKING_INFO___GET_ROOM_TYPES__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Service Notes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_SERVICE_NOTES__STRING = BOOKING_INFO___GET_SERVICE_NOTES__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Booking Ref</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_BOOKING_REF__STRING = BOOKING_INFO___GET_BOOKING_REF__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Customer Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_CUSTOMER_NAME__STRING = BOOKING_INFO_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Customer Last Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_CUSTOMER_LAST_NAME__STRING = BOOKING_INFO_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Customer Age</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_CUSTOMER_AGE__STRING = BOOKING_INFO_OPERATION_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Customer Email</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_CUSTOMER_EMAIL__STRING = BOOKING_INFO_OPERATION_COUNT + 3;
+
+	/**
+	 * The operation id for the '<em>Get Cc Nr</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_CC_NR__STRING = BOOKING_INFO_OPERATION_COUNT + 4;
+
+	/**
+	 * The operation id for the '<em>Get Cc V</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_CC_V__STRING = BOOKING_INFO_OPERATION_COUNT + 5;
+
+	/**
+	 * The operation id for the '<em>Get Exp Month</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_EXP_MONTH__STRING = BOOKING_INFO_OPERATION_COUNT + 6;
+
+	/**
+	 * The operation id for the '<em>Get Exp Year</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_EXP_YEAR__STRING = BOOKING_INFO_OPERATION_COUNT + 7;
+
+	/**
+	 * The operation id for the '<em>Get Card First Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_CARD_FIRST_NAME__STRING = BOOKING_INFO_OPERATION_COUNT + 8;
+
+	/**
+	 * The operation id for the '<em>Ge Cardt Last Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GE_CARDT_LAST_NAME__STRING = BOOKING_INFO_OPERATION_COUNT + 9;
 
 	/**
 	 * The operation id for the '<em>Pay Booking</em>' operation.
@@ -1223,7 +1530,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_CUSTOMER___PAY_BOOKING__STRING = 0;
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___PAY_BOOKING__STRING = BOOKING_INFO_OPERATION_COUNT + 10;
 
 	/**
 	 * The operation id for the '<em>Get Price</em>' operation.
@@ -1232,7 +1539,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_PRICE__STRING = 1;
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___GET_PRICE__STRING = BOOKING_INFO_OPERATION_COUNT + 11;
 
 	/**
 	 * The operation id for the '<em>Remove Booking</em>' operation.
@@ -1241,7 +1548,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_CUSTOMER___REMOVE_BOOKING__STRING = 2;
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___REMOVE_BOOKING__STRING = BOOKING_INFO_OPERATION_COUNT + 12;
 
 	/**
 	 * The operation id for the '<em>Edit Booking</em>' operation.
@@ -1250,7 +1557,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_CUSTOMER___EDIT_BOOKING__STRING_STRING_STRING_INT_ELIST_ELIST_ELIST = 3;
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___EDIT_BOOKING__STRING_STRING_STRING_INT_ELIST_ELIST_ELIST = BOOKING_INFO_OPERATION_COUNT + 13;
 
 	/**
 	 * The operation id for the '<em>Set Payment Method</em>' operation.
@@ -1259,7 +1566,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_CUSTOMER___SET_PAYMENT_METHOD__STRING_STRING = 4;
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___SET_PAYMENT_METHOD__STRING_STRING = BOOKING_INFO_OPERATION_COUNT + 14;
 
 	/**
 	 * The operation id for the '<em>Set Payment Details</em>' operation.
@@ -1268,7 +1575,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_CUSTOMER___SET_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_STRING_STRING = 5;
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___SET_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_STRING_STRING = BOOKING_INFO_OPERATION_COUNT + 15;
 
 	/**
 	 * The operation id for the '<em>Set Personal Details</em>' operation.
@@ -1277,7 +1584,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_CUSTOMER___SET_PERSONAL_DETAILS__STRING_STRING_INT_STRING_STRING = 6;
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___SET_PERSONAL_DETAILS__STRING_STRING_INT_STRING_STRING = BOOKING_INFO_OPERATION_COUNT + 16;
 
 	/**
 	 * The operation id for the '<em>Book</em>' operation.
@@ -1286,7 +1593,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_CUSTOMER___BOOK__STRING_STRING_INT_ELIST_ELIST_ELIST = 7;
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___BOOK__STRING_STRING_INT_ELIST_ELIST_ELIST = BOOKING_INFO_OPERATION_COUNT + 17;
 
 	/**
 	 * The number of operations of the '<em>IBooking Provides For Customer</em>' class.
@@ -1295,7 +1602,125 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT = 8;
+	int IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT = BOOKING_INFO_OPERATION_COUNT + 18;
+
+	/**
+	 * The meta object id for the '{@link bookingmodel.CustomerInfo <em>Customer Info</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see bookingmodel.CustomerInfo
+	 * @see bookingmodel.impl.BookingmodelPackageImpl#getCustomerInfo()
+	 * @generated
+	 */
+	int CUSTOMER_INFO = 14;
+
+	/**
+	 * The number of structural features of the '<em>Customer Info</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO_FEATURE_COUNT = 0;
+
+	/**
+	 * The operation id for the '<em>Get Customer Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO___GET_CUSTOMER_NAME__STRING = 0;
+
+	/**
+	 * The operation id for the '<em>Get Customer Last Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO___GET_CUSTOMER_LAST_NAME__STRING = 1;
+
+	/**
+	 * The operation id for the '<em>Get Customer Age</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO___GET_CUSTOMER_AGE__STRING = 2;
+
+	/**
+	 * The operation id for the '<em>Get Customer Email</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO___GET_CUSTOMER_EMAIL__STRING = 3;
+
+	/**
+	 * The operation id for the '<em>Get Cc Nr</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO___GET_CC_NR__STRING = 4;
+
+	/**
+	 * The operation id for the '<em>Get Cc V</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO___GET_CC_V__STRING = 5;
+
+	/**
+	 * The operation id for the '<em>Get Exp Month</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO___GET_EXP_MONTH__STRING = 6;
+
+	/**
+	 * The operation id for the '<em>Get Exp Year</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO___GET_EXP_YEAR__STRING = 7;
+
+	/**
+	 * The operation id for the '<em>Get Card First Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO___GET_CARD_FIRST_NAME__STRING = 8;
+
+	/**
+	 * The operation id for the '<em>Ge Cardt Last Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO___GE_CARDT_LAST_NAME__STRING = 9;
+
+	/**
+	 * The number of operations of the '<em>Customer Info</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_INFO_OPERATION_COUNT = 10;
 
 	/**
 	 * The number of structural features of the '<em>IBooking Provides For Guest</em>' class.
@@ -1368,6 +1793,177 @@ public interface BookingmodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOOKING_PROVIDES_FEATURE_COUNT = IBOOKING_PROVIDES_FOR_CUSTOMER_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Start Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_START_DATE__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GET_START_DATE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get End Date</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_END_DATE__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GET_END_DATE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Nr Of Guests</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_NR_OF_GUESTS__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GET_NR_OF_GUESTS__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Extras</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_EXTRAS__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GET_EXTRAS__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Rooms</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_ROOMS__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GET_ROOMS__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Payment Method</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_PAYMENT_METHOD__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GET_PAYMENT_METHOD__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Room Types</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_ROOM_TYPES__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GET_ROOM_TYPES__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Service Notes</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_SERVICE_NOTES__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GET_SERVICE_NOTES__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Booking Ref</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_BOOKING_REF__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GET_BOOKING_REF__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Customer Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_CUSTOMER_NAME__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GET_CUSTOMER_NAME__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Customer Last Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_CUSTOMER_LAST_NAME__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GET_CUSTOMER_LAST_NAME__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Customer Age</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_CUSTOMER_AGE__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GET_CUSTOMER_AGE__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Customer Email</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_CUSTOMER_EMAIL__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GET_CUSTOMER_EMAIL__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Cc Nr</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_CC_NR__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GET_CC_NR__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Cc V</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_CC_V__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GET_CC_V__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Exp Month</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_EXP_MONTH__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GET_EXP_MONTH__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Exp Year</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_EXP_YEAR__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GET_EXP_YEAR__STRING;
+
+	/**
+	 * The operation id for the '<em>Get Card First Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_CARD_FIRST_NAME__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GET_CARD_FIRST_NAME__STRING;
+
+	/**
+	 * The operation id for the '<em>Ge Cardt Last Name</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GE_CARDT_LAST_NAME__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___GE_CARDT_LAST_NAME__STRING;
 
 	/**
 	 * The operation id for the '<em>Pay Booking</em>' operation.
@@ -1478,85 +2074,112 @@ public interface BookingmodelPackage extends EPackage {
 	int BOOKING_PROVIDES___PAY_ROOM__STRING_STRING_INT_INT_STRING_STRING_INT = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 3;
 
 	/**
-	 * The operation id for the '<em>Get Service Notes</em>' operation.
+	 * The operation id for the '<em>Is Booking Payed</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___GET_SERVICE_NOTES__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 4;
+	int BOOKING_PROVIDES___IS_BOOKING_PAYED__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 4;
 
 	/**
-	 * The operation id for the '<em>Is Payed</em>' operation.
+	 * The operation id for the '<em>Is Extra Payed</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___IS_PAYED__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 5;
+	int BOOKING_PROVIDES___IS_EXTRA_PAYED__INT = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 5;
 
 	/**
-	 * The operation id for the '<em>Get Start Date</em>' operation.
+	 * The operation id for the '<em>Is Room Payed</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___GET_START_DATE__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 6;
+	int BOOKING_PROVIDES___IS_ROOM_PAYED__INT = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 6;
 
 	/**
-	 * The operation id for the '<em>Get End Date</em>' operation.
+	 * The operation id for the '<em>Exist Booking</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___GET_END_DATE__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 7;
+	int BOOKING_PROVIDES___EXIST_BOOKING__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 7;
 
 	/**
-	 * The operation id for the '<em>Get Nr Of Guests</em>' operation.
+	 * The operation id for the '<em>Get Existing Bookings</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___GET_NR_OF_GUESTS__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 8;
+	int BOOKING_PROVIDES___GET_EXISTING_BOOKINGS = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 8;
 
 	/**
-	 * The operation id for the '<em>Get Extras</em>' operation.
+	 * The operation id for the '<em>Get Active Bookings</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___GET_EXTRAS__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 9;
+	int BOOKING_PROVIDES___GET_ACTIVE_BOOKINGS = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 9;
 
 	/**
-	 * The operation id for the '<em>Get Rooms</em>' operation.
+	 * The operation id for the '<em>Is Checked Out</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___GET_ROOMS__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 10;
+	int BOOKING_PROVIDES___IS_CHECKED_OUT__INT = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 10;
 
 	/**
-	 * The operation id for the '<em>Get Payment Method</em>' operation.
+	 * The operation id for the '<em>Is Checked In</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___GET_PAYMENT_METHOD__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 11;
+	int BOOKING_PROVIDES___IS_CHECKED_IN__INT = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 11;
 
 	/**
-	 * The operation id for the '<em>Get Room Types</em>' operation.
+	 * The operation id for the '<em>Get Responsible Guest</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___GET_ROOM_TYPES__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 12;
+	int BOOKING_PROVIDES___GET_RESPONSIBLE_GUEST__INT = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 12;
+
+	/**
+	 * The operation id for the '<em>Get Room ID</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___GET_ROOM_ID__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 13;
+
+	/**
+	 * The operation id for the '<em>Add Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___ADD_SERVICE__INT_STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 14;
+
+	/**
+	 * The operation id for the '<em>Remove Service</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___REMOVE_SERVICE__INT_STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 15;
 
 	/**
 	 * The operation id for the '<em>String To List</em>' operation.
@@ -1565,7 +2188,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___STRING_TO_LIST__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 13;
+	int BOOKING_PROVIDES___STRING_TO_LIST__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 16;
 
 	/**
 	 * The number of operations of the '<em>Booking Provides</em>' class.
@@ -1574,7 +2197,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES_OPERATION_COUNT = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 14;
+	int BOOKING_PROVIDES_OPERATION_COUNT = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 17;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.GuestTypes <em>Guest Types</em>}' enum.
@@ -1584,7 +2207,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @see bookingmodel.impl.BookingmodelPackageImpl#getGuestTypes()
 	 * @generated
 	 */
-	int GUEST_TYPES = 15;
+	int GUEST_TYPES = 17;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.PaymentMethod <em>Payment Method</em>}' enum.
@@ -1594,7 +2217,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @see bookingmodel.impl.BookingmodelPackageImpl#getPaymentMethod()
 	 * @generated
 	 */
-	int PAYMENT_METHOD = 16;
+	int PAYMENT_METHOD = 18;
 
 
 	/**
@@ -2393,94 +3016,124 @@ public interface BookingmodelPackage extends EPackage {
 	EClass getIBookingProvidesForHost();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#getServiceNotes(java.lang.String) <em>Get Service Notes</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#isBookingPayed(java.lang.String) <em>Is Booking Payed</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Service Notes</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForHost#getServiceNotes(java.lang.String)
+	 * @return the meta object for the '<em>Is Booking Payed</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForHost#isBookingPayed(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookingProvidesForHost__GetServiceNotes__String();
+	EOperation getIBookingProvidesForHost__IsBookingPayed__String();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#isPayed(java.lang.String) <em>Is Payed</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#isExtraPayed(int) <em>Is Extra Payed</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Is Payed</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForHost#isPayed(java.lang.String)
+	 * @return the meta object for the '<em>Is Extra Payed</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForHost#isExtraPayed(int)
 	 * @generated
 	 */
-	EOperation getIBookingProvidesForHost__IsPayed__String();
+	EOperation getIBookingProvidesForHost__IsExtraPayed__int();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#getStartDate(java.lang.String) <em>Get Start Date</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#isRoomPayed(int) <em>Is Room Payed</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Start Date</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForHost#getStartDate(java.lang.String)
+	 * @return the meta object for the '<em>Is Room Payed</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForHost#isRoomPayed(int)
 	 * @generated
 	 */
-	EOperation getIBookingProvidesForHost__GetStartDate__String();
+	EOperation getIBookingProvidesForHost__IsRoomPayed__int();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#getEndDate(java.lang.String) <em>Get End Date</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#existBooking(java.lang.String) <em>Exist Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get End Date</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForHost#getEndDate(java.lang.String)
+	 * @return the meta object for the '<em>Exist Booking</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForHost#existBooking(java.lang.String)
 	 * @generated
 	 */
-	EOperation getIBookingProvidesForHost__GetEndDate__String();
+	EOperation getIBookingProvidesForHost__ExistBooking__String();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#getNrOfGuests(java.lang.String) <em>Get Nr Of Guests</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#getExistingBookings() <em>Get Existing Bookings</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Nr Of Guests</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForHost#getNrOfGuests(java.lang.String)
+	 * @return the meta object for the '<em>Get Existing Bookings</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForHost#getExistingBookings()
 	 * @generated
 	 */
-	EOperation getIBookingProvidesForHost__GetNrOfGuests__String();
+	EOperation getIBookingProvidesForHost__GetExistingBookings();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#getExtras(java.lang.String) <em>Get Extras</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#getActiveBookings() <em>Get Active Bookings</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Extras</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForHost#getExtras(java.lang.String)
+	 * @return the meta object for the '<em>Get Active Bookings</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForHost#getActiveBookings()
 	 * @generated
 	 */
-	EOperation getIBookingProvidesForHost__GetExtras__String();
+	EOperation getIBookingProvidesForHost__GetActiveBookings();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#getRooms(java.lang.String) <em>Get Rooms</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#isCheckedOut(int) <em>Is Checked Out</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Rooms</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForHost#getRooms(java.lang.String)
+	 * @return the meta object for the '<em>Is Checked Out</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForHost#isCheckedOut(int)
 	 * @generated
 	 */
-	EOperation getIBookingProvidesForHost__GetRooms__String();
+	EOperation getIBookingProvidesForHost__IsCheckedOut__int();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#getPaymentMethod(java.lang.String) <em>Get Payment Method</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#isCheckedIn(int) <em>Is Checked In</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Payment Method</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForHost#getPaymentMethod(java.lang.String)
+	 * @return the meta object for the '<em>Is Checked In</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForHost#isCheckedIn(int)
 	 * @generated
 	 */
-	EOperation getIBookingProvidesForHost__GetPaymentMethod__String();
+	EOperation getIBookingProvidesForHost__IsCheckedIn__int();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#getRoomTypes(java.lang.String) <em>Get Room Types</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#getResponsibleGuest(int) <em>Get Responsible Guest</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Room Types</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForHost#getRoomTypes(java.lang.String)
+	 * @return the meta object for the '<em>Get Responsible Guest</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForHost#getResponsibleGuest(int)
 	 * @generated
 	 */
-	EOperation getIBookingProvidesForHost__GetRoomTypes__String();
+	EOperation getIBookingProvidesForHost__GetResponsibleGuest__int();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#getRoomID(java.lang.String) <em>Get Room ID</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Room ID</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForHost#getRoomID(java.lang.String)
+	 * @generated
+	 */
+	EOperation getIBookingProvidesForHost__GetRoomID__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#addService(int, java.lang.String) <em>Add Service</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Service</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForHost#addService(int, java.lang.String)
+	 * @generated
+	 */
+	EOperation getIBookingProvidesForHost__AddService__int_String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#removeService(int, java.lang.String) <em>Remove Service</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove Service</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForHost#removeService(int, java.lang.String)
+	 * @generated
+	 */
+	EOperation getIBookingProvidesForHost__RemoveService__int_String();
 
 	/**
 	 * Returns the meta object for class '{@link bookingmodel.IBookingProvidesForCustomer <em>IBooking Provides For Customer</em>}'.
@@ -2571,6 +3224,216 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EOperation getIBookingProvidesForCustomer__Book__String_String_int_EList_EList_EList();
+
+	/**
+	 * Returns the meta object for class '{@link bookingmodel.BookingInfo <em>Booking Info</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Booking Info</em>'.
+	 * @see bookingmodel.BookingInfo
+	 * @generated
+	 */
+	EClass getBookingInfo();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.BookingInfo#getStartDate(java.lang.String) <em>Get Start Date</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Start Date</em>' operation.
+	 * @see bookingmodel.BookingInfo#getStartDate(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingInfo__GetStartDate__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.BookingInfo#getEndDate(java.lang.String) <em>Get End Date</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get End Date</em>' operation.
+	 * @see bookingmodel.BookingInfo#getEndDate(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingInfo__GetEndDate__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.BookingInfo#getNrOfGuests(java.lang.String) <em>Get Nr Of Guests</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Nr Of Guests</em>' operation.
+	 * @see bookingmodel.BookingInfo#getNrOfGuests(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingInfo__GetNrOfGuests__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.BookingInfo#getExtras(java.lang.String) <em>Get Extras</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Extras</em>' operation.
+	 * @see bookingmodel.BookingInfo#getExtras(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingInfo__GetExtras__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.BookingInfo#getRooms(java.lang.String) <em>Get Rooms</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Rooms</em>' operation.
+	 * @see bookingmodel.BookingInfo#getRooms(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingInfo__GetRooms__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.BookingInfo#getPaymentMethod(java.lang.String) <em>Get Payment Method</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Payment Method</em>' operation.
+	 * @see bookingmodel.BookingInfo#getPaymentMethod(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingInfo__GetPaymentMethod__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.BookingInfo#getRoomTypes(java.lang.String) <em>Get Room Types</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Room Types</em>' operation.
+	 * @see bookingmodel.BookingInfo#getRoomTypes(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingInfo__GetRoomTypes__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.BookingInfo#getServiceNotes(java.lang.String) <em>Get Service Notes</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Service Notes</em>' operation.
+	 * @see bookingmodel.BookingInfo#getServiceNotes(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingInfo__GetServiceNotes__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.BookingInfo#getBookingRef(java.lang.String) <em>Get Booking Ref</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Booking Ref</em>' operation.
+	 * @see bookingmodel.BookingInfo#getBookingRef(java.lang.String)
+	 * @generated
+	 */
+	EOperation getBookingInfo__GetBookingRef__String();
+
+	/**
+	 * Returns the meta object for class '{@link bookingmodel.CustomerInfo <em>Customer Info</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Customer Info</em>'.
+	 * @see bookingmodel.CustomerInfo
+	 * @generated
+	 */
+	EClass getCustomerInfo();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.CustomerInfo#getCustomerName(java.lang.String) <em>Get Customer Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Customer Name</em>' operation.
+	 * @see bookingmodel.CustomerInfo#getCustomerName(java.lang.String)
+	 * @generated
+	 */
+	EOperation getCustomerInfo__GetCustomerName__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.CustomerInfo#getCustomerLastName(java.lang.String) <em>Get Customer Last Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Customer Last Name</em>' operation.
+	 * @see bookingmodel.CustomerInfo#getCustomerLastName(java.lang.String)
+	 * @generated
+	 */
+	EOperation getCustomerInfo__GetCustomerLastName__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.CustomerInfo#getCustomerAge(java.lang.String) <em>Get Customer Age</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Customer Age</em>' operation.
+	 * @see bookingmodel.CustomerInfo#getCustomerAge(java.lang.String)
+	 * @generated
+	 */
+	EOperation getCustomerInfo__GetCustomerAge__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.CustomerInfo#getCustomerEmail(java.lang.String) <em>Get Customer Email</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Customer Email</em>' operation.
+	 * @see bookingmodel.CustomerInfo#getCustomerEmail(java.lang.String)
+	 * @generated
+	 */
+	EOperation getCustomerInfo__GetCustomerEmail__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.CustomerInfo#getCcNr(java.lang.String) <em>Get Cc Nr</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Cc Nr</em>' operation.
+	 * @see bookingmodel.CustomerInfo#getCcNr(java.lang.String)
+	 * @generated
+	 */
+	EOperation getCustomerInfo__GetCcNr__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.CustomerInfo#getCcV(java.lang.String) <em>Get Cc V</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Cc V</em>' operation.
+	 * @see bookingmodel.CustomerInfo#getCcV(java.lang.String)
+	 * @generated
+	 */
+	EOperation getCustomerInfo__GetCcV__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.CustomerInfo#getExpMonth(java.lang.String) <em>Get Exp Month</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Exp Month</em>' operation.
+	 * @see bookingmodel.CustomerInfo#getExpMonth(java.lang.String)
+	 * @generated
+	 */
+	EOperation getCustomerInfo__GetExpMonth__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.CustomerInfo#getExpYear(java.lang.String) <em>Get Exp Year</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Exp Year</em>' operation.
+	 * @see bookingmodel.CustomerInfo#getExpYear(java.lang.String)
+	 * @generated
+	 */
+	EOperation getCustomerInfo__GetExpYear__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.CustomerInfo#getCardFirstName(java.lang.String) <em>Get Card First Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Card First Name</em>' operation.
+	 * @see bookingmodel.CustomerInfo#getCardFirstName(java.lang.String)
+	 * @generated
+	 */
+	EOperation getCustomerInfo__GetCardFirstName__String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.CustomerInfo#geCardtLastName(java.lang.String) <em>Ge Cardt Last Name</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Ge Cardt Last Name</em>' operation.
+	 * @see bookingmodel.CustomerInfo#geCardtLastName(java.lang.String)
+	 * @generated
+	 */
+	EOperation getCustomerInfo__GeCardtLastName__String();
 
 	/**
 	 * Returns the meta object for class '{@link bookingmodel.IBookingProvidesForGuest <em>IBooking Provides For Guest</em>}'.
@@ -3353,76 +4216,100 @@ public interface BookingmodelPackage extends EPackage {
 		EClass IBOOKING_PROVIDES_FOR_HOST = eINSTANCE.getIBookingProvidesForHost();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Service Notes</b></em>' operation.
+		 * The meta object literal for the '<em><b>Is Booking Payed</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_SERVICE_NOTES__STRING = eINSTANCE.getIBookingProvidesForHost__GetServiceNotes__String();
+		EOperation IBOOKING_PROVIDES_FOR_HOST___IS_BOOKING_PAYED__STRING = eINSTANCE.getIBookingProvidesForHost__IsBookingPayed__String();
 
 		/**
-		 * The meta object literal for the '<em><b>Is Payed</b></em>' operation.
+		 * The meta object literal for the '<em><b>Is Extra Payed</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_PROVIDES_FOR_HOST___IS_PAYED__STRING = eINSTANCE.getIBookingProvidesForHost__IsPayed__String();
+		EOperation IBOOKING_PROVIDES_FOR_HOST___IS_EXTRA_PAYED__INT = eINSTANCE.getIBookingProvidesForHost__IsExtraPayed__int();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Start Date</b></em>' operation.
+		 * The meta object literal for the '<em><b>Is Room Payed</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_START_DATE__STRING = eINSTANCE.getIBookingProvidesForHost__GetStartDate__String();
+		EOperation IBOOKING_PROVIDES_FOR_HOST___IS_ROOM_PAYED__INT = eINSTANCE.getIBookingProvidesForHost__IsRoomPayed__int();
 
 		/**
-		 * The meta object literal for the '<em><b>Get End Date</b></em>' operation.
+		 * The meta object literal for the '<em><b>Exist Booking</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_END_DATE__STRING = eINSTANCE.getIBookingProvidesForHost__GetEndDate__String();
+		EOperation IBOOKING_PROVIDES_FOR_HOST___EXIST_BOOKING__STRING = eINSTANCE.getIBookingProvidesForHost__ExistBooking__String();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Nr Of Guests</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Existing Bookings</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_NR_OF_GUESTS__STRING = eINSTANCE.getIBookingProvidesForHost__GetNrOfGuests__String();
+		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_EXISTING_BOOKINGS = eINSTANCE.getIBookingProvidesForHost__GetExistingBookings();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Extras</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Active Bookings</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_EXTRAS__STRING = eINSTANCE.getIBookingProvidesForHost__GetExtras__String();
+		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_ACTIVE_BOOKINGS = eINSTANCE.getIBookingProvidesForHost__GetActiveBookings();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Rooms</b></em>' operation.
+		 * The meta object literal for the '<em><b>Is Checked Out</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_ROOMS__STRING = eINSTANCE.getIBookingProvidesForHost__GetRooms__String();
+		EOperation IBOOKING_PROVIDES_FOR_HOST___IS_CHECKED_OUT__INT = eINSTANCE.getIBookingProvidesForHost__IsCheckedOut__int();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Payment Method</b></em>' operation.
+		 * The meta object literal for the '<em><b>Is Checked In</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_PAYMENT_METHOD__STRING = eINSTANCE.getIBookingProvidesForHost__GetPaymentMethod__String();
+		EOperation IBOOKING_PROVIDES_FOR_HOST___IS_CHECKED_IN__INT = eINSTANCE.getIBookingProvidesForHost__IsCheckedIn__int();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Room Types</b></em>' operation.
+		 * The meta object literal for the '<em><b>Get Responsible Guest</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_ROOM_TYPES__STRING = eINSTANCE.getIBookingProvidesForHost__GetRoomTypes__String();
+		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_RESPONSIBLE_GUEST__INT = eINSTANCE.getIBookingProvidesForHost__GetResponsibleGuest__int();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Room ID</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_ROOM_ID__STRING = eINSTANCE.getIBookingProvidesForHost__GetRoomID__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Service</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKING_PROVIDES_FOR_HOST___ADD_SERVICE__INT_STRING = eINSTANCE.getIBookingProvidesForHost__AddService__int_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Remove Service</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKING_PROVIDES_FOR_HOST___REMOVE_SERVICE__INT_STRING = eINSTANCE.getIBookingProvidesForHost__RemoveService__int_String();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.IBookingProvidesForCustomer <em>IBooking Provides For Customer</em>}' class.
@@ -3497,6 +4384,178 @@ public interface BookingmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EOperation IBOOKING_PROVIDES_FOR_CUSTOMER___BOOK__STRING_STRING_INT_ELIST_ELIST_ELIST = eINSTANCE.getIBookingProvidesForCustomer__Book__String_String_int_EList_EList_EList();
+
+		/**
+		 * The meta object literal for the '{@link bookingmodel.BookingInfo <em>Booking Info</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see bookingmodel.BookingInfo
+		 * @see bookingmodel.impl.BookingmodelPackageImpl#getBookingInfo()
+		 * @generated
+		 */
+		EClass BOOKING_INFO = eINSTANCE.getBookingInfo();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Start Date</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_INFO___GET_START_DATE__STRING = eINSTANCE.getBookingInfo__GetStartDate__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get End Date</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_INFO___GET_END_DATE__STRING = eINSTANCE.getBookingInfo__GetEndDate__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Nr Of Guests</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_INFO___GET_NR_OF_GUESTS__STRING = eINSTANCE.getBookingInfo__GetNrOfGuests__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Extras</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_INFO___GET_EXTRAS__STRING = eINSTANCE.getBookingInfo__GetExtras__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Rooms</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_INFO___GET_ROOMS__STRING = eINSTANCE.getBookingInfo__GetRooms__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Payment Method</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_INFO___GET_PAYMENT_METHOD__STRING = eINSTANCE.getBookingInfo__GetPaymentMethod__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Room Types</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_INFO___GET_ROOM_TYPES__STRING = eINSTANCE.getBookingInfo__GetRoomTypes__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Service Notes</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_INFO___GET_SERVICE_NOTES__STRING = eINSTANCE.getBookingInfo__GetServiceNotes__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Booking Ref</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation BOOKING_INFO___GET_BOOKING_REF__STRING = eINSTANCE.getBookingInfo__GetBookingRef__String();
+
+		/**
+		 * The meta object literal for the '{@link bookingmodel.CustomerInfo <em>Customer Info</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see bookingmodel.CustomerInfo
+		 * @see bookingmodel.impl.BookingmodelPackageImpl#getCustomerInfo()
+		 * @generated
+		 */
+		EClass CUSTOMER_INFO = eINSTANCE.getCustomerInfo();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Customer Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CUSTOMER_INFO___GET_CUSTOMER_NAME__STRING = eINSTANCE.getCustomerInfo__GetCustomerName__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Customer Last Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CUSTOMER_INFO___GET_CUSTOMER_LAST_NAME__STRING = eINSTANCE.getCustomerInfo__GetCustomerLastName__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Customer Age</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CUSTOMER_INFO___GET_CUSTOMER_AGE__STRING = eINSTANCE.getCustomerInfo__GetCustomerAge__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Customer Email</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CUSTOMER_INFO___GET_CUSTOMER_EMAIL__STRING = eINSTANCE.getCustomerInfo__GetCustomerEmail__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Cc Nr</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CUSTOMER_INFO___GET_CC_NR__STRING = eINSTANCE.getCustomerInfo__GetCcNr__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Cc V</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CUSTOMER_INFO___GET_CC_V__STRING = eINSTANCE.getCustomerInfo__GetCcV__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Exp Month</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CUSTOMER_INFO___GET_EXP_MONTH__STRING = eINSTANCE.getCustomerInfo__GetExpMonth__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Exp Year</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CUSTOMER_INFO___GET_EXP_YEAR__STRING = eINSTANCE.getCustomerInfo__GetExpYear__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Card First Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CUSTOMER_INFO___GET_CARD_FIRST_NAME__STRING = eINSTANCE.getCustomerInfo__GetCardFirstName__String();
+
+		/**
+		 * The meta object literal for the '<em><b>Ge Cardt Last Name</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CUSTOMER_INFO___GE_CARDT_LAST_NAME__STRING = eINSTANCE.getCustomerInfo__GeCardtLastName__String();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.IBookingProvidesForGuest <em>IBooking Provides For Guest</em>}' class.

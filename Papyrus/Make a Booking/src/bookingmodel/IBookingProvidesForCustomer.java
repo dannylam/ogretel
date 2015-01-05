@@ -3,9 +3,6 @@
 package bookingmodel;
 
 import java.util.List;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * An interface class which represents booking provides for the customer, extending EObject.
  *
@@ -13,7 +10,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model interface="true" abstract="true"
  * @generated 
  */
-public interface IBookingProvidesForCustomer extends EObject {
+public interface IBookingProvidesForCustomer extends BookingInfo, CustomerInfo {
 	/**
 	 * Makes a payment for a specific booking
 	 * The integer returned by the function indicates success or failure and reason for failure.
@@ -125,7 +122,7 @@ public interface IBookingProvidesForCustomer extends EObject {
 	 * @generated NOT
 	 */
 	int setPersonalDetails(String firstName, String lastName, int age, String email, String bookingRef);
-
+	
 	/**
 	 * Make a booking such for the given start- and enddate, number of guests,
 	 * roomtypes (and how many of each roomtype), extras and services.

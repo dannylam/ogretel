@@ -40,7 +40,10 @@ public interface RoomHandler extends EObject {
 	EMap<Integer, Room> getIntegerToRoomMap();
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * Checks if the room exists in the system.
 	 * @return true if there is a Room with roomID given by inparam
+	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
 	 */
@@ -48,25 +51,35 @@ public interface RoomHandler extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Adds a room to the system.
+	 * @return
+	 * 0 if successful
+	 * 1 if not successful
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" roomTypeRequired="true" roomTypeOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int addRoom(int roomID, RoomType roomType);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Removes a room from the system.
+	 * @return
+	 * 0 if successful
+	 * 1 if not successful
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int removeRoom(int roomID);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Returns the room.
+	 * @return the room with given roomID
 	 * <!-- end-user-doc -->
 	 * @model required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	Room getRoom(int roomID);
 

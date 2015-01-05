@@ -22,18 +22,95 @@ import org.eclipse.emf.ecore.EObject;
 public interface IBookingProvidesForHost extends EObject {
 
 	/**
+	 * Returns is the given booking is payed or not
+	 * @model dataType="types.Boolean" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @generated
+	 */
+	boolean isBookingPayed(String bookingRef);
+
+	/**
+	 * Returns is the given extra is payed or not
+	 * @model dataType="types.Boolean" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
+	 * @generated NOT
+	 */
+	boolean isExtraPayed(int roomID);
+
+	/**
+	 * Returns is the given room is payed or not
+	 * @model dataType="types.Boolean" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
+	 * @generated NOT
+	 */
+	boolean isRoomPayed(int roomID);
+
+	/**
+	 * Returns is the given booking exists or not
+	 * @model dataType="types.Boolean" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @generated NOT
+	 */
+	boolean existBooking(String bookingRef);
+
+	/**
+	 * Return a list of all existing bookings
+	 * @model kind="operation" dataType="types.String" ordered="false"
+	 * @generated NOT
+	 */
+	List<String> getExistingBookings();
+
+	/**
+	 * Return a list of all active bookings
+	 * @model kind="operation" dataType="types.String" ordered="false"
+	 * @generated NOT
+	 */
+	List<String> getActiveBookings();
+
+	/**
+	 * Returns is the given room is checked-out or not
+	 * @model dataType="types.Boolean" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
+	 * @generated  NOT
+	 */
+	boolean isCheckedOut(int roomID);
+
+	/**
+	 * Returns is the given room is checked-in or not
+	 * @model dataType="types.Boolean" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
+	 * @generated NOT
+	 */
+	boolean isCheckedIn(int roomID);
+
+	/**
+	 * Returns is the responsible guest for the given room
+	 * @model dataType="types.String" required="true" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
+	 * @generated NOT
+	 */
+	String getResponsibleGuest(int roomID);
+
+	/**
+	 * Returns is the room of the responsible guest
+	 * @model dataType="types.Integer" required="true" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
+	 * @generated NOT
+	 */
+	int getRoomID(String guestEmail);
+
+	/**
+	 * Adds a service to the given room
+	 * @model dataType="types.Integer" required="true" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
+	 * @generated NOT
+	 */
+	int addService(int roomID, String serviceNote);
+
+	/**
+	 * Removes a service from the given room
+	 * @model dataType="types.Integer" required="true" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
+	 * @generated
+	 */
+	int removeService(int roomID, String serviceNote);
+
+	/**
 	 * Returns the service notes from a specific booking. 
 	 * @model dataType="types.String" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
 	List<String> getServiceNotes(String bookingRef);
-
-	/**
-	 * Returns is the given booking is payed or not
-	 * @model bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated NOT
-	 */
-	boolean isPayed(String bookingRef);
 
 	/**
 	 * Returns the start date of a booking
