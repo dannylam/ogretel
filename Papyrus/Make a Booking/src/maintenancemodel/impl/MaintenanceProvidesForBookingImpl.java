@@ -8,6 +8,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Set;
 import java.util.concurrent.CopyOnWriteArraySet;
+
+import maintenancemodel.Calendar;
 import maintenancemodel.ExtraHandler;
 import maintenancemodel.MaintenanceProvidesForBooking;
 import maintenancemodel.MaintenancemodelPackage;
@@ -16,6 +18,7 @@ import maintenancemodel.RoomHandler;
 import maintenancemodel.RoomStatusEnum;
 import maintenancemodel.RoomType;
 import maintenancemodel.RoomTypesHandler;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -316,6 +319,8 @@ public class MaintenanceProvidesForBookingImpl extends
 		
 		// Using a Set, every roomTypeID is only included once
 		Set<String> types = new CopyOnWriteArraySet<String>(roomTypeIDs);
+		
+		Calendar cal = this.roomTypes.getCalendar();
 
 		// For all requested roomtypes
 		for (String id : types) {
@@ -334,7 +339,7 @@ public class MaintenanceProvidesForBookingImpl extends
 			}
 
 			// Check if cap is lower as the amount of identical roomTypeIDs
-			if (this.roomTypes.getCalendar().getCap(startDays, endDays, id) < amount) {
+			if (cal.getCap(startDays, endDays, id) < amount) {
 				return false;
 			}
 
@@ -380,15 +385,28 @@ public class MaintenanceProvidesForBookingImpl extends
 				|| !isDateValid(year2, month2, day2)) {
 			return -1;
 		}
-
+		
+		int dayOfYear1 = this.getDayOfYear(year1, month1, day1);
+		if(dayOfYear1 < 0){
+			return -1;
+		}
+		
+		int dayOfYear2 = this.getDayOfYear(year2, month2, day2);
+		if(dayOfYear2 < 0){
+			return -1;
+		}
+		
 		// Compute span
-		int dateSpan = this.getDayOfYear(year2, month2, day2)
-				- this.getDayOfYear(year1, month1, day1);
+		int dateSpan = dayOfYear2 - dayOfYear1;
 
 		return dateSpan;
 	}
 
 	private int getDayOfYear(int year, int month, int day) {
+		if(year < 0 || month < 0 || day < 0){
+			return -1;
+		}
+		
 		int result = day;
 
 		for (int j = 0; j < year; j++) {
@@ -425,7 +443,6 @@ public class MaintenanceProvidesForBookingImpl extends
 	 * @generated NOT
 	 */
 	public int makeBooking(EList<String> roomTypeIDs, String start, String end) {
-
 		maintenancemodel.Calendar calendar = roomTypes.getCalendar();
 
 		DateFormat dateFormat = new SimpleDateFormat("yyMMdd");
