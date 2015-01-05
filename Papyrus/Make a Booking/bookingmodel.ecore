@@ -316,7 +316,7 @@
     <eOperations name="getServiceNotes" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String">
       <eParameters name="bookingRef" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
-    <eOperations name="getBookingRef" ordered="false" lowerBound="1">
+    <eOperations name="getBookingRef" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
       <eParameters name="customerEmail" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
   </eClassifiers>

@@ -1033,8 +1033,11 @@ been checked-in is checked-out in a specific booking </body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_oiFRIJTIEeS6iuR7ikHtLw" name="getBookingRef">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_oiFRIJTIEeS6iuR7ikHtLw" name="getBookingRef" visibility="public">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_uvpmoJTIEeS6iuR7ikHtLw" name="customerEmail">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2hibUJTYEeS6iuR7ikHtLw" name="bookingRef" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>

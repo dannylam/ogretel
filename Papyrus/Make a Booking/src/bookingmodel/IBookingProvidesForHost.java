@@ -22,96 +22,84 @@ import org.eclipse.emf.ecore.EObject;
 public interface IBookingProvidesForHost extends EObject {
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns is the given booking is payed or not
 	 * @model dataType="types.Boolean" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated
 	 */
 	boolean isBookingPayed(String bookingRef);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns is the given extra is payed or not
 	 * @model dataType="types.Boolean" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	boolean isExtraPayed(int roomID);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns is the given room is payed or not
 	 * @model dataType="types.Boolean" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	boolean isRoomPayed(int roomID);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns is the given booking exists or not
 	 * @model dataType="types.Boolean" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	boolean existBooking(String bookingRef);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Return a list of all existing bookings
 	 * @model kind="operation" dataType="types.String" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getExistingBookings();
+	List<String> getExistingBookings();
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Return a list of all active bookings
 	 * @model kind="operation" dataType="types.String" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	EList<String> getActiveBookings();
+	List<String> getActiveBookings();
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns is the given room is checked-out or not
 	 * @model dataType="types.Boolean" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
-	 * @generated
+	 * @generated  NOT
 	 */
 	boolean isCheckedOut(int roomID);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns is the given room is checked-in or not
 	 * @model dataType="types.Boolean" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	boolean isCheckedIn(int roomID);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns is the responsible guest for the given room
 	 * @model dataType="types.String" required="true" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	String getResponsibleGuest(int roomID);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns is the room of the responsible guest
 	 * @model dataType="types.Integer" required="true" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int getRoomID(String guestEmail);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Adds a service to the given room
 	 * @model dataType="types.Integer" required="true" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int addService(int roomID, String serviceNote);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Removes a service from the given room
 	 * @model dataType="types.Integer" required="true" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
 	 * @generated
 	 */
@@ -123,13 +111,6 @@ public interface IBookingProvidesForHost extends EObject {
 	 * @generated NOT
 	 */
 	List<String> getServiceNotes(String bookingRef);
-
-	/**
-	 * Returns is the given booking is payed or not
-	 * @model bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated NOT
-	 */
-	boolean isPayed(String bookingRef);
 
 	/**
 	 * Returns the start date of a booking
