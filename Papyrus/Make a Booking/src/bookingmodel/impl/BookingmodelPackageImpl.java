@@ -9,8 +9,10 @@ import bookingmodel.BookingProvides;
 import bookingmodel.BookingmodelFactory;
 import bookingmodel.BookingmodelPackage;
 import bookingmodel.Customer;
+import bookingmodel.CustomerEmailToBookingRefEntry;
 import bookingmodel.CustomerInfo;
 import bookingmodel.Guest;
+import bookingmodel.GuestEmailToRoomIDEntry;
 import bookingmodel.GuestTypes;
 import bookingmodel.IBookingProvidesForCustomer;
 import bookingmodel.IBookingProvidesForGuest;
@@ -154,6 +156,20 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * @generated
 	 */
 	private EClass roomIDToBookingRefEntryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass customerEmailToBookingRefEntryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass guestEmailToRoomIDEntryEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -843,6 +859,24 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getBookingHandler_CustomerEmailToBookingRefEntry() {
+		return (EReference)bookingHandlerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBookingHandler_GuestEmailToRoomIDEntry() {
+		return (EReference)bookingHandlerEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getBookingHandler__Exists__String() {
 		return bookingHandlerEClass.getEOperations().get(0);
 	}
@@ -1005,7 +1039,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingProvidesForHost__AddService__int_String() {
+	public EOperation getIBookingProvidesForHost__AddServiceNotes__int_EList() {
 		return iBookingProvidesForHostEClass.getEOperations().get(10);
 	}
 
@@ -1014,7 +1048,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingProvidesForHost__RemoveService__int_String() {
+	public EOperation getIBookingProvidesForHost__RemoveServiceNotes__int_EList() {
 		return iBookingProvidesForHostEClass.getEOperations().get(11);
 	}
 
@@ -1392,6 +1426,60 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCustomerEmailToBookingRefEntry() {
+		return customerEmailToBookingRefEntryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCustomerEmailToBookingRefEntry_Key() {
+		return (EAttribute)customerEmailToBookingRefEntryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCustomerEmailToBookingRefEntry_Value() {
+		return (EAttribute)customerEmailToBookingRefEntryEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGuestEmailToRoomIDEntry() {
+		return guestEmailToRoomIDEntryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGuestEmailToRoomIDEntry_Key() {
+		return (EAttribute)guestEmailToRoomIDEntryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGuestEmailToRoomIDEntry_Value() {
+		return (EAttribute)guestEmailToRoomIDEntryEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getGuestTypes() {
 		return guestTypesEEnum;
 	}
@@ -1509,6 +1597,8 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		bookingHandlerEClass = createEClass(BOOKING_HANDLER);
 		createEReference(bookingHandlerEClass, BOOKING_HANDLER__BOOKINGS_MAP);
 		createEReference(bookingHandlerEClass, BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP);
+		createEReference(bookingHandlerEClass, BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY);
+		createEReference(bookingHandlerEClass, BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___EXISTS__STRING);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___ADD_BOOKING__INT_STRING_STRING_ELIST_ELIST_ELIST);
 		createEOperation(bookingHandlerEClass, BOOKING_HANDLER___REMOVE_BOOKING__STRING);
@@ -1521,6 +1611,14 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		createEAttribute(roomIDToBookingRefEntryEClass, ROOM_ID_TO_BOOKING_REF_ENTRY__KEY);
 		createEAttribute(roomIDToBookingRefEntryEClass, ROOM_ID_TO_BOOKING_REF_ENTRY__VALUE);
 
+		customerEmailToBookingRefEntryEClass = createEClass(CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY);
+		createEAttribute(customerEmailToBookingRefEntryEClass, CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY__KEY);
+		createEAttribute(customerEmailToBookingRefEntryEClass, CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY__VALUE);
+
+		guestEmailToRoomIDEntryEClass = createEClass(GUEST_EMAIL_TO_ROOM_ID_ENTRY);
+		createEAttribute(guestEmailToRoomIDEntryEClass, GUEST_EMAIL_TO_ROOM_ID_ENTRY__KEY);
+		createEAttribute(guestEmailToRoomIDEntryEClass, GUEST_EMAIL_TO_ROOM_ID_ENTRY__VALUE);
+
 		iBookingProvidesForHostEClass = createEClass(IBOOKING_PROVIDES_FOR_HOST);
 		createEOperation(iBookingProvidesForHostEClass, IBOOKING_PROVIDES_FOR_HOST___IS_BOOKING_PAYED__STRING);
 		createEOperation(iBookingProvidesForHostEClass, IBOOKING_PROVIDES_FOR_HOST___IS_EXTRA_PAYED__INT);
@@ -1532,8 +1630,8 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		createEOperation(iBookingProvidesForHostEClass, IBOOKING_PROVIDES_FOR_HOST___IS_CHECKED_IN__INT);
 		createEOperation(iBookingProvidesForHostEClass, IBOOKING_PROVIDES_FOR_HOST___GET_RESPONSIBLE_GUEST__INT);
 		createEOperation(iBookingProvidesForHostEClass, IBOOKING_PROVIDES_FOR_HOST___GET_ROOM_ID__STRING);
-		createEOperation(iBookingProvidesForHostEClass, IBOOKING_PROVIDES_FOR_HOST___ADD_SERVICE__INT_STRING);
-		createEOperation(iBookingProvidesForHostEClass, IBOOKING_PROVIDES_FOR_HOST___REMOVE_SERVICE__INT_STRING);
+		createEOperation(iBookingProvidesForHostEClass, IBOOKING_PROVIDES_FOR_HOST___ADD_SERVICE_NOTES__INT_ELIST);
+		createEOperation(iBookingProvidesForHostEClass, IBOOKING_PROVIDES_FOR_HOST___REMOVE_SERVICE_NOTES__INT_ELIST);
 
 		iBookingProvidesForCustomerEClass = createEClass(IBOOKING_PROVIDES_FOR_CUSTOMER);
 		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___PAY_BOOKING__STRING);
@@ -1733,6 +1831,8 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		initEClass(bookingHandlerEClass, BookingHandler.class, "BookingHandler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBookingHandler_BookingsMap(), this.getBookingRefToBookingEntry(), null, "bookingsMap", null, 0, -1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEReference(getBookingHandler_RoomIDToBookingRefMap(), this.getRoomIDToBookingRefEntry(), null, "roomIDToBookingRefMap", null, 0, -1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBookingHandler_CustomerEmailToBookingRefEntry(), this.getCustomerEmailToBookingRefEntry(), null, "customerEmailToBookingRefEntry", null, 0, -1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEReference(getBookingHandler_GuestEmailToRoomIDEntry(), this.getGuestEmailToRoomIDEntry(), null, "guestEmailToRoomIDEntry", null, 0, -1, BookingHandler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
 		op = initEOperation(getBookingHandler__Exists__String(), theTypesPackage.getBoolean(), "exists", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -1770,6 +1870,14 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		initEAttribute(getRoomIDToBookingRefEntry_Key(), ecorePackage.getEIntegerObject(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getRoomIDToBookingRefEntry_Value(), ecorePackage.getEString(), "value", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 
+		initEClass(customerEmailToBookingRefEntryEClass, CustomerEmailToBookingRefEntry.class, "CustomerEmailToBookingRefEntry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCustomerEmailToBookingRefEntry_Key(), ecorePackage.getEString(), "key", null, 1, 1, CustomerEmailToBookingRefEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getCustomerEmailToBookingRefEntry_Value(), ecorePackage.getEString(), "value", null, 0, -1, CustomerEmailToBookingRefEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
+		initEClass(guestEmailToRoomIDEntryEClass, GuestEmailToRoomIDEntry.class, "GuestEmailToRoomIDEntry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getGuestEmailToRoomIDEntry_Key(), ecorePackage.getEString(), "key", null, 1, 1, GuestEmailToRoomIDEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getGuestEmailToRoomIDEntry_Value(), ecorePackage.getEInt(), "value", null, 0, -1, GuestEmailToRoomIDEntry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+
 		initEClass(iBookingProvidesForHostEClass, IBookingProvidesForHost.class, "IBookingProvidesForHost", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getIBookingProvidesForHost__IsBookingPayed__String(), theTypesPackage.getBoolean(), "isBookingPayed", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -1797,16 +1905,16 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		op = initEOperation(getIBookingProvidesForHost__GetResponsibleGuest__int(), theTypesPackage.getString(), "getResponsibleGuest", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingProvidesForHost__GetRoomID__String(), theTypesPackage.getInteger(), "getRoomID", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getIBookingProvidesForHost__GetRoomID__String(), theTypesPackage.getInteger(), "getRoomID", 0, -1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "guestEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingProvidesForHost__AddService__int_String(), theTypesPackage.getInteger(), "addService", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getIBookingProvidesForHost__AddServiceNotes__int_EList(), theTypesPackage.getInteger(), "addServiceNotes", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "serviceNote", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "serviceNote", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingProvidesForHost__RemoveService__int_String(), theTypesPackage.getInteger(), "removeService", 1, 1, IS_UNIQUE, IS_ORDERED);
+		op = initEOperation(getIBookingProvidesForHost__RemoveServiceNotes__int_EList(), theTypesPackage.getInteger(), "RemoveServiceNotes", 1, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "serviceNote", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "serviceNote", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(iBookingProvidesForCustomerEClass, IBookingProvidesForCustomer.class, "IBookingProvidesForCustomer", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

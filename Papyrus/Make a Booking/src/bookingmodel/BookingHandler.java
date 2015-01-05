@@ -58,6 +58,40 @@ public interface BookingHandler extends EObject {
 	EMap<Integer, String> getRoomIDToBookingRefMap();
 
 	/**
+	 * Returns the value of the '<em><b>Customer Email To Booking Ref Entry</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type list of {@link java.lang.String},
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Customer Email To Booking Ref Entry</em>' map isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Customer Email To Booking Ref Entry</em>' map.
+	 * @see bookingmodel.BookingmodelPackage#getBookingHandler_CustomerEmailToBookingRefEntry()
+	 * @model mapType="bookingmodel.CustomerEmailToBookingRefEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString>" ordered="false"
+	 * @generated
+	 */
+	EMap<String, EList<String>> getCustomerEmailToBookingRefEntry();
+
+	/**
+	 * Returns the value of the '<em><b>Guest Email To Room ID Entry</b></em>' map.
+	 * The key is of type {@link java.lang.String},
+	 * and the value is of type list of {@link java.lang.Integer},
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Guest Email To Room ID Entry</em>' map isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Guest Email To Room ID Entry</em>' map.
+	 * @see bookingmodel.BookingmodelPackage#getBookingHandler_GuestEmailToRoomIDEntry()
+	 * @model mapType="bookingmodel.GuestEmailToRoomIDEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EInt>" ordered="false"
+	 * @generated
+	 */
+	EMap<String, EList<Integer>> getGuestEmailToRoomIDEntry();
+
+	/**
 	 * A method that checks if the booking reference exists
 	 * @param bookingRef
 	 * @return boolean which indicating if the given booking reference exists in the map of bookings

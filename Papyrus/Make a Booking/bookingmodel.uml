@@ -403,6 +403,14 @@ been checked-in is checked-out in a specific booking </body>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F14FZpNNEeSexbuF790S1w"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F14FZ5NNEeSexbuF790S1w" value="*"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_2BIt4JThEeS6iuR7ikHtLw" name="customerEmailToBookingRefEntry" type="_OviWwJThEeS6iuR7ikHtLw" aggregation="composite" association="_2BJU8JThEeS6iuR7ikHtLw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2BIt4ZThEeS6iuR7ikHtLw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2BIt4pThEeS6iuR7ikHtLw" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_20igwJThEeS6iuR7ikHtLw" name="guestEmailToRoomIDEntry" type="_ikK-4JThEeS6iuR7ikHtLw" aggregation="composite" association="_20jH0JThEeS6iuR7ikHtLw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_20igwZThEeS6iuR7ikHtLw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_20igwpThEeS6iuR7ikHtLw" value="*"/>
+      </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_F14FaJNNEeSexbuF790S1w" name="exists" visibility="package">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14FaZNNEeSexbuF790S1w" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
@@ -653,14 +661,14 @@ been checked-in is checked-out in a specific booking </body>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_kP1RcJTLEeS6iuR7ikHtLw" name="getRoomID" visibility="public">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_kP1RcZTLEeS6iuR7ikHtLw" isOrdered="true" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kP1RcpTLEeS6iuR7ikHtLw" value="1"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kP1Rc5TLEeS6iuR7ikHtLw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kP1RcpTLEeS6iuR7ikHtLw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kP1Rc5TLEeS6iuR7ikHtLw" value="*"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_kP1RdJTLEeS6iuR7ikHtLw" name="guestEmail">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_rvKJwJTLEeS6iuR7ikHtLw" name="addService" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_rvKJwJTLEeS6iuR7ikHtLw" name="addServiceNotes" visibility="public">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_rvKJwZTLEeS6iuR7ikHtLw" isOrdered="true" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rvKJwpTLEeS6iuR7ikHtLw" value="1"/>
@@ -671,9 +679,11 @@ been checked-in is checked-out in a specific booking </body>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_yTPh0JTLEeS6iuR7ikHtLw" name="serviceNote">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DBR_4JThEeS6iuR7ikHtLw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DBR_4ZThEeS6iuR7ikHtLw" value="*"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_zgv2wJTLEeS6iuR7ikHtLw" name="removeService" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_zgv2wJTLEeS6iuR7ikHtLw" name="RemoveServiceNotes" visibility="public">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_zgv2wZTLEeS6iuR7ikHtLw" isOrdered="true" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zgv2wpTLEeS6iuR7ikHtLw" value="1"/>
@@ -684,6 +694,8 @@ been checked-in is checked-out in a specific booking </body>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_zgv2xZTLEeS6iuR7ikHtLw" name="serviceNote">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FR_eQJThEeS6iuR7ikHtLw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FR_eQZThEeS6iuR7ikHtLw" value="*"/>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
@@ -1124,6 +1136,78 @@ been checked-in is checked-out in a specific booking </body>
         </ownedParameter>
       </ownedOperation>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_OviWwJThEeS6iuR7ikHtLw" name="CustomerEmailToBookingRefEntry">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_OviWwZThEeS6iuR7ikHtLw" annotatedElement="_OviWwJThEeS6iuR7ikHtLw">
+        <body>key; RoomID: Integer
+value; GuestEmail: String
+value is &quot;out&quot; when a room which has previously 
+been checked-in is checked-out in a specific booking 
+key; RoomID: Integer
+value; GuestEmail: String
+value is &quot;out&quot; when a room which has previously 
+been checked-in is checked-out in a specific booking </body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_OviWwpThEeS6iuR7ikHtLw" annotatedElement="_OviWwJThEeS6iuR7ikHtLw">
+        <body>key; RoomID: Integer
+value; GuestEmail: String
+value is &quot;out&quot; when a room which has previously 
+been checked-in is checked-out in a specific booking 
+key; RoomID: Integer
+value; GuestEmail: String
+value is &quot;out&quot; when a room which has previously 
+been checked-in is checked-out in a specific booking </body>
+      </ownedComment>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OviWw5ThEeS6iuR7ikHtLw" name="key" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OviWxJThEeS6iuR7ikHtLw" name="value" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hAwrYJThEeS6iuR7ikHtLw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hAxScJThEeS6iuR7ikHtLw" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ikK-4JThEeS6iuR7ikHtLw" name="GuestEmailToRoomIDEntry">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_ikK-4ZThEeS6iuR7ikHtLw" annotatedElement="_ikK-4JThEeS6iuR7ikHtLw">
+        <body>key; RoomID: Integer
+value; GuestEmail: String
+value is &quot;out&quot; when a room which has previously 
+been checked-in is checked-out in a specific booking 
+key; RoomID: Integer
+value; GuestEmail: String
+value is &quot;out&quot; when a room which has previously 
+been checked-in is checked-out in a specific booking </body>
+      </ownedComment>
+      <ownedComment xmi:type="uml:Comment" xmi:id="_ikK-4pThEeS6iuR7ikHtLw" annotatedElement="_ikK-4JThEeS6iuR7ikHtLw">
+        <body>key; RoomID: Integer
+value; GuestEmail: String
+value is &quot;out&quot; when a room which has previously 
+been checked-in is checked-out in a specific booking 
+key; RoomID: Integer
+value; GuestEmail: String
+value is &quot;out&quot; when a room which has previously 
+been checked-in is checked-out in a specific booking </body>
+      </ownedComment>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ikK-45ThEeS6iuR7ikHtLw" name="key" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ikK-5JThEeS6iuR7ikHtLw" name="value" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ikK-5ZThEeS6iuR7ikHtLw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ikK-5pThEeS6iuR7ikHtLw" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_2BJU8JThEeS6iuR7ikHtLw" memberEnd="_2BJU8ZThEeS6iuR7ikHtLw _2BIt4JThEeS6iuR7ikHtLw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_2BJU8ZThEeS6iuR7ikHtLw" type="_F14FYZNNEeSexbuF790S1w" association="_2BJU8JThEeS6iuR7ikHtLw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2BJU8pThEeS6iuR7ikHtLw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2BJU85ThEeS6iuR7ikHtLw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_20jH0JThEeS6iuR7ikHtLw" memberEnd="_20jH0ZThEeS6iuR7ikHtLw _20igwJThEeS6iuR7ikHtLw">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_20jH0ZThEeS6iuR7ikHtLw" type="_F14FYZNNEeSexbuF790S1w" association="_20jH0JThEeS6iuR7ikHtLw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_20jH0pThEeS6iuR7ikHtLw" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_20jH05ThEeS6iuR7ikHtLw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_F14GJ5NNEeSexbuF790S1w">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_F14GKJNNEeSexbuF790S1w" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="pathmap://UML_PROFILES/Ecore.profile.uml#_z1OFcHjqEdy8S4Cr8Rc_NA"/>
@@ -1322,4 +1406,6 @@ been checked-in is checked-out in a specific booking </body>
   <Ecore:EParameter xmi:id="_rvL-8JTLEeS6iuR7ikHtLw" base_Parameter="_rvKJxJTLEeS6iuR7ikHtLw"/>
   <Ecore:EParameter xmi:id="_zgxE4ZTLEeS6iuR7ikHtLw" base_Parameter="_zgv2xJTLEeS6iuR7ikHtLw"/>
   <Ecore:EOperation xmi:id="_zgxr8JTLEeS6iuR7ikHtLw" base_Operation="_zgv2wJTLEeS6iuR7ikHtLw"/>
+  <Ecore:EClass xmi:id="_OyK0AJThEeS6iuR7ikHtLw" base_Class="_OviWwJThEeS6iuR7ikHtLw"/>
+  <Ecore:EClass xmi:id="_ikMNAJThEeS6iuR7ikHtLw" base_Class="_ikK-4JThEeS6iuR7ikHtLw"/>
 </xmi:XMI>
