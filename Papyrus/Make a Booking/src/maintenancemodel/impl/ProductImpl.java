@@ -85,9 +85,9 @@ public class ProductImpl extends AbstractExtraImpl implements Product {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Get the current stock
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getStock() {
 		return stock;
@@ -95,7 +95,7 @@ public class ProductImpl extends AbstractExtraImpl implements Product {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Set the new stock when products has been sold or new stock has come.
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -113,7 +113,7 @@ public class ProductImpl extends AbstractExtraImpl implements Product {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Returs current status of the product
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -132,8 +132,9 @@ public class ProductImpl extends AbstractExtraImpl implements Product {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setProductStatusEnum(ProductStatusEnum newProductStatusEnum) {
 		ProductStatusEnum oldProductStatusEnum = productStatusEnum;
