@@ -30,7 +30,8 @@ public interface CustomerInfo extends EObject {
 	String getCustomerLastName(String bookingRef);
 
 	/**
-	 * Returns the age of the customer associated to the booking reference
+	 * Returns the age of the customer associated to the booking reference. 
+	 * Returns -1 if the booking reference does not exist.
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
@@ -48,14 +49,14 @@ public interface CustomerInfo extends EObject {
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
-	int getCcNr(String bookingRef);
+	String getCcNr(String bookingRef);
 
 	/**
 	 * Returns the ccv of the bank card associated to the booking reference
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
-	int getCcV(String bookingRef);
+	String getCcV(String bookingRef);
 
 	/**
 	 * Returns the expiry month of the bank card associated to the booking reference

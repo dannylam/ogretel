@@ -1900,10 +1900,10 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		op = initEOperation(getCustomerInfo__GetCustomerEmail__String(), theTypesPackage.getString(), "getCustomerEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getCustomerInfo__GetCcNr__String(), theTypesPackage.getInteger(), "getCcNr", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getCustomerInfo__GetCcNr__String(), theTypesPackage.getString(), "getCcNr", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getCustomerInfo__GetCcV__String(), theTypesPackage.getInteger(), "getCcV", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getCustomerInfo__GetCcV__String(), theTypesPackage.getString(), "getCcV", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		op = initEOperation(getCustomerInfo__GetExpMonth__String(), theTypesPackage.getInteger(), "getExpMonth", 1, 1, IS_UNIQUE, !IS_ORDERED);
