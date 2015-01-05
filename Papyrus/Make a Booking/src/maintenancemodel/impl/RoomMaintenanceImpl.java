@@ -5,7 +5,6 @@ package maintenancemodel.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 
-import maintenancemodel.Calendar;
 import maintenancemodel.IRoomTypeMaintenance;
 import maintenancemodel.MaintenancemodelPackage;
 import maintenancemodel.Room;

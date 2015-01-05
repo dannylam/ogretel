@@ -168,11 +168,9 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int setCap(int start, int end, String roomType, int nrOfRooms) {
-		EList<Integer> capacities;
-
 		// Check that the roomType is valid
 		if (this.getStringToListsMap().containsKey(roomType)) {
-			capacities = this.getStringToListsMap().get(roomType);
+			EList<Integer> capacities = this.getStringToListsMap().get(roomType);
 
 			// Check that start & end are valid
 			if (start >= 0 && end < capacities.size()) {
@@ -183,7 +181,6 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 				}
 				return 0;
 			}
-			return 1;
 		}
 		return 1;
 		// TODO: test
