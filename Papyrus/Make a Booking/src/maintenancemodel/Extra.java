@@ -17,6 +17,10 @@ import org.eclipse.emf.ecore.EObject;
 public interface Extra extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
+	 * Checks if extra is available
+	 * @return
+	 * true if available
+	 * false if not available
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
 	 * @generated

@@ -22,7 +22,9 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 
 	/**
 	 * A method that checks if a booking can be made with given parameters
-	 * 
+	 * @return
+	 * true if booking is possible
+	 * false if booking is not possible
 	 * @model dataType="org.eclipse.uml2.types.Boolean" ordered="false"
 	 *        roomTypeIDsDataType="org.eclipse.uml2.types.String"
 	 *        roomTypeIDsMany="true" roomTypeIDsOrdered="false"
@@ -59,6 +61,7 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Sets a room of roomTypeID as active
 	 * @return
 	 * roomID if successful
 	 * -1 if roomTypeID is invalid
@@ -70,6 +73,7 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 
 	/**
 	 * <!-- begin-user-doc --> 
+	 * Get the price of all rooms in the EList
 	 * @return
 	 * the sum of the prices of the RoomTypes indicated by the String entries in the List roomTypeIDs
 	 * -1 if any String entry in the List is invalid   
@@ -81,6 +85,7 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Gets the price of all extras in the EList
 	 * @return
 	 * the sum of the prices of the Extras indicated by the String entries in the List extraIDs
 	 * -1 if any String entry in the List is invalid   
@@ -92,6 +97,7 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Sets a room of roomTypeID as inactive
 	 * @return
 	 * 0 if successful
 	 * 1 if roomID invalid
