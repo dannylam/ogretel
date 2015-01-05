@@ -56,13 +56,6 @@ public interface IBookingProvidesForHost extends EObject {
 	List<String> getExistingBookings();
 
 	/**
-	 * Return a list of all active bookings
-	 * @model kind="operation" dataType="types.String" ordered="false"
-	 * @generated NOT
-	 */
-	List<String> getActiveBookings();
-
-	/**
 	 * Returns is the given room is checked-out or not
 	 * @model dataType="types.Boolean" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated  NOT

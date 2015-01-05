@@ -610,7 +610,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
-	public int RemoveServiceNotes(int roomID, List<String> serviceNote) {
+	public int RemoveServiceNotes(int roomID, List<String> serviceNotes) {
 		if(this.getBookingHandler().exists(this.getBookingHandler().getBooking(roomID).getBookingRef())){
 			return this.bookingHandler.getBooking(roomID).getServiceNotes().removeServices(serviceNotes); //TODO add method
 		}
@@ -682,26 +682,15 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras, List<String> services) {
 		if(this.bookingHandler.isActive(bookingRef)){
 			Booking booking = this.bookingHandler.getBooking(bookingRef);
+			String oldStartDate = booking.getStartDate();
+			String oldEndDate = booking.getEndDate();
+			int oldNrOfGuests = booking.getNrOfGuests();
+			List <String> oldRoomTypes = booking.getRoomTypes();
+			List <String> oldExtras = booking.getExtras();
+			List <String> oldServices = booking.getServiceNotes();
+	
 			
-			//checks if any inparam is null, meaning not changed, if so, takes the value stored in the booking
-			if(startDate.equals(null)){
-				startDate = booking.getStartDate();
-			}
-			if(endDate.equals(null)){
-				endDate = booking.getEndDate();
-			}
-			if(nrOfGuests == 0){
-				nrOfGuests = booking.getNrOfGuests();
-			}
-			if(roomTypes.equals(null)){
-				roomTypes = booking.getRoomTypes();
-			}
-			if(extras.equals(null)){
-				extras = booking.getExtras();
-			}
-			if(services.equals(null)){
-				services = booking.getServiceNotes();
-			}
+			
 			
 			//checks with maintenance if the change is possible
 			if (this.maintenanceComponent.canBook(
