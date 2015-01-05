@@ -237,17 +237,13 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		}	
 		return null;
 	}
-
 	
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
-	public String getBookingRef(String customerEmail) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public List <String> getBookingRef(String customerEmail) {
+		return this.getBookingHandler().getCustomerEmailToBookingRefEntry().get(customerEmail);
 	}
 
 	/**
@@ -559,7 +555,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getActiveBookings() {
+	public List<String> getActiveBookings() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -602,11 +598,19 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public List<Integer> getRoomID(String guestEmail) {
+		return this.bookingHandler.getGuestEmailToRoomIDEntry().get(guestEmail);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int addServiceNotes(int roomID, List<String> serviceNote) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -617,18 +621,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int addServiceNotes(int roomID, EList<String> serviceNote) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int RemoveServiceNotes(int roomID, EList<String> serviceNote) {
+	public int RemoveServiceNotes(int roomID, List<String> serviceNote) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -1036,5 +1029,4 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		}
 		return super.eInvoke(operationID, arguments);
 	}
-
 } // BookingProvidesImpl
