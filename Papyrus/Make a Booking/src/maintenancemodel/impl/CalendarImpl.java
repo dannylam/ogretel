@@ -60,7 +60,9 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -69,7 +71,8 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -92,7 +95,9 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -124,15 +129,9 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> Get the lowest capacity (free rooms) of the days
-	 * in the interval.
-	 * 
-	 * @param start
-	 *            amount of days from now that the interval starts.
-	 * @param end
-	 *            amount of days from now that the interval ends.
-	 * @param roomType
-	 *            the roomtypeID to get capacity for <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public Integer getCap(int start, int end, String roomType) {
@@ -154,19 +153,9 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> Add or remove rooms from the capacity (number of
-	 * free rooms) of the days in the interval for the roomtype.
-	 * 
-	 * @param start
-	 *            amount of days from now that the interval starts.
-	 * @param end
-	 *            amount of days from now that the interval ends.
-	 * @param roomType
-	 *            the roomtypeID to set capacity for
-	 * @param nrOfRooms
-	 *            number of rooms to add or remove. If the number is >= 0 they
-	 *            will be added, and if the number is < 0 they will be removed.
-	 * @return 0 if everything went ok else 1. <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public int setCap(int start, int end, String roomType, int nrOfRooms) {
@@ -188,7 +177,9 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -215,7 +206,9 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -246,7 +239,9 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -259,7 +254,9 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */

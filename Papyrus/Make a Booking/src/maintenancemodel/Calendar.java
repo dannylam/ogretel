@@ -51,6 +51,17 @@ public interface Calendar extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Get the lowest capacity (free rooms) of the days in the interval.
+	 * 
+	 * @param start
+	 *            amount of days from now that the interval starts.
+	 * @param end
+	 *            amount of days from now that the interval ends.
+	 * @param roomType
+	 *            the roomtypeID to get capacity for
+	 *            
+	 * @return int of available rooms of roomtype
+	 * 
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeDataType="org.eclipse.uml2.types.String" roomTypeRequired="true" roomTypeOrdered="false"
 	 * @generated NOT
@@ -59,14 +70,28 @@ public interface Calendar extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Add or remove rooms from the capacity (number of
+	 * free rooms) of the days in the interval for the roomtype.
+	 * 
+	 * @param start
+	 *            amount of days from now that the interval starts.
+	 * @param end
+	 *            amount of days from now that the interval ends.
+	 * @param roomType
+	 *            the roomtypeID to set capacity for
+	 * @param nrOfRooms
+	 *            number of rooms to add or remove. If the number is >= 0 they
+	 *            will be added, and if the number is < 0 they will be removed.
+	 * @return 0 if everything went ok else 1. 
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" startDataType="org.eclipse.uml2.types.Integer" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.Integer" endRequired="true" endOrdered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false" nrOfRoomsDataType="org.eclipse.uml2.types.Integer" nrOfRoomsRequired="true" nrOfRoomsOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int setCap(int start, int end, String roomTypeID, int nrOfRooms);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Increases the capacity during given date for the given roomtype.
 	 * @return
 	 * 0 if successful
 	 * 1 if roomType invalid
@@ -80,6 +105,7 @@ public interface Calendar extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Decreases the capacity during given date for the given roomtype.
 	 * @return
 	 * 0 if successful
 	 * 1 if roomType invalid
