@@ -551,17 +551,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public List<String> getActiveBookings() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
@@ -606,25 +595,25 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public int addServiceNotes(int roomID, List<String> serviceNote) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.getBookingHandler().exists(this.getBookingHandler().getBooking(roomID).getBookingRef())){
+			return this.bookingHandler.getBooking(roomID).setServices(serviceNote);
+		} else {
+			return -1;
+		}
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public int RemoveServiceNotes(int roomID, List<String> serviceNote) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.getBookingHandler().exists(this.getBookingHandler().getBooking(roomID).getBookingRef())){
+			return this.bookingHandler.getBooking(roomID).getServiceNotes().removeServices(serviceNotes); //TODO add method
+		}
 	}
 
 	/**
