@@ -234,13 +234,16 @@ public class MaintenanceProvidesForBookingImpl extends
 	 * 
 	 * @generated NOT
 	 */
-	public boolean canBook(EList<String> roomTypeIDs, String start, String end) {
-
+	public boolean canBook(EList<String> roomTypeIDs, String start, String end, int nrOfGuests) {
 		// false if incorrect formats
 		if (start.length() != 6 && end.length() != 6) {
 			return false;
 		}
-
+		
+		if(!enoughSpace(roomTypeIDs, nrOfGuests)){
+			return false;
+		}
+		
 		DateFormat dateFormat = new SimpleDateFormat("yyMMdd");
 		String currDate = dateFormat.format(new Date());
 
@@ -280,7 +283,18 @@ public class MaintenanceProvidesForBookingImpl extends
 		}
 		return true;
 	}
-
+	
+	private boolean enoughSpace(EList<String> roomTypeIDs, int nrOfGuests){
+		int guestCap = 0;
+		for(String s : roomTypeIDs){
+			guestCap += this.roomTypes.getRoomType(s).getMaxNrOfGuests();
+		}
+		if(guestCap < nrOfGuests){
+			return false;
+		} else {
+			return true;
+		}
+	}
 
 	/**
 	 * <!-- begin-user-doc --> 
@@ -289,26 +303,26 @@ public class MaintenanceProvidesForBookingImpl extends
 	 * 
 	 * @generated NOT
 	 */
-	public int makeBooking(EList<String> roomTypeIDs, String start, String end) {
-		maintenancemodel.Calendar calendar = roomTypes.getCalendar();
-
+	public int makeBooking(EList<String> roomTypeIDs, String start, String end, int nrOfGuests) {
 		DateFormat dateFormat = new SimpleDateFormat("yyMMdd");
 		String currDate = dateFormat.format(new Date());
 
-		int startDays = this.getDaysBetween(currDate, start);
-		int endDays = this.getDaysBetween(currDate, end);
+		Calendar cal = this.roomTypes.getCalendar();
+		
+		int startDays = cal.getDaysBetween(currDate, start);
+		int endDays = cal.getDaysBetween(currDate, end);
 
 		int result = 0;
 
-		if (canBook(roomTypeIDs, start, end)) {
+		if (this.canBook(roomTypeIDs, start, end, nrOfGuests)) {
 			for (int i = 0; i < roomTypeIDs.size(); i++) {
-				calendar.decCap(startDays, endDays, roomTypeIDs.get(i), 1);
+				cal.decCap(startDays, endDays, roomTypeIDs.get(i), 1);
 				result++;
 			}
 		}
 
 		if (result == roomTypeIDs.size()) {
-			roomTypes.setCalendar(calendar);
+			this.roomTypes.setCalendar(cal);
 			return 0;
 		}
 
@@ -327,8 +341,10 @@ public class MaintenanceProvidesForBookingImpl extends
 		DateFormat dateFormat = new SimpleDateFormat("yyMMdd");
 		String currDate = dateFormat.format(new Date());
 
-		int startDays = this.getDaysBetween(currDate, start);
-		int endDays = this.getDaysBetween(currDate, end);
+		Calendar cal = this.roomTypes.getCalendar();
+		
+		int startDays = cal.getDaysBetween(currDate, start);
+		int endDays = cal.getDaysBetween(currDate, end);
 
 		maintenancemodel.Calendar copyOfCalendar = roomTypes.getCalendar();
 
@@ -338,7 +354,6 @@ public class MaintenanceProvidesForBookingImpl extends
 			if (copyOfCalendar.incCap(startDays, endDays, roomTypeID.get(i), 1) != 0) {
 				result++;
 			}
-			;
 		}
 
 		if (result == 0) {
@@ -523,10 +538,10 @@ public class MaintenanceProvidesForBookingImpl extends
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___CAN_BOOK__ELIST_STRING_STRING:
-				return canBook((EList<String>)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
-			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__ELIST_STRING_STRING:
-				return makeBooking((EList<String>)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
+			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___CAN_BOOK__ELIST_STRING_STRING_INT:
+				return canBook((EList<String>)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
+			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__ELIST_STRING_STRING_INT:
+				return makeBooking((EList<String>)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_STRING_STRING:
 				return removeBooking((EList<String>)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___SET_ACTIVE__STRING:

@@ -925,7 +925,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAINTENANCE_PROVIDES_FOR_BOOKING___CAN_BOOK__ELIST_STRING_STRING = 0;
+	int IMAINTENANCE_PROVIDES_FOR_BOOKING___CAN_BOOK__ELIST_STRING_STRING_INT = 0;
 
 	/**
 	 * The operation id for the '<em>Make Booking</em>' operation.
@@ -934,7 +934,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IMAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__ELIST_STRING_STRING = 1;
+	int IMAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__ELIST_STRING_STRING_INT = 1;
 
 	/**
 	 * The operation id for the '<em>Remove Booking</em>' operation.
@@ -1769,7 +1769,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAINTENANCE_PROVIDES_FOR_BOOKING___CAN_BOOK__ELIST_STRING_STRING = IMAINTENANCE_PROVIDES_FOR_BOOKING___CAN_BOOK__ELIST_STRING_STRING;
+	int MAINTENANCE_PROVIDES_FOR_BOOKING___CAN_BOOK__ELIST_STRING_STRING_INT = IMAINTENANCE_PROVIDES_FOR_BOOKING___CAN_BOOK__ELIST_STRING_STRING_INT;
 
 	/**
 	 * The operation id for the '<em>Make Booking</em>' operation.
@@ -1778,7 +1778,7 @@ public interface MaintenancemodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__ELIST_STRING_STRING = IMAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__ELIST_STRING_STRING;
+	int MAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__ELIST_STRING_STRING_INT = IMAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__ELIST_STRING_STRING_INT;
 
 	/**
 	 * The operation id for the '<em>Remove Booking</em>' operation.
@@ -2735,24 +2735,24 @@ public interface MaintenancemodelPackage extends EPackage {
 	EClass getIMaintenanceProvidesForBooking();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#canBook(org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String) <em>Can Book</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#canBook(org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String, int) <em>Can Book</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Can Book</em>' operation.
-	 * @see maintenancemodel.IMaintenanceProvidesForBooking#canBook(org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String)
+	 * @see maintenancemodel.IMaintenanceProvidesForBooking#canBook(org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String, int)
 	 * @generated
 	 */
-	EOperation getIMaintenanceProvidesForBooking__CanBook__EList_String_String();
+	EOperation getIMaintenanceProvidesForBooking__CanBook__EList_String_String_int();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#makeBooking(org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String) <em>Make Booking</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#makeBooking(org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String, int) <em>Make Booking</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Make Booking</em>' operation.
-	 * @see maintenancemodel.IMaintenanceProvidesForBooking#makeBooking(org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String)
+	 * @see maintenancemodel.IMaintenanceProvidesForBooking#makeBooking(org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String, int)
 	 * @generated
 	 */
-	EOperation getIMaintenanceProvidesForBooking__MakeBooking__EList_String_String();
+	EOperation getIMaintenanceProvidesForBooking__MakeBooking__EList_String_String_int();
 
 	/**
 	 * Returns the meta object for the '{@link maintenancemodel.IMaintenanceProvidesForBooking#removeBooking(org.eclipse.emf.common.util.EList, java.lang.String, java.lang.String) <em>Remove Booking</em>}' operation.
@@ -3807,7 +3807,7 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMAINTENANCE_PROVIDES_FOR_BOOKING___CAN_BOOK__ELIST_STRING_STRING = eINSTANCE.getIMaintenanceProvidesForBooking__CanBook__EList_String_String();
+		EOperation IMAINTENANCE_PROVIDES_FOR_BOOKING___CAN_BOOK__ELIST_STRING_STRING_INT = eINSTANCE.getIMaintenanceProvidesForBooking__CanBook__EList_String_String_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Make Booking</b></em>' operation.
@@ -3815,7 +3815,7 @@ public interface MaintenancemodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IMAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__ELIST_STRING_STRING = eINSTANCE.getIMaintenanceProvidesForBooking__MakeBooking__EList_String_String();
+		EOperation IMAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__ELIST_STRING_STRING_INT = eINSTANCE.getIMaintenanceProvidesForBooking__MakeBooking__EList_String_String_int();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Booking</b></em>' operation.

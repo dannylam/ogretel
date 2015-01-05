@@ -31,6 +31,15 @@ public interface MaintenancemodelFactory extends EFactory {
 	RoomType createRoomType();
 
 	/**
+	 * Returns a new object of class '<em>Room</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Room</em>'.
+	 * @generated
+	 */
+	Room createRoom();
+
+	/**
 	 * Returns a new object of class '<em>Experience</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -47,15 +56,6 @@ public interface MaintenancemodelFactory extends EFactory {
 	 * @generated
 	 */
 	Product createProduct();
-
-	/**
-	 * Returns a new object of class '<em>Room</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Room</em>'.
-	 * @generated
-	 */
-	Room createRoom();
 
 	/**
 	 * Returns a new object of class '<em>Extra Handler</em>'.
@@ -85,15 +85,6 @@ public interface MaintenancemodelFactory extends EFactory {
 	Calendar createCalendar();
 
 	/**
-	 * Returns a new object of class '<em>Room Types Handler</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Room Types Handler</em>'.
-	 * @generated
-	 */
-	RoomTypesHandler createRoomTypesHandler();
-
-	/**
 	 * Returns a new object of class '<em>Extras Maintenance</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -110,6 +101,15 @@ public interface MaintenancemodelFactory extends EFactory {
 	 * @generated
 	 */
 	RoomMaintenance createRoomMaintenance();
+
+	/**
+	 * Returns a new object of class '<em>Room Types Handler</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Room Types Handler</em>'.
+	 * @generated
+	 */
+	RoomTypesHandler createRoomTypesHandler();
 
 	/**
 	 * Returns a new object of class '<em>Maintenance Provides For Booking</em>'.

@@ -2,6 +2,7 @@
  */
 package maintenancemodel;
 
+import java.util.Map;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
@@ -38,6 +39,16 @@ public interface Calendar extends EObject {
 	 * @generated NOT
 	 */
 	EMap<String, EList<Integer>> getStringToListsMap();
+
+	/**
+	 * Sets the value of the '{@link maintenancemodel.Calendar#getStringToListsMap <em>String To Lists Map</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>String To Lists Map</em>' map.
+	 * @see #getStringToListsMap()
+	 * @generated
+	 */
+	void setStringToListsMap(Map.Entry<String, EList<Integer>> value);
 
 	/**
 	 * Sets the value of the '{@link maintenancemodel.Calendar#getStringToListsMap <em>String To Lists Map</em>}' map.

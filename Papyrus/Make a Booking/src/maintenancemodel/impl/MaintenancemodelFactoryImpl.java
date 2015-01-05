@@ -3,18 +3,13 @@
 package maintenancemodel.impl;
 
 import java.util.Map;
-
 import maintenancemodel.*;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
@@ -138,6 +133,16 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Room createRoom() {
+		RoomImpl room = new RoomImpl();
+		return room;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Experience createExperience() {
 		ExperienceImpl experience = new ExperienceImpl();
 		return experience;
@@ -151,16 +156,6 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 	public Product createProduct() {
 		ProductImpl product = new ProductImpl();
 		return product;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Room createRoom() {
-		RoomImpl room = new RoomImpl();
-		return room;
 	}
 
 	/**
@@ -228,26 +223,6 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RoomTypesHandler createRoomTypesHandler() {
-		RoomTypesHandlerImpl roomTypesHandler = new RoomTypesHandlerImpl();
-		return roomTypesHandler;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Map.Entry<String, RoomType> createStringToRoomTypeEntry() {
-		StringToRoomTypeEntryImpl stringToRoomTypeEntry = new StringToRoomTypeEntryImpl();
-		return stringToRoomTypeEntry;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ExtrasMaintenance createExtrasMaintenance() {
 		ExtrasMaintenanceImpl extrasMaintenance = new ExtrasMaintenanceImpl();
 		return extrasMaintenance;
@@ -261,6 +236,26 @@ public class MaintenancemodelFactoryImpl extends EFactoryImpl implements Mainten
 	public RoomMaintenance createRoomMaintenance() {
 		RoomMaintenanceImpl roomMaintenance = new RoomMaintenanceImpl();
 		return roomMaintenance;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RoomTypesHandler createRoomTypesHandler() {
+		RoomTypesHandlerImpl roomTypesHandler = new RoomTypesHandlerImpl();
+		return roomTypesHandler;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Map.Entry<String, RoomType> createStringToRoomTypeEntry() {
+		StringToRoomTypeEntryImpl stringToRoomTypeEntry = new StringToRoomTypeEntryImpl();
+		return stringToRoomTypeEntry;
 	}
 
 	/**
