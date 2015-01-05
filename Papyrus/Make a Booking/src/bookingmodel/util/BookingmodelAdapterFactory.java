@@ -3,14 +3,10 @@
 package bookingmodel.util;
 
 import bookingmodel.*;
-
 import java.util.Map;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -112,6 +108,14 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseRoomIDToBookingRefEntry(Map.Entry<Integer, String> object) {
 				return createRoomIDToBookingRefEntryAdapter();
+			}
+			@Override
+			public Adapter caseCustomerEmailToBookingRefEntry(CustomerEmailToBookingRefEntry object) {
+				return createCustomerEmailToBookingRefEntryAdapter();
+			}
+			@Override
+			public Adapter caseGuestEmailToRoomIDEntry(GuestEmailToRoomIDEntry object) {
+				return createGuestEmailToRoomIDEntryAdapter();
 			}
 			@Override
 			public Adapter caseIBookingProvidesForHost(IBookingProvidesForHost object) {
@@ -392,6 +396,34 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRoomIDToBookingRefEntryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link bookingmodel.CustomerEmailToBookingRefEntry <em>Customer Email To Booking Ref Entry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see bookingmodel.CustomerEmailToBookingRefEntry
+	 * @generated
+	 */
+	public Adapter createCustomerEmailToBookingRefEntryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link bookingmodel.GuestEmailToRoomIDEntry <em>Guest Email To Room ID Entry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see bookingmodel.GuestEmailToRoomIDEntry
+	 * @generated
+	 */
+	public Adapter createGuestEmailToRoomIDEntryAdapter() {
 		return null;
 	}
 

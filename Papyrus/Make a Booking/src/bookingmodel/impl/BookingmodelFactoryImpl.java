@@ -3,16 +3,12 @@
 package bookingmodel.impl;
 
 import bookingmodel.*;
-
 import java.util.Map;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
@@ -69,6 +65,8 @@ public class BookingmodelFactoryImpl extends EFactoryImpl implements Bookingmode
 			case BookingmodelPackage.EXTRA_TO_IS_PAYED_ENTRY: return (EObject)createExtraToIsPayedEntry();
 			case BookingmodelPackage.BOOKING_HANDLER: return createBookingHandler();
 			case BookingmodelPackage.ROOM_ID_TO_BOOKING_REF_ENTRY: return (EObject)createRoomIDToBookingRefEntry();
+			case BookingmodelPackage.CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY: return createCustomerEmailToBookingRefEntry();
+			case BookingmodelPackage.GUEST_EMAIL_TO_ROOM_ID_ENTRY: return createGuestEmailToRoomIDEntry();
 			case BookingmodelPackage.BOOKING_PROVIDES: return createBookingProvides();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -217,6 +215,26 @@ public class BookingmodelFactoryImpl extends EFactoryImpl implements Bookingmode
 	public Map.Entry<Integer, String> createRoomIDToBookingRefEntry() {
 		RoomIDToBookingRefEntryImpl roomIDToBookingRefEntry = new RoomIDToBookingRefEntryImpl();
 		return roomIDToBookingRefEntry;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CustomerEmailToBookingRefEntry createCustomerEmailToBookingRefEntry() {
+		CustomerEmailToBookingRefEntryImpl customerEmailToBookingRefEntry = new CustomerEmailToBookingRefEntryImpl();
+		return customerEmailToBookingRefEntry;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GuestEmailToRoomIDEntry createGuestEmailToRoomIDEntry() {
+		GuestEmailToRoomIDEntryImpl guestEmailToRoomIDEntry = new GuestEmailToRoomIDEntryImpl();
+		return guestEmailToRoomIDEntry;
 	}
 
 	/**

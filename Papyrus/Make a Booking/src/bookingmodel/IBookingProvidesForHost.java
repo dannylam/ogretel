@@ -4,7 +4,6 @@ package bookingmodel;
 
 import java.util.List;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -24,7 +23,7 @@ public interface IBookingProvidesForHost extends EObject {
 	/**
 	 * Returns is the given booking is payed or not
 	 * @model dataType="types.Boolean" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	boolean isBookingPayed(String bookingRef);
 
@@ -89,21 +88,28 @@ public interface IBookingProvidesForHost extends EObject {
 	 * @model dataType="types.Integer" required="true" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated NOT
 	 */
-	int getRoomID(String guestEmail);
+	List<Integer> getRoomID(String guestEmail);
 
 	/**
-	 * Adds a service to the given room
-	 * @model dataType="types.Integer" required="true" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
-	 * @generated NOT
-	 */
-	int addService(int roomID, String serviceNote);
-
-	/**
-	 * Removes a service from the given room
-	 * @model dataType="types.Integer" required="true" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="types.String" serviceNoteRequired="true" serviceNoteOrdered="false"
+	 * Adds the list of service notes to a room
+	 * @model dataType="types.Integer" required="true" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="types.String" serviceNoteMany="true" serviceNoteOrdered="false"
 	 * @generated
 	 */
-	int removeService(int roomID, String serviceNote);
+	int addServiceNotes(int roomID, List<String> serviceNote);
+
+	/**
+	 * Removes the list of service notes to a room
+	 * @model dataType="types.Integer" required="true" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="types.String" serviceNoteMany="true" serviceNoteOrdered="false"
+	 * @generated
+	 */
+	int RemoveServiceNotes(int roomID, List<String> serviceNote);
+
+	/**
+	 * Adds a service(s) to the given room
+	 * @model dataType="types.Integer" required="true" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="types.String" serviceNoteMany="true" serviceNoteOrdered="false"
+	 * @generated NOT
+	 */
+	int addService(int roomID, List<String> serviceNote);
 
 	/**
 	 * Returns the service notes from a specific booking. 

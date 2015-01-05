@@ -54,6 +54,26 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	protected EMap<Integer, String> roomIDToBookingRefMap;
 
 	/**
+	 * The cached value of the '{@link #getCustomerEmailToBookingRefEntry() <em>Customer Email To Booking Ref Entry</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCustomerEmailToBookingRefEntry()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<String, EList<String>> customerEmailToBookingRefEntry;
+
+	/**
+	 * The cached value of the '{@link #getGuestEmailToRoomIDEntry() <em>Guest Email To Room ID Entry</em>}' map.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGuestEmailToRoomIDEntry()
+	 * @generated
+	 * @ordered
+	 */
+	protected EMap<String, EList<Integer>> guestEmailToRoomIDEntry;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -94,6 +114,30 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			roomIDToBookingRefMap = new EcoreEMap<Integer,String>(BookingmodelPackage.Literals.ROOM_ID_TO_BOOKING_REF_ENTRY, RoomIDToBookingRefEntryImpl.class, this, BookingmodelPackage.BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP);
 		}
 		return roomIDToBookingRefMap;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EMap<String, EList<String>> getCustomerEmailToBookingRefEntry() {
+		if (customerEmailToBookingRefEntry == null) {
+			customerEmailToBookingRefEntry = new EcoreEMap<String,EList<String>>(BookingmodelPackage.Literals.CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY, CustomerEmailToBookingRefEntryImpl.class, this, BookingmodelPackage.BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY);
+		}
+		return customerEmailToBookingRefEntry;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EMap<String, EList<Integer>> getGuestEmailToRoomIDEntry() {
+		if (guestEmailToRoomIDEntry == null) {
+			guestEmailToRoomIDEntry = new EcoreEMap<String,EList<Integer>>(BookingmodelPackage.Literals.GUEST_EMAIL_TO_ROOM_ID_ENTRY, GuestEmailToRoomIDEntryImpl.class, this, BookingmodelPackage.BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY);
+		}
+		return guestEmailToRoomIDEntry;
 	}
 
 	/**
@@ -198,6 +242,10 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return ((InternalEList<?>)getBookingsMap()).basicRemove(otherEnd, msgs);
 			case BookingmodelPackage.BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP:
 				return ((InternalEList<?>)getRoomIDToBookingRefMap()).basicRemove(otherEnd, msgs);
+			case BookingmodelPackage.BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY:
+				return ((InternalEList<?>)getCustomerEmailToBookingRefEntry()).basicRemove(otherEnd, msgs);
+			case BookingmodelPackage.BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY:
+				return ((InternalEList<?>)getGuestEmailToRoomIDEntry()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -216,6 +264,12 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			case BookingmodelPackage.BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP:
 				if (coreType) return getRoomIDToBookingRefMap();
 				else return getRoomIDToBookingRefMap().map();
+			case BookingmodelPackage.BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY:
+				if (coreType) return getCustomerEmailToBookingRefEntry();
+				else return getCustomerEmailToBookingRefEntry().map();
+			case BookingmodelPackage.BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY:
+				if (coreType) return getGuestEmailToRoomIDEntry();
+				else return getGuestEmailToRoomIDEntry().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -233,6 +287,12 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case BookingmodelPackage.BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP:
 				((EStructuralFeature.Setting)getRoomIDToBookingRefMap()).set(newValue);
+				return;
+			case BookingmodelPackage.BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY:
+				((EStructuralFeature.Setting)getCustomerEmailToBookingRefEntry()).set(newValue);
+				return;
+			case BookingmodelPackage.BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY:
+				((EStructuralFeature.Setting)getGuestEmailToRoomIDEntry()).set(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -252,6 +312,12 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			case BookingmodelPackage.BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP:
 				getRoomIDToBookingRefMap().clear();
 				return;
+			case BookingmodelPackage.BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY:
+				getCustomerEmailToBookingRefEntry().clear();
+				return;
+			case BookingmodelPackage.BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY:
+				getGuestEmailToRoomIDEntry().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -268,6 +334,10 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return bookingsMap != null && !bookingsMap.isEmpty();
 			case BookingmodelPackage.BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP:
 				return roomIDToBookingRefMap != null && !roomIDToBookingRefMap.isEmpty();
+			case BookingmodelPackage.BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY:
+				return customerEmailToBookingRefEntry != null && !customerEmailToBookingRefEntry.isEmpty();
+			case BookingmodelPackage.BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY:
+				return guestEmailToRoomIDEntry != null && !guestEmailToRoomIDEntry.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

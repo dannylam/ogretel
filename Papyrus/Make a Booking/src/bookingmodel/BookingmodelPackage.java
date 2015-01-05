@@ -942,13 +942,31 @@ public interface BookingmodelPackage extends EPackage {
 	int BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP = 1;
 
 	/**
+	 * The feature id for the '<em><b>Customer Email To Booking Ref Entry</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY = 2;
+
+	/**
+	 * The feature id for the '<em><b>Guest Email To Room ID Entry</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY = 3;
+
+	/**
 	 * The number of structural features of the '<em>Booking Handler</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_HANDLER_FEATURE_COUNT = 2;
+	int BOOKING_HANDLER_FEATURE_COUNT = 4;
 
 	/**
 	 * The operation id for the '<em>Exists</em>' operation.
@@ -1030,7 +1048,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @see bookingmodel.impl.BookingmodelPackageImpl#getIBookingProvidesForHost()
 	 * @generated
 	 */
-	int IBOOKING_PROVIDES_FOR_HOST = 11;
+	int IBOOKING_PROVIDES_FOR_HOST = 13;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.IBookingProvidesForCustomer <em>IBooking Provides For Customer</em>}' class.
@@ -1040,7 +1058,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @see bookingmodel.impl.BookingmodelPackageImpl#getIBookingProvidesForCustomer()
 	 * @generated
 	 */
-	int IBOOKING_PROVIDES_FOR_CUSTOMER = 12;
+	int IBOOKING_PROVIDES_FOR_CUSTOMER = 14;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.IBookingProvidesForGuest <em>IBooking Provides For Guest</em>}' class.
@@ -1050,7 +1068,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @see bookingmodel.impl.BookingmodelPackageImpl#getIBookingProvidesForGuest()
 	 * @generated
 	 */
-	int IBOOKING_PROVIDES_FOR_GUEST = 15;
+	int IBOOKING_PROVIDES_FOR_GUEST = 17;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.impl.BookingProvidesImpl <em>Booking Provides</em>}' class.
@@ -1060,7 +1078,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @see bookingmodel.impl.BookingmodelPackageImpl#getBookingProvides()
 	 * @generated
 	 */
-	int BOOKING_PROVIDES = 16;
+	int BOOKING_PROVIDES = 18;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.impl.RoomIDToBookingRefEntryImpl <em>Room ID To Booking Ref Entry</em>}' class.
@@ -1107,6 +1125,98 @@ public interface BookingmodelPackage extends EPackage {
 	 * @ordered
 	 */
 	int ROOM_ID_TO_BOOKING_REF_ENTRY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link bookingmodel.impl.CustomerEmailToBookingRefEntryImpl <em>Customer Email To Booking Ref Entry</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see bookingmodel.impl.CustomerEmailToBookingRefEntryImpl
+	 * @see bookingmodel.impl.BookingmodelPackageImpl#getCustomerEmailToBookingRefEntry()
+	 * @generated
+	 */
+	int CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY = 11;
+
+	/**
+	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY__KEY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Customer Email To Booking Ref Entry</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Customer Email To Booking Ref Entry</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link bookingmodel.impl.GuestEmailToRoomIDEntryImpl <em>Guest Email To Room ID Entry</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see bookingmodel.impl.GuestEmailToRoomIDEntryImpl
+	 * @see bookingmodel.impl.BookingmodelPackageImpl#getGuestEmailToRoomIDEntry()
+	 * @generated
+	 */
+	int GUEST_EMAIL_TO_ROOM_ID_ENTRY = 12;
+
+	/**
+	 * The feature id for the '<em><b>Key</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GUEST_EMAIL_TO_ROOM_ID_ENTRY__KEY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GUEST_EMAIL_TO_ROOM_ID_ENTRY__VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Guest Email To Room ID Entry</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GUEST_EMAIL_TO_ROOM_ID_ENTRY_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Guest Email To Room ID Entry</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GUEST_EMAIL_TO_ROOM_ID_ENTRY_OPERATION_COUNT = 0;
 
 	/**
 	 * The number of structural features of the '<em>IBooking Provides For Host</em>' class.
@@ -1208,22 +1318,22 @@ public interface BookingmodelPackage extends EPackage {
 	int IBOOKING_PROVIDES_FOR_HOST___GET_ROOM_ID__STRING = 9;
 
 	/**
-	 * The operation id for the '<em>Add Service</em>' operation.
+	 * The operation id for the '<em>Add Service Notes</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_HOST___ADD_SERVICE__INT_STRING = 10;
+	int IBOOKING_PROVIDES_FOR_HOST___ADD_SERVICE_NOTES__INT_ELIST = 10;
 
 	/**
-	 * The operation id for the '<em>Remove Service</em>' operation.
+	 * The operation id for the '<em>Remove Service Notes</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_HOST___REMOVE_SERVICE__INT_STRING = 11;
+	int IBOOKING_PROVIDES_FOR_HOST___REMOVE_SERVICE_NOTES__INT_ELIST = 11;
 
 	/**
 	 * The number of operations of the '<em>IBooking Provides For Host</em>' class.
@@ -1242,7 +1352,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @see bookingmodel.impl.BookingmodelPackageImpl#getBookingInfo()
 	 * @generated
 	 */
-	int BOOKING_INFO = 13;
+	int BOOKING_INFO = 15;
 
 	/**
 	 * The number of structural features of the '<em>Booking Info</em>' class.
@@ -1612,7 +1722,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @see bookingmodel.impl.BookingmodelPackageImpl#getCustomerInfo()
 	 * @generated
 	 */
-	int CUSTOMER_INFO = 14;
+	int CUSTOMER_INFO = 16;
 
 	/**
 	 * The number of structural features of the '<em>Customer Info</em>' class.
@@ -2164,22 +2274,22 @@ public interface BookingmodelPackage extends EPackage {
 	int BOOKING_PROVIDES___GET_ROOM_ID__STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 13;
 
 	/**
-	 * The operation id for the '<em>Add Service</em>' operation.
+	 * The operation id for the '<em>Add Service Notes</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___ADD_SERVICE__INT_STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 14;
+	int BOOKING_PROVIDES___ADD_SERVICE_NOTES__INT_ELIST = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 14;
 
 	/**
-	 * The operation id for the '<em>Remove Service</em>' operation.
+	 * The operation id for the '<em>Remove Service Notes</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___REMOVE_SERVICE__INT_STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 15;
+	int BOOKING_PROVIDES___REMOVE_SERVICE_NOTES__INT_ELIST = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 15;
 
 	/**
 	 * The operation id for the '<em>String To List</em>' operation.
@@ -2207,7 +2317,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @see bookingmodel.impl.BookingmodelPackageImpl#getGuestTypes()
 	 * @generated
 	 */
-	int GUEST_TYPES = 17;
+	int GUEST_TYPES = 19;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.PaymentMethod <em>Payment Method</em>}' enum.
@@ -2217,7 +2327,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @see bookingmodel.impl.BookingmodelPackageImpl#getPaymentMethod()
 	 * @generated
 	 */
-	int PAYMENT_METHOD = 18;
+	int PAYMENT_METHOD = 20;
 
 
 	/**
@@ -2936,6 +3046,28 @@ public interface BookingmodelPackage extends EPackage {
 	EReference getBookingHandler_RoomIDToBookingRefMap();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link bookingmodel.BookingHandler#getCustomerEmailToBookingRefEntry <em>Customer Email To Booking Ref Entry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Customer Email To Booking Ref Entry</em>'.
+	 * @see bookingmodel.BookingHandler#getCustomerEmailToBookingRefEntry()
+	 * @see #getBookingHandler()
+	 * @generated
+	 */
+	EReference getBookingHandler_CustomerEmailToBookingRefEntry();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link bookingmodel.BookingHandler#getGuestEmailToRoomIDEntry <em>Guest Email To Room ID Entry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Guest Email To Room ID Entry</em>'.
+	 * @see bookingmodel.BookingHandler#getGuestEmailToRoomIDEntry()
+	 * @see #getBookingHandler()
+	 * @generated
+	 */
+	EReference getBookingHandler_GuestEmailToRoomIDEntry();
+
+	/**
 	 * Returns the meta object for the '{@link bookingmodel.BookingHandler#exists(java.lang.String) <em>Exists</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3116,24 +3248,24 @@ public interface BookingmodelPackage extends EPackage {
 	EOperation getIBookingProvidesForHost__GetRoomID__String();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#addService(int, java.lang.String) <em>Add Service</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#addServiceNotes(int, org.eclipse.emf.common.util.EList) <em>Add Service Notes</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Service</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForHost#addService(int, java.lang.String)
+	 * @return the meta object for the '<em>Add Service Notes</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForHost#addServiceNotes(int, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getIBookingProvidesForHost__AddService__int_String();
+	EOperation getIBookingProvidesForHost__AddServiceNotes__int_EList();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#removeService(int, java.lang.String) <em>Remove Service</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForHost#RemoveServiceNotes(int, org.eclipse.emf.common.util.EList) <em>Remove Service Notes</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Service</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForHost#removeService(int, java.lang.String)
+	 * @return the meta object for the '<em>Remove Service Notes</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForHost#RemoveServiceNotes(int, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getIBookingProvidesForHost__RemoveService__int_String();
+	EOperation getIBookingProvidesForHost__RemoveServiceNotes__int_EList();
 
 	/**
 	 * Returns the meta object for class '{@link bookingmodel.IBookingProvidesForCustomer <em>IBooking Provides For Customer</em>}'.
@@ -3549,6 +3681,70 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRoomIDToBookingRefEntry_Value();
+
+	/**
+	 * Returns the meta object for class '{@link bookingmodel.CustomerEmailToBookingRefEntry <em>Customer Email To Booking Ref Entry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Customer Email To Booking Ref Entry</em>'.
+	 * @see bookingmodel.CustomerEmailToBookingRefEntry
+	 * @generated
+	 */
+	EClass getCustomerEmailToBookingRefEntry();
+
+	/**
+	 * Returns the meta object for the attribute '{@link bookingmodel.CustomerEmailToBookingRefEntry#getKey <em>Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Key</em>'.
+	 * @see bookingmodel.CustomerEmailToBookingRefEntry#getKey()
+	 * @see #getCustomerEmailToBookingRefEntry()
+	 * @generated
+	 */
+	EAttribute getCustomerEmailToBookingRefEntry_Key();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link bookingmodel.CustomerEmailToBookingRefEntry#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Value</em>'.
+	 * @see bookingmodel.CustomerEmailToBookingRefEntry#getValue()
+	 * @see #getCustomerEmailToBookingRefEntry()
+	 * @generated
+	 */
+	EAttribute getCustomerEmailToBookingRefEntry_Value();
+
+	/**
+	 * Returns the meta object for class '{@link bookingmodel.GuestEmailToRoomIDEntry <em>Guest Email To Room ID Entry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Guest Email To Room ID Entry</em>'.
+	 * @see bookingmodel.GuestEmailToRoomIDEntry
+	 * @generated
+	 */
+	EClass getGuestEmailToRoomIDEntry();
+
+	/**
+	 * Returns the meta object for the attribute '{@link bookingmodel.GuestEmailToRoomIDEntry#getKey <em>Key</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Key</em>'.
+	 * @see bookingmodel.GuestEmailToRoomIDEntry#getKey()
+	 * @see #getGuestEmailToRoomIDEntry()
+	 * @generated
+	 */
+	EAttribute getGuestEmailToRoomIDEntry_Key();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link bookingmodel.GuestEmailToRoomIDEntry#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Value</em>'.
+	 * @see bookingmodel.GuestEmailToRoomIDEntry#getValue()
+	 * @see #getGuestEmailToRoomIDEntry()
+	 * @generated
+	 */
+	EAttribute getGuestEmailToRoomIDEntry_Value();
 
 	/**
 	 * Returns the meta object for enum '{@link bookingmodel.GuestTypes <em>Guest Types</em>}'.
@@ -4150,6 +4346,22 @@ public interface BookingmodelPackage extends EPackage {
 		EReference BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP = eINSTANCE.getBookingHandler_RoomIDToBookingRefMap();
 
 		/**
+		 * The meta object literal for the '<em><b>Customer Email To Booking Ref Entry</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY = eINSTANCE.getBookingHandler_CustomerEmailToBookingRefEntry();
+
+		/**
+		 * The meta object literal for the '<em><b>Guest Email To Room ID Entry</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY = eINSTANCE.getBookingHandler_GuestEmailToRoomIDEntry();
+
+		/**
 		 * The meta object literal for the '<em><b>Exists</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4296,20 +4508,20 @@ public interface BookingmodelPackage extends EPackage {
 		EOperation IBOOKING_PROVIDES_FOR_HOST___GET_ROOM_ID__STRING = eINSTANCE.getIBookingProvidesForHost__GetRoomID__String();
 
 		/**
-		 * The meta object literal for the '<em><b>Add Service</b></em>' operation.
+		 * The meta object literal for the '<em><b>Add Service Notes</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_PROVIDES_FOR_HOST___ADD_SERVICE__INT_STRING = eINSTANCE.getIBookingProvidesForHost__AddService__int_String();
+		EOperation IBOOKING_PROVIDES_FOR_HOST___ADD_SERVICE_NOTES__INT_ELIST = eINSTANCE.getIBookingProvidesForHost__AddServiceNotes__int_EList();
 
 		/**
-		 * The meta object literal for the '<em><b>Remove Service</b></em>' operation.
+		 * The meta object literal for the '<em><b>Remove Service Notes</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_PROVIDES_FOR_HOST___REMOVE_SERVICE__INT_STRING = eINSTANCE.getIBookingProvidesForHost__RemoveService__int_String();
+		EOperation IBOOKING_PROVIDES_FOR_HOST___REMOVE_SERVICE_NOTES__INT_ELIST = eINSTANCE.getIBookingProvidesForHost__RemoveServiceNotes__int_EList();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.IBookingProvidesForCustomer <em>IBooking Provides For Customer</em>}' class.
@@ -4650,6 +4862,58 @@ public interface BookingmodelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ROOM_ID_TO_BOOKING_REF_ENTRY__VALUE = eINSTANCE.getRoomIDToBookingRefEntry_Value();
+
+		/**
+		 * The meta object literal for the '{@link bookingmodel.impl.CustomerEmailToBookingRefEntryImpl <em>Customer Email To Booking Ref Entry</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see bookingmodel.impl.CustomerEmailToBookingRefEntryImpl
+		 * @see bookingmodel.impl.BookingmodelPackageImpl#getCustomerEmailToBookingRefEntry()
+		 * @generated
+		 */
+		EClass CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY = eINSTANCE.getCustomerEmailToBookingRefEntry();
+
+		/**
+		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY__KEY = eINSTANCE.getCustomerEmailToBookingRefEntry_Key();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY__VALUE = eINSTANCE.getCustomerEmailToBookingRefEntry_Value();
+
+		/**
+		 * The meta object literal for the '{@link bookingmodel.impl.GuestEmailToRoomIDEntryImpl <em>Guest Email To Room ID Entry</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see bookingmodel.impl.GuestEmailToRoomIDEntryImpl
+		 * @see bookingmodel.impl.BookingmodelPackageImpl#getGuestEmailToRoomIDEntry()
+		 * @generated
+		 */
+		EClass GUEST_EMAIL_TO_ROOM_ID_ENTRY = eINSTANCE.getGuestEmailToRoomIDEntry();
+
+		/**
+		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GUEST_EMAIL_TO_ROOM_ID_ENTRY__KEY = eINSTANCE.getGuestEmailToRoomIDEntry_Key();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GUEST_EMAIL_TO_ROOM_ID_ENTRY__VALUE = eINSTANCE.getGuestEmailToRoomIDEntry_Value();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.GuestTypes <em>Guest Types</em>}' enum.

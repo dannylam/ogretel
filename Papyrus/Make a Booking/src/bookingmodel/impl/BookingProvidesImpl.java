@@ -559,7 +559,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public List<String> getActiveBookings() {
+	public EList<String> getActiveBookings() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -606,7 +606,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getRoomID(String guestEmail) {
+	public List<Integer> getRoomID(String guestEmail) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -617,7 +617,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int addService(int roomID, String serviceNote) {
+	public int addServiceNotes(int roomID, EList<String> serviceNote) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -628,7 +628,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int removeService(int roomID, String serviceNote) {
+	public int RemoveServiceNotes(int roomID, EList<String> serviceNote) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -686,8 +686,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * {@inheritDoc}
-	 * Removes the booking
-	 * @param bookingRef
 	 * Bookingreference
 	 * @generated NOT
 	 */
@@ -930,8 +928,8 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___IS_CHECKED_IN__INT: return BookingmodelPackage.BOOKING_PROVIDES___IS_CHECKED_IN__INT;
 				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___GET_RESPONSIBLE_GUEST__INT: return BookingmodelPackage.BOOKING_PROVIDES___GET_RESPONSIBLE_GUEST__INT;
 				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___GET_ROOM_ID__STRING: return BookingmodelPackage.BOOKING_PROVIDES___GET_ROOM_ID__STRING;
-				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___ADD_SERVICE__INT_STRING: return BookingmodelPackage.BOOKING_PROVIDES___ADD_SERVICE__INT_STRING;
-				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___REMOVE_SERVICE__INT_STRING: return BookingmodelPackage.BOOKING_PROVIDES___REMOVE_SERVICE__INT_STRING;
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___ADD_SERVICE_NOTES__INT_ELIST: return BookingmodelPackage.BOOKING_PROVIDES___ADD_SERVICE_NOTES__INT_ELIST;
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___REMOVE_SERVICE_NOTES__INT_ELIST: return BookingmodelPackage.BOOKING_PROVIDES___REMOVE_SERVICE_NOTES__INT_ELIST;
 				default: return -1;
 			}
 		}
@@ -964,8 +962,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 			case BookingmodelPackage.BOOKING_PROVIDES___GET_SERVICE_NOTES__STRING:
 				return getServiceNotes((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_PROVIDES___GET_BOOKING_REF__STRING:
-				getBookingRef((String)arguments.get(0));
-				return null;
+				return getBookingRef((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_PROVIDES___GET_CUSTOMER_NAME__STRING:
 				return getCustomerName((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_PROVIDES___GET_CUSTOMER_LAST_NAME__STRING:
@@ -1030,10 +1027,10 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 				return getResponsibleGuest((Integer)arguments.get(0));
 			case BookingmodelPackage.BOOKING_PROVIDES___GET_ROOM_ID__STRING:
 				return getRoomID((String)arguments.get(0));
-			case BookingmodelPackage.BOOKING_PROVIDES___ADD_SERVICE__INT_STRING:
-				return addService((Integer)arguments.get(0), (String)arguments.get(1));
-			case BookingmodelPackage.BOOKING_PROVIDES___REMOVE_SERVICE__INT_STRING:
-				return removeService((Integer)arguments.get(0), (String)arguments.get(1));
+			case BookingmodelPackage.BOOKING_PROVIDES___ADD_SERVICE_NOTES__INT_ELIST:
+				return addServiceNotes((Integer)arguments.get(0), (EList<String>)arguments.get(1));
+			case BookingmodelPackage.BOOKING_PROVIDES___REMOVE_SERVICE_NOTES__INT_ELIST:
+				return RemoveServiceNotes((Integer)arguments.get(0), (EList<String>)arguments.get(1));
 			case BookingmodelPackage.BOOKING_PROVIDES___STRING_TO_LIST__STRING:
 				return stringToList((String)arguments.get(0));
 		}
