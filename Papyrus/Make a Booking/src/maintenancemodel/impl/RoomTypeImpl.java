@@ -205,7 +205,7 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 */
 	private RoomTypeEnum stringToRoomTypeEnum(String roomTypeEnum){
 		
-		switch(roomTypeEnum){
+		switch(roomTypeEnum.toLowerCase()){
 		case "doublebed":
 			return RoomTypeEnum.DOUBLEBED;
 		case "singlebed":

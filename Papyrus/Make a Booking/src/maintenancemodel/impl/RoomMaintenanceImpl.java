@@ -82,9 +82,11 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	public RoomTypesHandler getRoomTypes() {
 		return roomTypes;
@@ -113,9 +115,11 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setRoomTypes(RoomTypesHandler newRoomTypes) {
 		if (newRoomTypes != roomTypes) {
@@ -144,9 +148,11 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	public RoomHandler getRooms() {
 		return rooms;
@@ -175,9 +181,11 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setRooms(RoomHandler newRooms) {
 		if (newRooms != rooms) {
@@ -206,7 +214,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 * <!-- begin-user-doc --> 
 	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public int addRoom(int roomID, String roomTypeID) {
@@ -221,8 +231,10 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 		return result;
 	}
 
-	/**
+	/** 
+	 * <!-- begin-user-doc --> 
 	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public int removeRoom(int roomID) {
@@ -235,7 +247,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 * <!-- begin-user-doc --> 
 	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public int addRoomType(String roomTypeID, String roomTypeEnum, int price,
@@ -255,7 +269,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -288,8 +304,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 * <!-- begin-user-doc --> 
 	 * {@inheritDoc}
-	 * 
+	 * <!-- end-user-doc --> 
 	 * @generated NOT
 	 */
 	public int editRoomType(String roomTypeID, String roomTypeEnum, int price,
@@ -321,7 +338,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -333,8 +352,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 * <!-- begin-user-doc --> 
 	 * {@inheritDoc}
-	 * 
+	 * <!-- end-user-doc --> 
 	 * @generated NOT
 	 */
 	public EList<String> getRoomStatuses() {
@@ -349,8 +369,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 * <!-- begin-user-doc --> 
 	 * {@inheritDoc}
-	 * 
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public String getRoomTypeEnum(String roomTypeID) {
@@ -363,7 +384,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -375,7 +398,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -387,7 +412,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -399,8 +426,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 * <!-- begin-user-doc --> 
 	 * {@inheritDoc}
-	 * 
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public String getRoomTypeID(int roomID) {
@@ -411,8 +439,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 * <!-- begin-user-doc --> 
 	 * {@inheritDoc}
-	 * 
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public EList<String> getRoomTypeEnums() {
@@ -420,7 +449,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -433,7 +464,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -445,7 +478,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -456,7 +491,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
