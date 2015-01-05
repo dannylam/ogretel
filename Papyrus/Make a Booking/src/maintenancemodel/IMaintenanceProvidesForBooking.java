@@ -41,7 +41,7 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 	 * 1 if any String entry in the List couldn't be added to the system.
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDsDataType="org.eclipse.uml2.types.String" roomTypeIDsRequired="true" roomTypeIDsMany="true" roomTypeIDsOrdered="false" startDataType="org.eclipse.uml2.types.String" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.String" endRequired="true" endOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int makeBooking(EList<String> roomTypeIDs, String start, String end);
 
@@ -53,7 +53,7 @@ public interface IMaintenanceProvidesForBooking extends EObject {
 	 * 1 if any String entry in the List is doesn't match with the start and end date. 
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDMany="true" roomTypeIDOrdered="false" startDataType="org.eclipse.uml2.types.String" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.String" endRequired="true" endOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int removeBooking(EList<String> roomTypeID, String start, String end);
 
