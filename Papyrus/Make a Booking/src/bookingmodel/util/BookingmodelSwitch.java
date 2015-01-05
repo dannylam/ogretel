@@ -145,6 +145,20 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 			case BookingmodelPackage.IBOOKING_PROVIDES_FOR_CUSTOMER: {
 				IBookingProvidesForCustomer iBookingProvidesForCustomer = (IBookingProvidesForCustomer)theEObject;
 				T result = caseIBookingProvidesForCustomer(iBookingProvidesForCustomer);
+				if (result == null) result = caseBookingInfo(iBookingProvidesForCustomer);
+				if (result == null) result = caseCustomerInfo(iBookingProvidesForCustomer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BookingmodelPackage.BOOKING_INFO: {
+				BookingInfo bookingInfo = (BookingInfo)theEObject;
+				T result = caseBookingInfo(bookingInfo);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BookingmodelPackage.CUSTOMER_INFO: {
+				CustomerInfo customerInfo = (CustomerInfo)theEObject;
+				T result = caseCustomerInfo(customerInfo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -160,6 +174,8 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseIBookingProvidesForCustomer(bookingProvides);
 				if (result == null) result = caseIBookingProvidesForGuest(bookingProvides);
 				if (result == null) result = caseIBookingProvidesForHost(bookingProvides);
+				if (result == null) result = caseBookingInfo(bookingProvides);
+				if (result == null) result = caseCustomerInfo(bookingProvides);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -344,6 +360,36 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIBookingProvidesForCustomer(IBookingProvidesForCustomer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Booking Info</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Booking Info</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBookingInfo(BookingInfo object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Customer Info</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Customer Info</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCustomerInfo(CustomerInfo object) {
 		return null;
 	}
 

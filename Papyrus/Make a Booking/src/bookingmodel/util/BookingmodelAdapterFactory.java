@@ -122,6 +122,14 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 				return createIBookingProvidesForCustomerAdapter();
 			}
 			@Override
+			public Adapter caseBookingInfo(BookingInfo object) {
+				return createBookingInfoAdapter();
+			}
+			@Override
+			public Adapter caseCustomerInfo(CustomerInfo object) {
+				return createCustomerInfoAdapter();
+			}
+			@Override
 			public Adapter caseIBookingProvidesForGuest(IBookingProvidesForGuest object) {
 				return createIBookingProvidesForGuestAdapter();
 			}
@@ -314,6 +322,34 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIBookingProvidesForCustomerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link bookingmodel.BookingInfo <em>Booking Info</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see bookingmodel.BookingInfo
+	 * @generated
+	 */
+	public Adapter createBookingInfoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link bookingmodel.CustomerInfo <em>Customer Info</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see bookingmodel.CustomerInfo
+	 * @generated
+	 */
+	public Adapter createCustomerInfoAdapter() {
 		return null;
 	}
 
