@@ -105,13 +105,6 @@ public interface IBookingProvidesForHost extends EObject {
 	int RemoveServiceNotes(int roomID, List<String> serviceNote);
 
 	/**
-	 * Adds a service(s) to the given room
-	 * @model dataType="types.Integer" required="true" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="types.String" serviceNoteMany="true" serviceNoteOrdered="false"
-	 * @generated NOT
-	 */
-	int addService(int roomID, List<String> serviceNote);
-
-	/**
 	 * Returns the service notes from a specific booking. 
 	 * @model dataType="types.String" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
