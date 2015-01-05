@@ -43,7 +43,7 @@ public interface ExtraHandler extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Checks if the extra exists in the system.
+	 * Returns if the element exists or not.
 	 * @return true if there is a Extra with extraID given by inparam
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" extraIDDataType="org.eclipse.uml2.types.String" extraIDRequired="true" extraIDOrdered="false"
@@ -53,10 +53,18 @@ public interface ExtraHandler extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Adds an extra to the system
-	 * @return
-	 * 0 if successful
-	 * 1 if not successful
+	 * Adds an extra to the Map
+	 * @param extraID 
+	 * 		The extras ID
+	 * @param price
+	 * 		How muck an extra will cost
+	 * @param name
+	 * 		What the Extra is called
+	 * @param description
+	 * 		A short text to describe the extra.
+	 * @param isProduct
+	 * 		If true, the extra should be a product, else it is an experience.
+	 * @return returns 1 if the ID already exists. Returns 0 if ok.
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extraIDDataType="org.eclipse.uml2.types.String" extraIDRequired="true" extraIDOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" nameDataType="org.eclipse.uml2.types.String" nameRequired="true" nameOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false" isProductDataType="org.eclipse.uml2.types.Boolean" isProductRequired="true" isProductOrdered="false"
 	 * @generated NOT
@@ -67,8 +75,8 @@ public interface ExtraHandler extends EObject {
 	 * <!-- begin-user-doc -->
 	 * Removes an extra from the system
 	 * @return
-	 * 0 if successul
-	 * 1 if not successful
+	 * Returns 1 if the Extra was failed to be removed.
+	 * Returns 0 if everything was successful.
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extraIDDataType="org.eclipse.uml2.types.String" extraIDRequired="true" extraIDOrdered="false"
 	 * @generated NOT
@@ -77,8 +85,8 @@ public interface ExtraHandler extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Returns an EList of extras
-	 * @return EList of extras
+	 * Returns a EList of extras
+	 * @return EList with extras
 	 * <!-- end-user-doc -->
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
 	 * @generated NOT

@@ -208,7 +208,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * {@inheritDoc}
-	 * 
 	 * @generated NOT
 	 */
 	public int addRoom(int roomID, String roomTypeID) {
@@ -225,7 +224,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * {@inheritDoc}
-	 * 
 	 * @generated NOT
 	 */
 	public int removeRoom(int roomID) {
@@ -239,7 +237,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * {@inheritDoc}
-	 * 
 	 * @generated NOT
 	 */
 	public int addRoomType(String roomTypeID, String roomTypeEnum, int price,
@@ -249,8 +246,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
-	 * 
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public int removeRoomType(String roomType) {

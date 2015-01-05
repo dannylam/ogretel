@@ -65,7 +65,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Returns the map with Extras
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -78,7 +78,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	
 	/**
 	 * <!-- begin-user-doc -->
-	 * Returns if the element exists or not.
+	 *	{@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -88,18 +88,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Adds an extra to the Map
-	 * @param extraID 
-	 * 		The extras ID
-	 * @param price
-	 * 		How muck an extra will cost
-	 * @param name
-	 * 		What the Extra is called
-	 * @param description
-	 * 		A short text to describe the extra.
-	 * @param isProduct
-	 * 		If true, the extra should be a product, else it is an experience.
-	 * @return returns 1 if the ID already exists. Returns 0 if ok.
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -124,9 +113,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * @return
-	 * 		Returns 1 if the Extra was failed to be removed.
-	 * 		Returns 0 if everything was successful.
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -141,6 +128,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -155,7 +143,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Returns null if there is no Extra with that key
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -165,8 +153,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Returns the price of the extra
-	 * @return Returns the price of the extra
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */

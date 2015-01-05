@@ -106,7 +106,7 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 	Returns the current number of spots left for an Experience
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -116,8 +116,7 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 *  Set a new number of avalible spots. If the new value is greater than number of evalible spots,
-	 *  nothing happens 
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -140,7 +139,7 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * Get the current status for an experience.
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -158,6 +157,7 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 	}
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -170,8 +170,9 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getNrOfSpotsFree() {
 		return nrOfSpotsFree;
@@ -179,8 +180,9 @@ public class ExperienceImpl extends AbstractExtraImpl implements Experience {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setNrOfSpotsFree(int newNrOfSpotsFree) {
 		int oldNrOfSpotsFree = nrOfSpotsFree;
