@@ -5,15 +5,20 @@ package bookingmodel.impl;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.List;
+
 import javax.xml.soap.SOAPException;
+
 import maintenancemodel.MaintenanceProvidesForBooking;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import bookingmodel.Booking;
 import bookingmodel.BookingHandler;
 import bookingmodel.BookingProvides;
@@ -172,7 +177,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int getNrOfGuests(String bookingRef) {
-		if (this.bookingHandler.isActive(bookingRef)) {
+		if (this.bookingHandler.exists(bookingRef)) {
 			return this.getBookingHandler().getBooking(bookingRef).getNrOfGuests();
 		}	
 		return -1;
@@ -183,7 +188,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public List<String> getExtras(String bookingRef) {
-		if (this.bookingHandler.isActive(bookingRef)) {
+		if (this.bookingHandler.exists(bookingRef)) {
 			return this.getBookingHandler().getBooking(bookingRef).getExtras();
 		}	
 		return null;
@@ -194,7 +199,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public List<Integer> getRooms(String bookingRef) {
-		if (this.bookingHandler.isActive(bookingRef)) {
+		if (this.bookingHandler.exists(bookingRef)) {
 			return this.getBookingHandler().getBooking(bookingRef).getRoomIDs();
 		}	
 		return null;
@@ -205,7 +210,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public String getPaymentMethod(String bookingRef) {
-		if (this.bookingHandler.isActive(bookingRef)) {	
+		if (this.bookingHandler.exists(bookingRef)) {	
 			return this.getBookingHandler().getBooking(bookingRef).getPaymentMethod().toString();
 		}	
 		return "Booking reference does not exist";
@@ -216,7 +221,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public List<String> getRoomTypes(String bookingRef) {
-		if (this.bookingHandler.isActive(bookingRef)) {
+		if (this.bookingHandler.exists(bookingRef)) {
 			return this.getBookingHandler().getBooking(bookingRef).getRoomTypes();
 		}	
 		return null;
@@ -227,7 +232,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public List<String> getServiceNotes(String bookingRef) {
-		if (this.bookingHandler.isActive(bookingRef)) {	
+		if (this.bookingHandler.exists(bookingRef)) {	
 			return this.getBookingHandler().getBooking(bookingRef).getServiceNotes();
 		}	
 		return null;
@@ -239,120 +244,131 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void getBookingRef(String customerEmail) {
+	public String getBookingRef(String customerEmail) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public String getCustomerName(String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.getBookingHandler().exists(bookingRef)){
+			return this.bookingHandler.getBooking(bookingRef).getCustomer().getFirstName();
+		} else {
+			return "Booking reference does not exist";
+		}
 	}
 
+
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public String getCustomerLastName(String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.getBookingHandler().exists(bookingRef)){
+			return this.bookingHandler.getBooking(bookingRef).getCustomer().getFirstName();
+		} else {
+			return "Booking reference does not exist";
+		}
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public int getCustomerAge(String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.getBookingHandler().exists(bookingRef)){
+			return this.bookingHandler.getBooking(bookingRef).getCustomer().getAge();
+		} else {
+			return -1;
+		}
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public String getCustomerEmail(String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.getBookingHandler().exists(bookingRef)){
+			return this.bookingHandler.getBooking(bookingRef).getCustomer().getEmail();
+		} else {
+			return "Booking reference does not exist";
+		}
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
-	public int getCcNr(String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public String getCcNr(String bookingRef) {
+		if(this.getBookingHandler().exists(bookingRef)){
+			return this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().getCcNr();
+		} else {
+			return "Booking reference does not exist";
+		}
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
-	public int getCcV(String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public String getCcV(String bookingRef) {
+		if(this.getBookingHandler().exists(bookingRef)){
+			return this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().getCcV();
+		} else {
+			return "Booking reference does not exist";
+		}
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public int getExpMonth(String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.getBookingHandler().exists(bookingRef)){
+			return this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().getExpMonth();
+		} else {
+			return -1;
+		}
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public int getExpYear(String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.getBookingHandler().exists(bookingRef)){
+			return this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().getExpMonth();
+		} else {
+			return -1;
+		}
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public String getCardFirstName(String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.getBookingHandler().exists(bookingRef)){
+			return this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().getFirstName();
+		} else {
+			return "Booking reference does not exist";
+		}
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public String geCardtLastName(String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.getBookingHandler().exists(bookingRef)){
+			return this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().getLastName();
+		} else {
+			return "Booking reference does not exist";
+		}
 	}
 
 	/**
@@ -412,17 +428,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 			return -1;
 		}
 		return 0;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int payExtra(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, EList<String> extra, int roomID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -496,49 +501,57 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 		return -1;
 	}
 
-
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public boolean isBookingPayed(String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.getBookingHandler().exists(bookingRef)){
+			return this.bookingHandler.getBooking(bookingRef).isPayed();
+		} else {
+			return false;
+		}
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public boolean isExtraPayed(int roomID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.getBookingHandler().exists(this.bookingHandler.getBooking(roomID).getBookingRef())){
+			return this.bookingHandler.getBooking(roomID).isPayed();
+		} else {
+			return false;
+		}
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public boolean isRoomPayed(int roomID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.getBookingHandler().exists(this.bookingHandler.getBooking(roomID).getBookingRef())){
+			return this.bookingHandler.getBooking(roomID).isPayed() || this.bookingHandler.getBooking(roomID).checkedOutRoom(roomID);
+		} else {
+			return false;
+		}
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public boolean existBooking(String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return this.bookingHandler.exists(bookingRef);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @generated NOT
+	 */
+	public List<String> getExistingBookings() {
+		String[] bookings =this.bookingHandler.getBookingsMap().entrySet().toArray(new String[0]);
+		return new BasicEList(Arrays.asList(bookings));
 	}
 
 	/**
@@ -546,54 +559,46 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getExistingBookings() {
+	public List<String> getActiveBookings() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<String> getActiveBookings() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public boolean isCheckedOut(int roomID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.getBookingHandler().exists(this.bookingHandler.getBooking(roomID).getBookingRef())){
+			return this.bookingHandler.getBooking(roomID).checkedOutRoom(roomID);
+		} else {
+			return false;
+		}
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public boolean isCheckedIn(int roomID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.getBookingHandler().exists(this.bookingHandler.getBooking(roomID).getBookingRef())){
+			return this.bookingHandler.getBooking(roomID).checkedInRoom(roomID);
+		} else {
+			return false;
+		}
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
 	public String getResponsibleGuest(int roomID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(this.getBookingHandler().exists(this.bookingHandler.getBooking(roomID).getBookingRef())){
+			return this.bookingHandler.getBooking(roomID).getRoomIDToGuestMap().get(roomID).getValue();
+		} else {
+			return "Booking reference does not exist";
+		}
 	}
 
 	/**
@@ -688,17 +693,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int removeBooking(String bookingRef) {
 		return this.getBookingHandler().removeBooking(bookingRef);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, EList<String> roomTypes, EList<String> extras, EList<String> services) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -824,17 +818,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 			return 1;
 		} 
 		return -1;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String book(String startDate, String endDate, int nrOfGuests, EList<String> roomTypes, EList<String> extras, EList<String> services) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
