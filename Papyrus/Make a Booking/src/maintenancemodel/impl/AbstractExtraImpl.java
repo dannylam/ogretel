@@ -129,7 +129,7 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 
 	/**
 	 * <!-- begin-user-doc -->
-	 *  Return the ID for the Extra
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -139,7 +139,7 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 
 	/**
 	 * <!-- begin-user-doc -->
-	 *  Set the ID for the Extra
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -152,7 +152,7 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * 	Returns the price for the Extra
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -162,7 +162,7 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 
 	/**
 	 * <!-- begin-user-doc -->
-	 *  Set the price for the Extra
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -175,7 +175,7 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 
 	/**
 	 * <!-- begin-user-doc -->
-	 *  Return a name for the Extra
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -185,7 +185,7 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 
 	/**
 	 * <!-- begin-user-doc -->
-	 *  Set a name for the Extra
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -198,7 +198,7 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 
 	/**
 	 * <!-- begin-user-doc -->
-	 *  Returns the description for the Extra
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -208,7 +208,7 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 
 	/**
 	 * <!-- begin-user-doc -->
-	 *  Set a description for an Extra
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -220,14 +220,13 @@ public abstract class AbstractExtraImpl extends MinimalEObjectImpl.Container imp
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 *  Abstract method, should be, anyhow, returns if the extra is avlible or not.
+	 * @return
+	 * true if available
+	 * false if not available
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
-	public boolean isAvailable() {
-		return false;
-	}
+	public abstract boolean isAvailable();
 
 	/**
 	 * <!-- begin-user-doc -->
