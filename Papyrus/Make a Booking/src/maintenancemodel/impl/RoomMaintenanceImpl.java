@@ -30,10 +30,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link maintenancemodel.impl.RoomMaintenanceImpl#getRoomTypes <em>Room
- * Types</em>}</li>
- * <li>{@link maintenancemodel.impl.RoomMaintenanceImpl#getRooms <em>Rooms</em>}
- * </li>
+ *   <li>{@link maintenancemodel.impl.RoomMaintenanceImpl#getRoomTypes <em>Room Types</em>}</li>
+ *   <li>{@link maintenancemodel.impl.RoomMaintenanceImpl#getRooms <em>Rooms</em>}</li>
  * </ul>
  * </p>
  *
@@ -73,7 +71,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -94,7 +91,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public NotificationChain basicSetRoomTypes(RoomTypesHandler newRoomTypes,
@@ -102,14 +98,8 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 		RoomTypesHandler oldRoomTypes = roomTypes;
 		roomTypes = newRoomTypes;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET,
-					MaintenancemodelPackage.ROOM_MAINTENANCE__ROOM_TYPES,
-					oldRoomTypes, newRoomTypes);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ROOM_MAINTENANCE__ROOM_TYPES, oldRoomTypes, newRoomTypes);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
 	}
@@ -160,7 +150,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public NotificationChain basicSetRooms(RoomHandler newRooms,
@@ -168,14 +157,8 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 		RoomHandler oldRooms = rooms;
 		rooms = newRooms;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET,
-					MaintenancemodelPackage.ROOM_MAINTENANCE__ROOMS, oldRooms,
-					newRooms);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ROOM_MAINTENANCE__ROOMS, oldRooms, newRooms);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
 	}
@@ -503,118 +486,102 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOM_TYPES:
-			return basicSetRoomTypes(null, msgs);
-		case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOMS:
-			return basicSetRooms(null, msgs);
+			case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOM_TYPES:
+				return basicSetRoomTypes(null, msgs);
+			case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOMS:
+				return basicSetRooms(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOM_TYPES:
-			return getRoomTypes();
-		case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOMS:
-			return getRooms();
+			case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOM_TYPES:
+				return getRoomTypes();
+			case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOMS:
+				return getRooms();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOM_TYPES:
-			setRoomTypes((RoomTypesHandler) newValue);
-			return;
-		case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOMS:
-			setRooms((RoomHandler) newValue);
-			return;
+			case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOM_TYPES:
+				setRoomTypes((RoomTypesHandler)newValue);
+				return;
+			case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOMS:
+				setRooms((RoomHandler)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOM_TYPES:
-			setRoomTypes((RoomTypesHandler) null);
-			return;
-		case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOMS:
-			setRooms((RoomHandler) null);
-			return;
+			case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOM_TYPES:
+				setRoomTypes((RoomTypesHandler)null);
+				return;
+			case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOMS:
+				setRooms((RoomHandler)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOM_TYPES:
-			return roomTypes != null;
-		case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOMS:
-			return rooms != null;
+			case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOM_TYPES:
+				return roomTypes != null;
+			case MaintenancemodelPackage.ROOM_MAINTENANCE__ROOMS:
+				return rooms != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public int eDerivedOperationID(int baseOperationID, Class<?> baseClass) {
 		if (baseClass == IRoomTypeMaintenance.class) {
 			switch (baseOperationID) {
-			case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_STRING:
-				return MaintenancemodelPackage.ROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_STRING;
-			case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___REMOVE_ROOM_TYPE__STRING:
-				return MaintenancemodelPackage.ROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING;
-			case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING:
-				return MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING;
-			case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_IDS:
-				return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_IDS;
-			case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_ENUM__STRING:
-				return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ENUM__STRING;
-			case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_PRICE__STRING:
-				return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_PRICE__STRING;
-			case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_MAX_NR_OF_GUESTS__STRING:
-				return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_MAX_NR_OF_GUESTS__STRING;
-			case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_DESCRIPTION__STRING:
-				return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_DESCRIPTION__STRING;
-			case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_ENUMS:
-				return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ENUMS;
-			default:
-				return -1;
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_STRING: return MaintenancemodelPackage.ROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_STRING;
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___REMOVE_ROOM_TYPE__STRING: return MaintenancemodelPackage.ROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING;
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING: return MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING;
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_IDS: return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_IDS;
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_ENUM__STRING: return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ENUM__STRING;
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_PRICE__STRING: return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_PRICE__STRING;
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_MAX_NR_OF_GUESTS__STRING: return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_MAX_NR_OF_GUESTS__STRING;
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_DESCRIPTION__STRING: return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_DESCRIPTION__STRING;
+				case MaintenancemodelPackage.IROOM_TYPE_MAINTENANCE___GET_ROOM_TYPE_ENUMS: return MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ENUMS;
+				default: return -1;
 			}
 		}
 		return super.eDerivedOperationID(baseOperationID, baseClass);
@@ -622,56 +589,48 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___ADD_ROOM__INT_STRING:
-			return addRoom((Integer) arguments.get(0),
-					(String) arguments.get(1));
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___REMOVE_ROOM__INT:
-			return removeRoom((Integer) arguments.get(0));
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM_STATUS__INT_STRING:
-			return editRoomStatus((Integer) arguments.get(0),
-					(String) arguments.get(1));
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM__INT_STRING:
-			return editRoom((Integer) arguments.get(0),
-					(String) arguments.get(1));
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_IDS:
-			return getRoomIDs();
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_STATUS__INT:
-			return getRoomStatus((Integer) arguments.get(0));
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_STATUSES:
-			return getRoomStatuses();
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ID__INT:
-			return getRoomTypeID((Integer) arguments.get(0));
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_NR_OF_ROOMSOF_TYPE__STRING:
-			return getNrOfRoomsofType((String) arguments.get(0));
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_STRING:
-			return addRoomType((String) arguments.get(0),
-					(String) arguments.get(1), (Integer) arguments.get(2),
-					(Integer) arguments.get(3), (String) arguments.get(4));
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING:
-			return removeRoomType((String) arguments.get(0));
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING:
-			return editRoomType((String) arguments.get(0),
-					(String) arguments.get(1), (Integer) arguments.get(2),
-					(Integer) arguments.get(3), (String) arguments.get(4));
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_IDS:
-			return getRoomTypeIDs();
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ENUM__STRING:
-			return getRoomTypeEnum((String) arguments.get(0));
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_PRICE__STRING:
-			return getRoomTypePrice((String) arguments.get(0));
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_MAX_NR_OF_GUESTS__STRING:
-			return getRoomTypeMaxNrOfGuests((String) arguments.get(0));
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_DESCRIPTION__STRING:
-			return getRoomTypeDescription((String) arguments.get(0));
-		case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ENUMS:
-			return getRoomTypeEnums();
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___ADD_ROOM__INT_STRING:
+				return addRoom((Integer)arguments.get(0), (String)arguments.get(1));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___REMOVE_ROOM__INT:
+				return removeRoom((Integer)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM_STATUS__INT_STRING:
+				return editRoomStatus((Integer)arguments.get(0), (String)arguments.get(1));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM__INT_STRING:
+				return editRoom((Integer)arguments.get(0), (String)arguments.get(1));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_IDS:
+				return getRoomIDs();
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_STATUS__INT:
+				return getRoomStatus((Integer)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_STATUSES:
+				return getRoomStatuses();
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ID__INT:
+				return getRoomTypeID((Integer)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_NR_OF_ROOMSOF_TYPE__STRING:
+				return getNrOfRoomsofType((String)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___ADD_ROOM_TYPE__STRING_STRING_INT_INT_STRING:
+				return addRoomType((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___REMOVE_ROOM_TYPE__STRING:
+				return removeRoomType((String)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___EDIT_ROOM_TYPE__STRING_STRING_INT_INT_STRING:
+				return editRoomType((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_IDS:
+				return getRoomTypeIDs();
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ENUM__STRING:
+				return getRoomTypeEnum((String)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_PRICE__STRING:
+				return getRoomTypePrice((String)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_MAX_NR_OF_GUESTS__STRING:
+				return getRoomTypeMaxNrOfGuests((String)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_DESCRIPTION__STRING:
+				return getRoomTypeDescription((String)arguments.get(0));
+			case MaintenancemodelPackage.ROOM_MAINTENANCE___GET_ROOM_TYPE_ENUMS:
+				return getRoomTypeEnums();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -140,4 +140,15 @@ public interface Calendar extends EObject {
 	 */
 	int removeEntry(String roomTypeID);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * @return
+	 * number of days between dates indicated by the Strings start and end
+	 * -1 if invalid input
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" startDataType="org.eclipse.uml2.types.String" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.String" endRequired="true" endOrdered="false"
+	 * @generated
+	 */
+	int getDaysBetween(String start, String end);
+
 } // Calendar

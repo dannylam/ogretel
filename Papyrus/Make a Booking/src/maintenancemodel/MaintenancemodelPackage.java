@@ -826,13 +826,22 @@ public interface MaintenancemodelPackage extends EPackage {
 	int CALENDAR___REMOVE_ENTRY__STRING = 5;
 
 	/**
+	 * The operation id for the '<em>Get Days Between</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALENDAR___GET_DAYS_BETWEEN__STRING_STRING = 6;
+
+	/**
 	 * The number of operations of the '<em>Calendar</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALENDAR_OPERATION_COUNT = 6;
+	int CALENDAR_OPERATION_COUNT = 7;
 
 	/**
 	 * The meta object id for the '{@link maintenancemodel.impl.StringToListsEntryImpl <em>String To Lists Entry</em>}' class.
@@ -1526,22 +1535,22 @@ public interface MaintenancemodelPackage extends EPackage {
 	int ROOM_TYPES_HANDLER___GET_ROOM_TYPE_ENUMS = 6;
 
 	/**
-	 * The operation id for the '<em>Add Room To Room Type</em>' operation.
+	 * The operation id for the '<em>Add Room To Room Type Entry</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPES_HANDLER___ADD_ROOM_TO_ROOM_TYPE__STRING = 7;
+	int ROOM_TYPES_HANDLER___ADD_ROOM_TO_ROOM_TYPE_ENTRY__STRING = 7;
 
 	/**
-	 * The operation id for the '<em>Remove Room From Room Type</em>' operation.
+	 * The operation id for the '<em>Remove Room From Room Type Entry</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROOM_TYPES_HANDLER___REMOVE_ROOM_FROM_ROOM_TYPE__STRING = 8;
+	int ROOM_TYPES_HANDLER___REMOVE_ROOM_FROM_ROOM_TYPE_ENTRY__STRING = 8;
 
 	/**
 	 * The number of operations of the '<em>Room Types Handler</em>' class.
@@ -2416,6 +2425,16 @@ public interface MaintenancemodelPackage extends EPackage {
 	EOperation getCalendar__RemoveEntry__String();
 
 	/**
+	 * Returns the meta object for the '{@link maintenancemodel.Calendar#getDaysBetween(java.lang.String, java.lang.String) <em>Get Days Between</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Days Between</em>' operation.
+	 * @see maintenancemodel.Calendar#getDaysBetween(java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getCalendar__GetDaysBetween__String_String();
+
+	/**
 	 * Returns the meta object for class '{@link java.util.Map.Entry <em>String To Lists Entry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2552,24 +2571,24 @@ public interface MaintenancemodelPackage extends EPackage {
 	EOperation getRoomTypesHandler__GetRoomTypeEnums();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.RoomTypesHandler#addRoomToRoomType(java.lang.String) <em>Add Room To Room Type</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.RoomTypesHandler#addRoomToRoomTypeEntry(java.lang.String) <em>Add Room To Room Type Entry</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Add Room To Room Type</em>' operation.
-	 * @see maintenancemodel.RoomTypesHandler#addRoomToRoomType(java.lang.String)
+	 * @return the meta object for the '<em>Add Room To Room Type Entry</em>' operation.
+	 * @see maintenancemodel.RoomTypesHandler#addRoomToRoomTypeEntry(java.lang.String)
 	 * @generated
 	 */
-	EOperation getRoomTypesHandler__AddRoomToRoomType__String();
+	EOperation getRoomTypesHandler__AddRoomToRoomTypeEntry__String();
 
 	/**
-	 * Returns the meta object for the '{@link maintenancemodel.RoomTypesHandler#removeRoomFromRoomType(java.lang.String) <em>Remove Room From Room Type</em>}' operation.
+	 * Returns the meta object for the '{@link maintenancemodel.RoomTypesHandler#removeRoomFromRoomTypeEntry(java.lang.String) <em>Remove Room From Room Type Entry</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Room From Room Type</em>' operation.
-	 * @see maintenancemodel.RoomTypesHandler#removeRoomFromRoomType(java.lang.String)
+	 * @return the meta object for the '<em>Remove Room From Room Type Entry</em>' operation.
+	 * @see maintenancemodel.RoomTypesHandler#removeRoomFromRoomTypeEntry(java.lang.String)
 	 * @generated
 	 */
-	EOperation getRoomTypesHandler__RemoveRoomFromRoomType__String();
+	EOperation getRoomTypesHandler__RemoveRoomFromRoomTypeEntry__String();
 
 	/**
 	 * Returns the meta object for class '{@link java.util.Map.Entry <em>String To Room Type Entry</em>}'.
@@ -3533,6 +3552,14 @@ public interface MaintenancemodelPackage extends EPackage {
 		EOperation CALENDAR___REMOVE_ENTRY__STRING = eINSTANCE.getCalendar__RemoveEntry__String();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Days Between</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CALENDAR___GET_DAYS_BETWEEN__STRING_STRING = eINSTANCE.getCalendar__GetDaysBetween__String_String();
+
+		/**
 		 * The meta object literal for the '{@link maintenancemodel.impl.StringToListsEntryImpl <em>String To Lists Entry</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3641,20 +3668,20 @@ public interface MaintenancemodelPackage extends EPackage {
 		EOperation ROOM_TYPES_HANDLER___GET_ROOM_TYPE_ENUMS = eINSTANCE.getRoomTypesHandler__GetRoomTypeEnums();
 
 		/**
-		 * The meta object literal for the '<em><b>Add Room To Room Type</b></em>' operation.
+		 * The meta object literal for the '<em><b>Add Room To Room Type Entry</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ROOM_TYPES_HANDLER___ADD_ROOM_TO_ROOM_TYPE__STRING = eINSTANCE.getRoomTypesHandler__AddRoomToRoomType__String();
+		EOperation ROOM_TYPES_HANDLER___ADD_ROOM_TO_ROOM_TYPE_ENTRY__STRING = eINSTANCE.getRoomTypesHandler__AddRoomToRoomTypeEntry__String();
 
 		/**
-		 * The meta object literal for the '<em><b>Remove Room From Room Type</b></em>' operation.
+		 * The meta object literal for the '<em><b>Remove Room From Room Type Entry</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation ROOM_TYPES_HANDLER___REMOVE_ROOM_FROM_ROOM_TYPE__STRING = eINSTANCE.getRoomTypesHandler__RemoveRoomFromRoomType__String();
+		EOperation ROOM_TYPES_HANDLER___REMOVE_ROOM_FROM_ROOM_TYPE_ENTRY__STRING = eINSTANCE.getRoomTypesHandler__RemoveRoomFromRoomTypeEntry__String();
 
 		/**
 		 * The meta object literal for the '{@link maintenancemodel.impl.StringToRoomTypeEntryImpl <em>String To Room Type Entry</em>}' class.

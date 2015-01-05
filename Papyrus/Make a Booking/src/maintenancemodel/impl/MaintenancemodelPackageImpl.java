@@ -758,6 +758,15 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getCalendar__GetDaysBetween__String_String() {
+		return calendarEClass.getEOperations().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getStringToListsEntry() {
 		return stringToListsEntryEClass;
 	}
@@ -875,7 +884,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRoomTypesHandler__AddRoomToRoomType__String() {
+	public EOperation getRoomTypesHandler__AddRoomToRoomTypeEntry__String() {
 		return roomTypesHandlerEClass.getEOperations().get(7);
 	}
 
@@ -884,7 +893,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getRoomTypesHandler__RemoveRoomFromRoomType__String() {
+	public EOperation getRoomTypesHandler__RemoveRoomFromRoomTypeEntry__String() {
 		return roomTypesHandlerEClass.getEOperations().get(8);
 	}
 
@@ -1419,6 +1428,7 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		createEOperation(calendarEClass, CALENDAR___DEC_CAP__INT_INT_STRING_INT);
 		createEOperation(calendarEClass, CALENDAR___ADD_ENTRY__STRING);
 		createEOperation(calendarEClass, CALENDAR___REMOVE_ENTRY__STRING);
+		createEOperation(calendarEClass, CALENDAR___GET_DAYS_BETWEEN__STRING_STRING);
 
 		stringToListsEntryEClass = createEClass(STRING_TO_LISTS_ENTRY);
 		createEAttribute(stringToListsEntryEClass, STRING_TO_LISTS_ENTRY__KEY);
@@ -1467,8 +1477,8 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___GET_ROOM_TYPE_IDS);
 		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___GET_ROOM_TYPE__STRING);
 		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___GET_ROOM_TYPE_ENUMS);
-		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___ADD_ROOM_TO_ROOM_TYPE__STRING);
-		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___REMOVE_ROOM_FROM_ROOM_TYPE__STRING);
+		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___ADD_ROOM_TO_ROOM_TYPE_ENTRY__STRING);
+		createEOperation(roomTypesHandlerEClass, ROOM_TYPES_HANDLER___REMOVE_ROOM_FROM_ROOM_TYPE_ENTRY__STRING);
 
 		stringToRoomTypeEntryEClass = createEClass(STRING_TO_ROOM_TYPE_ENTRY);
 		createEAttribute(stringToRoomTypeEntryEClass, STRING_TO_ROOM_TYPE_ENTRY__KEY);
@@ -1646,6 +1656,10 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 		op = initEOperation(getCalendar__RemoveEntry__String(), theTypesPackage.getInteger(), "removeEntry", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
+		op = initEOperation(getCalendar__GetDaysBetween__String_String(), theTypesPackage.getInteger(), "getDaysBetween", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "start", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "end", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(stringToListsEntryEClass, Map.Entry.class, "StringToListsEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStringToListsEntry_Key(), ecorePackage.getEString(), "key", null, 1, 1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getStringToListsEntry_Value(), ecorePackage.getEIntegerObject(), "value", null, 0, -1, Map.Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
@@ -1760,10 +1774,10 @@ public class MaintenancemodelPackageImpl extends EPackageImpl implements Mainten
 
 		initEOperation(getRoomTypesHandler__GetRoomTypeEnums(), theTypesPackage.getString(), "getRoomTypeEnums", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getRoomTypesHandler__AddRoomToRoomType__String(), theTypesPackage.getInteger(), "addRoomToRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getRoomTypesHandler__AddRoomToRoomTypeEntry__String(), theTypesPackage.getInteger(), "addRoomToRoomTypeEntry", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getRoomTypesHandler__RemoveRoomFromRoomType__String(), theTypesPackage.getInteger(), "removeRoomFromRoomType", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getRoomTypesHandler__RemoveRoomFromRoomTypeEntry__String(), theTypesPackage.getInteger(), "removeRoomFromRoomTypeEntry", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "roomTypeID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(stringToRoomTypeEntryEClass, Map.Entry.class, "StringToRoomTypeEntry", !IS_ABSTRACT, !IS_INTERFACE, !IS_GENERATED_INSTANCE_CLASS);

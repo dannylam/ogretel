@@ -30,10 +30,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link maintenancemodel.impl.RoomTypesHandlerImpl#getStringToRoomType
- * <em>String To Room Type</em>}</li>
- * <li>{@link maintenancemodel.impl.RoomTypesHandlerImpl#getCalendar <em>
- * Calendar</em>}</li>
+ *   <li>{@link maintenancemodel.impl.RoomTypesHandlerImpl#getStringToRoomType <em>String To Room Type</em>}</li>
+ *   <li>{@link maintenancemodel.impl.RoomTypesHandlerImpl#getCalendar <em>Calendar</em>}</li>
  * </ul>
  * </p>
  *
@@ -42,10 +40,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 		implements RoomTypesHandler {
 	/**
-	 * The cached value of the '{@link #getStringToRoomType()
-	 * <em>String To Room Type</em>}' map. <!-- begin-user-doc --> <!--
+	 * The cached value of the '{@link #getStringToRoomType() <em>String To Room Type</em>}' map.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @see #getStringToRoomType()
 	 * @generated
 	 * @ordered
@@ -53,9 +50,8 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	protected EMap<String, RoomType> stringToRoomType;
 
 	/**
-	 * The cached value of the '{@link #getCalendar() <em>Calendar</em>}'
-	 * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * The cached value of the '{@link #getCalendar() <em>Calendar</em>}' containment reference.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @see #getCalendar()
 	 * @generated
 	 * @ordered
@@ -73,7 +69,6 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -193,7 +188,6 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public NotificationChain basicSetCalendar(Calendar newCalendar,
@@ -201,14 +195,8 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 		Calendar oldCalendar = calendar;
 		calendar = newCalendar;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET,
-					MaintenancemodelPackage.ROOM_TYPES_HANDLER__CALENDAR,
-					oldCalendar, newCalendar);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ROOM_TYPES_HANDLER__CALENDAR, oldCalendar, newCalendar);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
 	}
@@ -337,90 +325,82 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
-			return ((InternalEList<?>) getStringToRoomType()).basicRemove(
-					otherEnd, msgs);
-		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__CALENDAR:
-			return basicSetCalendar(null, msgs);
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+				return ((InternalEList<?>)getStringToRoomType()).basicRemove(otherEnd, msgs);
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__CALENDAR:
+				return basicSetCalendar(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
-			if (coreType)
-				return getStringToRoomType();
-			else
-				return getStringToRoomType().map();
-		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__CALENDAR:
-			return getCalendar();
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+				if (coreType) return getStringToRoomType();
+				else return getStringToRoomType().map();
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__CALENDAR:
+				return getCalendar();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
-			((EStructuralFeature.Setting) getStringToRoomType()).set(newValue);
-			return;
-		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__CALENDAR:
-			setCalendar((Calendar) newValue);
-			return;
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+				((EStructuralFeature.Setting)getStringToRoomType()).set(newValue);
+				return;
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__CALENDAR:
+				setCalendar((Calendar)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
-			getStringToRoomType().clear();
-			return;
-		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__CALENDAR:
-			setCalendar((Calendar) null);
-			return;
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+				getStringToRoomType().clear();
+				return;
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__CALENDAR:
+				setCalendar((Calendar)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
-			return stringToRoomType != null && !stringToRoomType.isEmpty();
-		case MaintenancemodelPackage.ROOM_TYPES_HANDLER__CALENDAR:
-			return calendar != null;
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__STRING_TO_ROOM_TYPE:
+				return stringToRoomType != null && !stringToRoomType.isEmpty();
+			case MaintenancemodelPackage.ROOM_TYPES_HANDLER__CALENDAR:
+				return calendar != null;
 		}
 		return super.eIsSet(featureID);
 	}

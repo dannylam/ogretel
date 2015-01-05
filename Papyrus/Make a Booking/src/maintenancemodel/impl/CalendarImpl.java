@@ -260,12 +260,102 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	 * 
 	 * @generated NOT
 	 */
+	public int getDaysBetween(String date1, String date2) {
+		int year1;
+		int year2;
+		int month1;
+		int month2;
+		int day1;
+		int day2;
+		try {
+			year1 = getYear(date1);
+			month1 = getMonth(date1);
+			day1 = getDay(date1);
+
+			year2 = getYear(date2);
+			month2 = getMonth(date2);
+			day2 = getDay(date2);
+
+		} catch (NumberFormatException e) {
+			return -1;
+		}
+
+		// Validate
+		if (!isDateValid(year1, month1, day1)
+				|| !isDateValid(year2, month2, day2)) {
+			return -1;
+		}
+		
+		int dayOfYear1 = this.getDayOfYear(year1, month1, day1);
+		if(dayOfYear1 < 0){
+			return -1;
+		}
+		
+		int dayOfYear2 = this.getDayOfYear(year2, month2, day2);
+		if(dayOfYear2 < 0 || dayOfYear2 < dayOfYear1){
+			return -1;
+		}
+		
+		// Compute span
+		int dateSpan = dayOfYear2 - dayOfYear1;
+
+		return dateSpan;
+	}
+	
 	public int removeEntry(String roomTypeID) {
 		if(this.stringToListsMap.containsKey(roomTypeID)){
 			this.stringToListsMap.removeKey(roomTypeID);
 			return 0;
 		}
 		return 1;
+	}
+
+
+	private int getYear(String date) throws NumberFormatException {
+		return Integer.parseInt(date.substring(0, 2));
+	}
+
+	private int getMonth(String date) throws NumberFormatException {
+		return Integer.parseInt(date.substring(2, 4));
+	}
+
+	private int getDay(String date) throws NumberFormatException {
+		return Integer.parseInt(date.substring(4, 6));
+	}
+
+	private int getDayOfYear(int year, int month, int day) {
+		if(year < 0 || month < 0 || day < 0){
+			return -1;
+		}
+		
+		int result = day;
+
+		for (int j = 0; j < year; j++) {
+			for (int i = 0; i < month; i++) {
+				if (i == 2 || i == 4 || i == 6 || i == 7 || i == 9 || i == 11) {
+					// March, May, July, August, October, December
+					result += 31;
+				} else if (i == 3 || i == 5 || i == 8 || i == 10) {
+					// April, June, September, November
+					result += 30;
+				} else if (i == 1) {
+					// February
+					if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+						result += 29;
+					} else {
+						result += 28;
+					}
+				}
+				// January not required
+			}
+		}
+
+		return result;
+	}
+
+	private boolean isDateValid(int year, int month, int day) {
+		return year > 0 && year < 100 && month > 0 && month < 13 && day > 0
+				&& day < 32;
 	}
 
 	/**
@@ -359,6 +449,8 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 				return addEntry((String)arguments.get(0));
 			case MaintenancemodelPackage.CALENDAR___REMOVE_ENTRY__STRING:
 				return removeEntry((String)arguments.get(0));
+			case MaintenancemodelPackage.CALENDAR___GET_DAYS_BETWEEN__STRING_STRING:
+				return getDaysBetween((String)arguments.get(0), (String)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
