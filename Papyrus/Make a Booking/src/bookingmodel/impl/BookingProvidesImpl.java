@@ -610,7 +610,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
-	public int RemoveServiceNotes(int roomID, List<String> serviceNote) {
+	public int RemoveServiceNotes(int roomID, List<String> serviceNotes) {
 		if(this.getBookingHandler().exists(this.getBookingHandler().getBooking(roomID).getBookingRef())){
 			return this.bookingHandler.getBooking(roomID).getServiceNotes().removeServices(serviceNotes); //TODO add method
 		}
