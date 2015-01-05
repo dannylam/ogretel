@@ -215,7 +215,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 		int result = this.rooms.addRoom(roomID, this.roomTypes
 				.getStringToRoomType().get(roomTypeID));
 		if (result == 0) {
-			if (this.roomTypes.addRoomToRoomType(roomTypeID) == 0) {
+			if (this.roomTypes.addRoomToRoomTypeEntry(roomTypeID) == 0) {
 				return 0;
 			}
 			return 2;
@@ -230,7 +230,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public int removeRoom(int roomID) {
 		if (this.rooms.removeRoom(roomID) == 0
-				&& this.roomTypes.removeRoomFromRoomType(this.rooms
+				&& this.roomTypes.removeRoomFromRoomTypeEntry(this.rooms
 						.getRoom(roomID).getRoomType().getID()) == 0) {
 			return 0;
 		}
@@ -331,12 +331,9 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public String getRoomStatus(int roomID) {
 		if (this.rooms.exists(roomID)) {
-			System.out.println(this.rooms.getRoom(roomID).getRoomStatusEnum()
-					.toString());
 			return this.rooms.getRoom(roomID).getRoomStatusEnum().toString();
 		}
-		return "failure";
-		// TODO: test
+		return null;
 	}
 
 	/**
@@ -375,7 +372,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int getRoomTypePrice(String roomTypeID) {
-
 		if (this.roomTypes.exists(roomTypeID)) {
 			return this.roomTypes.getRoomType(roomTypeID).getPrice();
 		}
@@ -415,8 +411,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 		if (this.rooms.exists(roomID)) {
 			return this.rooms.getRoom(roomID).getRoomType().getID();
 		}
-		return "failure mohahah";
-		// TODO: test
+		return null;
 	}
 
 	/**
@@ -447,12 +442,10 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int editRoom(int roomID, String roomTypeID) {
-
 		if (this.removeRoom(roomID) == 0) {
 			return this.addRoom(roomID, roomTypeID);
 		}
 		return 3;
-		// TODO:test
 	}
 
 	/**

@@ -312,18 +312,6 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc --> Return true if the RoomType sent in exists in the
-	 * list of RoomType objects. <!-- end-user-doc -->
-	 * 
-	 * @generated NOT
-	 */
-	private boolean exists(RoomType roomType) {
-		// return this.roomType.contains(roomType);
-		return true;
-		// TODO something
-	}
-
-	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * 
 	 * @generated
