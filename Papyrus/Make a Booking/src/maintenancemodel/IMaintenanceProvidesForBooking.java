@@ -21,17 +21,25 @@ import org.eclipse.emf.ecore.EObject;
 public interface IMaintenanceProvidesForBooking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
+	 * A method that checks if a booking can be made with given parameters
+	 * @return
+	 * true if booking is possible
+	 * false if booking is not possible
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" roomTypeIDsDataType="org.eclipse.uml2.types.String" roomTypeIDsMany="true" roomTypeIDsOrdered="false" startDataType="org.eclipse.uml2.types.String" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.String" endRequired="true" endOrdered="false" nrOfGuestsDataType="org.eclipse.uml2.types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	boolean canBook(EList<String> roomTypeIDs, String start, String end, int nrOfGuests);
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Edits the availability in the system according to booking.
+	 * @return
+	 * 0 if successful
+	 * 1 if any String entry in the List couldn't be added to the system.
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDsDataType="org.eclipse.uml2.types.String" roomTypeIDsRequired="true" roomTypeIDsMany="true" roomTypeIDsOrdered="false" startDataType="org.eclipse.uml2.types.String" startRequired="true" startOrdered="false" endDataType="org.eclipse.uml2.types.String" endRequired="true" endOrdered="false" nrOfGuestsDataType="org.eclipse.uml2.types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int makeBooking(EList<String> roomTypeIDs, String start, String end, int nrOfGuests);
 
