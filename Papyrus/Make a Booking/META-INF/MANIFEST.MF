@@ -10,6 +10,8 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: bookingmodel,
  bookingmodel.impl,
  bookingmodel.util,
+ types,
+ types.impl,
  maintenancemodel,
  maintenancemodel.impl,
  maintenancemodel.util,

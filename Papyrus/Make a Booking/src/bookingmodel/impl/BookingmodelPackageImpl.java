@@ -1883,7 +1883,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		op = initEOperation(getBookingInfo__GetServiceNotes__String(), theTypesPackage.getString(), "getServiceNotes", 0, -1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getBookingInfo__GetBookingRef__String(), null, "getBookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getBookingInfo__GetBookingRef__String(), theTypesPackage.getString(), "getBookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "customerEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(customerInfoEClass, CustomerInfo.class, "CustomerInfo", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
