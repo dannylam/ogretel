@@ -231,8 +231,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getPrice() {
 		return price;
@@ -240,8 +241,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setPrice(int newPrice) {
 		int oldPrice = price;
@@ -252,8 +254,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getMaxNrOfGuests() {
 		return maxNrOfGuests;
@@ -261,8 +264,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setMaxNrOfGuests(int newMaxNrOfGuests) {
 		int oldMaxNrOfGuests = maxNrOfGuests;
@@ -273,8 +277,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getDescription() {
 		return description;
@@ -282,8 +287,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
@@ -294,8 +300,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public RoomTypeEnum getRoomTypeEnum() {
 		return roomTypeEnum;
@@ -303,8 +310,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setRoomTypeEnum(RoomTypeEnum newRoomTypeEnum) {
 		RoomTypeEnum oldRoomTypeEnum = roomTypeEnum;
@@ -315,8 +323,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getRoomTypeID() {
 		return roomTypeID;
@@ -324,8 +333,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setRoomTypeID(String newRoomTypeID) {
 		String oldRoomTypeID = roomTypeID;
@@ -336,8 +346,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<Room> getRoomsOfType() {
 		if (roomsOfType == null) {

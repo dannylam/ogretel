@@ -43,6 +43,7 @@ public interface RoomTypesHandler extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Checks if the roomtype exists in the system.
 	 * @return true if roomTypeID valid, else false
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
@@ -52,6 +53,7 @@ public interface RoomTypesHandler extends EObject {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * Adds a roomtype to the system
 	 * @return
 	 * 0 if successful
 	 * 1 if roomTypeID invalid

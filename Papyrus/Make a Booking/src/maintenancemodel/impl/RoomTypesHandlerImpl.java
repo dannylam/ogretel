@@ -82,9 +82,11 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	public EMap<String, RoomType> getStringToRoomType() {
 		if (stringToRoomType == null) {
@@ -98,7 +100,9 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
+	 * <!-- begin-user-doc --> 
 	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -107,7 +111,9 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -135,7 +141,9 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -147,7 +155,9 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -157,7 +167,9 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -169,7 +181,9 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	  * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -200,9 +214,11 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setCalendar(Calendar newCalendar) {
 		if (newCalendar != calendar) {
@@ -231,7 +247,9 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -247,7 +265,9 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -263,7 +283,9 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -298,7 +320,9 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */

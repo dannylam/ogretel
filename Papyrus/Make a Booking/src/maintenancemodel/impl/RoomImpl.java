@@ -91,7 +91,6 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 	
 	/**
 	 * <!-- begin-user-doc -->
-	 * Constructor with parameters.
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
@@ -113,8 +112,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getRoomID() {
 		return roomID;
@@ -122,8 +122,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setRoomID(int newRoomID) {
 		int oldRoomID = roomID;
@@ -134,8 +135,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public RoomStatusEnum getRoomStatusEnum() {
 		return roomStatusEnum;
@@ -143,8 +145,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setRoomStatusEnum(RoomStatusEnum newRoomStatusEnum) {
 		RoomStatusEnum oldRoomStatusEnum = roomStatusEnum;
@@ -155,8 +158,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public RoomType getRoomType() {
 		return roomType;
@@ -179,8 +183,9 @@ public class RoomImpl extends MinimalEObjectImpl.Container implements Room {
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setRoomType(RoomType newRoomType) {
 		if (newRoomType != roomType) {

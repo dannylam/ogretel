@@ -69,8 +69,10 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
+	 * @generated NOT
 	 */
 	public EMap<Integer, Room> getIntegerToRoomMap() {
 		if (integerToRoomMap == null) {
@@ -80,7 +82,9 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
+	 * <!-- begin-user-doc --> 
 	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public boolean exists(int roomID) {
@@ -88,10 +92,9 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> Adds a Room with the given ID and Roomtype. <!--
-	 * end-user-doc -->
-	 * 
-	 * @return
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public int addRoom(int roomID, RoomType roomType) {
@@ -105,9 +108,9 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> If the Room exists it is removed.
-	 * 
-	 * @return 0 if it was removed else 1. <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public int removeRoom(int roomID) {
@@ -121,8 +124,9 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
-	 * 
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public Room getRoom(int roomID) {

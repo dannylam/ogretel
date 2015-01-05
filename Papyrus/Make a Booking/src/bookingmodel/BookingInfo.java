@@ -45,7 +45,7 @@ public interface BookingInfo extends EObject {
 	List<String> getExtras(String bookingRef);
 
 	/**
-	 * Returns a list of extras of the given booking 
+	 * Returns a list of the rooms (which are checked-in) of the given booking 
 	 * @model dataType="types.Integer" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */ 

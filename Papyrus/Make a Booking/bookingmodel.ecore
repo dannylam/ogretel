@@ -333,10 +333,10 @@
     <eOperations name="getCustomerEmail" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
       <eParameters name="bookingRef" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
-    <eOperations name="getCcNr" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+    <eOperations name="getCcNr" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
       <eParameters name="bookingRef" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
-    <eOperations name="getCcV" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+    <eOperations name="getCcV" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
       <eParameters name="bookingRef" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="getExpMonth" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">

@@ -81,7 +81,8 @@ public class MaintenanceProvidesForBookingImpl extends
 	protected ExtraHandler extraHandler = new ExtraHandlerImpl();
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -90,7 +91,8 @@ public class MaintenanceProvidesForBookingImpl extends
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
@@ -100,7 +102,8 @@ public class MaintenanceProvidesForBookingImpl extends
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
@@ -109,7 +112,8 @@ public class MaintenanceProvidesForBookingImpl extends
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
@@ -132,8 +136,8 @@ public class MaintenanceProvidesForBookingImpl extends
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * <!-- begin-user-doc --> 
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void setRoomTypes(RoomTypesHandler newRoomTypes) {
@@ -165,7 +169,8 @@ public class MaintenanceProvidesForBookingImpl extends
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
@@ -174,7 +179,8 @@ public class MaintenanceProvidesForBookingImpl extends
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
@@ -197,7 +203,8 @@ public class MaintenanceProvidesForBookingImpl extends
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
@@ -230,7 +237,8 @@ public class MaintenanceProvidesForBookingImpl extends
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
@@ -239,7 +247,8 @@ public class MaintenanceProvidesForBookingImpl extends
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
@@ -262,7 +271,8 @@ public class MaintenanceProvidesForBookingImpl extends
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated
 	 */
@@ -295,8 +305,9 @@ public class MaintenanceProvidesForBookingImpl extends
 	}
 
 	/**
-	 * <!-- begin-user-doc --> Check if it is possible to book the requested
-	 * roomtypes for the requested interval. <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -438,7 +449,9 @@ public class MaintenanceProvidesForBookingImpl extends
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc --> {@inheritDoc}
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc --> 
 	 * 
 	 * @generated NOT
 	 */
@@ -469,7 +482,9 @@ public class MaintenanceProvidesForBookingImpl extends
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -501,7 +516,9 @@ public class MaintenanceProvidesForBookingImpl extends
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -519,7 +536,9 @@ public class MaintenanceProvidesForBookingImpl extends
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -536,7 +555,9 @@ public class MaintenanceProvidesForBookingImpl extends
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -553,7 +574,9 @@ public class MaintenanceProvidesForBookingImpl extends
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
