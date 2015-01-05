@@ -287,7 +287,6 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 			return 1;
 		}
 
-		// TODO: implement this method
 	}
 
 	/**

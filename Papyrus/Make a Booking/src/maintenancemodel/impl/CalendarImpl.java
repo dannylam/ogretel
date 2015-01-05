@@ -136,7 +136,10 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public Integer getCap(int start, int end, String roomType) {
-
+		if(start < 0 && end < start){
+			return 0;
+		}
+		
 		EList<Integer> capacities = this.getStringToListsMap().get(roomType);
 		Integer cap = capacities.get(start);
 
@@ -148,7 +151,6 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 		}
 
 		return cap;
-		// TODO: test
 	}
 
 	/**
@@ -173,7 +175,7 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 			EList<Integer> capacities = this.getStringToListsMap().get(roomType);
 
 			// Check that start & end are valid
-			if (start >= 0 && end < capacities.size()) {
+			if (0 <= start && start < end && end < capacities.size()) {
 
 				for (int day = start; day <= end; day++) {
 					Integer newCapacity = capacities.get(day) + nrOfRooms;
@@ -183,7 +185,6 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 			}
 		}
 		return 1;
-		// TODO: test
 	}
 
 	/**
