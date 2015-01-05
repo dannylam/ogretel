@@ -85,7 +85,7 @@ public interface IRoomMaintenance extends EObject {
 
 	/**
 	 * @return
-	 * String of RoomStatusEnum of Room indicated by roomID, otherwise "failure"
+	 * String of RoomStatusEnum of Room indicated by roomID, otherwise null
 	 * 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true"
 	 *        ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer"
@@ -109,7 +109,7 @@ public interface IRoomMaintenance extends EObject {
 	/**
 	 * @return
 	 * RoomTypeID of RoomType of Room indicated by roomID
-	 * "failure mohahah" if roomID invalid
+	 * null if roomID invalid
 	 * 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true"
 	 *        ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer"
