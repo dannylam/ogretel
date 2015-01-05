@@ -340,8 +340,6 @@ public class MaintenanceProvidesForBookingImpl extends
 
 		}
 		return true;
-
-		// TODO test
 	}
 
 	private int getYear(String date) throws NumberFormatException {
