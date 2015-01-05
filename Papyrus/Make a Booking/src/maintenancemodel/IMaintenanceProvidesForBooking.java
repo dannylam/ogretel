@@ -7,12 +7,6 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * A representation of the maintenancemodel object '<em><b>IMaintenance Provides For Booking</b></em>'.
- *
- * The interface extends an EObject and has 4 methods:
- * canBook - Checks if a booking can be made with given parameters
- * makeBooking - Creates a booking with given parameters in our calendar
- * removeBooking - Removes a booking with given parameters from our calendar
- * setAsActive - Sets a booking as active
  * 
  * @see maintenancemodel.MaintenancemodelPackage#getIMaintenanceProvidesForBooking()
  * @model interface="true" abstract="true"
