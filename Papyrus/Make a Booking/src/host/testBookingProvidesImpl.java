@@ -8,11 +8,14 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.soap.SOAPException;
+
 import org.junit.Test;
 
 import bookingmodel.BookingProvides;
 import bookingmodel.Customer;
 import bookingmodel.impl.BookingProvidesImpl;
+import bookingmodel.impl.se;
 
 /**
  * Testing the class BookingProvidesImpl and its methods.
@@ -42,6 +45,7 @@ public class testBookingProvidesImpl {
 	
 	@Test
 	public void testUseCaseMakeABooking(){
+		//Test mainflow of make a booking
 		List<String> roomTypes = new ArrayList <String> ();
 		this.roomTypes.add("Single");
 		List<String> extras = new ArrayList <String> ();
@@ -180,15 +184,48 @@ public class testBookingProvidesImpl {
 			fail("setPaymentMethod failed");
 		}
 		
+		
 		//TODO: typ done okej
 		/**
 		 * Testes the method for paying a booking
 		 * Test method for {@link bookingmodel.impl.BookingProvidesImpl#pay(java.lang.String)}.
 		 */
 		private void testPayBooking() {
-			bp.payBooking(bookingRef);
+			this.pay(bp.getCcNr(bookingRef), bp.getCcV(bookingRef), bp.getExpMonth(bookingRef),  bp.getExpYear(bookingRef), bp.getCardFirstName(bookingRef), bp.geCardtLastName(bookingRef), bp.getPrice(bookingRef));
 			assertTrue("Failed to test pay booking", bp.isBookingPayed(bookingRef));
 			fail("Test pay booking failed");
+		}
+
+		//TODO: typ done okej
+		/**
+		 * Makes a payment
+		 * The integer returned by the function indicates success or failure and reason for failure.
+		 * @return	0 if success 
+		 * 			1 if an error occurred
+		 * 			2 if the credit card is invalid
+		 * 			3 if not enough money on the card or invalid card
+		 */
+		private int pay(String ccNumber, String ccv, int expMonth, int expYear,
+				String firstName, String lastName, int sum) {
+			try {
+				se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires banking = se.chalmers.cse.mdsd1415.banking.customerRequires.CustomerRequires
+						.instance();
+				if (!banking.isCreditCardValid(ccNumber, ccv, expMonth, expYear,
+						firstName, lastName)) {
+					return 2;
+				}
+				if (!banking.makePayment(ccNumber, ccv, expMonth, expYear,
+						firstName, lastName, sum)) {
+					return 3;
+				}
+
+			} catch (SOAPException e) {
+				System.err
+						.println("Error occurred while communicating with the bank");
+				e.printStackTrace();
+				return 1;
+			}
+			return 0;
 		}
 
 	
