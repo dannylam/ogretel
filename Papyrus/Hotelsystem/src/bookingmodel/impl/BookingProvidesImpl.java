@@ -659,9 +659,9 @@ BookingProvides {
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
-	public int RemoveServiceNotes(int roomID, List<String> serviceNotes) {
+	public int removeServiceNotes(int roomID, List<String> serviceNotes) {
 		if(this.getBookingHandler().exists(this.getBookingHandler().getBooking(roomID).getBookingRef())){
-			return this.bookingHandler.getBooking(roomID).getServiceNotes().removeServices(serviceNotes); //TODO add method
+			return this.bookingHandler.getBooking(roomID).remo
 		}
 	}
 
@@ -788,21 +788,25 @@ BookingProvides {
 	public int setPaymentMethod(String method, String bookingRef) {
 		if (this.getBookingHandler().exists(bookingRef)) {
 			PaymentMethod paymentMethod = null;
-			switch (method) {
-			case "bankcard":
+			int methodInt = 0;
+			if(method.toLowerCase().equals("bankcard")){
+				methodInt = 1;
+			} else if(method.toLowerCase().equals("cash")){
+				methodInt = 2;
+			} else if(method.toLowerCase().equals("voucher")){
+				methodInt = 3;
+			}
+			switch (methodInt) {
+			case 1:
 				paymentMethod = PaymentMethod.BANKCARD;
 				break;
-
-			case "cash":
+			case 2:
 				paymentMethod = PaymentMethod.CASH;
 				break;
-
-			case "voucher":
+			case 3:
 				paymentMethod = PaymentMethod.VOUCHER;
 				break;
-
 			default:
-				// do nothing
 				break;
 			}
 			if (!paymentMethod.equals(null)) {
