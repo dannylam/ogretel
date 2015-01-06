@@ -281,37 +281,6 @@ public interface Booking extends EObject {
 	 */
 	int getNrOfRooms();
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extrasDataType="org.eclipse.uml2.types.String" extrasMany="true" extrasOrdered="false"
-	 * @generated
-	 */
-	int setExtras(EList<String> extras);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypesDataType="org.eclipse.uml2.types.String" roomTypesMany="true" roomTypesOrdered="false"
-	 * @generated
-	 */
-	int setRoomTypes(EList<String> roomTypes);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" roomIDsDataType="org.eclipse.uml2.types.Integer" roomIDsMany="true"
-	 * @generated
-	 */
-	int setRoomIDs(EList<Integer> roomIDs);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false"
-	 * @generated
-	 */
-	int setServices(EList<String> services);
 
 	/**
 	 * Adds services from a booking into the map with roomIDs.
@@ -411,15 +380,7 @@ public interface Booking extends EObject {
 	 * @generated NOT
 	 */
 	List<String> getUnPayedExtras();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extrasDataType="org.eclipse.uml2.types.String" extrasMany="true" extrasOrdered="false"
-	 * @generated
-	 */
-	int setExtrasAsPayed(EList<String> extras);
-
+	
 	/**
 	 * Sets the list of extras as payed.
 	 * @model dataType="types.Integer" required="true" ordered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false"

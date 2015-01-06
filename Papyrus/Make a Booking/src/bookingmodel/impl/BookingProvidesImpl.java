@@ -791,7 +791,7 @@ BookingProvides {
 	public int setPaymentMethod(String method, String bookingRef) {
 		if (this.getBookingHandler().exists(bookingRef)) {
 			PaymentMethod paymentMethod = null;
-			switch (metShod) {
+			switch (method) {
 			case "bankcard":
 				paymentMethod = PaymentMethod.BANKCARD;
 				break;
