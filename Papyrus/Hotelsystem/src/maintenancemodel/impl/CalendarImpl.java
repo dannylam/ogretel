@@ -4,6 +4,7 @@ package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
 
+import java.util.Map;
 import maintenancemodel.Calendar;
 import maintenancemodel.MaintenancemodelPackage;
 
@@ -23,8 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- * <li>{@link maintenancemodel.impl.CalendarImpl#getStringToListsMap <em>String
- * To Lists Map</em>}</li>
+ *   <li>{@link maintenancemodel.impl.CalendarImpl#getStringToListsMap <em>String To Lists Map</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,7 +45,6 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected CalendarImpl() {
@@ -54,7 +53,6 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -63,7 +61,9 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -71,8 +71,44 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 		return stringToListsMap;
 	}
 
+
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetStringToListsMap(Map.Entry<String, EList<Integer>> newStringToListsMap, NotificationChain msgs) {
+		Map.Entry<String, EList<Integer>> oldStringToListsMap = stringToListsMap;
+		stringToListsMap = newStringToListsMap;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP, oldStringToListsMap, newStringToListsMap);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStringToListsMap(Map.Entry<String, EList<Integer>> newStringToListsMap) {
+		if (newStringToListsMap != stringToListsMap) {
+			NotificationChain msgs = null;
+			if (stringToListsMap != null)
+				msgs = ((InternalEObject)stringToListsMap).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP, null, msgs);
+			if (newStringToListsMap != null)
+				msgs = ((InternalEObject)newStringToListsMap).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP, null, msgs);
+			msgs = basicSetStringToListsMap(newStringToListsMap, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP, newStringToListsMap, newStringToListsMap));
+	}
+
+	/**
+	 * <!-- begin-user-doc --> 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -95,7 +131,9 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -127,15 +165,16 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
-	 * 
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public Integer getCap(int start, int end, String roomType) {
-		if (start < 0 && end < start) {
+		if(start < 0 && end < start){
 			return 0;
 		}
-
+		
 		EList<Integer> capacities = this.getStringToListsMap().get(roomType);
 		Integer cap = capacities.get(start);
 
@@ -150,15 +189,15 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
-	 * 
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public int setCap(int start, int end, String roomType, int nrOfRooms) {
 		// Check that the roomType is valid
 		if (this.getStringToListsMap().containsKey(roomType)) {
-			EList<Integer> capacities = this.getStringToListsMap()
-					.get(roomType);
+			EList<Integer> capacities = this.getStringToListsMap().get(roomType);
 
 			// Check that start & end are valid
 			if (0 <= start && start < end && end < capacities.size()) {
@@ -174,7 +213,9 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -201,7 +242,9 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -232,12 +275,14 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
 	public int addEntry(String roomTypeID) {
-		if (!this.stringToListsMap.containsKey(roomTypeID)) {
+		if(!this.stringToListsMap.containsKey(roomTypeID)){
 			this.stringToListsMap.put(roomTypeID, new BasicEList<Integer>(365));
 			return 0;
 		}
@@ -245,7 +290,9 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> {@inheritDoc} <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
+	 * <!-- end-user-doc -->
 	 * 
 	 * @generated NOT
 	 */
@@ -274,30 +321,31 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 				|| !isDateValid(year2, month2, day2)) {
 			return -1;
 		}
-
+		
 		int dayOfYear1 = this.getDayOfYear(year1, month1, day1);
-		if (dayOfYear1 < 0) {
+		if(dayOfYear1 < 0){
 			return -1;
 		}
-
+		
 		int dayOfYear2 = this.getDayOfYear(year2, month2, day2);
-		if (dayOfYear2 < 0 || dayOfYear2 < dayOfYear1) {
+		if(dayOfYear2 < 0 || dayOfYear2 < dayOfYear1){
 			return -1;
 		}
-
+		
 		// Compute span
 		int dateSpan = dayOfYear2 - dayOfYear1;
 
 		return dateSpan;
 	}
-
+	
 	public int removeEntry(String roomTypeID) {
-		if (this.stringToListsMap.containsKey(roomTypeID)) {
+		if(this.stringToListsMap.containsKey(roomTypeID)){
 			this.stringToListsMap.removeKey(roomTypeID);
 			return 0;
 		}
 		return 1;
 	}
+
 
 	private int getYear(String date) throws NumberFormatException {
 		return Integer.parseInt(date.substring(0, 2));
@@ -312,10 +360,10 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	private int getDayOfYear(int year, int month, int day) {
-		if (year < 0 || month < 0 || day < 0) {
+		if(year < 0 || month < 0 || day < 0){
 			return -1;
 		}
-
+		
 		int result = day;
 
 		for (int j = 0; j < year; j++) {
@@ -348,29 +396,27 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd,
 			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP:
-			return basicSetStringToListsMap(null, msgs);
+			case MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP:
+				return basicSetStringToListsMap(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP:
-			return getStringToListsMap();
+			case MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP:
+				return getStringToListsMap();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -408,49 +454,39 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP:
-			return stringToListsMap != null;
+			case MaintenancemodelPackage.CALENDAR__STRING_TO_LISTS_MAP:
+				return stringToListsMap != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments)
 			throws InvocationTargetException {
 		switch (operationID) {
-		case MaintenancemodelPackage.CALENDAR___GET_CAP__INT_INT_STRING:
-			return getCap((Integer) arguments.get(0),
-					(Integer) arguments.get(1), (String) arguments.get(2));
-		case MaintenancemodelPackage.CALENDAR___SET_CAP__INT_INT_STRING_INT:
-			return setCap((Integer) arguments.get(0),
-					(Integer) arguments.get(1), (String) arguments.get(2),
-					(Integer) arguments.get(3));
-		case MaintenancemodelPackage.CALENDAR___INC_CAP__INT_INT_STRING_INT:
-			return incCap((Integer) arguments.get(0),
-					(Integer) arguments.get(1), (String) arguments.get(2),
-					(Integer) arguments.get(3));
-		case MaintenancemodelPackage.CALENDAR___DEC_CAP__INT_INT_STRING_INT:
-			return decCap((Integer) arguments.get(0),
-					(Integer) arguments.get(1), (String) arguments.get(2),
-					(Integer) arguments.get(3));
-		case MaintenancemodelPackage.CALENDAR___ADD_ENTRY__STRING:
-			return addEntry((String) arguments.get(0));
-		case MaintenancemodelPackage.CALENDAR___REMOVE_ENTRY__STRING:
-			return removeEntry((String) arguments.get(0));
-		case MaintenancemodelPackage.CALENDAR___GET_DAYS_BETWEEN__STRING_STRING:
-			return getDaysBetween((String) arguments.get(0),
-					(String) arguments.get(1));
+			case MaintenancemodelPackage.CALENDAR___GET_CAP__INT_INT_STRING:
+				return getCap((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2));
+			case MaintenancemodelPackage.CALENDAR___SET_CAP__INT_INT_STRING_INT:
+				return setCap((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
+			case MaintenancemodelPackage.CALENDAR___INC_CAP__INT_INT_STRING_INT:
+				return incCap((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
+			case MaintenancemodelPackage.CALENDAR___DEC_CAP__INT_INT_STRING_INT:
+				return decCap((Integer)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
+			case MaintenancemodelPackage.CALENDAR___ADD_ENTRY__STRING:
+				return addEntry((String)arguments.get(0));
+			case MaintenancemodelPackage.CALENDAR___REMOVE_ENTRY__STRING:
+				return removeEntry((String)arguments.get(0));
+			case MaintenancemodelPackage.CALENDAR___GET_DAYS_BETWEEN__STRING_STRING:
+				return getDaysBetween((String)arguments.get(0), (String)arguments.get(1));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

@@ -281,6 +281,7 @@ public interface Booking extends EObject {
 	 */
 	int getNrOfRooms();
 
+
 	/**
 	 * Adds services from a booking into the map with roomIDs.
 	 * @return  -1 if not success
@@ -288,7 +289,7 @@ public interface Booking extends EObject {
 	 * @model dataType="types.Integer" required="true" ordered="false" servicesDataType="types.String" servicesMany="true" servicesOrdered="false"
 	 * @generated NOT
 	 */
-	int setServiceNotes(List<String> services);
+	int setServices(List<String> services);
 
 	/**
 	 * Adds extras from a booking into the map with extras.
@@ -379,16 +380,7 @@ public interface Booking extends EObject {
 	 * @generated NOT
 	 */
 	List<String> getUnPayedExtras();
-
-	/**
-	 * Removes a list of servicenotes
-	 * @return  -1 if not success
-	 * 			0 if success 
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" serviceNotesDataType="org.eclipse.uml2.types.String" serviceNotesMany="true" serviceNotesOrdered="false"
-	 * @generated NOT
-	 */
-	int removeServiceNotes(List<String> serviceNotes);
-
+	
 	/**
 	 * Sets the list of extras as payed.
 	 * @model dataType="types.Integer" required="true" ordered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false"

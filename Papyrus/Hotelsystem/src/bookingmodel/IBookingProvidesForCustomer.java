@@ -9,7 +9,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see bookingmodel.BookingmodelPackage#getIBookingProvidesForCustomer()
  * @model interface="true" abstract="true"
- * @generated
+ * @generated NOT
  */
 public interface IBookingProvidesForCustomer extends BookingInfo, CustomerInfo {
 	/**
@@ -141,34 +141,11 @@ public interface IBookingProvidesForCustomer extends BookingInfo, CustomerInfo {
 	String book(String startDate, String endDate, int nrOfGuests, EList<String> roomTypes, EList<String> extras, EList<String> services);
 
 	/**
-	 * Edits the paymentdetails of a guest. 
-	 * @return: TODO
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="org.eclipse.uml2.types.String" ccvRequired="true" ccvOrdered="false" expiryMonthDataType="org.eclipse.uml2.types.Integer" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearDataType="org.eclipse.uml2.types.Integer" expiryYearRequired="true" expiryYearOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false" customerEmailDataType="org.eclipse.uml2.types.String" customerEmailRequired="true" customerEmailOrdered="false" bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated NOT
-	 */
-	int editPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, String customerEmail, String bookingRef);
-
-	/**
-	 * Removes the list of extras given from a booking  //TODO: change to list
-	 * @return: TODO
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.String" roomIDRequired="true" roomIDOrdered="false" extraIDDataType="org.eclipse.uml2.types.String" extraIDRequired="true" extraIDOrdered="false"
-	 * @generated NOT
-	 */
-	int removeExtra(String roomID, String extraID);
-
-	/**
-	 * Adds the list of extras given to a booking //TODO: change to list
-	 * @return: TODO
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false" extraIDDataType="org.eclipse.uml2.types.String" extraIDRequired="true" extraIDOrdered="false"
-	 * @generated NOT
-	 */
-	int addExtra(String bookingRef, String extraID);
-
-	/**
 	 * Make a booking such for the given start- and enddate, number of guests,
 	 * roomtypes (and how many of each roomtype), extras and services.
 	 * @return the booking reference if success
-	 * 			null if unsuccessful
+	 * 			empty if the booking was not successful
+	 * 			"Startdate, enddate, number of guests and roomtypes cannot be empty" if one or more params are empty
 	 * @model dataType="types.String" required="true" ordered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesDataType="types.String" roomTypesMany="true" roomTypesOrdered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false" servicesDataType="types.String" servicesMany="true" servicesOrdered="false"
 	 * @generated NOT
 	 */

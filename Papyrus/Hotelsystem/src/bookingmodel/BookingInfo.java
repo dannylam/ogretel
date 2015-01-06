@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see bookingmodel.BookingmodelPackage#getBookingInfo()
  * @model interface="true" abstract="true"
- * @generated
+ * @generated NOT
  */
 public interface BookingInfo extends EObject {
 	/**
@@ -73,7 +73,7 @@ public interface BookingInfo extends EObject {
 	List<String> getServiceNotes(String bookingRef);
 
 	/**
-	 * Returns the bookingreferences associated to the customers email.
+	 * Returns the  bookingreferences associated to the customers email.
 	 * @model customerEmailDataType="types.String" customerEmailRequired="true" customerEmailOrdered="false"
 	 * @generated NOT
 	 */

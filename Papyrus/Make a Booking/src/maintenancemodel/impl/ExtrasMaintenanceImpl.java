@@ -44,7 +44,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExtrasMaintenanceImpl() {
+	protected ExtrasMaintenanceImpl() {
 		super();
 	}
 

@@ -3,6 +3,7 @@
 package bookingmodel;
 
 import java.util.List;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
@@ -16,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * getServiceNote - get a specific service note.
  * @see bookingmodel.BookingmodelPackage#getIBookingProvidesForHost()
  * @model interface="true" abstract="true"
- * @generated
+ * @generated NOT
  */
 public interface IBookingProvidesForHost extends EObject {
 
@@ -54,6 +55,14 @@ public interface IBookingProvidesForHost extends EObject {
 	 * @generated NOT
 	 */
 	List<String> getExistingBookings();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
+	 * @generated
+	 */
+	EList<String> getActiveBookings();
 
 	/**
 	 * Returns is the given room is checked-out or not
@@ -97,21 +106,7 @@ public interface IBookingProvidesForHost extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="org.eclipse.uml2.types.String" serviceNoteMany="true" serviceNoteOrdered="false"
 	 * @generated
 	 */
-	int removeServiceNotes(int roomID, EList<String> serviceNote);
-
-	/**
-	 * Adds a list of servicenotes to the booking connected to the given roomID 
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="org.eclipse.uml2.types.String" serviceNoteMany="true" serviceNoteOrdered="false"
-	 * @generated NOT
-	 */
-	int addServiceNotes(int roomID, List<String> serviceNote);
-
-	/**
-	 * Removes a list of servicenotes to the booking connected to the given roomID 
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="org.eclipse.uml2.types.String" serviceNoteMany="true" serviceNoteOrdered="false"
-	 * @generated NOT
-	 */
-	int removeServiceNotes(int roomID, List<String> serviceNote);
+	int RemoveServiceNotes(int roomID, EList<String> serviceNote);
 
 	/**
 	 * Returns the service notes from a specific booking. 

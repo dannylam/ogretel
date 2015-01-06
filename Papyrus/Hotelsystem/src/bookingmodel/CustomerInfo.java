@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see bookingmodel.BookingmodelPackage#getCustomerInfo()
  * @model interface="true" abstract="true"
- * @generated
+ * @generated NOT
  */
 public interface CustomerInfo extends EObject {
 	/**
@@ -84,6 +84,6 @@ public interface CustomerInfo extends EObject {
 	 * @model dataType="types.String" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
-	String getCardLastName(String bookingRef);
+	String geCardtLastName(String bookingRef);
 
 } // CustomerInfo

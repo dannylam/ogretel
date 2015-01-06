@@ -3,13 +3,11 @@
 package bookingmodel.impl;
 
 import bookingmodel.BookingmodelPackage;
+import bookingmodel.CustomerEmailToBookingRefEntry;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.util.BasicEMap;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
@@ -21,39 +19,39 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link bookingmodel.impl.CustomerEmailToBookingRefEntryImpl#getTypedKey <em>Key</em>}</li>
- *   <li>{@link bookingmodel.impl.CustomerEmailToBookingRefEntryImpl#getTypedValue <em>Value</em>}</li>
+ *   <li>{@link bookingmodel.impl.CustomerEmailToBookingRefEntryImpl#getKey <em>Key</em>}</li>
+ *   <li>{@link bookingmodel.impl.CustomerEmailToBookingRefEntryImpl#getValue <em>Value</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class CustomerEmailToBookingRefEntryImpl extends MinimalEObjectImpl.Container implements BasicEMap.Entry<String,EList<String>> {
+public class CustomerEmailToBookingRefEntryImpl extends MinimalEObjectImpl.Container implements CustomerEmailToBookingRefEntry {
 	/**
-	 * The default value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
+	 * The default value of the '{@link #getKey() <em>Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTypedKey()
+	 * @see #getKey()
 	 * @generated
 	 * @ordered
 	 */
 	protected static final String KEY_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getTypedKey() <em>Key</em>}' attribute.
+	 * The cached value of the '{@link #getKey() <em>Key</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTypedKey()
+	 * @see #getKey()
 	 * @generated
 	 * @ordered
 	 */
 	protected String key = KEY_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getTypedValue() <em>Value</em>}' attribute list.
+	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTypedValue()
+	 * @see #getValue()
 	 * @generated
 	 * @ordered
 	 */
@@ -83,46 +81,13 @@ public class CustomerEmailToBookingRefEntryImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getTypedKey() {
-		return key;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setTypedKey(String newKey) {
-		String oldKey = key;
-		key = newKey;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY__KEY, oldKey, key));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<String> getTypedValue() {
-		if (value == null) {
-			value = new EDataTypeUniqueEList<String>(String.class, this, BookingmodelPackage.CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY__VALUE);
-		}
-		return value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case BookingmodelPackage.CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY__KEY:
-				return getTypedKey();
+				return getKey();
 			case BookingmodelPackage.CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY__VALUE:
-				return getTypedValue();
+				return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -137,11 +102,11 @@ public class CustomerEmailToBookingRefEntryImpl extends MinimalEObjectImpl.Conta
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case BookingmodelPackage.CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY__KEY:
-				setTypedKey((String)newValue);
+				setKey((String)newValue);
 				return;
 			case BookingmodelPackage.CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY__VALUE:
-				getTypedValue().clear();
-				getTypedValue().addAll((Collection<? extends String>)newValue);
+				getValue().clear();
+				getValue().addAll((Collection<? extends String>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -156,10 +121,10 @@ public class CustomerEmailToBookingRefEntryImpl extends MinimalEObjectImpl.Conta
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case BookingmodelPackage.CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY__KEY:
-				setTypedKey(KEY_EDEFAULT);
+				setKey(KEY_EDEFAULT);
 				return;
 			case BookingmodelPackage.CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY__VALUE:
-				getTypedValue().clear();
+				getValue().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -204,37 +169,8 @@ public class CustomerEmailToBookingRefEntryImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected int hash = -1;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getHash() {
-		if (hash == -1) {
-			Object theKey = getKey();
-			hash = (theKey == null ? 0 : theKey.hashCode());
-		}
-		return hash;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setHash(int hash) {
-		this.hash = hash;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getKey() {
-		return getTypedKey();
+		return key;
 	}
 
 	/**
@@ -242,8 +178,11 @@ public class CustomerEmailToBookingRefEntryImpl extends MinimalEObjectImpl.Conta
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setKey(String key) {
-		setTypedKey(key);
+	public void setKey(String newKey) {
+		String oldKey = key;
+		key = newKey;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BookingmodelPackage.CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY__KEY, oldKey, key));
 	}
 
 	/**
@@ -252,30 +191,10 @@ public class CustomerEmailToBookingRefEntryImpl extends MinimalEObjectImpl.Conta
 	 * @generated
 	 */
 	public EList<String> getValue() {
-		return getTypedValue();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<String> setValue(EList<String> value) {
-		EList<String> oldValue = getValue();
-		getTypedValue().clear();
-		getTypedValue().addAll(value);
-		return oldValue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	public EMap<String, EList<String>> getEMap() {
-		EObject container = eContainer();
-		return container == null ? null : (EMap<String, EList<String>>)container.eGet(eContainmentFeature());
+		if (value == null) {
+			value = new EDataTypeUniqueEList<String>(String.class, this, BookingmodelPackage.CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY__VALUE);
+		}
+		return value;
 	}
 
 } //CustomerEmailToBookingRefEntryImpl
