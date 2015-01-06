@@ -394,11 +394,11 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
-	public int checkOut(int roomID, String guestEmail) {
+	public int checkOut(int roomID) {
 		Booking booking = this.getBookingHandler().getBooking(roomID);
 		if (this.getBookingHandler().exists(booking.getBookingRef())) {
 			if(booking.checkedInRoom(roomID)){
-				booking.removeResponsibleGuest(roomID, guestEmail);
+				booking.removeResponsibleGuest(roomID, this.getResponsibleGuest(roomID));
 
 				//check if the booking has been is payed or not, 
 				//if not, return an int indicating that the room needs to be payed
@@ -722,7 +722,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	public int setPaymentMethod(String method, String bookingRef) {
 		if (this.getBookingHandler().exists(bookingRef)) {
 			PaymentMethod paymentMethod = null;
-			switch (method) {
+			switch (metShod) {
 			case "bankcard":
 				paymentMethod = PaymentMethod.BANKCARD;
 				break;
