@@ -526,7 +526,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 
 	/**
 	 * {@inheritDoc}
-	 * @return hasResponsible, 
+	 * @return hasResponsible, 	true if a guest is checked in to a room.
+	 * 							false if a guest is not checked in to a room. 
 	 * @generated NOT
 	 */
 	public boolean checkedInRoom(int roomID) {
