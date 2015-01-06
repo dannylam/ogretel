@@ -304,8 +304,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Set start date to a booking.
 	 * @generated NOT
 	 */
 	public void setStartDate(String newStartDate) {
@@ -327,8 +326,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Set end date to a booking.
 	 * @generated NOT
 	 */
 	public void setEndDate(String newEndDate) {
@@ -509,6 +507,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 
 	/**
 	 * {@inheritDoc}
+	 * @return hasResponsible, true if all rooms are checked in.
 	 * @generated NOT
 	 */
 	public boolean checkedInAllRooms() {
@@ -527,6 +526,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 
 	/**
 	 * {@inheritDoc}
+	 * @return hasResponsible, 
 	 * @generated NOT
 	 */
 	public boolean checkedInRoom(int roomID) {

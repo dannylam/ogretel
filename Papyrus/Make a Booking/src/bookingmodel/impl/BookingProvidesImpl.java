@@ -417,6 +417,9 @@ BookingProvides {
 	 * @generated NOT
 	 */
 	public int checkOut(int roomID) {
+		if(!this.maintenanceComponent.getRooms().exists(roomID)){
+			return -2;
+		}
 		Booking booking = this.getBookingHandler().getBooking(roomID);
 		if (this.getBookingHandler().exists(booking.getBookingRef())) {
 			if(booking.checkedInRoom(roomID) || !booking.checkedOutRoom(roomID)){
