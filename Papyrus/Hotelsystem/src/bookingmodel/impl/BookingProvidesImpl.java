@@ -464,16 +464,15 @@ BookingProvides {
 	 * @generated NOT
 	 */
 	public int payExtra(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, List<String> extras, int roomID) {
-		//TODO
 		if(this.bookingHandler.exists(this.bookingHandler.getBooking(roomID).getBookingRef())){
 			if(!extras.equals(null)){
-				EList<String> extrasToBePayed = null;
+				EList<String> extrasToBePayed = new BasicEList<String>();
 				for(String extra: extras){
 					if(!this.getBookingHandler().getBooking(roomID).getExtraToIsPayedMap().get(extra).booleanValue()){
 						extrasToBePayed.add(extra);
 					}
 				}
-				if(!extrasToBePayed.equals(null)){	
+				if(!extrasToBePayed.isEmpty()){	
 					//mark these extras in the booking as payed
 					this.bookingHandler.getBooking(roomID).setExtrasAsPayed(extrasToBePayed);
 					return paySum(ccNumber, ccv, expMonth, expYear, firstName, lastName,
@@ -842,9 +841,7 @@ BookingProvides {
 	 * @generated
 	 */
 	public int editPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, String customerEmail, String bookingRef) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return this.setPaymentDetails(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, customerEmail, bookingRef);
 	}
 
 	/**

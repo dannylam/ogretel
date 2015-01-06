@@ -120,6 +120,34 @@ public class testUseCases {
 	 * Alt flow MAB: the chosen checkin/checkout-date is invalid 
 	 * (exists but has passed)
 	 */
+	public void testMABAltFlow1a(){
+		String startDate 		 = "150110";
+		String endDate   	 	 = "150112";
+		int nrOfGuests   		 = 2;
+		List<String> roomTypes	 = new ArrayList <String>();
+		List<String> extras		 = new ArrayList <String>();
+		List<String> services    = new ArrayList <String>();
+		
+		extras.add("1");
+		extras.add("2");
+		
+		services.add("Took a cab");
+		
+		roomTypes.add("Economic");
+
+		String bookingRef = bookingprovides.book(startDate, endDate, nrOfGuests, roomTypes, extras, services);
+		assertFalse(bookingRef.compareTo("") == 0);
+		
+		assertTrue(bookingprovides.getExtras(bookingRef).size() == 2);
+		assertTrue(bookingprovides.getServiceNotes(bookingRef).size() == 1);
+		int price = bookingprovides.getPrice(bookingRef);
+		System.out.println("Price: " + price);	
+	}
+	
+	/*
+	 * Alt flow MAB: the chosen checkin/checkout-date is invalid 
+	 * (exists but has passed)
+	 */
 	public void testMABAltFlow2a(){
 		int nrOfGuests   		 = 2;
 		List<String> roomTypes	 = new ArrayList <String>();
@@ -238,7 +266,7 @@ public class testUseCases {
 
 
 	/*
-	 * Main flow check in and out
+	 * Main flow make a booking
 	 */
 	@Test
 	public void testMakeABookingAllternative1A() {

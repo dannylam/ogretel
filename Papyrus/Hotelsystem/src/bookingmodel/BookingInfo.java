@@ -73,7 +73,7 @@ public interface BookingInfo extends EObject {
 	List<String> getServiceNotes(String bookingRef);
 
 	/**
-	 * Returns the  bookingreferences associated to the customers email.
+	 * Returns the bookingreferences associated to the customers email.
 	 * @model customerEmailDataType="types.String" customerEmailRequired="true" customerEmailOrdered="false"
 	 * @generated NOT
 	 */

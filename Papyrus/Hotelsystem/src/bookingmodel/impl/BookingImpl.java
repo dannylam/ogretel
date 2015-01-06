@@ -579,50 +579,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	} 
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setExtras(EList<String> extras) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setRoomTypes(EList<String> roomTypes) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setRoomIDs(EList<Integer> roomIDs) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setServiceNotes(EList<String> services) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
@@ -742,37 +698,21 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		return unpaidExtras;
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setExtrasAsPayed(EList<String> extras) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int removeServiceNotes(EList<String> serviceNotes) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int removeServiceNotes(List<String> serviceNotes) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if(!this.serviceNotes.equals(null)){
+			for(String serviceNote: serviceNotes){
+				if(this.serviceNotes.contains(serviceNote)){
+					this.serviceNotes.remove(serviceNote);
+				}
+			}
+			return 0;	
+		}
+		return -1;
 	}
 
 	/**
@@ -837,7 +777,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
-	public int setServices(List<String> services) {
+	public int setServiceNotes(List<String> services) {
 		if(!services.isEmpty() || !services.equals(null)){			
 			for (String service: services) {				
 				this.serviceNotes.add(service);		
@@ -846,6 +786,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		}
 		return -1;
 	}
+	
 
 	/**
 	 * <!-- begin-user-doc -->
