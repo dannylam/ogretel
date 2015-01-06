@@ -131,53 +131,9 @@ public class testUseCases {
 	 */
 	@Test
 	public void testCheckOutAltFlow2b(){
-
-	}
-	
-	/*
-	 * Alternative flow CheckOut: The guest ID does not indicate a guest
-	 * responsible for a room in the booking.
-	 */
-	@Test
-	public void testCheckOutAltFlow2c(){
-
-	}
-	
-	/*
-	 * Alternative flow CheckOut: Another guest than indicated by the guest
-	 *  ID pays for the extras associated to the room for which they are responsible.
-	 */
-	@Test
-	public void testCheckOutAltFlow4a(){
-
-	}
-	
-	/*
-	 * Alternative flow CheckOut: Payment details are invalid.
-	 */
-	@Test
-	public void testCheckOutAltFlow4b(){
-
-	}
-	
-	/*
-	 * Alternative flow CheckOut: The guest indicated by the guest ID is the last 
-	 * (responsible) guest and there is nothing left to pay.
-	 */
-	@Test
-	public void testCheckOutAltFlow4c(){
-
-	}
-	
-	/*
-	 * Alternative flow CheckOut: The guest indicated by the guest ID is the last (responsible) guest 
-	 * and there is something left to pay.
-	 */
-	@Test
-	public void testCheckOutAltFlow4d(){
-
-	}
-	
+		int checkout = bookingprovides.checkOut(2);
+		assertTrue(checkout == -1);
+	}	
 
 	@Test
 	public void testEditAvalabilityOfRoom() {
