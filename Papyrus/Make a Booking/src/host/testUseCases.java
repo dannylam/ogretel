@@ -34,10 +34,8 @@ public class testUseCases {
 	 */
 	BookingProvides bookingprovides  	= new BookingProvidesImpl();
 	
-	RoomHandler roomHandler				= new RoomHandlerImpl();
 	RoomMaintenanceImpl roomMaintenence = new RoomMaintenanceImpl(); 
 	MaintenanceProvidesForBooking mpb   = new MaintenanceProvidesForBookingImpl();
-	ExtraHandler extraHandler			= new ExtraHandlerImpl();
 	IExtrasMaintenance extraMaintenance = new ExtrasMaintenanceImpl();
 	
 	//User 1
@@ -69,8 +67,8 @@ public class testUseCases {
 	
 	//Adds extras to the system
 	private void addExtras() {
-		extraHandler.addExtra("1", 100, "Bag of SWAG", "All the swag you'll ever need", true);
-		extraHandler.addExtra("2", 100, "Souna", "Hot and sweaty, mhh mmhh mmmmmmmmmm", true);
+		extraMaintenance.addExtra("1", 100, "Bag of SWAG", "All the swag you'll ever need", true);
+		extraMaintenance.addExtra("2", 100, "Souna", "Hot and sweaty, mhh mmhh mmmmmmmmmm", true);
 	}
 	
 	/*
@@ -216,8 +214,8 @@ public class testUseCases {
 		
 		String bookingRef = bookingprovides.book(startDate, endDate, nrOfGuests, roomTypes, extras, services);
 		assertFalse(bookingRef.compareTo("") == 0);
-		assertTrue(extraHandler.exists("1"));
-		assertTrue(extraHandler.exists("2"));
+		assertTrue(extraMaintenance.exists("1"));
+		assertTrue(extraMaintenance.exists("2"));
 		assertTrue(bookingprovides.getBookingHandler().getBooking(bookingRef).getExtras().size()       == 2);
 		assertTrue(bookingprovides.getBookingHandler().getBooking(bookingRef).getServiceNotes().size() == 2);
 		
