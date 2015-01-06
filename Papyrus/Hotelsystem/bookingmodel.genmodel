@@ -297,6 +297,14 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/editPaymentDetails/customerEmail"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/editPaymentDetails/bookingRef"/>
       </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//IBookingProvidesForCustomer/removeExtra">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/removeExtra/roomID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/removeExtra/extraID"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//IBookingProvidesForCustomer/addExtra">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/addExtra/bookingRef"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/addExtra/extraID"/>
+      </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="bookingmodel.ecore#//BookingInfo">
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//BookingInfo/getStartDate">
@@ -389,11 +397,11 @@
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//IBookingProvidesForGuest/addExtra">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/addExtra/roomID"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/addExtra/extraID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/addExtra/extraIDs"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//IBookingProvidesForGuest/removeExtra">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/removeExtra/roomID"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/removeExtra/extraID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/removeExtra/extraIDs"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="bookingmodel.ecore#//BookingProvides">

@@ -212,7 +212,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CustomerEmailToBookingRefEntry">
+  <eClassifiers xsi:type="ecore:EClass" name="CustomerEmailToBookingRefEntry" instanceClassName="java.util.Map$Entry">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="key; RoomID: Integer&#xA;value; GuestEmail: String&#xA;value is &quot;out&quot; when a room which has previously &#xA;been checked-in is checked-out in a specific booking &#xA;key; RoomID: Integer&#xA;value; GuestEmail: String&#xA;value is &quot;out&quot; when a room which has previously &#xA;been checked-in is checked-out in a specific booking &#xD;&#xA;key; RoomID: Integer&#xA;value; GuestEmail: String&#xA;value is &quot;out&quot; when a room which has previously &#xA;been checked-in is checked-out in a specific booking &#xA;key; RoomID: Integer&#xA;value; GuestEmail: String&#xA;value is &quot;out&quot; when a room which has previously &#xA;been checked-in is checked-out in a specific booking "/>
     </eAnnotations>
@@ -221,7 +221,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" ordered="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GuestEmailToRoomIDEntry">
+  <eClassifiers xsi:type="ecore:EClass" name="GuestEmailToRoomIDEntry" instanceClassName="java.util.Map$Entry">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="key; RoomID: Integer&#xA;value; GuestEmail: String&#xA;value is &quot;out&quot; when a room which has previously &#xA;been checked-in is checked-out in a specific booking &#xA;key; RoomID: Integer&#xA;value; GuestEmail: String&#xA;value is &quot;out&quot; when a room which has previously &#xA;been checked-in is checked-out in a specific booking &#xD;&#xA;key; RoomID: Integer&#xA;value; GuestEmail: String&#xA;value is &quot;out&quot; when a room which has previously &#xA;been checked-in is checked-out in a specific booking &#xA;key; RoomID: Integer&#xA;value; GuestEmail: String&#xA;value is &quot;out&quot; when a room which has previously &#xA;been checked-in is checked-out in a specific booking "/>
     </eAnnotations>
@@ -325,6 +325,14 @@
       <eParameters name="customerEmail" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="bookingRef" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
+    <eOperations name="removeExtra" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="extraID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="addExtra" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="bookingRef" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="extraID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BookingInfo" abstract="true" interface="true">
     <eOperations name="getStartDate" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
@@ -418,11 +426,11 @@
     </eOperations>
     <eOperations name="addExtra" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
       <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-      <eParameters name="extraID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="extraIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="removeExtra" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
       <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-      <eParameters name="extraID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="extraIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BookingProvides" eSuperTypes="#//IBookingProvidesForCustomer #//IBookingProvidesForGuest #//IBookingProvidesForHost">

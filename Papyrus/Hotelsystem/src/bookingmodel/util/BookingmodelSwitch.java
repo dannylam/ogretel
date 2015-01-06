@@ -6,6 +6,7 @@ import bookingmodel.*;
 import bookingmodel.impl.CustomerEmailToBookingRefEntryImpl;
 import java.util.Map;
 import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -136,13 +137,13 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 				return result;
 			}
 			case BookingmodelPackage.CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY: {
-				CustomerEmailToBookingRefEntry customerEmailToBookingRefEntry = (CustomerEmailToBookingRefEntry)theEObject;
+				@SuppressWarnings("unchecked") Map.Entry<String, EList<String>> customerEmailToBookingRefEntry = (Map.Entry<String, EList<String>>)theEObject;
 				T result = caseCustomerEmailToBookingRefEntry(customerEmailToBookingRefEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case BookingmodelPackage.GUEST_EMAIL_TO_ROOM_ID_ENTRY: {
-				GuestEmailToRoomIDEntry guestEmailToRoomIDEntry = (GuestEmailToRoomIDEntry)theEObject;
+				@SuppressWarnings("unchecked") Map.Entry<String, EList<Integer>> guestEmailToRoomIDEntry = (Map.Entry<String, EList<Integer>>)theEObject;
 				T result = caseGuestEmailToRoomIDEntry(guestEmailToRoomIDEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -460,7 +461,7 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCustomerEmailToBookingRefEntry(CustomerEmailToBookingRefEntry object) {
+	public T caseCustomerEmailToBookingRefEntry(Map.Entry<String, EList<String>> object) {
 		return null;
 	}
 
@@ -475,7 +476,7 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGuestEmailToRoomIDEntry(GuestEmailToRoomIDEntry object) {
+	public T caseGuestEmailToRoomIDEntry(Map.Entry<String, EList<Integer>> object) {
 		return null;
 	}
 

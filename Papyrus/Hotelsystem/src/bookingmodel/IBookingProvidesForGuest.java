@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * 
  * @see bookingmodel.BookingmodelPackage#getIBookingProvidesForGuest()
  * @model interface="true" abstract="true"
- * @generated NOT
+ * @generated
  */
 public interface IBookingProvidesForGuest extends EObject {
 	/**
@@ -38,9 +38,9 @@ public interface IBookingProvidesForGuest extends EObject {
 	 * 			-2 if the room has not been checked-in or is not already checked out
 	 * 			-3 if the room could not be set as vacant
 	 * @model dataType="types.Integer" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
-	 * @generated 
+	 * @generated NOT
 	 */
-	int checkOut(int roomID, String guestEmail);
+	int checkOut(int roomID);
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -51,7 +51,7 @@ public interface IBookingProvidesForGuest extends EObject {
 	int payExtra(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, EList<String> extra, int roomID);
 
 	/**
- Make a payment for extra(s) from a room by inserting credit card number, 
+	 * Make a payment for extra(s) from a room by inserting credit card number, 
 	 * card code verification, expiration month, expiration year,
 	 * first name and last name.
 	 * The integer returned by the function indicates success or failure and reason for failure.
@@ -98,5 +98,21 @@ public interface IBookingProvidesForGuest extends EObject {
 	 * @generated NOT
 	 */
 	int payRoom(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, int roomID);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" extraIDsDataType="org.eclipse.uml2.types.String" extraIDsMany="true" extraIDsOrdered="false"
+	 * @generated
+	 */
+	int addExtra(int roomID, EList<String> extraIDs);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" extraIDsDataType="org.eclipse.uml2.types.String" extraIDsMany="true" extraIDsOrdered="false"
+	 * @generated
+	 */
+	int removeExtra(int roomID, EList<String> extraIDs);
 
 } // IBookingProvidesForGuest

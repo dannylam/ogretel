@@ -67,24 +67,6 @@ public interface BookingmodelFactory extends EFactory {
 	BookingHandler createBookingHandler();
 
 	/**
-	 * Returns a new object of class '<em>Customer Email To Booking Ref Entry</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Customer Email To Booking Ref Entry</em>'.
-	 * @generated
-	 */
-	CustomerEmailToBookingRefEntry createCustomerEmailToBookingRefEntry();
-
-	/**
-	 * Returns a new object of class '<em>Guest Email To Room ID Entry</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Guest Email To Room ID Entry</em>'.
-	 * @generated
-	 */
-	GuestEmailToRoomIDEntry createGuestEmailToRoomIDEntry();
-
-	/**
 	 * Returns a new object of class '<em>Booking Provides</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
