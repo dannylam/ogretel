@@ -85,13 +85,91 @@ public class testUseCases {
 		assertTrue(bookingprovides.setPersonalDetails(firstName, lastName, age, email, bookingRef) == 0);
 		assertTrue(bookingprovides.setPaymentDetails(ccNumber, ccv, expMonth, expYear, firstName, lastName, email, bookingRef) == 0);
 
-		//Wants to pay dirrectly
+		//Wants to pay directly
 		assertTrue(bookingprovides.setPaymentMethod("bankcard", bookingReference) == 0);
 		assertTrue(bookingprovides.payBooking(bookingRef) == 0);
 		//Gives the bookingRef
 		System.out.println(bookingRef);
 	}
+	
+	/*
+	 * Alt flow MAB: the chosen checkin/checkout-date is invalid 
+	 * (exists but has passed)
+	 */
+	public void testMABAltFlow2a(){
+		int nrOfGuests   		 = 2;
+		List<String> roomTypes	 = new ArrayList <String>();
+		List<String> extras		 = new ArrayList <String>();
+		List<String> services    = new ArrayList <String>();
+		roomTypes.add("Economic");
 
+		String bookingRef = bookingprovides.book("130101", "130112", nrOfGuests, roomTypes, extras, services);
+		assertFalse(bookingRef.equals(""));
+	}
+	
+	/*
+	 * Alt flow MAB: chosen checkout-date is before checkin-date
+	 */
+	public void testMABAltFlow2b(){
+		int nrOfGuests   		 = 2;
+		List<String> roomTypes	 = new ArrayList <String>();
+		List<String> extras		 = new ArrayList <String>();
+		List<String> services    = new ArrayList <String>();
+		roomTypes.add("Economic");
+
+		String bookingRef = bookingprovides.book("150310", "150220", nrOfGuests, roomTypes, extras, services);
+		assertFalse(bookingRef.equals(""));
+	}
+	
+	/*
+	 * Alt flow MAB: 
+	 */
+	public void testMABAltFlow2c(){
+		
+	}
+	
+	/*
+	 * Alt flow MAB: 
+	 */
+	public void testMABAltFlow2d(){
+		
+	}
+	
+	/*
+	 * Alt flow MAB: 
+	 */
+	public void testMABAltFlow2e(){
+		
+	}
+	
+	/*
+	 * Alt flow MAB: 
+	 */
+	public void testMABAltFlow6(){
+		
+	}
+	
+	/*
+	 * Alt flow MAB: 
+	 */
+	public void testMABAltFlow8(){
+		
+	}
+	
+	/*
+	 * Alt flow MAB: 
+	 */
+	public void testMABAltFlow10(){
+		
+	}
+	
+	/*
+	 * Alt flow MAB: 
+	 */
+	public void testMABAltFlow13(){
+		
+	}
+	
 	/*
 	 * Main flow check in and out
 	 */
