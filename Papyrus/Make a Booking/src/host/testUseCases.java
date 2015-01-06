@@ -25,6 +25,13 @@ import bookingmodel.impl.BookingProvidesImpl;
 
 
 public class testUseCases {
+	/*
+	 * A problem we found out to late was that we may have any number of instances in our system
+	 * As it is right now we have two differnet RoomtypeHandlers in RoomMaintenence and in MaintenenceProvidesForBooking
+	 * If we add a roomtype in Handler we cant reach it through Maintenece.
+	 * As mentioned we found this out very late in the prossess and decided that it would take to much time 
+	 * to redo the diagram and generate for a singleton pattern or any other pattern that would solve this problem	
+	 */
 	BookingProvides bookingprovides  	= new BookingProvidesImpl();
 	
 	RoomHandler roomHandler				= new RoomHandlerImpl();
