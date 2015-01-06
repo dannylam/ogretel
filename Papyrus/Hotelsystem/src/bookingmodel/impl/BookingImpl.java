@@ -735,8 +735,9 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public int setRoomIDs(List<Integer> roomIDs) {
 		if(!roomIDs.isEmpty() || !roomIDs.equals(null)){										
-			for (int i = 0; i < roomIDs.size(); i++) {											
+			for (int i = 0; i < roomIDs.size(); i++) {
 				this.roomIDToGuestMap.put(roomIDs.get(i),roomIDToGuestMap.get(i).getValue());	
+				this.roomIDToRoomTypeMap.put(roomIDs.get(i),roomIDToRoomTypeMap.get(i).getValue());	
 			}
 			return 0;
 		}
@@ -749,8 +750,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public int setExtras(List<String> extras) {
 		if(!(extras.isEmpty()) || !(extras.equals(null))){			
-			for (int i = 0; i < extras.size(); i++) {				
-				this.extraToIsPayedMap.put(extras.get(i),false);	
+			for(String extra: extras){		
+				this.extraToIsPayedMap.put(extra,false);	
 			}
 			return 0;
 		}
@@ -764,9 +765,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public int setRoomTypes(List<String> roomTypes) {
 		if(!roomTypes.isEmpty() || !roomTypes.equals(null)){			
-			for (int i = 0; i < roomTypes.size(); i++) {				
-				this.roomIDToGuestMap.put(null, roomTypes.get(i));		
-				this.roomIDToRoomTypeMap.put(null,roomTypes.get(i));	
+			for(String roomType: roomTypes){				
+				this.roomIDToRoomTypeMap.put(null,roomType);	
 			}
 			return 0;
 		}
