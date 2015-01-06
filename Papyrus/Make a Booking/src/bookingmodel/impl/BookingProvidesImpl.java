@@ -697,7 +697,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 					firstName, lastName, sum)) {
 				return 3;
 			}
-
 		} catch (SOAPException e) {
 			System.err
 					.println("Error occurred while communicating with the bank");
