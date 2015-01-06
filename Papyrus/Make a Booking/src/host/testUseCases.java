@@ -53,7 +53,7 @@ public class testUseCases {
 		
 		bookingprovides.setPersonalDetails(firstName, lastName, age, email, bookingReference);
 		bookingprovides.setPaymentDetails(ccNumber, ccv, expMonth, expYear, firstName, lastName, email, bookingReference);
-		bookingprovides.payBooking(bookingReference);
+		bookingprovides.setPaymentMethod("bankcard", bookingReference);
 }
 	
 	@Test
@@ -77,8 +77,8 @@ public class testUseCases {
 		assertTrue(bookingprovides.setPaymentDetails(ccNumber, ccv, expMonth, expYear, firstName, lastName, email, bookingRef) == 0);
 		
 		//Wants to pay dirrectly
+		assertTrue(bookingprovides.setPaymentMethod("bankcard", bookingReference) == 0);
 		assertTrue(bookingprovides.payBooking(bookingRef) == 0);
-		
 		//Gives the bookingRef
 		System.out.println(bookingRef);
 	}
@@ -90,6 +90,10 @@ public class testUseCases {
 		int roomID = bookingprovides.getRooms(bookingReference).get(0);
 		assertTrue(bookingprovides.isCheckedIn(roomID));
 		//CheckOut
+		int price = bookingprovides.checkOut(roomID);
+		assertTrue(price >= 0);
+		assertTrue(bookingprovides.payBooking(bookingReference) == 0);
+		assertTrue(bookingprovides.isCheckedOut(roomID));
 	}
 	
 	@Test
