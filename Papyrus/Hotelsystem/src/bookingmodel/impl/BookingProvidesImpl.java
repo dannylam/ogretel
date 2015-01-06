@@ -158,7 +158,7 @@ BookingProvides {
 		if (this.bookingHandler.isActive(bookingRef)) {
 			return this.getBookingHandler().getBooking(bookingRef).getStartDate();
 		}
-		return "Booking reference does not exist";
+		return null;
 	}
 
 	/**
@@ -169,7 +169,7 @@ BookingProvides {
 		if (this.bookingHandler.isActive(bookingRef)) {	
 			return this.getBookingHandler().getBooking(bookingRef).getEndDate();
 		}	
-		return "Booking reference does not exist";
+		return null;
 	}	
 
 	/**
@@ -213,7 +213,7 @@ BookingProvides {
 		if (this.bookingHandler.exists(bookingRef)) {	
 			return this.getBookingHandler().getBooking(bookingRef).getPaymentMethod().toString();
 		}	
-		return "Booking reference does not exist";
+		return null;
 	}	
 
 	/**
@@ -254,7 +254,7 @@ BookingProvides {
 		if(this.getBookingHandler().exists(bookingRef)){
 			return this.bookingHandler.getBooking(bookingRef).getCustomer().getFirstName();
 		} else {
-			return "Booking reference does not exist";
+			return null;
 		}
 	}
 
@@ -267,7 +267,7 @@ BookingProvides {
 		if(this.getBookingHandler().exists(bookingRef)){
 			return this.bookingHandler.getBooking(bookingRef).getCustomer().getFirstName();
 		} else {
-			return "Booking reference does not exist";
+			return null;
 		}
 	}
 
@@ -291,7 +291,7 @@ BookingProvides {
 		if(this.getBookingHandler().exists(bookingRef)){
 			return this.bookingHandler.getBooking(bookingRef).getCustomer().getEmail();
 		} else {
-			return "Booking reference does not exist";
+			return null;
 		}
 	}
 
@@ -303,7 +303,7 @@ BookingProvides {
 		if(this.getBookingHandler().exists(bookingRef)){
 			return this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().getCcNr();
 		} else {
-			return "Booking reference does not exist";
+			return null;
 		}
 	}
 
@@ -315,7 +315,7 @@ BookingProvides {
 		if(this.getBookingHandler().exists(bookingRef)){
 			return this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().getCcV();
 		} else {
-			return "Booking reference does not exist";
+			return null;
 		}
 	}
 
@@ -351,7 +351,7 @@ BookingProvides {
 		if(this.getBookingHandler().exists(bookingRef)){
 			return this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().getFirstName();
 		} else {
-			return "Booking reference does not exist";
+			return null;
 		}
 	}
 
@@ -363,7 +363,7 @@ BookingProvides {
 		if(this.getBookingHandler().exists(bookingRef)){
 			return this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().getLastName();
 		} else {
-			return "Booking reference does not exist";
+			return null;
 		}
 	}
 
@@ -617,7 +617,7 @@ BookingProvides {
 		if(this.getBookingHandler().exists(this.bookingHandler.getBooking(roomID).getBookingRef())){
 			return this.bookingHandler.getBooking(roomID).getRoomIDToGuestMap().get(roomID).getValue();
 		} else {
-			return "Booking reference does not exist";
+			return null;
 		}
 	}
 
@@ -844,8 +844,7 @@ BookingProvides {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int editPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, String customerEmail, String bookingRef) {
@@ -862,7 +861,6 @@ BookingProvides {
 				this.maintenanceComponent.makeBooking((EList<String>)roomTypes, startDate, endDate, nrOfGuests);
 				return this.bookingHandler.addBooking(nrOfGuests, startDate, endDate, roomTypes, extras, services);
 			}
-			return null;
 		}
 		return null;
 	}
