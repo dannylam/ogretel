@@ -806,6 +806,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 
 	/**
 	 * {{@inheritDoc}}
+	 * @return 	0, if setting room types went successful
+	 *			-1,  if setting room types failed.
 	 * @generated NOT
 	 */
 	public int setRoomTypes(List<String> roomTypes) {
@@ -821,6 +823,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	
 	/**
 	 * {@inheritDoc}
+	 * @return	 0, if setting service went successful.
+	 * 			-1, if setting service failed.
 	 * @generated NOT
 	 */
 	public int setServices(List<String> services) {
