@@ -84,7 +84,7 @@ public interface IRoomMaintenance extends EObject {
 	EList<Integer> getRoomIDs();
 
 	/**
-	 * @return
+	 * @return Status of the room.
 	 * String of RoomStatusEnum of Room indicated by roomID, otherwise null
 	 * 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true"
@@ -107,7 +107,7 @@ public interface IRoomMaintenance extends EObject {
 	EList<String> getRoomStatuses();
 
 	/**
-	 * @return
+	 * @return The room type ID.
 	 * RoomTypeID of RoomType of Room indicated by roomID
 	 * null if roomID invalid
 	 * 
@@ -119,11 +119,9 @@ public interface IRoomMaintenance extends EObject {
 	String getRoomTypeID(int roomID);
 	
 	/**
-	 * <!-- begin-user-doc -->
-	 * @return
+	 * @return Number of room types.
 	 * number of Rooms with RoomType indicated by roomTypeID
 	 * -1 if roomTypeID invalid
-	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
 	 * @generated
 	 */
