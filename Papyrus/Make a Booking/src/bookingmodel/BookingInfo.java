@@ -6,14 +6,14 @@ import java.util.List;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Booking Info</b></em>'.
- * <!-- end-user-doc -->
- *
+ * An interface representing the information a booking needs,
+ * such as getStartDate, getEndDate, getNrOfGuests, 
+ * getExtras, getRooms, getPaymentMethod, getRoomTypes, 
+ * getServiceNotes, getBookingRef
  *
  * @see bookingmodel.BookingmodelPackage#getBookingInfo()
  * @model interface="true" abstract="true"
- * @generated
+ * @generated NOT
  */
 public interface BookingInfo extends EObject {
 	/**
@@ -33,7 +33,7 @@ public interface BookingInfo extends EObject {
 	/**
 	 * Returns the number of guests of the given booking
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int getNrOfGuests(String bookingRef);
 
