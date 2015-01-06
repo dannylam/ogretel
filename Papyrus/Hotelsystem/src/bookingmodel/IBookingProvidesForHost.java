@@ -57,14 +57,6 @@ public interface IBookingProvidesForHost extends EObject {
 	List<String> getExistingBookings();
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model kind="operation" dataType="org.eclipse.uml2.types.String" ordered="false"
-	 * @generated
-	 */
-	EList<String> getActiveBookings();
-
-	/**
 	 * Returns is the given room is checked-out or not
 	 * @model dataType="types.Boolean" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated  NOT

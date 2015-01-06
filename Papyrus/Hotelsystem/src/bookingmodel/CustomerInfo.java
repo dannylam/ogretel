@@ -84,6 +84,6 @@ public interface CustomerInfo extends EObject {
 	 * @model dataType="types.String" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
-	String geCardtLastName(String bookingRef);
+	String getCardLastName(String bookingRef);
 
 } // CustomerInfo

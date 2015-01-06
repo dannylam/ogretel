@@ -39,7 +39,7 @@ public interface IBookingProvidesForGuest extends EObject {
 	 * @model dataType="types.Integer" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated 
 	 */
-	int checkOut(int roomID, String guestEmail);
+	int checkOut(int roomID);
 
 	/**
 	 * Make a payment for extra(s) from a room by inserting credit card number, 
