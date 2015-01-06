@@ -165,6 +165,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 
 	/**
 	 * {@inheritDoc}
+	 * @return getBookingRef, if the booking map is not empty
+	 * @return null, if the booking map is empty
 	 * @generated NOT
 	 */
 	public String addBooking(int nrOfGuests, String startDate, String endDate, List<String> roomTypes, List<String> extras, List<String> services) {
@@ -179,6 +181,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	
 	/**
 	 * Generates a booking reference to a booking
+	 * @return generateBookingRef, if the booking reference is active
+	 * @return bookingRef, if the booking reference is not active.
 	 * @generated NOT
 	 */
 	private String generateBookingRef() {
@@ -192,6 +196,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		
 	/**
 	 * {@inheritDoc}
+	 * @return 0, if removing a booking went correct
+	 * @return -1, if removing a booking failed.
 	 * @generated NOT
 	 */
 	public int removeBooking(String bookingRef) {
@@ -204,6 +210,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 
 	/**
 	 * {@inheritDoc}
+	 * @return the booking reference.
 	 * @generated NOT
 	 */
 	public Booking getBooking(String bookingRef) {
@@ -223,6 +230,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 
 	/**
 	 * {@inheritDoc}
+	 * @return booking with room identification.
 	 * @generated NOT
 	 */
 	public Booking getBooking(int roomID) {
@@ -231,6 +239,8 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 
 	/**
 	 * {@inheritDoc}
+	 * @return true, if the booking reference is active
+	 * @return false, if the booking reference is not active.
 	 * @generated NOT
 	 */
 	public boolean isActive(String bookingRef) {
@@ -244,6 +254,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	/**
 	 * {@inheritDoc}
 	 * @param bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras
+	 * @return 0, if edit booking was successful.
 	 * @generated NOT
 	 */
 	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras, List<String> services) {
