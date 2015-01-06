@@ -281,7 +281,6 @@ public interface Booking extends EObject {
 	 */
 	int getNrOfRooms();
 
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -413,6 +412,22 @@ public interface Booking extends EObject {
 	 */
 	List<String> getUnPayedExtras();
 	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extrasDataType="org.eclipse.uml2.types.String" extrasMany="true" extrasOrdered="false"
+	 * @generated
+	 */
+	int setExtrasAsPayed(EList<String> extras);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" serviceNotesDataType="org.eclipse.uml2.types.String" serviceNotesMany="true" serviceNotesOrdered="false"
+	 * @generated
+	 */
+	int removeServiceNotes(EList<String> serviceNotes);
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
