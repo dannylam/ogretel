@@ -41,15 +41,7 @@ public interface IBookingProvidesForGuest extends EObject {
 	 * @generated NOT
 	 */
 	int checkOut(int roomID);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="org.eclipse.uml2.types.String" ccvRequired="true" ccvOrdered="false" expMonthDataType="org.eclipse.uml2.types.Integer" expMonthRequired="true" expMonthOrdered="false" expYearDataType="org.eclipse.uml2.types.Integer" expYearRequired="true" expYearOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false" extraDataType="org.eclipse.uml2.types.String" extraMany="true" extraOrdered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false"
-	 * @generated
-	 */
-	int payExtra(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, EList<String> extra, int roomID);
-
+	
 	/**
 	 * Make a payment for extra(s) from a room by inserting credit card number, 
 	 * card code verification, expiration month, expiration year,
@@ -100,18 +92,20 @@ public interface IBookingProvidesForGuest extends EObject {
 	int payRoom(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, int roomID);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Adds a list of extras to a booking
+	 * @return 	0 if success
+	 * 			-1 if unsuccessful //TODO define
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" extraIDsDataType="org.eclipse.uml2.types.String" extraIDsMany="true" extraIDsOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int addExtra(int roomID, EList<String> extraIDs);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Removes a list of extras from a booking
+	 * @return 	0 if success
+	 * 			-1 if unsuccessful //TODO define
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" extraIDsDataType="org.eclipse.uml2.types.String" extraIDsMany="true" extraIDsOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int removeExtra(int roomID, EList<String> extraIDs);
 

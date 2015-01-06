@@ -84,22 +84,6 @@ public interface IBookingProvidesForHost extends EObject {
 	List<Integer> getRoomID(String guestEmail);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="org.eclipse.uml2.types.String" serviceNoteMany="true" serviceNoteOrdered="false"
-	 * @generated
-	 */
-	int addServiceNotes(int roomID, EList<String> serviceNote);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="org.eclipse.uml2.types.String" serviceNoteMany="true" serviceNoteOrdered="false"
-	 * @generated
-	 */
-	int removeServiceNotes(int roomID, EList<String> serviceNote);
-
-	/**
 	 * Adds a list of servicenotes to the booking connected to the given roomID 
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="org.eclipse.uml2.types.String" serviceNoteMany="true" serviceNoteOrdered="false"
 	 * @generated NOT
