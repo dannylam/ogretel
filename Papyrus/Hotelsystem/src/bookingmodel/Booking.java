@@ -282,45 +282,13 @@ public interface Booking extends EObject {
 	int getNrOfRooms();
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extrasDataType="org.eclipse.uml2.types.String" extrasMany="true" extrasOrdered="false"
-	 * @generated
-	 */
-	int setExtras(EList<String> extras);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypesDataType="org.eclipse.uml2.types.String" roomTypesMany="true" roomTypesOrdered="false"
-	 * @generated
-	 */
-	int setRoomTypes(EList<String> roomTypes);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" roomIDsDataType="org.eclipse.uml2.types.Integer" roomIDsMany="true"
-	 * @generated
-	 */
-	int setRoomIDs(EList<Integer> roomIDs);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false"
-	 * @generated
-	 */
-	int setServiceNotes(EList<String> services);
-
-	/**
 	 * Adds services from a booking into the map with roomIDs.
 	 * @return  -1 if not success
 	 * 			0 if success 
 	 * @model dataType="types.Integer" required="true" ordered="false" servicesDataType="types.String" servicesMany="true" servicesOrdered="false"
 	 * @generated NOT
 	 */
-	int setServices(List<String> services);
+	int setServiceNotes(List<String> services);
 
 	/**
 	 * Adds extras from a booking into the map with extras.
@@ -411,26 +379,11 @@ public interface Booking extends EObject {
 	 * @generated NOT
 	 */
 	List<String> getUnPayedExtras();
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extrasDataType="org.eclipse.uml2.types.String" extrasMany="true" extrasOrdered="false"
-	 * @generated
-	 */
-	int setExtrasAsPayed(EList<String> extras);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" serviceNotesDataType="org.eclipse.uml2.types.String" serviceNotesMany="true" serviceNotesOrdered="false"
-	 * @generated
-	 */
-	int removeServiceNotes(EList<String> serviceNotes);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Removes a list of servicenotes
+	 * @return  -1 if not success
+	 * 			0 if success 
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" serviceNotesDataType="org.eclipse.uml2.types.String" serviceNotesMany="true" serviceNotesOrdered="false"
 	 * @generated NOT
 	 */

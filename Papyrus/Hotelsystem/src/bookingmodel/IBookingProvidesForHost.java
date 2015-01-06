@@ -3,8 +3,6 @@
 package bookingmodel;
 
 import java.util.List;
-
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -85,16 +83,14 @@ public interface IBookingProvidesForHost extends EObject {
 	List<Integer> getRoomID(String guestEmail);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Adds a list of servicenotes to the booking connected to the given roomID 
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="org.eclipse.uml2.types.String" serviceNoteMany="true" serviceNoteOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int addServiceNotes(int roomID, List<String> serviceNote);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Removes a list of servicenotes to the booking connected to the given roomID 
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="org.eclipse.uml2.types.String" serviceNoteMany="true" serviceNoteOrdered="false"
 	 * @generated NOT
 	 */
