@@ -53,9 +53,9 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
-	protected RoomHandlerImpl() {
+	public RoomHandlerImpl() {
 		super();
 	}
 

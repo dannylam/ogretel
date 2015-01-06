@@ -43,23 +43,22 @@ public interface IRoomTypeMaintenance extends EObject {
 			int maxNrOfGuests, String description);
 
 	/**
-	 * <!-- begin-user-doc --> Remove RoomType indicated by roomTypeID
+	 * Remove RoomType indicated by roomTypeID
 	 * @return
 	 * 0 if successful
-	 * 1 otherwise <!-- end-user-doc -->
+	 * 1 otherwise 
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
 	 * @generated NOT
 	 */
 	int removeRoomType(String roomTypeID);
 
 	/**
-	 * <!-- begin-user-doc -->
 	 * @return
 	 * 0 if successful
 	 * 1 if roomTypeID invalid
 	 * 2 if roomTypeEnum invalid
 	 * 3 if price < 0
-	 * 4 if maxNrOfGuests < 0 <!-- end-user-doc -->
+	 * 4 if maxNrOfGuests < 0 
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false" roomTypeEnumDataType="org.eclipse.uml2.types.String" roomTypeEnumRequired="true" roomTypeEnumOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" maxNrOfGuestsDataType="org.eclipse.uml2.types.Integer" maxNrOfGuestsRequired="true" maxNrOfGuestsOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false"
 	 * @generated NOT
 	 */

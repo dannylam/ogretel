@@ -5,14 +5,9 @@ package bookingmodel.impl;
 import bookingmodel.Booking;
 import bookingmodel.BookingHandler;
 import bookingmodel.BookingmodelPackage;
-
-import bookingmodel.CustomerEmailToBookingRefEntry;
-import bookingmodel.GuestEmailToRoomIDEntry;
 import java.lang.reflect.InvocationTargetException;
-import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
@@ -20,7 +15,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -58,24 +52,24 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	protected EMap<Integer, String> roomIDToBookingRefMap;
 
 	/**
-	 * The cached value of the '{@link #getCustomerEmailToBookingRefEntry() <em>Customer Email To Booking Ref Entry</em>}' containment reference list.
+	 * The cached value of the '{@link #getCustomerEmailToBookingRefEntry() <em>Customer Email To Booking Ref Entry</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCustomerEmailToBookingRefEntry()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<CustomerEmailToBookingRefEntry> customerEmailToBookingRefEntry;
+	protected EMap<String, EList<String>> customerEmailToBookingRefEntry;
 
 	/**
-	 * The cached value of the '{@link #getGuestEmailToRoomIDEntry() <em>Guest Email To Room ID Entry</em>}' containment reference list.
+	 * The cached value of the '{@link #getGuestEmailToRoomIDEntry() <em>Guest Email To Room ID Entry</em>}' map.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getGuestEmailToRoomIDEntry()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<GuestEmailToRoomIDEntry> guestEmailToRoomIDEntry;
+	protected EMap<String, EList<Integer>> guestEmailToRoomIDEntry;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -125,9 +119,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<CustomerEmailToBookingRefEntry> getCustomerEmailToBookingRefEntry() {
+	public EMap<String, EList<String>> getCustomerEmailToBookingRefEntry() {
 		if (customerEmailToBookingRefEntry == null) {
-			customerEmailToBookingRefEntry = new EObjectContainmentEList<CustomerEmailToBookingRefEntry>(CustomerEmailToBookingRefEntry.class, this, BookingmodelPackage.BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY);
+			customerEmailToBookingRefEntry = new EcoreEMap<String,EList<String>>(BookingmodelPackage.Literals.CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY, CustomerEmailToBookingRefEntryImpl.class, this, BookingmodelPackage.BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY);
 		}
 		return customerEmailToBookingRefEntry;
 	}
@@ -137,9 +131,9 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<GuestEmailToRoomIDEntry> getGuestEmailToRoomIDEntry() {
+	public EMap<String, EList<Integer>> getGuestEmailToRoomIDEntry() {
 		if (guestEmailToRoomIDEntry == null) {
-			guestEmailToRoomIDEntry = new EObjectContainmentEList<GuestEmailToRoomIDEntry>(GuestEmailToRoomIDEntry.class, this, BookingmodelPackage.BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY);
+			guestEmailToRoomIDEntry = new EcoreEMap<String,EList<Integer>>(BookingmodelPackage.Literals.GUEST_EMAIL_TO_ROOM_ID_ENTRY, GuestEmailToRoomIDEntryImpl.class, this, BookingmodelPackage.BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY);
 		}
 		return guestEmailToRoomIDEntry;
 	}
@@ -291,9 +285,11 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				if (coreType) return getRoomIDToBookingRefMap();
 				else return getRoomIDToBookingRefMap().map();
 			case BookingmodelPackage.BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY:
-				return getCustomerEmailToBookingRefEntry();
+				if (coreType) return getCustomerEmailToBookingRefEntry();
+				else return getCustomerEmailToBookingRefEntry().map();
 			case BookingmodelPackage.BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY:
-				return getGuestEmailToRoomIDEntry();
+				if (coreType) return getGuestEmailToRoomIDEntry();
+				else return getGuestEmailToRoomIDEntry().map();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -314,12 +310,10 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				((EStructuralFeature.Setting)getRoomIDToBookingRefMap()).set(newValue);
 				return;
 			case BookingmodelPackage.BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY:
-				getCustomerEmailToBookingRefEntry().clear();
-				getCustomerEmailToBookingRefEntry().addAll((Collection<? extends CustomerEmailToBookingRefEntry>)newValue);
+				((EStructuralFeature.Setting)getCustomerEmailToBookingRefEntry()).set(newValue);
 				return;
 			case BookingmodelPackage.BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY:
-				getGuestEmailToRoomIDEntry().clear();
-				getGuestEmailToRoomIDEntry().addAll((Collection<? extends GuestEmailToRoomIDEntry>)newValue);
+				((EStructuralFeature.Setting)getGuestEmailToRoomIDEntry()).set(newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

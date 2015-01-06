@@ -98,15 +98,15 @@ public interface IBookingProvidesForHost extends EObject {
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="org.eclipse.uml2.types.String" serviceNoteMany="true" serviceNoteOrdered="false"
 	 * @generated
 	 */
-	int addServiceNotes(int roomID, EList<String> serviceNote);
+	int addServiceNotes(int roomID, List<String> serviceNote);
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="org.eclipse.uml2.types.String" serviceNoteMany="true" serviceNoteOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
-	int RemoveServiceNotes(int roomID, EList<String> serviceNote);
+	int removeServiceNotes(int roomID, List<String> serviceNote);
 
 	/**
 	 * Returns the service notes from a specific booking. 

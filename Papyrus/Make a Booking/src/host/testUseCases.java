@@ -6,6 +6,15 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.List;
 
+import maintenancemodel.ExtraHandler;
+import maintenancemodel.ExtrasMaintenance;
+import maintenancemodel.IExtrasMaintenance;
+import maintenancemodel.MaintenanceProvidesForBooking;
+import maintenancemodel.RoomHandler;
+import maintenancemodel.impl.ExtraHandlerImpl;
+import maintenancemodel.impl.ExtrasMaintenanceImpl;
+import maintenancemodel.impl.MaintenanceProvidesForBookingImpl;
+import maintenancemodel.impl.RoomHandlerImpl;
 import maintenancemodel.impl.RoomMaintenanceImpl;
 
 import org.junit.BeforeClass;
@@ -16,10 +25,19 @@ import bookingmodel.impl.BookingProvidesImpl;
 
 
 public class testUseCases {
-
-	RoomMaintenanceImpl roomMaintenence = new RoomMaintenanceImpl();
+	/*
+	 * A problem we found out to late was that we may have any number of instances in our system
+	 * As it is right now we have two differnet RoomtypeHandlers in RoomMaintenence and in MaintenenceProvidesForBooking
+	 * If we add a roomtype in Handler we cant reach it through Maintenece.
+	 * As mentioned we found this out very late in the prossess and decided that it would take to much time 
+	 * to redo the diagram and generate for a singleton pattern or any other pattern that would solve this problem	
+	 */
 	BookingProvides bookingprovides  	= new BookingProvidesImpl();
-
+	
+	RoomMaintenanceImpl roomMaintenence = new RoomMaintenanceImpl(); 
+	MaintenanceProvidesForBooking mpb   = new MaintenanceProvidesForBookingImpl();
+	IExtrasMaintenance extraMaintenance = new ExtrasMaintenanceImpl();
+	
 	//User 1
 	String firstName = "Nils";
 	String lastName	 = "Holgersson";
@@ -43,10 +61,16 @@ public class testUseCases {
 		for(int i=1; i<10; i++) {
 			roomMaintenence.addRoom(i, "Economic");
 		}
-
+		addExtras();
 		makeABooking();
 	}
-
+	
+	//Adds extras to the system
+	private void addExtras() {
+		extraMaintenance.addExtra("1", 100, "Bag of SWAG", "All the swag you'll ever need", true);
+		extraMaintenance.addExtra("2", 100, "Souna", "Hot and sweaty, mhh mmhh mmmmmmmmmm", true);
+	}
+	
 	/*
 	 * Creates a booking in the system to make sure we have it during testing.
 	 * It is not payed. The global "bookingReference" 
@@ -216,6 +240,42 @@ public class testUseCases {
 	/*
 	 * Main flow check in and out
 	 */
+	@Test
+	public void testMakeABookingAllternative1A() {
+		String startDate 		 = "150210";
+		String endDate   	 	 = "150212";
+		int nrOfGuests   		 = 2;
+		List<String> roomTypes	 = new ArrayList <String>();
+		List<String> extras		 = new ArrayList <String>();
+		List<String> services    = new ArrayList <String>();
+		
+		roomTypes.add("Economic");
+		extras.add("1");
+		extras.add("2");
+		services.add("Took a cab from the hotel");
+		services.add("Went skydiving");
+		
+		String bookingRef = bookingprovides.book(startDate, endDate, nrOfGuests, roomTypes, extras, services);
+		assertFalse(bookingRef.compareTo("") == 0);
+		assertTrue(extraMaintenance.exists("1"));
+		assertTrue(extraMaintenance.exists("2"));
+		assertTrue(bookingprovides.getBookingHandler().getBooking(bookingRef).getExtras().size()       == 2);
+		assertTrue(bookingprovides.getBookingHandler().getBooking(bookingRef).getServiceNotes().size() == 2);
+		
+		
+		int price = bookingprovides.getPrice(bookingRef);
+		System.out.println("Price: " + price);
+		//Finds the price accepteble
+		assertTrue(bookingprovides.setPersonalDetails(firstName, lastName, age, email, bookingRef) == 0);
+		assertTrue(bookingprovides.setPaymentDetails(ccNumber, ccv, expMonth, expYear, firstName, lastName, email, bookingRef) == 0);
+		
+		//Wants to pay dirrectly
+		assertTrue(bookingprovides.setPaymentMethod("bankcard", bookingReference) == 0);
+		assertTrue(bookingprovides.payBooking(bookingRef) == 0);
+		//Gives the bookingRef
+		System.out.println(bookingRef);
+	}
+
 	@Test
 	public void testCheckInCheckOut() {
 		//CheckIn
