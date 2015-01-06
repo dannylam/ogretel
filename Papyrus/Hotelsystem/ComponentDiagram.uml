@@ -482,28 +482,6 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedParameter>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_qhwoGJXHEeSnm_zFoXQEQA" name="removeExtra">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_qhwoGZXHEeSnm_zFoXQEQA" name="roomID">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_qhwoGpXHEeSnm_zFoXQEQA" name="extraID">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_qhwoG5XHEeSnm_zFoXQEQA" name="result" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedParameter>
-    </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_qhwoHJXHEeSnm_zFoXQEQA" name="addExtra">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_qhwoHZXHEeSnm_zFoXQEQA" name="bookingRef">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_qhwoHpXHEeSnm_zFoXQEQA" name="extraID">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-      </ownedParameter>
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_qhwoH5XHEeSnm_zFoXQEQA" name="result" direction="return">
-        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-      </ownedParameter>
-    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_qhx2IJXHEeSnm_zFoXQEQA" name="BookingInfo">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_qhx2IZXHEeSnm_zFoXQEQA" name="getStartDate">
