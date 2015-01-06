@@ -397,7 +397,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	public int checkOut(int roomID) {
 		Booking booking = this.getBookingHandler().getBooking(roomID);
 		if (this.getBookingHandler().exists(booking.getBookingRef())) {
-			if(booking.checkedInRoom(roomID) && !booking.checkedOutRoom(roomID)){
+			if(booking.checkedInRoom(roomID) || !booking.checkedOutRoom(roomID)){
 				String guestEmail = this.getResponsibleGuest(roomID);
 				booking.removeResponsibleGuest(roomID, guestEmail);
 				
@@ -808,6 +808,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	public String book(String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras, List<String> services) {
 		if(!startDate.equals(null) && !endDate.equals(null) && nrOfGuests > 0 && !roomTypes.equals(null)){
 			if (this.maintenanceComponent.canBook((EList<String>) roomTypes, startDate, endDate, nrOfGuests)) {
+				this.maintenanceComponent.makeBooking((EList<String>)roomTypes, startDate, endDate, nrOfGuests);
 				return this.bookingHandler.addBooking(nrOfGuests, startDate, endDate, roomTypes, extras, services);
 			}
 			return "";
