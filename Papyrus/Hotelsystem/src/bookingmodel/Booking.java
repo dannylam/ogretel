@@ -8,28 +8,7 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * An interface class which represents Booking, extending EObject.
- * which extends an EObject and has 21 methods:
- * getBookingRef - get a specific booking
- * setBookingRef - set a value to a specific booking reference
- * getDate - get a date of a specific booking
- * setDate - set a date to a specific booking
- * getNrOfNights - get number of nights of a specific booking
- * setNrOfNights - set number of nights to a specific booking
- * getExtraList - get a list of extras
- * getServiceNotes - get a list of service notes
- * getNrOfGuests - get the number of guests of a specific booking
- * setNrOfGuests - set number of guests to a specific booking
- * getCustomer - get customer from a specific booking
- * setCustomer - set customer to a specific booking
- * getGuestList - get a list of guests
- * isPayed - checks if the booking has been payed or not
- * setIsPayed - set the booking to Payed
- * getRoomGuestMap - get a set of rooms and their responsible guests
- * getRoomTypeMap - get a set of roomtypes
- * getPaymentMethod - get the payment method of a specific booking
- * setPaymentMethod - set the payment method to a specific booking
- * checkedInAllGuest - check if all guests are checked in.
- * checkedInAGuest - check if a specific guest is checked in.
+ * 
  * <p>
  * The following features are supported:
  * <ul>
