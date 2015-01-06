@@ -5,14 +5,14 @@ package bookingmodel;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Customer Info</b></em>'.
- * <!-- end-user-doc -->
- *
+ * An interface representing the information a customer has,
+ * such as getCustomerName, getLastName, getCustomerAge, 
+ * getCustomerEmail, getCcNr, getCcV, getExpMonth, 
+ * getExpYear, getCardFirstName, getCardLastName
  *
  * @see bookingmodel.BookingmodelPackage#getCustomerInfo()
  * @model interface="true" abstract="true"
- * @generated
+ * @generated NOT
  */
 public interface CustomerInfo extends EObject {
 	/**
