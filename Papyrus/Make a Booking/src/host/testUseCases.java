@@ -318,7 +318,10 @@ public class testUseCases {
 
 	@Test
 	public void testEditAvalabilityOfRoom() {
-
+		String oldRS = this.roomMaintenence.getRoomStatus(4);
+		assertTrue(oldRS.equals("Vacant"));
+		this.roomMaintenence.editRoomStatus(4, "busy");
+		assertFalse(this.roomMaintenence.getRoomStatus(4).equals(oldRS));
 	}
 
 
