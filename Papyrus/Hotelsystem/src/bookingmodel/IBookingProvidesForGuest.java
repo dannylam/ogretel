@@ -38,7 +38,7 @@ public interface IBookingProvidesForGuest extends EObject {
 	 * 			-2 if the room has not been checked-in or is not already checked out
 	 * 			-3 if the room could not be set as vacant
 	 * @model dataType="types.Integer" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
-	 * @generated 
+	 * @generated NOT
 	 */
 	int checkOut(int roomID);
 

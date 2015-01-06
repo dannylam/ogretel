@@ -33,11 +33,11 @@ public class testUseCases {
 	 * to redo the diagram and generate for a singleton pattern or any other pattern that would solve this problem	
 	 */
 	BookingProvides bookingprovides  	= new BookingProvidesImpl();
-	
+
 	RoomMaintenanceImpl roomMaintenence = new RoomMaintenanceImpl(); 
 	MaintenanceProvidesForBooking mpb   = new MaintenanceProvidesForBookingImpl();
 	IExtrasMaintenance extraMaintenance = new ExtrasMaintenanceImpl();
-	
+
 	//User 1
 	String firstName = "Nils";
 	String lastName	 = "Holgersson";
@@ -64,13 +64,13 @@ public class testUseCases {
 		addExtras();
 		makeABooking();
 	}
-	
+
 	//Adds extras to the system
 	private void addExtras() {
 		extraMaintenance.addExtra("1", 100, "Bag of SWAG", "All the swag you'll ever need", true);
 		extraMaintenance.addExtra("2", 100, "Souna", "Hot and sweaty, mhh mmhh mmmmmmmmmm", true);
 	}
-	
+
 	/*
 	 * Creates a booking in the system to make sure we have it during testing.
 	 * It is not payed. The global "bookingReference" 
@@ -115,7 +115,7 @@ public class testUseCases {
 		//Gives the bookingRef
 		System.out.println(bookingRef);
 	}
-	
+
 	/*
 	 * Alt flow MAB: the chosen checkin/checkout-date is invalid 
 	 * (exists but has passed)
@@ -158,7 +158,7 @@ public class testUseCases {
 		String bookingRef = bookingprovides.book("130101", "130112", nrOfGuests, roomTypes, extras, services);
 		assertFalse(bookingRef.equals(""));
 	}
-	
+
 	/*
 	 * Alt flow MAB: chosen checkout-date is before checkin-date
 	 */
@@ -172,7 +172,7 @@ public class testUseCases {
 		String bookingRef = bookingprovides.book("150310", "150220", nrOfGuests, roomTypes, extras, services);
 		assertFalse(bookingRef.equals(""));
 	}
-	
+
 	/*
 	 * Alt flow MAB: chosen number of guests is invalid (is below 1)
 	 */
@@ -186,7 +186,7 @@ public class testUseCases {
 		String bookingRef = bookingprovides.book("150310", "150315", nrOfGuests, roomTypes, extras, services);
 		assertFalse(bookingRef.equals(""));
 	}
-	
+
 	/*
 	 * Alt flow MAB: chosen roomtype(s) is invalid (doesn’t exist)
 	 */
@@ -201,7 +201,7 @@ public class testUseCases {
 		String bookingRef = bookingprovides.book("150310", "150315", nrOfGuests, roomTypes, extras, services);
 		assertFalse(bookingRef.equals(""));
 	}
-	
+
 	/*
 	 * Alt flow MAB: chosen amount of roomtype(s) is invalid (is below 1)
 	 */
@@ -214,7 +214,7 @@ public class testUseCases {
 		String bookingRef = bookingprovides.book("150310", "150315", nrOfGuests, roomTypes, extras, services);
 		assertFalse(bookingRef.equals(""));
 	}
-	
+
 	/*
 	 * Alt flow MAB: Personal details are invalid, person is too young, 
 	 * below legal age limit
@@ -238,7 +238,7 @@ public class testUseCases {
 		assertTrue(bookingprovides.setPersonalDetails(firstName, lastName, 12, email, bookingRef) != 0);
 
 	}
-	
+
 	/*
 	 * Alt flow MAB: Payment details are invalid
 	 */
@@ -263,8 +263,8 @@ public class testUseCases {
 		assertTrue(bookingprovides.payBooking(bookingRef) != 0);
 
 	}
-	
-	
+
+
 	/*
 	 * Main flow make a booking
 	 */
@@ -276,27 +276,27 @@ public class testUseCases {
 		List<String> roomTypes	 = new ArrayList <String>();
 		List<String> extras		 = new ArrayList <String>();
 		List<String> services    = new ArrayList <String>();
-		
+
 		roomTypes.add("Economic");
 		extras.add("1");
 		extras.add("2");
 		services.add("Took a cab from the hotel");
 		services.add("Went skydiving");
-		
+
 		String bookingRef = bookingprovides.book(startDate, endDate, nrOfGuests, roomTypes, extras, services);
 		assertFalse(bookingRef.compareTo("") == 0);
 		assertTrue(extraMaintenance.exists("1"));
 		assertTrue(extraMaintenance.exists("2"));
 		assertTrue(bookingprovides.getBookingHandler().getBooking(bookingRef).getExtras().size()       == 2);
 		assertTrue(bookingprovides.getBookingHandler().getBooking(bookingRef).getServiceNotes().size() == 2);
-		
-		
+
+
 		int price = bookingprovides.getPrice(bookingRef);
 		System.out.println("Price: " + price);
 		//Finds the price accepteble
 		assertTrue(bookingprovides.setPersonalDetails(firstName, lastName, age, email, bookingRef) == 0);
 		assertTrue(bookingprovides.setPaymentDetails(ccNumber, ccv, expMonth, expYear, firstName, lastName, email, bookingRef) == 0);
-		
+
 		//Wants to pay dirrectly
 		assertTrue(bookingprovides.setPaymentMethod("bankcard", bookingReference) == 0);
 		assertTrue(bookingprovides.payBooking(bookingRef) == 0);
@@ -316,7 +316,7 @@ public class testUseCases {
 		assertTrue(bookingprovides.payBooking(bookingReference) == 0);
 		assertTrue(bookingprovides.isCheckedOut(roomID));
 	}
-	
+
 	/*
 	 * Alternativ flow CheckIn: The booking number does not exist.
 	 */
@@ -325,7 +325,7 @@ public class testUseCases {
 		int checkin = bookingprovides.checkIn(bookingReference, "Economic", email);
 		assertTrue(checkin == -1);
 	}
-	
+
 	/*
 	 * Alternative flow CheckOut: Room ID does not exist
 	 */
@@ -334,7 +334,7 @@ public class testUseCases {
 		int checkout = bookingprovides.checkOut(3000);
 		assertTrue(checkout == -1);
 	}
-	
+
 	/*
 	 * Alternative flow CheckOut: Room ID status is not busy
 	 */
@@ -346,6 +346,33 @@ public class testUseCases {
 
 	@Test
 	public void testEditAvalabilityOfRoom() {
+		String oldRS = this.roomMaintenence.getRoomStatus(4);
+		assertTrue(oldRS.equals("Vacant"));
+		this.roomMaintenence.editRoomStatus(4, "busy");
+		assertFalse(this.roomMaintenence.getRoomStatus(4).equals(oldRS));
+	}
+
+	@Test
+	public void testEditRoom() {
+		roomMaintenence.addRoomType("ToBeEdited", "doublebed", 100, 3, "A fine room indeed");
+		roomMaintenence.addRoom(100, "ToBeEdited");
+		
+		List<String> roomTs = new ArrayList<String>();
+		roomTs.add("ToBeEdited");
+		
+		//Make booking
+		String bookingReference = bookingprovides.book("150110", "150114", 2, roomTs,
+				new ArrayList <String>(), new ArrayList <String>());
+
+		bookingprovides.setPersonalDetails(firstName, lastName, age, email, bookingReference);
+		bookingprovides.setPaymentDetails(ccNumber, ccv, expMonth, expYear, firstName, lastName, email, bookingReference);
+		bookingprovides.setPaymentMethod("bankcard", bookingReference);
+				
+		roomTs.add("ToBeEdited");
+		
+		//Edit the booking (already know it exists...)
+		int price = bookingprovides.editBooking(bookingReference, "150111", "150115", 3, roomTs, new ArrayList<String>(), new ArrayList<String>());
+		assertTrue( price>0 );
 
 	}
 
