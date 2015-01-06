@@ -112,13 +112,8 @@ public interface PaymentDetails extends EObject {
 	void setExpYear(int value);
 
 	/**
-	 * Returns the value of the '<em><b>First Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>First Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
+	 * Returns the value of the '<em><b>First Name</b></em>' attribute,
+	 * that is the first name of the customer.
 	 * @return the value of the '<em>First Name</em>' attribute.
 	 * @see #setFirstName(String)
 	 * @see bookingmodel.BookingmodelPackage#getPaymentDetails_FirstName()
@@ -128,9 +123,8 @@ public interface PaymentDetails extends EObject {
 	String getFirstName();
 
 	/**
-	 * Sets the value of the '{@link bookingmodel.PaymentDetails#getFirstName <em>First Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets the value of the '{@link bookingmodel.PaymentDetails#getFirstName <em>First Name</em>}' attribute,
+	 * that is the first name of the customer.
 	 * @param value the new value of the '<em>First Name</em>' attribute.
 	 * @see #getFirstName()
 	 * @generated NOT
@@ -138,13 +132,8 @@ public interface PaymentDetails extends EObject {
 	void setFirstName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Last Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Last Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
+	 * Returns the value of the '<em><b>Last Name</b></em>' attribute,
+	 * that is the last name of the customer.
 	 * @return the value of the '<em>Last Name</em>' attribute.
 	 * @see #setLastName(String)
 	 * @see bookingmodel.BookingmodelPackage#getPaymentDetails_LastName()
@@ -154,9 +143,8 @@ public interface PaymentDetails extends EObject {
 	String getLastName();
 
 	/**
-	 * Sets the value of the '{@link bookingmodel.PaymentDetails#getLastName <em>Last Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Sets the value of the '{@link bookingmodel.PaymentDetails#getLastName <em>Last Name</em>}' attribute,
+	 * that is the last name of the customer.
 	 * @param value the new value of the '<em>Last Name</em>' attribute.
 	 * @see #getLastName()
 	 * @generated NOT

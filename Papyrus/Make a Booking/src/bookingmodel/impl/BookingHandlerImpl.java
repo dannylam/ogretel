@@ -195,7 +195,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated NOT
 	 */
 	public int removeBooking(String bookingRef) {
-		if(this.isActive(bookingRef)){
+		if(this.exists(bookingRef)){
 			this.bookingsMap.remove(getBooking(bookingRef));
 			return 0;
 		} 

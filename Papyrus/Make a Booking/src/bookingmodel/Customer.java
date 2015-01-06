@@ -17,7 +17,7 @@ package bookingmodel;
  *
  * @see bookingmodel.BookingmodelPackage#getCustomer()
  * @model
- * @generated 
+ * @generated NOT
  */
 public interface Customer extends Person {
 	/**
@@ -26,7 +26,7 @@ public interface Customer extends Person {
 	 * @return the value of the '<em>Payment Details</em>' reference list.
 	 * @see bookingmodel.BookingmodelPackage#getCustomer_PaymentDetails()
 	 * @model required="true" ordered="false"
-	 * @generated 
+	 * @generated NOT
 	 */
 	PaymentDetails getPaymentDetails();
 
@@ -36,7 +36,7 @@ public interface Customer extends Person {
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Payment Details</em>' containment reference.
 	 * @see #getPaymentDetails()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setPaymentDetails(PaymentDetails value);
 

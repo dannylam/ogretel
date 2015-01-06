@@ -9,7 +9,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * @see bookingmodel.BookingmodelPackage#getIBookingProvidesForCustomer()
  * @model interface="true" abstract="true"
- * @generated 
+ * @generated NOT
  */
 public interface IBookingProvidesForCustomer extends BookingInfo, CustomerInfo {
 	/**

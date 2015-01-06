@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * getServiceNote - get a specific service note.
  * @see bookingmodel.BookingmodelPackage#getIBookingProvidesForHost()
  * @model interface="true" abstract="true"
- * @generated
+ * @generated NOT
  */
 public interface IBookingProvidesForHost extends EObject {
 
