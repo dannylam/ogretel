@@ -33,7 +33,8 @@
       <!-- @generated bookingmodel -->
       <package
             uri="http:///bookingmodel.ecore"
-            class="bookingmodel.BookingmodelPackage"/>
+            class="bookingmodel.BookingmodelPackage"
+            genModel="bookingmodel.genmodel"/>
    </extension>
 
 </plugin>

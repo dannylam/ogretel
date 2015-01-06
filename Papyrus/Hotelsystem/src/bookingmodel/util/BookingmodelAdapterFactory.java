@@ -7,6 +7,7 @@ import java.util.Map;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -110,11 +111,11 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 				return createRoomIDToBookingRefEntryAdapter();
 			}
 			@Override
-			public Adapter caseCustomerEmailToBookingRefEntry(CustomerEmailToBookingRefEntry object) {
+			public Adapter caseCustomerEmailToBookingRefEntry(Map.Entry<String, EList<String>> object) {
 				return createCustomerEmailToBookingRefEntryAdapter();
 			}
 			@Override
-			public Adapter caseGuestEmailToRoomIDEntry(GuestEmailToRoomIDEntry object) {
+			public Adapter caseGuestEmailToRoomIDEntry(Map.Entry<String, EList<Integer>> object) {
 				return createGuestEmailToRoomIDEntryAdapter();
 			}
 			@Override
@@ -400,13 +401,13 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link bookingmodel.CustomerEmailToBookingRefEntry <em>Customer Email To Booking Ref Entry</em>}'.
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Customer Email To Booking Ref Entry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see bookingmodel.CustomerEmailToBookingRefEntry
+	 * @see java.util.Map.Entry
 	 * @generated
 	 */
 	public Adapter createCustomerEmailToBookingRefEntryAdapter() {
@@ -414,13 +415,13 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link bookingmodel.GuestEmailToRoomIDEntry <em>Guest Email To Room ID Entry</em>}'.
+	 * Creates a new adapter for an object of class '{@link java.util.Map.Entry <em>Guest Email To Room ID Entry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see bookingmodel.GuestEmailToRoomIDEntry
+	 * @see java.util.Map.Entry
 	 * @generated
 	 */
 	public Adapter createGuestEmailToRoomIDEntryAdapter() {

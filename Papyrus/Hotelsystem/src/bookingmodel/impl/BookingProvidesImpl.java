@@ -243,7 +243,7 @@ BookingProvides {
 	 * @generated NOT
 	 */
 	public List <String> getBookingRef(String customerEmail) {
-		return this.getBookingHandler().getCustomerEmailToBookingRefEntry().get(customerEmail);
+		return this.bookingHandler.getCustomerEmailToBookingRefEntry().get(customerEmail);
 	}
 
 	/**
@@ -396,17 +396,6 @@ BookingProvides {
 	 * @generated
 	 */
 	public int checkOut(int roomID, String guestEmail) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int payExtra(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, EList<String> extra, int roomID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -875,20 +864,8 @@ BookingProvides {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String book(String startDate, String endDate, int nrOfGuests, EList<String> roomTypes, EList<String> extras, EList<String> services) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
 	 * {@inheritDoc}
 	 * @generated NOT
-	 * TODO 
 	 */
 	public String book(String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras, List<String> services) {
 		if(!startDate.equals(null) && !endDate.equals(null) && nrOfGuests > 0 && !roomTypes.equals(null)){
@@ -896,9 +873,9 @@ BookingProvides {
 				this.maintenanceComponent.makeBooking((EList<String>)roomTypes, startDate, endDate, nrOfGuests);
 				return this.bookingHandler.addBooking(nrOfGuests, startDate, endDate, roomTypes, extras, services);
 			}
-			return "";
+			return null;
 		}
-		return "Startdate, enddate, number of guests and roomtypes cannot be empty";
+		return null;
 	}
 
 	/**
@@ -972,14 +949,14 @@ BookingProvides {
 			case BookingmodelPackage.CUSTOMER_INFO___GET_EXP_MONTH__STRING: return BookingmodelPackage.BOOKING_PROVIDES___GET_EXP_MONTH__STRING;
 			case BookingmodelPackage.CUSTOMER_INFO___GET_EXP_YEAR__STRING: return BookingmodelPackage.BOOKING_PROVIDES___GET_EXP_YEAR__STRING;
 			case BookingmodelPackage.CUSTOMER_INFO___GET_CARD_FIRST_NAME__STRING: return BookingmodelPackage.BOOKING_PROVIDES___GET_CARD_FIRST_NAME__STRING;
-			case BookingmodelPackage.CUSTOMER_INFO___GE_CARDT_LAST_NAME__STRING: return BookingmodelPackage.BOOKING_PROVIDES___GE_CARDT_LAST_NAME__STRING;
+			case BookingmodelPackage.CUSTOMER_INFO___GET_CARD_LAST_NAME__STRING: return BookingmodelPackage.BOOKING_PROVIDES___GET_CARD_LAST_NAME__STRING;
 			default: return -1;
 			}
 		}
 		if (baseClass == IBookingProvidesForGuest.class) {
 			switch (baseOperationID) {
 			case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___CHECK_IN__STRING_STRING_STRING: return BookingmodelPackage.BOOKING_PROVIDES___CHECK_IN__STRING_STRING_STRING;
-			case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___CHECK_OUT__INT_STRING: return BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__INT_STRING;
+			case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___CHECK_OUT__INT: return BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__INT;
 			case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___PAY_EXTRA__STRING_STRING_INT_INT_STRING_STRING_ELIST_INT: return BookingmodelPackage.BOOKING_PROVIDES___PAY_EXTRA__STRING_STRING_INT_INT_STRING_STRING_ELIST_INT;
 			case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___PAY_ROOM__STRING_STRING_INT_INT_STRING_STRING_INT: return BookingmodelPackage.BOOKING_PROVIDES___PAY_ROOM__STRING_STRING_INT_INT_STRING_STRING_INT;
 			default: return -1;
@@ -992,7 +969,6 @@ BookingProvides {
 			case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___IS_ROOM_PAYED__INT: return BookingmodelPackage.BOOKING_PROVIDES___IS_ROOM_PAYED__INT;
 			case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___EXIST_BOOKING__STRING: return BookingmodelPackage.BOOKING_PROVIDES___EXIST_BOOKING__STRING;
 			case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___GET_EXISTING_BOOKINGS: return BookingmodelPackage.BOOKING_PROVIDES___GET_EXISTING_BOOKINGS;
-			case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___GET_ACTIVE_BOOKINGS: return BookingmodelPackage.BOOKING_PROVIDES___GET_ACTIVE_BOOKINGS;
 			case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___IS_CHECKED_OUT__INT: return BookingmodelPackage.BOOKING_PROVIDES___IS_CHECKED_OUT__INT;
 			case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___IS_CHECKED_IN__INT: return BookingmodelPackage.BOOKING_PROVIDES___IS_CHECKED_IN__INT;
 			case BookingmodelPackage.IBOOKING_PROVIDES_FOR_HOST___GET_RESPONSIBLE_GUEST__INT: return BookingmodelPackage.BOOKING_PROVIDES___GET_RESPONSIBLE_GUEST__INT;
@@ -1050,7 +1026,7 @@ BookingProvides {
 			return getExpYear((String)arguments.get(0));
 		case BookingmodelPackage.BOOKING_PROVIDES___GET_CARD_FIRST_NAME__STRING:
 			return getCardFirstName((String)arguments.get(0));
-		case BookingmodelPackage.BOOKING_PROVIDES___GE_CARDT_LAST_NAME__STRING:
+		case BookingmodelPackage.BOOKING_PROVIDES___GET_CARD_LAST_NAME__STRING:
 			return geCardtLastName((String)arguments.get(0));
 		case BookingmodelPackage.BOOKING_PROVIDES___PAY_BOOKING__STRING:
 			return payBooking((String)arguments.get(0));
@@ -1070,7 +1046,7 @@ BookingProvides {
 			return book((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (EList<String>)arguments.get(3), (EList<String>)arguments.get(4), (EList<String>)arguments.get(5));
 		case BookingmodelPackage.BOOKING_PROVIDES___CHECK_IN__STRING_STRING_STRING:
 			return checkIn((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
-		case BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__INT_STRING:
+		case BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__INT:
 			return checkOut((Integer)arguments.get(0), (String)arguments.get(1));
 		case BookingmodelPackage.BOOKING_PROVIDES___PAY_EXTRA__STRING_STRING_INT_INT_STRING_STRING_ELIST_INT:
 			return payExtra((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (EList<String>)arguments.get(6), (Integer)arguments.get(7));
@@ -1086,8 +1062,6 @@ BookingProvides {
 			return existBooking((String)arguments.get(0));
 		case BookingmodelPackage.BOOKING_PROVIDES___GET_EXISTING_BOOKINGS:
 			return getExistingBookings();
-		case BookingmodelPackage.BOOKING_PROVIDES___GET_ACTIVE_BOOKINGS:
-			return getActiveBookings();
 		case BookingmodelPackage.BOOKING_PROVIDES___IS_CHECKED_OUT__INT:
 			return isCheckedOut((Integer)arguments.get(0));
 		case BookingmodelPackage.BOOKING_PROVIDES___IS_CHECKED_IN__INT:

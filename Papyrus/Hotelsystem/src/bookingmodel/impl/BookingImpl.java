@@ -578,51 +578,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 		return this.roomIDToRoomTypeMap.size(); 
 	} 
 
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setExtras(EList<String> extras) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setRoomTypes(EList<String> roomTypes) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setRoomIDs(EList<Integer> roomIDs) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setServices(EList<String> services) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
 	/**
 	 * {@inheritDoc}
 	 * @generated NOT
@@ -741,17 +696,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 					unpaidExtras.add(extra);
 				}
 		return unpaidExtras;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int setExtrasAsPayed(EList<String> extras) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -1047,8 +991,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return setRoomTypes((EList<String>)arguments.get(0));
 			case BookingmodelPackage.BOOKING___SET_ROOM_IDS__ELIST:
 				return setRoomIDs((EList<Integer>)arguments.get(0));
-			case BookingmodelPackage.BOOKING___SET_SERVICES__ELIST:
-				return setServices((EList<String>)arguments.get(0));
 			case BookingmodelPackage.BOOKING___GET_EXTRAS:
 				return getExtras();
 			case BookingmodelPackage.BOOKING___GET_ROOM_TYPES:
