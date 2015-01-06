@@ -15,7 +15,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Vl8CQZWvEeSnLv9Y79sHyw" x="23" y="39" width="16" height="683"/>
           </children>
           <element xmi:type="uml:Lifeline" href="SequenceEditBooking.uml#_YUvAQJWuEeSnLv9Y79sHyw"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YU2VAZWuEeSnLv9Y79sHyw" x="83" y="10" width="62" height="904"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YU2VAZWuEeSnLv9Y79sHyw" x="83" y="10" width="62" height="951"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_dqb5oJWuEeSnLv9Y79sHyw" type="3001">
           <children xmi:type="notation:DecorationNode" xmi:id="_dqcgsJWuEeSnLv9Y79sHyw" type="5002"/>
@@ -28,7 +28,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WvC_YZWvEeSnLv9Y79sHyw" x="91" y="43" width="16" height="516"/>
           </children>
           <element xmi:type="uml:Lifeline" href="SequenceEditBooking.uml#_dqZdYJWuEeSnLv9Y79sHyw"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dqb5oZWuEeSnLv9Y79sHyw" x="828" y="10" width="198" height="609"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dqb5oZWuEeSnLv9Y79sHyw" x="828" y="10" width="198" height="951"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_iIJbEJWuEeSnLv9Y79sHyw" type="3001">
           <children xmi:type="notation:DecorationNode" xmi:id="_iIKCIJWuEeSnLv9Y79sHyw" type="5002"/>
@@ -41,7 +41,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Zmsh8ZWvEeSnLv9Y79sHyw" x="99" y="52" width="16" height="488"/>
           </children>
           <element xmi:type="uml:Lifeline" href="SequenceEditBooking.uml#_iIG-0JWuEeSnLv9Y79sHyw"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iIJbEZWuEeSnLv9Y79sHyw" x="1260" y="10" width="215" height="602"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iIJbEZWuEeSnLv9Y79sHyw" x="1260" y="10" width="215" height="951"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_nu3zAJWuEeSnLv9Y79sHyw" type="3001">
           <children xmi:type="notation:DecorationNode" xmi:id="_nu4aEJWuEeSnLv9Y79sHyw" type="5002"/>
@@ -51,10 +51,10 @@
           </children>
           <children xmi:type="notation:Shape" xmi:id="_hQ6iAJW3EeSnLv9Y79sHyw" type="3006">
             <element xmi:type="uml:ActionExecutionSpecification" href="SequenceEditBooking.uml#_hQ1CcJW3EeSnLv9Y79sHyw"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hQ6iAZW3EeSnLv9Y79sHyw" x="59" y="485" width="16" height="328"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hQ6iAZW3EeSnLv9Y79sHyw" x="59" y="612" width="16" height="328"/>
           </children>
           <element xmi:type="uml:Lifeline" href="SequenceEditBooking.uml#_nu1WwJWuEeSnLv9Y79sHyw"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nu3zAZWuEeSnLv9Y79sHyw" x="1563" y="10" width="134" height="891"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nu3zAZWuEeSnLv9Y79sHyw" x="1510" y="10" width="134" height="951"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_RkxykJWyEeSnLv9Y79sHyw" type="3004">
           <children xmi:type="notation:DecorationNode" xmi:id="_RkzAsJWyEeSnLv9Y79sHyw" type="7004">
@@ -67,19 +67,19 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rk0O0ZWyEeSnLv9Y79sHyw" x="5" y="5"/>
               </children>
               <element xmi:type="uml:InteractionOperand" href="SequenceEditBooking.uml#_Rkrr8JWyEeSnLv9Y79sHyw"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RkznwZWyEeSnLv9Y79sHyw" width="1418" height="431"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RkznwZWyEeSnLv9Y79sHyw" width="1375" height="446"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_RkzAsZWyEeSnLv9Y79sHyw"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_RkzAspWyEeSnLv9Y79sHyw"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RkzAs5WyEeSnLv9Y79sHyw"/>
           </children>
           <element xmi:type="uml:CombinedFragment" href="SequenceEditBooking.uml#_RkpPsJWyEeSnLv9Y79sHyw"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RkxykZWyEeSnLv9Y79sHyw" x="68" y="321" width="1668" height="616"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RkxykZWyEeSnLv9Y79sHyw" x="68" y="321" width="1582" height="646"/>
         </children>
         <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FWiYQJWrEeSnLv9Y79sHyw"/>
       </children>
       <element xmi:type="uml:Interaction" href="SequenceEditBooking.uml#_EHr_gJWrEeSnLv9Y79sHyw"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FWiYQZWrEeSnLv9Y79sHyw" width="2355" height="990"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FWiYQZWrEeSnLv9Y79sHyw" x="-19" width="2180" height="1032"/>
     </children>
     <styles xmi:type="notation:StringValueStyle" xmi:id="_FWiYQpWrEeSnLv9Y79sHyw" name="diagram_compatibility_version" stringValue="1.0.0"/>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_FWiYQ5WrEeSnLv9Y79sHyw"/>
