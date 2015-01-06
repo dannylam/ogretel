@@ -731,7 +731,15 @@ BookingProvides {
 	 * @generated NOT
 	 */
 	public int removeBooking(String bookingRef) {
-		return this.getBookingHandler().removeBooking(bookingRef);
+		int result = -1;
+		if(this.bookingHandler.exists(bookingRef)){
+			Booking booking = this.getBookingHandler().getBooking(bookingRef);
+			result = this.getBookingHandler().removeBooking(bookingRef);
+			if(result != -1){
+				this.maintenanceComponent.removeBooking(booking.getRoomTypes(), booking.getStartDate(), booking.getEndDate());
+			}
+		}
+		return result;
 	}
 
 	/**
