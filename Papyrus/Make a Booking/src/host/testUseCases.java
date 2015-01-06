@@ -1,5 +1,8 @@
 package host;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,9 +13,6 @@ import org.junit.Test;
 
 import bookingmodel.BookingProvides;
 import bookingmodel.impl.BookingProvidesImpl;
-
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertFalse;
 
 
 public class testUseCases {
@@ -31,16 +31,33 @@ public class testUseCases {
 	int expMonth     = 9;
 	int expYear		 = 18;
 	
+	//globalBooking
+	String bookingReference = "";
+	
 	@BeforeClass
 	public void setUpBeforeClass () throws Exception {
 		roomMaintenence.addRoomType("Economic", "doublebed", 100, 3, "A fine room indeed");
 		for(int i=1; i<10; i++) {
 			roomMaintenence.addRoom(i, "Economic");
 		}
+		
+		makeABooking();
 	}
 	
+	//Creates a booking in the system to make sure we have it during testing
+	private void makeABooking() {
+		List <String> rooms = new ArrayList <String>();
+		rooms.add("Economics");
+		bookingReference = bookingprovides.book("150110", "150114", 2, rooms,
+							new ArrayList <String>(), new ArrayList <String>());
+		
+		bookingprovides.setPersonalDetails(firstName, lastName, age, email, bookingReference);
+		bookingprovides.setPaymentDetails(ccNumber, ccv, expMonth, expYear, firstName, lastName, email, bookingReference);
+		bookingprovides.payBooking(bookingReference);
+}
+	
 	@Test
-	public void testMakeABooking() {
+	public void testMakeABookingMainFlow() {
 		String startDate 		 = "150110";
 		String endDate   	 	 = "150112";
 		int nrOfGuests   		 = 2;
@@ -68,7 +85,11 @@ public class testUseCases {
 		
 	@Test
 	public void testCheckInCheckOut() {
-		
+		//CheckIn
+		assertTrue(bookingprovides.checkIn(bookingReference, "Economic", email) == 0);
+		int roomID = bookingprovides.getRooms(bookingReference).get(0);
+		assertTrue(bookingprovides.isCheckedIn(roomID));
+		//CheckOut
 	}
 	
 	@Test
