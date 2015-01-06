@@ -9,6 +9,7 @@ import maintenancemodel.ExtraHandler;
 import maintenancemodel.MaintenancemodelPackage;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEMap;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
@@ -42,7 +43,7 @@ public class ExtraHandlerImpl extends MinimalEObjectImpl.Container implements Ex
 	 * @generated
 	 * @ordered
 	 */
-	protected EMap<String, Extra> intToExtraMap;
+	protected EMap<String, Extra> intToExtraMap = new BasicEMap<String, Extra>();
 
 	/**
 	 * <!-- begin-user-doc -->

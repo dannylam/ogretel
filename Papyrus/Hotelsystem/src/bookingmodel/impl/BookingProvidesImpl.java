@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.xml.soap.SOAPException;
 
+import maintenancemodel.IMaintenanceProvidesForBooking;
 import maintenancemodel.MaintenanceProvidesForBooking;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -52,12 +53,12 @@ BookingProvides {
 	 * @generated
 	 * @ordered
 	 */
-	protected BookingHandler bookingHandler;
+	protected BookingHandler bookingHandler = new BookingHandlerImpl();
 
 	/**
 	 * @generated NOT
 	 */
-	protected MaintenanceProvidesForBooking maintenanceComponent;
+	protected IMaintenanceProvidesForBooking maintenanceComponent;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -65,6 +66,11 @@ BookingProvides {
 	 */
 	public BookingProvidesImpl() {
 		super();
+	}
+	
+	public BookingProvidesImpl(IMaintenanceProvidesForBooking impfb) {
+		this();
+		maintenanceComponent = impfb;
 	}
 
 	/**

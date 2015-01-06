@@ -29,12 +29,13 @@ public class testUseCases {
 	 * As mentioned we found this out very late in the prossess and decided that it would take to much time 
 	 * to redo the diagram and generate for a singleton pattern or any other pattern that would solve this problem	
 	 */
-	static BookingProvides bookingprovides  	= new BookingProvidesImpl();
-	static RoomMaintenanceImpl rmi = new RoomMaintenanceImpl();
-	static IRoomMaintenance roomMaintenence = rmi; 
-	static IRoomTypeMaintenance roomTypeMaintenance = rmi;
+	static RoomMaintenanceImpl rm = new RoomMaintenanceImpl();
+	static IRoomMaintenance roomMaintenence = (IRoomMaintenance) rm; 
+	static IRoomTypeMaintenance roomTypeMaintenance = (IRoomTypeMaintenance) rm;
 	static IMaintenanceProvidesForBooking mpb   = new MaintenanceProvidesForBookingImpl();
 	static IExtrasMaintenance extraMaintenance = new ExtrasMaintenanceImpl();
+	static BookingProvides bookingprovides  = new BookingProvidesImpl(mpb);
+	
 
 	//User 1
 	static String firstName = "Nils";

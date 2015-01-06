@@ -38,7 +38,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 * @ordered
 	 */
-	protected ExtraHandler extras;
+	protected ExtraHandler extras = new ExtraHandlerImpl();
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
