@@ -394,31 +394,34 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
-	public int checkOut(int roomID, String guestEmail) {
+	public int checkOut(int roomID) {
 		Booking booking = this.getBookingHandler().getBooking(roomID);
 		if (this.getBookingHandler().exists(booking.getBookingRef())) {
-			if(booking.checkedInRoom(roomID)){
+			if(booking.checkedInRoom(roomID) || !booking.checkedOutRoom(roomID)){
+				String guestEmail = this.getResponsibleGuest(roomID);
 				booking.removeResponsibleGuest(roomID, guestEmail);
-
+				
 				//check if the booking has been is payed or not, 
 				//if not, return an int indicating that the room needs to be payed
 				if(!this.isPayed(booking.getBookingRef())){
-					return 3;
+					booking.setResponsibleGuest(roomID, guestEmail);
+					return this.getPrice(booking.getBookingRef());
 				}
 	
 				//checks if the the guest is the last person to check-out and therefore needs to pay for all the remaining extras
 				if(booking.checkedOutAllRooms() && !booking.allExtrasPayed()){
-					return 4;
+					booking.setResponsibleGuest(roomID, guestEmail);
+					return this.maintenanceComponent.getPriceExtra(booking.getExtras()) + this.getPrice(booking.getBookingRef());
 				}
 				
 				//removes the bookingreference from the room in the map of rooms and which bookingreference they belong to
 				this.bookingHandler.getRoomIDToBookingRefMap().put(roomID, null);
 				if(this.maintenanceComponent.setInactive(roomID) == -1){
-					return 2;
+					return -3;
 				}
 	
 			} else {
-				return 1;
+				return -2;
 			}	
 		} else {
 			return -1;
@@ -459,6 +462,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int payExtra(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, List<String> extras, int roomID) {
+		//TODO
 		if(this.bookingHandler.exists(this.bookingHandler.getBooking(roomID).getBookingRef())){
 			if(!extras.equals(null)){
 				EList<String> extrasToBePayed = null;
@@ -547,7 +551,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public List<String> getExistingBookings() {
 		String[] bookings =this.bookingHandler.getBookingsMap().entrySet().toArray(new String[0]);
-		return new BasicEList(Arrays.asList(bookings));
+		return new BasicEList<String>(Arrays.asList(bookings));
 	}
 
 	/**
@@ -638,7 +642,6 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 					firstName, lastName, sum)) {
 				return 3;
 			}
-
 		} catch (SOAPException e) {
 			System.err
 					.println("Error occurred while communicating with the bank");
@@ -721,7 +724,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	public int setPaymentMethod(String method, String bookingRef) {
 		if (this.getBookingHandler().exists(bookingRef)) {
 			PaymentMethod paymentMethod = null;
-			switch (method) {
+			switch (metShod) {
 			case "bankcard":
 				paymentMethod = PaymentMethod.BANKCARD;
 				break;
@@ -799,10 +802,12 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * {@inheritDoc}
 	 * @generated NOT
+	 * TODO 
 	 */
 	public String book(String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras, List<String> services) {
 		if(!startDate.equals(null) && !endDate.equals(null) && nrOfGuests > 0 && !roomTypes.equals(null)){
-			if (this.maintenanceComponent.canBook((EList<String>) roomTypes, startDate, endDate)) {
+			if (this.maintenanceComponent.canBook((EList<String>) roomTypes, startDate, endDate, nrOfGuests)) {
+				this.maintenanceComponent.makeBooking((EList<String>)roomTypes, startDate, endDate, nrOfGuests);
 				return this.bookingHandler.addBooking(nrOfGuests, startDate, endDate, roomTypes, extras, services);
 			}
 			return "";

@@ -3,6 +3,7 @@
 package bookingmodel;
 
 import java.util.List;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -77,6 +78,6 @@ public interface BookingInfo extends EObject {
 	 * @model customerEmailDataType="types.String" customerEmailRequired="true" customerEmailOrdered="false"
 	 * @generated NOT
 	 */
-	String getBookingRef(String customerEmail);
+	List<String> getBookingRef(String customerEmail);
 
 } // BookingInfo

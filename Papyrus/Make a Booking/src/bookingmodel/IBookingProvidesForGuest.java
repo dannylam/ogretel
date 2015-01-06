@@ -3,7 +3,7 @@
 package bookingmodel;
 
 import java.util.List;
-import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -32,14 +32,12 @@ public interface IBookingProvidesForGuest extends EObject {
 	/**
 	 * Checks out a room and removes the responsible guest
 	 * The integer returned by the function indicates success or failure and reason for failure.
-	 * @return	0 if success 
+	 * @return	the price to pay at checkout
 	 * 			-1 if an the booking reference does not exist
-	 * 			1 if the room has not been checked-in
-	 * 			2 if the room could not be set as vacant
-	 * 			3 if the room has not been payed yet
-	 * 			4 if the there are unpaid extras in the booking and the guest is the last one to check-out
+	 * 			-2 if the room has not been checked-in or is not already checked out
+	 * 			-3 if the room could not be set as vacant
 	 * @model dataType="types.Integer" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
-	 * @generated NOT
+	 * @generated 
 	 */
 	int checkOut(int roomID, String guestEmail);
 

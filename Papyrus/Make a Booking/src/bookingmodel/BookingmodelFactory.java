@@ -4,6 +4,9 @@ package bookingmodel;
 
 import org.eclipse.emf.ecore.EFactory;
 
+import bookingmodel.impl.CustomerEmailToBookingRefEntryImpl;
+import bookingmodel.impl.GuestEmailToRoomIDEntryImpl;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Factory</b> for the model.
@@ -73,7 +76,7 @@ public interface BookingmodelFactory extends EFactory {
 	 * @return a new object of class '<em>Customer Email To Booking Ref Entry</em>'.
 	 * @generated
 	 */
-	CustomerEmailToBookingRefEntry createCustomerEmailToBookingRefEntry();
+	CustomerEmailToBookingRefEntryImpl createCustomerEmailToBookingRefEntry();
 
 	/**
 	 * Returns a new object of class '<em>Guest Email To Room ID Entry</em>'.
@@ -82,7 +85,7 @@ public interface BookingmodelFactory extends EFactory {
 	 * @return a new object of class '<em>Guest Email To Room ID Entry</em>'.
 	 * @generated
 	 */
-	GuestEmailToRoomIDEntry createGuestEmailToRoomIDEntry();
+	GuestEmailToRoomIDEntryImpl createGuestEmailToRoomIDEntry();
 
 	/**
 	 * Returns a new object of class '<em>Booking Provides</em>'.
