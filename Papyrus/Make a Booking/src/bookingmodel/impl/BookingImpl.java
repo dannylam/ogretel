@@ -555,8 +555,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	
 	/**
 	 * {@inheritDoc}
-	 * @return 	0, if setting responsible guest to all rooms went successful
-	 * 			1, if setting responsible guest to all rooms failed.
 	 * @generated NOT
 	 */
 	public int setResponsibleGuestToAllRooms(String guestEmail) {
@@ -575,7 +573,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 
 	/**
 	 * {@inheritDoc} 
-	 * @return size, the number of rooms
 	 * @generated NOT
 	 */
 	public int getNrOfRooms() {
@@ -656,8 +653,6 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 
 	/**
 	 * {@inheritDoc}
-	 * @return 	0, if removing responsible guest to all rooms went successful
-	 * 			-1, if removing responsible guest to all rooms failed 
 	 * @generated NOT
 	 */
 	public int removeResponsibleGuestToAllRooms(String guestEmail) {
@@ -679,8 +674,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 
 	/**
 	 * {@inheritDoc}
-	 * @return  0, if removing a responsible guest went successful.
-	 * 			-1, if removing a responsible guest failed.
+	 * @return  0, if removing responsible guest went successful.
+	 * 			-1, if removing responsible guest failed.
 	 * @generated NOT
 	 */
 	public int removeResponsibleGuest(int roomID, String guestEmail) {												
@@ -695,6 +690,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 
 	/**
 	 * {@inheritDoc}
+	 * @return true, if a room is checked out successfully.
 	 * @generated NOT
 	 */
 	public boolean checkedOutRoom(int roomID) {
@@ -703,6 +699,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 
 	/**
 	 * {@inheritDoc}
+	 * @return true, if all rooms are checked out.
 	 * @generated NOT
 	 */
 	public boolean checkedOutAllRooms() {
@@ -717,6 +714,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 
 	/**
 	 * {@inheritDoc}
+	 * @return true, if all extras are payed.
 	 * @generated NOT
 	 */
 	public boolean allExtrasPayed() {
@@ -731,6 +729,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 
 	/**
 	 * {@inheritDoc}
+	 * @return true, if an extra is payed.
 	 * @generated NOT
 	 */
 	public boolean isExtraPayed(String extra) {
