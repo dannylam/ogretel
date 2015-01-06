@@ -417,6 +417,9 @@ BookingProvides {
 	 * @generated NOT
 	 */
 	public int checkOut(int roomID) {
+		if(!this.maintenanceComponent.getRooms().exists(roomID)){
+			return -2;
+		}
 		Booking booking = this.getBookingHandler().getBooking(roomID);
 		if (this.getBookingHandler().exists(booking.getBookingRef())) {
 			if(booking.checkedInRoom(roomID) || !booking.checkedOutRoom(roomID)){
@@ -731,7 +734,15 @@ BookingProvides {
 	 * @generated NOT
 	 */
 	public int removeBooking(String bookingRef) {
-		return this.getBookingHandler().removeBooking(bookingRef);
+		int result = -1;
+		if(this.bookingHandler.exists(bookingRef)){
+			Booking booking = this.getBookingHandler().getBooking(bookingRef);
+			result = this.getBookingHandler().removeBooking(bookingRef);
+			if(result != -1){
+				this.maintenanceComponent.removeBooking(booking.getRoomTypes(), booking.getStartDate(), booking.getEndDate());
+			}
+		}
+		return result;
 	}
 
 	/**
@@ -791,7 +802,7 @@ BookingProvides {
 	public int setPaymentMethod(String method, String bookingRef) {
 		if (this.getBookingHandler().exists(bookingRef)) {
 			PaymentMethod paymentMethod = null;
-			switch (metShod) {
+			switch (method) {
 			case "bankcard":
 				paymentMethod = PaymentMethod.BANKCARD;
 				break;

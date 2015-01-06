@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated BookingClassDiagram -->
+      <package
+            uri="http:///model.ecore"
+            class="maintenancemodel.ModelPackage"
+            genModel="BookingClassDiagram.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated BookingClassDiagram -->
+      <package
+            uri="http://www.eclipse.org/uml2/5.0.0/Types"
+            class="org.eclipse.uml2.types.TypesPackage"
+            genModel="BookingClassDiagram.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated MaintenanceClassDiagram -->
+      <package
+            uri="http:///maintenancemodel.ecore"
+            class="maintenancemodel.MaintenancemodelPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated bookingmodel -->
+      <package
+            uri="http:///bookingmodel.ecore"
+            class="bookingmodel.BookingmodelPackage"/>
+   </extension>
+
+</plugin>

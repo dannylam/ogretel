@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ELihsHlEEeSvBIG8udhAMw" name="model">
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_r7pH0HlGEeSvBIG8udhAMw" name="Check In">
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_9aedwIC7EeSBYYb-e9thAg" name="Host" coveredBy="_F6J_0IC8EeSBYYb-e9thAg _CKDgYIC-EeSBYYb-e9thAg _6SB04JWdEeS1aKkpz7GddQ _6SB04pWdEeS1aKkpz7GddQ _6SB04ZWdEeS1aKkpz7GddQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_-8H2sIC7EeSBYYb-e9thAg" name="IBookingProvidesForGuest" coveredBy="_F6J_0YC8EeSBYYb-e9thAg _fAGJgIC8EeSBYYb-e9thAg _CJ9ZwYC-EeSBYYb-e9thAg _E9yJsILWEeSNHZwV5RYKaw _iBA9gpWcEeS1aKkpz7GddQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_amNYIIC8EeSBYYb-e9thAg" name="IMaintenanceProvidesForBooking" coveredBy="_fAH-sIC8EeSBYYb-e9thAg _IIcu4ILWEeSNHZwV5RYKaw _iBA9gZWcEeS1aKkpz7GddQ"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_6SB04JWdEeS1aKkpz7GddQ" name="ActionExecSpec2Start" covered="_9aedwIC7EeSBYYb-e9thAg" execution="_6SB04ZWdEeS1aKkpz7GddQ"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_6SB04ZWdEeS1aKkpz7GddQ" name="ActionExecSpec2" covered="_9aedwIC7EeSBYYb-e9thAg" finish="_6SB04pWdEeS1aKkpz7GddQ" start="_6SB04JWdEeS1aKkpz7GddQ"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_E9yJsILWEeSNHZwV5RYKaw" name="ActionExecSpec0" covered="_-8H2sIC7EeSBYYb-e9thAg"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_IIcu4ILWEeSNHZwV5RYKaw" name="ActionExecSpec1" covered="_amNYIIC8EeSBYYb-e9thAg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_F6J_0IC8EeSBYYb-e9thAg" name="MessageSend" covered="_9aedwIC7EeSBYYb-e9thAg" message="_F6D5MIC8EeSBYYb-e9thAg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_F6J_0YC8EeSBYYb-e9thAg" name="MessageRecv" covered="_-8H2sIC7EeSBYYb-e9thAg" message="_F6D5MIC8EeSBYYb-e9thAg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fAGJgIC8EeSBYYb-e9thAg" name="MessageSend0" covered="_-8H2sIC7EeSBYYb-e9thAg" message="_fAEUUIC8EeSBYYb-e9thAg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_fAH-sIC8EeSBYYb-e9thAg" name="MessageRecv0" covered="_amNYIIC8EeSBYYb-e9thAg" message="_fAEUUIC8EeSBYYb-e9thAg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_iBA9gZWcEeS1aKkpz7GddQ" name="MessageSend8" covered="_amNYIIC8EeSBYYb-e9thAg" message="_iBA9gJWcEeS1aKkpz7GddQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_iBA9gpWcEeS1aKkpz7GddQ" name="MessageRecv8" covered="_-8H2sIC7EeSBYYb-e9thAg" message="_iBA9gJWcEeS1aKkpz7GddQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_CJ9ZwYC-EeSBYYb-e9thAg" name="MessageSend7" covered="_-8H2sIC7EeSBYYb-e9thAg" message="_CJ9ZwIC-EeSBYYb-e9thAg"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_CKDgYIC-EeSBYYb-e9thAg" name="MessageRecv7" covered="_9aedwIC7EeSBYYb-e9thAg" message="_CJ9ZwIC-EeSBYYb-e9thAg"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_6SB04pWdEeS1aKkpz7GddQ" name="ActionExecSpec2Finish" covered="_9aedwIC7EeSBYYb-e9thAg" execution="_6SB04ZWdEeS1aKkpz7GddQ"/>
+    <message xmi:type="uml:Message" xmi:id="_F6D5MIC8EeSBYYb-e9thAg" name="checkIn(bookingRef:String, roomsType:String, guestEmail:String)" messageSort="asynchCall" receiveEvent="_F6J_0YC8EeSBYYb-e9thAg" sendEvent="_F6J_0IC8EeSBYYb-e9thAg"/>
+    <message xmi:type="uml:Message" xmi:id="_fAEUUIC8EeSBYYb-e9thAg" name="setActive(roomsType:String)" messageSort="asynchCall" receiveEvent="_fAH-sIC8EeSBYYb-e9thAg" sendEvent="_fAGJgIC8EeSBYYb-e9thAg"/>
+    <message xmi:type="uml:Message" xmi:id="_CJ9ZwIC-EeSBYYb-e9thAg" name="- 0:int" messageSort="asynchCall" receiveEvent="_CKDgYIC-EeSBYYb-e9thAg" sendEvent="_CJ9ZwYC-EeSBYYb-e9thAg"/>
+    <message xmi:type="uml:Message" xmi:id="_iBA9gJWcEeS1aKkpz7GddQ" name="roomID:int" messageSort="asynchCall" receiveEvent="_iBA9gpWcEeS1aKkpz7GddQ" sendEvent="_iBA9gZWcEeS1aKkpz7GddQ"/>
+  </packagedElement>
+</uml:Model>
