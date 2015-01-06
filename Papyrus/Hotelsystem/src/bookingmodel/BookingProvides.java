@@ -5,26 +5,10 @@ package bookingmodel;
 import java.util.List;
 
 /**
- * An interface class which represents BookingProvides, extending EObject.
- * The interface extends an EObject and has 20 methods;
- * setBookingHandler - setting a value of the booking handler reference
- * removeBooking - removes a booking
- * getBooking - gets a specific booking
- * getPrice - gets the price of a specific booking
- * book - make a booking 
- * pay - make a payment of a specific booking
- * editBooking - edit a specific booking
- * setPersonalDetails - set details to a guest/customer
- * choosePaymentMethod - choose paymentmethod such as bankcard, cash or voucher
- * setPaymentDetails - set details to a payment
- * checkOut - check out a guest
- * checkIn - check in a guest
- * enableSelfManagement - enable self management for a guest
- * addServiceNote - add a specific service note
- * editServiceNote - edit a specific service note
- * removeServiceNote - remove a specific service note
- * getServiceNote - get a specific service note 
- *
+ * An interface class which represents BookingProvides, extending EObject, which is a interface
+ * containing all the methods which the booking component provides for its users.
+ * It implements the interfaces IBookingProvidesForCustomer, IBookingProvidesForGuest & IBookingProvidesForHost.
+ * 
  * <p>
  * The following features are supported:
  * <ul>

@@ -8,14 +8,9 @@ import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
 
 /**
- * An interface class which represents BookingHandler, extending EObject.
- * The interface extends an EObject and has 5 methods; 
- * exists - checks if the booking reference exists
- * addBooking - adding a booking
- * removeBooking - remove a booking 
- * getBooking - get a specific booking reference
- * editBooking - edit nrOfNights, nrOfGuests, date, nrOfRooms, 
- * roomTypes and extras in booking specific booking reference
+ * An interface class which represents a BookingHandler, extending EObject, which
+ * is to manipulate various bookings.
+ * 
  * <p>
  * The following features are supported:
  * <ul>
@@ -123,7 +118,8 @@ public interface BookingHandler extends EObject {
 	int removeBooking(String bookingRef);
 
 	/**
-	 * Returns a booking with a specific booking reference.
+	 * Returns a booking with a specific booking reference if the booking reference exists,
+	 * otherwise null is returned.
 	 * @param bookingRef
 	 * @return a booking
 	 * @model required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
@@ -144,7 +140,7 @@ public interface BookingHandler extends EObject {
 	/**
 	 *  Returns the booking which a rooms is associated to if that room is already checked in.
 	 * The integer returned by the function indicates success or failure and reason for failure.
-	 * @return  the booking reference associaated with the room.
+	 * @return  the booking reference associated with the room.
 	 * @model required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
 	 */

@@ -3,17 +3,11 @@
 package bookingmodel;
 
 import java.util.List;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
  * An interface class which represents booking provides for the host, extending EObject.
- * It has 5 methods;
- * enableSelfManagement - enable self management.
- * addServiceNote - add a specific service note.
- * editServiceNote - edit a specific service note
- * removeServiceNote - remove a specific service note.
- * getServiceNote - get a specific service note.
+
  * @see bookingmodel.BookingmodelPackage#getIBookingProvidesForHost()
  * @model interface="true" abstract="true"
  * @generated
