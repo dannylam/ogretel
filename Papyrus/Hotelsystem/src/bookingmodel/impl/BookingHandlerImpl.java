@@ -147,6 +147,17 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String addBooking(int nrOfGuests, String startDate, String endDate, EList<String> roomTypes, EList<String> extras, EList<String> services) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
@@ -191,6 +202,17 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public Booking getBooking(String bookingRef) {
 		return this.bookingsMap.get(bookingRef);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, EList<String> roomTypes, EList<String> extras, EList<String> services) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**

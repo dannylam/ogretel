@@ -101,6 +101,14 @@ public interface BookingHandler extends EObject {
 	boolean exists(String bookingRef);
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" nrOfGuestsDataType="org.eclipse.uml2.types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" startDateDataType="org.eclipse.uml2.types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="org.eclipse.uml2.types.String" endDateRequired="true" endDateOrdered="false" roomTypesDataType="org.eclipse.uml2.types.String" roomTypesMany="true" roomTypesOrdered="false" extrasDataType="org.eclipse.uml2.types.String" extrasMany="true" extrasOrdered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false"
+	 * @generated
+	 */
+	String addBooking(int nrOfGuests, String startDate, String endDate, EList<String> roomTypes, EList<String> extras, EList<String> services);
+
+	/**
 	 * Creates and adds a booking to the map where the key is a bookingreference and the value the booking. 
 	 * The integer returned by the function indicates success or failure and reason for failure.
 	 * @param booking
@@ -130,6 +138,14 @@ public interface BookingHandler extends EObject {
 	 * @generated NOT
 	 */
 	Booking getBooking(String bookingRef);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false" startDateDataType="org.eclipse.uml2.types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="org.eclipse.uml2.types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="org.eclipse.uml2.types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesDataType="org.eclipse.uml2.types.String" roomTypesMany="true" roomTypesOrdered="false" extrasDataType="org.eclipse.uml2.types.String" extrasMany="true" extrasOrdered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false"
+	 * @generated
+	 */
+	int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, EList<String> roomTypes, EList<String> extras, EList<String> services);
 
 	/**
 	 * Edits a booking with the specified parameters given.

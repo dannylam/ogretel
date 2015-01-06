@@ -579,6 +579,50 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	} 
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setExtras(EList<String> extras) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setRoomTypes(EList<String> roomTypes) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setRoomIDs(EList<Integer> roomIDs) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int setServiceNotes(EList<String> services) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
@@ -696,6 +740,17 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 					unpaidExtras.add(extra);
 				}
 		return unpaidExtras;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public int removeServiceNotes(List<String> serviceNotes) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -991,6 +1046,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return setRoomTypes((EList<String>)arguments.get(0));
 			case BookingmodelPackage.BOOKING___SET_ROOM_IDS__ELIST:
 				return setRoomIDs((EList<Integer>)arguments.get(0));
+			case BookingmodelPackage.BOOKING___SET_SERVICE_NOTES__ELIST:
+				return setServiceNotes((EList<String>)arguments.get(0));
 			case BookingmodelPackage.BOOKING___GET_EXTRAS:
 				return getExtras();
 			case BookingmodelPackage.BOOKING___GET_ROOM_TYPES:
@@ -1013,6 +1070,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 				return getUnPayedExtras();
 			case BookingmodelPackage.BOOKING___SET_EXTRAS_AS_PAYED__ELIST:
 				return setExtrasAsPayed((EList<String>)arguments.get(0));
+			case BookingmodelPackage.BOOKING___REMOVE_SERVICE_NOTES__ELIST:
+				return removeServiceNotes((EList<String>)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

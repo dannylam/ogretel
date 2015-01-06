@@ -633,17 +633,6 @@ BookingProvides {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int RemoveServiceNotes(int roomID, EList<String> serviceNote) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
@@ -661,7 +650,7 @@ BookingProvides {
 	 */
 	public int removeServiceNotes(int roomID, List<String> serviceNotes) {
 		if(this.getBookingHandler().exists(this.getBookingHandler().getBooking(roomID).getBookingRef())){
-			return this.bookingHandler.getBooking(roomID).remo
+			return this.bookingHandler.getBooking(roomID).removeServiceNotes(serviceNotes);
 		}
 	}
 
