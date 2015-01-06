@@ -22,7 +22,7 @@ Actor agrees to the price&#xD;
 Actor wants to pay now</body>
     </ownedComment>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_CrensHlFEeSvBIG8udhAMw" name=":Customer" coveredBy="_SVyAYHuVEeSxRO9vcwrttA _OofkYHuXEeSxRO9vcwrttA _T2pN0HujEeSxRO9vcwrttA _0ecPMIcDEeSLCNXpIG2YaA _Dyo8kIcFEeSLCNXpIG2YaA _sJ0BMZWWEeS1aKkpz7GddQ _Gf49EZWXEeS1aKkpz7GddQ _yFDjoHuXEeSxRO9vcwrttA _yFHOAHuXEeSxRO9vcwrttA"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_-b46QHuTEeSxRO9vcwrttA" name=":IBookingProvidesForCustomer" coveredBy="_SV1DsHuVEeSxRO9vcwrttA _5YZq4HuWEeSxRO9vcwrttA _DIYXMHuXEeSxRO9vcwrttA _OodvMHuXEeSxRO9vcwrttA _yFDjoHuXEeSxRO9vcwrttA _yFHOAHuXEeSxRO9vcwrttA _iLtrYHuiEeSxRO9vcwrttA _iL5RkHuiEeSxRO9vcwrttA _T2qb8HujEeSxRO9vcwrttA _evdKcHujEeSxRO9vcwrttA _0ebBEIcDEeSLCNXpIG2YaA __MiUIIcEEeSLCNXpIG2YaA _DynucIcFEeSLCNXpIG2YaA _sJ0BMpWWEeS1aKkpz7GddQ _Gf49EJWXEeS1aKkpz7GddQ _4IdvEZWXEeS1aKkpz7GddQ _JqrBkJWYEeS1aKkpz7GddQ _zGn68ZWZEeS1aKkpz7GddQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_-b46QHuTEeSxRO9vcwrttA" name=":IBookingProvidesForCustomer" coveredBy="_SV1DsHuVEeSxRO9vcwrttA _5YZq4HuWEeSxRO9vcwrttA _DIYXMHuXEeSxRO9vcwrttA _OodvMHuXEeSxRO9vcwrttA _yFDjoHuXEeSxRO9vcwrttA _yFHOAHuXEeSxRO9vcwrttA _iLtrYHuiEeSxRO9vcwrttA _iL5RkHuiEeSxRO9vcwrttA _T2qb8HujEeSxRO9vcwrttA _evdKcHujEeSxRO9vcwrttA _0ebBEIcDEeSLCNXpIG2YaA __MiUIIcEEeSLCNXpIG2YaA _DynucIcFEeSLCNXpIG2YaA _sJ0BMpWWEeS1aKkpz7GddQ _Gf49EJWXEeS1aKkpz7GddQ _4IdvEZWXEeS1aKkpz7GddQ _JqrBkJWYEeS1aKkpz7GddQ _t12IYZWaEeS1aKkpz7GddQ"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_Ba3z4HuUEeSxRO9vcwrttA" name=":IMaintenanceProvidesForBooking" coveredBy="_5YbgEHuWEeSxRO9vcwrttA _DIV68HuXEeSxRO9vcwrttA _yFDjoHuXEeSxRO9vcwrttA _yFHOAHuXEeSxRO9vcwrttA _iLtrYHuiEeSxRO9vcwrttA _iL5RkHuiEeSxRO9vcwrttA _4IdvEpWXEeS1aKkpz7GddQ _Jqk68ZWYEeS1aKkpz7GddQ"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_G_tVcHuUEeSxRO9vcwrttA" name=":CustomerProvides" coveredBy="_eve_oHujEeSxRO9vcwrttA __MhGAIcEEeSLCNXpIG2YaA _yFDjoHuXEeSxRO9vcwrttA _yFHOAHuXEeSxRO9vcwrttA _iLtrYHuiEeSxRO9vcwrttA _iL5RkHuiEeSxRO9vcwrttA"/>
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_SVyAYHuVEeSxRO9vcwrttA" name="MessageSend" covered="_CrensHlFEeSvBIG8udhAMw" message="_SVcpMHuVEeSxRO9vcwrttA"/>
@@ -56,28 +56,12 @@ Actor wants to pay now</body>
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yGI-MHuWEeSxRO9vcwrttA" name="MessageSend1" message="_yGHJAHuWEeSxRO9vcwrttA"/>
         <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_yGKzYHuWEeSxRO9vcwrttA" name="MessageRecv1" message="_yGHJAHuWEeSxRO9vcwrttA"/>
         <fragment xmi:type="uml:CombinedFragment" xmi:id="_iLtrYHuiEeSxRO9vcwrttA" name="optBankcard" covered="_Ba3z4HuUEeSxRO9vcwrttA _-b46QHuTEeSxRO9vcwrttA _G_tVcHuUEeSxRO9vcwrttA" interactionOperator="opt">
-          <cfragmentGate xmi:type="uml:Gate" xmi:id="_wAxkUJWZEeS1aKkpz7GddQ" name="out_Message">
-            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wAxkUZWZEeS1aKkpz7GddQ" source="CombinedFragment.InnerGate">
-              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wAxkUpWZEeS1aKkpz7GddQ" key="outsideCF" value="_wArdsJWZEeS1aKkpz7GddQ"/>
+          <cfragmentGate xmi:type="uml:Gate" xmi:id="_t1dt4JWaEeS1aKkpz7GddQ" name=" " message="_t12IYJWaEeS1aKkpz7GddQ">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_t1dt5JWaEeS1aKkpz7GddQ" source="CombinedFragment.InnerGate">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_t1dt5ZWaEeS1aKkpz7GddQ" key="insideCF" value="_t1dt4ZWaEeS1aKkpz7GddQ"/>
             </eAnnotations>
-            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wAxkV5WZEeS1aKkpz7GddQ" source="Gate.name.volatile">
-              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wAxkWJWZEeS1aKkpz7GddQ" key="Gate.name.volatile" value="true"/>
-            </eAnnotations>
-          </cfragmentGate>
-          <cfragmentGate xmi:type="uml:Gate" xmi:id="_zGJZ0JWZEeS1aKkpz7GddQ" name=" " message="_zGn68JWZEeS1aKkpz7GddQ">
-            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zGPgcpWZEeS1aKkpz7GddQ" source="CombinedFragment.InnerGate">
-              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zGPgc5WZEeS1aKkpz7GddQ" key="insideCF" value="_zGJZ0ZWZEeS1aKkpz7GddQ"/>
-            </eAnnotations>
-            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zGPgdJWZEeS1aKkpz7GddQ" source="Gate.name.volatile">
-              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zGPgdZWZEeS1aKkpz7GddQ" key="Gate.name.volatile" value="true"/>
-            </eAnnotations>
-          </cfragmentGate>
-          <cfragmentGate xmi:type="uml:Gate" xmi:id="_zGJZ0ZWZEeS1aKkpz7GddQ" name="out_Message">
-            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zGPgcJWZEeS1aKkpz7GddQ" source="CombinedFragment.InnerGate">
-              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zGPgcZWZEeS1aKkpz7GddQ" key="outsideCF" value="_zGJZ0JWZEeS1aKkpz7GddQ"/>
-            </eAnnotations>
-            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zGPgdpWZEeS1aKkpz7GddQ" source="Gate.name.volatile">
-              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zGPgd5WZEeS1aKkpz7GddQ" key="Gate.name.volatile" value="true"/>
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_t1dt5pWaEeS1aKkpz7GddQ" source="Gate.name.volatile">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_t1dt55WaEeS1aKkpz7GddQ" key="Gate.name.volatile" value="true"/>
             </eAnnotations>
           </cfragmentGate>
           <operand xmi:type="uml:InteractionOperand" xmi:id="_iL5RkHuiEeSxRO9vcwrttA" name="InteractionOperand" covered="_Ba3z4HuUEeSxRO9vcwrttA _-b46QHuTEeSxRO9vcwrttA _G_tVcHuUEeSxRO9vcwrttA">
@@ -86,7 +70,7 @@ Actor wants to pay now</body>
             <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_eve_oHujEeSxRO9vcwrttA" name="MessageRecv0" covered="_G_tVcHuUEeSxRO9vcwrttA" message="_evY5AHujEeSxRO9vcwrttA"/>
             <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="__MhGAIcEEeSLCNXpIG2YaA" name="MessageSend1" covered="_G_tVcHuUEeSxRO9vcwrttA" message="__MepwIcEEeSLCNXpIG2YaA"/>
             <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="__MiUIIcEEeSLCNXpIG2YaA" name="MessageRecv1" covered="_-b46QHuTEeSxRO9vcwrttA" message="__MepwIcEEeSLCNXpIG2YaA"/>
-            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_zGn68ZWZEeS1aKkpz7GddQ" name="MessageSend2" covered="_-b46QHuTEeSxRO9vcwrttA" message="_zGn68JWZEeS1aKkpz7GddQ"/>
+            <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_t12IYZWaEeS1aKkpz7GddQ" name="MessageSend2" covered="_-b46QHuTEeSxRO9vcwrttA" message="_t12IYJWaEeS1aKkpz7GddQ"/>
             <guard xmi:type="uml:InteractionConstraint" xmi:id="_iL7t0HuiEeSxRO9vcwrttA" name="method=bankcard">
               <specification xmi:type="uml:LiteralString" xmi:id="_KV9hwHujEeSxRO9vcwrttA" value="method=bankcard"/>
               <maxint xmi:type="uml:LiteralInteger" xmi:id="_iL_YMHuiEeSxRO9vcwrttA" value="1"/>
@@ -118,6 +102,6 @@ Actor wants to pay now</body>
     <message xmi:type="uml:Message" xmi:id="_Gfy2cJWXEeS1aKkpz7GddQ" name="price:int" messageSort="asynchCall" receiveEvent="_Gf49EZWXEeS1aKkpz7GddQ" sendEvent="_Gf49EJWXEeS1aKkpz7GddQ"/>
     <message xmi:type="uml:Message" xmi:id="_4IdvEJWXEeS1aKkpz7GddQ" name="makeBooking(roomTypeIDs: EList&lt;String>,start:String, end:String, nrOfGuests:int)" messageSort="asynchCall" receiveEvent="_4IdvEpWXEeS1aKkpz7GddQ" sendEvent="_4IdvEZWXEeS1aKkpz7GddQ"/>
     <message xmi:type="uml:Message" xmi:id="_Jqk68JWYEeS1aKkpz7GddQ" name="0:int" messageSort="asynchCall" receiveEvent="_JqrBkJWYEeS1aKkpz7GddQ" sendEvent="_Jqk68ZWYEeS1aKkpz7GddQ"/>
-    <message xmi:type="uml:Message" xmi:id="_zGn68JWZEeS1aKkpz7GddQ" name="0:int" messageSort="asynchCall" receiveEvent="_zGJZ0JWZEeS1aKkpz7GddQ" sendEvent="_zGn68ZWZEeS1aKkpz7GddQ"/>
+    <message xmi:type="uml:Message" xmi:id="_t12IYJWaEeS1aKkpz7GddQ" name="0:int" messageSort="asynchCall" receiveEvent="_t1dt4JWaEeS1aKkpz7GddQ" sendEvent="_t12IYZWaEeS1aKkpz7GddQ"/>
   </packagedElement>
 </uml:Model>
