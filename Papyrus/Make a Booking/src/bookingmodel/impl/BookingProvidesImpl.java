@@ -401,7 +401,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 				String guestEmail = this.getResponsibleGuest(roomID);
 				booking.removeResponsibleGuest(roomID, guestEmail);
 				
-				//check if the booking has been is payed or not, 
+				//check if the booking has been  payed or not, 
 				//if not, return an int indicating that the room needs to be payed
 				if(!this.isPayed(booking.getBookingRef())){
 					booking.setResponsibleGuest(roomID, guestEmail);
