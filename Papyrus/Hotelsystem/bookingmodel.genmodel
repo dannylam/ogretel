@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/uml2/2.2.0/GenModel"
-    modelDirectory="/Make a Booking/src" modelPluginID="Make_a_Booking"
-    modelName="Bookingmodel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    importerID="org.eclipse.uml2.uml.ecore.importer" complianceLevel="5.0" copyrightFields="false"
-    operationReflection="true" importOrganizing="true">
+    modelDirectory="/Hotelsystem/src" modelPluginID="Hotelsystem" modelName="Bookingmodel"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.uml2.uml.ecore.importer"
+    complianceLevel="6.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
   <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
     <details key="OPPOSITE_ROLE_NAMES" value="IGNORE"/>
     <details key="DUPLICATE_FEATURES" value="DISCARD"/>
@@ -94,8 +93,8 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/setRoomIDs">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//Booking/setRoomIDs/roomIDs"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/setServices">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//Booking/setServices/services"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/setServiceNotes">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//Booking/setServiceNotes/services"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/getExtras"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/getRoomTypes"/>
@@ -118,6 +117,9 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/getUnPayedExtras"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/setExtrasAsPayed">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//Booking/setExtrasAsPayed/extras"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//Booking/removeServiceNotes">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//Booking/removeServiceNotes/serviceNotes"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="bookingmodel.ecore#//Customer">
@@ -216,7 +218,6 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForHost/existBooking/bookingRef"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//IBookingProvidesForHost/getExistingBookings"/>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//IBookingProvidesForHost/getActiveBookings"/>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//IBookingProvidesForHost/isCheckedOut">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForHost/isCheckedOut/roomID"/>
       </genOperations>
@@ -233,9 +234,9 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForHost/addServiceNotes/roomID"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForHost/addServiceNotes/serviceNote"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//IBookingProvidesForHost/RemoveServiceNotes">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForHost/RemoveServiceNotes/roomID"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForHost/RemoveServiceNotes/serviceNote"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//IBookingProvidesForHost/removeServiceNotes">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForHost/removeServiceNotes/roomID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForHost/removeServiceNotes/serviceNote"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="bookingmodel.ecore#//IBookingProvidesForCustomer">
@@ -285,6 +286,16 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/book/roomTypes"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/book/extras"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/book/services"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//IBookingProvidesForCustomer/editPaymentDetails">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/editPaymentDetails/ccNumber"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/editPaymentDetails/ccv"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/editPaymentDetails/expiryMonth"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/editPaymentDetails/expiryYear"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/editPaymentDetails/firstName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/editPaymentDetails/lastName"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/editPaymentDetails/customerEmail"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForCustomer/editPaymentDetails/bookingRef"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="bookingmodel.ecore#//BookingInfo">
@@ -344,8 +355,8 @@
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//CustomerInfo/getCardFirstName">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//CustomerInfo/getCardFirstName/bookingRef"/>
       </genOperations>
-      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//CustomerInfo/geCardtLastName">
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//CustomerInfo/geCardtLastName/bookingRef"/>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//CustomerInfo/getCardLastName">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//CustomerInfo/getCardLastName/bookingRef"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" image="false" ecoreClass="bookingmodel.ecore#//IBookingProvidesForGuest">
@@ -356,7 +367,6 @@
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//IBookingProvidesForGuest/checkOut">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/checkOut/roomID"/>
-        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/checkOut/guestEmail"/>
       </genOperations>
       <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//IBookingProvidesForGuest/payExtra">
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/payExtra/ccNumber"/>
@@ -376,6 +386,14 @@
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/payRoom/firstName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/payRoom/lastName"/>
         <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/payRoom/roomID"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//IBookingProvidesForGuest/addExtra">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/addExtra/roomID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/addExtra/extraID"/>
+      </genOperations>
+      <genOperations xsi:type="genmodel:GenOperation" ecoreOperation="bookingmodel.ecore#//IBookingProvidesForGuest/removeExtra">
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/removeExtra/roomID"/>
+        <genParameters xsi:type="genmodel:GenParameter" ecoreParameter="bookingmodel.ecore#//IBookingProvidesForGuest/removeExtra/extraID"/>
       </genOperations>
     </genClasses>
     <genClasses xsi:type="genmodel:GenClass" ecoreClass="bookingmodel.ecore#//BookingProvides">
