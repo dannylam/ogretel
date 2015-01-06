@@ -90,9 +90,9 @@ Actor wants to pay now</body>
     <message xmi:type="uml:Message" xmi:id="_DIUFwHuXEeSxRO9vcwrttA" name="- true:boolean" messageSort="asynchCall" receiveEvent="_DIYXMHuXEeSxRO9vcwrttA" sendEvent="_DIV68HuXEeSxRO9vcwrttA"/>
     <message xmi:type="uml:Message" xmi:id="_OobS8HuXEeSxRO9vcwrttA" name="bookingRef: String" messageSort="asynchCall" receiveEvent="_OofkYHuXEeSxRO9vcwrttA" sendEvent="_OodvMHuXEeSxRO9vcwrttA"/>
     <message xmi:type="uml:Message" xmi:id="_T2mxkHujEeSxRO9vcwrttA" name="payBooking(bookingRef: String)" messageSort="asynchCall" receiveEvent="_T2qb8HujEeSxRO9vcwrttA" sendEvent="_T2pN0HujEeSxRO9vcwrttA"/>
-    <message xmi:type="uml:Message" xmi:id="_evY5AHujEeSxRO9vcwrttA" name="makePayment(ccNumber:String, ccv:String, expiryMonth:int, expiryYear:int, firstName:String, lastName:String)" messageSort="asynchCall" receiveEvent="_eve_oHujEeSxRO9vcwrttA" sendEvent="_evdKcHujEeSxRO9vcwrttA"/>
+    <message xmi:type="uml:Message" xmi:id="_evY5AHujEeSxRO9vcwrttA" name="makePayment(ccNumber:String, ccv:String, expiryMonth:int, expiryYear:int, firstName:String, lastName:String, sum:int)" messageSort="asynchCall" receiveEvent="_eve_oHujEeSxRO9vcwrttA" sendEvent="_evdKcHujEeSxRO9vcwrttA"/>
     <message xmi:type="uml:Message" xmi:id="_0eZL4IcDEeSLCNXpIG2YaA" name="- 0:int" messageSort="asynchCall" receiveEvent="_0ecPMIcDEeSLCNXpIG2YaA" sendEvent="_0ebBEIcDEeSLCNXpIG2YaA"/>
-    <message xmi:type="uml:Message" xmi:id="__MepwIcEEeSLCNXpIG2YaA" name="- 0:int" messageSort="asynchCall" receiveEvent="__MiUIIcEEeSLCNXpIG2YaA" sendEvent="__MhGAIcEEeSLCNXpIG2YaA"/>
+    <message xmi:type="uml:Message" xmi:id="__MepwIcEEeSLCNXpIG2YaA" name="true:boolean" messageSort="asynchCall" receiveEvent="__MiUIIcEEeSLCNXpIG2YaA" sendEvent="__MhGAIcEEeSLCNXpIG2YaA"/>
     <message xmi:type="uml:Message" xmi:id="_DymgUIcFEeSLCNXpIG2YaA" name="- 0:int" messageSort="asynchCall" receiveEvent="_Dyo8kIcFEeSLCNXpIG2YaA" sendEvent="_DynucIcFEeSLCNXpIG2YaA"/>
     <message xmi:type="uml:Message" xmi:id="_sJ0BMJWWEeS1aKkpz7GddQ" name="getPrice(bookingref:String)" messageSort="asynchCall" receiveEvent="_sJ0BMpWWEeS1aKkpz7GddQ" sendEvent="_sJ0BMZWWEeS1aKkpz7GddQ"/>
     <message xmi:type="uml:Message" xmi:id="_Gfy2cJWXEeS1aKkpz7GddQ" name="price:int" messageSort="asynchCall" receiveEvent="_Gf49EZWXEeS1aKkpz7GddQ" sendEvent="_Gf49EJWXEeS1aKkpz7GddQ"/>
