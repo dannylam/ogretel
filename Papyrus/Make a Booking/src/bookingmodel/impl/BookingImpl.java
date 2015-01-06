@@ -585,7 +585,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public EList<String> getExtras() {
 		String[] extras = this.extraToIsPayedMap.keySet().toArray(new String[0]);
-		return new BasicEList(Arrays.asList(extras));
+		return new BasicEList<String>(Arrays.asList(extras));
 	}
 
 	/**
@@ -594,7 +594,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public EList<String> getRoomTypes() {
 		String[] roomTypes = this.roomIDToRoomTypeMap.values().toArray(new String[0]);
-		return new BasicEList(Arrays.asList(roomTypes));
+		return new BasicEList<String>(Arrays.asList(roomTypes));
 	}
 
 	/**
@@ -603,7 +603,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	 */
 	public EList<Integer> getRoomIDs() {
 		Integer[] roomIDs = this.roomIDToRoomTypeMap.keySet().toArray(new Integer[0]);
-		return new BasicEList(Arrays.asList(roomIDs));
+		return new BasicEList<Integer>(Arrays.asList(roomIDs));
 	}
 
 	/**

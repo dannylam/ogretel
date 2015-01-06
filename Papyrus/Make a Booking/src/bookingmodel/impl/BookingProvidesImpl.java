@@ -459,6 +459,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public int payExtra(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, List<String> extras, int roomID) {
+		//TODO
 		if(this.bookingHandler.exists(this.bookingHandler.getBooking(roomID).getBookingRef())){
 			if(!extras.equals(null)){
 				EList<String> extrasToBePayed = null;
@@ -547,7 +548,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public List<String> getExistingBookings() {
 		String[] bookings =this.bookingHandler.getBookingsMap().entrySet().toArray(new String[0]);
-		return new BasicEList(Arrays.asList(bookings));
+		return new BasicEList<String>(Arrays.asList(bookings));
 	}
 
 	/**
@@ -799,6 +800,7 @@ public class BookingProvidesImpl extends MinimalEObjectImpl.Container implements
 	/**
 	 * {@inheritDoc}
 	 * @generated NOT
+	 * TODO 
 	 */
 	public String book(String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras, List<String> services) {
 		if(!startDate.equals(null) && !endDate.equals(null) && nrOfGuests > 0 && !roomTypes.equals(null)){

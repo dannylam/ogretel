@@ -3,7 +3,6 @@
 package bookingmodel;
 
 import java.util.List;
-import org.eclipse.emf.common.util.EList;
 /**
  * An interface class which represents booking provides for the customer, extending EObject.
  *
