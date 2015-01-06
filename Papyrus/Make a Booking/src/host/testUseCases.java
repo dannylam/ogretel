@@ -122,53 +122,96 @@ public class testUseCases {
 	}
 	
 	/*
-	 * Alt flow MAB: 
+	 * Alt flow MAB: chosen number of guests is invalid (is below 1)
 	 */
 	public void testMABAltFlow2c(){
-		
+		int nrOfGuests   		 = -2;
+		List<String> roomTypes	 = new ArrayList <String>();
+		List<String> extras		 = new ArrayList <String>();
+		List<String> services    = new ArrayList <String>();
+		roomTypes.add("Economic");
+
+		String bookingRef = bookingprovides.book("150310", "150315", nrOfGuests, roomTypes, extras, services);
+		assertFalse(bookingRef.equals(""));
 	}
 	
 	/*
-	 * Alt flow MAB: 
+	 * Alt flow MAB: chosen roomtype(s) is invalid (doesn’t exist)
 	 */
 	public void testMABAltFlow2d(){
-		
+		int nrOfGuests   		 = 2;
+		List<String> roomTypes	 = new ArrayList <String>();
+		List<String> extras		 = new ArrayList <String>();
+		List<String> services    = new ArrayList <String>();
+		roomTypes.add("Doesn't exit");
+		roomTypes.add("Does not exist either");
+
+		String bookingRef = bookingprovides.book("150310", "150315", nrOfGuests, roomTypes, extras, services);
+		assertFalse(bookingRef.equals(""));
 	}
 	
 	/*
-	 * Alt flow MAB: 
+	 * Alt flow MAB: chosen amount of roomtype(s) is invalid (is below 1)
 	 */
 	public void testMABAltFlow2e(){
-		
+		int nrOfGuests   		 = 2;
+		List<String> roomTypes	 = new ArrayList <String>();
+		List<String> extras		 = new ArrayList <String>();
+		List<String> services    = new ArrayList <String>();
+
+		String bookingRef = bookingprovides.book("150310", "150315", nrOfGuests, roomTypes, extras, services);
+		assertFalse(bookingRef.equals(""));
 	}
 	
 	/*
-	 * Alt flow MAB: 
+	 * Alt flow MAB: Personal details are invalid, person is too young, 
+	 * below legal age limit
 	 */
 	public void testMABAltFlow6(){
-		
+		String startDate 		 = "150110";
+		String endDate   	 	 = "150112";
+		int nrOfGuests   		 = 2;
+		List<String> roomTypes	 = new ArrayList <String>();
+		List<String> extras		 = new ArrayList <String>();
+		List<String> services    = new ArrayList <String>();
+
+		roomTypes.add("Economic");
+
+		String bookingRef = bookingprovides.book(startDate, endDate, nrOfGuests, roomTypes, extras, services);
+		assertFalse(bookingRef.equals(""));
+
+		int price = bookingprovides.getPrice(bookingRef);
+		System.out.println("Price: " + price);
+		//Finds the price acceptable
+		assertTrue(bookingprovides.setPersonalDetails(firstName, lastName, 12, email, bookingRef) != 0);
+
 	}
 	
 	/*
-	 * Alt flow MAB: 
+	 * Alt flow MAB: Payment details are invalid
 	 */
 	public void testMABAltFlow8(){
-		
+		String startDate 		 = "150110";
+		String endDate   	 	 = "150112";
+		int nrOfGuests   		 = 2;
+		List<String> roomTypes	 = new ArrayList <String>();
+		List<String> extras		 = new ArrayList <String>();
+		List<String> services    = new ArrayList <String>();
+
+		roomTypes.add("Economic");
+
+		String bookingRef = bookingprovides.book(startDate, endDate, nrOfGuests, roomTypes, extras, services);
+		assertFalse(bookingRef.equals(""));
+
+		int price = bookingprovides.getPrice(bookingRef);
+		System.out.println("Price: " + price);
+		//Finds the price accepteble
+		assertTrue(bookingprovides.setPersonalDetails(firstName, lastName, age, email, bookingRef) == 0);
+		bookingprovides.setPaymentDetails(null, null, 0, 0, null, null, null, bookingRef);
+		assertTrue(bookingprovides.payBooking(bookingRef) != 0);
+
 	}
 	
-	/*
-	 * Alt flow MAB: 
-	 */
-	public void testMABAltFlow10(){
-		
-	}
-	
-	/*
-	 * Alt flow MAB: 
-	 */
-	public void testMABAltFlow13(){
-		
-	}
 	
 	/*
 	 * Main flow check in and out
