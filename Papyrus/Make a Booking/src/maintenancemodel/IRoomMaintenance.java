@@ -20,10 +20,8 @@ public interface IRoomMaintenance extends EObject {
 	 * unique and the roomTypeID must exist in the system. The integer returned
 	 * by the function indicates success or failure and reason for failure.
 	 * 
-	 * @return
-	 * 0 if success
-	 * 1 if roomTypeID does not exist
-	 * 2 if roomID not unique
+	 * @return 0 if success 1 if roomID not
+	 *         unique 2 if roomTypeID does not exist
 	 * 
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true"
 	 *        ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer"
@@ -37,9 +35,7 @@ public interface IRoomMaintenance extends EObject {
 	/**
 	 * Removes a Room from the system.
 	 * 
-	 * @return
-	 * 0 if successful
-	 * 1 if Room with roomID does not exist
+	 * @return 0 if successful 1 if Room with roomID does not exist
 	 * 
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true"
 	 *        ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer"
@@ -49,95 +45,52 @@ public interface IRoomMaintenance extends EObject {
 	int removeRoom(int roomID);
 
 	/**
-	 * Adds a RoomType with the given parameters. 
-	 * 
-	 * @return
-	 * 0 if success
-	 * 1 if roomTypeID incorrect
-	 * 
-	 * TODO finish documentation
-	 * 
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true"
-	 *        ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String"
-	 *        roomTypeIDRequired="true" roomTypeIDOrdered="false"
-	 *        roomTypeEnumDataType="org.eclipse.uml2.types.String"
-	 *        roomTypeEnumRequired="true" roomTypeEnumOrdered="false"
-	 *        priceDataType="org.eclipse.uml2.types.Integer"
-	 *        priceRequired="true" priceOrdered="false"
-	 *        maxNrOfGuestsDataType="org.eclipse.uml2.types.Integer"
-	 *        maxNrOfGuestsRequired="true" maxNrOfGuestsOrdered="false"
-	 *        descriptionDataType="org.eclipse.uml2.types.String"
-	 *        descriptionRequired="true" descriptionOrdered="false"
-	 * @generated NOT
-	 */
-	int addRoomType(String roomTypeID, String roomTypeEnum, int price,
-			int maxNrOfGuests, String description);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
-	 * @generated
-	 */
-	int removeRoomType(String roomTypeID);
-
-	/**
-	 * TODO finish documentation
+	 * If 0 is returned everything went fine If 1 is returned the status is not
+	 * ok and nothing has been changed. If 2 is returned the roomID does not
+	 * exist.
 	 * 
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true"
 	 *        ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer"
 	 *        roomIDRequired="true" roomIDOrdered="false"
 	 *        statusDataType="org.eclipse.uml2.types.String"
 	 *        statusRequired="true" statusOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int editRoomStatus(int roomID, String status);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false" roomTypeEnumDataType="org.eclipse.uml2.types.String" roomTypeEnumRequired="true" roomTypeEnumOrdered="false" priceDataType="org.eclipse.uml2.types.Integer" priceRequired="true" priceOrdered="false" maxNrOfGuestsDataType="org.eclipse.uml2.types.Integer" maxNrOfGuestsRequired="true" maxNrOfGuestsOrdered="false" descriptionDataType="org.eclipse.uml2.types.String" descriptionRequired="true" descriptionOrdered="false" nrOfRoomsDataType="org.eclipse.uml2.types.Integer" nrOfRoomsRequired="true" nrOfRoomsOrdered="false"
-	 * @generated
-	 */
-	int editRoomType(String roomTypeID, String roomTypeEnum, int price, int maxNrOfGuests, String description, int nrOfRooms);
-
-	/**
-	 * TODO finish documentation
+	 * Edit the Room with @param roomID. I.e. give it
+	 * another (or same, if you feel like it...) RoomType.
 	 * 
+	 * @return 0 if success 1 if roomID not
+	 *         unique 2 if roomTypeID does not exist
+	 *          
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true"
 	 *        ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer"
 	 *        roomIDRequired="true" roomIDOrdered="false"
 	 *        roomTypeIDDataType="org.eclipse.uml2.types.String"
 	 *        roomTypeIDRequired="true" roomTypeIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int editRoom(int roomID, String roomTypeID);
 
 	/**
-	 * TODO finish documentation
+	 * @return List of the current Room IDs.
 	 * 
 	 * @model kind="operation" dataType="org.eclipse.uml2.types.String"
 	 *        ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	EList<Integer> getRoomIDs();
 
 	/**
-	 * TODO finish documentation
-	 * 
-	 * @model kind="operation" dataType="org.eclipse.uml2.types.String"
-	 *        ordered="false"
-	 * @generated
-	 */
-	EList<String> getRoomTypeIDs();
-
-	/**
-	 * TODO finish documentation
+	 * @return Status of the room.
+	 * String of RoomStatusEnum of Room indicated by roomID, otherwise null
 	 * 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true"
 	 *        ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer"
 	 *        roomIDRequired="true" roomIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	String getRoomStatus(int roomID);
 
@@ -154,48 +107,9 @@ public interface IRoomMaintenance extends EObject {
 	EList<String> getRoomStatuses();
 
 	/**
-	 * @return a String of the RoomTypeEnum belonging to the RoomType indicated by the
-	 *         inparam roomTypeID, null if roomTypeID doesn't exist
-	 * 
-	 * @model dataType="org.eclipse.uml2.types.String" required="true"
-	 *        ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String"
-	 *        roomTypeIDRequired="true" roomTypeIDOrdered="false"
-	 * @generated NOT
-	 */
-	String getRoomTypeEnum(String roomTypeID);
-
-	/**
-	 * TODO finish documentation
-	 * 
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true"
-	 *        ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String"
-	 *        roomTypeIDRequired="true" roomTypeIDOrdered="false"
-	 * @generated
-	 */
-	int getRoomTypePrice(String roomTypeID);
-
-	/**
-	 * TODO finish documentation
-	 * 
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true"
-	 *        ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String"
-	 *        roomTypeIDRequired="true" roomTypeIDOrdered="false"
-	 * @generated
-	 */
-	int getRoomTypeMaxNrOfGuests(String roomTypeID);
-
-	/**
-	 * TODO finish documentation
-	 * 
-	 * @model dataType="org.eclipse.uml2.types.String" required="true"
-	 *        ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String"
-	 *        roomTypeIDRequired="true" roomTypeIDOrdered="false"
-	 * @generated
-	 */
-	String getRoomTypeDescription(String roomTypeID);
-
-	/**
-	 * TODO finish documentation
+	 * @return The room type ID.
+	 * RoomTypeID of RoomType of Room indicated by roomID
+	 * null if roomID invalid
 	 * 
 	 * @model dataType="org.eclipse.uml2.types.String" required="true"
 	 *        ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer"
@@ -203,21 +117,11 @@ public interface IRoomMaintenance extends EObject {
 	 * @generated
 	 */
 	String getRoomTypeID(int roomID);
-
+	
 	/**
-	 * Makes it simpler for user of the system to choose a correct RoomTypeEnum.
-	 * 
-	 * @return a list of Strings of the RoomTypeEnum
-	 * 
-	 * @model kind="operation" dataType="org.eclipse.uml2.types.String"
-	 *        ordered="false"
-	 * @generated NOT
-	 */
-	EList<String> getRoomTypeEnums();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * @return Number of room types.
+	 * number of Rooms with RoomType indicated by roomTypeID
+	 * -1 if roomTypeID invalid
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypeIDDataType="org.eclipse.uml2.types.String" roomTypeIDRequired="true" roomTypeIDOrdered="false"
 	 * @generated
 	 */

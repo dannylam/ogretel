@@ -34,12 +34,13 @@ public interface RoomHandler extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Integer To Room Map</em>' map.
 	 * @see maintenancemodel.MaintenancemodelPackage#getRoomHandler_IntegerToRoomMap()
-	 * @model mapType="maintenancemodel.IntegerToRoomMap<org.eclipse.emf.ecore.EIntegerObject, maintenancemodel.Room>" ordered="false"
+	 * @model mapType="maintenancemodel.IntegerToRoomEntry<org.eclipse.emf.ecore.EIntegerObject, maintenancemodel.Room>" ordered="false"
 	 * @generated
 	 */
 	EMap<Integer, Room> getIntegerToRoomMap();
 
 	/**
+	 * Checks if the room exists in the system.
 	 * @return true if there is a Room with roomID given by inparam
 	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
@@ -47,26 +48,30 @@ public interface RoomHandler extends EObject {
 	boolean exists(int roomID);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Adds a room to the system.
+	 * @return
+	 * 0 if successful
+	 * 1 if not successful
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" roomTypeRequired="true" roomTypeOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int addRoom(int roomID, RoomType roomType);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Removes a room from the system.
+	 * @return
+	 * 0 if successful
+	 * 1 if not successful
 	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int removeRoom(int roomID);
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * Returns the room.
+	 * @return the room with given roomID
 	 * @model required="true" ordered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	Room getRoom(int roomID);
 

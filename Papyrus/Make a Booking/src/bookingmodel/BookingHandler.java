@@ -3,7 +3,6 @@
 package bookingmodel;
 
 import java.util.List;
-
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EObject;
@@ -59,6 +58,38 @@ public interface BookingHandler extends EObject {
 	EMap<Integer, String> getRoomIDToBookingRefMap();
 
 	/**
+	 * Returns the value of the '<em><b>Customer Email To Booking Ref Entry</b></em>' containment reference list.
+	 * The list contents are of type {@link bookingmodel.CustomerEmailToBookingRefEntry}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Customer Email To Booking Ref Entry</em>' map isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Customer Email To Booking Ref Entry</em>' containment reference list.
+	 * @see bookingmodel.BookingmodelPackage#getBookingHandler_CustomerEmailToBookingRefEntry()
+	 * @model containment="true" ordered="false"
+	 * @generated
+	 */
+	EList<CustomerEmailToBookingRefEntry> getCustomerEmailToBookingRefEntry();
+
+	/**
+	 * Returns the value of the '<em><b>Guest Email To Room ID Entry</b></em>' containment reference list.
+	 * The list contents are of type {@link bookingmodel.GuestEmailToRoomIDEntry}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Guest Email To Room ID Entry</em>' map isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Guest Email To Room ID Entry</em>' containment reference list.
+	 * @see bookingmodel.BookingmodelPackage#getBookingHandler_GuestEmailToRoomIDEntry()
+	 * @model containment="true" ordered="false"
+	 * @generated
+	 */
+	EList<GuestEmailToRoomIDEntry> getGuestEmailToRoomIDEntry();
+
+	/**
 	 * A method that checks if the booking reference exists
 	 * @param bookingRef
 	 * @return boolean which indicating if the given booking reference exists in the map of bookings
@@ -68,26 +99,30 @@ public interface BookingHandler extends EObject {
 	boolean exists(String bookingRef);
 
 	/**
-	 * Adds a booking to the map where the key is the bookingreference and the value the booking. 
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" nrOfGuestsDataType="org.eclipse.uml2.types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" startDateDataType="org.eclipse.uml2.types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="org.eclipse.uml2.types.String" endDateRequired="true" endDateOrdered="false" roomTypesDataType="org.eclipse.uml2.types.String" roomTypesMany="true" roomTypesOrdered="false" extrasDataType="org.eclipse.uml2.types.String" extrasMany="true" extrasOrdered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false"
+	 * @generated
+	 */
+	String addBooking(int nrOfGuests, String startDate, String endDate, EList<String> roomTypes, EList<String> extras, EList<String> services);
+
+	/**
+	 * Creates and adds a booking to the map where the key is a bookingreference and the value the booking. 
 	 * The integer returned by the function indicates success or failure and reason for failure.
 	 * @param booking
-	 *  //TODO
-	 * @return  0 if success 
-	 * 			1 if ??
-	 * 			2 if ??
-	 * @model dataType="types.Integer" required="true" ordered="false" bookingRequired="true" bookingOrdered="false"
+	 * @return a bookingreference if success 
+	 * 			null if the map of bookings is null
+	 * @model dataType="types.String" required="true" ordered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" roomTypesDataType="types.String" roomTypesMany="true" roomTypesOrdered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false" servicesDataType="types.String" servicesMany="true" servicesOrdered="false"
 	 * @generated NOT
 	 */
-	int addBooking(Booking booking);
+	String addBooking(int nrOfGuests, String startDate, String endDate, List<String> roomTypes, List<String> extras, List<String> services);
 
 	/**
 	 * Removes a booking from the map with the given booking reference.
 	 * The integer returned by the function indicates success or failure and reason for failure.
 	 * @param booking
-	 * //TODO
 	 * @return  0 if success 
-	 * 			1 if ??
-	 * 			2 if ??
+	 * 			-1 if the booking reference does not exist
 	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
 	 * @generated NOT
 	 */
@@ -103,22 +138,37 @@ public interface BookingHandler extends EObject {
 	Booking getBooking(String bookingRef);
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false" startDateDataType="org.eclipse.uml2.types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="org.eclipse.uml2.types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="org.eclipse.uml2.types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesDataType="org.eclipse.uml2.types.String" roomTypesMany="true" roomTypesOrdered="false" extrasDataType="org.eclipse.uml2.types.String" extrasMany="true" extrasOrdered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false"
+	 * @generated
+	 */
+	int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, EList<String> roomTypes, EList<String> extras, EList<String> services);
+
+	/**
 	 * Edits a booking with the specified parameters given.
 	 * The integer returned by the function indicates success or failure and reason for failure.
-	 * //TODO
 	 * @return  0 if success 
-	 * 			1 if ??
-	 * 			2 if ??
-	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesRequired="true" roomTypesMany="false" roomTypesOrdered="false" extrasMany="false" extrasOrdered="false"
+	 * 			-1 if the booking reference does not exist
+	 * @model dataType="types.Integer" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false" startDateDataType="types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesDataType="types.String" roomTypesMany="true" roomTypesOrdered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false" servicesDataType="types.String" servicesMany="true" servicesOrdered="false"
 	 * @generated NOT
 	 */
-	int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras);
+	int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras, List<String> services);
 
 	/**
 	 *  Returns the booking which a rooms is associated to if that room is already checked in.
+	 * The integer returned by the function indicates success or failure and reason for failure.
+	 * @return  the booking reference associaated with the room.
 	 * @model required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
 	 */
 	Booking getBooking(int roomID);
+
+	/**
+	 * Returns if a booking is active or not
+	 * @model dataType="types.Boolean" required="true" ordered="false" bookingRefDataType="types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @generated NOT
+	 */
+	boolean isActive(String bookingRef);
 
 } // BookingHandler

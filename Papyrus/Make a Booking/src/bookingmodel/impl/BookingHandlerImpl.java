@@ -6,8 +6,12 @@ import bookingmodel.Booking;
 import bookingmodel.BookingHandler;
 import bookingmodel.BookingmodelPackage;
 
+import bookingmodel.CustomerEmailToBookingRefEntry;
+import bookingmodel.GuestEmailToRoomIDEntry;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Collection;
 import java.util.List;
+import java.util.UUID;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -16,6 +20,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EcoreEMap;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -51,6 +56,26 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected EMap<Integer, String> roomIDToBookingRefMap;
+
+	/**
+	 * The cached value of the '{@link #getCustomerEmailToBookingRefEntry() <em>Customer Email To Booking Ref Entry</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCustomerEmailToBookingRefEntry()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<CustomerEmailToBookingRefEntry> customerEmailToBookingRefEntry;
+
+	/**
+	 * The cached value of the '{@link #getGuestEmailToRoomIDEntry() <em>Guest Email To Room ID Entry</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getGuestEmailToRoomIDEntry()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<GuestEmailToRoomIDEntry> guestEmailToRoomIDEntry;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -96,7 +121,31 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * @inheritDoc
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<CustomerEmailToBookingRefEntry> getCustomerEmailToBookingRefEntry() {
+		if (customerEmailToBookingRefEntry == null) {
+			customerEmailToBookingRefEntry = new EObjectContainmentEList<CustomerEmailToBookingRefEntry>(CustomerEmailToBookingRefEntry.class, this, BookingmodelPackage.BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY);
+		}
+		return customerEmailToBookingRefEntry;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<GuestEmailToRoomIDEntry> getGuestEmailToRoomIDEntry() {
+		if (guestEmailToRoomIDEntry == null) {
+			guestEmailToRoomIDEntry = new EObjectContainmentEList<GuestEmailToRoomIDEntry>(GuestEmailToRoomIDEntry.class, this, BookingmodelPackage.BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY);
+		}
+		return guestEmailToRoomIDEntry;
+	}
+
+	/**
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public boolean exists(String bookingRef) {
@@ -104,35 +153,64 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * @inheritDoc
-	 * @generated NOT
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
 	 */
-	public int addBooking(Booking booking) {
-		int result = 0;
-		if(!this.bookingsMap.equals(null)){
-			this.bookingsMap.put(booking.getBookingRef(), booking);
-		} else {
-			result = -1;
-		}
-		return result;
+	public String addBooking(int nrOfGuests, String startDate, String endDate, EList<String> roomTypes, EList<String> extras, EList<String> services) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
+	 * @return getBookingRef, if the booking map is not empty
+	 * @return null, if the booking map is empty
+	 * @generated NOT
+	 */
+	public String addBooking(int nrOfGuests, String startDate, String endDate, List<String> roomTypes, List<String> extras, List<String> services) {
+		if(!this.bookingsMap.equals(null)){
+			Booking booking = new BookingImpl(nrOfGuests, startDate, endDate, roomTypes, extras, services);
+			booking.setBookingRef(this.generateBookingRef());
+			this.bookingsMap.put(booking.getBookingRef(), booking);
+			return booking.getBookingRef();
+		} 
+		return null;
+	}
+	
+	/**
+	 * Generates a booking reference to a booking
+	 * @return generateBookingRef, if the booking reference is active
+	 * @return bookingRef, if the booking reference is not active.
+	 * @generated NOT
+	 */
+	private String generateBookingRef() {
+		String bookingRef = UUID.randomUUID().toString();
+		if(this.isActive(bookingRef)){
+			return generateBookingRef();
+		} else {
+			return bookingRef;
+		}
+	}
+		
+	/**
+	 * {@inheritDoc}
+	 * @return 0, if removing a booking went correct
+	 * @return -1, if removing a booking failed.
 	 * @generated NOT
 	 */
 	public int removeBooking(String bookingRef) {
-		int result = 0;
 		if(this.exists(bookingRef)){
 			this.bookingsMap.remove(getBooking(bookingRef));
-		} else {
-			result = -1;
-		}
-		return result;
+			return 0;
+		} 
+		return -1;
 	}
 
 	/**
-	 * @inheritDoc
+	 * {@inheritDoc}
+	 * @return the booking reference.
 	 * @generated NOT
 	 */
 	public Booking getBooking(String bookingRef) {
@@ -140,7 +218,19 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * @inheritDoc
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, EList<String> roomTypes, EList<String> extras, EList<String> services) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @return booking with room identification.
 	 * @generated NOT
 	 */
 	public Booking getBooking(int roomID) {
@@ -148,22 +238,33 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	}
 
 	/**
-	 * @inheritDoc
-	 * @param bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras
+	 * {@inheritDoc}
+	 * @return true, if the booking reference is active
+	 * @return false, if the booking reference is not active.
 	 * @generated NOT
 	 */
-	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras) {
-		int result = 0;
-			if(this.exists(bookingRef)){
-				this.getBooking(bookingRef).setStartDate(startDate);
-				this.getBooking(bookingRef).setEndDate(endDate);
-				this.getBooking(bookingRef).setNrOfGuests(nrOfGuests);
-				this.getBooking(bookingRef).setRoomTypes(roomTypes);
-				this.getBooking(bookingRef).setExtras(extras);
-			} else {
-				result = -1;
-			}
-		return result;
+	public boolean isActive(String bookingRef) {
+		if(this.isActive(bookingRef)){
+			return !this.bookingsMap.get(bookingRef).checkedOutAllRooms();
+		} else {
+			return false;
+		}
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @param bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras
+	 * @return 0, if edit booking was successful.
+	 * @generated NOT
+	 */
+	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras, List<String> services) {
+			this.getBooking(bookingRef).setStartDate(startDate);
+			this.getBooking(bookingRef).setEndDate(endDate);
+			this.getBooking(bookingRef).setNrOfGuests(nrOfGuests);
+			this.getBooking(bookingRef).setRoomTypes(roomTypes);
+			this.getBooking(bookingRef).setExtras(extras);
+			this.getBooking(bookingRef).setServices(services);
+			return 0;
 	}
 
 	/**
@@ -178,6 +279,10 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return ((InternalEList<?>)getBookingsMap()).basicRemove(otherEnd, msgs);
 			case BookingmodelPackage.BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP:
 				return ((InternalEList<?>)getRoomIDToBookingRefMap()).basicRemove(otherEnd, msgs);
+			case BookingmodelPackage.BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY:
+				return ((InternalEList<?>)getCustomerEmailToBookingRefEntry()).basicRemove(otherEnd, msgs);
+			case BookingmodelPackage.BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY:
+				return ((InternalEList<?>)getGuestEmailToRoomIDEntry()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -196,6 +301,10 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			case BookingmodelPackage.BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP:
 				if (coreType) return getRoomIDToBookingRefMap();
 				else return getRoomIDToBookingRefMap().map();
+			case BookingmodelPackage.BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY:
+				return getCustomerEmailToBookingRefEntry();
+			case BookingmodelPackage.BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY:
+				return getGuestEmailToRoomIDEntry();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -205,6 +314,7 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -213,6 +323,14 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case BookingmodelPackage.BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP:
 				((EStructuralFeature.Setting)getRoomIDToBookingRefMap()).set(newValue);
+				return;
+			case BookingmodelPackage.BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY:
+				getCustomerEmailToBookingRefEntry().clear();
+				getCustomerEmailToBookingRefEntry().addAll((Collection<? extends CustomerEmailToBookingRefEntry>)newValue);
+				return;
+			case BookingmodelPackage.BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY:
+				getGuestEmailToRoomIDEntry().clear();
+				getGuestEmailToRoomIDEntry().addAll((Collection<? extends GuestEmailToRoomIDEntry>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -232,6 +350,12 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 			case BookingmodelPackage.BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP:
 				getRoomIDToBookingRefMap().clear();
 				return;
+			case BookingmodelPackage.BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY:
+				getCustomerEmailToBookingRefEntry().clear();
+				return;
+			case BookingmodelPackage.BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY:
+				getGuestEmailToRoomIDEntry().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -248,6 +372,10 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 				return bookingsMap != null && !bookingsMap.isEmpty();
 			case BookingmodelPackage.BOOKING_HANDLER__ROOM_ID_TO_BOOKING_REF_MAP:
 				return roomIDToBookingRefMap != null && !roomIDToBookingRefMap.isEmpty();
+			case BookingmodelPackage.BOOKING_HANDLER__CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY:
+				return customerEmailToBookingRefEntry != null && !customerEmailToBookingRefEntry.isEmpty();
+			case BookingmodelPackage.BOOKING_HANDLER__GUEST_EMAIL_TO_ROOM_ID_ENTRY:
+				return guestEmailToRoomIDEntry != null && !guestEmailToRoomIDEntry.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -263,16 +391,18 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 		switch (operationID) {
 			case BookingmodelPackage.BOOKING_HANDLER___EXISTS__STRING:
 				return exists((String)arguments.get(0));
-			case BookingmodelPackage.BOOKING_HANDLER___ADD_BOOKING__BOOKING:
-				return addBooking((Booking)arguments.get(0));
+			case BookingmodelPackage.BOOKING_HANDLER___ADD_BOOKING__INT_STRING_STRING_ELIST_ELIST_ELIST:
+				return addBooking((Integer)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (EList<String>)arguments.get(3), (EList<String>)arguments.get(4), (EList<String>)arguments.get(5));
 			case BookingmodelPackage.BOOKING_HANDLER___REMOVE_BOOKING__STRING:
 				return removeBooking((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_HANDLER___GET_BOOKING__STRING:
 				return getBooking((String)arguments.get(0));
-			case BookingmodelPackage.BOOKING_HANDLER___EDIT_BOOKING__STRING_STRING_STRING_INT_ELIST_ELIST:
-				return editBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (List<String>)arguments.get(4), (List<String>)arguments.get(5));
+			case BookingmodelPackage.BOOKING_HANDLER___EDIT_BOOKING__STRING_STRING_STRING_INT_ELIST_ELIST_ELIST:
+				return editBooking((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3), (EList<String>)arguments.get(4), (EList<String>)arguments.get(5), (EList<String>)arguments.get(6));
 			case BookingmodelPackage.BOOKING_HANDLER___GET_BOOKING__INT:
 				return getBooking((Integer)arguments.get(0));
+			case BookingmodelPackage.BOOKING_HANDLER___IS_ACTIVE__STRING:
+				return isActive((String)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}

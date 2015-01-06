@@ -44,7 +44,7 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ExtrasMaintenanceImpl() {
+	public ExtrasMaintenanceImpl() {
 		super();
 	}
 
@@ -101,17 +101,12 @@ public class ExtrasMaintenanceImpl extends MinimalEObjectImpl.Container
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean exists(String extraID) {
-<<<<<<< HEAD
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-=======
-		return extras.exists(extraID);
->>>>>>> branch 'classcodegens' of https://github.com/dannylam/ogretel.git
+		return this.extras.exists(extraID);
 	}
 
 

@@ -3,14 +3,10 @@
 package bookingmodel.util;
 
 import bookingmodel.*;
-
 import java.util.Map;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -90,6 +86,10 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 				return createCustomerAdapter();
 			}
 			@Override
+			public Adapter casePerson(Person object) {
+				return createPersonAdapter();
+			}
+			@Override
 			public Adapter casePaymentDetails(PaymentDetails object) {
 				return createPaymentDetailsAdapter();
 			}
@@ -102,12 +102,20 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 				return createExtraToIsPayedEntryAdapter();
 			}
 			@Override
-			public Adapter casePerson(Person object) {
-				return createPersonAdapter();
-			}
-			@Override
 			public Adapter caseBookingHandler(BookingHandler object) {
 				return createBookingHandlerAdapter();
+			}
+			@Override
+			public Adapter caseRoomIDToBookingRefEntry(Map.Entry<Integer, String> object) {
+				return createRoomIDToBookingRefEntryAdapter();
+			}
+			@Override
+			public Adapter caseCustomerEmailToBookingRefEntry(CustomerEmailToBookingRefEntry object) {
+				return createCustomerEmailToBookingRefEntryAdapter();
+			}
+			@Override
+			public Adapter caseGuestEmailToRoomIDEntry(GuestEmailToRoomIDEntry object) {
+				return createGuestEmailToRoomIDEntryAdapter();
 			}
 			@Override
 			public Adapter caseIBookingProvidesForHost(IBookingProvidesForHost object) {
@@ -118,16 +126,20 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 				return createIBookingProvidesForCustomerAdapter();
 			}
 			@Override
+			public Adapter caseBookingInfo(BookingInfo object) {
+				return createBookingInfoAdapter();
+			}
+			@Override
+			public Adapter caseCustomerInfo(CustomerInfo object) {
+				return createCustomerInfoAdapter();
+			}
+			@Override
 			public Adapter caseIBookingProvidesForGuest(IBookingProvidesForGuest object) {
 				return createIBookingProvidesForGuestAdapter();
 			}
 			@Override
 			public Adapter caseBookingProvides(BookingProvides object) {
 				return createBookingProvidesAdapter();
-			}
-			@Override
-			public Adapter caseRoomIDToBookingRefEntry(Map.Entry<Integer, String> object) {
-				return createRoomIDToBookingRefEntryAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -318,6 +330,34 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link bookingmodel.BookingInfo <em>Booking Info</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see bookingmodel.BookingInfo
+	 * @generated
+	 */
+	public Adapter createBookingInfoAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link bookingmodel.CustomerInfo <em>Customer Info</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see bookingmodel.CustomerInfo
+	 * @generated
+	 */
+	public Adapter createCustomerInfoAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link bookingmodel.IBookingProvidesForGuest <em>IBooking Provides For Guest</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -356,6 +396,34 @@ public class BookingmodelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createRoomIDToBookingRefEntryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link bookingmodel.CustomerEmailToBookingRefEntry <em>Customer Email To Booking Ref Entry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see bookingmodel.CustomerEmailToBookingRefEntry
+	 * @generated
+	 */
+	public Adapter createCustomerEmailToBookingRefEntryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link bookingmodel.GuestEmailToRoomIDEntry <em>Guest Email To Room ID Entry</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see bookingmodel.GuestEmailToRoomIDEntry
+	 * @generated
+	 */
+	public Adapter createGuestEmailToRoomIDEntryAdapter() {
 		return null;
 	}
 

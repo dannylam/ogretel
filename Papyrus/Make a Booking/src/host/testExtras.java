@@ -19,7 +19,7 @@ import org.eclipse.emf.common.util.EMap;
 import org.junit.Test;
 
 public class testExtras {
-	
+	@Test
 	public void testAddExtra () {
 		ExtraHandler extraHandler = new ExtraHandlerImpl();
 		
@@ -49,6 +49,7 @@ public class testExtras {
 		assertTrue(product.getID() == productID);	
 		}
 	
+	@Test
 	public void testRemoveAndExistsExtra() {
 		ExtraHandler extraHandler = new ExtraHandlerImpl();
 		String description = "Such fun, verry wow";

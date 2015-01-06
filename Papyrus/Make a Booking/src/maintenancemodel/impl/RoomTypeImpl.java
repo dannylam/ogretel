@@ -2,14 +2,23 @@
  */
 package maintenancemodel.impl;
 
+import java.util.Collection;
+
 import maintenancemodel.MaintenancemodelPackage;
+import maintenancemodel.Room;
 import maintenancemodel.RoomType;
 import maintenancemodel.RoomTypeEnum;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,6 +32,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getRoomTypeEnum <em>Room Type Enum</em>}</li>
  *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getRoomTypeID <em>Room Type ID</em>}</li>
+ *   <li>{@link maintenancemodel.impl.RoomTypeImpl#getRoomsOfType <em>Rooms Of Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -130,6 +140,16 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	protected String roomTypeID = ROOM_TYPE_ID_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getRoomsOfType() <em>Rooms Of Type</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRoomsOfType()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Room> roomsOfType;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * The ID of the RoomType used in the Map
 	 * <!-- end-user-doc -->
@@ -166,14 +186,14 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 */
 	public RoomTypeImpl(String roomTypeID, String roomTypeEnum, int price,
 			int maxNrOfGuests, String description) {
-		
+		this();
+				
 		this.ID = roomTypeID;
 		this.roomTypeEnum = this.stringToRoomTypeEnum(roomTypeEnum);
 		this.price = price;
 		this.maxNrOfGuests = maxNrOfGuests;
 		this.description = description;
-
-		// TODO Auto-generated constructor stub
+		this.roomsOfType = new BasicEList<Room>();
 	}
 
 
@@ -185,7 +205,7 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 */
 	private RoomTypeEnum stringToRoomTypeEnum(String roomTypeEnum){
 		
-		switch(roomTypeEnum){
+		switch(roomTypeEnum.toLowerCase()){
 		case "doublebed":
 			return RoomTypeEnum.DOUBLEBED;
 		case "singlebed":
@@ -211,8 +231,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getPrice() {
 		return price;
@@ -220,8 +241,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setPrice(int newPrice) {
 		int oldPrice = price;
@@ -232,8 +254,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public int getMaxNrOfGuests() {
 		return maxNrOfGuests;
@@ -241,8 +264,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setMaxNrOfGuests(int newMaxNrOfGuests) {
 		int oldMaxNrOfGuests = maxNrOfGuests;
@@ -253,8 +277,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getDescription() {
 		return description;
@@ -262,8 +287,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setDescription(String newDescription) {
 		String oldDescription = description;
@@ -274,8 +300,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public RoomTypeEnum getRoomTypeEnum() {
 		return roomTypeEnum;
@@ -283,8 +310,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setRoomTypeEnum(RoomTypeEnum newRoomTypeEnum) {
 		RoomTypeEnum oldRoomTypeEnum = roomTypeEnum;
@@ -295,8 +323,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public String getRoomTypeID() {
 		return roomTypeID;
@@ -304,14 +333,42 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 
 	/**
 	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public void setRoomTypeID(String newRoomTypeID) {
 		String oldRoomTypeID = roomTypeID;
 		roomTypeID = newRoomTypeID;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ID, oldRoomTypeID, roomTypeID));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * {@inheritDoc}
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public EList<Room> getRoomsOfType() {
+		if (roomsOfType == null) {
+			roomsOfType = new EObjectContainmentEList<Room>(Room.class, this, MaintenancemodelPackage.ROOM_TYPE__ROOMS_OF_TYPE);
+		}
+		return roomsOfType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case MaintenancemodelPackage.ROOM_TYPE__ROOMS_OF_TYPE:
+				return ((InternalEList<?>)getRoomsOfType()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -332,6 +389,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return getRoomTypeEnum();
 			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ID:
 				return getRoomTypeID();
+			case MaintenancemodelPackage.ROOM_TYPE__ROOMS_OF_TYPE:
+				return getRoomsOfType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -341,6 +400,7 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -358,6 +418,10 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return;
 			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ID:
 				setRoomTypeID((String)newValue);
+				return;
+			case MaintenancemodelPackage.ROOM_TYPE__ROOMS_OF_TYPE:
+				getRoomsOfType().clear();
+				getRoomsOfType().addAll((Collection<? extends Room>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -386,6 +450,9 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ID:
 				setRoomTypeID(ROOM_TYPE_ID_EDEFAULT);
 				return;
+			case MaintenancemodelPackage.ROOM_TYPE__ROOMS_OF_TYPE:
+				getRoomsOfType().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -408,6 +475,8 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 				return roomTypeEnum != ROOM_TYPE_ENUM_EDEFAULT;
 			case MaintenancemodelPackage.ROOM_TYPE__ROOM_TYPE_ID:
 				return ROOM_TYPE_ID_EDEFAULT == null ? roomTypeID != null : !ROOM_TYPE_ID_EDEFAULT.equals(roomTypeID);
+			case MaintenancemodelPackage.ROOM_TYPE__ROOMS_OF_TYPE:
+				return roomsOfType != null && !roomsOfType.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

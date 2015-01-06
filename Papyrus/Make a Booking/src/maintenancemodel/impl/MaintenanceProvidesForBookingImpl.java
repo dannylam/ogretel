@@ -3,33 +3,36 @@
 package maintenancemodel.impl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Set;
+import java.util.concurrent.CopyOnWriteArraySet;
 
 import maintenancemodel.Calendar;
 import maintenancemodel.ExtraHandler;
 import maintenancemodel.MaintenanceProvidesForBooking;
 import maintenancemodel.MaintenancemodelPackage;
+import maintenancemodel.Room;
 import maintenancemodel.RoomHandler;
+import maintenancemodel.RoomStatusEnum;
+import maintenancemodel.RoomType;
 import maintenancemodel.RoomTypesHandler;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Maintenance Provides For Booking</b></em>'.
- * <!-- end-user-doc -->
+ * <!-- begin-user-doc --> An implementation of the model object '
+ * <em><b>Maintenance Provides For Booking</b></em>'. <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link maintenancemodel.impl.MaintenanceProvidesForBookingImpl#getCalendar <em>Calendar</em>}</li>
  *   <li>{@link maintenancemodel.impl.MaintenanceProvidesForBookingImpl#getRoomTypes <em>Room Types</em>}</li>
  *   <li>{@link maintenancemodel.impl.MaintenanceProvidesForBookingImpl#getRooms <em>Rooms</em>}</li>
  *   <li>{@link maintenancemodel.impl.MaintenanceProvidesForBookingImpl#getExtraHandler <em>Extra Handler</em>}</li>
@@ -38,21 +41,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Container implements MaintenanceProvidesForBooking {
-	/**
-	 * The cached value of the '{@link #getCalendar() <em>Calendar</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCalendar()
-	 * @generated NOT
-	 * @ordered
-	 */
-	protected Calendar calendar = new CalendarImpl();
+public class MaintenanceProvidesForBookingImpl extends
+		MinimalEObjectImpl.Container implements MaintenanceProvidesForBooking {
 
 	/**
-	 * The cached value of the '{@link #getRoomTypes() <em>Room Types</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getRoomTypes() <em>Room Types</em>}'
+	 * containment reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getRoomTypes()
 	 * @generated NOT
 	 * @ordered
@@ -60,9 +55,9 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	protected RoomTypesHandler roomTypes = new RoomTypesHandlerImpl();
 
 	/**
-	 * The cached value of the '{@link #getRooms() <em>Rooms</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * The cached value of the '{@link #getRooms() <em>Rooms</em>}' containment
+	 * reference. <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * 
 	 * @see #getRooms()
 	 * @generated NOT
 	 * @ordered
@@ -70,9 +65,10 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	protected RoomHandler rooms = new RoomHandlerImpl();
 
 	/**
-	 * The cached value of the '{@link #getExtraHandler() <em>Extra Handler</em>}' containment reference.
-	 * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getExtraHandler()
+	 * <em>Extra Handler</em>}' containment reference. <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @see #getExtraHandler()
 	 * @generated NOT
 	 * @ordered
@@ -80,8 +76,9 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	protected ExtraHandler extraHandler = new ExtraHandlerImpl();
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> 
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
 	public MaintenanceProvidesForBookingImpl() {
@@ -89,7 +86,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -99,50 +96,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Calendar getCalendar() {
-		return calendar;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetCalendar(Calendar newCalendar, NotificationChain msgs) {
-		Calendar oldCalendar = calendar;
-		calendar = newCalendar;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR, oldCalendar, newCalendar);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCalendar(Calendar newCalendar) {
-		if (newCalendar != calendar) {
-			NotificationChain msgs = null;
-			if (calendar != null)
-				msgs = ((InternalEObject)calendar).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR, null, msgs);
-			if (newCalendar != null)
-				msgs = ((InternalEObject)newCalendar).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR, null, msgs);
-			msgs = basicSetCalendar(newCalendar, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR, newCalendar, newCalendar));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -151,11 +105,12 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRoomTypes(RoomTypesHandler newRoomTypes, NotificationChain msgs) {
+	public NotificationChain basicSetRoomTypes(RoomTypesHandler newRoomTypes,
+			NotificationChain msgs) {
 		RoomTypesHandler oldRoomTypes = roomTypes;
 		roomTypes = newRoomTypes;
 		if (eNotificationRequired()) {
@@ -166,7 +121,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -185,7 +140,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -194,11 +149,12 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRooms(RoomHandler newRooms, NotificationChain msgs) {
+	public NotificationChain basicSetRooms(RoomHandler newRooms,
+			NotificationChain msgs) {
 		RoomHandler oldRooms = rooms;
 		rooms = newRooms;
 		if (eNotificationRequired()) {
@@ -209,7 +165,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -228,7 +184,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -237,11 +193,12 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetExtraHandler(ExtraHandler newExtraHandler, NotificationChain msgs) {
+	public NotificationChain basicSetExtraHandler(ExtraHandler newExtraHandler,
+			NotificationChain msgs) {
 		ExtraHandler oldExtraHandler = extraHandler;
 		extraHandler = newExtraHandler;
 		if (eNotificationRequired()) {
@@ -252,7 +209,7 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -271,89 +228,223 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated NOT
 	 */
-	public boolean canBook(EList<String> roomTypeIDs, String start, String end) {
-
-		//For all requested roomtypes
-		for(String id : roomTypeIDs){
-				
-			//For all those roomtypes list of 
-			
+	public boolean canBook(EList<String> roomTypeIDs, String start, String end, int nrOfGuests) {
+		// false if incorrect formats
+		if (start.length() != 6 && end.length() != 6) {
+			return false;
 		}
-		return false;
 		
-		// TODO test
+		if(!enoughSpace(roomTypeIDs, nrOfGuests)){
+			return false;
+		}
+		
+		DateFormat dateFormat = new SimpleDateFormat("yyMMdd");
+		String currDate = dateFormat.format(new Date());
 
+		Calendar cal = this.roomTypes.getCalendar();
+		
+		int startDays = cal.getDaysBetween(currDate, start);
+		int endDays = cal.getDaysBetween(currDate, end);
+
+		if (startDays == -1 || endDays == -1 || endDays <= startDays) {
+			return false;
+		}
+		
+		// Using a Set, every roomTypeID is only included once
+		Set<String> types = new CopyOnWriteArraySet<String>(roomTypeIDs);
+		
+		// For all requested roomtypes
+		for (String id : types) {
+		
+			// false if invalid roomTypeID
+			if (!this.roomTypes.exists(id)) {
+				return false;
+			}
+
+			int amount = 0;
+			// Check how many of this type
+			for (String id2 : roomTypeIDs) {
+				if (id2.equals(id)) {
+					amount++;
+				}
+			}
+
+			// Check if cap is lower as the amount of identical roomTypeIDs
+			if (cal.getCap(startDays, endDays, id) < amount) {
+				return false;
+			}
+
+		}
+		return true;
+	}
+	
+	private boolean enoughSpace(EList<String> roomTypeIDs, int nrOfGuests){
+		int guestCap = 0;
+		for(String s : roomTypeIDs){
+			guestCap += this.roomTypes.getRoomType(s).getMaxNrOfGuests();
+		}
+		if(guestCap < nrOfGuests){
+			return false;
+		} else {
+			return true;
+		}
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc}
+	 * <!-- end-user-doc --> 
+	 * 
+	 * @generated NOT
 	 */
-	public int makeBooking(EList<String> roomType, String start, String end) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public int makeBooking(EList<String> roomTypeIDs, String start, String end, int nrOfGuests) {
+		DateFormat dateFormat = new SimpleDateFormat("yyMMdd");
+		String currDate = dateFormat.format(new Date());
+
+		Calendar cal = this.roomTypes.getCalendar();
+		
+		int startDays = cal.getDaysBetween(currDate, start);
+		int endDays = cal.getDaysBetween(currDate, end);
+
+		int result = 0;
+
+		if (this.canBook(roomTypeIDs, start, end, nrOfGuests)) {
+			for (int i = 0; i < roomTypeIDs.size(); i++) {
+				cal.decCap(startDays, endDays, roomTypeIDs.get(i), 1);
+				result++;
+			}
+		}
+
+		if (result == roomTypeIDs.size()) {
+			this.roomTypes.setCalendar(cal);
+			return 0;
+		}
+
+		return 1;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
+	 * @generated NOT
 	 */
-	public int removeBooking(EList<String> roomType, int nrOfRooms, String start, String end) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public int removeBooking(EList<String> roomTypeID, String start, String end) {
+
+		DateFormat dateFormat = new SimpleDateFormat("yyMMdd");
+		String currDate = dateFormat.format(new Date());
+
+		Calendar cal = this.roomTypes.getCalendar();
+		
+		int startDays = cal.getDaysBetween(currDate, start);
+		int endDays = cal.getDaysBetween(currDate, end);
+
+		maintenancemodel.Calendar copyOfCalendar = roomTypes.getCalendar();
+
+		int result = 0;
+
+		for (int i = 0; i < roomTypeID.size(); i++) {
+			if (copyOfCalendar.incCap(startDays, endDays, roomTypeID.get(i), 1) != 0) {
+				result++;
+			}
+		}
+
+		if (result == 0) {
+			roomTypes.setCalendar(copyOfCalendar);
+			return 0;
+		}
+
+		return 1;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
+	 * @generated NOT
 	 */
 	public int setActive(String roomTypeID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		if (roomTypes.exists(roomTypeID)) {
+			RoomType rt = roomTypes.getRoomType(roomTypeID);
+			EList<Room> roomsOfType = rt.getRoomsOfType();
+			for (Room r : roomsOfType) {
+				if (r.getRoomStatusEnum().equals(RoomStatusEnum.VACANT)) {
+					return r.getRoomID();
+				}
+			}
+		}
+		return -1;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
+	 * @generated NOT
 	 */
 	public int getPriceRoom(EList<String> roomTypeIDs) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		int sum = 0;
+		for (String id : roomTypeIDs) {
+			if (!roomTypes.exists(id)) {
+				return -1;
+			}
+			sum += roomTypes.getPrice(id);
+		}
+
+		return sum;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
+	 * @generated NOT
 	 */
 	public int getPriceExtra(EList<String> extraIDs) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		int sum = 0;
+		for (String id : extraIDs) {
+			if (!extraHandler.exists(id)) {
+				return -1;
+			}
+			sum += extraHandler.getPrice(id);
+		}
+
+		return sum;
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc --> 
+	 * {@inheritDoc} 
 	 * <!-- end-user-doc -->
+	 * 
+	 * @generated NOT
+	 */
+	public int setInactive(int roomID) {
+		if (this.rooms.exists(roomID)) {
+			this.rooms.getRoom(roomID).setRoomStatusEnum(RoomStatusEnum.VACANT);
+			return 0;
+		}
+		return 1;
+	}
+
+	/**
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd,
+			int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR:
-				return basicSetCalendar(null, msgs);
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES:
 				return basicSetRoomTypes(null, msgs);
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS:
@@ -365,15 +456,12 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR:
-				return getCalendar();
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES:
 				return getRoomTypes();
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS:
@@ -385,16 +473,12 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR:
-				setCalendar((Calendar)newValue);
-				return;
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES:
 				setRoomTypes((RoomTypesHandler)newValue);
 				return;
@@ -409,16 +493,12 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR:
-				setCalendar((Calendar)null);
-				return;
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES:
 				setRoomTypes((RoomTypesHandler)null);
 				return;
@@ -433,15 +513,12 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__CALENDAR:
-				return calendar != null;
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOM_TYPES:
 				return roomTypes != null;
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING__ROOMS:
@@ -453,28 +530,30 @@ public class MaintenanceProvidesForBookingImpl extends MinimalEObjectImpl.Contai
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	@SuppressWarnings("unchecked")
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+	public Object eInvoke(int operationID, EList<?> arguments)
+			throws InvocationTargetException {
 		switch (operationID) {
-			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___CAN_BOOK__ELIST_STRING_STRING:
-				return canBook((EList<String>)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
-			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__ELIST_STRING_STRING:
-				return makeBooking((EList<String>)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
-			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_INT_STRING_STRING:
-				return removeBooking((EList<String>)arguments.get(0), (Integer)arguments.get(1), (String)arguments.get(2), (String)arguments.get(3));
+			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___CAN_BOOK__ELIST_STRING_STRING_INT:
+				return canBook((EList<String>)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
+			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___MAKE_BOOKING__ELIST_STRING_STRING_INT:
+				return makeBooking((EList<String>)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2), (Integer)arguments.get(3));
+			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___REMOVE_BOOKING__ELIST_STRING_STRING:
+				return removeBooking((EList<String>)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___SET_ACTIVE__STRING:
 				return setActive((String)arguments.get(0));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___GET_PRICE_ROOM__ELIST:
 				return getPriceRoom((EList<String>)arguments.get(0));
 			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___GET_PRICE_EXTRA__ELIST:
 				return getPriceExtra((EList<String>)arguments.get(0));
+			case MaintenancemodelPackage.MAINTENANCE_PROVIDES_FOR_BOOKING___SET_INACTIVE__INT:
+				return setInactive((Integer)arguments.get(0));
 		}
 		return super.eInvoke(operationID, arguments);
 	}
 
-} //MaintenanceProvidesForBookingImpl
+} // MaintenanceProvidesForBookingImpl

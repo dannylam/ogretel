@@ -3,12 +3,11 @@
 package bookingmodel.util;
 
 import bookingmodel.*;
-
+import bookingmodel.impl.CustomerEmailToBookingRefEntryImpl;
 import java.util.Map;
-
+import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
 
 /**
@@ -99,6 +98,12 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case BookingmodelPackage.PERSON: {
+				Person person = (Person)theEObject;
+				T result = casePerson(person);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case BookingmodelPackage.PAYMENT_DETAILS: {
 				PaymentDetails paymentDetails = (PaymentDetails)theEObject;
 				T result = casePaymentDetails(paymentDetails);
@@ -118,15 +123,27 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case BookingmodelPackage.PERSON: {
-				Person person = (Person)theEObject;
-				T result = casePerson(person);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case BookingmodelPackage.BOOKING_HANDLER: {
 				BookingHandler bookingHandler = (BookingHandler)theEObject;
 				T result = caseBookingHandler(bookingHandler);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BookingmodelPackage.ROOM_ID_TO_BOOKING_REF_ENTRY: {
+				@SuppressWarnings("unchecked") Map.Entry<Integer, String> roomIDToBookingRefEntry = (Map.Entry<Integer, String>)theEObject;
+				T result = caseRoomIDToBookingRefEntry(roomIDToBookingRefEntry);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BookingmodelPackage.CUSTOMER_EMAIL_TO_BOOKING_REF_ENTRY: {
+				CustomerEmailToBookingRefEntry customerEmailToBookingRefEntry = (CustomerEmailToBookingRefEntry)theEObject;
+				T result = caseCustomerEmailToBookingRefEntry(customerEmailToBookingRefEntry);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BookingmodelPackage.GUEST_EMAIL_TO_ROOM_ID_ENTRY: {
+				GuestEmailToRoomIDEntry guestEmailToRoomIDEntry = (GuestEmailToRoomIDEntry)theEObject;
+				T result = caseGuestEmailToRoomIDEntry(guestEmailToRoomIDEntry);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -139,6 +156,20 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 			case BookingmodelPackage.IBOOKING_PROVIDES_FOR_CUSTOMER: {
 				IBookingProvidesForCustomer iBookingProvidesForCustomer = (IBookingProvidesForCustomer)theEObject;
 				T result = caseIBookingProvidesForCustomer(iBookingProvidesForCustomer);
+				if (result == null) result = caseBookingInfo(iBookingProvidesForCustomer);
+				if (result == null) result = caseCustomerInfo(iBookingProvidesForCustomer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BookingmodelPackage.BOOKING_INFO: {
+				BookingInfo bookingInfo = (BookingInfo)theEObject;
+				T result = caseBookingInfo(bookingInfo);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BookingmodelPackage.CUSTOMER_INFO: {
+				CustomerInfo customerInfo = (CustomerInfo)theEObject;
+				T result = caseCustomerInfo(customerInfo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -154,12 +185,8 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 				if (result == null) result = caseIBookingProvidesForCustomer(bookingProvides);
 				if (result == null) result = caseIBookingProvidesForGuest(bookingProvides);
 				if (result == null) result = caseIBookingProvidesForHost(bookingProvides);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case BookingmodelPackage.ROOM_ID_TO_BOOKING_REF_ENTRY: {
-				@SuppressWarnings("unchecked") Map.Entry<Integer, String> roomIDToBookingRefEntry = (Map.Entry<Integer, String>)theEObject;
-				T result = caseRoomIDToBookingRefEntry(roomIDToBookingRefEntry);
+				if (result == null) result = caseBookingInfo(bookingProvides);
+				if (result == null) result = caseCustomerInfo(bookingProvides);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -348,6 +375,36 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Booking Info</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Booking Info</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBookingInfo(BookingInfo object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Customer Info</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Customer Info</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCustomerInfo(CustomerInfo object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>IBooking Provides For Guest</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -393,6 +450,36 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Customer Email To Booking Ref Entry</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Customer Email To Booking Ref Entry</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCustomerEmailToBookingRefEntry(CustomerEmailToBookingRefEntry object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Guest Email To Room ID Entry</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Guest Email To Room ID Entry</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGuestEmailToRoomIDEntry(GuestEmailToRoomIDEntry object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -405,6 +492,12 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 	 */
 	@Override
 	public T defaultCase(EObject object) {
+		return null;
+	}
+
+	public Adapter caseCustomerEmailToBookingRefEntry(
+			CustomerEmailToBookingRefEntryImpl object) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 

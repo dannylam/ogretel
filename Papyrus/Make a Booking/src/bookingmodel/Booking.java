@@ -30,7 +30,6 @@ import org.eclipse.emf.ecore.EObject;
  * setPaymentMethod - set the payment method to a specific booking
  * checkedInAllGuest - check if all guests are checked in.
  * checkedInAGuest - check if a specific guest is checked in.
- * TODO: Update with the added methods
  * <p>
  * The following features are supported:
  * <ul>
@@ -166,14 +165,20 @@ public interface Booking extends EObject {
 	EList<Guest> getGuestList();
 
 	/**
-	 * Returns false or true if a payment has been made.
+	 * Returns the value of the '<em><b>Is Payed</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is Payed</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Payed</em>' attribute.
 	 * @see #setIsPayed(boolean)
 	 * @see bookingmodel.BookingmodelPackage#getBooking_IsPayed()
-	 * @model dataType="types.Boolean" required="true" ordered="false"
-	 * @generated NOT
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
+	 * @generated
 	 */
-	boolean isIsPayed();
+	boolean isPayed();
 
 	/**
 	 * Sets false or true to a made payment.
@@ -232,22 +237,22 @@ public interface Booking extends EObject {
 	EMap<String, Boolean> getExtraToIsPayedMap();
 
 	/**
-	 * Checks if all the rooms in the booking
+	 * Checks if all the rooms in the booking are checked in which they are if they
 	 * has a responsible guest. If so, then true is returned,
 	 * otherwise false is returned.
 	 * @model dataType="types.Boolean" required="true" ordered="false"
 	 * @generated NOT
 	 */
-	boolean checkedInAllGuest();
+	boolean checkedInAllRooms();
 
 	/**
-	 * Checks if at least one room in the booking
+	 * Checks if a specific the rooms in the booking is checked in which it is if it
 	 * has a responsible guest. If so, then true is returned,
 	 * otherwise false is returned.
-	 * @model dataType="types.Boolean" required="true" ordered="false"
+	 * @model dataType="types.Boolean" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
 	 * @generated NOT
 	 */
-	boolean checkedInAGuest();
+	boolean checkedInRoom(int roomID);
 
 	/**
 	 * Sets a responsible guest to a specific roomID by using their email.
@@ -276,6 +281,16 @@ public interface Booking extends EObject {
 	 */
 	int getNrOfRooms();
 
+
+	/**
+	 * Adds services from a booking into the map with roomIDs.
+	 * @return  -1 if not success
+	 * 			0 if success 
+	 * @model dataType="types.Integer" required="true" ordered="false" servicesDataType="types.String" servicesMany="true" servicesOrdered="false"
+	 * @generated NOT
+	 */
+	int setServices(List<String> services);
+
 	/**
 	 * Adds extras from a booking into the map with extras.
 	 * The integer returned by the function indicates success or failure and reason for failure.
@@ -297,45 +312,80 @@ public interface Booking extends EObject {
 	int setRoomTypes(List<String> roomTypes);
 
 	/**
-	 * Generates a booking reference to this booking
-	 * @model
-	 * @generated NOT
-	 */
-	void generateBookingRef();
-
-	/**
-	 * TODO JAVADOC
+	 * Returns a list of all extras of a booking.
 	 * @model kind="operation" required="true" many="false"
 	 * @generated NOT
 	 */
 	EList<String> getExtras();
 
 	/**
-	 * TODO JAVADOC
+	 * Returns a list of all roomtypes of a booking.
 	 * @model kind="operation" required="true" many="false"
 	 * @generated NOT
 	 */
 	EList<String> getRoomTypes();
 
 	/**
-	 * TODO JAVADOC
+	 * Returns a list of all roomsIDs of a booking.
 	 * @model kind="operation" required="true" many="false"
 	 * @generated NOT
 	 */
-	EList<String> getRoomIDs();
+	EList<Integer> getRoomIDs();
 
 	/**
-	 * TODO JAVADOC
+	 * Removes the responsible guest from all the rooms in a booking.
 	 * @model dataType="types.Integer" required="true" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated NOT
 	 */
 	int removeResponsibleGuestToAllRooms(String guestEmail);
 
 	/**
-	 * TODO JAVADOC
+	 * Removes the responsible guest from the given room in a booking.
 	 * @model dataType="types.Integer" required="true" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false" guestEmailDataType="types.String" guestEmailRequired="true" guestEmailOrdered="false"
 	 * @generated NOT
 	 */
 	int removeResponsibleGuest(int roomID, String guestEmail);
+
+	/**
+	 * Returns true if the room is checked out and false otherwise.
+	 * @model dataType="types.Boolean" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
+	 * @generated NOT
+	 */
+	boolean checkedOutRoom(int roomID);
+
+	/**
+	 * Returns true if all rooms are checked out and false otherwise.
+	 * @model dataType="types.Boolean" required="true" ordered="false"
+	 * @generated NOT
+	 */
+	boolean checkedOutAllRooms();
+
+	/**
+	 * Returns true if all extras are paid and false otherwise.
+	 * @model dataType="types.Boolean" required="true" ordered="false"
+	 * @generated NOT
+	 */
+	boolean allExtrasPayed();
+
+	/**
+	 * Returns true if that extra is paid and false otherwise.
+	 * @model dataType="types.Boolean" required="true" ordered="false" roomIDDataType="types.Integer" roomIDRequired="true" roomIDOrdered="false"
+	 * @generated NOT
+	 */
+	boolean isExtraPayed(String extra);
+
+	/**
+	 * Returns a list of all unpaid extras.
+	 * @model kind="operation" dataType="types.String"
+	 * @generated NOT
+	 */
+	List<String> getUnPayedExtras();
+	
+	/**
+	 * Sets the list of extras as payed.
+	 * @model dataType="types.Integer" required="true" ordered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false"
+	 * @generated NOT
+	 */
+	int setExtrasAsPayed(List<String> extras);
 
 } // Booking

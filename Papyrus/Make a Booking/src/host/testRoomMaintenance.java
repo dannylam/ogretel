@@ -2,6 +2,7 @@ package host;
 
 import static org.junit.Assert.assertTrue;
 import maintenancemodel.IRoomMaintenance;
+import maintenancemodel.IRoomTypeMaintenance;
 import maintenancemodel.Room;
 import maintenancemodel.RoomType;
 import maintenancemodel.RoomTypeEnum;
@@ -23,6 +24,7 @@ import org.junit.Test;
 public class testRoomMaintenance {
 
 	private IRoomMaintenance rm = new RoomMaintenanceImpl();
+	private IRoomTypeMaintenance rtm = new RoomMaintenanceImpl();
 
 	//
 	private RoomTypesHandler rtHandler = new RoomTypesHandlerImpl();
@@ -100,11 +102,11 @@ public class testRoomMaintenance {
 		int maxNrOfGuests = 3;
 		String description = "This room is very cool and I like it a lot.";
 
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+		int addRT = this.rtm.addRoomType(roomTypeID, roomTypeEnum, price,
 				maxNrOfGuests, description);
 
 		// TODO
-		assertTrue(this.rm.getRoomTypeIDs().contains(roomTypeID));
+		assertTrue(this.rtm.getRoomTypeIDs().contains(roomTypeID));
 
 	}
 
@@ -122,13 +124,13 @@ public class testRoomMaintenance {
 		int maxNrOfGuests = 3;
 		String description = "This room is very cool and I like it a lot.";
 
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+		int addRT = this.rtm.addRoomType(roomTypeID, roomTypeEnum, price,
 				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 		// TODO
 		// assertTrue(this.rm.getRoomTypeHandler().exists(roomTypeID));
 
-		int remRT = this.rm.removeRoomType(roomTypeID);
+		int remRT = this.rtm.removeRoomType(roomTypeID);
 		assertTrue(remRT == 0);
 		// TODO
 		// assertTrue(!this.rm.getRoomTypeHandler().exists(roomTypeID));
@@ -149,13 +151,13 @@ public class testRoomMaintenance {
 		int maxNrOfGuests = 3;
 		String description = "This room is very cool and I like it a lot.";
 
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+		int addRT = this.rtm.addRoomType(roomTypeID, roomTypeEnum, price,
 				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 		// TODO
 		// assertTrue(this.rm.getRoomTypeHandler().exists(roomTypeID));
 
-		int edRT = this.rm.editRoomType(roomTypeID, "singlebed", 200, 1,
+		int edRT = this.rtm.editRoomType(roomTypeID, "singlebed", 200, 1,
 				"Hèˆ� bor en apa.");
 		assertTrue(edRT == 0);
 
@@ -187,7 +189,7 @@ public class testRoomMaintenance {
 		int maxNrOfGuests = 2;
 		String description = "Nice and eciN";
 
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+		int addRT = this.rtm.addRoomType(roomTypeID, roomTypeEnum, price,
 				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 
@@ -211,7 +213,7 @@ public class testRoomMaintenance {
 		int maxNrOfGuests = 1;
 		String description = "Here you can be alone for a while. Just relax. Mmmm.";
 
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+		int addRT = this.rtm.addRoomType(roomTypeID, roomTypeEnum, price,
 				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 
@@ -240,7 +242,7 @@ public class testRoomMaintenance {
 		String description = "Here you can be alone for a while. Just relax. Mmmm.";
 
 		// Add the RT
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+		int addRT = this.rtm.addRoomType(roomTypeID, roomTypeEnum, price,
 				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 
@@ -280,7 +282,7 @@ public class testRoomMaintenance {
 		String description = "Very many people can live in hea'.";
 
 		// Add the RT
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+		int addRT = this.rtm.addRoomType(roomTypeID, roomTypeEnum, price,
 				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 
@@ -310,7 +312,7 @@ public class testRoomMaintenance {
 		String description = "Very many people can live in hea'. Many more.";
 
 		// Add the RT
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+		int addRT = this.rtm.addRoomType(roomTypeID, roomTypeEnum, price,
 				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 
@@ -361,7 +363,7 @@ public class testRoomMaintenance {
 		String description = "Hello.";
 
 		// Add the RT
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+		int addRT = this.rtm.addRoomType(roomTypeID, roomTypeEnum, price,
 				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 
@@ -385,7 +387,7 @@ public class testRoomMaintenance {
 	@Test
 	public void testGetRoomTypeIDs() {
 
-		assertTrue(this.rm.getRoomTypeIDs() != null);
+		assertTrue(this.rtm.getRoomTypeIDs() != null);
 
 		//Create RoomType
 		String roomTypeID = "Laszlo";
@@ -395,12 +397,12 @@ public class testRoomMaintenance {
 		String description = "Hello to you.";
 
 		// Add the RT
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+		int addRT = this.rtm.addRoomType(roomTypeID, roomTypeEnum, price,
 				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 
 		// Get it
-		assertTrue(this.rm.getRoomTypeIDs().contains(roomTypeID));
+		assertTrue(this.rtm.getRoomTypeIDs().contains(roomTypeID));
 
 	}
 
@@ -420,12 +422,12 @@ public class testRoomMaintenance {
 		String description = "Hello to you.";
 
 		// Add the RT
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price,
+		int addRT = this.rtm.addRoomType(roomTypeID, roomTypeEnum, price,
 				maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 
 		// Get its price
-		assertTrue(this.rm.getRoomTypePrice(roomTypeID) == 500);
+		assertTrue(this.rtm.getRoomTypePrice(roomTypeID) == 500);
 
 	}
 
@@ -437,7 +439,7 @@ public class testRoomMaintenance {
 	 */
 	@Test
 	public void testGetRoomTypeEnums() {
-		EList<String> statusStrings = rm.getRoomTypeEnums();
+		EList<String> statusStrings = rtm.getRoomTypeEnums();
 		assertTrue(statusStrings.contains("Singlebed"));
 		assertTrue(statusStrings.contains("Doublebed"));
 		assertTrue(statusStrings.contains("Luxury suite"));
@@ -458,11 +460,11 @@ public class testRoomMaintenance {
 		String description = "Hello to you.";
 
 		//Add the RT
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		int addRT = this.rtm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 		
 		// Get its price
-		assertTrue(this.rm.getRoomTypeDescription(roomTypeID) == description);
+		assertTrue(this.rtm.getRoomTypeDescription(roomTypeID) == description);
 		
 	}
 	
@@ -481,11 +483,11 @@ public class testRoomMaintenance {
 		String description = "Hello to you.";
 
 		//Add the RT
-		int addRT = this.rm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
+		int addRT = this.rtm.addRoomType(roomTypeID, roomTypeEnum, price, maxNrOfGuests, description);
 		assertTrue(addRT == 0);
 		
 		// Get its price
-		assertTrue(this.rm.getRoomTypeMaxNrOfGuests(roomTypeID) == 3);
+		assertTrue(this.rtm.getRoomTypeMaxNrOfGuests(roomTypeID) == 3);
 		
 	}
 
