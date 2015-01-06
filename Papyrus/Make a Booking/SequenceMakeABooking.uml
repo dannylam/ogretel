@@ -86,7 +86,7 @@ Actor wants to pay now</body>
         </guard>
       </operand>
     </fragment>
-    <message xmi:type="uml:Message" xmi:id="_SVcpMHuVEeSxRO9vcwrttA" name="book(startDate:String, endDate:String, nrOfGuests:int, roomTypes:List&lt;String>, extras List&lt;String>,  servicesList&lt;String>)&#xD;&#xA;" messageSort="asynchCall" receiveEvent="_SV1DsHuVEeSxRO9vcwrttA" sendEvent="_SVyAYHuVEeSxRO9vcwrttA"/>
+    <message xmi:type="uml:Message" xmi:id="_SVcpMHuVEeSxRO9vcwrttA" name="book(startDate:String, endDate:String, nrOfGuests:int, roomTypes:List&lt;String>, extras: List&lt;String>,  services: List&lt;String>)&#xD;&#xA;" messageSort="asynchCall" receiveEvent="_SV1DsHuVEeSxRO9vcwrttA" sendEvent="_SVyAYHuVEeSxRO9vcwrttA"/>
     <message xmi:type="uml:Message" xmi:id="_uTeaUHuVEeSxRO9vcwrttA" name="setPersonalDetails(firstName:String, lastName: String, age:Integer, email:String, bookingRef:String)" messageSort="asynchCall" receiveEvent="_uTiEsHuVEeSxRO9vcwrttA" sendEvent="_uTgPgHuVEeSxRO9vcwrttA"/>
     <message xmi:type="uml:Message" xmi:id="_sBU8EHuWEeSxRO9vcwrttA" name="setPaymentDetails(ccNumber:String, ccv:String, expiryMonth:int, expiryYear:int, firstName:String, lastName:String)" messageSort="asynchCall" receiveEvent="_sBaboHuWEeSxRO9vcwrttA" sendEvent="_sBXYUHuWEeSxRO9vcwrttA"/>
     <message xmi:type="uml:Message" xmi:id="_yGHJAHuWEeSxRO9vcwrttA" name="choosePaymentMethod(method: String, bookingRef: String)" messageSort="asynchCall" receiveEvent="_yGKzYHuWEeSxRO9vcwrttA" sendEvent="_yGI-MHuWEeSxRO9vcwrttA"/>
