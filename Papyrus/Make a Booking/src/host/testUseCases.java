@@ -122,7 +122,8 @@ public class testUseCases {
 	 */
 	@Test
 	public void testCheckOutAltFlow2a(){
-
+		int checkout = bookingprovides.checkOut(3000);
+		assertTrue(checkout == -1);
 	}
 	
 	/*
