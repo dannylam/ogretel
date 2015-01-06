@@ -47,7 +47,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 * @ordered
 	 */
-	protected RoomTypesHandler roomTypes = new RoomTypesHandlerImpl();
+	protected static RoomTypesHandler roomTypes = new RoomTypesHandlerImpl();
 
 	/**
 	 * The cached value of the '{@link #getRooms() <em>Rooms</em>}' containment
@@ -57,7 +57,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 * @ordered
 	 */
-	protected RoomHandler rooms = new RoomHandlerImpl();
+	protected static RoomHandler rooms = new RoomHandlerImpl();
 
 	/**
 	 * <!-- begin-user-doc --> Get a new instance of RoomMaintenanceImpl. <!--

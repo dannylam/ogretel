@@ -84,6 +84,12 @@ public class MaintenanceProvidesForBookingImpl extends
 	public MaintenanceProvidesForBookingImpl() {
 		super();
 	}
+	
+	public MaintenanceProvidesForBookingImpl(RoomTypesHandler rth, RoomHandler rh){
+		this();
+		this.rooms = rh;
+		this.roomTypes = rth;
+	}
 
 	/**
 	 * <!-- begin-user-doc --> 

@@ -60,6 +60,7 @@ public class testUseCases {
 		for(int i=1; i<10; i++) {
 			roomMaintenence.addRoom(i, "Economic");
 		}
+		
 		addExtras();
 		makeABooking();
 		
