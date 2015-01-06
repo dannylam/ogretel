@@ -3,17 +3,11 @@
 package bookingmodel;
 
 import java.util.List;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
  * An interface class which represents booking provides for the host, extending EObject.
- * It has 5 methods;
- * enableSelfManagement - enable self management.
- * addServiceNote - add a specific service note.
- * editServiceNote - edit a specific service note
- * removeServiceNote - remove a specific service note.
- * getServiceNote - get a specific service note.
+
  * @see bookingmodel.BookingmodelPackage#getIBookingProvidesForHost()
  * @model interface="true" abstract="true"
  * @generated
@@ -82,22 +76,6 @@ public interface IBookingProvidesForHost extends EObject {
 	 * @generated NOT
 	 */
 	List<Integer> getRoomID(String guestEmail);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="org.eclipse.uml2.types.String" serviceNoteMany="true" serviceNoteOrdered="false"
-	 * @generated
-	 */
-	int addServiceNotes(int roomID, EList<String> serviceNote);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false" serviceNoteDataType="org.eclipse.uml2.types.String" serviceNoteMany="true" serviceNoteOrdered="false"
-	 * @generated
-	 */
-	int removeServiceNotes(int roomID, EList<String> serviceNote);
 
 	/**
 	 * Adds a list of servicenotes to the booking connected to the given roomID 

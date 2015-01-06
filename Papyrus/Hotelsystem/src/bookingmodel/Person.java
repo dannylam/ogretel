@@ -6,20 +6,6 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * An interface class which represents Person, extending EObject.
- * This class has 10 methods;
- * getFirstName - returns the first name of a person.
- * setFirstName - sets the first name of a person.
- * getLastName - returns the last name of a person.
- * setLastName - sets the last name of a person.
- * getEmail - returns the email address of a person.
- * setEmail - sets the email address of a person.
- * getTelephoneNr - returns the telephone number of a person.
- * setTelephoneNr - sets the telephone number of a person.
- * getAddress - returns the address of a person.
- * setAddress - sets the address of a person.
- * getAge - returns the age of a person.
- * setAge - sets the age of a person.
- * 
  * <p>
  * The following features are supported:
  * <ul>
@@ -136,7 +122,7 @@ public interface Person extends EObject {
 	 * @see #setAge(int)
 	 * @see bookingmodel.BookingmodelPackage#getPerson_Age()
 	 * @model dataType="types.Integer" required="true" ordered="false"
-	 * @generated
+	 * @generated NOT
 	 */
 	int getAge();
 
@@ -144,7 +130,7 @@ public interface Person extends EObject {
 	 * Sets a person's age.
 	 * @param value the new value of the '<em>Age</em>' attribute.
 	 * @see #getAge()
-	 * @generated
+	 * @generated NOT
 	 */
 	void setAge(int value);
 

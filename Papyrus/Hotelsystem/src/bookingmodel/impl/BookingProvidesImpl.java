@@ -8,6 +8,7 @@ import java.util.List;
 
 import javax.xml.soap.SOAPException;
 
+import maintenancemodel.IMaintenanceProvidesForBooking;
 import maintenancemodel.MaintenanceProvidesForBooking;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -52,12 +53,12 @@ BookingProvides {
 	 * @generated
 	 * @ordered
 	 */
-	protected BookingHandler bookingHandler;
+	protected BookingHandler bookingHandler = new BookingHandlerImpl();
 
 	/**
 	 * @generated NOT
 	 */
-	protected MaintenanceProvidesForBooking maintenanceComponent;
+	protected IMaintenanceProvidesForBooking maintenanceComponent;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
@@ -65,6 +66,11 @@ BookingProvides {
 	 */
 	public BookingProvidesImpl() {
 		super();
+	}
+	
+	public BookingProvidesImpl(IMaintenanceProvidesForBooking impfb) {
+		this();
+		maintenanceComponent = impfb;
 	}
 
 	/**
@@ -158,7 +164,7 @@ BookingProvides {
 		if (this.bookingHandler.isActive(bookingRef)) {
 			return this.getBookingHandler().getBooking(bookingRef).getStartDate();
 		}
-		return "Booking reference does not exist";
+		return null;
 	}
 
 	/**
@@ -169,7 +175,7 @@ BookingProvides {
 		if (this.bookingHandler.isActive(bookingRef)) {	
 			return this.getBookingHandler().getBooking(bookingRef).getEndDate();
 		}	
-		return "Booking reference does not exist";
+		return null;
 	}	
 
 	/**
@@ -213,7 +219,7 @@ BookingProvides {
 		if (this.bookingHandler.exists(bookingRef)) {	
 			return this.getBookingHandler().getBooking(bookingRef).getPaymentMethod().toString();
 		}	
-		return "Booking reference does not exist";
+		return null;
 	}	
 
 	/**
@@ -254,7 +260,7 @@ BookingProvides {
 		if(this.getBookingHandler().exists(bookingRef)){
 			return this.bookingHandler.getBooking(bookingRef).getCustomer().getFirstName();
 		} else {
-			return "Booking reference does not exist";
+			return null;
 		}
 	}
 
@@ -267,7 +273,7 @@ BookingProvides {
 		if(this.getBookingHandler().exists(bookingRef)){
 			return this.bookingHandler.getBooking(bookingRef).getCustomer().getFirstName();
 		} else {
-			return "Booking reference does not exist";
+			return null;
 		}
 	}
 
@@ -291,7 +297,7 @@ BookingProvides {
 		if(this.getBookingHandler().exists(bookingRef)){
 			return this.bookingHandler.getBooking(bookingRef).getCustomer().getEmail();
 		} else {
-			return "Booking reference does not exist";
+			return null;
 		}
 	}
 
@@ -303,7 +309,7 @@ BookingProvides {
 		if(this.getBookingHandler().exists(bookingRef)){
 			return this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().getCcNr();
 		} else {
-			return "Booking reference does not exist";
+			return null;
 		}
 	}
 
@@ -315,7 +321,7 @@ BookingProvides {
 		if(this.getBookingHandler().exists(bookingRef)){
 			return this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().getCcV();
 		} else {
-			return "Booking reference does not exist";
+			return null;
 		}
 	}
 
@@ -351,7 +357,7 @@ BookingProvides {
 		if(this.getBookingHandler().exists(bookingRef)){
 			return this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().getFirstName();
 		} else {
-			return "Booking reference does not exist";
+			return null;
 		}
 	}
 
@@ -363,7 +369,7 @@ BookingProvides {
 		if(this.getBookingHandler().exists(bookingRef)){
 			return this.bookingHandler.getBooking(bookingRef).getCustomer().getPaymentDetails().getLastName();
 		} else {
-			return "Booking reference does not exist";
+			return null;
 		}
 	}
 
@@ -503,31 +509,25 @@ BookingProvides {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
-	public int removeExtra(int roomID, EList<String> extraIDs) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public int addExtras(int roomID, List<String> extraIDs) {
+		if(this.bookingHandler.getRoomIDToBookingRefMap().containsKey(roomID)){
+			Booking booking = this.bookingHandler.getBooking(roomID);
+			if(booking.getExtras().addAll(extraIDs)){
+				return 0;
+			}
+			return 2;
+		}
+		return 1;
 	}
 
 	/**
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
-	public int addExtra(int roomID, String extraID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * {@inheritDoc}
-	 * @generated NOT
-	 */
-	public int removeExtra(int roomID, List<String> extraIDs) {
+	public int removeExtras(int roomID, List<String> extraIDs) {
 		if(this.bookingHandler.getRoomIDToBookingRefMap().containsKey(roomID)){
 			Booking booking = this.bookingHandler.getBooking(roomID);
 			if(booking.getExtras().removeAll(extraIDs)){
@@ -536,7 +536,6 @@ BookingProvides {
 			return 2;
 		}
 		return 1;
-		
 	}
 
 	/**
@@ -624,7 +623,7 @@ BookingProvides {
 		if(this.getBookingHandler().exists(this.bookingHandler.getBooking(roomID).getBookingRef())){
 			return this.bookingHandler.getBooking(roomID).getRoomIDToGuestMap().get(roomID).getValue();
 		} else {
-			return "Booking reference does not exist";
+			return null;
 		}
 	}
 
@@ -637,34 +636,12 @@ BookingProvides {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int addServiceNotes(int roomID, EList<String> serviceNote) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int removeServiceNotes(int roomID, EList<String> serviceNote) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int addServiceNotes(int roomID, List<String> serviceNote) {
 		if(this.getBookingHandler().exists(this.getBookingHandler().getBooking(roomID).getBookingRef())){
-			return this.bookingHandler.getBooking(roomID).setServices(serviceNote);
+			return this.bookingHandler.getBooking(roomID).setServiceNotes(serviceNote);
 		} else {
 			return -1;
 		}
@@ -745,17 +722,6 @@ BookingProvides {
 			}
 		}
 		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, EList<String> roomTypes, EList<String> extras, EList<String> services) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -884,45 +850,11 @@ BookingProvides {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String book(String startDate, String endDate, int nrOfGuests, EList<String> roomTypes, EList<String> extras, EList<String> services) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
+	 * {@inheritDoc}
 	 * @generated NOT
 	 */
 	public int editPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, String customerEmail, String bookingRef) {
 		return this.setPaymentDetails(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, customerEmail, bookingRef);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int removeExtra(String roomID, String extraID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int addExtra(String bookingRef, String extraID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -935,7 +867,6 @@ BookingProvides {
 				this.maintenanceComponent.makeBooking((EList<String>)roomTypes, startDate, endDate, nrOfGuests);
 				return this.bookingHandler.addBooking(nrOfGuests, startDate, endDate, roomTypes, extras, services);
 			}
-			return null;
 		}
 		return null;
 	}
@@ -1110,10 +1041,6 @@ BookingProvides {
 				return book((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (EList<String>)arguments.get(3), (EList<String>)arguments.get(4), (EList<String>)arguments.get(5));
 			case BookingmodelPackage.BOOKING_PROVIDES___EDIT_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_STRING_STRING:
 				return editPaymentDetails((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7));
-			case BookingmodelPackage.BOOKING_PROVIDES___REMOVE_EXTRA__STRING_STRING:
-				return removeExtra((String)arguments.get(0), (String)arguments.get(1));
-			case BookingmodelPackage.BOOKING_PROVIDES___ADD_EXTRA__STRING_STRING:
-				return addExtra((String)arguments.get(0), (String)arguments.get(1));
 			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_IN__STRING_STRING_STRING:
 				return checkIn((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__INT:
@@ -1123,9 +1050,9 @@ BookingProvides {
 			case BookingmodelPackage.BOOKING_PROVIDES___PAY_ROOM__STRING_STRING_INT_INT_STRING_STRING_INT:
 				return payRoom((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Integer)arguments.get(6));
 			case BookingmodelPackage.BOOKING_PROVIDES___ADD_EXTRA__INT_ELIST:
-				return addExtra((Integer)arguments.get(0), (EList<String>)arguments.get(1));
+				return addExtras((Integer)arguments.get(0), (List<String>)arguments.get(1));
 			case BookingmodelPackage.BOOKING_PROVIDES___REMOVE_EXTRA__INT_ELIST:
-				return removeExtra((Integer)arguments.get(0), (EList<String>)arguments.get(1));
+				return removeExtras((Integer)arguments.get(0), (EList<String>)arguments.get(1));
 			case BookingmodelPackage.BOOKING_PROVIDES___IS_BOOKING_PAYED__STRING:
 				return isBookingPayed((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_PROVIDES___IS_EXTRA_PAYED__INT:

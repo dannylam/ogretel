@@ -29,14 +29,14 @@
           </children>
           <children xmi:type="notation:Shape" xmi:id="_6V4Sg4XsEeSVNujnuKbKbA" type="3006">
             <element xmi:type="uml:ActionExecutionSpecification" href="SequenceCheckOut.uml#_RCVkIH1ZEeSytO65gmeCYw"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6V4ShIXsEeSVNujnuKbKbA" x="80" y="39" width="16" height="143"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6V4ShIXsEeSVNujnuKbKbA" x="57" y="39" width="16" height="143"/>
           </children>
           <children xmi:type="notation:Shape" xmi:id="_6V4ShYXsEeSVNujnuKbKbA" type="3006">
             <element xmi:type="uml:ActionExecutionSpecification" href="SequenceCheckOut.uml#_L2eG4H5DEeSWe8RAQYjeHQ"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6V4ShoXsEeSVNujnuKbKbA" x="80" y="280" width="16" height="219"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6V4ShoXsEeSVNujnuKbKbA" x="57" y="280" width="16" height="219"/>
           </children>
           <element xmi:type="uml:Lifeline" href="SequenceCheckOut.uml#_totrUH0wEeSsvNcSfv_wTw"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6V4Sh4XsEeSVNujnuKbKbA" x="639" y="10" width="176" height="628"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_6V4Sh4XsEeSVNujnuKbKbA" x="639" y="10" width="129" height="628"/>
         </children>
         <children xmi:type="notation:Shape" xmi:id="_6V4SiIXsEeSVNujnuKbKbA" type="3001">
           <children xmi:type="notation:DecorationNode" xmi:id="_6V4SiYXsEeSVNujnuKbKbA" type="5002"/>

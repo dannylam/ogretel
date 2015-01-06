@@ -995,7 +995,7 @@ been checked-in is checked-out in a specific booking </body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_wqnlAJW5EeSQB8HUSdvSwA" name="addExtra">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_wqnlAJW5EeSQB8HUSdvSwA" name="addExtras">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_0d8FoJW5EeSQB8HUSdvSwA" name="roomID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
@@ -1008,7 +1008,7 @@ been checked-in is checked-out in a specific booking </body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_9beoYJW5EeSQB8HUSdvSwA" name="removeExtra">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_9beoYJW5EeSQB8HUSdvSwA" name="removeExtras">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_AgtT8JW6EeSQB8HUSdvSwA" name="roomID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>

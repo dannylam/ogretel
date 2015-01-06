@@ -10,6 +10,7 @@ import maintenancemodel.MaintenancemodelPackage;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.BasicEMap;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
@@ -41,7 +42,7 @@ public class CalendarImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 * @ordered
 	 */
-	protected EMap<String, EList<Integer>> stringToListsMap;
+	protected EMap<String, EList<Integer>> stringToListsMap = new BasicEMap<String, EList<Integer>>();
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->

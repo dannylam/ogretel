@@ -197,9 +197,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> 
 	 * {@inheritDoc}
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public int addRoom(int roomID, String roomTypeID) {
@@ -267,25 +265,19 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 			return 2;
 		}
 
-		switch (status.toLowerCase()) {
-
-		case "vacant":
+		if(status.toLowerCase().equals("vacant")){
 			room.setRoomStatusEnum(RoomStatusEnum.VACANT);
 			return 0;
-		case "busy":
+		} else if(status.toLowerCase().equals("busy")){
 			room.setRoomStatusEnum(RoomStatusEnum.BUSY);
 			return 0;
-		case "maintenance":
+		} else if(status.toLowerCase().equals("maintenance")){
 			room.setRoomStatusEnum(RoomStatusEnum.MAINTENANCE);
 			return 0;
-
-		default:
-			// The wished status does not exist.
-			return 1;
 		}
-
+		return 1;
 	}
-
+	
 	/**
 	 * <!-- begin-user-doc --> 
 	 * {@inheritDoc}

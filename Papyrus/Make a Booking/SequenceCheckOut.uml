@@ -18,7 +18,7 @@
 0 = complete success</body>
     </ownedComment>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_GADwMHrtEeSyi6NtWQOLDw" name=":Actor" coveredBy="_9YLvsH1CEeS2-JPgXJfP0A _PymakH1ZEeSytO65gmeCYw _OSG8UH4WEeSWe8RAQYjeHQ _ebsLAH5CEeSWe8RAQYjeHQ _Dg5e4H5KEeSmC8PUBKk0Qw _Dg6tAH5KEeSmC8PUBKk0Qw _gOlLUH5KEeSmC8PUBKk0Qw"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_totrUH0wEeSsvNcSfv_wTw" name=":IBookingProvidesForGuest" coveredBy="_RCVkIH1ZEeSytO65gmeCYw _OSIKcH4WEeSWe8RAQYjeHQ _6t0wcH4tEeSWe8RAQYjeHQ _N2wZEH5CEeSWe8RAQYjeHQ _ebrj8H5CEeSWe8RAQYjeHQ _Dg5e4H5KEeSmC8PUBKk0Qw _Dg6tAH5KEeSmC8PUBKk0Qw _gOlLUH5KEeSmC8PUBKk0Qw"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_totrUH0wEeSsvNcSfv_wTw" name=":IBookingProvides" coveredBy="_RCVkIH1ZEeSytO65gmeCYw _OSIKcH4WEeSWe8RAQYjeHQ _6t0wcH4tEeSWe8RAQYjeHQ _N2wZEH5CEeSWe8RAQYjeHQ _ebrj8H5CEeSWe8RAQYjeHQ _Dg5e4H5KEeSmC8PUBKk0Qw _Dg6tAH5KEeSmC8PUBKk0Qw _gOlLUH5KEeSmC8PUBKk0Qw"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_kn7DoH1ZEeSytO65gmeCYw" name=":IMaintenanceProvidesForBooking" coveredBy="_J21xUH1aEeSytO65gmeCYw _J21KQH1aEeSytO65gmeCYw _6t1XgH4tEeSWe8RAQYjeHQ _N2vK8H5CEeSWe8RAQYjeHQ _Dg5e4H5KEeSmC8PUBKk0Qw _Dg6tAH5KEeSmC8PUBKk0Qw _gOlLUH5KEeSmC8PUBKk0Qw"/>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_5GR-MH1ZEeSytO65gmeCYw" name=":CustomerProvides" coveredBy="_Dg5e4H5KEeSmC8PUBKk0Qw _Dg6tAH5KEeSmC8PUBKk0Qw _gOlLUH5KEeSmC8PUBKk0Qw"/>
     <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_PymakH1ZEeSytO65gmeCYw" name="ActionExecSpec0Start" covered="_GADwMHrtEeSyi6NtWQOLDw" execution="_9YLvsH1CEeS2-JPgXJfP0A"/>
@@ -69,7 +69,7 @@
     <message xmi:type="uml:Message" xmi:id="_6tojMH4tEeSWe8RAQYjeHQ" name="getPriceExtra(extraIDs: List&lt;String)" messageSort="asynchCall" receiveEvent="_6t1XgH4tEeSWe8RAQYjeHQ" sendEvent="_6t0wcH4tEeSWe8RAQYjeHQ"/>
     <message xmi:type="uml:Message" xmi:id="_N2WwcH5CEeSWe8RAQYjeHQ" name="price:int" messageSort="reply" receiveEvent="_N2wZEH5CEeSWe8RAQYjeHQ" sendEvent="_N2vK8H5CEeSWe8RAQYjeHQ"/>
     <message xmi:type="uml:Message" xmi:id="_ebqV0H5CEeSWe8RAQYjeHQ" name="price:int" messageSort="reply" receiveEvent="_ebsLAH5CEeSWe8RAQYjeHQ" sendEvent="_ebrj8H5CEeSWe8RAQYjeHQ"/>
-    <message xmi:type="uml:Message" xmi:id="_M3Q1gH5DEeSWe8RAQYjeHQ" name="pay(ccNumber:String, ccv:String, expiryMonth:int, expiryYear:int, firstName:String, lastName:String, sum:double)" messageSort="asynchCall" receiveEvent="_M3TRwH5DEeSWe8RAQYjeHQ" sendEvent="_M3SDoH5DEeSWe8RAQYjeHQ"/>
+    <message xmi:type="uml:Message" xmi:id="_M3Q1gH5DEeSWe8RAQYjeHQ" name="payBooking(ccNumber:String, ccv:String, expiryMonth:int, expiryYear:int, firstName:String, lastName:String, sum:double)" messageSort="asynchCall" receiveEvent="_M3TRwH5DEeSWe8RAQYjeHQ" sendEvent="_M3SDoH5DEeSWe8RAQYjeHQ"/>
     <message xmi:type="uml:Message" xmi:id="_5TZX0H5DEeSWe8RAQYjeHQ" name="isCreditCardValid(ccNumber:String, ccv:String, expiryMonth:int, expiryYear:int, firstName:String, lastName:String)" messageSort="asynchCall" receiveEvent="_5TcbIH5DEeSWe8RAQYjeHQ" sendEvent="_5Tal8H5DEeSWe8RAQYjeHQ"/>
     <message xmi:type="uml:Message" xmi:id="_aY-4oH5EEeSWe8RAQYjeHQ" name="true:boolean" messageSort="reply" receiveEvent="_aZBU4H5EEeSWe8RAQYjeHQ" sendEvent="_aZAGwH5EEeSWe8RAQYjeHQ"/>
     <message xmi:type="uml:Message" xmi:id="_ivKgcH5EEeSWe8RAQYjeHQ" name="makePayment(ccNumber:String, ccv:String, expiryMonth:int, expiryYear:int, firstName:String, lastName:String, sum:double)" messageSort="asynchCall" receiveEvent="_ivM8sH5EEeSWe8RAQYjeHQ" sendEvent="_ivLukH5EEeSWe8RAQYjeHQ"/>

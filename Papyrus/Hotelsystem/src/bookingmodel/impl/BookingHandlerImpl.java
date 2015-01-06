@@ -215,7 +215,6 @@ public class BookingHandlerImpl extends MinimalEObjectImpl.Container implements 
 
 	/**
 	 * {@inheritDoc}
-	 * @param bookingRef, startDate, endDate, nrOfGuests, roomTypes, extras
 	 * @generated NOT
 	 */
 	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, List<String> roomTypes, List<String> extras, List<String> services) {
