@@ -3,6 +3,7 @@
 package bookingmodel;
 
 import java.util.List;
+import org.eclipse.emf.common.util.EList;
 /**
  * An interface class which represents booking provides for the customer, extending EObject.
  *
@@ -65,6 +66,14 @@ public interface IBookingProvidesForCustomer extends BookingInfo, CustomerInfo {
 	int removeBooking(String bookingRef);
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false" startDateDataType="org.eclipse.uml2.types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="org.eclipse.uml2.types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="org.eclipse.uml2.types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesDataType="org.eclipse.uml2.types.String" roomTypesMany="true" roomTypesOrdered="false" extrasDataType="org.eclipse.uml2.types.String" extrasMany="true" extrasOrdered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false"
+	 * @generated
+	 */
+	int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, EList<String> roomTypes, EList<String> extras, EList<String> services);
+
+	/**
 	 * A method for editing a specific booking such as number of nights, number of guests,
 	 * start and end date, number of rooms, room types, extras and 
 	 * booking reference. 
@@ -123,6 +132,14 @@ public interface IBookingProvidesForCustomer extends BookingInfo, CustomerInfo {
 	 */
 	int setPersonalDetails(String firstName, String lastName, int age, String email, String bookingRef);
 	
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" startDateDataType="org.eclipse.uml2.types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="org.eclipse.uml2.types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="org.eclipse.uml2.types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesDataType="org.eclipse.uml2.types.String" roomTypesMany="true" roomTypesOrdered="false" extrasDataType="org.eclipse.uml2.types.String" extrasMany="true" extrasOrdered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false"
+	 * @generated
+	 */
+	String book(String startDate, String endDate, int nrOfGuests, EList<String> roomTypes, EList<String> extras, EList<String> services);
+
 	/**
 	 * Make a booking such for the given start- and enddate, number of guests,
 	 * roomtypes (and how many of each roomtype), extras and services.

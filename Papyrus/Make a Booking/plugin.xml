@@ -33,15 +33,7 @@
       <!-- @generated bookingmodel -->
       <package
             uri="http:///bookingmodel.ecore"
-            class="bookingmodel.BookingmodelPackage"
-            genModel="bookingmodel.genmodel"/>
+            class="bookingmodel.BookingmodelPackage"/>
    </extension>
 
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated bookingmodel -->
-      <package
-            uri="http://www.eclipse.org/uml2/5.0.0/Types"
-            class="types.TypesPackage"
-            genModel="bookingmodel.genmodel"/>
-   </extension>
 </plugin>

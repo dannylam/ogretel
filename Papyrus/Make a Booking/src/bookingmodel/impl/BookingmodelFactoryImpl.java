@@ -222,7 +222,7 @@ public class BookingmodelFactoryImpl extends EFactoryImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CustomerEmailToBookingRefEntryImpl createCustomerEmailToBookingRefEntry() {
+	public CustomerEmailToBookingRefEntry createCustomerEmailToBookingRefEntry() {
 		CustomerEmailToBookingRefEntryImpl customerEmailToBookingRefEntry = new CustomerEmailToBookingRefEntryImpl();
 		return customerEmailToBookingRefEntry;
 	}
@@ -232,7 +232,7 @@ public class BookingmodelFactoryImpl extends EFactoryImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GuestEmailToRoomIDEntryImpl createGuestEmailToRoomIDEntry() {
+	public GuestEmailToRoomIDEntry createGuestEmailToRoomIDEntry() {
 		GuestEmailToRoomIDEntryImpl guestEmailToRoomIDEntry = new GuestEmailToRoomIDEntryImpl();
 		return guestEmailToRoomIDEntry;
 	}

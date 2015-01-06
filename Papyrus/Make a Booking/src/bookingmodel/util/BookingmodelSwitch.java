@@ -3,7 +3,9 @@
 package bookingmodel.util;
 
 import bookingmodel.*;
+import bookingmodel.impl.CustomerEmailToBookingRefEntryImpl;
 import java.util.Map;
+import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
@@ -490,6 +492,12 @@ public class BookingmodelSwitch<T> extends Switch<T> {
 	 */
 	@Override
 	public T defaultCase(EObject object) {
+		return null;
+	}
+
+	public Adapter caseCustomerEmailToBookingRefEntry(
+			CustomerEmailToBookingRefEntryImpl object) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 

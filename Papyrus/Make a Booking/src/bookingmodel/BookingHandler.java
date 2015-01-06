@@ -58,38 +58,36 @@ public interface BookingHandler extends EObject {
 	EMap<Integer, String> getRoomIDToBookingRefMap();
 
 	/**
-	 * Returns the value of the '<em><b>Customer Email To Booking Ref Entry</b></em>' map.
-	 * The key is of type {@link java.lang.String},
-	 * and the value is of type list of {@link java.lang.String},
+	 * Returns the value of the '<em><b>Customer Email To Booking Ref Entry</b></em>' containment reference list.
+	 * The list contents are of type {@link bookingmodel.CustomerEmailToBookingRefEntry}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Customer Email To Booking Ref Entry</em>' map isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Customer Email To Booking Ref Entry</em>' map.
+	 * @return the value of the '<em>Customer Email To Booking Ref Entry</em>' containment reference list.
 	 * @see bookingmodel.BookingmodelPackage#getBookingHandler_CustomerEmailToBookingRefEntry()
-	 * @model mapType="bookingmodel.CustomerEmailToBookingRefEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EString>" ordered="false"
+	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	EMap<String, EList<String>> getCustomerEmailToBookingRefEntry();
+	EList<CustomerEmailToBookingRefEntry> getCustomerEmailToBookingRefEntry();
 
 	/**
-	 * Returns the value of the '<em><b>Guest Email To Room ID Entry</b></em>' map.
-	 * The key is of type {@link java.lang.String},
-	 * and the value is of type list of {@link java.lang.Integer},
+	 * Returns the value of the '<em><b>Guest Email To Room ID Entry</b></em>' containment reference list.
+	 * The list contents are of type {@link bookingmodel.GuestEmailToRoomIDEntry}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Guest Email To Room ID Entry</em>' map isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Guest Email To Room ID Entry</em>' map.
+	 * @return the value of the '<em>Guest Email To Room ID Entry</em>' containment reference list.
 	 * @see bookingmodel.BookingmodelPackage#getBookingHandler_GuestEmailToRoomIDEntry()
-	 * @model mapType="bookingmodel.GuestEmailToRoomIDEntry<org.eclipse.emf.ecore.EString, org.eclipse.emf.ecore.EInt>" ordered="false"
+	 * @model containment="true" ordered="false"
 	 * @generated
 	 */
-	EMap<String, EList<Integer>> getGuestEmailToRoomIDEntry();
+	EList<GuestEmailToRoomIDEntry> getGuestEmailToRoomIDEntry();
 
 	/**
 	 * A method that checks if the booking reference exists
@@ -99,6 +97,14 @@ public interface BookingHandler extends EObject {
 	 * @generated NOT
 	 */
 	boolean exists(String bookingRef);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.String" required="true" ordered="false" nrOfGuestsDataType="org.eclipse.uml2.types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" startDateDataType="org.eclipse.uml2.types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="org.eclipse.uml2.types.String" endDateRequired="true" endDateOrdered="false" roomTypesDataType="org.eclipse.uml2.types.String" roomTypesMany="true" roomTypesOrdered="false" extrasDataType="org.eclipse.uml2.types.String" extrasMany="true" extrasOrdered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false"
+	 * @generated
+	 */
+	String addBooking(int nrOfGuests, String startDate, String endDate, EList<String> roomTypes, EList<String> extras, EList<String> services);
 
 	/**
 	 * Creates and adds a booking to the map where the key is a bookingreference and the value the booking. 
@@ -130,6 +136,14 @@ public interface BookingHandler extends EObject {
 	 * @generated NOT
 	 */
 	Booking getBooking(String bookingRef);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false" startDateDataType="org.eclipse.uml2.types.String" startDateRequired="true" startDateOrdered="false" endDateDataType="org.eclipse.uml2.types.String" endDateRequired="true" endDateOrdered="false" nrOfGuestsDataType="org.eclipse.uml2.types.Integer" nrOfGuestsRequired="true" nrOfGuestsOrdered="false" roomTypesDataType="org.eclipse.uml2.types.String" roomTypesMany="true" roomTypesOrdered="false" extrasDataType="org.eclipse.uml2.types.String" extrasMany="true" extrasOrdered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false"
+	 * @generated
+	 */
+	int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, EList<String> roomTypes, EList<String> extras, EList<String> services);
 
 	/**
 	 * Edits a booking with the specified parameters given.

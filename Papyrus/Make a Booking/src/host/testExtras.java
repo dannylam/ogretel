@@ -48,6 +48,7 @@ public class testExtras {
 		assertTrue(product.getPrice() == price);
 		assertTrue(product.getID() == productID);	
 		}
+	
 	@Test
 	public void testRemoveAndExistsExtra() {
 		ExtraHandler extraHandler = new ExtraHandlerImpl();
