@@ -507,6 +507,16 @@ BookingProvides {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int removeExtra(int roomID, EList<String> extraIDs) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * {@inheritDoc}
+	 * @generated NOT
+	 */
 	public int addExtra(int roomID, String extraID) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -514,14 +524,19 @@ BookingProvides {
 	}
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
+	 * {@inheritDoc}
+	 * @generated NOT
 	 */
-	public int removeExtra(int roomID, String extraID) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public int removeExtra(int roomID, List<String> extraIDs) {
+		if(this.bookingHandler.getRoomIDToBookingRefMap().containsKey(roomID)){
+			Booking booking = this.bookingHandler.getBooking(roomID);
+			if(booking.getExtras().removeAll(extraIDs)){
+				return 0;
+			}
+			return 2;
+		}
+		return 1;
+		
 	}
 
 	/**
@@ -622,6 +637,28 @@ BookingProvides {
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int addServiceNotes(int roomID, EList<String> serviceNote) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int removeServiceNotes(int roomID, EList<String> serviceNote) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
 	 * {@inheritDoc}
 	 * @generated NOT
 	 */
@@ -708,6 +745,17 @@ BookingProvides {
 			}
 		}
 		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int editBooking(String bookingRef, String startDate, String endDate, int nrOfGuests, EList<String> roomTypes, EList<String> extras, EList<String> services) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -840,8 +888,41 @@ BookingProvides {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String book(String startDate, String endDate, int nrOfGuests, EList<String> roomTypes, EList<String> extras, EList<String> services) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
 	public int editPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, String customerEmail, String bookingRef) {
 		return this.setPaymentDetails(ccNumber, ccv, expiryMonth, expiryYear, firstName, lastName, customerEmail, bookingRef);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int removeExtra(String roomID, String extraID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int addExtra(String bookingRef, String extraID) {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -940,8 +1021,8 @@ BookingProvides {
 				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___CHECK_OUT__INT: return BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__INT;
 				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___PAY_EXTRA__STRING_STRING_INT_INT_STRING_STRING_ELIST_INT: return BookingmodelPackage.BOOKING_PROVIDES___PAY_EXTRA__STRING_STRING_INT_INT_STRING_STRING_ELIST_INT;
 				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___PAY_ROOM__STRING_STRING_INT_INT_STRING_STRING_INT: return BookingmodelPackage.BOOKING_PROVIDES___PAY_ROOM__STRING_STRING_INT_INT_STRING_STRING_INT;
-				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___ADD_EXTRA__INT_STRING: return BookingmodelPackage.BOOKING_PROVIDES___ADD_EXTRA__INT_STRING;
-				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___REMOVE_EXTRA__INT_STRING: return BookingmodelPackage.BOOKING_PROVIDES___REMOVE_EXTRA__INT_STRING;
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___ADD_EXTRA__INT_ELIST: return BookingmodelPackage.BOOKING_PROVIDES___ADD_EXTRA__INT_ELIST;
+				case BookingmodelPackage.IBOOKING_PROVIDES_FOR_GUEST___REMOVE_EXTRA__INT_ELIST: return BookingmodelPackage.BOOKING_PROVIDES___REMOVE_EXTRA__INT_ELIST;
 				default: return -1;
 			}
 		}
@@ -1029,6 +1110,10 @@ BookingProvides {
 				return book((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (EList<String>)arguments.get(3), (EList<String>)arguments.get(4), (EList<String>)arguments.get(5));
 			case BookingmodelPackage.BOOKING_PROVIDES___EDIT_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_STRING_STRING:
 				return editPaymentDetails((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (String)arguments.get(6), (String)arguments.get(7));
+			case BookingmodelPackage.BOOKING_PROVIDES___REMOVE_EXTRA__STRING_STRING:
+				return removeExtra((String)arguments.get(0), (String)arguments.get(1));
+			case BookingmodelPackage.BOOKING_PROVIDES___ADD_EXTRA__STRING_STRING:
+				return addExtra((String)arguments.get(0), (String)arguments.get(1));
 			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_IN__STRING_STRING_STRING:
 				return checkIn((String)arguments.get(0), (String)arguments.get(1), (String)arguments.get(2));
 			case BookingmodelPackage.BOOKING_PROVIDES___CHECK_OUT__INT:
@@ -1037,10 +1122,10 @@ BookingProvides {
 				return payExtra((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (EList<String>)arguments.get(6), (Integer)arguments.get(7));
 			case BookingmodelPackage.BOOKING_PROVIDES___PAY_ROOM__STRING_STRING_INT_INT_STRING_STRING_INT:
 				return payRoom((String)arguments.get(0), (String)arguments.get(1), (Integer)arguments.get(2), (Integer)arguments.get(3), (String)arguments.get(4), (String)arguments.get(5), (Integer)arguments.get(6));
-			case BookingmodelPackage.BOOKING_PROVIDES___ADD_EXTRA__INT_STRING:
-				return addExtra((Integer)arguments.get(0), (String)arguments.get(1));
-			case BookingmodelPackage.BOOKING_PROVIDES___REMOVE_EXTRA__INT_STRING:
-				return removeExtra((Integer)arguments.get(0), (String)arguments.get(1));
+			case BookingmodelPackage.BOOKING_PROVIDES___ADD_EXTRA__INT_ELIST:
+				return addExtra((Integer)arguments.get(0), (EList<String>)arguments.get(1));
+			case BookingmodelPackage.BOOKING_PROVIDES___REMOVE_EXTRA__INT_ELIST:
+				return removeExtra((Integer)arguments.get(0), (EList<String>)arguments.get(1));
 			case BookingmodelPackage.BOOKING_PROVIDES___IS_BOOKING_PAYED__STRING:
 				return isBookingPayed((String)arguments.get(0));
 			case BookingmodelPackage.BOOKING_PROVIDES___IS_EXTRA_PAYED__INT:

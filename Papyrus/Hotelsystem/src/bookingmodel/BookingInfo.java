@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see bookingmodel.BookingmodelPackage#getBookingInfo()
  * @model interface="true" abstract="true"
- * @generated NOT
+ * @generated
  */
 public interface BookingInfo extends EObject {
 	/**

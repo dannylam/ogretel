@@ -325,6 +325,14 @@
       <eParameters name="customerEmail" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
       <eParameters name="bookingRef" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
+    <eOperations name="removeExtra" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="extraID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
+    <eOperations name="addExtra" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
+      <eParameters name="bookingRef" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="extraID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+    </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BookingInfo" abstract="true" interface="true">
     <eOperations name="getStartDate" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String">
@@ -418,11 +426,11 @@
     </eOperations>
     <eOperations name="addExtra" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
       <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-      <eParameters name="extraID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="extraIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
     <eOperations name="removeExtra" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer">
       <eParameters name="roomID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//Integer"/>
-      <eParameters name="extraID" ordered="false" lowerBound="1" eType="ecore:EDataType types.ecore#//String"/>
+      <eParameters name="extraIDs" ordered="false" upperBound="-1" eType="ecore:EDataType types.ecore#//String"/>
     </eOperations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BookingProvides" eSuperTypes="#//IBookingProvidesForCustomer #//IBookingProvidesForGuest #//IBookingProvidesForHost">

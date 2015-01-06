@@ -1145,6 +1145,24 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getIBookingProvidesForCustomer__RemoveExtra__String_String() {
+		return iBookingProvidesForCustomerEClass.getEOperations().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getIBookingProvidesForCustomer__AddExtra__String_String() {
+		return iBookingProvidesForCustomerEClass.getEOperations().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBookingInfo() {
 		return bookingInfoEClass;
 	}
@@ -1379,7 +1397,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingProvidesForGuest__AddExtra__int_String() {
+	public EOperation getIBookingProvidesForGuest__AddExtra__int_EList() {
 		return iBookingProvidesForGuestEClass.getEOperations().get(4);
 	}
 
@@ -1388,7 +1406,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getIBookingProvidesForGuest__RemoveExtra__int_String() {
+	public EOperation getIBookingProvidesForGuest__RemoveExtra__int_EList() {
 		return iBookingProvidesForGuestEClass.getEOperations().get(5);
 	}
 
@@ -1668,6 +1686,8 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___SET_PERSONAL_DETAILS__STRING_STRING_INT_STRING_STRING);
 		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___BOOK__STRING_STRING_INT_ELIST_ELIST_ELIST);
 		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___EDIT_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_STRING_STRING);
+		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___REMOVE_EXTRA__STRING_STRING);
+		createEOperation(iBookingProvidesForCustomerEClass, IBOOKING_PROVIDES_FOR_CUSTOMER___ADD_EXTRA__STRING_STRING);
 
 		bookingInfoEClass = createEClass(BOOKING_INFO);
 		createEOperation(bookingInfoEClass, BOOKING_INFO___GET_START_DATE__STRING);
@@ -1697,8 +1717,8 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		createEOperation(iBookingProvidesForGuestEClass, IBOOKING_PROVIDES_FOR_GUEST___CHECK_OUT__INT);
 		createEOperation(iBookingProvidesForGuestEClass, IBOOKING_PROVIDES_FOR_GUEST___PAY_EXTRA__STRING_STRING_INT_INT_STRING_STRING_ELIST_INT);
 		createEOperation(iBookingProvidesForGuestEClass, IBOOKING_PROVIDES_FOR_GUEST___PAY_ROOM__STRING_STRING_INT_INT_STRING_STRING_INT);
-		createEOperation(iBookingProvidesForGuestEClass, IBOOKING_PROVIDES_FOR_GUEST___ADD_EXTRA__INT_STRING);
-		createEOperation(iBookingProvidesForGuestEClass, IBOOKING_PROVIDES_FOR_GUEST___REMOVE_EXTRA__INT_STRING);
+		createEOperation(iBookingProvidesForGuestEClass, IBOOKING_PROVIDES_FOR_GUEST___ADD_EXTRA__INT_ELIST);
+		createEOperation(iBookingProvidesForGuestEClass, IBOOKING_PROVIDES_FOR_GUEST___REMOVE_EXTRA__INT_ELIST);
 
 		bookingProvidesEClass = createEClass(BOOKING_PROVIDES);
 		createEReference(bookingProvidesEClass, BOOKING_PROVIDES__BOOKING_HANDLER);
@@ -2004,6 +2024,14 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		addEParameter(op, theTypesPackage.getString(), "customerEmail", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getString(), "bookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
+		op = initEOperation(getIBookingProvidesForCustomer__RemoveExtra__String_String(), theTypesPackage.getInteger(), "removeExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "extraID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
+		op = initEOperation(getIBookingProvidesForCustomer__AddExtra__String_String(), theTypesPackage.getInteger(), "addExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "bookingRef", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "extraID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+
 		initEClass(bookingInfoEClass, BookingInfo.class, "BookingInfo", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		op = initEOperation(getBookingInfo__GetStartDate__String(), theTypesPackage.getString(), "getStartDate", 1, 1, IS_UNIQUE, !IS_ORDERED);
@@ -2094,13 +2122,13 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		addEParameter(op, theTypesPackage.getString(), "lastName", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingProvidesForGuest__AddExtra__int_String(), theTypesPackage.getInteger(), "addExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookingProvidesForGuest__AddExtra__int_EList(), theTypesPackage.getInteger(), "addExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "extraID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "extraIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
-		op = initEOperation(getIBookingProvidesForGuest__RemoveExtra__int_String(), theTypesPackage.getInteger(), "removeExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		op = initEOperation(getIBookingProvidesForGuest__RemoveExtra__int_EList(), theTypesPackage.getInteger(), "removeExtra", 1, 1, IS_UNIQUE, !IS_ORDERED);
 		addEParameter(op, theTypesPackage.getInteger(), "roomID", 1, 1, IS_UNIQUE, !IS_ORDERED);
-		addEParameter(op, theTypesPackage.getString(), "extraID", 1, 1, IS_UNIQUE, !IS_ORDERED);
+		addEParameter(op, theTypesPackage.getString(), "extraIDs", 0, -1, IS_UNIQUE, !IS_ORDERED);
 
 		initEClass(bookingProvidesEClass, BookingProvides.class, "BookingProvides", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBookingProvides_BookingHandler(), this.getBookingHandler(), null, "bookingHandler", null, 1, 1, BookingProvides.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);

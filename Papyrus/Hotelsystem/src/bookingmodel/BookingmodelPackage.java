@@ -1715,13 +1715,31 @@ public interface BookingmodelPackage extends EPackage {
 	int IBOOKING_PROVIDES_FOR_CUSTOMER___EDIT_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_STRING_STRING = BOOKING_INFO_OPERATION_COUNT + 18;
 
 	/**
+	 * The operation id for the '<em>Remove Extra</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___REMOVE_EXTRA__STRING_STRING = BOOKING_INFO_OPERATION_COUNT + 19;
+
+	/**
+	 * The operation id for the '<em>Add Extra</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IBOOKING_PROVIDES_FOR_CUSTOMER___ADD_EXTRA__STRING_STRING = BOOKING_INFO_OPERATION_COUNT + 20;
+
+	/**
 	 * The number of operations of the '<em>IBooking Provides For Customer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT = BOOKING_INFO_OPERATION_COUNT + 19;
+	int IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT = BOOKING_INFO_OPERATION_COUNT + 21;
 
 	/**
 	 * The meta object id for the '{@link bookingmodel.CustomerInfo <em>Customer Info</em>}' class.
@@ -1893,7 +1911,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_GUEST___ADD_EXTRA__INT_STRING = 4;
+	int IBOOKING_PROVIDES_FOR_GUEST___ADD_EXTRA__INT_ELIST = 4;
 
 	/**
 	 * The operation id for the '<em>Remove Extra</em>' operation.
@@ -1902,7 +1920,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IBOOKING_PROVIDES_FOR_GUEST___REMOVE_EXTRA__INT_STRING = 5;
+	int IBOOKING_PROVIDES_FOR_GUEST___REMOVE_EXTRA__INT_ELIST = 5;
 
 	/**
 	 * The number of operations of the '<em>IBooking Provides For Guest</em>' class.
@@ -2184,6 +2202,24 @@ public interface BookingmodelPackage extends EPackage {
 	int BOOKING_PROVIDES___EDIT_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_STRING_STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___EDIT_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_STRING_STRING;
 
 	/**
+	 * The operation id for the '<em>Remove Extra</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___REMOVE_EXTRA__STRING_STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___REMOVE_EXTRA__STRING_STRING;
+
+	/**
+	 * The operation id for the '<em>Add Extra</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOKING_PROVIDES___ADD_EXTRA__STRING_STRING = IBOOKING_PROVIDES_FOR_CUSTOMER___ADD_EXTRA__STRING_STRING;
+
+	/**
 	 * The operation id for the '<em>Check In</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2226,7 +2262,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___ADD_EXTRA__INT_STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 4;
+	int BOOKING_PROVIDES___ADD_EXTRA__INT_ELIST = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 4;
 
 	/**
 	 * The operation id for the '<em>Remove Extra</em>' operation.
@@ -2235,7 +2271,7 @@ public interface BookingmodelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BOOKING_PROVIDES___REMOVE_EXTRA__INT_STRING = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 5;
+	int BOOKING_PROVIDES___REMOVE_EXTRA__INT_ELIST = IBOOKING_PROVIDES_FOR_CUSTOMER_OPERATION_COUNT + 5;
 
 	/**
 	 * The operation id for the '<em>Is Booking Payed</em>' operation.
@@ -3413,6 +3449,26 @@ public interface BookingmodelPackage extends EPackage {
 	EOperation getIBookingProvidesForCustomer__EditPaymentDetails__String_String_int_int_String_String_String_String();
 
 	/**
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForCustomer#removeExtra(java.lang.String, java.lang.String) <em>Remove Extra</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove Extra</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForCustomer#removeExtra(java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getIBookingProvidesForCustomer__RemoveExtra__String_String();
+
+	/**
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForCustomer#addExtra(java.lang.String, java.lang.String) <em>Add Extra</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Add Extra</em>' operation.
+	 * @see bookingmodel.IBookingProvidesForCustomer#addExtra(java.lang.String, java.lang.String)
+	 * @generated
+	 */
+	EOperation getIBookingProvidesForCustomer__AddExtra__String_String();
+
+	/**
 	 * Returns the meta object for class '{@link bookingmodel.BookingInfo <em>Booking Info</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3673,24 +3729,24 @@ public interface BookingmodelPackage extends EPackage {
 	EOperation getIBookingProvidesForGuest__PayRoom__String_String_int_int_String_String_int();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForGuest#addExtra(int, java.lang.String) <em>Add Extra</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForGuest#addExtra(int, org.eclipse.emf.common.util.EList) <em>Add Extra</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Add Extra</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForGuest#addExtra(int, java.lang.String)
+	 * @see bookingmodel.IBookingProvidesForGuest#addExtra(int, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getIBookingProvidesForGuest__AddExtra__int_String();
+	EOperation getIBookingProvidesForGuest__AddExtra__int_EList();
 
 	/**
-	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForGuest#removeExtra(int, java.lang.String) <em>Remove Extra</em>}' operation.
+	 * Returns the meta object for the '{@link bookingmodel.IBookingProvidesForGuest#removeExtra(int, org.eclipse.emf.common.util.EList) <em>Remove Extra</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the '<em>Remove Extra</em>' operation.
-	 * @see bookingmodel.IBookingProvidesForGuest#removeExtra(int, java.lang.String)
+	 * @see bookingmodel.IBookingProvidesForGuest#removeExtra(int, org.eclipse.emf.common.util.EList)
 	 * @generated
 	 */
-	EOperation getIBookingProvidesForGuest__RemoveExtra__int_String();
+	EOperation getIBookingProvidesForGuest__RemoveExtra__int_EList();
 
 	/**
 	 * Returns the meta object for class '{@link bookingmodel.BookingProvides <em>Booking Provides</em>}'.
@@ -4685,6 +4741,22 @@ public interface BookingmodelPackage extends EPackage {
 		EOperation IBOOKING_PROVIDES_FOR_CUSTOMER___EDIT_PAYMENT_DETAILS__STRING_STRING_INT_INT_STRING_STRING_STRING_STRING = eINSTANCE.getIBookingProvidesForCustomer__EditPaymentDetails__String_String_int_int_String_String_String_String();
 
 		/**
+		 * The meta object literal for the '<em><b>Remove Extra</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKING_PROVIDES_FOR_CUSTOMER___REMOVE_EXTRA__STRING_STRING = eINSTANCE.getIBookingProvidesForCustomer__RemoveExtra__String_String();
+
+		/**
+		 * The meta object literal for the '<em><b>Add Extra</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation IBOOKING_PROVIDES_FOR_CUSTOMER___ADD_EXTRA__STRING_STRING = eINSTANCE.getIBookingProvidesForCustomer__AddExtra__String_String();
+
+		/**
 		 * The meta object literal for the '{@link bookingmodel.BookingInfo <em>Booking Info</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4904,7 +4976,7 @@ public interface BookingmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_PROVIDES_FOR_GUEST___ADD_EXTRA__INT_STRING = eINSTANCE.getIBookingProvidesForGuest__AddExtra__int_String();
+		EOperation IBOOKING_PROVIDES_FOR_GUEST___ADD_EXTRA__INT_ELIST = eINSTANCE.getIBookingProvidesForGuest__AddExtra__int_EList();
 
 		/**
 		 * The meta object literal for the '<em><b>Remove Extra</b></em>' operation.
@@ -4912,7 +4984,7 @@ public interface BookingmodelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation IBOOKING_PROVIDES_FOR_GUEST___REMOVE_EXTRA__INT_STRING = eINSTANCE.getIBookingProvidesForGuest__RemoveExtra__int_String();
+		EOperation IBOOKING_PROVIDES_FOR_GUEST___REMOVE_EXTRA__INT_ELIST = eINSTANCE.getIBookingProvidesForGuest__RemoveExtra__int_EList();
 
 		/**
 		 * The meta object literal for the '{@link bookingmodel.impl.BookingProvidesImpl <em>Booking Provides</em>}' class.

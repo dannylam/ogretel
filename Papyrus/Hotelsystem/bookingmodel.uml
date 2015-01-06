@@ -999,8 +999,10 @@ been checked-in is checked-out in a specific booking </body>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_0d8FoJW5EeSQB8HUSdvSwA" name="roomID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_12RKgJW5EeSQB8HUSdvSwA" name="extraID">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_12RKgJW5EeSQB8HUSdvSwA" name="extraIDs">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_W5QK0JXcEeSQB8HUSdvSwA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_W5Qx4JXcEeSQB8HUSdvSwA" value="*"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_3orjUJW5EeSQB8HUSdvSwA" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
@@ -1010,8 +1012,10 @@ been checked-in is checked-out in a specific booking </body>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_AgtT8JW6EeSQB8HUSdvSwA" name="roomID">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_EtuG8JW6EeSQB8HUSdvSwA" name="extraID">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_EtuG8JW6EeSQB8HUSdvSwA" name="extraIDs">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UnF68JXcEeSQB8HUSdvSwA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UnI-QJXcEeSQB8HUSdvSwA" value="*"/>
         </ownedParameter>
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_QyjKwJW6EeSQB8HUSdvSwA" name="result" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
