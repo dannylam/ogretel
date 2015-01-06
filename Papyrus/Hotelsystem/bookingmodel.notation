@@ -289,6 +289,14 @@
           <element xmi:type="uml:Operation" href="bookingmodel.uml#_slLrsJQvEeSkhq3pp1wxlw"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_MrhDwZWVEeS-04r8JM-W8Q"/>
         </children>
+        <children xmi:type="notation:Shape" xmi:id="_X3_VsJW1EeSQB8HUSdvSwA" type="3013">
+          <element xmi:type="uml:Operation" href="bookingmodel.uml#_Q4HIgJP_EeSkhq3pp1wxlw"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_X3_VsZW1EeSQB8HUSdvSwA"/>
+        </children>
+        <children xmi:type="notation:Shape" xmi:id="_LLcVIJW2EeSQB8HUSdvSwA" type="3013">
+          <element xmi:type="uml:Operation" href="bookingmodel.uml#_LLFv0JW2EeSQB8HUSdvSwA"/>
+          <layoutConstraint xmi:type="notation:Location" xmi:id="_LLcVIZW2EeSQB8HUSdvSwA"/>
+        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_mmVLwZTsEeSQrL33kO9lBw"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_mmVLwpTsEeSQrL33kO9lBw"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_mmVLw5TsEeSQrL33kO9lBw"/>
