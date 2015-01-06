@@ -973,6 +973,28 @@ been checked-in is checked-out in a specific booking </body>
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedParameter>
       </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_wqnlAJW5EeSQB8HUSdvSwA" name="addExtra">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_0d8FoJW5EeSQB8HUSdvSwA" name="roomID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_12RKgJW5EeSQB8HUSdvSwA" name="extraID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_3orjUJW5EeSQB8HUSdvSwA" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_9beoYJW5EeSQB8HUSdvSwA" name="removeExtra">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_AgtT8JW6EeSQB8HUSdvSwA" name="roomID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_EtuG8JW6EeSQB8HUSdvSwA" name="extraID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_QyjKwJW6EeSQB8HUSdvSwA" name="result" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_F14F95NNEeSexbuF790S1w" name="BookingProvides">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_F14F-JNNEeSexbuF790S1w" name="bookingHandler" visibility="private" type="_F14FYZNNEeSexbuF790S1w" aggregation="composite" association="_F14GApNNEeSexbuF790S1w">
