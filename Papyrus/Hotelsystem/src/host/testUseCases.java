@@ -7,7 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import maintenancemodel.IExtrasMaintenance;
-import maintenancemodel.MaintenanceProvidesForBooking;
+import maintenancemodel.IMaintenanceProvidesForBooking;
+import maintenancemodel.IRoomMaintenance;
+import maintenancemodel.IRoomTypeMaintenance;
 import maintenancemodel.impl.ExtrasMaintenanceImpl;
 import maintenancemodel.impl.MaintenanceProvidesForBookingImpl;
 import maintenancemodel.impl.RoomMaintenanceImpl;
@@ -27,41 +29,43 @@ public class testUseCases {
 	 * As mentioned we found this out very late in the prossess and decided that it would take to much time 
 	 * to redo the diagram and generate for a singleton pattern or any other pattern that would solve this problem	
 	 */
-	BookingProvides bookingprovides  	= new BookingProvidesImpl();
-
-	RoomMaintenanceImpl roomMaintenence = new RoomMaintenanceImpl(); 
-	MaintenanceProvidesForBooking mpb   = new MaintenanceProvidesForBookingImpl();
-	IExtrasMaintenance extraMaintenance = new ExtrasMaintenanceImpl();
+	static BookingProvides bookingprovides  	= new BookingProvidesImpl();
+	static RoomMaintenanceImpl rmi = new RoomMaintenanceImpl();
+	static IRoomMaintenance roomMaintenence = rmi; 
+	static IRoomTypeMaintenance roomTypeMaintenance = rmi;
+	static IMaintenanceProvidesForBooking mpb   = new MaintenanceProvidesForBookingImpl();
+	static IExtrasMaintenance extraMaintenance = new ExtrasMaintenanceImpl();
 
 	//User 1
-	String firstName = "Nils";
-	String lastName	 = "Holgersson";
-	int age			 = 22;
-	String email	 = "ride@goose.se";
+	static String firstName = "Nils";
+	static String lastName	 = "Holgersson";
+	static int age			 = 22;
+	static String email	 = "ride@goose.se";
 	//card User 1
-	String ccNumber  = "1234 1234 1234 1234";
-	String ccv		 = "225";				
-	int expMonth     = 9;
-	int expYear		 = 18;
+	static String ccNumber  = "1234 1234 1234 1234";
+	static String ccv		 = "225";				
+	static int expMonth     = 9;
+	static int expYear		 = 18;
 
 	//globalBookingRef
-	String bookingReference = "";
+	static String bookingReference = "";
 
 	/*
 	 * Set up before the tests begin.
 	 */
 	@BeforeClass
-	public void setUpBeforeClass () throws Exception {
-		roomMaintenence.addRoomType("Economic", "doublebed", 100, 3, "A fine room indeed");
+	public static void setUpBeforeClass () throws Exception {
+		roomTypeMaintenance.addRoomType("Economic", "doublebed", 100, 3, "A fine room indeed");
 		for(int i=1; i<10; i++) {
 			roomMaintenence.addRoom(i, "Economic");
 		}
 		addExtras();
 		makeABooking();
+		
 	}
 
 	//Adds extras to the system
-	private void addExtras() {
+	private static void addExtras() {
 		extraMaintenance.addExtra("1", 100, "Bag of SWAG", "All the swag you'll ever need", true);
 		extraMaintenance.addExtra("2", 100, "Souna", "Hot and sweaty, mhh mmhh mmmmmmmmmm", true);
 	}
@@ -70,7 +74,7 @@ public class testUseCases {
 	 * Creates a booking in the system to make sure we have it during testing.
 	 * It is not payed. The global "bookingReference" 
 	 */
-	private void makeABooking() {
+	private static void makeABooking() {
 		List <String> roomTs = new ArrayList <String>();
 		roomTs.add("Economics");
 		bookingReference = bookingprovides.book("150110", "150114", 2, roomTs,
@@ -341,15 +345,15 @@ public class testUseCases {
 
 	@Test
 	public void testEditAvalabilityOfRoom() {
-		String oldRS = this.roomMaintenence.getRoomStatus(4);
+		String oldRS = roomMaintenence.getRoomStatus(4);
 		assertTrue(oldRS.equals("Vacant"));
-		this.roomMaintenence.editRoomStatus(4, "busy");
-		assertFalse(this.roomMaintenence.getRoomStatus(4).equals(oldRS));
+		roomMaintenence.editRoomStatus(4, "busy");
+		assertFalse(roomMaintenence.getRoomStatus(4).equals(oldRS));
 	}
 
 	@Test
 	public void testEditRoom() {
-		roomMaintenence.addRoomType("ToBeEdited", "doublebed", 100, 3, "A fine room indeed");
+		roomTypeMaintenance.addRoomType("ToBeEdited", "doublebed", 100, 3, "A fine room indeed");
 		roomMaintenence.addRoom(100, "ToBeEdited");
 		
 		List<String> roomTs = new ArrayList<String>();

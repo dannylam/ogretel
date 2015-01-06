@@ -144,10 +144,10 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRoomsOfType()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected EList<Room> roomsOfType;
+	protected EList<Room> roomsOfType = new BasicEList<Room>();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -348,9 +348,6 @@ public class RoomTypeImpl extends MinimalEObjectImpl.Container implements RoomTy
 	 * @generated NOT
 	 */
 	public EList<Room> getRoomsOfType() {
-		if (roomsOfType == null) {
-			roomsOfType = new EObjectContainmentEList<Room>(Room.class, this, MaintenancemodelPackage.ROOM_TYPE__ROOMS_OF_TYPE);
-		}
 		return roomsOfType;
 	}
 

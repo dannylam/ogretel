@@ -197,9 +197,7 @@ public class RoomMaintenanceImpl extends MinimalEObjectImpl.Container implements
 	}
 
 	/**
-	 * <!-- begin-user-doc --> 
 	 * {@inheritDoc}
-	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	public int addRoom(int roomID, String roomTypeID) {

@@ -56,7 +56,7 @@ public class RoomTypesHandlerImpl extends MinimalEObjectImpl.Container
 	 * @generated
 	 * @ordered
 	 */
-	protected Calendar calendar;
+	protected Calendar calendar = new CalendarImpl();
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->

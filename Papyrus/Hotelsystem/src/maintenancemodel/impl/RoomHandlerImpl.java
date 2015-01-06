@@ -11,6 +11,7 @@ import maintenancemodel.RoomType;
 import maintenancemodel.RoomTypesHandler;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEMap;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.EMap;
 import org.eclipse.emf.ecore.EClass;
@@ -39,10 +40,10 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
 	 * @see #getIntegerToRoomMap()
-	 * @generated
+	 * @generated NOT
 	 * @ordered
 	 */
-	protected EMap<Integer, Room> integerToRoomMap;
+	protected EMap<Integer, Room> integerToRoomMap = new BasicEMap<Integer, Room>();
 
 	/**
 	 * Handles RoomTypes
@@ -57,6 +58,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	 */
 	protected RoomHandlerImpl() {
 		super();
+		
 	}
 
 	/**
@@ -88,7 +90,7 @@ public class RoomHandlerImpl extends MinimalEObjectImpl.Container implements
 	 * @generated NOT
 	 */
 	public boolean exists(int roomID) {
-		return integerToRoomMap.containsKey(roomID);
+		return integerToRoomMap.containsKey(new Integer(roomID));
 	}
 
 	/**
