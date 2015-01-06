@@ -428,14 +428,6 @@
           <element xmi:type="uml:Operation" href="ComponentDiagram.uml#_qhwoDpXHEeSnm_zFoXQEQA"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_qh0SeZXHEeSnm_zFoXQEQA"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_qh0SepXHEeSnm_zFoXQEQA" type="3007">
-          <element xmi:type="uml:Operation" href="ComponentDiagram.uml#_qhwoHJXHEeSnm_zFoXQEQA"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_qh0Se5XHEeSnm_zFoXQEQA"/>
-        </children>
-        <children xmi:type="notation:Shape" xmi:id="_qh0SfJXHEeSnm_zFoXQEQA" type="3007">
-          <element xmi:type="uml:Operation" href="ComponentDiagram.uml#_qhwoGJXHEeSnm_zFoXQEQA"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_qh0SfZXHEeSnm_zFoXQEQA"/>
-        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_qh0SfpXHEeSnm_zFoXQEQA"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_qh0Sf5XHEeSnm_zFoXQEQA"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_qh0SgJXHEeSnm_zFoXQEQA"/>
