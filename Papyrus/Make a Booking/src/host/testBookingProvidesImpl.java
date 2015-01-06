@@ -15,7 +15,7 @@ import org.junit.Test;
 import bookingmodel.BookingProvides;
 import bookingmodel.Customer;
 import bookingmodel.impl.BookingProvidesImpl;
-import bookingmodel.impl.se;
+import bookingmodel.impl.*;
 
 /**
  * Testing the class BookingProvidesImpl and its methods.
