@@ -1,21 +1,10 @@
 package host;
 
 import static org.junit.Assert.assertTrue;
-
-import maintenancemodel.Experience;
 import maintenancemodel.AbstractExtra;
-import maintenancemodel.Product;
-import maintenancemodel.Extra;
 import maintenancemodel.ExtraHandler;
-import maintenancemodel.ExtrasMaintenance;
-
-import maintenancemodel.impl.ExperienceImpl;
-import maintenancemodel.impl.AbstractExtraImpl;
-import maintenancemodel.impl.ProductImpl;
 import maintenancemodel.impl.ExtraHandlerImpl;
-import maintenancemodel.impl.ExtrasMaintenanceImpl;
 
-import org.eclipse.emf.common.util.EMap;
 import org.junit.Test;
 
 public class testExtras {
