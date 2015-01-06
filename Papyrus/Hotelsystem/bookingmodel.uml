@@ -417,11 +417,11 @@ been checked-in is checked-out in a specific booking </body>
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F14FZpNNEeSexbuF790S1w"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_F14FZ5NNEeSexbuF790S1w" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_kWBfUJWXEeS-04r8JM-W8Q" name="customerEmailToBookingRefEntry" type="_OviWwJThEeS6iuR7ikHtLw" aggregation="composite" association="_kWCtcJWXEeS-04r8JM-W8Q">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_kWBfUJWXEeS-04r8JM-W8Q" name="customerEmailToBookingRefEntry" visibility="private" type="_OviWwJThEeS6iuR7ikHtLw" aggregation="composite" association="_kWCtcJWXEeS-04r8JM-W8Q">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kWBfUZWXEeS-04r8JM-W8Q"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kWBfUpWXEeS-04r8JM-W8Q" value="*"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_p9feIJWXEeS-04r8JM-W8Q" name="guestEmailToRoomIDEntry" type="_ikK-4JThEeS6iuR7ikHtLw" aggregation="composite" association="_p9gsQJWXEeS-04r8JM-W8Q">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_p9feIJWXEeS-04r8JM-W8Q" name="guestEmailToRoomIDEntry" visibility="private" type="_ikK-4JThEeS6iuR7ikHtLw" aggregation="composite" association="_p9gsQJWXEeS-04r8JM-W8Q">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_p9feIZWXEeS-04r8JM-W8Q"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_p9feIpWXEeS-04r8JM-W8Q" value="*"/>
       </ownedAttribute>
@@ -1004,7 +1004,7 @@ been checked-in is checked-out in a specific booking </body>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_F14F-pNNEeSexbuF790S1w" client="_F14F95NNEeSexbuF790S1w" supplier="_F14FspNNEeSexbuF790S1w" contract="_F14FspNNEeSexbuF790S1w"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_F14F-5NNEeSexbuF790S1w" client="_F14F95NNEeSexbuF790S1w" supplier="_F14F4JNNEeSexbuF790S1w" contract="_F14F4JNNEeSexbuF790S1w"/>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_F14F_JNNEeSexbuF790S1w" client="_F14F95NNEeSexbuF790S1w" supplier="_F14FkJNNEeSexbuF790S1w" contract="_F14FkJNNEeSexbuF790S1w"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14F_ZNNEeSexbuF790S1w" name="stringToList" visibility="package">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F14F_ZNNEeSexbuF790S1w" name="stringToList" visibility="protected">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_F14F_pNNEeSexbuF790S1w" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_F14F_5NNEeSexbuF790S1w"/>
