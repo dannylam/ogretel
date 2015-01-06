@@ -203,10 +203,6 @@
           <element xmi:type="uml:Property" href="bookingmodel.uml#_F13eCJNNEeSexbuF790S1w"/>
           <layoutConstraint xmi:type="notation:Location" xmi:id="_MrLskZWVEeS-04r8JM-W8Q"/>
         </children>
-        <children xmi:type="notation:Shape" xmi:id="_8FdlkJWWEeS-04r8JM-W8Q" type="3012">
-          <element xmi:type="uml:Property" href="bookingmodel.uml#_ULXQIJOKEeSZ_IwO16Zn9Q"/>
-          <layoutConstraint xmi:type="notation:Location" xmi:id="_8FdlkZWWEeS-04r8JM-W8Q"/>
-        </children>
         <styles xmi:type="notation:TitleStyle" xmi:id="_mmUkspTsEeSQrL33kO9lBw"/>
         <styles xmi:type="notation:SortingStyle" xmi:id="_mmUks5TsEeSQrL33kO9lBw"/>
         <styles xmi:type="notation:FilteringStyle" xmi:id="_mmUktJTsEeSQrL33kO9lBw"/>
