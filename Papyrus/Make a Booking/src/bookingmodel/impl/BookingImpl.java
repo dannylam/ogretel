@@ -555,6 +555,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 	
 	/**
 	 * {@inheritDoc}
+	 * @return 	0, if setting responsible guest to all rooms went successful
+	 * 			1, if setting responsible guest to all rooms failed.
 	 * @generated NOT
 	 */
 	public int setResponsibleGuestToAllRooms(String guestEmail) {
@@ -573,6 +575,7 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 
 	/**
 	 * {@inheritDoc} 
+	 * @return size, the number of rooms
 	 * @generated NOT
 	 */
 	public int getNrOfRooms() {
@@ -653,6 +656,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 
 	/**
 	 * {@inheritDoc}
+	 * @return 	0, if removing responsible guest to all rooms went successful
+	 * 			-1, if removing responsible guest to all rooms failed 
 	 * @generated NOT
 	 */
 	public int removeResponsibleGuestToAllRooms(String guestEmail) {
@@ -674,6 +679,8 @@ public class BookingImpl extends MinimalEObjectImpl.Container implements Booking
 
 	/**
 	 * {@inheritDoc}
+	 * @return  0, if removing a responsible guest went successful.
+	 * 			-1, if removing a responsible guest failed.
 	 * @generated NOT
 	 */
 	public int removeResponsibleGuest(int roomID, String guestEmail) {												
