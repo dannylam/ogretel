@@ -25,7 +25,6 @@ import bookingmodel.impl.BookingProvidesImpl;
 
 
 public class testUseCases {
-	
 	BookingProvides bookingprovides  	= new BookingProvidesImpl();
 	
 	RoomHandler roomHandler				= new RoomHandlerImpl();
@@ -44,10 +43,13 @@ public class testUseCases {
 	String ccv		 = "225";				
 	int expMonth     = 9;
 	int expYear		 = 18;
-	
-	//globalBooking
+
+	//globalBookingRef
 	String bookingReference = "";
-	
+
+	/*
+	 * Set up before the tests begin.
+	 */
 	@BeforeClass
 	public void setUpBeforeClass () throws Exception {
 		roomMaintenence.addRoomType("Economic", "doublebed", 100, 3, "A fine room indeed");
@@ -64,18 +66,24 @@ public class testUseCases {
 		extraHandler.addExtra("2", 100, "Souna", "Hot and sweaty, mhh mmhh mmmmmmmmmm", true);
 	}
 	
-	//Creates a booking in the system to make sure we have it during testing
+	/*
+	 * Creates a booking in the system to make sure we have it during testing.
+	 * It is not payed. The global "bookingReference" 
+	 */
 	private void makeABooking() {
-		List <String> rooms = new ArrayList <String>();
-		rooms.add("Economics");
-		bookingReference = bookingprovides.book("150110", "150114", 2, rooms,
-							new ArrayList <String>(), new ArrayList <String>());
-		
+		List <String> roomTs = new ArrayList <String>();
+		roomTs.add("Economics");
+		bookingReference = bookingprovides.book("150110", "150114", 2, roomTs,
+				new ArrayList <String>(), new ArrayList <String>());
+
 		bookingprovides.setPersonalDetails(firstName, lastName, age, email, bookingReference);
 		bookingprovides.setPaymentDetails(ccNumber, ccv, expMonth, expYear, firstName, lastName, email, bookingReference);
 		bookingprovides.setPaymentMethod("bankcard", bookingReference);
-}
-	
+	}
+
+	/*
+	 * Main flow of making a booking
+	 */
 	@Test
 	public void testMakeABookingMainFlow() {
 		String startDate 		 = "150110";
@@ -84,25 +92,106 @@ public class testUseCases {
 		List<String> roomTypes	 = new ArrayList <String>();
 		List<String> extras		 = new ArrayList <String>();
 		List<String> services    = new ArrayList <String>();
-		
+
 		roomTypes.add("Economic");
-		
+
 		String bookingRef = bookingprovides.book(startDate, endDate, nrOfGuests, roomTypes, extras, services);
 		assertFalse(bookingRef.compareTo("") == 0);
-		
+
 		int price = bookingprovides.getPrice(bookingRef);
 		System.out.println("Price: " + price);
 		//Finds the price accepteble
 		assertTrue(bookingprovides.setPersonalDetails(firstName, lastName, age, email, bookingRef) == 0);
 		assertTrue(bookingprovides.setPaymentDetails(ccNumber, ccv, expMonth, expYear, firstName, lastName, email, bookingRef) == 0);
-		
-		//Wants to pay dirrectly
+
+		//Wants to pay directly
 		assertTrue(bookingprovides.setPaymentMethod("bankcard", bookingReference) == 0);
 		assertTrue(bookingprovides.payBooking(bookingRef) == 0);
 		//Gives the bookingRef
 		System.out.println(bookingRef);
 	}
+	
+	/*
+	 * Alt flow MAB: the chosen checkin/checkout-date is invalid 
+	 * (exists but has passed)
+	 */
+	public void testMABAltFlow2a(){
+		int nrOfGuests   		 = 2;
+		List<String> roomTypes	 = new ArrayList <String>();
+		List<String> extras		 = new ArrayList <String>();
+		List<String> services    = new ArrayList <String>();
+		roomTypes.add("Economic");
+
+		String bookingRef = bookingprovides.book("130101", "130112", nrOfGuests, roomTypes, extras, services);
+		assertFalse(bookingRef.equals(""));
+	}
+	
+	/*
+	 * Alt flow MAB: chosen checkout-date is before checkin-date
+	 */
+	public void testMABAltFlow2b(){
+		int nrOfGuests   		 = 2;
+		List<String> roomTypes	 = new ArrayList <String>();
+		List<String> extras		 = new ArrayList <String>();
+		List<String> services    = new ArrayList <String>();
+		roomTypes.add("Economic");
+
+		String bookingRef = bookingprovides.book("150310", "150220", nrOfGuests, roomTypes, extras, services);
+		assertFalse(bookingRef.equals(""));
+	}
+	
+	/*
+	 * Alt flow MAB: 
+	 */
+	public void testMABAltFlow2c(){
 		
+	}
+	
+	/*
+	 * Alt flow MAB: 
+	 */
+	public void testMABAltFlow2d(){
+		
+	}
+	
+	/*
+	 * Alt flow MAB: 
+	 */
+	public void testMABAltFlow2e(){
+		
+	}
+	
+	/*
+	 * Alt flow MAB: 
+	 */
+	public void testMABAltFlow6(){
+		
+	}
+	
+	/*
+	 * Alt flow MAB: 
+	 */
+	public void testMABAltFlow8(){
+		
+	}
+	
+	/*
+	 * Alt flow MAB: 
+	 */
+	public void testMABAltFlow10(){
+		
+	}
+	
+	/*
+	 * Alt flow MAB: 
+	 */
+	public void testMABAltFlow13(){
+		
+	}
+	
+	/*
+	 * Main flow check in and out
+	 */
 	@Test
 	public void testMakeABookingAllternative1A() {
 		String startDate 		 = "150210";
@@ -152,10 +241,37 @@ public class testUseCases {
 		assertTrue(bookingprovides.isCheckedOut(roomID));
 	}
 	
+	/*
+	 * Alternativ flow CheckIn: The booking number does not exist.
+	 */
+	@Test
+	public void testCheckInAltFlow2(){
+		int checkin = bookingprovides.checkIn(bookingReference, "Economic", email);
+		assertTrue(checkin == -1);
+	}
+	
+	/*
+	 * Alternative flow CheckOut: Room ID does not exist
+	 */
+	@Test
+	public void testCheckOutAltFlow2a(){
+		int checkout = bookingprovides.checkOut(3000);
+		assertTrue(checkout == -1);
+	}
+	
+	/*
+	 * Alternative flow CheckOut: Room ID status is not busy
+	 */
+	@Test
+	public void testCheckOutAltFlow2b(){
+		int checkout = bookingprovides.checkOut(2);
+		assertTrue(checkout == -1);
+	}	
+
 	@Test
 	public void testEditAvalabilityOfRoom() {
-		
+
 	}
 
-	
+
 }

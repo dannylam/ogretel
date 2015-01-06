@@ -12,9 +12,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
- * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Customer</b></em>'.
- * <!-- end-user-doc -->
+ * A class representing a customer.
  * <p>
  * The following features are implemented:
  * <ul>
