@@ -124,6 +124,14 @@ public interface IBookingProvidesForCustomer extends BookingInfo, CustomerInfo {
 	int setPersonalDetails(String firstName, String lastName, int age, String email, String bookingRef);
 	
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="org.eclipse.uml2.types.String" ccvRequired="true" ccvOrdered="false" expiryMonthDataType="org.eclipse.uml2.types.Integer" expiryMonthRequired="true" expiryMonthOrdered="false" expiryYearDataType="org.eclipse.uml2.types.Integer" expiryYearRequired="true" expiryYearOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false" customerEmailDataType="org.eclipse.uml2.types.String" customerEmailRequired="true" customerEmailOrdered="false" bookingRefDataType="org.eclipse.uml2.types.String" bookingRefRequired="true" bookingRefOrdered="false"
+	 * @generated
+	 */
+	int editPaymentDetails(String ccNumber, String ccv, int expiryMonth, int expiryYear, String firstName, String lastName, String customerEmail, String bookingRef);
+
+	/**
 	 * Make a booking such for the given start- and enddate, number of guests,
 	 * roomtypes (and how many of each roomtype), extras and services.
 	 * @return the booking reference if success
