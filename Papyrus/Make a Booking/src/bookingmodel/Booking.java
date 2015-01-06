@@ -175,7 +175,7 @@ public interface Booking extends EObject {
 	 * @return the value of the '<em>Is Payed</em>' attribute.
 	 * @see #setIsPayed(boolean)
 	 * @see bookingmodel.BookingmodelPackage#getBooking_IsPayed()
-	 * @model dataType="types.Boolean" required="true" ordered="false"
+	 * @model dataType="org.eclipse.uml2.types.Boolean" required="true" ordered="false"
 	 * @generated
 	 */
 	boolean isPayed();
@@ -282,6 +282,38 @@ public interface Booking extends EObject {
 	int getNrOfRooms();
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extrasDataType="org.eclipse.uml2.types.String" extrasMany="true" extrasOrdered="false"
+	 * @generated
+	 */
+	int setExtras(EList<String> extras);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" roomTypesDataType="org.eclipse.uml2.types.String" roomTypesMany="true" roomTypesOrdered="false"
+	 * @generated
+	 */
+	int setRoomTypes(EList<String> roomTypes);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" roomIDsDataType="org.eclipse.uml2.types.Integer" roomIDsMany="true"
+	 * @generated
+	 */
+	int setRoomIDs(EList<Integer> roomIDs);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" servicesDataType="org.eclipse.uml2.types.String" servicesMany="true" servicesOrdered="false"
+	 * @generated
+	 */
+	int setServices(EList<String> services);
+
+	/**
 	 * Adds services from a booking into the map with roomIDs.
 	 * @return  -1 if not success
 	 * 			0 if success 
@@ -383,7 +415,7 @@ public interface Booking extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @model dataType="types.Integer" required="true" ordered="false" extrasDataType="types.String" extrasMany="true" extrasOrdered="false"
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" extrasDataType="org.eclipse.uml2.types.String" extrasMany="true" extrasOrdered="false"
 	 * @generated
 	 */
 	int setExtrasAsPayed(EList<String> extras);

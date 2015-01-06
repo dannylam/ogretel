@@ -28,8 +28,6 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
-import types.TypesPackage;
-import types.impl.TypesPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -232,7 +230,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		isInited = true;
 
 		// Obtain or create and register interdependencies
-		TypesPackageImpl theTypesPackage = (TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) instanceof TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI) : TypesPackage.eINSTANCE);
+		org.eclipse.uml2.types.impl.TypesPackageImpl theTypesPackage = (org.eclipse.uml2.types.impl.TypesPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(org.eclipse.uml2.types.TypesPackage.eNS_URI) instanceof org.eclipse.uml2.types.impl.TypesPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(org.eclipse.uml2.types.TypesPackage.eNS_URI) : org.eclipse.uml2.types.TypesPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theBookingmodelPackage.createPackageContents();
@@ -1705,7 +1703,7 @@ public class BookingmodelPackageImpl extends EPackageImpl implements Bookingmode
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		TypesPackage theTypesPackage = (TypesPackage)EPackage.Registry.INSTANCE.getEPackage(TypesPackage.eNS_URI);
+		org.eclipse.uml2.types.TypesPackage theTypesPackage = (org.eclipse.uml2.types.TypesPackage)EPackage.Registry.INSTANCE.getEPackage(org.eclipse.uml2.types.TypesPackage.eNS_URI);
 
 		// Create type parameters
 

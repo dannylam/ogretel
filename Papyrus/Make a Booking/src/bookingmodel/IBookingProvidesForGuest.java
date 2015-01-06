@@ -4,6 +4,7 @@ package bookingmodel;
 
 import java.util.List;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -40,6 +41,14 @@ public interface IBookingProvidesForGuest extends EObject {
 	 * @generated 
 	 */
 	int checkOut(int roomID, String guestEmail);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model dataType="org.eclipse.uml2.types.Integer" required="true" ordered="false" ccNumberDataType="org.eclipse.uml2.types.String" ccNumberRequired="true" ccNumberOrdered="false" ccvDataType="org.eclipse.uml2.types.String" ccvRequired="true" ccvOrdered="false" expMonthDataType="org.eclipse.uml2.types.Integer" expMonthRequired="true" expMonthOrdered="false" expYearDataType="org.eclipse.uml2.types.Integer" expYearRequired="true" expYearOrdered="false" firstNameDataType="org.eclipse.uml2.types.String" firstNameRequired="true" firstNameOrdered="false" lastNameDataType="org.eclipse.uml2.types.String" lastNameRequired="true" lastNameOrdered="false" extraDataType="org.eclipse.uml2.types.String" extraMany="true" extraOrdered="false" roomIDDataType="org.eclipse.uml2.types.Integer" roomIDRequired="true" roomIDOrdered="false"
+	 * @generated
+	 */
+	int payExtra(String ccNumber, String ccv, int expMonth, int expYear, String firstName, String lastName, EList<String> extra, int roomID);
 
 	/**
  Make a payment for extra(s) from a room by inserting credit card number, 
